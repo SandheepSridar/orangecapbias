@@ -31,7 +31,6 @@ latex/*.run.xml
 latex/*.fls
 latex/*.fdb_latexmk
 latex/*.synctex.gz
-latex/main.pdf
 
 # os
 .DS_Store
