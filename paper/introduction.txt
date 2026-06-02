@@ -1,0 +1,13 @@
+The Indian Premier League is the most popular T20 cricket league in the world [cite]. It was established in 2008 and has gained popularity over time with its total business value reaching $18.5 billion in 2026, fueled by a $6.4 billion media rights deal and ~$600 million in advertising revenue[cite]. The league recognizes individual performance with several awards at the end of the season and the most popular award is the Orange Cap.
+
+To popularize the T20 format, the IPL introduced several individual performance awards to celebrate explosive batting. The Orange Cap is awarded to the batsman who scores the most aggregate runs in the season.. Introduced in the inaugural 2008 season, it is a single criterion based award - most runs scored. There is no adjustment for batting position, balls faced or matches played. The leader gets the privilege of wearing an orange cap during play and along with it comes significant media visibility throughout the season. Ever since its inception, every winner has batted in positions 1-3, with 15 of 18 being openers.
+
+The first 6 overs of the game is the power play where only 2 fielders are allowed outside the circle giving the batsman a huge advantage to score runs. Whether the power-play access gives openers an advantage over middle-order batsmen, and whether play-off qualification provides additional opportunities to score, are questions this paper examines empirically.
+
+Prior work on cricket analytics has examined batting position and performance from  multiple angles. Pandey & Tolani (2023) used Bayesian survival analysis to study 
+middle-order batsman performance in ODI cricket. Batting role-aware performance indices for T20 cricket have been proposed by [DPPI cite, 2022]. Probabilistic approaches to batting order advantage have also been explored [arXiv cite, 2020]. However, to the best of our knowledge, no prior study has examined whether a major T20 cricket award is structurally biased by batting position and match access.
+
+The remainder of this paper is organised as follows. Section 2 describes the data source and methodology. Section 3 presents results across six analyses. Section 4 discusses the implications of the findings, including the role of the Super Striker award as a partial compensating mechanism. Section 5 concludes with a call for re-evaluation of the Orange Cap criteria.
+
+//other thoughts
+The most skilled middle order batsmen usually get their eye-in quickly and score faster but since they don't play as many deliveries we don't see big run aggregation from the middle order. More often than not, they have a quick fire performance which boosts the team score in the middle to death overs [cite].
