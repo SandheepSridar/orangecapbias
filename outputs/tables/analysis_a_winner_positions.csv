@@ -1,19 +1,20 @@
 season,winner,team,total_runs,matches_played,avg_batting_position,position_group,playoff_team
 2008,Shaun Marsh,Kings XI Punjab,616,11,1.0,Opener (1-2),No
-2009,Matthew Hayden,Chennai Super Kings,572,12,1.0,Opener (1-2),Yes
-2010,Sachin Tendulkar,Mumbai Indians,618,15,1.0,Opener (1-2),Yes
-2011,Chris Gayle,Royal Challengers Bangalore,608,13,1.0,Opener (1-2),No
-2012,Chris Gayle,Royal Challengers Bangalore,733,15,1.0,Opener (1-2),No
-2013,Michael Hussey,Chennai Super Kings,733,17,1.0,Opener (1-2),Yes
-2014,Robin Uthappa,Kolkata Knight Riders,660,16,1.5,Opener (1-2),Yes
-2015,David Warner,Sunrisers Hyderabad,562,14,1.0,Opener (1-2),Yes
-2016,Virat Kohli,Royal Challengers Bangalore,973,16,3.0,Top Order (3),Yes
-2017,David Warner,Sunrisers Hyderabad,641,14,1.0,Opener (1-2),Yes
-2018,Kane Williamson,Sunrisers Hyderabad,735,17,3.0,Top Order (3),Yes
-2019,David Warner,Sunrisers Hyderabad,692,12,1.0,Opener (1-2),Yes
+2009,Matthew Hayden,Chennai Super Kings,572,12,2.0,Opener (1-2),Yes
+2010,Sachin Tendulkar,Mumbai Indians,618,15,2.0,Opener (1-2),Yes
+2011,Chris Gayle,Royal Challengers Bangalore,608,13,1.4,Opener (1-2),No
+2012,Chris Gayle,Royal Challengers Bangalore,733,15,1.9,Opener (1-2),No
+2013,Michael Hussey,Chennai Super Kings,733,17,1.2,Opener (1-2),Yes
+2014,Robin Uthappa,Kolkata Knight Riders,660,16,2.3,Top Order (3),Yes
+2015,David Warner,Sunrisers Hyderabad,562,14,1.3,Opener (1-2),Yes
+2016,Virat Kohli,Royal Challengers Bangalore,973,16,1.6,Opener (1-2),Yes
+2017,David Warner,Sunrisers Hyderabad,641,14,1.1,Opener (1-2),Yes
+2018,Kane Williamson,Sunrisers Hyderabad,735,17,2.8,Top Order (3),Yes
+2019,David Warner,Sunrisers Hyderabad,692,12,1.1,Opener (1-2),Yes
 2020,KL Rahul,Kings XI Punjab,670,14,1.0,Opener (1-2),No
 2021,Ruturaj Gaikwad,Chennai Super Kings,635,16,1.0,Opener (1-2),Yes
-2022,Jos Buttler,Rajasthan Royals,863,17,1.0,Opener (1-2),Yes
-2023,Shubman Gill,Gujarat Titans,890,17,1.0,Opener (1-2),Yes
-2024,Virat Kohli,Royal Challengers Bangalore,741,15,3.0,Top Order (3),Yes
-2025,Sai Sudharsan,Gujarat Titans,759,15,2.0,Opener (1-2),Yes
+2022,Jos Buttler,Rajasthan Royals,863,17,1.4,Opener (1-2),Yes
+2023,Shubman Gill,Gujarat Titans,890,17,2.0,Opener (1-2),Yes
+2024,Virat Kohli,Royal Challengers Bangalore,741,15,1.0,Opener (1-2),Yes
+2025,Sai Sudharsan,Gujarat Titans,759,15,1.0,Opener (1-2),Yes
+2026,Vaibhav Suryavanshi,Rajasthan Royals,776,16,2.0,Opener (1-2),Yes

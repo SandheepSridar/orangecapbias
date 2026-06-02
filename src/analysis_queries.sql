@@ -1,16 +1,16 @@
 -- IPL Orange Cap Bias — Core Analysis Queries
--- Run against: ipl_research.bbb_clean (2008–2025, innings 1–2 only)
+-- Run against: ipl_research.bbb_clean (2008–2026, innings 1–2 only)
 -- See CLAUDE.md for methodology and variable definitions
 
 -- ── Setup ─────────────────────────────────────────────────────────────────────
 
 CREATE OR REPLACE VIEW ipl_research.bbb_clean AS
 SELECT * FROM ipl_research.ball_by_ball
-WHERE season <= 2025
+WHERE season <= 2026
   AND innings IN (1, 2);
 
 
--- ── Analysis A: Orange Cap Winner Batting Position (2008–2025) ────────────────
+-- ── Analysis A: Orange Cap Winner Batting Position (2008–2026) ────────────────
 -- Claim: ~90%+ of winners batted at positions 1–3
 
 SELECT

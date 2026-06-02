@@ -50,7 +50,7 @@ results = []
 
 print("Loading data...")
 bbb = pd.read_parquet(RAW)
-bbb = bbb[(bbb["season"] <= 2025) & (bbb["innings"].isin([1, 2]))]
+bbb = bbb[(bbb["season"] <= 2026) & (bbb["innings"].isin([1, 2]))]
 
 # Legal deliveries exclude wides (batter does not face a wide)
 bbb_legal = bbb[bbb["extras_type"] != "wide"]
@@ -104,7 +104,7 @@ results.append({
     "statistic": round(chi2, 4),
     "p_value": round(p_chi2, 6),
     "significant": sig(p_chi2),
-    "note": f"df=3, n_winners=18, n_pop={pop_counts.sum()}"
+    "note": f"df=3, n_winners={len(winners)}, n_pop={pop_counts.sum()}"
 })
 
 # ── TEST B: Kruskal-Wallis — balls faced across position groups ───────────────
@@ -190,12 +190,32 @@ avg_pos.columns = ["season", "batter", "avg_pos"]
 league_bs = league_bs.merge(avg_pos, on=["season", "batter"])
 
 league_bs = league_bs[league_bs["league_matches"] >= 7]
-league_bs["norm_runs"] = league_bs["league_runs"] * 14.0 / league_bs["league_matches"]
+
+# Player-level playoff flag: did this batter appear in any playoff match?
+# A player who got extra playoff matches is NOT projected up for league games
+# they personally missed (e.g. injury) — they already had compensating matches.
+# Only non-playoff players, who were structurally denied matches, are normalised
+# up to a full 14-match season.
+made_playoffs = (
+    bbb.assign(_po=(bbb["match_stage"] != "league").astype(int))
+    .groupby(["season", "batter"])["_po"].max()
+    .reset_index().rename(columns={"_po": "made_playoffs"})
+)
+league_bs = league_bs.merge(made_playoffs, on=["season", "batter"], how="left")
+league_bs["made_playoffs"] = league_bs["made_playoffs"].fillna(0).astype(int)
+
+# Playoff players: scale only for the season's league length (no up-projection).
+# Non-playoff players: project their actual league output up to 14 matches.
+season_len = league_bs.groupby("season")["league_matches"].transform("max")
+denom = np.where(league_bs["made_playoffs"] == 1, season_len, league_bs["league_matches"])
+league_bs["norm_runs"] = league_bs["league_runs"] * 14.0 / denom
 league_bs["actual_rank"] = league_bs.groupby("season")["league_runs"].rank(ascending=False, method="min")
 league_bs["norm_rank"] = league_bs.groupby("season")["norm_runs"].rank(ascending=False, method="min")
 
-# 95% CI on projected runs for missed matches: ±1.96 × σ × √(missing_matches)
-league_bs["missing_matches"] = (14 - league_bs["league_matches"]).clip(lower=0)
+# 95% CI on projected runs for missed matches: ±1.96 × σ × √(missing_matches).
+# Only non-playoff players are projected, so playoff players have 0 missing matches.
+missing = (14 - league_bs["league_matches"]).clip(lower=0)
+league_bs["missing_matches"] = np.where(league_bs["made_playoffs"] == 1, 0, missing).astype(int)
 league_bs["ci_half"] = 1.96 * league_bs["runs_std"] * np.sqrt(league_bs["missing_matches"])
 league_bs["ci_lower"] = (league_bs["norm_runs"] - league_bs["ci_half"]).clip(lower=0).round(1)
 league_bs["ci_upper"] = (league_bs["norm_runs"] + league_bs["ci_half"]).round(1)
@@ -205,7 +225,8 @@ d_out = league_bs[league_bs["actual_rank"] <= 10].copy()
 d_out["normalised_runs"] = d_out["norm_runs"].round(1)
 d_out["avg_pos"] = d_out["avg_pos"].round(1)
 d_out[["season", "batter", "league_matches", "league_runs", "normalised_runs",
-       "actual_rank", "norm_rank", "avg_pos", "missing_matches", "ci_lower", "ci_upper"]].sort_values(
+       "actual_rank", "norm_rank", "avg_pos", "made_playoffs", "missing_matches",
+       "ci_lower", "ci_upper"]].sort_values(
     ["season", "actual_rank"]
 ).to_csv(Path("outputs/tables/analysis_d_normalised_rankings.csv"), index=False)
 

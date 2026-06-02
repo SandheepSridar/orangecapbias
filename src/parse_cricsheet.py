@@ -74,7 +74,10 @@ def parse_match(filepath: str) -> list[dict]:
         bowling_team = next((t for t in teams if t != batting_team), "")
         inn_num = inn_idx + 1
 
-        # Derive batting_position: rank of batter's first appearance this innings
+        # Derive batting_position: order of arrival at the crease this innings.
+        # Register both striker and non_striker so a non-striking batter who
+        # enters before facing a ball (e.g. an opener whose partner is dismissed
+        # first) keeps their true position rather than being pushed down.
         position_map: dict[str, int] = {}
         next_pos = 1
 
@@ -87,9 +90,10 @@ def parse_match(filepath: str) -> list[dict]:
                 runs = delivery.get("runs", {})
                 wickets = delivery.get("wickets", [])
 
-                if batter not in position_map:
-                    position_map[batter] = next_pos
-                    next_pos += 1
+                for player in (batter, delivery.get("non_striker")):
+                    if player and player not in position_map:
+                        position_map[player] = next_pos
+                        next_pos += 1
 
                 is_wicket = len(wickets) > 0
                 wicket_kind = wickets[0]["kind"] if is_wicket else None

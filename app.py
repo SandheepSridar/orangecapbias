@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -27,29 +28,40 @@ PHASE_COLORS = {
 BASE = Path("outputs/tables")
 
 
+DATA_FILES = {
+    "a":  BASE / "analysis_a_winner_positions.csv",
+    "b":  BASE / "analysis_b_balls_faced_by_position.csv",
+    "c":  BASE / "analysis_c_powerplay_concentration.csv",
+    "d":  BASE / "analysis_d_normalised_rankings.csv",
+    "e":  BASE / "analysis_e_playoff_match_advantage.csv",
+    "f":  BASE / "analysis_f_non_playoff_elite.csv",
+    "bs": BASE / "batter_season.csv",
+    "oc": Path("data/reference/orange_cap_winners.csv"),
+}
+
+
+# data_version (file mtimes) is part of the cache key, so the cache invalidates
+# automatically whenever any source CSV is regenerated.
 @st.cache_data
-def load_data():
-    return {
-        "a":  pd.read_csv(BASE / "analysis_a_winner_positions.csv"),
-        "b":  pd.read_csv(BASE / "analysis_b_balls_faced_by_position.csv"),
-        "c":  pd.read_csv(BASE / "analysis_c_powerplay_concentration.csv"),
-        "d":  pd.read_csv(BASE / "analysis_d_normalised_rankings.csv"),
-        "e":  pd.read_csv(BASE / "analysis_e_playoff_match_advantage.csv"),
-        "f":  pd.read_csv(BASE / "analysis_f_non_playoff_elite.csv"),
-        "bs": pd.read_csv(BASE / "batter_season.csv"),
-        "oc": pd.read_csv("data/reference/orange_cap_winners.csv"),
-    }
+def load_data(data_version):
+    return {k: pd.read_csv(p) for k, p in DATA_FILES.items()}
 
 
-d = load_data()
+d = load_data(tuple(os.path.getmtime(p) for p in DATA_FILES.values()))
+
+# Actual Orange Cap winner per season = highest *full-season* run-scorer (incl.
+# playoffs), which is how the award is decided. batter_season holds full-season
+# totals keyed by cricsheet name, so this joins cleanly to every chart below.
+GOLD = "#FFC300"
+OC_WINNERS = d["bs"].loc[d["bs"].groupby("season")["runs"].idxmax()].set_index("season")
 
 # ── Header ────────────────────────────────────────────────────────────────────
 st.title("🏏 IPL Orange Cap: A Structural Bias Analysis")
 st.markdown(
     """
     The IPL Orange Cap goes to the highest run-scorer each season.
-    This analysis asks: **is that fair?** Ball-by-ball data from all 18 complete
-    IPL seasons (2008–2025) shows the award structurally disadvantages middle-order
+    This analysis asks: **is that fair?** Ball-by-ball data from all 19 complete
+    IPL seasons (2008–2026) shows the award structurally disadvantages middle-order
     batsmen and players on non-playoff teams — not due to skill, but due to design.
     """
 )
@@ -58,9 +70,9 @@ st.divider()
 
 # ── Key callouts ──────────────────────────────────────────────────────────────
 c1, c2, c3, c4 = st.columns(4)
-c1.metric("Seasons Analysed", "18", "2008 – 2025")
-c2.metric("Opener/Top-3 Winners", "18 / 18", "100% of all time")
-c3.metric("Extra Balls (Openers vs Middle)", "+80 / season", "median, p < 0.001")
+c1.metric("Seasons Analysed", "19", "2008 – 2026")
+c2.metric("Opener/Top-3 Winners", "19 / 19", "100% of all time")
+c3.metric("Extra Balls (Openers vs Middle)", "+71 / season", "median, p < 0.001")
 c4.metric("Non-Playoff Elite Cases", "23", "top-5 despite fewer matches")
 
 st.divider()
@@ -93,16 +105,23 @@ if tab == "A · Winner Positions":
         category_orders={"position_group": POSITION_ORDER},
     )
     fig.update_traces(textposition="outside")
-    fig.update_layout(showlegend=False, yaxis_range=[0, 18])
+    fig.update_layout(showlegend=False, yaxis_range=[0, 19])
     st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("**Season-by-season breakdown**")
     a_display = a[["season", "winner", "team", "total_runs", "avg_batting_position", "position_group", "playoff_team"]]
     st.dataframe(a_display, use_container_width=True, hide_index=True)
 
+    _latest = OC_WINNERS.sort_index().iloc[-1]
+    st.caption(
+        f"🏆 Every bar and row here is an actual Orange Cap winner. "
+        f"Most recent: **{_latest.name}** — {_latest['batter']} "
+        f"({int(_latest['runs'])} runs, {int(_latest['matches'])} matches, {_latest['position_group']})."
+    )
+
     st.info(
-        "**Finding:** 15 out of 18 winners (83%) batted at positions 1–2. "
-        "The remaining 3 all batted at position 3. No middle-order or finisher has ever won."
+        "**Finding:** 17 out of 19 winners (89%) batted at positions 1–2. "
+        "The remaining 2 (Uthappa 2014, Williamson 2018) batted at position 3. No middle-order or finisher has ever won."
     )
 
 
@@ -121,8 +140,24 @@ elif tab == "B · Balls Faced":
         labels={"position_group": "Position Group", "balls_faced": "Balls Faced per Season"},
         points=False,
     )
-    fig.update_layout(showlegend=False)
+    fig.update_traces(showlegend=False)
+
+    w = OC_WINNERS.reset_index()
+    w = w[w["position_group"].isin(POSITION_ORDER)]
+    fig.add_trace(go.Scatter(
+        x=w["position_group"], y=w["balls_faced"],
+        mode="markers",
+        marker=dict(symbol="star", size=13, color=GOLD, line=dict(color="#7a5c00", width=1)),
+        name="🏆 Orange Cap winner",
+        customdata=w[["batter", "season", "runs"]].values,
+        hovertemplate=(
+            "🏆 <b>%{customdata[0]}</b> (%{customdata[1]})<br>"
+            "Balls faced: %{y}<br>Season runs: %{customdata[2]}<extra></extra>"
+        ),
+    ))
+    fig.update_layout(showlegend=True, legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
     st.plotly_chart(fig, use_container_width=True)
+    st.caption("🏆 Gold stars mark each season's actual Orange Cap winner — they cluster at the top of the opener distribution.")
 
     b = d["b"].set_index("position_group").reindex(POSITION_ORDER)
     st.markdown("**Summary statistics**")
@@ -135,7 +170,7 @@ elif tab == "B · Balls Faced":
     )
 
     st.info(
-        "**Finding:** Openers face a median of 80 more balls per season than middle-order batsmen. "
+        "**Finding:** Openers face a median of 71 more balls per season than middle-order batsmen. "
         "More balls = more opportunities to accumulate runs. This is a structural ceiling, not a skill gap."
     )
 
@@ -163,12 +198,27 @@ elif tab == "C · Powerplay Access":
         text_auto=".1f",
     )
     fig.update_traces(textposition="inside", textfont_size=11)
-    fig.update_layout(yaxis_range=[0, 105])
+    fig.update_layout(yaxis_range=[0, 115])
+
+    # Use analysis_a's position_group (the paper's classification) so these counts
+    # match Tab A's narrative exactly (17 openers / 2 top-order).
+    win_counts = d["a"]["position_group"].value_counts()
+    for grp in POSITION_ORDER:
+        n = int(win_counts.get(grp, 0))
+        if n:
+            fig.add_annotation(
+                x=grp, y=107, text=f"🏆 ×{n}", showarrow=False,
+                font=dict(size=13, color=GOLD),
+            )
     st.plotly_chart(fig, use_container_width=True)
+    st.caption(
+        "🏆 markers show how many of the 19 Orange Cap winners batted in each group — "
+        "all of them in the two leftmost (powerplay-rich) groups. The phase mix above is *why*."
+    )
 
     st.info(
-        "**Finding:** Openers score **57.5%** of their seasonal runs in the powerplay (overs 1–6). "
-        "Middle-order batsmen score just **16.2%** there — most of them never bat in the powerplay at all. "
+        "**Finding:** Openers score **57.1%** of their seasonal runs in the powerplay (overs 1–6). "
+        "Middle-order batsmen score just **17.3%** there — most of them never bat in the powerplay at all. "
         "Powerplay conditions (fielding restrictions, fresh pitch) are systematically unavailable to them."
     )
 
@@ -176,29 +226,52 @@ elif tab == "C · Powerplay Access":
 # ── Tab D — Normalised Rankings ───────────────────────────────────────────────
 elif tab == "D · Normalised Rankings":
     st.subheader("When you normalise for matches played, rankings change significantly.")
+    st.caption(
+        "Projection rule: only **non-playoff** players are scaled up to a full 14-match league season — "
+        "they were *structurally denied* matches. Players who reached the playoffs are **not** projected up "
+        "for league games they personally missed (e.g. injury), since they already had compensating matches. "
+        "This keeps a player's own absence from being counted against batters who played the full league."
+    )
 
     d_df = d["d"].copy()
 
     season = st.selectbox("Select season", sorted(d_df["season"].unique()), index=0, key="d_season_select")
     season_df = d_df[d_df["season"] == season].copy()
-    top10 = season_df[season_df["actual_rank"] <= 10].sort_values("actual_rank")
+    top10 = season_df[season_df["actual_rank"] <= 10].copy()
+
+    # Distinct y-positions per side so tied ranks (e.g. two players on equal runs)
+    # don't stack on the same row. The genuine tie is still shown in the hover.
+    top10 = top10.sort_values(["actual_rank", "normalised_runs"], ascending=[True, False]).reset_index(drop=True)
+    top10["y_actual"] = range(1, len(top10) + 1)
+    norm_order = top10.sort_values(["norm_rank", "league_runs"], ascending=[True, False]).index
+    top10.loc[norm_order, "y_norm"] = range(1, len(top10) + 1)
+
+    winner_name = OC_WINNERS.loc[season, "batter"] if season in OC_WINNERS.index else None
+    winner_total = int(OC_WINNERS.loc[season, "runs"]) if season in OC_WINNERS.index else None
 
     fig = go.Figure()
     for _, row in top10.iterrows():
-        color = "#e07b39" if row["actual_rank"] != row["norm_rank"] else "#adb5bd"
+        is_winner = row["batter"] == winner_name
+        if is_winner:
+            color, width, msize, label = GOLD, 4, 13, f'🏆 {row["batter"]}'
+        else:
+            color = "#e07b39" if row["y_actual"] != row["y_norm"] else "#adb5bd"
+            width, msize, label = 2, 8, row["batter"]
         fig.add_trace(go.Scatter(
             x=[0, 1],
-            y=[row["actual_rank"], row["norm_rank"]],
+            y=[row["y_actual"], row["y_norm"]],
             mode="lines+markers+text",
-            line=dict(color=color, width=2),
-            marker=dict(size=8, color=color),
-            text=[f'{row["batter"]} ({int(row["league_runs"])})',
-                  f'{row["batter"]} ({int(row["normalised_runs"])})'],
+            line=dict(color=color, width=width),
+            marker=dict(size=msize, color=color, symbol="star" if is_winner else "circle"),
+            text=[f'{label} ({int(row["league_runs"])})',
+                  f'{label} ({int(row["normalised_runs"])})'],
             textposition=["middle left", "middle right"],
             showlegend=False,
             hovertemplate=(
-                f"<b>{row['batter']}</b><br>"
-                f"Actual: #{int(row['actual_rank'])} ({int(row['league_runs'])} runs, {int(row['league_matches'])} matches)<br>"
+                f"<b>{row['batter']}</b>"
+                + (f" — 🏆 Orange Cap winner ({winner_total} full-season runs)" if is_winner else "")
+                + "<br>"
+                f"Actual: #{int(row['actual_rank'])} ({int(row['league_runs'])} league runs, {int(row['league_matches'])} matches)<br>"
                 f"Normalised: #{int(row['norm_rank'])} ({int(row['normalised_runs']):.0f} runs @ 14 matches)"
                 "<extra></extra>"
             ),
@@ -214,11 +287,26 @@ elif tab == "D · Normalised Rankings":
         height=500,
     )
     st.plotly_chart(fig, use_container_width=True)
-    st.caption("Orange lines = rank changed after normalisation. Grey = rank unchanged.")
+    st.caption("🏆 Gold = the actual Orange Cap winner. Orange = rank changed after normalisation. Grey = rank unchanged.")
+
+    if winner_name is not None:
+        if winner_name in set(top10["batter"]):
+            wrow = top10[top10["batter"] == winner_name].iloc[0]
+            if int(wrow["actual_rank"]) != 1:
+                st.warning(
+                    f"🏆 **{winner_name}** won the {season} Orange Cap with **{winner_total} full-season runs**, "
+                    f"but ranks only **#{int(wrow['actual_rank'])} on league runs** ({int(wrow['league_runs'])}). "
+                    "The extra playoff matches — not league output — decided the award."
+                )
+        else:
+            st.warning(
+                f"🏆 **{winner_name}** won the {season} Orange Cap with **{winner_total} full-season runs**, "
+                "yet doesn't even appear in the league-stage top 10 — the award was driven entirely by playoff matches."
+            )
 
     shift_pct = (d_df[d_df["actual_rank"] <= 10]["actual_rank"] != d_df[d_df["actual_rank"] <= 10]["norm_rank"]).mean() * 100
     st.info(
-        f"**Finding:** Across all 18 seasons, **{shift_pct:.1f}%** of top-10 batters have a different "
+        f"**Finding:** Across all 19 seasons, **{shift_pct:.1f}%** of top-10 batters have a different "
         "rank after normalising to a standard 14-match season (Wilcoxon signed-rank, p < 0.001). "
         "The award is sensitive to how many matches a player got to play."
     )
@@ -293,8 +381,21 @@ elif tab == "E · Playoff Advantage":
             y=val, line_dash="dot", line_color="#333",
             annotation_text=f"{label}: {val:.0f}", annotation_position="right",
         )
-    fig.update_layout(showlegend=False)
+    fig.update_traces(showlegend=False)
+
+    w = OC_WINNERS.reset_index()
+    w["Playoff Status"] = w["made_playoffs"].map({1: "Playoff Team", 0: "Non-Playoff Team"})
+    fig.add_trace(go.Scatter(
+        x=w["Playoff Status"], y=w["matches"],
+        mode="markers",
+        marker=dict(symbol="star", size=13, color=GOLD, line=dict(color="#7a5c00", width=1)),
+        name="🏆 Orange Cap winner",
+        customdata=w[["batter", "season"]].values,
+        hovertemplate="🏆 <b>%{customdata[0]}</b> (%{customdata[1]})<br>Matches: %{y}<extra></extra>",
+    ))
+    fig.update_layout(showlegend=True, legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
     st.plotly_chart(fig, use_container_width=True)
+    st.caption("🏆 Gold stars mark each Orange Cap winner — almost all sit in the playoff column with the most matches.")
 
     st.info(
         f"**Finding:** Playoff teams play a median of **{playoff_med:.0f} matches** vs "
@@ -366,7 +467,8 @@ elif tab == "F · Non-Playoff Elites":
     st.plotly_chart(fig, use_container_width=True)
     st.caption(
         "Blue = actual runs. Orange extension = projected extra runs to reach 16 matches. "
-        "Orange bars indicate the batter would have surpassed the actual OC winner on a level playing field."
+        "Orange bars indicate the batter would have surpassed the actual OC winner on a level playing field. "
+        "🏆 Hover any bar to see that season's actual Orange Cap winner and the run tally being compared against."
     )
 
     beat_count = f["would_have_beaten_oc"].sum()
@@ -393,6 +495,6 @@ elif tab == "F · Non-Playoff Elites":
 
 st.divider()
 st.caption(
-    "Data: Cricsheet IPL ball-by-ball data (2008–2025), 278,034 deliveries across 1,169 matches. "
+    "Data: Cricsheet IPL ball-by-ball data (2008–2026), 295,557 deliveries across 1,243 matches. "
     "All statistical tests: p < 0.001 unless noted. Analysis by Sandheep Sridar."
 )

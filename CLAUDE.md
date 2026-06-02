@@ -87,7 +87,7 @@ by fewer balls faced, no powerplay access, and reduced match count if their team
 misses the playoffs.
 
 **End Goal:** A two-paper research series:
-- **Paper 1 (current focus):** Prove the bias statistically using IPL data (2008–2025)
+- **Paper 1 (current focus):** Prove the bias statistically using IPL data (2008–2026)
 - **Paper 2 (future):** Propose a new "Best Batsman Index" that corrects for these biases
 
 ---
@@ -133,7 +133,7 @@ misses the playoffs.
 ### Fields to Derive
 | Derived Field | How to Derive |
 |---|---|
-| `batting_position` | Order of first appearance per innings |
+| `batting_position` | Order of arrival at the crease per innings (striker + non_striker) |
 | `position_group` | 1–2=Opener, 3=Top Order, 4–5=Middle Order, 6+=Finisher |
 | `phase` | Over 1–6=Powerplay, 7–15=Middle, 16–20=Death |
 | `match_stage` | League stage vs Qualifier/Eliminator/Final |
@@ -208,7 +208,10 @@ columns = [
 
 **Notes for Claude Code:**
 - Handle both old and new Cricsheet JSON schemas (format changed slightly over years)
-- `batting_position` = rank of batter's first appearance in that innings
+- `batting_position` = order of arrival at the crease in that innings, tracked from
+  both the `batter` (striker) and `non_striker` fields so a non-striking batter who
+  enters before facing a ball (e.g. an opener whose partner is dismissed first) keeps
+  their true position
 - Some matches have DLS adjustments — include but flag them
 - Save output as `data/processed/ball_by_ball.parquet`
 
@@ -266,7 +269,7 @@ batter_season_columns = [
 ### Step 4 — Core Statistical Analysis (`03_position_bias.ipynb`)
 
 #### Analysis A: Orange Cap Winner Position Distribution
-- For all 18 seasons (2008–2025), what batting position did the winner bat at?
+- For all 19 seasons (2008–2026), what batting position did the winner bat at?
 - Expected finding: ~90%+ batted at positions 1–3
 - Statistical test: Chi-square test — is the distribution of winner positions
   significantly different from the overall distribution of run-scorers?
@@ -313,7 +316,7 @@ All charts should be publication-quality (300 DPI, clean style, labeled axes).
 
 | Chart | Type | Key Message |
 |---|---|---|
-| Orange Cap winners by batting position (2008–2025) | Bar chart | ~90% are openers/top 3 |
+| Orange Cap winners by batting position (2008–2026) | Bar chart | ~90% are openers/top 3 |
 | Balls faced per season by position group | Box plot | Openers face far more balls |
 | Runs by phase by position group | Stacked bar | Openers monopolize powerplay |
 | Runs vs batting position scatter (all seasons) | Scatter | Strong negative correlation |
@@ -329,7 +332,7 @@ Export as both PNG (for draft) and SVG (for final submission).
 
 ### 1. Abstract (~250 words)
 - Problem: Orange Cap rewards volume, not quality
-- Method: Ball-by-ball analysis of all IPL seasons (2008–2025)
+- Method: Ball-by-ball analysis of all IPL seasons (2008–2026)
 - Finding: Structural bias against middle-order batsmen and non-playoff teams
 - Implication: Award criteria need reform
 
@@ -346,7 +349,7 @@ Export as both PNG (for draft) and SVG (for final submission).
 - Gap: no paper specifically challenges Orange Cap fairness
 
 ### 4. Data & Methodology
-- Cricsheet data description (1,241 matches, 2008–2025)
+- Cricsheet data description (1,243 matches, 2008–2026)
 - Variable definitions (batting position, phase, playoff team)
 - Statistical methods used
 
@@ -419,9 +422,9 @@ tqdm>=4.65.0
 
 | Decision | Choice | Reason |
 |---|---|---|
-| Seasons to analyze | 2008–2025 (18 seasons) | Complete seasons only; 2026 ongoing |
+| Seasons to analyze | 2008–2026 (19 seasons) | Complete seasons; 2026 concluded 2026-05-31 |
 | Minimum innings threshold | 7+ innings to qualify | Avoids small-sample noise |
-| Batting position definition | First ball faced position in innings | Consistent with Cricsheet data |
+| Batting position definition | Crease-arrival order (striker + non_striker) per innings | Avoids mislabelling non-striking openers whose partner is dismissed first |
 | Phase boundaries | PP=1–6, Middle=7–15, Death=16–20 | Standard IPL convention |
 | Playoff definition | Any team appearing in Qualifier 1/2 or Eliminator | Consistent across all seasons |
 | Statistical significance threshold | p < 0.05 | Standard academic convention |
@@ -462,7 +465,8 @@ When working on this project, Claude Code should be able to help with:
 ## Notes & Open Questions
 
 1. **2026 data:** IPL 2026 is ongoing — exclude from analysis or include as partial?
-   → Decision: Exclude 2026, use 2008–2025 (18 complete seasons)
+   → Decision (2026-06-02): 2026 season completed (final 2026-05-31) and is now
+   included. Scope is 2008–2026 (19 complete seasons).
 
 2. **Batting position volatility:** Some players change positions match to match
    (e.g. Kohli sometimes opened, sometimes at #3). Use average position across

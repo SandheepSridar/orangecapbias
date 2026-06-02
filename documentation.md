@@ -20,7 +20,7 @@ This file documents every SQL and Python script in the repository: what it does,
 - `_season_year()` — extracts 4-digit year from match date (handles split labels like "2007/08")
 - `_match_stage()` — normalises event stage strings to clean labels: `league`, `qualifier_1`, `qualifier_2`, `eliminator`, `semi_final`, `final`
 - `_phase()` — assigns powerplay / middle / death based on 0-indexed over number
-- `parse_match()` — parses one JSON file; derives `batting_position` (rank of each batter's first appearance per innings) and `extras_type` (wide / noball / bye / legbye / penalty / None)
+- `parse_match()` — parses one JSON file; derives `batting_position` (order of arrival at the crease per innings, from both `batter` and `non_striker`) and `extras_type` (wide / noball / bye / legbye / penalty / None)
 - `parse_all()` — iterates all JSONs, concatenates rows, tightens dtypes, saves parquet
 
 **Output schema:**
@@ -43,7 +43,7 @@ This file documents every SQL and Python script in the repository: what it does,
 | runs_total | int8 | Total runs for the delivery |
 | is_wicket | bool | |
 | wicket_kind | str | caught / bowled / run out / etc., or None |
-| batting_position | int8 | Rank of batter's first appearance in this innings |
+| batting_position | int8 | Order of arrival at the crease in this innings (striker + non_striker) |
 | phase | category | powerplay / middle / death |
 | extras_type | category | wide / noball / bye / legbye / penalty / None |
 | is_dls | bool | True if match affected by D/L method |
@@ -193,7 +193,7 @@ Update `season <= 2025` to `season <= 2026` when 2026 data is added.
 - League-stage only (`match_stage = 'league'`)
 - Normalises runs to 14-match baseline: `norm_runs = league_runs × 14 / league_matches`
 - Ranks both actual and normalised; returns top-10 actual or top-10 normalised per season
-- Output: ~183 rows (top-10 per season across 18 seasons)
+- Output: ~193 rows (top-10 per season across 19 seasons)
 - Writes: `outputs/tables/analysis_d_normalised_rankings.csv`
 - ⚠️ The local `stats.py` version also adds 95% CI columns (`ci_lower`, `ci_upper`) — the SQL version does not
 
@@ -211,7 +211,7 @@ Update `season <= 2025` to `season <= 2026` when 2026 data is added.
 - Finds batters who ranked top-5 in their season but were on non-playoff teams
 - Computes `proj_runs_16_matches = runs × 16 / matches` as the counterfactual
 - 7+ match minimum applied via `HAVING`
-- Output: 23 rows across 18 seasons
+- Output: 23 rows across 19 seasons
 - Writes: `outputs/tables/analysis_f_non_playoff_elite.csv`
 
 ---
@@ -222,7 +222,7 @@ Update `season <= 2025` to `season <= 2026` when 2026 data is added.
 |---|---|
 | `data/raw/ipl_json/` | Raw Cricsheet JSONs — gitignored, ~350MB |
 | `data/processed/ball_by_ball.parquet` | Parsed ball-by-ball data — gitignored, ~4MB |
-| `data/reference/orange_cap_winners.csv` | Manually curated Orange Cap winners 2008–2025 |
+| `data/reference/orange_cap_winners.csv` | Manually curated Orange Cap winners 2008–2026 |
 | `outputs/tables/batter_season.csv` | Per-batter per-season aggregates (legal balls, 7+ matches) — used by app and visualize.py |
 | `outputs/tables/stats_results.csv` | All 6 statistical test results |
 | `outputs/figures/` | Publication-quality PNG + SVG figures |

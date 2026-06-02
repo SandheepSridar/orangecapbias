@@ -75,13 +75,13 @@ for bar, val in zip(bars, counts.values):
 
 ax.set_xlabel("Batting Position Group")
 ax.set_ylabel("Number of Orange Cap Winners")
-ax.set_title("Orange Cap Winners by Batting Position (2008–2025)", pad=12)
+ax.set_title("Orange Cap Winners by Batting Position (2008–2026)", pad=12)
 ax.set_ylim(0, 18)
 ax.set_yticks(range(0, 19, 3))
 ax.tick_params(axis="x", length=0)
 ax.grid(axis="x", visible=False)
 
-ax.annotate("Zero middle-order\nor finisher winners\nin 18 seasons",
+ax.annotate("Zero middle-order\nor finisher winners\nin 19 seasons",
             xy=(2.5, 0.3), fontsize=9, color="#555",
             ha="center", style="italic")
 
@@ -178,7 +178,7 @@ ax.plot(x_line, intercept + slope * x_line,
 
 ax.set_xlabel("Average Batting Position")
 ax.set_ylabel("Season Runs")
-ax.set_title("Season Runs vs. Average Batting Position (2008–2025)", pad=12)
+ax.set_title("Season Runs vs. Average Batting Position (2008–2026)", pad=12)
 ax.legend(fontsize=9, markerscale=1.5, loc="upper right")
 
 ax.text(0.03, 0.08, f"r = {r:.2f},  p < 0.001",
@@ -246,7 +246,7 @@ ax.text(2.3, np_med, f"  {np_med:.0f}", va="center", fontsize=10, color="#333")
 
 ax.set_xticklabels(["Playoff Teams", "Non-Playoff Teams"])
 ax.set_ylabel("Matches Played per Season")
-ax.set_title("Matches Played: Playoff vs. Non-Playoff Teams (2008–2025)", pad=12)
+ax.set_title("Matches Played: Playoff vs. Non-Playoff Teams (2008–2026)", pad=12)
 ax.tick_params(axis="x", length=0)
 ax.grid(axis="x", visible=False)
 
