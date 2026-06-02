@@ -1,0 +1,329 @@
+\documentclass[11pt]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage[round]{natbib}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\graphicspath{{../outputs/figures/}}
+
+% Draft-note macro: highlights text the author still needs to write/refine.
+\newcommand{\authornote}[1]{{\color{red}\textit{[#1]}}}
+
+\captionsetup{font=small,labelfont=bf}
+
+% ---------- Title ----------
+\title{\textbf{Structurally Disadvantaged: A Statistical Analysis of
+Batting Position and Team Qualification Bias in the IPL Orange Cap Award}}
+
+\author[1]{Sandheep Sridar}
+\affil[1]{\small Independent Researcher \\ \texttt{sandeepsridar@gmail.com}}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% ---------- Abstract ----------
+\begin{abstract}
+\noindent
+The Orange Cap is the most sought-after individual batting award in the Indian
+Premier League (IPL). In this paper we discuss how it systematically
+disadvantages middle-order batsmen and high performers who do not qualify for
+the play-offs. This bias stems from three advantages enjoyed by openers and
+play-off teams: greater ball-faced volume, exclusive access to power-play
+conditions, and additional match opportunities from play-off qualification.
+
+Using ball-by-ball data from Cricsheet comprising 278{,}034 deliveries across
+18 seasons, we show that power-play access and play-off matches are strong
+determinants of the Orange Cap award. We are not comparing players or evaluating
+player performance; we are assessing the fairness of the award's design.
+
+The results confirm each hypothesis. Openers face a median of 80 more balls per
+season than middle-order batsmen and score 58\% of their runs in the power-play
+overs. When runs are normalised to a 14-match baseline, 77.6\% of the top batters
+per season rank differently, confirming the advantage of match access. Players who
+qualify for the play-offs play a median of two additional matches per season,
+widening the margin for the Orange Cap. In all 18 seasons every Orange Cap winner
+has batted in positions 1--3.
+
+The findings demonstrate that match access, not batting skill alone, determines
+the award outcome. The award structurally disincentivises middle-order batting
+skill. Beyond the unfairness in individual recognition, this has broader
+implications for the well-documented importance of the number-4 position at the
+international level. We call for a re-evaluation of the Orange Cap criteria to
+account for structural positional and match-count advantages.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} cricket analytics; IPL; T20; batting position;
+award fairness; sports analytics
+
+\section{Introduction}
+
+The Indian Premier League is the most popular T20 cricket league in the world
+\citep{iplvaluation2026}. It was established in 2008 and has gained popularity over
+time, with its total business value reaching \$18.5 billion in 2026, fuelled by a
+\$6.4 billion media-rights deal and roughly \$600 million in advertising revenue
+\citep{iplmediarights}. The league recognises individual performance with several
+awards at the end of the season, and the most popular of these is the Orange Cap.
+
+To popularise the T20 format, the IPL introduced several individual performance
+awards to celebrate explosive batting. The Orange Cap is awarded to the batsman who
+scores the most aggregate runs in the season. Introduced in the inaugural 2008
+season, it is a single-criterion award --- most runs scored. There is no adjustment
+for batting position, balls faced, or matches played. The leader gets the privilege
+of wearing an orange cap during play, and with it comes significant media visibility
+throughout the season. Ever since its inception, every winner has batted in positions
+1--3, with 15 of 18 being openers.
+
+The first six overs of the game are the power-play, where only two fielders are
+allowed outside the circle, giving the batsman a large advantage in scoring runs.
+Whether power-play access gives openers an advantage over middle-order batsmen, and
+whether play-off qualification provides additional opportunities to score, are
+questions this paper examines empirically.
+
+Prior work on cricket analytics has examined batting position and performance from
+multiple angles. \citet{pandey2023bayesian} used Bayesian survival analysis to study
+middle-order batsman performance in ODI cricket. Batting role-aware performance
+indices for T20 cricket have been proposed \citep{dppi2022}. Probabilistic approaches
+to batting-order advantage have also been explored \citep{probabilistic2020}. However,
+to the best of our knowledge, no prior study has examined whether a major T20 cricket
+award is structurally biased by batting position and match access.
+
+The remainder of this paper is organised as follows. Section~\ref{sec:methods}
+describes the data source and methodology. Section~\ref{sec:results} presents results
+across six analyses. Section~\ref{sec:discussion} discusses the implications of the
+findings, including the role of the Super Striker award as a partial compensating
+mechanism. Section~\ref{sec:conclusion} concludes with a call for re-evaluation of the
+Orange Cap criteria.
+
+\section{Data and Methodology}
+\label{sec:methods}
+
+\authornote{Draft to write. Cover: (i) Cricsheet data source ---
+1{,}241 matches, 278{,}034 deliveries, seasons 2008--2025;
+(ii) variable definitions --- batting position (rank of first appearance per
+innings), position groups (Opener 1--2, Top Order 3, Middle Order 4--5,
+Finisher 6+), phase (power-play overs 1--6, middle 7--15, death 16--20),
+legal balls (wides excluded), play-off team definition;
+(iii) qualification threshold (7+ matches per season);
+(iv) statistical tests used --- chi-square, Kruskal--Wallis, Mann--Whitney~U,
+Wilcoxon signed-rank, $p<0.05$.}
+
+\subsection*{Data source}
+We use publicly available ball-by-ball match data from Cricsheet \citep{cricsheet},
+covering all IPL matches from the 2008 season through 2025 (18 complete seasons;
+the ongoing 2026 season is excluded). After restricting to the first two innings of
+each match and excluding super-overs, the dataset comprises 278{,}034 deliveries.
+
+\subsection*{Variable definitions}
+\begin{itemize}
+  \item \textbf{Batting position} is the rank of a batter's first appearance in an
+        innings. Per-season position is the average across the batter's innings.
+  \item \textbf{Position group} maps average position to one of four groups:
+        Opener (1--2), Top Order (3), Middle Order (4--5), and Finisher (6+).
+  \item \textbf{Phase} is derived from the over number: power-play (overs 1--6),
+        middle (7--15), and death (16--20).
+  \item \textbf{Balls faced} counts only legal deliveries; wides are excluded, in
+        line with the official IPL strike-rate convention.
+  \item \textbf{Play-off team} is any team that appeared in a Qualifier, Eliminator,
+        or Final in a given season.
+\end{itemize}
+A batter-season qualifies for population comparisons only if the batter played at
+least seven matches that season, avoiding single-appearance noise.
+
+\subsection*{Statistical methods}
+We use the chi-square test for the winner-position distribution (Analysis~A);
+Kruskal--Wallis with Mann--Whitney~U post-hoc tests for differences across position
+groups (Analyses~B, C); the Wilcoxon signed-rank test for paired actual-versus-
+normalised rankings (Analysis~D); and one-sided Mann--Whitney~U tests for match-count
+and run differences by play-off status (Analyses~E, F). We adopt a significance
+threshold of $p<0.05$.
+
+\section{Results}
+\label{sec:results}
+
+\authornote{Draft prose to write around each figure/table. The figures, tables and
+key numbers below are final from the analysis pipeline.}
+
+\subsection{Batting position of Orange Cap winners}
+\label{sec:resA}
+In all 18 seasons, every Orange Cap winner batted in positions 1--3; 15 of 18 were
+openers (positions 1--2) and the remaining three batted at position~3
+(Figure~\ref{fig:winners}). No middle-order or finishing batsman has ever won. A
+chi-square test confirms the winner-position distribution differs significantly from
+the population distribution of qualified run-scorers
+($\chi^2 = 49.61$, $p < 0.001$, $df = 3$).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig1_winner_positions.png}
+  \caption{Distribution of Orange Cap winners by batting position group,
+  2008--2025. Every winner batted in positions 1--3.}
+  \label{fig:winners}
+\end{figure}
+
+\subsection{Balls faced across position groups}
+\label{sec:resB}
+Openers face a median of 284 legal balls per season, versus 204 for middle-order
+batsmen --- a gap of 80 balls (Table~\ref{tab:balls}, Figure~\ref{fig:balls}). A
+Kruskal--Wallis test confirms the difference across groups is significant
+($H = 1051.8$, $p < 0.001$, $n = 2783$).
+
+\begin{table}[H]
+  \centering
+  \caption{Balls faced per season by position group (legal balls; 7+ match
+  qualified batter-seasons, 2008--2025).}
+  \label{tab:balls}
+  \begin{tabular}{lrrrr}
+    \toprule
+    Position group & Batter-seasons & Median balls & Mean balls & Mean runs \\
+    \midrule
+    Opener (1--2)      & 224 & 284 & 286.1 & 386.2 \\
+    Top Order (3)      & 183 & 235 & 250.7 & 339.3 \\
+    Middle Order (4--5)& 372 & 204 & 209.7 & 282.4 \\
+    Finisher (6+)      & 376 & 101 & 112.5 & 155.8 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig2_balls_faced.png}
+  \caption{Distribution of balls faced per season by position group.}
+  \label{fig:balls}
+\end{figure}
+
+\subsection{Power-play run concentration}
+\label{sec:resC}
+Openers score 57.5\% of their seasonal runs in the power-play, compared with just
+16.2\% for middle-order batsmen and 2.4\% for finishers
+(Table~\ref{tab:powerplay}, Figure~\ref{fig:powerplay}). The difference in power-play
+run share across groups is significant (Kruskal--Wallis, $p < 0.001$).
+
+\begin{table}[H]
+  \centering
+  \caption{Share of seasonal runs by phase and position group (\%).}
+  \label{tab:powerplay}
+  \begin{tabular}{lrrr}
+    \toprule
+    Position group & Power-play & Middle & Death \\
+    \midrule
+    Opener (1--2)      & 57.5 & 35.4 & 7.1 \\
+    Top Order (3)      & 45.1 & 44.3 & 10.6 \\
+    Middle Order (4--5)& 16.2 & 56.4 & 27.3 \\
+    Finisher (6+)      & 2.4 & 34.6 & 63.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig3_powerplay_concentration.png}
+  \caption{Runs by phase as a share of seasonal total, by position group.}
+  \label{fig:powerplay}
+\end{figure}
+
+\subsection{Runs versus batting position}
+\label{sec:resD1}
+Across all qualified batter-seasons, seasonal runs correlate negatively with average
+batting position ($r = -0.61$, $p < 0.001$), as shown in Figure~\ref{fig:scatter}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig4_runs_vs_position.png}
+  \caption{Seasonal runs versus average batting position, all qualified
+  batter-seasons. Negative correlation ($r = -0.61$).}
+  \label{fig:scatter}
+\end{figure}
+
+\subsection{Normalised-ranking counterfactual}
+\label{sec:resD2}
+Restricting to league-stage matches and normalising each batter's runs to a common
+14-match baseline ($\text{norm\_runs} = \text{league\_runs} \times 14 /
+\text{league\_matches}$), 77.6\% of the top-10 rankings per season change order. A
+Wilcoxon signed-rank test confirms actual and normalised ranks differ significantly
+($W = 1914.5$, $p < 0.001$, $n = 183$). Figure~\ref{fig:normalised} shows the
+ranking shifts; 95\% confidence intervals account for batters who played fewer than
+14 matches.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig5_normalised_rankings.png}
+  \caption{Actual versus normalised rankings of top run-scorers after normalising to
+  a 14-match baseline.}
+  \label{fig:normalised}
+\end{figure}
+
+\subsection{Play-off match advantage}
+\label{sec:resE}
+Play-off teams play a median of two additional matches per season relative to
+non-play-off teams (Mann--Whitney~U, $p < 0.001$; $n_{\text{playoff}} = 72$,
+$n_{\text{non}} = 84$), as shown in Figure~\ref{fig:matchcount}. Given a typical
+opener pace of roughly 40 runs per match, two extra matches translate to a
+material run cushion in a close Orange Cap race.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig6_match_count.png}
+  \caption{Matches played per season by play-off and non-play-off teams.}
+  \label{fig:matchcount}
+\end{figure}
+
+\subsection{Non-play-off elite batsmen}
+\label{sec:resF}
+We identify 23 batter-seasons in which a top-5 run-scorer played for a non-play-off
+team and was therefore capped at the 14-match league stage. Projecting their runs to
+a 16-match schedule (the median for play-off teams) shows several would have
+challenged or exceeded the actual Orange Cap total. Notably, a one-sided
+Mann--Whitney~U test does \emph{not} find that play-off top-5 batters out-score
+non-play-off top-5 batters ($p = 0.95$; medians 552 vs.\ 625): elite non-play-off
+batsmen are not less productive --- they simply have fewer matches in which to
+accumulate runs.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\authornote{Draft to write. Cover: (i) implications for award design --- the award
+rewards volume/access over skill; (ii) the Super Striker award as a partial but
+inadequate compensating mechanism (introduced 2018, $\geq$100-ball threshold, last
+three winners 2024--2026 were openers --- converging toward the same pattern);
+(iii) the broader importance of the number-4 position at international level;
+(iv) limitations --- Impact Player rule (2023+), DLS-shortened matches, opposition
+quality not modelled, batting position volatility.}
+
+\subsection*{The Super Striker award}
+The IPL introduced the Super Striker award in 2018, given to the batsman with the
+highest strike rate (minimum 100 balls faced). Its existence is an implicit
+acknowledgement that pure run accumulation does not capture batting quality. However,
+it does not adequately compensate for the Orange Cap bias: it is a secondary award
+with far less prestige, the 100-ball threshold still excludes many middle-order
+batsmen, and the last three winners (2024--2026) have all been openers, converging
+toward the same positional pattern as the Orange Cap itself.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\authornote{Draft to write. Summarise the structural bias, restate that match access
+(position + play-off qualification) --- not skill alone --- determines the award, and
+call for a re-evaluation of the Orange Cap criteria. Tease Paper~2 (a bias-corrected
+Best Batsman Index).}
+
+% ---------- References ----------
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

@@ -17,6 +17,22 @@ venv/
 .venv/
 .env
 
+# latex build files
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.lof
+latex/*.lot
+latex/*.bbl
+latex/*.blg
+latex/*.bcf
+latex/*.run.xml
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.synctex.gz
+latex/main.pdf
+
 # os
 .DS_Store
 
