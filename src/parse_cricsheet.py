@@ -94,6 +94,20 @@ def parse_match(filepath: str) -> list[dict]:
                 is_wicket = len(wickets) > 0
                 wicket_kind = wickets[0]["kind"] if is_wicket else None
 
+                extras_dict = delivery.get("extras", {})
+                if "wides" in extras_dict:
+                    extras_type = "wide"
+                elif "noballs" in extras_dict:
+                    extras_type = "noball"
+                elif "byes" in extras_dict:
+                    extras_type = "bye"
+                elif "legbyes" in extras_dict:
+                    extras_type = "legbye"
+                elif "penalty" in extras_dict:
+                    extras_type = "penalty"
+                else:
+                    extras_type = None
+
                 rows.append({
                     "match_id": match_id,
                     "season": season,
@@ -113,6 +127,7 @@ def parse_match(filepath: str) -> list[dict]:
                     "wicket_kind": wicket_kind,
                     "batting_position": position_map[batter],
                     "phase": _phase(over_0idx),
+                    "extras_type": extras_type,
                     "is_dls": is_dls,
                     "winner": winner,
                 })
@@ -143,6 +158,7 @@ def parse_all(raw_dir: Path = RAW_DIR, out_dir: Path = PROCESSED_DIR) -> pd.Data
     df["is_wicket"] = df["is_wicket"].astype(bool)
     df["is_dls"] = df["is_dls"].astype(bool)
     df["phase"] = df["phase"].astype("category")
+    df["extras_type"] = df["extras_type"].astype("category")
     df["match_stage"] = df["match_stage"].astype("category")
 
     out_dir.mkdir(parents=True, exist_ok=True)

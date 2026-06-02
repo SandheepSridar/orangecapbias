@@ -212,7 +212,7 @@ ax.set_xlabel("Actual Rank")
 ax.set_ylabel("Normalised Rank (14-match baseline)")
 ax.set_title("Actual vs. Normalised Rankings\n(Top-10 batters, all seasons)", pad=12)
 ax.set_xticks(range(1, 11))
-ax.legend(fontsize=9, loc="lower right")
+ax.legend(fontsize=9, loc="upper left")
 
 shift_pct = changed.mean() * 100
 ax.text(0.97, 0.97, f"{shift_pct:.1f}% of top-10 batters\nhave a different\nnormalised rank",

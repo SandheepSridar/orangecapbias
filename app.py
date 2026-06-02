@@ -60,7 +60,7 @@ st.divider()
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Seasons Analysed", "18", "2008 – 2025")
 c2.metric("Opener/Top-3 Winners", "18 / 18", "100% of all time")
-c3.metric("Extra Balls (Openers vs Middle)", "+43 / season", "median, p < 0.001")
+c3.metric("Extra Balls (Openers vs Middle)", "+80 / season", "median, p < 0.001")
 c4.metric("Non-Playoff Elite Cases", "23", "top-5 despite fewer matches")
 
 st.divider()
@@ -135,7 +135,7 @@ elif tab == "B · Balls Faced":
     )
 
     st.info(
-        "**Finding:** Openers face a median of 43 more balls per season than middle-order batsmen. "
+        "**Finding:** Openers face a median of 80 more balls per season than middle-order batsmen. "
         "More balls = more opportunities to accumulate runs. This is a structural ceiling, not a skill gap."
     )
 

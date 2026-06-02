@@ -52,19 +52,22 @@ print("Loading data...")
 bbb = pd.read_parquet(RAW)
 bbb = bbb[(bbb["season"] <= 2025) & (bbb["innings"].isin([1, 2]))]
 
+# Legal deliveries exclude wides (batter does not face a wide)
+bbb_legal = bbb[bbb["extras_type"] != "wide"]
+
 winners = pd.read_csv(REF)
 winners["position_group"] = winners["avg_batting_position"].apply(position_group)
 
-# Batter-season aggregate
+# Batter-season aggregate (balls_faced = legal balls only, excluding wides)
 batter_season = (
-    bbb.groupby(["season", "batter"])
+    bbb_legal.groupby(["season", "batter"])
     .agg(
         balls_faced=("runs_batter", "count"),
         runs=("runs_batter", "sum"),
         avg_pos=("batting_position", "mean"),
         matches=("match_id", "nunique"),
         made_playoffs=("match_stage", lambda x: int((x != "league").any())),
-        pp_runs=("runs_batter", lambda x: x[bbb.loc[x.index, "phase"] == "powerplay"].sum()),
+        pp_runs=("runs_batter", lambda x: x[bbb_legal.loc[x.index, "phase"] == "powerplay"].sum()),
         total_runs_for_pp=("runs_batter", "sum"),
     )
     .reset_index()

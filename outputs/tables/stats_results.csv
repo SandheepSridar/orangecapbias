@@ -1,8 +1,8 @@
 test,analysis,question,statistic,p_value,significant,note
-Chi-square,A,Winner position distribution differs from population,49.3053,0.0,YES,"df=3, n_winners=18, n_pop=1155"
-Kruskal-Wallis,B,Balls faced per season differs across position groups,1050.2269,0.0,YES,"k=4 groups, n=2783"
-Mann-Whitney U,B (post-hoc),Openers face more balls per season than middle-order,114480.5,6.7e-05,YES,"one-sided, median diff=43.0 balls, n_opener=355, n_middle=561"
-Kruskal-Wallis,C,Powerplay run % differs across position groups,2086.6693,0.0,YES,"k=4 groups, median opener PP%=64.0, median middle PP%=14.0"
+Chi-square,A,Winner position distribution differs from population,49.6089,0.0,YES,"df=3, n_winners=18, n_pop=1155"
+Kruskal-Wallis,B,Balls faced per season differs across position groups,1051.778,0.0,YES,"k=4 groups, n=2783"
+Mann-Whitney U,B (post-hoc),Openers face more balls per season than middle-order,113637.5,0.00014,YES,"one-sided, median diff=36.0 balls, n_opener=354, n_middle=562"
+Kruskal-Wallis,C,Powerplay run % differs across position groups,2084.0028,0.0,YES,"k=4 groups, median opener PP%=64.1, median middle PP%=13.9"
 Wilcoxon signed-rank,D,Actual rank differs from normalised rank (top-10 per season),1914.5,0.0,YES,"n=183, 77.6% of rankings shift after normalisation"
 Mann-Whitney U,E,Playoff teams play more matches than non-playoff teams,5532.0,0.0,YES,"one-sided, n_playoff=72, n_non_playoff=84"
 Mann-Whitney U,F,Playoff top-5 batters score more runs than non-playoff top-5,593.5,0.94971,NO,"one-sided, n_playoff=67, n_non_playoff=23, medians: 552 vs 625"

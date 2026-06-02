@@ -19,3 +19,6 @@ venv/
 
 # os
 .DS_Store
+
+#other
+existing_research
