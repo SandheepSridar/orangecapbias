@@ -71,8 +71,8 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ## Project Overview
 
-**Title (Working):** *"Structurally Disadvantaged: A Statistical Analysis of Batting
-Position and Team Qualification Bias in the IPL Orange Cap Award"*
+**Title:** *"An Award You Cannot Win from Number Five: Structural Bias in the IPL
+Orange Cap"*
 
 **Author Background:** Data Engineer with cricket domain knowledge
 

@@ -37,6 +37,8 @@ DATA_FILES = {
     "f":  BASE / "analysis_f_non_playoff_elite.csv",
     "bs": BASE / "batter_season.csv",
     "oc": Path("data/reference/orange_cap_winners.csv"),
+    "moi_best": BASE / "middle_order_index_best.csv",
+    "moi_all":  BASE / "middle_order_index_all.csv",
 }
 
 
@@ -84,6 +86,7 @@ ANALYSES = [
     "D · Normalised Rankings",
     "E · Playoff Advantage",
     "F · Non-Playoff Elites",
+    "G · Best Middle Order",
 ]
 tab = st.sidebar.radio("Analysis", ANALYSES, key="active_tab")
 
@@ -491,6 +494,172 @@ elif tab == "F · Non-Playoff Elites":
         "surpassed the actual Orange Cap winner if they'd played the same number of matches. "
         "Crucially, their runs-per-match is comparable — the gap is opportunity, not ability "
         "(Mann-Whitney U, p = 0.95, no significant runs difference)."
+    )
+
+
+# ── Tab G — Best Middle Order ─────────────────────────────────────────────────
+elif tab == "G · Best Middle Order":
+    st.subheader("The best middle-order batsman the Orange Cap never sees.")
+    st.caption(
+        "A composite **Best Middle-Order Index**: for each season, every qualifying "
+        "middle-order batsman (average position 4–7, 7+ matches) is scored on four "
+        "components — **Volume** (runs per innings), **Efficiency** (strike rate), "
+        "**Finishing** (death-over strike rate) and **Consistency** (median runs per "
+        "innings). Each component is standardised *within the season* (a z-score: how "
+        "many standard deviations above the season's middle-order average), and the four "
+        "are averaged with equal weight. The season's Orange Cap winner is excluded — "
+        "though none has ever batted in the middle order anyway."
+    )
+
+    moi_best = d["moi_best"].copy()
+    moi_all = d["moi_all"].copy()
+
+    COMP_COLS = ["z_volume", "z_efficiency", "z_finishing", "z_consistency"]
+    COMP_LABELS = {
+        "z_volume": "Volume (runs/inns)",
+        "z_efficiency": "Efficiency (strike rate)",
+        "z_finishing": "Finishing (death SR)",
+        "z_consistency": "Consistency (median)",
+    }
+
+    # ── Headline callouts ────────────────────────────────────────────────────
+    win_counts = moi_best["batter"].value_counts()
+    repeats = win_counts[win_counts >= 2]
+    top_season = moi_best.loc[moi_best["index"].idxmax()]
+    g1, g2, g3 = st.columns(3)
+    g1.metric("Seasons covered", f"{moi_best['season'].nunique()}", "2008 – 2026")
+    g2.metric("Most-crowned (uncrowned!)",
+              ", ".join(repeats[repeats == repeats.max()].index.tolist()),
+              f"{int(repeats.max())}× each")
+    g3.metric("Most dominant season",
+              f"{top_season['batter']} ({int(top_season['season'])})",
+              f"index {top_season['index']:.2f}")
+
+    st.divider()
+
+    # ── Season selector → ranking + winner breakdown ─────────────────────────
+    season = st.selectbox("Select season", sorted(moi_all["season"].unique()),
+                          index=int(moi_all["season"].nunique() - 1), key="moi_season")
+    sdf = moi_all[moi_all["season"] == season].sort_values("index", ascending=False)
+    topn = sdf.head(8).copy()
+    winner = topn.iloc[0]
+
+    left, right = st.columns([3, 2])
+
+    with left:
+        st.markdown(f"**Top middle-order batsmen — {season}**")
+        bar_colors = [GOLD if i == 0 else "#3a86ff" for i in range(len(topn))]
+        fig = go.Figure(go.Bar(
+            x=topn["index"], y=topn["batter"], orientation="h",
+            marker_color=bar_colors,
+            customdata=topn[["team", "avg_pos", "matches", "runs", "sr", "death_sr"]].values,
+            hovertemplate=(
+                "<b>%{y}</b> — %{customdata[0]}<br>"
+                "Index: %{x:.2f}<br>Avg position: %{customdata[1]:.1f}<br>"
+                "Matches: %{customdata[2]} · Runs: %{customdata[3]}<br>"
+                "Strike rate: %{customdata[4]:.1f} · Death SR: %{customdata[5]:.1f}"
+                "<extra></extra>"
+            ),
+        ))
+        fig.update_layout(
+            xaxis_title="Best Middle-Order Index", yaxis_title="",
+            yaxis=dict(categoryorder="total ascending"),
+            height=360, margin=dict(l=10, r=10, t=10, b=10),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+        st.caption("🥇 Gold = the season's top middle-order batsman.")
+
+    with right:
+        st.markdown(f"**Why {winner['batter']} won — component z-scores**")
+        comp = pd.DataFrame({
+            "Component": [COMP_LABELS[c] for c in COMP_COLS],
+            "z": [winner[c] for c in COMP_COLS],
+        })
+        comp_colors = ["#e07b39" if v >= 0 else "#adb5bd" for v in comp["z"]]
+        fig_c = go.Figure(go.Bar(
+            x=comp["z"], y=comp["Component"], orientation="h",
+            marker_color=comp_colors,
+            text=[f"{v:+.2f}" for v in comp["z"]], textposition="outside",
+        ))
+        fig_c.add_vline(x=0, line_color="#333", line_width=1)
+        fig_c.update_layout(
+            xaxis_title="z-score (vs season's middle order)", yaxis_title="",
+            height=360, margin=dict(l=10, r=10, t=10, b=10),
+        )
+        st.plotly_chart(fig_c, use_container_width=True)
+        st.caption("Each bar = how far above (orange) or below (grey) the season's "
+                   "middle-order average this player ranked on that skill.")
+
+    st.divider()
+
+    # ── Full leaderboard table ───────────────────────────────────────────────
+    st.markdown("**Best middle-order batsman, every season (2008–2026)**")
+    show = moi_best[["season", "batter", "team", "avg_pos", "matches", "runs",
+                     "sr", "death_sr", "index"]].rename(columns={
+        "avg_pos": "Avg Pos", "sr": "Strike Rate", "death_sr": "Death SR", "index": "Index"})
+    st.dataframe(show, use_container_width=True, hide_index=True)
+
+    # ── Recurring winners ────────────────────────────────────────────────────
+    st.markdown("**The uncrowned regulars** — players who top the index most often")
+    rc = win_counts[win_counts >= 2].sort_values()
+    fig_r = go.Figure(go.Bar(
+        x=rc.values, y=rc.index, orientation="h", marker_color="#3a86ff",
+        text=[f"{v}×" for v in rc.values], textposition="outside",
+    ))
+    fig_r.update_layout(xaxis_title="Seasons as best middle-order batsman", yaxis_title="",
+                        height=260, margin=dict(l=10, r=10, t=10, b=10),
+                        xaxis=dict(dtick=1))
+    st.plotly_chart(fig_r, use_container_width=True)
+
+    st.divider()
+
+    # ── Crowned vs uncrowned: strike rate dumbbell ───────────────────────────
+    st.markdown("**Crowned vs uncrowned — who actually struck faster?**")
+    oc_sr = OC_WINNERS.reset_index()[["season", "batter", "runs", "balls_faced"]].copy()
+    oc_sr["oc_sr"] = oc_sr["runs"] / oc_sr["balls_faced"] * 100
+    dumb = (oc_sr.rename(columns={"batter": "oc_name"})
+            .merge(moi_best[["season", "batter", "sr"]].rename(
+                columns={"batter": "mo_name", "sr": "mo_sr"}), on="season")
+            .sort_values("season"))
+
+    fig_d = go.Figure()
+    for _, r in dumb.iterrows():
+        fig_d.add_trace(go.Scatter(
+            x=[r["oc_sr"], r["mo_sr"]], y=[r["season"], r["season"]],
+            mode="lines", line=dict(color="#d3d3d3", width=2),
+            showlegend=False, hoverinfo="skip"))
+    fig_d.add_trace(go.Scatter(
+        x=dumb["oc_sr"], y=dumb["season"], mode="markers",
+        marker=dict(color="#e07b39", size=10, line=dict(color="#7a4a1f", width=1)),
+        name="🏆 Orange Cap winner", customdata=dumb[["oc_name"]].values,
+        hovertemplate="🏆 <b>%{customdata[0]}</b> (%{y})<br>Strike rate %{x:.1f}<extra></extra>"))
+    fig_d.add_trace(go.Scatter(
+        x=dumb["mo_sr"], y=dumb["season"], mode="markers",
+        marker=dict(color="#3a86ff", size=10, line=dict(color="#1c4f9c", width=1)),
+        name="Best middle-order batsman", customdata=dumb[["mo_name"]].values,
+        hovertemplate="<b>%{customdata[0]}</b> (%{y})<br>Strike rate %{x:.1f}<extra></extra>"))
+    fig_d.update_layout(
+        xaxis_title="Season strike rate", yaxis_title="",
+        yaxis=dict(dtick=1, autorange="reversed"),
+        height=560, margin=dict(l=10, r=10, t=10, b=10),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
+    st.plotly_chart(fig_d, use_container_width=True)
+
+    faster = int((dumb["mo_sr"] > dumb["oc_sr"]).sum())
+    gap = (dumb["mo_sr"] - dumb["oc_sr"]).mean()
+    st.caption(
+        f"Orange (left) = the season's Orange Cap winner; blue (right) = the best "
+        f"middle-order batsman. In **{faster} of {len(dumb)}** seasons the middle-order "
+        f"batsman struck faster — by an average of **{gap:.0f} runs per 100 balls**. "
+        "The two exceptions are themselves explosive openers (Gayle 2011, Suryavanshi 2026)."
+    )
+
+    st.info(
+        "**Finding:** The middle order's best are explosive finishers — de Villiers, "
+        "Klaasen, Russell, Maxwell, Dhoni, Miller — who strike fast and finish innings "
+        "but never accumulate the raw volume an opener does. The Orange Cap, measuring "
+        "only aggregate runs, has never recognised a single one of them. An award built "
+        "on rate and finishing, not volume, would tell a completely different story."
     )
 
 st.divider()

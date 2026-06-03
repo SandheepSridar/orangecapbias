@@ -1,0 +1,20 @@
+season,batter,team,avg_pos,matches,innings,runs,mean_rpi,median_rpi,sr,death_sr,z_volume,z_efficiency,z_finishing,z_consistency,index
+2008,RG Sharma,Deccan Chargers,4.06,12,12,404,33.7,34.0,148.0,219.7,2.24,0.79,1.36,2.21,1.65
+2009,A Symonds,Deccan Chargers,4.44,8,8,249,31.1,27.5,150.0,181.2,2.03,1.2,1.11,2.01,1.59
+2010,RV Uthappa,Royal Challengers Bangalore,4.03,14,14,374,26.7,22.5,171.6,260.0,1.05,1.89,1.9,0.89,1.43
+2011,MS Dhoni,Chennai Super Kings,4.68,13,13,392,30.2,26.0,158.7,205.4,1.8,2.52,2.31,1.39,2.01
+2012,AB de Villiers,Royal Challengers Bangalore,4.68,13,13,319,24.5,14.0,161.1,215.7,1.24,2.48,2.68,-0.2,1.55
+2013,DA Miller,Kings XI Punjab,4.74,12,12,418,34.8,27.0,164.6,210.6,2.67,1.9,1.32,2.22,2.03
+2014,AB de Villiers,Royal Challengers Bangalore,4.75,13,13,395,30.4,28.0,158.6,208.9,1.68,1.43,1.55,1.85,1.63
+2015,AD Russell,Kolkata Knight Riders,5.47,11,11,326,29.6,37.0,192.9,198.3,2.21,2.62,1.04,2.91,2.2
+2016,KH Pandya,Mumbai Indians,4.82,8,8,237,29.6,19.5,191.1,181.8,1.73,2.22,0.6,1.0,1.39
+2017,GJ Maxwell,Kings XI Punjab,4.27,13,13,310,23.8,25.0,173.2,192.0,0.69,1.81,1.43,1.37,1.33
+2018,KD Karthik,Kolkata Knight Riders,5.03,16,16,498,31.1,32.0,147.8,175.0,2.15,0.4,0.46,2.31,1.33
+2019,AD Russell,Kolkata Knight Riders,5.48,13,13,510,39.2,48.0,204.8,248.9,2.47,2.35,2.09,3.26,2.54
+2020,AB de Villiers,Royal Challengers Bangalore,4.1,14,14,454,32.4,31.5,158.7,222.4,2.3,0.84,1.7,2.12,1.74
+2021,GJ Maxwell,Royal Challengers Bangalore,4.16,14,14,513,36.6,39.5,144.1,166.3,3.11,0.88,0.68,3.68,2.09
+2022,TH David,Mumbai Indians,5.63,8,8,186,23.2,18.0,216.3,237.1,0.49,2.71,1.98,0.2,1.34
+2023,H Klaasen,Sunrisers Hyderabad,5.01,11,11,448,40.7,36.0,177.1,187.4,2.53,2.0,0.41,2.27,1.8
+2024,T Stubbs,Delhi Capitals,5.32,13,13,378,29.1,26.0,190.9,262.5,1.03,1.96,1.71,0.94,1.41
+2025,H Klaasen,Sunrisers Hyderabad,4.52,13,13,487,37.5,32.0,172.7,214.3,2.79,0.96,0.73,1.9,1.6
+2026,H Klaasen,Sunrisers Hyderabad,4.22,15,15,624,41.6,40.0,160.0,177.9,3.2,0.4,-0.09,2.95,1.61

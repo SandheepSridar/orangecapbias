@@ -1,3 +1,7 @@
+An Award You Cannot Win from Number Five: Structural Bias in the IPL Orange Cap
+
+Abstract
+
 The Orange Cap is the most sought after individual batting award in the IPL. In this paper we discuss how it systemically disadvantages middle order batsmen and the high performers who don't qualify for play-offs. This bias stems from three advantages: greater ball-faced volume, exclusive access to power play conditions, and additional match opportunities from play-off qualification.
 
 Using ball-by-ball data from cricsheet with 295,557 deliveries across 19 seasons, we show that power play access, play-off matches are strong determinants of the Orange Cap award. We are not comparing players or evaluating player performance,  we are assessing the fairness of the award's design.

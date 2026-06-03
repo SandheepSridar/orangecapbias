@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------
+Prompt for 2.1 — Data Source
+  Write subsection "2.1 Data Source" for an academic
+  paper's methodology section,
+  ~80 words, plain academic prose. Facts:
+  - Source: Cricsheet ball-by-ball IPL data, JSON, one
+  file per match.
+  - 19 complete seasons, 2008–2026 (2026 final was 31
+  May 2026).
+  - 1,243 matches; 295,732 deliveries parsed; 295,557
+  are in innings 1 and 2 (the
+    analysis set). Super overs excluded.
+  - The parser handles Cricsheet's older and newer JSON
+  layouts.
+  Do not mention results or methods. Just describe the
+  data.
+
+  ---------------------------------------------------------------------------------
+  The data for this paper is sourced from Cricheet ball-by-ball IPL data. Each match is stored as a separate JSON file. In total, the dataset covers 19 complete seasons from 2008 to 2026. A total of 1,243 matches is analyzed with 295,557 deliveries. We exclude super overs for this analysis.

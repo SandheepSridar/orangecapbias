@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------------
+Write subsection "2.2 Unit of Analysis" for an academic paper's methodology
+  section, ~80 words, plain academic prose. Facts:
+  - The base table has one row per delivery, carrying: match metadata (season, date,
+    stage, teams), the innings/over/ball position, the batter and bowler, the runs
+    (batter, extras, total), wicket information, and several derived fields.
+  - The analyses use two aggregations of this table: per-delivery, and batter-season
+    (one row per batter per season).
+  - Only the first and second innings are used.
+  Do not mention results or statistical tests. Just describe the data structure.
+
+  Two notes so it lands cleanly:
+  - The "derived fields" it refers to (batting position, phase, etc.) get defined in 2.3 — so here you only need to say they exist, not explain them. That keeps 2.2 short and
+  avoids overlap.
+  - Keep the same tense you settled on in 2.1 (you landed on present: "is analyzed"), so the two subsections read consistently.
+
+  ---------------------------------------------------------------------------------
