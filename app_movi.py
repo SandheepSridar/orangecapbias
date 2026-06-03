@@ -34,6 +34,7 @@ DATA_FILES = {
     "moi_best": BASE / "middle_order_index_best.csv",
     "moi_all":  BASE / "middle_order_index_all.csv",
     "bs":       BASE / "batter_season.csv",
+    "rec":      Path("data/reference/movi_recognition.csv"),
 }
 
 
@@ -144,13 +145,16 @@ st.caption("How far above (orange) or below (grey) the season's middle-order "
            "average this batsman ranked on each skill.")
 st.divider()
 
-# ── Leaderboard ─────────────────────────────────────────────────────────────
-st.subheader("Every season's best (2008–2026)")
-show = moi_best[["season", "batter", "team", "runs", "sr", "index"]].rename(columns={
+# ── Leaderboard: top 3 every season ─────────────────────────────────────────
+st.subheader("Top 3 every season (2008–2026)")
+top3 = moi_all[moi_all["season_rank"] <= 3].sort_values(["season", "season_rank"]).copy()
+top3["Rank"] = top3["season_rank"].map({1: "🥇", 2: "🥈", 3: "🥉"})
+show = top3[["season", "Rank", "batter", "team", "runs", "sr", "index"]].rename(columns={
     "season": "Season", "batter": "Batsman", "team": "Team",
     "runs": "Runs", "sr": "SR", "index": "MOVI"})
-st.dataframe(show, use_container_width=True, hide_index=True)
-st.caption("Swipe the table sideways to see every column.")
+st.dataframe(show, use_container_width=True, hide_index=True, height=430)
+st.caption("The three highest-MOVI middle-order batsmen of every season. "
+           "Swipe the table sideways to see every column.")
 st.divider()
 
 # ── Recurring winners ───────────────────────────────────────────────────────
@@ -161,6 +165,25 @@ fig_r = go.Figure(go.Bar(x=rc.values, y=rc.index, orientation="h", marker_color=
 fig_r.update_layout(xaxis=dict(dtick=1, range=[0, rc.values.max() + 0.6]))
 st.plotly_chart(bar_layout(fig_r, "Seasons as best middle-order batsman", 240),
                 use_container_width=True, config=PCFG)
+st.divider()
+
+# ── Did the league recognise them? ──────────────────────────────────────────
+st.subheader("Did the league even notice?")
+rec = moi_best[["season", "batter"]].merge(d["rec"], on="season", how="left")
+rec["other_award"] = rec["other_award"].fillna("").astype(str).str.strip()
+unrec = int((rec["other_award"] == "").sum())
+st.metric("Seasons with no other award", f"{unrec} of {len(rec)}",
+          "MOVI #1 won no individual IPL award that season")
+rec_tbl = rec.copy()
+rec_tbl["other_award"] = rec_tbl["other_award"].replace("", "—")
+rec_tbl = rec_tbl.rename(columns={
+    "season": "Season", "batter": "MOVI #1", "other_award": "Other award that season"})
+st.dataframe(rec_tbl, use_container_width=True, hide_index=True, height=430)
+st.caption(
+    f"In **{unrec} of {len(rec)}** seasons the best middle-order batsman won no "
+    "individual IPL award that season. Only Andre Russell (2015, 2019) was "
+    "recognised — and through the all-rounder MVP, not a batting award. "
+    "(2026 awards provisional.)")
 st.divider()
 
 # ── Crowned vs uncrowned strike-rate dumbbell ───────────────────────────────
