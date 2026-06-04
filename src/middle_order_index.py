@@ -91,8 +91,22 @@ all_out = q.copy()
 all_out["season_rank"] = all_out.groupby("season")["index"].rank(ascending=False, method="min").astype(int)
 all_out = all_out[cols + ["season_rank"]].round(rounding).sort_values(["season", "season_rank"])
 all_out.to_csv(OUT / "middle_order_index_all.csv", index=False)
+
+# Components file for the interactive dashboard: every middle-order batter-season
+# with raw metrics and NO match floor, so the app can re-apply the minimum-matches
+# threshold and the lower position bound live. The floor is widened to 3.75 (below
+# the canonical 4) so the dashboard's position slider can dip to 3.75; the upper
+# bound stays 7. Kept at high precision so the in-app z-scores match this script's
+# output at the default 7-match / position-4 setting.
+comp_cols = ["season", "batter", "team", "avg_pos", "matches", "innings", "runs",
+             "mean_rpi", "median_rpi", "sr", "death_sr"]
+comp = agg[(agg["avg_pos"] >= 3.75) & (agg["avg_pos"] <= 7)][comp_cols].copy()
+comp = comp.round({"avg_pos": 3, "mean_rpi": 4, "median_rpi": 4, "sr": 4, "death_sr": 4})
+comp.to_csv(OUT / "middle_order_components.csv", index=False)
+
 print(f"Saved {OUT/'middle_order_index_best.csv'} ({len(best_out)} rows)")
-print(f"Saved {OUT/'middle_order_index_all.csv'} ({len(all_out)} rows)\n")
+print(f"Saved {OUT/'middle_order_index_all.csv'} ({len(all_out)} rows)")
+print(f"Saved {OUT/'middle_order_components.csv'} ({len(comp)} rows)\n")
 
 pd.set_option("display.width", 200, "display.max_columns", None)
 

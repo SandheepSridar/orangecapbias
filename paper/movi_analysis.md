@@ -91,7 +91,10 @@ Andre Russell broke through — 2015 (MVP) and 2019 (MVP + Super Striker).
 - Comparison covers MVP, Emerging Player, Super Striker, Best Catch. Niche awards
   (Most Sixes / Game Changer / Power Player) were not fully captured per season —
   spot-check before publishing an absolute "completely unrecognised" claim.
-- Source data: `data/reference/movi_recognition.csv` (one row per season).
+- Source data: `data/reference/movi_recognition.csv`, keyed by (season, batter) —
+  only the recognised seasons are listed (Russell 2015, 2019); all other MOVI #1s
+  left-join to no award. The dashboard's recognition panel is fixed at the standard
+  7-match threshold so this verified finding doesn't drift when the slider moves.
 
 ---
 
