@@ -5,7 +5,6 @@ Outputs: data/processed/ball_by_ball.parquet
 
 import json
 import glob
-import os
 from pathlib import Path
 
 import pandas as pd

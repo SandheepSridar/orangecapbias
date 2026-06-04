@@ -16,7 +16,6 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 from pathlib import Path
-import csv
 
 RAW = Path("data/processed/ball_by_ball.parquet")
 REF = Path("data/reference/orange_cap_winners.csv")
