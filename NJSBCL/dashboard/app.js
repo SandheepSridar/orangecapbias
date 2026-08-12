@@ -212,6 +212,66 @@ function renderToss() {
   card.appendChild(parTargetRow);
 }
 
+/* ── Chase plan ────────────────────────────────────────────────────── */
+const CHASE_SEGMENT_LABELS = ["Overs 1-4", "Overs 5-8", "Overs 9-12", "Overs 13-16"];
+
+function renderChasePlan() {
+  const them = currentThem();
+  const input = $("chase-target-input");
+  const box = $("chase-plan-cards");
+  box.innerHTML = "";
+  if (!them) return;
+
+  // reset to this opponent's computed target only when the matchup actually changes —
+  // preserves whatever the user typed if they're just re-rendering the same matchup
+  if (input.dataset.opponent !== state.opponent) {
+    input.dataset.opponent = state.opponent;
+    const def = them.parTarget.targetToChase.value;
+    input.value = def != null ? def : "";
+  }
+
+  const target = parseInt(input.value, 10);
+  if (!target || target <= 0) return;
+
+  const avgEcon = (arr) => (arr && arr.length ? arr.reduce((s, b) => s + b.econ, 0) / arr.length : null);
+  const strongEcon = avgEcon(them.bowlingStrengths);
+  const weakEcon = avgEcon(them.weakBowlers);
+
+  // assume their best bowlers open and close the innings, weaker/part-time bowlers fill
+  // the middle — a standard captaincy pattern — so weight each 4-over block's share of
+  // the target by the expected economy rate there: tougher blocks get a smaller ask,
+  // easier ones a bigger one, and the shares always sum back to the full target.
+  let segEcons, usedFallback;
+  if (strongEcon != null && weakEcon != null) {
+    segEcons = [strongEcon, weakEcon, weakEcon, strongEcon];
+    usedFallback = false;
+  } else {
+    segEcons = [1, 1, 1, 1];
+    usedFallback = true;
+  }
+  const sumEcon = segEcons.reduce((a, b) => a + b, 0);
+  const segTargets = segEcons.map((e) => Math.round((target * e) / sumEcon));
+  const roundingDiff = target - segTargets.reduce((a, b) => a + b, 0);
+  segTargets[segTargets.length - 1] += roundingDiff;
+
+  let cumulative = 0;
+  CHASE_SEGMENT_LABELS.forEach((label, i) => {
+    cumulative += segTargets[i];
+    const card = el("div", "chase-card");
+    card.append(
+      el("div", "chase-label", label),
+      el("div", "chase-runs", `${segTargets[i]} runs`),
+      el("div", "chase-note", `${(segTargets[i] / 4).toFixed(1)}/over · need ${cumulative} by the end of this block`),
+    );
+    box.appendChild(card);
+  });
+
+  if (usedFallback) {
+    box.appendChild(el("div", "empty-note",
+      `Not enough bowling data on ${state.opponent} yet to weight this by strength — showing an even split.`));
+  }
+}
+
 /* ── Record + head-to-head ────────────────────────────────────────── */
 function renderRecord() {
   const s = currentSeriesData();
@@ -535,6 +595,7 @@ function renderAll() {
   renderWinProb();
   renderFixtures();
   renderToss();
+  renderChasePlan();
   renderRecord();
   renderH2H();
   renderCollapses();
@@ -555,4 +616,5 @@ $("fixtures-toggle").addEventListener("click", () => {
   state.showAllFixtures = !state.showAllFixtures;
   renderFixtures();
 });
+$("chase-target-input").addEventListener("input", renderChasePlan);
 renderAll();

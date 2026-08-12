@@ -209,6 +209,24 @@ section h2 .q {
 .pt-value.dim { color: var(--muted); font-size: 1rem; font-weight: 600; }
 .pt-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
 
+/* ── Chase plan ────────────────────────────────────────────────────── */
+.chase-input-row { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+.chase-input-row label { font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+#chase-target-input {
+  background: #0f1420; color: var(--text); border: 1px solid var(--line);
+  border-radius: 10px; padding: 0.5rem 0.9rem; font-size: 1rem; font-family: inherit;
+  width: 8rem; font-variant-numeric: tabular-nums;
+}
+#chase-target-input:focus { outline: none; border-color: var(--gold); }
+.chase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0.9rem; }
+.chase-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.chase-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.chase-runs { font-family: "Sora", sans-serif; font-size: 1.6rem; font-weight: 800; margin-top: 0.3rem; color: var(--gold); }
+.chase-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }
+
 /* ── Head-to-head ──────────────────────────────────────────────────── */
 .h2h-record { display: flex; gap: 1.6rem; align-items: baseline; margin-bottom: 0.9rem; flex-wrap: wrap; }
 .h2h-record .big { font-family: "Sora", sans-serif; font-size: 1.8rem; font-weight: 800; }

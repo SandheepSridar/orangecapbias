@@ -477,6 +477,18 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   (a real -0.31 outranks nothing, but "nothing" was being read as neutral). Fixed by giving
   zero-score players `-Infinity` in that comparison instead — they now only get picked once every
   actually-scored option is exhausted. Both `select_xi()` and `selectXI()` were updated together.
+- `index.html` (main matchup page, not charts.html) has an interactive **chase plan** calculator
+  (added 2026-08-12), entirely client-side in `app.js`'s `renderChasePlan()` — no backend
+  computation, no data.js changes needed. Enter a target and it splits the 16-over innings into
+  four 4-over blocks, weighted by the opponent's already-computed `bowlingStrengths` (their 3
+  best, low econ) and `weakBowlers` (their 3 worst, high econ): assumes their best bowlers open
+  and close (blocks 1 and 4 get the average of `bowlingStrengths`' econ) and weaker/part-time
+  bowlers fill the middle (blocks 2-3 get `weakBowlers`' average econ), then allocates each
+  block's share of the target proportional to that assumed econ so tougher blocks get a smaller
+  ask. Falls back to an even 4-way split with a note if a team doesn't have 3 qualifying bowlers
+  in either pool yet. The input defaults to that opponent's `parTarget.targetToChase.value` and
+  resets only when the matchup actually changes (tracked via a `dataset.opponent` marker on the
+  input) — typing a custom number is preserved across re-renders of the same matchup.
 
 ## TODO for a future rescrape — toss data (not yet implemented)
 

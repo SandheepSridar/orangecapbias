@@ -69,6 +69,19 @@
     <div class="toss-card" id="toss-card"></div>
   </section>
 
+  <section id="sec-chase">
+    <h2>Chase plan <span class="q">— pacing a chase against their bowling</span></h2>
+    <p class="subhead">Enter the target — it's split into four 4-over blocks, weighted by their
+      bowling strength: a smaller ask against their best bowlers (assumed to open and close the
+      innings), a bigger one against the weaker/part-time overs typically bowled in the middle.
+      This is a pacing guide, not a guarantee — actual bowling changes vary by match.</p>
+    <div class="chase-input-row">
+      <label for="chase-target-input">Target to chase</label>
+      <input type="number" id="chase-target-input" min="1" placeholder="e.g. 130">
+    </div>
+    <div class="chase-grid" id="chase-plan-cards"></div>
+  </section>
+
   <section id="sec-record">
     <h2>Season record &amp; head-to-head</h2>
     <div class="compare-grid" id="record-grid"></div>
