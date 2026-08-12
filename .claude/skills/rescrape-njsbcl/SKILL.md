@@ -458,13 +458,25 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   returns a match-by-match history alongside the final ratings), and full squad batting/bowling
   leaderboards (every player who's played for us, not just the top 3 shown on the main page).
 - The Best XI is **interactive** (added 2026-08-12): `data.js` exposes the full candidate roster
-  (`gladiatorsCharts.bestXI.roster`, every qualifying player with their scores), not just the
-  picked 11. `build_data.py`'s selection logic was split into `build_squad_roster()` (data prep)
-  and a pure `select_xi(roster)` (no pandas, just dict/list logic) specifically so it could be
-  ported 1:1 to JS — `charts.js`'s `selectXI()` is a line-by-line mirror of it. Clicking a player
-  chip toggles them into `state.unavailable` and both functions re-run client-side against the
-  filtered roster — no rebuild, no server round-trip. If you change the Python selection algorithm,
-  update the JS copy to match or the two will silently diverge.
+  (`gladiatorsCharts.bestXI.roster`), not just the picked 11. `build_data.py`'s selection logic
+  was split into `build_squad_roster()` (data prep) and a pure `select_xi(roster)` (no pandas,
+  just dict/list logic) specifically so it could be ported 1:1 to JS — `charts.js`'s `selectXI()`
+  is a line-by-line mirror of it. Clicking a player chip toggles them into `state.unavailable` and
+  both functions re-run client-side against the filtered roster — no rebuild, no server
+  round-trip. If you change the Python selection algorithm, update the JS copy to match or the
+  two will silently diverge.
+- `build_squad_roster()` deliberately includes **every** player who's appeared for the team this
+  season (any batting innings or bowling over at all), not just those clearing
+  `batter_strength_pool`/`bowler_strength_pool`'s qualifying thresholds — Sandheep flagged
+  (2026-08-12) that fringe players were silently missing from the availability-toggle list.
+  Unqualified players keep `battingScore`/`bowlingScore` as `null` (a 1-2 innings sample isn't a
+  reliable ranking signal) but still appear as real roster entries, so they're available as an
+  emergency fallback if enough regulars are marked unavailable. Caught a real bug fixing this:
+  `select_xi()`'s "fill remaining spots" step originally treated a missing score as `0`, which
+  made completely unproven players rank *above* proven regulars with a merely below-average score
+  (a real -0.31 outranks nothing, but "nothing" was being read as neutral). Fixed by giving
+  zero-score players `-Infinity` in that comparison instead — they now only get picked once every
+  actually-scored option is exhausted. Both `select_xi()` and `selectXI()` were updated together.
 
 ## TODO for a future rescrape — toss data (not yet implemented)
 

@@ -379,11 +379,13 @@ def team_bowling_agg(bowl, team):
         wkts = int(g["W"].sum())
         balls = int(g["balls"].sum())
         runs = int(g["R"].sum())
+        dots = int(g["Dot"].sum())
         econ = round(runs / (balls / 6), 2) if balls > 0 else 0
         avg = round(runs / wkts, 1) if wkts > 0 else None
+        dot_pct = round(100 * dots / balls, 1) if balls > 0 else 0.0
         rows.append({
             "player": player, "wickets": wkts, "overs": balls_to_overs_str(balls),
-            "runs": runs, "econ": econ, "avg": avg,
+            "runs": runs, "econ": econ, "avg": avg, "dotPct": dot_pct,
         })
     return pd.DataFrame(rows).sort_values("wickets", ascending=False).reset_index(drop=True)
 
@@ -528,35 +530,43 @@ def batter_strength_pool(bat, min_innings=MIN_INNINGS_FOR_BAT_STRENGTH):
     return pool
 
 
-def build_squad_roster(bat, bat_pool, bowl_pool, team):
-    """Every player from `team`'s full-season squad who qualifies as a batting and/or
-    bowling option (from the league-wide z-scored pools), plus the designated
-    wicketkeeper (identified from the '†' marker cricclubs uses in the raw scorecard).
-    This is the candidate pool select_xi() picks from — exposed in full (not just the
-    picked XI) so the frontend can re-run selection live as players are marked
-    unavailable, without needing a server round-trip."""
+def build_squad_roster(bat, bowl, bat_pool, bowl_pool, team):
+    """Every player who has appeared for `team` this season — batted or bowled at least
+    once — not just those clearing batter_strength_pool/bowler_strength_pool's qualifying
+    thresholds. A fringe player who's only played a couple of games still needs to show
+    up as an emergency fallback option when regulars are marked unavailable, rather than
+    disappearing from the list entirely.
+
+    battingScore/bowlingScore (the z-scored value select_xi() ranks candidates by) are
+    still only set for players who clear those thresholds — a 1-innings sample isn't a
+    reliable signal to actively rank someone highly on. Unscored players are still real
+    roster entries though: select_xi()'s "fill remaining spots" step treats a missing
+    score as neutral (0), so they're only ever picked once every qualifying option is
+    already in the XI or unavailable — exactly the "last resort" role they should play."""
+    team_bat_all = team_batting_agg(bat, team).set_index("player")
+    team_bowl_all = team_bowling_agg(bowl, team).set_index("player")
     squad_bat = bat_pool[bat_pool["team"] == team].set_index("player") if not bat_pool.empty else bat_pool
     squad_bowl = bowl_pool[bowl_pool["team"] == team].set_index("player") if not bowl_pool.empty else bowl_pool
 
     wk_rows = bat[(bat["team"] == team) & (bat["player"].str.contains("†", na=False))]
     keeper = wk_rows["playerClean"].value_counts().idxmax() if not wk_rows.empty else None
 
-    all_players = sorted(set(squad_bat.index) | set(squad_bowl.index) | ({keeper} if keeper else set()))
+    all_players = sorted(set(team_bat_all.index) | set(team_bowl_all.index) | ({keeper} if keeper else set()))
     roster = {}
     for p in all_players:
-        has_bat = p in squad_bat.index
-        has_bowl = p in squad_bowl.index
+        has_bat = p in team_bat_all.index
+        has_bowl = p in team_bowl_all.index
         roster[p] = {
             "player": p, "isKeeper": p == keeper,
-            "battingScore": round(float(squad_bat.loc[p, "battingScore"]), 2) if has_bat else None,
-            "bowlingScore": round(float(squad_bowl.loc[p, "strengthScore"]), 2) if has_bowl else None,
+            "battingScore": round(float(squad_bat.loc[p, "battingScore"]), 2) if p in squad_bat.index else None,
+            "bowlingScore": round(float(squad_bowl.loc[p, "strengthScore"]), 2) if p in squad_bowl.index else None,
             "battingStats": {
-                "innings": int(squad_bat.loc[p, "innings"]), "runs": int(squad_bat.loc[p, "runs"]),
-                "avg": float(squad_bat.loc[p, "avg"]), "sr": float(squad_bat.loc[p, "sr"]),
+                "innings": int(team_bat_all.loc[p, "innings"]), "runs": int(team_bat_all.loc[p, "runs"]),
+                "avg": float(team_bat_all.loc[p, "avg"]), "sr": float(team_bat_all.loc[p, "sr"]),
             } if has_bat else None,
             "bowlingStats": {
-                "overs": float(squad_bowl.loc[p, "overs"]), "wickets": int(squad_bowl.loc[p, "wickets"]),
-                "econ": float(squad_bowl.loc[p, "econ"]), "dotPct": float(squad_bowl.loc[p, "dotPct"]),
+                "wickets": int(team_bowl_all.loc[p, "wickets"]), "econ": float(team_bowl_all.loc[p, "econ"]),
+                "dotPct": float(team_bowl_all.loc[p, "dotPct"]),
             } if has_bowl else None,
         }
     return roster
@@ -601,10 +611,15 @@ def select_xi(roster):
             break
         pick(p)
 
-    remaining = sorted(
-        (p for p in roster if p not in picked),
-        key=lambda p: -((roster[p]["battingScore"] or 0) + (roster[p]["bowlingScore"] or 0)),
-    )
+    def combined_value(p):
+        scores = [s for s in (roster[p]["battingScore"], roster[p]["bowlingScore"]) if s is not None]
+        # a player with zero qualifying scores (never proven at either discipline this
+        # season) must rank below one with even a single real, below-average score —
+        # otherwise an unproven name looks "neutral" (0) and outranks a known, if
+        # mediocre, regular. Only pick the unproven as a genuine last resort.
+        return sum(scores) if scores else float("-inf")
+
+    remaining = sorted((p for p in roster if p not in picked), key=lambda p: -combined_value(p))
     for p in remaining:
         if len(picked) >= 11:
             break
@@ -623,11 +638,11 @@ def select_xi(roster):
     return players
 
 
-def best_playing_xi(bat, bat_pool, bowl_pool, team):
+def best_playing_xi(bat, bowl, bat_pool, bowl_pool, team):
     """Default Playing XI (everyone available) plus the full candidate roster, so the
     frontend can re-run select_xi() itself against a subset when players are marked
     unavailable."""
-    roster = build_squad_roster(bat, bat_pool, bowl_pool, team)
+    roster = build_squad_roster(bat, bowl, bat_pool, bowl_pool, team)
     return {
         "players": select_xi(roster),
         "roster": list(roster.values()),
@@ -920,7 +935,7 @@ def build():
         print(f"  teams computed: {len(teams_data)}")
 
         bat_strength_pool = batter_strength_pool(bat)
-        best_xi = best_playing_xi(bat, bat_strength_pool, strength_pool, gladiators)
+        best_xi = best_playing_xi(bat, bowl, bat_strength_pool, strength_pool, gladiators)
         league_avg_collapse_pct = (
             round(sum(t["battingCollapses"]["collapsePct"] for t in teams_data.values()) / len(teams_data))
             if teams_data else 0

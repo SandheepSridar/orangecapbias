@@ -53,9 +53,17 @@ function selectXI(roster) {
     pick(r.player);
   }
 
+  // a player with zero qualifying scores (never proven at either discipline this
+  // season) must rank below one with even a single real, below-average score —
+  // otherwise an unproven name looks "neutral" (0) and outranks a known, if mediocre,
+  // regular. Only pick the unproven as a genuine last resort.
+  const combinedValue = (r) => {
+    const scores = [r.battingScore, r.bowlingScore].filter((s) => s !== null);
+    return scores.length ? scores.reduce((a, b) => a + b, 0) : -Infinity;
+  };
   const remaining = roster
     .filter((r) => !picked.includes(r.player))
-    .sort((a, b) => ((b.battingScore || 0) + (b.bowlingScore || 0)) - ((a.battingScore || 0) + (a.bowlingScore || 0)));
+    .sort((a, b) => combinedValue(b) - combinedValue(a));
   for (const r of remaining) {
     if (picked.length >= 11) break;
     pick(r.player);
