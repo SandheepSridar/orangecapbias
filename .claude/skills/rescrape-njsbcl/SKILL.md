@@ -446,3 +446,31 @@ this skill runs, so it's ready when he does:
   Store as e.g. `data/division1_toss.csv` / `data/weekenderscup_toss.csv` with columns
   `matchId,tossWinner,tossDecision`, following the same blob-download pattern as everything else
   in this doc.
+
+## TODO for a future rescrape — real match venue / ground (not yet implemented)
+
+Sandheep wants actual physical match locations (not just "hosted by Team X"). Investigated
+2026-08-12, deferred at his request — he's looking for a more reliable source himself, so don't
+resume this without him asking. Findings so far, to avoid re-deriving them from scratch:
+
+- The schedule export's `Ground` column (used today for fixture-card venues) is **not** a real
+  location — cross-checked all 400 Division 1 + all 800 Weekenders Cup 2026 matches and every
+  single `Ground` value is just the hosting team's own name, not a park/address.
+- `viewTeams.do?league=<id>&year=2026&clubId=2690` (Team List page) DOES have a real `Home
+  Ground` column per team (e.g. "Daniel P. Ryan Field," "Cedarbrook Park") matching the site's
+  genuine grounds directory (`viewGrounds.do?clubId=2690`, has street addresses). This is
+  team-level, not match-level — no per-match venue was found anywhere (checked scorecard "Info"
+  tab too, nothing there).
+- Coverage is incomplete: 9/40 Division 1 teams and 44/80 Weekenders Cup teams have a blank
+  `Home Ground`. League IDs found: Division 1 `league=58`, Division 2 `league=59`, Weekenders Cup
+  `league=60`, T-20 Championship `league=61` (2026 for all). Cross-referencing a team missing its
+  ground in one league against the other three 2026 leagues did NOT reliably fill gaps — no exact
+  name matches at all, and fuzzy substring matches were mostly false positives (generic names like
+  "Warriors" collided across unrelated teams). Didn't find the 2025 Division 1 league ID (its
+  nav link is inside a hover-triggered dropdown that didn't yield an href through the usual
+  extraction) — worth trying if picking this back up, but no reason to expect it fixes the
+  team-vs-match granularity problem even if found.
+- Bottom line if resumed: `viewTeams.do`'s `Home Ground` is real but only gets you "which park a
+  team calls home," not "where this specific match on this specific date was played" (teams could
+  plausibly play away matches at the opponent's ground, or a neutral one) — that distinction
+  matters if Sandheep wants per-match accuracy rather than a per-team approximation.
