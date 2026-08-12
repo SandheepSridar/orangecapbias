@@ -528,14 +528,13 @@ def batter_strength_pool(bat, min_innings=MIN_INNINGS_FOR_BAT_STRENGTH):
     return pool
 
 
-def best_playing_xi(bat, bat_pool, bowl_pool, team):
-    """Suggests a Playing XI from `team`'s full-season squad: the designated wicketkeeper
-    (identified from the '†' marker cricclubs uses in the raw scorecard), the best 5
-    remaining batting options by battingScore, enough bowling options by strengthScore to
-    cover a full attack (aiming for 5 recognized bowlers in the XI), then fills any
-    remaining spots with the best leftover combined value. Both scores come from
-    league-wide z-scored pools (batter_strength_pool / bowler_strength_pool), so this
-    reflects each player's value against the whole league, not just their own teammates."""
+def build_squad_roster(bat, bat_pool, bowl_pool, team):
+    """Every player from `team`'s full-season squad who qualifies as a batting and/or
+    bowling option (from the league-wide z-scored pools), plus the designated
+    wicketkeeper (identified from the '†' marker cricclubs uses in the raw scorecard).
+    This is the candidate pool select_xi() picks from — exposed in full (not just the
+    picked XI) so the frontend can re-run selection live as players are marked
+    unavailable, without needing a server round-trip."""
     squad_bat = bat_pool[bat_pool["team"] == team].set_index("player") if not bat_pool.empty else bat_pool
     squad_bowl = bowl_pool[bowl_pool["team"] == team].set_index("player") if not bowl_pool.empty else bowl_pool
 
@@ -560,13 +559,24 @@ def best_playing_xi(bat, bat_pool, bowl_pool, team):
                 "econ": float(squad_bowl.loc[p, "econ"]), "dotPct": float(squad_bowl.loc[p, "dotPct"]),
             } if has_bowl else None,
         }
+    return roster
 
+
+def select_xi(roster):
+    """Pure selection logic, given a roster dict (player -> stats/scores) already
+    filtered to available players: the keeper, the best 5 remaining batting options by
+    battingScore, enough bowling options by bowlingScore to cover a full attack (aiming
+    for 5 recognized bowlers in the XI), then fills any remaining spots with the best
+    leftover combined value. Deliberately side-effect-free and dependency-free (no
+    pandas) so this same logic can be ported 1:1 to JS for live client-side reshuffling
+    when the user marks players unavailable — see charts.js's selectXI()."""
     picked = []
 
     def pick(p):
         if p is not None and p not in picked and p in roster:
             picked.append(p)
 
+    keeper = next((p for p, r in roster.items() if r["isKeeper"]), None)
     pick(keeper)
 
     batters_ranked = sorted(
@@ -610,7 +620,19 @@ def best_playing_xi(bat, bat_pool, bowl_pool, team):
             "Bowler"
         )
         players.append({**r, "role": role})
-    return {"players": players, "squadSize": len(roster)}
+    return players
+
+
+def best_playing_xi(bat, bat_pool, bowl_pool, team):
+    """Default Playing XI (everyone available) plus the full candidate roster, so the
+    frontend can re-run select_xi() itself against a subset when players are marked
+    unavailable."""
+    roster = build_squad_roster(bat, bat_pool, bowl_pool, team)
+    return {
+        "players": select_xi(roster),
+        "roster": list(roster.values()),
+        "squadSize": len(roster),
+    }
 
 
 def load_death_overs(cfg, gladiators, abbrev_map):

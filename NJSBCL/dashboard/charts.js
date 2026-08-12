@@ -26,9 +26,49 @@ function bindTooltip(target, html) {
 }
 
 const SERIES_KEYS = Object.keys(NJSBCL_DATA.series);
-const state = { series: SERIES_KEYS[0] };
+const state = { series: SERIES_KEYS[0], unavailable: new Set() };
 
 function currentSeriesData() { return NJSBCL_DATA.series[state.series]; }
+
+/* ── Best XI selection (ported 1:1 from build_data.py's select_xi) ──── */
+function selectXI(roster) {
+  const byPlayer = {};
+  roster.forEach((r) => { byPlayer[r.player] = r; });
+  const picked = [];
+  const pick = (p) => { if (p != null && !picked.includes(p) && byPlayer[p]) picked.push(p); };
+
+  const keeper = roster.find((r) => r.isKeeper);
+  if (keeper) pick(keeper.player);
+
+  const battersRanked = roster.filter((r) => r.battingScore !== null).sort((a, b) => b.battingScore - a.battingScore);
+  for (const r of battersRanked) {
+    if (picked.length >= 6) break;
+    pick(r.player);
+  }
+
+  const bowlersRanked = roster.filter((r) => r.bowlingScore !== null).sort((a, b) => b.bowlingScore - a.bowlingScore);
+  const bowlingCount = () => picked.filter((p) => byPlayer[p].bowlingScore !== null).length;
+  for (const r of bowlersRanked) {
+    if (bowlingCount() >= 5 || picked.length >= 11) break;
+    pick(r.player);
+  }
+
+  const remaining = roster
+    .filter((r) => !picked.includes(r.player))
+    .sort((a, b) => ((b.battingScore || 0) + (b.bowlingScore || 0)) - ((a.battingScore || 0) + (a.bowlingScore || 0)));
+  for (const r of remaining) {
+    if (picked.length >= 11) break;
+    pick(r.player);
+  }
+
+  return picked.slice(0, 11).map((p) => {
+    const r = byPlayer[p];
+    const role = r.isKeeper ? "Wicketkeeper"
+      : (r.battingScore !== null && r.bowlingScore !== null) ? "All-rounder"
+      : r.battingScore !== null ? "Batter" : "Bowler";
+    return { ...r, role };
+  });
+}
 
 /* ── Controls ──────────────────────────────────────────────────────── */
 function buildSeriesPills() {
@@ -41,6 +81,7 @@ function buildSeriesPills() {
     b.addEventListener("click", () => {
       if (state.series === key) return;
       state.series = key;
+      state.unavailable = new Set();
       box.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
       b.classList.add("active");
       renderAll();
@@ -61,16 +102,50 @@ const ROLE_CLASS = {
   "Wicketkeeper": "keeper", "All-rounder": "allrounder", "Batter": "batter", "Bowler": "bowler",
 };
 
+function renderAvailabilityChips() {
+  const s = currentSeriesData();
+  const roster = s.gladiatorsCharts.bestXI.roster;
+  const box = $("avail-chips");
+  box.innerHTML = "";
+  [...roster]
+    .sort((a, b) => a.player.localeCompare(b.player))
+    .forEach((r) => {
+      const isOut = state.unavailable.has(r.player);
+      const chip = el("button", `avail-chip${isOut ? " unavailable" : ""}`, r.player);
+      chip.addEventListener("click", () => {
+        if (state.unavailable.has(r.player)) state.unavailable.delete(r.player);
+        else state.unavailable.add(r.player);
+        renderAvailabilityChips();
+        renderBestXI();
+      });
+      box.appendChild(chip);
+    });
+}
+
 function renderBestXI() {
   const s = currentSeriesData();
   const gc = s.gladiatorsCharts;
   const box = $("bestxi-list");
+  const note = $("bestxi-note");
   box.innerHTML = "";
-  if (!gc.bestXI.players.length) {
-    box.appendChild(el("div", "empty-note", "Not enough qualifying players yet this season."));
+
+  const roster = gc.bestXI.roster.filter((r) => !state.unavailable.has(r.player));
+  const players = selectXI(roster);
+
+  if (state.unavailable.size) {
+    note.hidden = false;
+    note.textContent = players.length < 11
+      ? `${state.unavailable.size} player(s) marked unavailable — only ${players.length} qualifying options left in the squad.`
+      : `${state.unavailable.size} player(s) marked unavailable — XI reshuffled from the rest of the squad.`;
+  } else {
+    note.hidden = true;
+  }
+
+  if (!players.length) {
+    box.appendChild(el("div", "empty-note", "Not enough qualifying players available."));
     return;
   }
-  gc.bestXI.players.forEach((p, i) => {
+  players.forEach((p, i) => {
     const card = el("div", "xi-card");
     const rank = el("div", `xi-rank ${ROLE_CLASS[p.role] || ""}`, String(i + 1));
     const body = el("div", "xi-body");
@@ -220,6 +295,7 @@ function renderOtherMetrics() {
 /* ── Wiring ────────────────────────────────────────────────────────── */
 function renderAll() {
   const s = currentSeriesData();
+  renderAvailabilityChips();
   renderBestXI();
   renderEloChart();
   renderLeaderboard("bat-leaderboard", s.gladiatorsCharts.battingLeaderboard, "runs",

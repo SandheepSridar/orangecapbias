@@ -457,6 +457,14 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   marker), an Elo rating trajectory chart (`compute_elo(results, track_team=...)` now optionally
   returns a match-by-match history alongside the final ratings), and full squad batting/bowling
   leaderboards (every player who's played for us, not just the top 3 shown on the main page).
+- The Best XI is **interactive** (added 2026-08-12): `data.js` exposes the full candidate roster
+  (`gladiatorsCharts.bestXI.roster`, every qualifying player with their scores), not just the
+  picked 11. `build_data.py`'s selection logic was split into `build_squad_roster()` (data prep)
+  and a pure `select_xi(roster)` (no pandas, just dict/list logic) specifically so it could be
+  ported 1:1 to JS — `charts.js`'s `selectXI()` is a line-by-line mirror of it. Clicking a player
+  chip toggles them into `state.unavailable` and both functions re-run client-side against the
+  filtered roster — no rebuild, no server round-trip. If you change the Python selection algorithm,
+  update the JS copy to match or the two will silently diverge.
 
 ## TODO for a future rescrape — toss data (not yet implemented)
 

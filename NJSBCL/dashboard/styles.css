@@ -340,6 +340,19 @@ section h2 .q {
 .xi-stats { display: flex; gap: 1rem; margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
 .xi-stats b { color: var(--text); }
 
+.avail-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.avail-chip {
+  border: 1px solid var(--line); background: #0f1420; color: var(--text);
+  border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; transition: all .15s ease; font-family: inherit;
+}
+.avail-chip:hover { border-color: var(--loss); }
+.avail-chip.unavailable {
+  background: rgba(255,107,107,0.1); border-color: rgba(255,107,107,0.5); color: var(--loss);
+  text-decoration: line-through; opacity: 0.75;
+}
+#bestxi-note { margin: 0 0 1rem; }
+
 /* ── Charts page: chart cards, Elo line chart, leaderboards ──────── */
 .chart-card {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
