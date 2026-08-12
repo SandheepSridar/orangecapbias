@@ -198,6 +198,12 @@ section h2 .q {
 }
 .team-column-label.us { color: var(--gold); border-color: rgba(255,195,0,0.4); }
 .team-column-label.them { color: var(--blue); border-color: rgba(58,134,255,0.4); }
+.column-kicker {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 0.3rem;
+}
+.column-kicker.positive { color: var(--win); }
+.column-kicker.negative { color: var(--loss); }
 .player-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
 @media (max-width: 700px) { .player-columns { grid-template-columns: 1fr; } }
 
