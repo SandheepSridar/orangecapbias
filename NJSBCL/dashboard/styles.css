@@ -228,6 +228,20 @@ section h2 .q {
 .lg-swatch { width: 0.6rem; height: 0.6rem; border-radius: 2px; display: inline-block; }
 .no-data { font-size: 0.78rem; color: var(--muted); font-style: italic; margin-top: 0.5rem; }
 
+.form-strip { display: flex; align-items: center; gap: 0.35rem; margin-top: 0.7rem; flex-wrap: wrap; }
+.form-label { font-size: 0.72rem; color: var(--muted); margin-right: 0.1rem; }
+.form-score {
+  font-size: 0.76rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--text);
+  background: #0f1420; border: 1px solid var(--line); border-radius: 6px; padding: 0.12rem 0.4rem;
+}
+.form-badge {
+  font-size: 0.72rem; font-weight: 700; border-radius: 999px; padding: 0.15rem 0.6rem;
+  margin-left: auto; white-space: nowrap;
+}
+.form-badge.hot { background: rgba(255,195,0,0.15); color: var(--gold); border: 1px solid rgba(255,195,0,0.4); }
+.form-badge.cold { background: rgba(255,107,107,0.15); color: var(--loss); border: 1px solid rgba(255,107,107,0.4); }
+.form-badge.steady { background: rgba(147,155,173,0.15); color: var(--muted); border: 1px solid var(--line); }
+
 /* ── Target-bowler cards ───────────────────────────────────────────── */
 .target-card {
   display: flex; align-items: center; gap: 1rem;

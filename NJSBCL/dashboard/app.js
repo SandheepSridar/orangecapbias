@@ -275,6 +275,31 @@ function stackBar(dismissals) {
   return wrap;
 }
 
+const FORM_BADGE = {
+  hot: { text: "🔥 Hot streak", cls: "hot" },
+  cold: { text: "❄️ Cold — bounce-back mode", cls: "cold" },
+  steady: { text: "Steady", cls: "steady" },
+};
+
+function formStrip(recentForm) {
+  const wrap = el("div", "form-strip");
+  if (!recentForm || !recentForm.innings.length) {
+    wrap.appendChild(el("span", "no-data", "No recent form data yet."));
+    return wrap;
+  }
+  wrap.appendChild(el("span", "form-label", "Last 5:"));
+  recentForm.innings.forEach((inn) => {
+    wrap.appendChild(el("span", "form-score", `${inn.runs}${inn.notOut ? "*" : ""}`));
+  });
+  const badge = FORM_BADGE[recentForm.trend];
+  if (badge) {
+    const b = el("span", `form-badge ${badge.cls}`, badge.text);
+    bindTooltip(b, `Last 5 avg <b>${recentForm.last5Mean}</b> vs season avg <b>${recentForm.seasonMean}</b>`);
+    wrap.appendChild(b);
+  }
+  return wrap;
+}
+
 function renderBatsmenColumn(containerId, team) {
   const box = $(containerId);
   box.innerHTML = "";
@@ -291,6 +316,7 @@ function renderBatsmenColumn(containerId, team) {
     );
     card.append(top, el("div", "pc-meta", `${b.innings} inns · HS ${b.hs} · ${b.fours}×4s ${b.sixes}×6s`));
     card.appendChild(stackBar(b.dismissals));
+    card.appendChild(formStrip(b.recentForm));
     box.appendChild(card);
   });
 }

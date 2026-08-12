@@ -214,6 +214,33 @@ def team_batting_agg(bat, team):
     return pd.DataFrame(rows).sort_values("runs", ascending=False).reset_index(drop=True)
 
 
+def recent_form(bat, team, player, n=5, min_innings=3):
+    """Last-n-innings batting form vs their own season mean, for a simple hot/cold/steady
+    read. Uses matchId order as a chronological proxy — matchIds increase monotonically
+    with match date on this site, same assumption compute_elo relies on."""
+    sub = bat[(bat["team"] == team) & (bat["playerClean"] == player)].sort_values("matchId")
+    if sub.empty:
+        return None
+    innings = [
+        {"runs": int(r["R"]), "notOut": bool(pd.isna(r["dtype"]))}
+        for _, r in sub.iterrows()
+    ]
+    last_n = innings[-n:]
+    season_mean = round(sub["R"].mean(), 1)
+    last_n_mean = round(sum(x["runs"] for x in last_n) / len(last_n), 1)
+    if len(sub) < min_innings or season_mean == 0:
+        trend = "insufficient"
+    elif last_n_mean / season_mean >= 1.25:
+        trend = "hot"
+    elif last_n_mean / season_mean <= 0.75:
+        trend = "cold"
+    else:
+        trend = "steady"
+    return {
+        "innings": last_n, "last5Mean": last_n_mean, "seasonMean": season_mean, "trend": trend,
+    }
+
+
 def team_bowling_agg(bowl, team):
     sub = bowl[bowl["team"] == team].copy()
     sub["balls"] = sub["O"].apply(overs_to_balls)
@@ -577,6 +604,7 @@ def build():
             top_bat = bat_agg.head(3).to_dict("records")
             for b in top_bat:
                 b["dismissals"] = dismissal_breakdown(bat, team, b["player"])
+                b["recentForm"] = recent_form(bat, team, b["player"])
             top_bowl = bowl_agg.head(3).to_dict("records")
             for b in top_bowl:
                 b["wicketTypes"] = wickettype_breakdown(bat, b["player"])
