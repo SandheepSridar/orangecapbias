@@ -22,6 +22,7 @@
     <h1>Who are we playing, and how do we beat them?</h1>
     <p>Pick a series and an opponent. Everything below — toss advice, their key players, how their
       best batsmen get out, what dismissals their best bowlers rely on — updates for that matchup.</p>
+    <div class="data-updated-badge" id="data-updated-badge"></div>
   </header>
 
   <div class="controls">
@@ -69,6 +70,14 @@
     <h2>Season record &amp; head-to-head</h2>
     <div class="compare-grid" id="record-grid"></div>
     <div class="toss-card" id="h2h-card" style="margin-top:0.9rem;"></div>
+  </section>
+
+  <section id="sec-collapse">
+    <h2>Batting collapses <span class="q">— how often does the innings fall apart?</span></h2>
+    <p class="subhead">A collapse = 3 or more of the top 7 batsmen dismissed for a combined 20 runs
+      or fewer, at any point in the innings. Restricted to the top 7 because the last few batters
+      going cheap at the end is normal in this format, not a real collapse.</p>
+    <div class="par-target-row" id="collapse-row"></div>
   </section>
 
   <section id="sec-batsmen">

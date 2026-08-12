@@ -320,6 +320,56 @@ def recent_form(bat, team, player, n=5, min_innings=3):
     }
 
 
+def detect_collapses(bat, results, team, min_wickets=3, max_runs=20, top_n_positions=7):
+    """Finds the worst 'batting collapse' per innings for `team`: the longest run of
+    min_wickets+ consecutive dismissals (in scorecard row order, which is batting/arrival
+    order) whose combined runs are <= max_runs. This is a proxy — we don't have exact
+    over-by-over timing for every match (only for our own team's matches, see
+    load_death_overs), so "consecutive dismissed batters' combined runs" stands in for
+    "runs added while these wickets fell". Default: 3+ wickets for under 20 combined runs.
+
+    Restricted to the first `top_n_positions` batters (default 7): innings here run up to
+    11 batters (median 10), and the last few almost always fold cheaply going for quick
+    runs at the end — that's normal tail-wagging, not a "collapse". Verified against real
+    data: without this restriction, the league's strongest team (13-2 record) showed a 73%
+    collapse rate, and its "worst" instance was batters #5-10 of 11 going cheap *after* the
+    top 4 had already put up 92 — restricting to the top order is what makes this metric
+    mean what "collapse" actually means."""
+    sub = bat[bat["team"] == team]
+    opp_lookup = {r["matchId"]: r["opponent"] for _, r in results[results["team"] == team].iterrows()}
+
+    total_innings = 0
+    collapse_count = 0
+    worst = None
+    for match_id, g in sub.groupby("matchId"):
+        total_innings += 1
+        g = g.head(top_n_positions)
+        outs = [int(r["R"]) for _, r in g.iterrows() if pd.notna(r["dtype"]) and r["dtype"] != "Retired"]
+        n = len(outs)
+        best = None  # (wickets, runs) — most wickets, tie-break fewest runs
+        for start in range(n):
+            cum = 0
+            for end in range(start, n):
+                cum += outs[end]
+                wkts = end - start + 1
+                if wkts >= min_wickets and cum <= max_runs:
+                    if best is None or wkts > best[0] or (wkts == best[0] and cum < best[1]):
+                        best = (wkts, cum)
+        if best is not None:
+            collapse_count += 1
+            wkts, runs = best
+            if worst is None or wkts > worst["wickets"] or (wkts == worst["wickets"] and runs < worst["runs"]):
+                worst = {"matchId": int(match_id), "opponent": opp_lookup.get(match_id, "?"),
+                         "wickets": wkts, "runs": runs}
+
+    return {
+        "totalInnings": total_innings, "collapseCount": collapse_count,
+        "collapsePct": round(100 * collapse_count / total_innings) if total_innings else 0,
+        "worst": worst,
+        "minWickets": min_wickets, "maxRuns": max_runs, "topNPositions": top_n_positions,
+    }
+
+
 def team_bowling_agg(bowl, team):
     sub = bowl[bowl["team"] == team].copy()
     sub["balls"] = sub["O"].apply(overs_to_balls)
@@ -708,6 +758,7 @@ def build():
                 "weakBowlers": weak_bowlers(weakness_pool, team),
                 "bowlingStrengths": bowling_strengths(strength_pool, team),
                 "homeAway": home_away_record(results, team),
+                "battingCollapses": detect_collapses(bat, results, team),
                 "headToHead": head_to_head(results, gladiators, team) if team != gladiators else None,
                 "standing": standings.get(team),
                 "elo": team_elo,

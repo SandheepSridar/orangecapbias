@@ -58,6 +58,12 @@ main { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .page-header p { color: var(--muted); margin-top: 0.4rem; max-width: 40rem; }
+.data-updated-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.9rem;
+  background: rgba(255,195,0,0.12); border: 1px solid rgba(255,195,0,0.4); border-radius: 999px;
+  padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 700; color: var(--gold);
+}
+.data-updated-badge::before { content: "🕓"; }
 
 .controls {
   display: flex; flex-wrap: wrap; gap: 1.4rem; align-items: flex-end;
@@ -128,6 +134,12 @@ section h2 .q {
 .fixture-opp { font-size: 1.05rem; font-weight: 700; margin-top: 0.3rem; }
 .fixture-venue { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
 .fixture-venue::before { content: "📍 "; }
+.fixture-winprob {
+  display: inline-block; margin-top: 0.55rem; font-size: 0.76rem; font-weight: 700;
+  padding: 0.15rem 0.55rem; border-radius: 999px;
+}
+.fixture-winprob.favored { background: rgba(255,195,0,0.15); color: var(--gold); border: 1px solid rgba(255,195,0,0.4); }
+.fixture-winprob.underdog { background: rgba(58,134,255,0.15); color: var(--blue); border: 1px solid rgba(58,134,255,0.4); }
 .fixture-card.highlighted {
   border-color: rgba(255,195,0,0.4);
   background: linear-gradient(180deg, rgba(255,195,0,0.07), var(--panel) 65%);

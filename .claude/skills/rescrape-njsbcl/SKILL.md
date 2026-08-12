@@ -435,6 +435,18 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   Division 1 matches matched, 276/283 Weekenders Cup (the 7 misses were all genuine `Ground=TBD`
   rows, not matching errors), and home+away win counts summed exactly to each team's total wins
   for every spot-checked team. Rendered as a "Home / away record" tile in the season-record grid.
+- `build_data.py` also computes a **batting collapse rate** per team, purely from the batting
+  scorecard CSV already scraped in step 2 — no new scrape needed (`detect_collapses()`). Defined
+  as: 3+ of the top 7 batsmen (scorecard row order = batting order) dismissed for a combined 20
+  runs or fewer, anywhere in the innings. The top-7 restriction is load-bearing, not cosmetic —
+  verified 2026-08-12 that without it, the metric mostly flags the last few batters going cheap at
+  the end of an innings (normal in this format; median innings here runs ~10 batters), which made
+  even the league's strongest team (13-2 record) show a 73% "collapse" rate on an obviously bogus
+  worst-case (tail folding *after* the top order had already set up 92 runs). Restricting to top 7
+  and spot-checking the flagged "worst" instances confirmed they're genuine early-innings
+  disasters (e.g. 4 wickets for 4 runs right after the one big partnership). Rendered as a
+  "Batting collapses" section (par-target-row style) showing collapse % + worst instance, both
+  teams, right before "Top 3 batsmen".
 
 ## TODO for a future rescrape — toss data (not yet implemented)
 

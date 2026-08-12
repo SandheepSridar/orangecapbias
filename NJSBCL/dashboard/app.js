@@ -129,6 +129,7 @@ function renderFixtures() {
     toggle.hidden = true;
     return;
   }
+  const us = currentUs();
   const visible = state.showAllFixtures ? s.upcoming : s.upcoming.slice(0, FIXTURES_HIGHLIGHT_COUNT);
   visible.forEach((m, i) => {
     const c = el("div", `fixture-card${i < FIXTURES_HIGHLIGHT_COUNT ? " highlighted" : ""}`);
@@ -137,6 +138,13 @@ function renderFixtures() {
       el("div", "fixture-opp", `vs ${m.opponent}`),
       el("div", "fixture-venue", m.venue),
     );
+    const opp = s.teams[m.opponent];
+    if (us && opp) {
+      const pct = Math.round(eloWinPct(us.elo, opp.elo));
+      const badge = el("div", `fixture-winprob ${pct >= 50 ? "favored" : "underdog"}`, `${pct}% win probability`);
+      bindTooltip(badge, `Elo — ${s.gladiators}: <b>${us.elo}</b> vs ${m.opponent}: <b>${opp.elo}</b>`);
+      c.appendChild(badge);
+    }
     grid.appendChild(c);
   });
 
@@ -240,6 +248,30 @@ function renderRecord() {
     them.topBatsmen[0] ? `${them.topBatsmen[0].player} · ${them.topBatsmen[0].runs}` : "—");
   tile("Top wicket-taker this season", us.topBowlers[0] ? `${us.topBowlers[0].player} · ${us.topBowlers[0].wickets}` : "—",
     them.topBowlers[0] ? `${them.topBowlers[0].player} · ${them.topBowlers[0].wickets}` : "—");
+}
+
+/* ── Batting collapses ────────────────────────────────────────────── */
+function renderCollapses() {
+  const s = currentSeriesData();
+  const us = currentUs(), them = currentThem();
+  const row = $("collapse-row");
+  row.innerHTML = "";
+  if (!us || !them) return;
+
+  const stat = (label, c) => {
+    const el1 = el("div", "par-target-stat");
+    const worstText = c.worst
+      ? `worst: ${c.worst.wickets} wkts for ${c.worst.runs} runs vs ${c.worst.opponent}`
+      : "no collapse this season";
+    el1.append(
+      el("div", "pt-label", label),
+      el("div", "pt-value", `${c.collapsePct}%`),
+      el("div", "pt-note", `${c.collapseCount} of ${c.totalInnings} innings · ${worstText}`),
+    );
+    row.appendChild(el1);
+  };
+  stat(s.gladiators, us.battingCollapses);
+  stat(state.opponent, them.battingCollapses);
 }
 
 function renderH2H() {
@@ -484,6 +516,13 @@ function renderMetrics() {
      <div class="mt-note">${h.played ? "our head-to-head record this season." : "no matches played between these two teams yet this season."}</div>`));
 }
 
+/* ── Data freshness ───────────────────────────────────────────────── */
+function renderDataUpdated() {
+  const d = new Date(NJSBCL_DATA.generated + "T00:00:00");
+  const formatted = d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  $("data-updated-badge").textContent = `Data last updated: ${formatted}`;
+}
+
 /* ── Wiring ────────────────────────────────────────────────────────── */
 function updateMatchupLabel() {
   const s = currentSeriesData();
@@ -498,12 +537,14 @@ function renderAll() {
   renderToss();
   renderRecord();
   renderH2H();
+  renderCollapses();
   renderPlayers();
   renderBowlingBattle();
   renderDeathOvers();
   renderMetrics();
 }
 
+renderDataUpdated();
 buildSeriesPills();
 populateOpponentSelect();
 $("opponent-select").addEventListener("change", (e) => {
