@@ -190,8 +190,87 @@ def load_series(key, cfg):
     if skipped:
         print(f"  WARNING: {skipped} matches had no true-totals row, skipped from results")
     results = pd.DataFrame(match_rows)
+    results, venue_stats = attach_venue(results, cfg)
 
-    return bat, bowl, results, abbrev_map
+    return bat, bowl, results, abbrev_map, venue_stats
+
+
+def attach_venue(results, cfg):
+    """Adds a 'venue' column ('Home'/'Away') to `results` by matching each completed
+    match to a row in the schedule export.
+
+    The schedule and results tables don't share a match ID — schedule only has team
+    names + calendar dates, results only has matchId (a chronological proxy). But the
+    schedule's `Ground` field is reliably just the hosting team's own name (verified:
+    effectively 100% of rows across both series), so if we can line up "which schedule
+    row is this specific completed match", Ground tells us who hosted it directly.
+
+    We line them up by team-pair: for each unordered pair of teams, sort that pair's
+    schedule rows by date and that pair's completed matches by matchId, then zip them
+    positionally. This works because a pair usually meets at most once or twice a
+    season (single or double round-robin), so chronological order within the pair is
+    almost always unambiguous. Matches that don't resolve (no schedule row for that
+    pair, or Ground doesn't match either team name) are left with venue=None rather
+    than guessed."""
+    sched = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
+    sched["parsedDate"] = pd.to_datetime(sched["Date"], format="%m/%d/%Y", errors="coerce")
+    sched = sched.dropna(subset=["parsedDate", "Team One", "Team Two", "Ground"])
+
+    sched_by_pair = {}
+    for _, r in sched.sort_values("parsedDate").iterrows():
+        t1, t2, ground = str(r["Team One"]).strip(), str(r["Team Two"]).strip(), str(r["Ground"]).strip()
+        pair = frozenset({t1.lower(), t2.lower()})
+        sched_by_pair.setdefault(pair, []).append(ground)
+
+    one_row_per_match = results.drop_duplicates("matchId", keep="first").sort_values("matchId")
+    results_by_pair = {}
+    for _, r in one_row_per_match.iterrows():
+        pair = frozenset({r["team"].lower(), r["opponent"].lower()})
+        results_by_pair.setdefault(pair, []).append((r["matchId"], r["team"], r["opponent"]))
+
+    venue_map = {}  # matchId -> {team: "Home"/"Away"}
+    matched, no_schedule_row, ground_mismatch = 0, 0, 0
+    for pair, matches in results_by_pair.items():
+        grounds = sched_by_pair.get(pair, [])
+        for i, (match_id, team, opponent) in enumerate(matches):
+            if i >= len(grounds):
+                no_schedule_row += 1
+                continue
+            ground_norm = grounds[i].lower()
+            if ground_norm == team.lower():
+                host = team
+            elif ground_norm == opponent.lower():
+                host = opponent
+            else:
+                ground_mismatch += 1
+                continue
+            venue_map[match_id] = {
+                team: ("Home" if host == team else "Away"),
+                opponent: ("Home" if host == opponent else "Away"),
+            }
+            matched += 1
+
+    results = results.copy()
+    results["venue"] = results.apply(lambda r: venue_map.get(r["matchId"], {}).get(r["team"]), axis=1)
+    stats = {
+        "totalMatches": len(one_row_per_match), "matched": matched,
+        "noScheduleRow": no_schedule_row, "groundMismatch": ground_mismatch,
+    }
+    return results, stats
+
+
+def home_away_record(results, team):
+    sub = results[(results["team"] == team) & (results["result"] != "Tie") & results["venue"].notna()]
+    home = sub[sub["venue"] == "Home"]
+    away = sub[sub["venue"] == "Away"]
+    home_wins, away_wins = int((home["result"] == "Win").sum()), int((away["result"] == "Win").sum())
+    home_n, away_n = len(home), len(away)
+    return {
+        "home": {"matches": home_n, "wins": home_wins,
+                 "winPct": round(100 * home_wins / home_n) if home_n else None},
+        "away": {"matches": away_n, "wins": away_wins,
+                 "winPct": round(100 * away_wins / away_n) if away_n else None},
+    }
 
 
 def team_batting_agg(bat, team):
@@ -567,8 +646,10 @@ def build():
 
     for key, cfg in SERIES.items():
         print(f"=== {key} ===")
-        bat, bowl, results, abbrev_map = load_series(key, cfg)
+        bat, bowl, results, abbrev_map, venue_stats = load_series(key, cfg)
         gladiators = cfg["gladiators"]
+        print(f"  venue matching: {venue_stats['matched']}/{venue_stats['totalMatches']} matches "
+              f"({venue_stats['noScheduleRow']} no schedule row, {venue_stats['groundMismatch']} ground mismatch)")
 
         upcoming = load_upcoming(cfg, gladiators)
         print(f"  upcoming: {len(upcoming)}")
@@ -623,6 +704,7 @@ def build():
                 "boundaryDependencyPct": boundary_dependency(bat, team),
                 "weakBowlers": weak_bowlers(weakness_pool, team),
                 "bowlingStrengths": bowling_strengths(strength_pool, team),
+                "homeAway": home_away_record(results, team),
                 "headToHead": head_to_head(results, gladiators, team) if team != gladiators else None,
                 "standing": standings.get(team),
                 "elo": team_elo,

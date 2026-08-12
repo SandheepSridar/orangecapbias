@@ -213,6 +213,11 @@ function renderRecord() {
   tile("Points table standing", standingText(us), standingText(them));
   tile("Season record", `${us.wins}-${us.losses}${us.ties ? `-${us.ties}` : ""} (${winPct(us)}%)`,
     `${them.wins}-${them.losses}${them.ties ? `-${them.ties}` : ""} (${winPct(them)}%)`);
+  const homeAwayText = (t) => {
+    const fmt = (side) => side.matches ? `${side.wins}-${side.matches - side.wins} (${side.winPct}%)` : "no matches yet";
+    return `Home ${fmt(t.homeAway.home)} · Away ${fmt(t.homeAway.away)}`;
+  };
+  tile("Home / away record", homeAwayText(us), homeAwayText(them));
   tile("Runs from boundaries", `${us.boundaryDependencyPct}%`, `${them.boundaryDependencyPct}%`);
   tile("Top scorer this season", us.topBatsmen[0] ? `${us.topBatsmen[0].player} · ${us.topBatsmen[0].runs}` : "—",
     them.topBatsmen[0] ? `${them.topBatsmen[0].player} · ${them.topBatsmen[0].runs}` : "—");

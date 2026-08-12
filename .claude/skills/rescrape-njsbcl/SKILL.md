@@ -426,6 +426,15 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   rate) for our own bowlers, from the same scorecard data.
 - `build_data.py` also computes a "death overs (last 3)" ranking for our own bowlers from the
   dedicated over-by-over scrape in step 4c — see that step for the scrape itself.
+- `build_data.py` also computes a **home/away win-rate split** per team, purely derived from data
+  already scraped in earlier steps — no new scrape needed. It works despite the schedule's
+  `Ground` field not being a real venue (see the venue-data TODO below): `Ground` reliably names
+  whichever of the two teams is hosting, so `attach_venue()` matches each completed match (by
+  matchId) to its schedule row — pairing them by team-pair + chronological order, since the two
+  tables don't share an ID — and reads the host straight off `Ground`. Verified 2026-08-12: 288/288
+  Division 1 matches matched, 276/283 Weekenders Cup (the 7 misses were all genuine `Ground=TBD`
+  rows, not matching errors), and home+away win counts summed exactly to each team's total wins
+  for every spot-checked team. Rendered as a "Home / away record" tile in the season-record grid.
 
 ## TODO for a future rescrape — toss data (not yet implemented)
 
