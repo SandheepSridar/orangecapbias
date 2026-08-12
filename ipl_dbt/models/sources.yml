@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Ball-by-ball IPL data loaded from Cricsheet parquet via load_to_duckdb.py"
+    tables:
+      - name: ball_by_ball
+        description: "One row per delivery, all innings, 2008–2026 (1,243 matches)"
+        columns:
+          - name: match_id
+            description: "Unique match identifier"
+            tests: [not_null]
+          - name: season
+            description: "IPL season year (2008–2026)"
+            tests: [not_null]
+          - name: innings
+            description: "Innings number (1 or 2; super overs excluded)"
+            tests: [not_null]
+          - name: phase
+            description: "Over phase: powerplay (1–6), middle (7–15), death (16–20)"
+            tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['powerplay', 'middle', 'death']
+          - name: batting_position
+            description: "Crease-arrival order within the innings (1 = opener)"
+            tests: [not_null]
+          - name: extras_type
+            description: "Type of extra (wide, noball, bye, legbye, penalty) or null for normal deliveries"

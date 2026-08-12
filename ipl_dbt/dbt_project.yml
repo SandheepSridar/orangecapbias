@@ -1,0 +1,26 @@
+name: ipl_dbt
+version: '1.0.0'
+config-version: 2
+
+profile: ipl_dbt
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  ipl_dbt:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table
+
+seeds:
+  ipl_dbt:
+    +schema: raw

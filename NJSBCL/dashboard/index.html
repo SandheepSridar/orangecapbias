@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Competition Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-sub">Gladiators competition analysis</span>
+</nav>
+
+<main>
+  <header class="page-header">
+    <h1>Who are we playing, and how do we beat them?</h1>
+    <p>Pick a series and an opponent. Everything below — toss advice, their key players, how their
+      best batsmen get out, what dismissals their best bowlers rely on — updates for that matchup.</p>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Series</label>
+      <div class="pills" id="series-pills"></div>
+    </div>
+    <div class="control-group">
+      <label>Opponent</label>
+      <select id="opponent-select"></select>
+    </div>
+    <div class="control-group" style="margin-left:auto;">
+      <label>Matchup</label>
+      <div class="matchup-label">
+        <span class="gladiators" id="matchup-us"></span>
+        <span class="vs">vs</span>
+        <span class="opponent" id="matchup-them"></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="sec-winprob">
+    <h2>Win probability <span class="q">— is there a way to estimate this?</span></h2>
+    <p class="subhead">Elo rating (same idea chess uses): every team starts at 1500 and every
+      result this season nudges both teams' ratings — beating a strong team gains more than
+      beating a weak one. The probability below is just the standard Elo win-expectancy formula
+      applied to each team's rating right now. It's a form/strength estimate, not a crystal
+      ball — it doesn't know about toss, weather, or who's available to play.</p>
+    <div class="winprob-card" id="winprob-card"></div>
+  </section>
+
+  <section id="sec-upcoming">
+    <h2>Upcoming fixtures</h2>
+    <p class="subhead">Next 3 matches on the schedule for our team this series.</p>
+    <div class="fixture-grid" id="fixture-grid"></div>
+  </section>
+
+  <section id="sec-toss">
+    <h2>What should I do if I win the toss? <span class="q">— based on how each team performs batting first vs. chasing</span></h2>
+    <div class="toss-card" id="toss-card"></div>
+  </section>
+
+  <section id="sec-record">
+    <h2>Season record &amp; head-to-head</h2>
+    <div class="compare-grid" id="record-grid"></div>
+    <div class="toss-card" id="h2h-card" style="margin-top:0.9rem;"></div>
+  </section>
+
+  <section id="sec-batsmen">
+    <h2>Top 3 batsmen <span class="q">— and how do their best batsmen get out?</span></h2>
+    <p class="subhead">Dismissal breakdown shows what to bowl at them: mostly caught → attack the
+      stumps less, set catching fields; mostly bowled/LBW → bowl straight and full.</p>
+    <div class="player-columns">
+      <div>
+        <div class="team-column-label us" id="bat-label-us"></div>
+        <div id="bat-list-us"></div>
+      </div>
+      <div>
+        <div class="team-column-label them" id="bat-label-them"></div>
+        <div id="bat-list-them"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-bowlers">
+    <h2>Top 3 bowlers <span class="q">— what dismissals do their best bowlers get?</span></h2>
+    <p class="subhead">Shows how each bowler takes wickets: mostly caught → they rely on fielders,
+      look to hit gaps; mostly bowled/LBW → play straight, watch the stumps.</p>
+    <div class="player-columns">
+      <div>
+        <div class="team-column-label us" id="bowl-label-us"></div>
+        <div id="bowl-list-us"></div>
+      </div>
+      <div>
+        <div class="team-column-label them" id="bowl-label-them"></div>
+        <div id="bowl-list-them"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-target">
+    <h2>Bowling battle <span class="q">— who applies more pressure?</span></h2>
+    <p class="subhead">Left: our bowlers ranked by a pressure score — low economy and a high
+      dot-ball rate — who to build the attack around. Right: their bowlers ranked by a weakness
+      score — economy, worst single-match economy, extras given away — who to target. Minimum 8
+      overs bowled this season to qualify for either list.</p>
+    <div class="player-columns">
+      <div>
+        <div class="team-column-label us" id="strength-label-us"></div>
+        <div id="strength-list-us"></div>
+      </div>
+      <div>
+        <div class="team-column-label them" id="target-label-them"></div>
+        <div id="target-list-them"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-death">
+    <h2>Death overs (last 3) <span class="q">— who do we trust under pressure?</span></h2>
+    <p class="subhead">Our bowlers ranked by economy across the final 3 overs of the innings when
+      we're fielding, this season. Not opponent-specific — same list regardless of who's selected
+      above. Minimum 3 death overs bowled to qualify.</p>
+    <div id="death-list"></div>
+  </section>
+
+  <section id="sec-metrics">
+    <h2>Other useful signals</h2>
+    <div class="metric-grid" id="metric-grid"></div>
+  </section>
+
+  <footer>Built from 2026 season scorecards scraped from cricclubs.com/NJSBCL · matches with no result (abandoned/no play) are excluded.</footer>
+</main>
+
+<div class="tooltip" id="tooltip" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

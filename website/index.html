@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOVI — The Middle-Order Value Index</title>
+<meta name="description" content="MOVI rates every IPL middle-order batsman on volume, efficiency, finishing and consistency — and asks why the league never noticed its best.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand">🏏 MOVI</span>
+  <div class="navlinks">
+    <a href="#how">How it works</a>
+    <a href="#champions">Champions</a>
+    <a href="#explorer">Explorer</a>
+    <a href="#recognition">Recognition</a>
+  </div>
+</nav>
+
+<!-- ── Hero ──────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="hero-glow"></div>
+  <p class="hero-kicker">IPL · 2008–2026</p>
+  <h1 class="hero-title">MO<span class="gold">VI</span></h1>
+  <p class="hero-sub">The Middle-Order Value Index</p>
+  <p class="hero-lede">
+    IPL run charts crown whoever <em>accumulates</em> the most — almost always an
+    opener. <strong>MOVI</strong> asks a different question: who was the best
+    <strong>middle-order</strong> batsman each season?
+  </p>
+  <div class="hero-stats" id="hero-stats">
+    <div class="hstat"><span class="hstat-num" data-count="0" id="hs-seasons">0</span><span class="hstat-label">seasons scored</span></div>
+    <div class="hstat"><span class="hstat-num" id="hs-faster">0</span><span class="hstat-label">seasons the MOVI #1 out-struck the run-leader</span></div>
+    <div class="hstat"><span class="hstat-num" id="hs-unrec">0</span><span class="hstat-label">seasons the MOVI #1 won no IPL award</span></div>
+  </div>
+  <a href="#story" class="scroll-cue" aria-label="Scroll down">▾</a>
+</header>
+
+<main>
+
+<!-- ── Story ─────────────────────────────────────────────────────────── -->
+<section id="story" class="reveal">
+  <h2>An award you cannot win from number five</h2>
+  <p>
+    Batting at No. 5 means arriving mid-innings, with the field spread, the ball
+    soft and ten overs already gone. You can bat brilliantly all season and still
+    finish nowhere on the run charts — there simply aren't enough balls left.
+  </p>
+  <p>
+    MOVI rates every qualifying middle-order batsman (average position 4–7) on the
+    things raw run tallies ignore, and blends them into one score that is comparable
+    <em>within each season</em>. A higher MOVI means a batsman stood further above
+    his middle-order peers that year.
+  </p>
+</section>
+
+<!-- ── How it works ──────────────────────────────────────────────────── -->
+<section id="how" class="reveal">
+  <h2>Four skills, one score</h2>
+  <div class="cards">
+    <div class="card"><span class="card-emoji">📦</span><h3>Volume</h3><p>Runs per innings — how much he delivers each time he walks in.</p></div>
+    <div class="card"><span class="card-emoji">⚡</span><h3>Efficiency</h3><p>Strike rate — how fast those runs come.</p></div>
+    <div class="card"><span class="card-emoji">🎯</span><h3>Finishing</h3><p>Scoring speed in the death overs (16–20), the hardest phase to bat in.</p></div>
+    <div class="card"><span class="card-emoji">🔁</span><h3>Consistency</h3><p>Reliability across the season, not one freak knock.</p></div>
+  </div>
+  <p class="muted center">
+    Each skill is measured against the season's other middle-order batsmen, then the
+    four are blended into a single score.
+  </p>
+</section>
+
+<!-- ── Controls ──────────────────────────────────────────────────────── -->
+<section id="controls" class="reveal">
+  <h2>Set the bar</h2>
+  <p class="muted">
+    MOVI is recomputed live, right here in your browser. Decide who qualifies —
+    everything below updates instantly.
+  </p>
+  <div class="control-block">
+    <label>Minimum matches to qualify in a season</label>
+    <div class="pills" id="pills-matches"></div>
+    <p class="hint">💡 Suggested: <strong>7</strong>, so short cameo bursts aren't over-weighted against players who batted a full season.</p>
+  </div>
+  <div class="control-block">
+    <label>Lowest average batting position to include</label>
+    <div class="pills" id="pills-pos"></div>
+    <p class="hint">💡 Suggested: <strong>4</strong> — that isolates <em>true</em> middle-order batsmen. Lower values admit floating No.&nbsp;3–4s.</p>
+  </div>
+  <p class="threshold-note" id="threshold-note"></p>
+</section>
+
+<!-- ── Champions timeline ────────────────────────────────────────────── -->
+<section id="champions" class="reveal wide">
+  <h2>Every season's best</h2>
+  <p class="muted">The No. 1 middle-order batsman of each IPL season, by MOVI.</p>
+  <div class="champ-grid" id="champ-grid"></div>
+  <div class="repeats" id="repeats"></div>
+</section>
+
+<!-- ── Season explorer ───────────────────────────────────────────────── -->
+<section id="explorer" class="reveal">
+  <h2>Explore any season</h2>
+  <div class="season-picker">
+    <label for="season-select">Season</label>
+    <select id="season-select"></select>
+  </div>
+  <h3 class="chart-title" id="explorer-title"></h3>
+  <div class="barchart" id="explorer-bars"></div>
+  <p class="caption">🥇 Gold = the season's top middle-order batsman. Hover a bar for details.</p>
+  <h3 class="chart-title" id="breakdown-title"></h3>
+  <div class="divchart" id="breakdown"></div>
+  <p class="caption">How far above (orange) or below (grey) the season's middle-order average this batsman ranked on each skill.</p>
+</section>
+
+<!-- ── Strike-rate dumbbell ──────────────────────────────────────────── -->
+<section id="faster" class="reveal wide">
+  <h2>Who actually struck faster?</h2>
+  <p class="muted">
+    Each line is a season: <span class="dot orange"></span> the leading run-scorer
+    vs <span class="dot blue"></span> the best middle-order batsman, by season strike rate.
+  </p>
+  <div class="dumbbell-wrap"><svg id="dumbbell" role="img" aria-label="Strike rate comparison by season"></svg></div>
+  <p class="caption" id="dumbbell-caption"></p>
+</section>
+
+<!-- ── Recognition ───────────────────────────────────────────────────── -->
+<section id="recognition" class="reveal">
+  <h2>Did the league even notice?</h2>
+  <div class="bignum-row">
+    <div class="bignum" id="rec-bignum">—</div>
+    <p class="bignum-text">
+      seasons in which the best middle-order batsman won
+      <strong>no individual IPL award</strong> of any kind.
+    </p>
+  </div>
+  <div class="rec-table-wrap">
+    <table class="rec-table" id="rec-table">
+      <thead><tr><th>Season</th><th>MOVI #1</th><th>Other award that season</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="caption">
+    At the standard 7-match qualification. Only Andre Russell (2015, 2019) was ever
+    recognised — and through the all-rounder MVP, not a batting award.
+    2026 awards provisional.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>MOVI — Middle-Order Value Index · Data: Cricsheet IPL ball-by-ball (2008–2026)</p>
+</footer>
+
+<div class="tooltip" id="tooltip" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

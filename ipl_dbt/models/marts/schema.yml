@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: mart_position_bias
+    description: >
+      Analysis B & C: balls faced and powerplay run% by position group.
+      Restricted to batter-seasons with 7+ matches.
+    columns:
+      - name: position_group
+        tests: [not_null, unique]
+      - name: batter_seasons
+        tests: [not_null]
+      - name: median_balls_faced
+        tests: [not_null]
+
+  - name: mart_normalized_rankings
+    description: >
+      Analysis D: top-10 run-scorers per season with normalised run projections
+      to a 14-match season. Includes 95% CI on non-playoff projections.
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: batter
+        tests: [not_null]
+      - name: actual_rank
+        tests: [not_null]
+
+  - name: mart_movi
+    description: >
+      Middle-Order Value Index (MOVI): equal-weighted z-score composite of volume,
+      efficiency, finishing, and consistency. Middle-order batsmen (avg_pos 4–7)
+      with 7+ matches, ranked within each season.
+    columns:
+      - name: season
+        tests: [not_null]
+      - name: batter
+        tests: [not_null]
+      - name: movi_score
+        tests: [not_null]
+      - name: season_rank
+        tests: [not_null]

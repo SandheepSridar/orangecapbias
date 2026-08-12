@@ -1,0 +1,2929 @@
+matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
+18680,Storm Riders,Satish Sarode,2.0,0,5,13,1,6.50,1,0
+18680,Storm Riders,Shobhit Gupta,4.0,0,12,29,4,7.25,0,0
+18680,Storm Riders,Rishabh Tewari,4.0,0,15,22,1,5.50,0,0
+18680,Storm Riders,Sameer Kulkarni,1.0,0,1,20,0,20.00,0,1
+18680,Storm Riders,Apurv Jain* †,3.0,0,9,22,1,7.33,5,0
+18680,Storm Riders,Shreyas Najan,2.0,0,7,10,1,5.00,0,0
+18680,11spartans,Krunal Patel,4.0,1,19,11,5,2.75,0,0
+18680,11spartans,Neel Patel-13,4.0,0,19,9,2,2.25,1,0
+18680,11spartans,Pratik Patel (savali),0.4,0,4,0,3,0.00,0,0
+18686,Maha CC,Sudhanshoo Vashisht,2.2,0,7,17,1,7.29,1,0
+18686,Maha CC,Ishan Shah,2.0,0,8,10,1,5.00,0,0
+18686,Maha CC,Tamaas Khan,3.0,0,13,5,3,1.67,0,0
+18686,Maha CC,Danish Shaikh,4.0,0,16,19,2,4.75,1,0
+18686,Maha CC,Rizwan Bajwa,3.0,0,12,6,2,2.00,0,0
+18686,PUNJAB XI,Lovely Singh,2.0,0,7,14,1,7.00,0,0
+18686,PUNJAB XI,Sukhwinder Singh*,4.0,0,14,20,3,5.00,1,0
+18686,PUNJAB XI,Azam Mohammad,1.0,0,0,6,0,6.00,0,0
+18686,PUNJAB XI,Kashif Khan,3.0,0,11,12,3,4.00,2,0
+18686,PUNJAB XI,Arun Pahal,1.3,0,5,6,0,4.00,1,0
+18688,Nj Braves,Rushi Makwana,4.0,0,9,51,2,12.75,6,0
+18688,Nj Braves,Pradeep Jeyapaul*,4.0,0,16,8,3,2.00,0,0
+18688,Nj Braves,Vipul Patel,4.0,1,18,11,2,2.75,0,0
+18688,Nj Braves,Jenish Shah,4.0,1,17,9,1,2.25,2,0
+18688,Juggernaut,Hemant Patel*,3.0,0,11,8,2,2.67,0,0
+18688,Juggernaut,Kailash Naithani,3.1,0,10,19,1,6.00,1,0
+18688,Juggernaut,Karan P,2.0,0,6,9,0,4.50,0,0
+18688,Juggernaut,Kartik Patel,2.0,0,7,13,1,6.50,2,0
+18688,Juggernaut,Jenish Patel,3.0,0,8,31,2,10.33,2,1
+18694,Blue Aces CC,Tharak Ram,4.0,0,8,53,0,13.25,0,0
+18694,Blue Aces CC,Rajendra Prasad Challa,4.0,0,9,58,2,14.50,0,0
+18694,Blue Aces CC,Sandip Nandurkar,3.0,0,4,58,0,19.33,1,0
+18694,Blue Aces CC,Dheeraj Dubey*,4.0,0,9,40,1,10.00,0,0
+18694,Blue Aces CC,Prabhakar Vudumula,1.0,0,0,19,0,19.00,0,0
+18694,Pway Lions,Shail Shah,4.0,0,13,23,4,5.75,2,0
+18694,Pway Lions,Kush Choksi,3.0,0,7,29,2,9.67,1,1
+18694,Pway Lions,Nish Patel,2.0,0,8,8,0,4.00,0,0
+18694,Pway Lions,Drumil Amin,1.0,0,2,7,0,7.00,0,0
+18694,Pway Lions,Ronak Rana †,1.0,0,3,15,0,15.00,4,0
+18694,Pway Lions,Harsh Desai,1.0,0,4,7,1,7.00,0,0
+18694,Pway Lions,Ankush Patel,0.4,0,4,0,3,0.00,0,0
+18697,Blasters,Khiamuddin Mohammad,3.0,0,8,25,2,8.33,0,2
+18697,Blasters,Jimmy Patel*,4.0,0,10,29,0,7.25,4,1
+18697,Blasters,Harsh Amin,3.5,0,9,34,5,8.87,1,0
+18697,Blasters,Hardik Patel,4.0,0,15,27,3,6.75,3,1
+18697,Blasters,Mrunal Rana,1.0,0,0,19,0,19.00,0,0
+18697,Fdu Giants,Sunit Shirke,4.0,1,16,11,1,2.75,0,0
+18697,Fdu Giants,Kartik Patel,3.0,1,12,21,1,7.00,1,0
+18697,Fdu Giants,Viral Parekh,4.0,1,17,28,3,7.00,5,3
+18697,Fdu Giants,Shubh Bhardwaj,1.0,0,0,16,0,16.00,0,0
+18697,Fdu Giants,Ankit Chopra,4.0,1,15,15,2,3.75,2,0
+18705,Jetha 11,Haren Patel,4.0,0,9,40,2,10.00,4,0
+18705,Jetha 11,Jignesh Mukhi Patel,3.0,0,10,25,0,8.33,1,0
+18705,Jetha 11,Gary Patel,4.0,0,14,28,3,7.00,2,0
+18705,Jetha 11,Hardik Patel,2.0,0,4,19,1,9.50,0,0
+18705,Jetha 11,Nirav Patel*,3.0,0,11,18,1,6.00,0,0
+18705,Warriors,Abhishek Patel*,2.0,0,6,9,0,4.50,0,0
+18705,Warriors,Mitul Patel,1.0,0,4,7,0,7.00,0,0
+18705,Warriors,Prasad Fernando,4.0,0,11,21,2,5.25,1,0
+18705,Warriors,Kirtan Patel,4.0,0,11,25,1,6.25,1,0
+18705,Warriors,Dhaval Patel,4.0,0,13,30,2,7.50,3,0
+18705,Warriors,Dharmik Patel,1.0,0,3,4,0,4.00,1,0
+18712,Nj Tigers,Mubassir Mansuri,4.0,0,12,26,2,6.50,4,0
+18712,Nj Tigers,Hasan Zafar,1.0,0,2,13,0,13.00,0,0
+18712,Nj Tigers,Affan Farooq,2.0,0,6,15,0,7.50,3,0
+18712,Nj Tigers,Haider Naveed Akram,1.0,0,2,9,1,9.00,0,0
+18712,Nj Tigers,Faisal Mehmood,4.0,0,10,29,1,7.25,1,1
+18712,Nj Tigers,Naveed Azam*,4.0,0,7,21,1,5.25,1,0
+18712,Falcons,Sairam Raavi*,4.0,0,14,24,3,6.00,1,1
+18712,Falcons,Sai Ritheesh Sudham,4.0,0,16,11,1,2.75,2,0
+18712,Falcons,Manikanta Arumilli,4.0,0,15,20,1,5.00,1,0
+18712,Falcons,Rajesh Rachakonda,4.0,0,9,24,2,6.00,4,0
+18719,Desi Warriors,Subhajit Mitra,2.0,0,7,11,1,5.50,2,0
+18719,Desi Warriors,Nauman Basit,3.0,0,14,9,1,3.00,2,0
+18719,Desi Warriors,Sai Kancharla,3.0,0,10,14,1,4.67,2,0
+18719,Desi Warriors,Sarbjitsingh Sahota,2.0,0,11,7,1,3.50,6,0
+18719,Desi Warriors,Varun Gurram,2.0,0,5,14,2,7.00,0,0
+18719,Desi Warriors,Rakesh Kar,2.0,0,5,11,1,5.50,1,0
+18719,Desi Warriors,Narasimha Charan Reddy,1.2,0,4,6,2,4.50,2,0
+18719,Edison Rebelz,Gurmeet Singh,3.0,0,6,24,0,8.00,1,0
+18719,Edison Rebelz,Soumyabrata Paul,2.0,0,7,7,1,3.50,0,0
+18719,Edison Rebelz,Yash Solanki,2.0,0,3,19,1,9.50,1,0
+18719,Edison Rebelz,Sourav Mazumder,2.0,0,5,18,0,9.00,1,0
+18719,Edison Rebelz,Chintan. Kamdar,0.1,0,0,5,0,30.00,1,0
+18729,Plainsboro Eagles,Narender Kumar,3.0,0,9,21,0,7.00,3,0
+18729,Plainsboro Eagles,Chandra Koganti,4.0,0,10,27,1,6.75,1,0
+18729,Plainsboro Eagles,Bharath Reddy,2.0,0,5,14,1,7.00,0,0
+18729,Plainsboro Eagles,Rajesh Paruchuri,3.0,0,6,41,1,13.67,1,1
+18729,Plainsboro Eagles,Bhargav Reddy Napa*,1.0,0,1,16,0,16.00,0,0
+18729,Plainsboro Eagles,Tushar Choksi,3.0,0,5,30,2,10.00,2,0
+18729,Youth For Sewa,Manikanta Raja Kottu,4.0,0,15,18,2,4.50,0,0
+18729,Youth For Sewa,Tauseef Ahmed,1.0,0,4,4,1,4.00,1,0
+18729,Youth For Sewa,Aillu N,3.0,0,12,11,2,3.67,1,0
+18729,Youth For Sewa,Eswar Vennapusa,2.0,0,6,11,2,5.50,2,0
+18729,Youth For Sewa,Rajesh Kondru,4.0,0,18,13,1,3.25,2,1
+18729,Youth For Sewa,Balu Y,2.0,0,9,6,0,3.00,3,0
+18730,Veerans,Naveen Elangovan*,4.0,1,19,10,3,2.50,1,0
+18730,Veerans,Uma Maheswara Rao Patibandla,4.0,0,14,17,1,4.25,3,0
+18730,Veerans,Kamalraj Rajamanickam,4.0,1,18,10,3,2.50,0,0
+18730,Veerans,Shabbeer Syed,3.0,0,13,16,0,5.33,0,0
+18730,Veerans,Vinay Naidu,1.0,0,3,3,1,3.00,0,0
+18730,Sreeshti,Mahesh Nagappa,2.0,0,5,16,0,8.00,0,0
+18730,Sreeshti,Sumesh Mathew,3.0,1,15,12,1,4.00,1,0
+18730,Sreeshti,Kamal Choudhury,3.0,0,12,13,2,4.33,1,0
+18730,Sreeshti,Harshal Gupta,3.2,0,11,20,0,6.00,3,0
+18732,WCC,Faran Mir,4.0,0,12,17,2,4.25,0,0
+18732,WCC,Nahid Sarkar,2.0,0,4,12,0,6.00,0,0
+18732,WCC,Tushar Lenka,2.0,0,8,10,0,5.00,2,0
+18732,WCC,Sarwar Ali Shah,2.0,0,4,20,0,10.00,1,0
+18732,WCC,Harikishore Malireddy,2.0,0,6,7,0,3.50,0,0
+18732,WCC,Sai Sudhan,4.0,0,17,10,6,2.50,2,0
+18732,RHG,Hiren Joshi,2.5,0,8,7,3,2.47,1,0
+18732,RHG,Kevin Shah,3.0,0,10,13,0,4.33,2,0
+18732,RHG,Baseer Ahmed Mohammed,4.0,1,18,6,5,1.50,0,0
+18732,RHG,Harsh Viradiya,4.0,0,18,13,1,3.25,2,0
+18733,Jersey Boys,Vikul Rajpara,4.0,0,16,16,4,4.00,3,0
+18733,Jersey Boys,Sushil Kumar,4.0,0,13,33,1,8.25,0,0
+18733,Jersey Boys,Amit Patel,3.0,0,7,30,0,10.00,1,0
+18733,Jersey Boys,Vineet Luthra,4.0,0,13,12,2,3.00,0,0
+18733,Jersey Boys,Jitendra Singh,1.0,0,3,10,1,10.00,1,0
+18733,Hudson Hurricanes,Sravan Nekkanti,4.0,0,14,18,2,4.50,0,0
+18733,Hudson Hurricanes,Vinyas Ramachandra,4.0,0,13,21,1,5.25,3,0
+18733,Hudson Hurricanes,Ved Arya,3.0,1,13,13,2,4.33,2,0
+18733,Hudson Hurricanes,Rishabh Madangeri,1.0,0,2,11,0,11.00,4,0
+18733,Hudson Hurricanes,Aniket Dalal*,4.0,0,11,25,2,6.25,5,0
+18737,Nj Stars CC,Sajeel Ahmed,3.0,0,9,26,1,8.67,1,0
+18737,Nj Stars CC,Imran Raja*,4.0,0,16,17,2,4.25,0,3
+18737,Nj Stars CC,Zain Pervaiz,4.0,0,16,18,2,4.50,1,0
+18737,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,10,31,1,7.75,1,0
+18737,Nj Stars CC,Mohammed Naveed,1.0,0,4,2,1,2.00,0,0
+18737,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,17,14,5,3.50,4,0
+18737,Samudhra Gladiators,Naveen R Sripathi,4.0,0,15,19,1,4.75,0,0
+18737,Samudhra Gladiators,Ankur Chaturvedi,4.0,0,14,23,1,5.75,6,1
+18737,Samudhra Gladiators,Sandeep Shetty,1.0,0,4,8,0,8.00,0,0
+18737,Samudhra Gladiators,Harshad Patil,3.0,0,11,10,1,3.33,4,0
+18739,Gcc,Sahil Patel,3.0,0,6,27,0,9.00,1,0
+18739,Gcc,Parin Patel (gcc),3.0,0,13,9,3,3.00,1,0
+18739,Gcc,Mrugesh Patel,4.0,0,14,18,2,4.50,2,0
+18739,Gcc,Sapan Parikh,1.0,0,3,14,1,14.00,0,0
+18739,Gcc,Nirav Rana(gcc),4.0,0,15,22,3,5.50,0,0
+18739,Gcc,Deep Parikh Gcc,1.0,0,1,18,0,18.00,0,0
+18739,Parsippany Phoenix XI,Satish Kumar Durgam,2.1,0,5,24,0,11.08,0,0
+18739,Parsippany Phoenix XI,Naveen Rayal,2.0,0,5,30,0,15.00,0,1
+18739,Parsippany Phoenix XI,Raghuveer Bethelli,2.0,0,8,18,0,9.00,3,0
+18739,Parsippany Phoenix XI,Govind Somvanshi,2.0,0,5,9,2,4.50,1,0
+18739,Parsippany Phoenix XI,Jeyaram Ramadoss,2.0,0,3,22,0,11.00,0,0
+18739,Parsippany Phoenix XI,Tej Reddy,1.0,0,2,8,0,8.00,1,0
+18744,Team Highlanders,Ravi Kanth,3.0,0,11,21,1,7.00,2,0
+18744,Team Highlanders,Raja Kuppan,4.0,0,17,23,2,5.75,6,0
+18744,Team Highlanders,Vijay Narayanan Nadar,1.0,0,4,3,0,3.00,0,1
+18744,Team Highlanders,Krishna S,1.0,0,4,6,1,6.00,1,0
+18744,Team Highlanders,Manikandan Swaminathan,4.0,1,18,14,3,3.50,3,0
+18744,Team Highlanders,Suresh Ganesan,3.0,0,8,16,1,5.33,0,0
+18744,Aryans,Joydeep Das,2.0,0,9,10,0,5.00,0,0
+18744,Aryans,Ajay Shankar,3.0,0,10,18,1,6.00,4,2
+18744,Aryans,Arpit Panchal,2.2,0,10,24,0,10.29,0,3
+18744,Aryans,Smith Dsouza,3.0,0,8,20,0,6.67,2,0
+18744,Aryans,Swapnil Gadge,1.0,0,2,13,0,13.00,0,0
+18659,Gryffindors,Kishan Patel,4.0,0,16,15,3,3.75,2,0
+18659,Gryffindors,Ganesh R T,2.0,0,7,13,1,6.50,0,0
+18659,Gryffindors,Vinayak Nair,2.0,0,5,13,0,6.50,0,2
+18659,Gryffindors,Bikash Ghibila,4.0,0,13,33,3,8.25,2,0
+18659,Gryffindors,Ankit Patel,3.0,0,9,21,1,7.00,4,0
+18659,Gryffindors,Johncy V,0.4,0,1,3,1,4.50,0,0
+18659,Mercer Challengers,Samit Kumbhani,4.0,1,14,25,1,6.25,0,0
+18659,Mercer Challengers,Sheshank Reddy,4.0,0,13,19,2,4.75,1,0
+18659,Mercer Challengers,Deepesh Naidu,4.0,0,9,33,1,8.25,3,0
+18659,Mercer Challengers,Vishal Srivastava,3.0,0,11,22,2,7.33,2,0
+18663,SAMP XI,Arya Patel,4.0,0,13,27,3,6.75,2,0
+18663,SAMP XI,Mujeeb Saeed,4.0,0,15,29,2,7.25,5,0
+18663,SAMP XI,Ziaullah Khan,4.0,0,16,12,3,3.00,0,1
+18663,SAMP XI,Rehan Khan,4.0,1,10,37,1,9.25,0,2
+18663,Gujarat United XI,Parth Patel,4.0,0,17,18,1,4.50,5,0
+18663,Gujarat United XI,Daksh Patel,4.0,0,13,22,3,5.50,0,0
+18663,Gujarat United XI,Avi Shah,4.0,0,18,13,3,3.25,1,0
+18663,Gujarat United XI,Neel Patel,2.0,0,3,17,1,8.50,0,0
+18663,Gujarat United XI,Krunal Patel,2.0,0,8,10,1,5.00,1,0
+18667,Piscataway Avengers,Ujjaval Patel,4.0,1,19,16,1,4.00,2,0
+18667,Piscataway Avengers,Sherry Singh,4.0,0,17,13,2,3.25,0,0
+18667,Piscataway Avengers,Krunal Shah,2.0,0,6,12,0,6.00,0,0
+18667,Piscataway Avengers,Dhruv Gaidhane,2.0,0,8,17,0,8.50,0,3
+18667,Piscataway Avengers,Rimal Patel,4.0,0,14,23,3,5.75,0,0
+18667,Plainsboro Knights,Sesha Sai Veerla,4.0,1,17,18,2,4.50,2,0
+18667,Plainsboro Knights,Raghuraman Varadharajan,3.0,0,12,27,2,9.00,2,0
+18667,Plainsboro Knights,Lokesh Prabakaran,3.0,0,11,15,3,5.00,2,0
+18667,Plainsboro Knights,Chinmaya Sahu,4.0,0,9,22,2,5.50,0,0
+18669,Newport CC,Arun Prasad G*,1.0,0,2,5,0,5.00,1,0
+18669,Newport CC,Emmanuel Samuel Nair,2.0,0,6,18,2,9.00,1,0
+18669,Newport CC,Farukh Manzoor,4.0,0,15,21,4,5.25,2,0
+18669,Newport CC,Saikumar Katepalli,1.0,0,3,11,0,11.00,0,0
+18669,Newport CC,Gokul Das Maharajan,4.0,1,19,8,0,2.00,0,0
+18669,Newport CC,Narender Reddy Bojja,4.0,0,8,24,2,6.00,2,0
+18669,Rowdy Rebels,Anoop Hegde,1.3,0,6,9,2,6.00,0,0
+18669,Rowdy Rebels,Naresh Patel,3.0,1,12,12,1,4.00,0,0
+18669,Rowdy Rebels,Kushal Kumar,3.0,0,6,39,0,13.00,1,1
+18669,Rowdy Rebels,Zoheb Khalid*,2.0,0,4,28,1,14.00,0,0
+18674,Jersey Titans,Mitul Patel,4.0,0,14,24,3,6.00,8,0
+18674,Jersey Titans,Jay Patel,4.0,1,13,25,2,6.25,0,0
+18674,Jersey Titans,Milan Dave,3.2,0,13,17,3,5.10,3,0
+18674,Jersey Titans,Jay Domadiya*,4.0,1,20,16,2,4.00,4,1
+18674,F5,Harihara Ganeshan,1.0,0,4,7,0,7.00,2,0
+18674,F5,Sujesh Nair,4.0,0,13,24,1,6.00,6,0
+18674,F5,Deniz Baby,4.0,0,11,22,1,5.50,2,0
+18674,F5,Vimalendu Kumar,4.0,0,19,18,3,4.50,6,0
+18674,F5,Rixon Devassy,3.0,0,14,8,1,2.67,1,0
+18756,Plainsboro Eagles,Narender Kumar,4.0,0,9,56,0,14.00,2,0
+18756,Plainsboro Eagles,Bharath Reddy,3.0,0,6,27,0,9.00,0,0
+18756,Plainsboro Eagles,Chandra Koganti,4.0,0,12,33,0,8.25,0,0
+18756,Plainsboro Eagles,Rajesh Paruchuri,1.0,0,1,23,0,23.00,1,0
+18756,Plainsboro Eagles,Tushar Choksi,2.0,0,2,23,1,11.50,0,0
+18756,Plainsboro Eagles,Bhargav Reddy Napa*,2.0,0,3,30,1,15.00,0,1
+18756,Warriors,Abhishek Patel*,4.0,1,19,12,3,3.00,0,0
+18756,Warriors,Mitul Patel,3.0,0,14,9,1,3.00,4,0
+18756,Warriors,Rumit Patel,2.0,0,8,13,0,6.50,1,0
+18756,Warriors,Rakesh Patel,2.0,0,8,13,0,6.50,3,1
+18756,Warriors,Prasad Fernando,2.0,0,7,5,1,2.50,0,0
+18756,Warriors,Kirtan Patel,2.0,0,8,13,1,6.50,3,0
+18756,Warriors,Dharmik Patel,1.0,0,4,15,0,15.00,8,0
+18757,Team Highlanders,Ravi Kanth,2.0,0,3,32,0,16.00,0,1
+18757,Team Highlanders,Raja Kuppan,4.0,0,12,36,0,9.00,3,0
+18757,Team Highlanders,Yokesh Rajaram*,2.0,0,2,22,1,11.00,2,0
+18757,Team Highlanders,Suresh Ganesan,3.0,0,9,12,1,4.00,0,0
+18757,Team Highlanders,Syed Abhinash,1.0,0,2,9,0,9.00,0,0
+18757,Team Highlanders,Manikandan Swaminathan,4.0,0,8,50,1,12.50,3,0
+18757,Nj Stars CC,Zain Pervaiz,4.0,0,10,35,2,8.75,2,0
+18757,Nj Stars CC,Yasir Mohammad,2.0,0,4,20,1,10.00,0,1
+18757,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,11,15,2,3.75,1,0
+18757,Nj Stars CC,Muhammad Haseeb,3.0,0,7,17,1,5.67,1,0
+18757,Nj Stars CC,Sajeel Ahmed,3.0,0,5,15,2,5.00,0,0
+18766,Aryans,Arpit Panchal,1.0,0,2,13,0,13.00,0,0
+18766,Aryans,Ajay Shankar,4.0,0,14,24,3,6.00,3,1
+18766,Aryans,Henil Balsara,4.0,0,16,16,2,4.00,5,2
+18766,Aryans,Sourabh Guha*,3.0,0,8,16,1,5.33,1,0
+18766,Aryans,Gajendra Kumar,3.3,0,13,25,4,7.14,5,0
+18766,RHG,Hiren Joshi,4.0,0,15,22,1,5.50,1,0
+18766,RHG,Baseer Ahmed Mohammed,3.0,0,15,7,2,2.33,2,1
+18766,RHG,Kevin Shah,4.0,0,14,18,3,4.50,0,0
+18766,RHG,Parth Thakkar,3.0,0,11,13,1,4.33,1,1
+18766,RHG,Nuvan T,2.0,0,8,6,2,3.00,2,0
+18770,Veerans,Uma Maheswara Rao Patibandla,4.0,0,13,27,1,6.75,0,1
+18770,Veerans,Shabbeer Syed,2.0,0,5,12,1,6.00,0,0
+18770,Veerans,Kamalraj Rajamanickam,4.0,1,14,16,2,4.00,1,0
+18770,Veerans,Sundip Helchal*,4.0,0,12,34,3,8.50,2,0
+18770,Veerans,Aditya Rathor,2.0,0,5,9,1,4.50,1,0
+18770,Desi Warriors,Subhajit Mitra,2.0,0,4,19,0,9.50,0,0
+18770,Desi Warriors,Jitesh Rughani,2.3,0,9,28,1,11.20,3,0
+18770,Desi Warriors,Sarbjitsingh Sahota,3.0,0,12,14,0,4.67,0,0
+18770,Desi Warriors,Kranthi Vanga,1.0,0,2,13,0,13.00,4,0
+18770,Desi Warriors,Partha Chatterjee,2.0,0,8,8,1,4.00,1,0
+18770,Desi Warriors,Rakesh Kar,2.0,0,2,19,1,9.50,1,0
+18782,Hudson Hurricanes,Sravan Nekkanti,3.0,0,12,10,1,3.33,0,0
+18782,Hudson Hurricanes,Vinyas Ramachandra,3.0,0,7,17,1,5.67,0,0
+18782,Hudson Hurricanes,Pratik Mane,2.0,0,5,15,1,7.50,4,0
+18782,Hudson Hurricanes,Niket Dalal,2.2,0,12,9,4,3.86,7,0
+18782,Hudson Hurricanes,Rohit Pradhan,3.0,0,12,11,2,3.67,5,0
+18782,Nj Tigers,Faisal Mehmood,4.0,1,13,21,2,5.25,1,0
+18782,Nj Tigers,Haider Naveed Akram,1.1,0,2,10,0,8.57,0,0
+18782,Nj Tigers,Mubassir Mansuri,2.0,0,4,13,1,6.50,0,0
+18782,Nj Tigers,Naveed Azam*,1.0,0,0,11,0,11.00,0,0
+18782,Nj Tigers,Saad Talat Siddiqui,1.0,0,1,8,0,8.00,0,0
+18785,Youth For Sewa,Aillu N,4.0,0,13,27,2,6.75,5,1
+18785,Youth For Sewa,Balu Y,4.0,0,9,37,1,9.25,4,0
+18785,Youth For Sewa,Rohith Reddy,3.0,0,11,17,2,5.67,1,1
+18785,Youth For Sewa,Tauseef Ahmed,4.0,0,8,26,0,6.50,1,0
+18785,Youth For Sewa,Rajesh Kondru,1.0,0,3,11,0,11.00,1,0
+18785,WCC,Tushar Lenka*,2.0,0,3,22,0,11.00,1,0
+18785,WCC,Faran Mir,4.0,0,10,26,1,6.50,1,2
+18785,WCC,Sarwar Ali Shah,4.0,0,10,29,1,7.25,2,0
+18785,WCC,Harikishore Malireddy,4.0,1,14,20,1,5.00,0,0
+18785,WCC,Sai Sudhan,1.4,0,3,24,0,14.40,1,0
+18788,Edison Rebelz,Chintan. Kamdar,4.0,0,16,23,2,5.75,3,0
+18788,Edison Rebelz,Gurmeet Singh,4.0,0,19,12,3,3.00,4,0
+18788,Edison Rebelz,Yash Solanki,4.0,1,20,8,3,2.00,1,0
+18788,Edison Rebelz,Zubin Shah*,2.0,0,5,26,0,13.00,2,0
+18788,Edison Rebelz,Dhaval Shah,1.0,0,2,7,0,7.00,2,0
+18788,Edison Rebelz,Srikant P,1.0,0,4,8,0,8.00,0,0
+18788,Gcc,Sahil Patel,4.0,0,20,10,1,2.50,3,0
+18788,Gcc,Parin Patel (gcc),4.0,0,12,16,1,4.00,1,0
+18788,Gcc,Mrugesh Patel,1.0,0,3,12,0,12.00,0,0
+18788,Gcc,Dipen Patel Gcc,3.0,0,7,21,0,7.00,2,1
+18788,Gcc,Romil Patel (gcc),4.0,0,11,24,3,6.00,2,0
+18790,Falcons,Sai Ritheesh Sudham,4.0,0,15,27,2,6.75,3,2
+18790,Falcons,Manikanta Arumilli,4.0,0,11,33,3,8.25,2,0
+18790,Falcons,Rajesh Rachakonda,4.0,0,11,32,0,8.00,2,1
+18790,Falcons,Srinath Gentyala*,3.0,0,9,45,2,15.00,4,2
+18790,Falcons,Shiva Chetan Reddy K,1.0,0,0,21,0,21.00,0,0
+18790,Jetha 11,Dipal Patel,4.0,0,14,20,3,5.00,4,0
+18790,Jetha 11,Jignesh Mukhi Patel,2.0,0,5,23,2,11.50,3,0
+18790,Jetha 11,Gary Patel,4.0,1,12,23,2,5.75,0,0
+18790,Jetha 11,Nirav Patel*,3.0,0,8,22,1,7.33,1,0
+18790,Jetha 11,Divyesh Patel,3.0,0,7,30,0,10.00,2,2
+18793,Sreeshti,Nimish Deshpande,2.0,0,6,6,0,3.00,0,0
+18793,Sreeshti,Sumesh Mathew,4.0,0,8,33,2,8.25,1,0
+18793,Sreeshti,Yogen Phanse,2.0,0,7,13,1,6.50,0,0
+18793,Sreeshti,Santosh Mesta,3.0,1,10,25,1,8.33,6,0
+18793,Sreeshti,Kamal Choudhury,2.0,0,6,17,1,8.50,1,0
+18793,Sreeshti,Harshal Gupta,3.0,0,7,25,0,8.33,2,0
+18793,Jersey Boys,Vikul Rajpara,4.0,0,13,15,3,3.75,3,0
+18793,Jersey Boys,Sushil Kumar,3.0,0,7,19,1,6.33,1,0
+18793,Jersey Boys,Vineet Luthra,4.0,0,15,21,2,5.25,1,0
+18793,Jersey Boys,Madhur Kaushik,3.0,0,14,5,1,1.67,1,0
+18793,Jersey Boys,Vikas Chaudhary,1.0,0,5,3,1,3.00,1,0
+18793,Jersey Boys,Pradeep Mishra,0.1,0,1,0,1,0.00,0,0
+18794,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,15,25,1,6.25,2,0
+18794,Parsippany Phoenix XI,Govind Somvanshi,4.0,0,15,19,2,4.75,1,0
+18794,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,10,20,2,5.00,0,0
+18794,Parsippany Phoenix XI,Naveen Rayal,4.0,0,8,39,0,9.75,7,0
+18794,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,15,18,2,4.50,1,0
+18794,Samudhra Gladiators,Sandeep Shetty,1.0,0,3,8,1,8.00,0,0
+18794,Samudhra Gladiators,Ankur Chaturvedi,3.0,0,12,14,2,4.67,0,0
+18794,Samudhra Gladiators,Naveen R Sripathi,2.0,0,6,21,1,10.50,4,0
+18794,Samudhra Gladiators,Sushil Golecha,2.0,0,5,14,2,7.00,1,0
+18794,Samudhra Gladiators,Suraj Pai Madhukar,1.0,0,5,2,2,2.00,1,0
+18794,Samudhra Gladiators,Harshad Patil,1.0,0,2,18,0,18.00,1,0
+18799,Storm Riders,Shobhit Gupta,4.0,0,12,25,2,6.25,0,0
+18799,Storm Riders,Rishabh Tewari,4.0,0,16,23,1,5.75,1,3
+18799,Storm Riders,Noor Randhawa,4.0,1,16,8,3,2.00,0,0
+18799,Storm Riders,Mitul Patel,3.4,0,12,17,4,4.64,0,0
+18799,Gryffindors,Harish Bangera,2.0,0,6,20,1,10.00,1,0
+18799,Gryffindors,Kishan Patel,4.0,0,16,10,3,2.50,2,0
+18799,Gryffindors,Ganesh R T,4.0,1,15,21,1,5.25,1,2
+18799,Gryffindors,Bikash Ghibila,2.0,0,2,12,0,6.00,1,0
+18799,Gryffindors,Ankit Patel,2.0,0,6,6,2,3.00,0,0
+18799,Gryffindors,Bandiss P,0.1,0,0,5,0,30.00,1,0
+18811,Piscataway Avengers,Ujjaval Patel*,4.0,2,21,5,2,1.25,1,0
+18811,Piscataway Avengers,Dharmesh Patel,4.0,1,12,13,3,3.25,0,0
+18811,Piscataway Avengers,Sherry Singh,3.0,0,11,9,1,3.00,1,0
+18811,Piscataway Avengers,Krunal Shah,3.0,0,14,7,2,2.33,3,0
+18811,Piscataway Avengers,Harsh Patel,2.0,0,8,5,1,2.50,1,0
+18811,Mercer Challengers,Vishal Srivastava,1.0,0,3,4,0,4.00,0,0
+18811,Mercer Challengers,Sheshank Reddy,1.0,0,2,13,0,13.00,1,0
+18811,Mercer Challengers,Ankur Parekh,1.0,0,5,1,1,1.00,0,0
+18811,Mercer Challengers,Sai Deepak Dogiparthi,1.0,0,2,16,0,16.00,0,0
+18811,Mercer Challengers,Samit Kumbhani,0.4,0,2,8,0,12.00,1,0
+18813,Nj Braves,Pradeep Jeyapaul*,4.0,0,15,9,1,2.25,0,0
+18813,Nj Braves,Swar Shah,4.0,0,14,16,0,4.00,0,0
+18813,Nj Braves,Vipul Patel,4.0,0,13,13,2,3.25,2,0
+18813,Nj Braves,Jenish Shah,4.0,1,18,12,2,3.00,3,0
+18813,Fdu Giants,Nishant Sharma,2.0,0,4,13,1,6.50,0,0
+18813,Fdu Giants,Ravish Parekh,2.0,0,6,13,0,6.50,1,0
+18813,Fdu Giants,Viral Parekh,4.0,0,19,7,3,1.75,2,0
+18813,Fdu Giants,Ankit Chopra,4.0,1,20,9,0,2.25,1,1
+18813,Fdu Giants,Vinit Arora,1.2,0,4,9,1,6.75,0,0
+18827,Juggernaut,Hemant Patel*,3.0,0,10,24,0,8.00,0,0
+18827,Juggernaut,Jatan Vaidya,3.0,1,10,19,2,6.33,0,0
+18827,Juggernaut,Kailash Naithani,1.0,0,2,7,0,7.00,0,0
+18827,Juggernaut,Kartik Patel,2.0,0,7,8,1,4.00,2,0
+18827,Juggernaut,Jenish Patel,4.0,1,13,23,3,5.75,0,0
+18827,Juggernaut,Karan P,1.0,0,3,6,0,6.00,0,0
+18827,Jersey Titans,Mitul Patel,4.0,0,12,25,0,6.25,1,0
+18827,Jersey Titans,Pavan Patel,1.0,0,2,10,0,10.00,2,0
+18827,Jersey Titans,Jay Domadiya*,3.1,0,13,20,1,6.32,1,0
+18827,Jersey Titans,Milan Dave,2.0,0,4,26,0,13.00,2,0
+18827,Jersey Titans,Ravin Patel,1.0,0,3,8,0,8.00,0,0
+18854,Blue Aces CC,Satya Tarun Reddy,3.0,0,7,32,0,10.67,5,0
+18854,Blue Aces CC,Surya Nallamilli,2.0,0,3,26,0,13.00,0,0
+18854,Blue Aces CC,Prabhakar Vudumula,3.0,0,11,19,1,6.33,0,0
+18854,Blue Aces CC,Dheeraj Dubey*,4.0,0,12,15,1,3.75,1,0
+18854,Blue Aces CC,Tharak Ram,4.0,0,12,24,2,6.00,1,0
+18854,Blasters,Harsh Amin,3.0,0,7,36,0,12.00,1,0
+18854,Blasters,Jay Patel (jp),3.4,0,12,21,1,5.73,2,0
+18854,Blasters,Komal(kc) Patel,4.0,0,14,25,3,6.25,4,0
+18854,Blasters,Ridham Shah,4.0,0,8,24,1,6.00,0,0
+18854,Blasters,Jimmy Patel*,1.0,0,2,11,0,11.00,1,0
+18857,Plainsboro Knights,Sesha Sai Veerla,4.0,0,14,15,3,3.75,0,0
+18857,Plainsboro Knights,Raghuraman Varadharajan,3.2,0,8,23,3,6.90,1,0
+18857,Plainsboro Knights,Gowtham Akula,2.0,0,6,19,1,9.50,0,0
+18857,Plainsboro Knights,Lokesh Prabakaran,3.0,0,6,39,0,13.00,4,0
+18857,Plainsboro Knights,Anil Poply,3.0,0,11,9,3,3.00,2,0
+18857,Juggernaut,Hemant Patel*,4.0,0,16,9,3,2.25,1,0
+18857,Juggernaut,Kailash Naithani,1.0,0,4,6,1,6.00,4,0
+18857,Juggernaut,Kartik Patel,3.1,0,11,22,3,6.95,0,0
+18857,Juggernaut,Jatan Vaidya,1.0,0,1,8,0,8.00,0,0
+18857,Juggernaut,Jenish Patel,2.0,0,6,11,1,5.50,0,1
+18857,Juggernaut,Karan P,3.0,0,10,20,1,6.67,2,0
+18866,F5,Harihara Ganeshan,2.0,0,6,14,0,7.00,0,0
+18866,F5,Sujesh Nair,3.0,1,13,10,3,3.33,0,0
+18866,F5,Rixon Devassy,4.0,0,16,8,3,2.00,0,0
+18866,F5,Deniz Baby,3.0,0,13,6,2,2.00,0,0
+18866,F5,Vimalendu Kumar,4.0,0,15,17,1,4.25,5,0
+18866,Mercer Challengers,Samit Kumbhani,2.0,0,9,9,1,4.50,1,0
+18866,Mercer Challengers,Sheshank Reddy,2.0,0,3,19,1,9.50,1,0
+18866,Mercer Challengers,Ankur Parekh,2.0,0,7,12,0,6.00,0,0
+18866,Mercer Challengers,Vishal Srivastava,1.0,0,3,9,1,9.00,1,0
+18866,Mercer Challengers,Deepesh Naidu,1.4,0,7,7,1,4.20,0,0
+18869,11spartans,Neel Patel-13,2.0,0,5,14,0,7.00,0,0
+18869,11spartans,Krunal Patel,2.0,0,9,6,1,3.00,1,1
+18869,11spartans,Soham Brahmbhatt,4.0,0,13,22,0,5.50,1,0
+18869,11spartans,Pratik Patel (savali),3.0,0,8,15,3,5.00,1,0
+18869,11spartans,Rajan Patel,4.0,0,13,16,4,4.00,0,0
+18869,11spartans,Ravi Rathod,1.0,0,2,9,0,9.00,0,1
+18869,Gujarat United XI,Parth Patel,4.0,0,14,22,1,5.50,1,0
+18869,Gujarat United XI,Daksh Patel,4.0,0,12,20,3,5.00,2,0
+18869,Gujarat United XI,Avi Shah,3.0,0,6,21,0,7.00,0,0
+18869,Gujarat United XI,Mihir Vaghasia,3.2,0,14,17,2,5.10,3,1
+18869,Gujarat United XI,Krunal Patel,1.0,0,3,3,1,3.00,0,0
+18876,Gryffindors,Bikash Ghibila,4.0,0,8,26,1,6.50,0,0
+18876,Gryffindors,Johncy V,4.0,0,10,27,1,6.75,1,1
+18876,Gryffindors,Harish Bangera,4.0,0,9,42,1,10.50,4,0
+18876,Gryffindors,Subodh Singh*,4.0,0,5,45,2,11.25,1,0
+18876,Newport CC,Farukh Manzoor,1.0,0,3,5,0,5.00,2,0
+18876,Newport CC,Vinit Shah,3.0,0,11,7,2,2.33,0,0
+18876,Newport CC,Narender Reddy Bojja,3.0,0,7,20,2,6.67,2,0
+18876,Newport CC,Gokul Das Maharajan,4.0,0,14,22,3,5.50,0,1
+18876,Newport CC,Saikumar Katepalli,3.0,0,7,23,0,7.67,0,0
+18876,Newport CC,Arun Prasad G*,1.0,0,4,4,1,4.00,2,0
+18876,Newport CC,Om Patel,0.3,0,1,2,1,4.00,0,0
+18881,Storm Riders,Mitul Patel,4.0,0,19,6,2,1.50,1,0
+18881,Storm Riders,Rishabh Tewari,3.0,0,15,12,3,4.00,1,0
+18881,Storm Riders,Shobhit Gupta,2.4,0,11,13,3,4.88,0,0
+18881,Storm Riders,Gourang Patel,3.0,0,9,16,2,5.33,2,0
+18881,Piscataway Avengers,Ujjaval Patel,3.0,0,10,14,2,4.67,6,0
+18881,Piscataway Avengers,Dharmesh Patel*,3.0,0,13,5,0,1.67,0,0
+18881,Piscataway Avengers,Rimal Patel,2.0,0,6,11,0,5.50,0,0
+18881,Piscataway Avengers,Sherry Singh,1.3,0,4,18,1,12.00,0,0
+18886,Maha CC,Sudhanshoo Vashisht,3.0,0,6,20,0,6.67,0,0
+18886,Maha CC,Tamaas Khan,2.0,0,5,16,1,8.00,1,1
+18886,Maha CC,Danish Shaikh,2.0,0,8,16,0,8.00,0,0
+18886,Maha CC,Ishan Shah,2.0,0,8,11,0,5.50,3,0
+18886,Maha CC,Dhrumil Shah,3.0,0,11,12,2,4.00,0,0
+18886,Maha CC,Jay Soni,1.0,0,3,8,1,8.00,0,0
+18886,Maha CC,Rizwan Bajwa,3.0,0,9,20,2,6.67,0,0
+18886,Nj Braves,Swar Shah,1.0,0,3,11,1,11.00,0,0
+18886,Nj Braves,Vipul Patel,4.0,0,11,44,1,11.00,0,0
+18886,Nj Braves,Jenish Shah,4.0,0,14,21,0,5.25,3,0
+18886,Nj Braves,Pranav Patel,2.0,0,6,17,1,8.50,1,0
+18886,Nj Braves,Vinoth Suseendran †,1.0,0,2,7,0,7.00,3,0
+18886,Nj Braves,Praveen Shetty,1.0,0,3,13,1,13.00,5,0
+18888,PUNJAB XI,Nitesh Tomer,4.0,0,14,21,1,5.25,3,0
+18888,PUNJAB XI,Lovely Singh,2.0,0,9,14,1,7.00,1,0
+18888,PUNJAB XI,Nasir Khan,4.0,0,17,20,4,5.00,0,0
+18888,PUNJAB XI,Jasmeet Singh,3.2,1,15,10,4,3.00,0,0
+18888,SAMP XI,Ayaz Rathod,2.0,0,4,29,0,14.50,1,0
+18888,SAMP XI,Ankit Patel,2.0,0,7,15,1,7.50,2,0
+18888,SAMP XI,Sid Zala,1.0,0,1,18,0,18.00,0,0
+18888,SAMP XI,Monil Patel,0.3,0,2,4,1,8.00,0,0
+18892,Jersey Titans,Milan Dave,3.0,0,13,6,1,2.00,0,0
+18892,Jersey Titans,Jay Patel,3.0,0,9,18,0,6.00,1,0
+18892,Jersey Titans,Mitul Patel,4.0,0,16,13,1,3.25,1,0
+18892,Jersey Titans,Pavan Patel,2.0,0,5,22,0,11.00,2,0
+18892,Jersey Titans,Jay Domadiya*,2.0,0,5,24,1,12.00,0,0
+18892,Jersey Titans,Ravin Patel,2.0,0,5,13,2,6.50,0,0
+18892,Fdu Giants,Kunal Patel,3.0,0,11,15,3,5.00,0,0
+18892,Fdu Giants,Ravish Parekh,2.0,0,7,7,1,3.50,2,0
+18892,Fdu Giants,Viral Parekh,3.1,0,12,18,2,5.68,2,0
+18892,Fdu Giants,Ankit Chopra,4.0,0,17,19,2,4.75,1,1
+18892,Fdu Giants,Sunit Shirke,2.0,0,8,7,2,3.50,3,0
+18894,Rowdy Rebels,Bhavik Surani,2.0,0,8,17,2,8.50,2,1
+18894,Rowdy Rebels,Anoop Hegde,4.0,0,11,34,2,8.50,3,0
+18894,Rowdy Rebels,Darshil Mistry,3.0,0,7,33,1,11.00,3,0
+18894,Rowdy Rebels,Zoheb Khalid*,4.0,0,10,38,2,9.50,1,0
+18894,Rowdy Rebels,Soham Kapadia,1.0,0,1,19,0,19.00,1,0
+18894,Rowdy Rebels,Kushal Kumar,2.0,0,5,24,0,12.00,0,2
+18894,Pway Lions,Nish Patel,3.0,0,12,10,5,3.33,1,0
+18894,Pway Lions,Udit Patel - Pway Lions,2.0,0,10,3,0,1.50,1,0
+18894,Pway Lions,Neel Patel*,2.0,0,7,5,0,2.50,0,0
+18894,Pway Lions,Ankush Patel,3.0,0,10,14,1,4.67,0,0
+18894,Pway Lions,Ronak Rana †,2.0,0,5,13,1,6.50,0,0
+18894,Pway Lions,Akshar Patel,1.0,0,1,14,0,14.00,1,0
+18894,Pway Lions,Dhaivat Patel,1.0,0,5,1,0,1.00,0,0
+18894,Pway Lions,Karan Amin,0.5,0,3,10,2,12.00,0,0
+18909,Hudson Hurricanes,Sravan Nekkanti,4.0,0,14,13,3,3.25,2,0
+18909,Hudson Hurricanes,Vinyas Ramachandra,3.0,0,8,41,0,13.67,1,0
+18909,Hudson Hurricanes,Pratik Mane,4.0,0,15,39,1,9.75,8,1
+18909,Hudson Hurricanes,Rishabh Madangeri,2.0,0,7,26,0,13.00,1,0
+18909,Hudson Hurricanes,Rohit Pradhan,3.0,0,9,29,1,9.67,1,1
+18909,Jetha 11,Jigar D Patel,4.0,0,18,9,3,2.25,1,0
+18909,Jetha 11,Dipal Patel,4.0,0,17,12,4,3.00,0,0
+18909,Jetha 11,Hardik Patel,1.3,0,6,5,2,3.33,2,0
+18909,Jetha 11,Gary Patel,1.0,0,4,2,1,2.00,0,0
+18917,WCC,Tushar Lenka,3.0,0,14,20,1,6.67,0,0
+18917,WCC,Faran Mir,3.0,0,9,35,2,11.67,4,1
+18917,WCC,Nahid Sarkar,4.0,0,12,20,1,5.00,0,0
+18917,WCC,Santosh Thanekar,2.0,0,3,20,0,10.00,1,0
+18917,WCC,Sarwar Ali Shah,4.0,0,14,22,2,5.50,0,0
+18917,Warriors,Abhishek Patel*,1.0,0,4,6,1,6.00,1,0
+18917,Warriors,Rumit Patel,3.0,1,15,8,1,2.67,0,0
+18917,Warriors,Prasad Fernando,3.0,0,9,27,1,9.00,3,0
+18917,Warriors,Himanshu Patel,2.0,0,7,17,2,8.50,1,0
+18917,Warriors,Kirtan Patel,4.0,1,11,27,1,6.75,2,0
+18917,Warriors,Dhaval Patel,2.0,0,7,19,0,9.50,1,1
+18917,Warriors,Dharmik Patel,1.0,0,3,5,1,5.00,1,1
+18920,Edison Rebelz,Gurmeet Singh,4.0,0,14,22,1,5.50,0,0
+18920,Edison Rebelz,Yash Solanki,4.0,0,11,25,2,6.25,2,0
+18920,Edison Rebelz,Chintan. Kamdar,3.0,0,9,19,1,6.33,0,1
+18920,Edison Rebelz,Dhaval Shah,2.0,0,2,15,1,7.50,0,0
+18920,Edison Rebelz,Soumyabrata Paul,3.0,0,6,29,1,9.67,1,0
+18920,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,17,13,4,3.25,0,0
+18920,Samudhra Gladiators,Sandeep Shetty,2.0,0,7,6,2,3.00,1,0
+18920,Samudhra Gladiators,Harshad Patil,2.0,0,4,16,1,8.00,4,1
+18920,Samudhra Gladiators,Naveen R Sripathi,4.0,0,16,14,0,3.50,1,0
+18920,Samudhra Gladiators,Ankur Chaturvedi,4.0,1,17,14,2,3.50,2,1
+18925,Nj Tigers,Naveed Azam*,4.0,0,11,22,1,5.50,2,0
+18925,Nj Tigers,Mubassir Mansuri,4.0,1,15,12,4,3.00,2,0
+18925,Nj Tigers,Faisal Mehmood,4.0,0,16,17,2,4.25,5,0
+18925,Nj Tigers,Akhlaq Zafar,1.0,0,4,12,0,12.00,0,1
+18925,Nj Tigers,Saad Talat Siddiqui,1.0,0,2,5,0,5.00,0,1
+18925,Nj Tigers,Mobeen Jarral,2.0,0,5,18,1,9.00,2,0
+18925,Sreeshti,Nimish Deshpande,2.0,0,8,6,1,3.00,2,0
+18925,Sreeshti,Mahesh Nagappa,3.0,0,10,18,1,6.00,0,0
+18925,Sreeshti,Sumesh Mathew,3.0,0,11,15,2,5.00,2,0
+18925,Sreeshti,Kamal Choudhury,4.0,0,17,8,1,2.00,1,0
+18925,Sreeshti,Harshal Gupta,2.0,0,9,3,1,1.50,0,0
+18925,Sreeshti,Yogen Phanse,1.2,0,3,10,2,7.50,2,0
+18927,Plainsboro Eagles,Narender Kumar,4.0,1,17,13,4,3.25,1,0
+18927,Plainsboro Eagles,Bhargav Reddy Napa*,4.0,0,16,18,2,4.50,3,0
+18927,Plainsboro Eagles,Sumanth Udupa,4.0,0,15,29,2,7.25,5,0
+18927,Plainsboro Eagles,Tushar Choksi,4.0,0,14,11,0,2.75,1,0
+18927,Falcons,Manikanta Arumilli,4.0,1,17,15,1,3.75,0,0
+18927,Falcons,Rajesh Rachakonda,4.0,0,17,21,2,5.25,8,1
+18927,Falcons,Ravindar Perala †,2.0,0,8,5,3,2.50,0,0
+18927,Falcons,Chenchu Suhruth,3.0,0,9,17,0,5.67,1,1
+18927,Falcons,Sunil Gudapati,1.0,0,4,10,1,10.00,0,1
+18927,Falcons,Srinath Gentyala*,1.3,0,5,4,2,2.67,0,0
+18931,Jersey Boys,Vikul Rajpara,4.0,0,12,17,1,4.25,1,0
+18931,Jersey Boys,Sushil Kumar,4.0,0,18,8,2,2.00,1,0
+18931,Jersey Boys,Vineet Luthra,4.0,0,15,19,1,4.75,0,0
+18931,Jersey Boys,Madhur Kaushik,4.0,0,15,23,0,5.75,3,0
+18931,Desi Warriors,Nauman Basit,4.0,0,16,24,2,6.00,2,0
+18931,Desi Warriors,Rakesh Kotha,2.0,0,6,10,2,5.00,0,0
+18931,Desi Warriors,Sarbjitsingh Sahota,2.0,0,6,14,1,7.00,1,0
+18931,Desi Warriors,Sai Kancharla,2.4,0,10,9,0,3.38,0,0
+18931,Desi Warriors,Varun Gurram,1.0,0,2,11,0,11.00,1,0
+18937,Youth For Sewa,Aillu N,4.0,0,15,26,2,6.50,1,0
+18937,Youth For Sewa,Venkata Voona,3.0,0,8,32,2,10.67,1,1
+18937,Youth For Sewa,Rajesh Kondru,3.0,0,1,38,0,12.67,0,0
+18937,Youth For Sewa,Balu Y,1.0,0,3,10,0,10.00,0,1
+18937,Youth For Sewa,Tauseef Ahmed,3.0,0,11,20,2,6.67,3,0
+18937,Youth For Sewa,Satish Kasireddy,2.0,0,7,17,0,8.50,2,0
+18937,Aryans,Sourabh Guha*,2.0,0,4,28,1,14.00,0,0
+18937,Aryans,Arpit Panchal,3.0,0,11,35,2,11.67,3,2
+18937,Aryans,Smith Dsouza,3.0,0,8,21,1,7.00,1,0
+18937,Aryans,Ajay Shankar,2.5,0,7,18,1,6.35,1,0
+18937,Aryans,Gajendra Kumar,3.0,0,6,40,0,13.33,2,2
+18941,Gcc,Karan Patel,4.0,0,11,36,1,9.00,0,0
+18941,Gcc,Mrugesh Patel,4.0,0,11,32,0,8.00,4,0
+18941,Gcc,Sahil Patel,4.0,0,10,29,2,7.25,0,0
+18941,Gcc,Hiren Amin,4.0,0,12,41,4,10.25,2,0
+18941,Veerans,Sundip Helchal,4.0,0,14,23,0,5.75,3,0
+18941,Veerans,Kamalraj Rajamanickam,4.0,0,11,37,3,9.25,1,0
+18941,Veerans,Naveen Elangovan*,1.0,0,1,13,0,13.00,0,0
+18941,Veerans,Uma Maheswara Rao Patibandla,1.0,0,1,23,0,23.00,1,1
+18941,Veerans,Shabbeer Syed,1.5,0,5,30,0,16.36,1,1
+18941,Veerans,Aditya Rathor,2.0,0,7,17,2,8.50,3,0
+18944,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,1,14,23,2,5.75,2,1
+18944,Parsippany Phoenix XI,Naveen Rayal,4.0,1,16,15,0,3.75,0,0
+18944,Parsippany Phoenix XI,Govind Somvanshi,4.0,0,15,21,1,5.25,0,0
+18944,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,8,42,0,10.50,1,0
+18944,Team Highlanders,Ravi Kanth,3.0,0,12,12,1,4.00,2,0
+18944,Team Highlanders,Vijay Narayanan Nadar,2.4,0,7,30,1,11.25,1,0
+18944,Team Highlanders,Raja Kuppan,4.0,0,11,25,1,6.25,5,0
+18944,Team Highlanders,Manikandan Swaminathan,4.0,0,13,29,2,7.25,3,0
+18944,Team Highlanders,Suresh Ganesan,2.0,0,7,6,2,3.00,0,0
+18946,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,11,44,2,11.00,1,1
+18946,Nj Stars CC,Zain Pervaiz,3.0,0,6,51,0,17.00,2,0
+18946,Nj Stars CC,Fahad Kabir,2.0,0,4,31,0,15.50,1,3
+18946,Nj Stars CC,Yasir Mohammad,4.0,0,11,42,1,10.50,0,0
+18946,Nj Stars CC,Sajeel Ahmed,2.0,0,5,17,1,8.50,0,0
+18946,Nj Stars CC,Muhammad Haseeb,1.0,0,3,6,1,6.00,3,0
+18946,RHG,Hiren Joshi,4.0,1,19,11,2,2.75,0,0
+18946,RHG,Baseer Ahmed Mohammed,3.0,0,12,11,1,3.67,0,0
+18946,RHG,Kevin Shah,1.0,0,5,6,1,6.00,0,0
+18946,RHG,Nuvan T,4.0,0,13,22,3,5.50,1,0
+18946,RHG,Parth Thakkar,4.0,0,18,17,2,4.25,2,2
+18955,Team Highlanders,Ravi Kanth,4.0,0,19,18,1,4.50,4,0
+18955,Team Highlanders,Annamalai Ramamoorthi,2.0,0,6,9,0,4.50,2,0
+18955,Team Highlanders,Raja Kuppan,4.0,0,13,15,3,3.75,2,0
+18955,Team Highlanders,Vijay Narayanan Nadar,4.0,0,14,17,5,4.25,1,0
+18955,Team Highlanders,Suresh Ganesan,2.0,0,5,10,0,5.00,0,0
+18955,Edison Rebelz,Sourav Mazumder,4.0,0,12,28,1,7.00,0,1
+18955,Edison Rebelz,Zubin Shah,1.0,0,1,21,0,21.00,0,0
+18955,Edison Rebelz,Gurmeet Singh,2.0,0,5,14,2,7.00,0,0
+18955,Edison Rebelz,Ritwik Roy,0.5,0,2,9,0,10.80,0,0
+18963,Aryans,Arpit Panchal,2.0,0,6,24,0,12.00,0,0
+18963,Aryans,Ajay Shankar,4.0,0,18,12,3,3.00,3,1
+18963,Aryans,Joydeep Das,4.0,1,17,16,3,4.00,2,0
+18963,Aryans,Gajendra Kumar,2.2,0,7,27,2,11.57,2,1
+18963,Aryans,Sourabh Guha*,1.0,0,3,4,1,4.00,1,0
+18963,Warriors,Abhishek Patel*,2.0,1,10,5,1,2.50,0,0
+18963,Warriors,Rumit Patel,2.0,0,8,20,0,10.00,0,0
+18963,Warriors,Prasad Fernando,1.0,0,4,7,0,7.00,0,0
+18963,Warriors,Himanshu Patel,2.0,0,4,22,0,11.00,0,0
+18963,Warriors,Kirtan Patel,1.0,0,2,9,0,9.00,0,0
+18963,Warriors,Mitul Patel,2.0,0,9,11,0,5.50,0,0
+18963,Warriors,Dharmik Patel,1.0,0,3,14,0,14.00,1,0
+18972,WCC,Tushar Lenka,2.0,0,9,5,0,2.50,1,0
+18972,WCC,Nahid Sarkar,4.0,0,14,22,1,5.50,0,0
+18972,WCC,Santosh Thanekar,1.0,0,5,4,1,4.00,0,0
+18972,WCC,Nisar Ahmad,4.0,0,19,14,2,3.50,4,0
+18972,WCC,Sarwar Ali Shah,4.0,0,19,11,3,2.75,4,0
+18972,WCC,Vishal Reddy Thanugundla,1.0,0,3,14,0,14.00,0,0
+18972,Falcons,Sairam Raavi*,3.0,0,6,29,1,9.67,2,0
+18972,Falcons,Sai Ritheesh Sudham,2.0,0,4,20,0,10.00,1,0
+18972,Falcons,Rajesh Rachakonda,1.2,0,3,16,2,12.00,2,0
+18972,Falcons,Manikanta Arumilli,1.0,0,2,9,0,9.00,1,0
+18983,Samudhra Gladiators,Vinit Bharadwaj,2.0,0,6,13,0,6.50,1,0
+18983,Samudhra Gladiators,Sandeep Shetty,2.0,0,6,13,0,6.50,2,0
+18983,Samudhra Gladiators,Harshad Patil,3.0,0,12,16,1,5.33,3,0
+18983,Samudhra Gladiators,Naveen R Sripathi,4.0,1,18,9,4,2.25,0,0
+18983,Samudhra Gladiators,Ankur Chaturvedi,4.0,1,16,14,2,3.50,3,0
+18983,Samudhra Gladiators,Sushil Golecha,1.0,0,2,10,0,10.00,0,0
+18983,Veerans,Naveen Elangovan*,2.0,0,6,19,0,9.50,1,0
+18983,Veerans,Kannan Thirumoorthy,2.0,0,3,24,0,12.00,0,0
+18983,Veerans,Sundip Helchal,1.0,0,3,12,1,12.00,1,0
+18983,Veerans,Kamalraj Rajamanickam,1.0,0,3,11,0,11.00,0,0
+18983,Veerans,Aditya Rathor,1.0,0,2,14,1,14.00,0,0
+18985,Desi Warriors,Nauman Basit,2.0,0,9,8,1,4.00,0,0
+18985,Desi Warriors,Varun Gurram,2.0,0,6,14,0,7.00,1,0
+18985,Desi Warriors,Sai Kancharla,4.0,0,14,22,2,5.50,2,1
+18985,Desi Warriors,Partha Chatterjee,4.0,0,15,22,5,5.50,3,0
+18985,Desi Warriors,Rakesh Kar,3.4,0,10,13,1,3.55,1,0
+18985,Nj Tigers,Mubassir Mansuri,2.0,0,7,17,0,8.50,1,0
+18985,Nj Tigers,Waqas Aslam,3.0,0,12,20,1,6.67,0,0
+18985,Nj Tigers,Naveed Azam*,2.0,0,7,12,1,6.00,0,0
+18985,Nj Tigers,Faisal Mehmood,1.5,0,2,17,0,9.27,1,0
+18985,Nj Tigers,Saad Talat Siddiqui,1.0,0,1,14,1,14.00,0,0
+18990,Youth For Sewa,Manikanta Raja Kottu,1.0,0,3,6,0,6.00,0,0
+18990,Youth For Sewa,Aillu N,4.0,0,13,21,1,5.25,0,0
+18990,Youth For Sewa,Shahmir Warraich,2.0,0,4,27,1,13.50,0,0
+18990,Youth For Sewa,Rohith Reddy,4.0,0,13,19,4,4.75,2,0
+18990,Youth For Sewa,Dileep Guthi*,2.0,0,4,18,0,9.00,0,0
+18990,Youth For Sewa,Rajesh Kondru,3.0,0,8,34,3,11.33,6,0
+18990,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,14,22,2,5.50,0,0
+18990,Nj Stars CC,Vijay Gore,4.0,0,15,15,2,3.75,0,0
+18990,Nj Stars CC,Zain Pervaiz,3.0,0,11,21,3,7.00,2,0
+18990,Nj Stars CC,Muhammad Haseeb,2.4,0,7,20,3,7.50,1,0
+18994,Hudson Hurricanes,Sravan Nekkanti,4.0,0,15,10,2,2.50,0,0
+18994,Hudson Hurricanes,Kamran Khan,4.0,0,13,15,1,3.75,2,1
+18994,Hudson Hurricanes,Pratik Mane,2.0,0,7,23,1,11.50,10,0
+18994,Hudson Hurricanes,Niket Dalal,3.0,0,12,19,2,6.33,7,0
+18994,Hudson Hurricanes,Ved Arya,3.0,0,9,20,1,6.67,3,0
+18994,Plainsboro Eagles,Bharath Reddy,2.0,0,6,17,0,8.50,0,1
+18994,Plainsboro Eagles,Bhargav Reddy Napa*,1.0,0,0,23,0,23.00,0,0
+18994,Plainsboro Eagles,Tushar Choksi,1.0,0,1,12,0,12.00,0,0
+18994,Plainsboro Eagles,Shiva Ungarala,1.0,0,1,8,0,8.00,0,0
+18994,Plainsboro Eagles,Rajesh Paruchuri,1.0,0,0,16,0,16.00,1,0
+18994,Plainsboro Eagles,Srinivas Reddy Ch,0.5,0,1,12,0,14.40,0,0
+18998,Jersey Boys,Vineet Luthra,4.0,1,18,14,3,3.50,0,0
+18998,Jersey Boys,Sushil Kumar,4.0,0,16,9,2,2.25,0,0
+18998,Jersey Boys,Vikul Rajpara,4.0,0,11,15,2,3.75,0,0
+18998,Jersey Boys,Fenil Shah*,4.0,0,11,19,3,4.75,0,0
+18998,Gcc,Mrugesh Patel*,2.0,0,7,12,1,6.00,0,0
+18998,Gcc,Chintan Patel,1.0,0,2,6,0,6.00,2,0
+18998,Gcc,Sahil Patel,2.0,0,5,26,0,13.00,0,0
+18998,Gcc,Karan Patel,1.4,0,5,17,1,10.20,1,0
+19001,Sreeshti,Santosh Mesta,1.0,0,2,5,0,5.00,1,0
+19001,Sreeshti,Sumesh Mathew,4.0,1,14,15,4,3.75,3,0
+19001,Sreeshti,Kamal Choudhury,4.0,0,7,31,1,7.75,1,0
+19001,Sreeshti,Shuvradeep Mukherjee,2.0,0,6,9,2,4.50,0,0
+19001,Sreeshti,Mahesh Nagappa,3.0,0,13,8,1,2.67,3,0
+19001,Sreeshti,Harshal Gupta,2.0,0,6,6,1,3.00,0,0
+19001,Jetha 11,Jigar D Patel,3.2,1,14,7,2,2.10,1,0
+19001,Jetha 11,Dipal Patel,4.0,1,19,7,4,1.75,2,0
+19001,Jetha 11,Haren Patel,3.0,0,9,19,1,6.33,1,0
+19001,Jetha 11,Gary Patel,2.0,0,9,3,3,1.50,0,0
+19002,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,16,27,0,6.75,0,0
+19002,Parsippany Phoenix XI,Naveen Rayal,4.0,0,14,39,2,9.75,0,0
+19002,Parsippany Phoenix XI,Govind Somvanshi,4.0,0,12,14,2,3.50,2,0
+19002,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,16,15,2,3.75,0,1
+19002,RHG,Dhwanil Shah,1.0,0,5,7,0,7.00,1,0
+19002,RHG,Kevin Shah*,4.0,0,14,30,0,7.50,0,1
+19002,RHG,Raj Patel,3.0,0,12,23,3,7.67,9,1
+19002,RHG,Hiren Joshi,2.0,0,4,26,0,13.00,2,0
+19002,RHG,Nuvan T,1.1,0,3,10,0,8.57,3,0
+19011,Mercer Challengers,Deepesh Naidu,4.0,0,14,20,3,5.00,0,0
+19011,Mercer Challengers,Samit Kumbhani,3.4,0,8,25,3,6.82,0,0
+19011,Mercer Challengers,Sheshank Reddy,4.0,0,12,19,2,4.75,2,0
+19011,Mercer Challengers,Sai Deepak Dogiparthi,1.0,0,2,13,0,13.00,0,0
+19011,Mercer Challengers,Ankur Parekh,3.0,0,12,6,1,2.00,0,0
+19011,Juggernaut,Jenish Patel,4.0,0,15,11,1,2.75,0,1
+19011,Juggernaut,Kartik Patel,2.0,0,3,21,0,10.50,1,1
+19011,Juggernaut,Karan P,4.0,0,12,24,0,6.00,2,0
+19011,Juggernaut,Kailash Naithani,4.0,0,15,17,2,4.25,1,0
+19011,Juggernaut,Jatan Vaidya,1.1,0,3,15,1,12.86,1,0
+19014,Nj Braves,Kunal Merchant,4.0,0,13,19,2,4.75,0,1
+19014,Nj Braves,Vipul Patel,4.0,0,10,30,1,7.50,2,1
+19014,Nj Braves,Jenish Shah,4.0,1,13,35,2,8.75,6,0
+19014,Nj Braves,Pranav Patel,4.0,0,15,14,2,3.50,4,0
+19014,Blue Aces CC,Dheeraj Dubey*,3.0,0,9,13,0,4.33,1,0
+19014,Blue Aces CC,Sandip Nandurkar,3.0,0,10,11,1,3.67,0,0
+19014,Blue Aces CC,Rajendra Prasad Challa,4.0,0,15,12,3,3.00,0,0
+19014,Blue Aces CC,Tharak Ram,4.0,0,12,17,4,4.25,1,0
+19014,Blue Aces CC,Surya Nallamilli,1.0,0,3,8,1,8.00,0,0
+19019,Gryffindors,Sunil Satghare,1.0,0,3,9,1,9.00,1,0
+19019,Gryffindors,Bikash Ghibila,3.0,0,7,19,1,6.33,1,0
+19019,Gryffindors,Kishan Patel,4.0,0,15,16,2,4.00,2,1
+19019,Gryffindors,Subodh Singh*,4.0,1,13,20,2,5.00,3,0
+19019,Gryffindors,Ankit Patel,4.0,0,13,25,1,6.25,5,1
+19019,Gujarat United XI,Parth Patel,4.0,0,19,13,2,3.25,5,0
+19019,Gujarat United XI,Daksh Patel,3.2,0,14,18,3,5.40,0,0
+19019,Gujarat United XI,Avi Shah,4.0,1,14,16,3,4.00,1,0
+19019,Gujarat United XI,Mihir Vaghasia,3.0,0,10,25,1,8.33,3,0
+19019,Gujarat United XI,Neel Patel,1.0,0,2,15,0,15.00,0,0
+19036,SAMP XI,Ankit Patel*,4.0,0,14,27,2,6.75,0,0
+19036,SAMP XI,Ziaullah Khan,4.0,1,16,21,3,5.25,3,1
+19036,SAMP XI,Tirth Patel,2.0,0,5,11,0,5.50,4,0
+19036,SAMP XI,Jaydev Zala,3.5,0,11,22,4,5.74,2,0
+19036,SAMP XI,Aziz Wali,2.0,0,6,12,1,6.00,1,0
+19036,Blasters,Jay Patel (jp),4.0,0,16,23,0,5.75,4,0
+19036,Blasters,Harsh Amin,3.0,0,14,14,0,4.67,2,0
+19036,Blasters,Ridham Shah,3.0,0,13,25,2,8.33,5,1
+19036,Blasters,Jimmy Patel*,4.0,0,17,17,4,4.25,4,0
+19036,Blasters,Haroon Ahmadi,1.0,0,4,10,2,10.00,2,0
+19036,Blasters,Gunjan Patel,0.1,0,1,0,1,0.00,0,0
+19042,Newport CC,Emmanuel Samuel Nair,4.0,0,15,18,3,4.50,2,1
+19042,Newport CC,Saikumar Katepalli,1.0,0,2,12,0,12.00,1,0
+19042,Newport CC,Narender Reddy Bojja,4.0,0,17,15,1,3.75,2,0
+19042,Newport CC,Arun Prasad G*,1.0,0,1,8,0,8.00,0,0
+19042,Newport CC,Gokul Das Maharajan,2.0,0,4,32,1,16.00,2,4
+19042,Newport CC,Vinit Shah,4.0,0,9,22,3,5.50,2,0
+19042,Piscataway Avengers,Mit Patel,4.0,1,17,9,4,2.25,2,0
+19042,Piscataway Avengers,Ujjaval Patel,2.0,0,7,6,2,3.00,1,0
+19042,Piscataway Avengers,Krunal Shah,3.0,0,8,19,0,6.33,0,0
+19042,Piscataway Avengers,Dharmesh Patel,2.4,0,9,12,3,4.50,0,0
+19044,Storm Riders,Mitul Patel,3.2,0,15,5,4,1.50,0,0
+19044,Storm Riders,Shobhit Gupta,3.0,0,12,9,2,3.00,0,0
+19044,Storm Riders,Rishabh Tewari*,3.0,0,13,17,1,5.67,1,0
+19044,Storm Riders,Satish Sarode,3.0,0,13,9,2,3.00,0,0
+19044,Storm Riders,Noor Randhawa,2.0,0,5,8,0,4.00,1,0
+19044,F5,Harihara Ganeshan,3.0,0,8,16,2,5.33,1,0
+19044,F5,Sujesh Nair,4.0,0,13,23,2,5.75,7,0
+19044,F5,⁠thulasi Thota,3.3,1,15,13,1,3.71,2,0
+19045,Jersey Titans,Mitul Patel,4.0,0,17,13,4,3.25,1,0
+19045,Jersey Titans,Pavan Patel,3.1,0,9,24,1,7.58,3,1
+19045,Jersey Titans,Jay Domadiya*,4.0,0,17,7,1,1.75,0,0
+19045,Jersey Titans,Ravin Patel,4.0,0,13,17,4,4.25,1,0
+19045,Maha CC,Rizwan Bajwa,3.0,0,12,10,2,3.33,1,0
+19045,Maha CC,Tamaas Khan,3.0,0,12,8,1,2.67,1,0
+19045,Maha CC,Dhrumil Shah,3.5,1,16,13,5,3.39,1,0
+19045,Maha CC,Danish Shaikh,3.0,0,13,12,2,4.00,2,0
+19051,Rowdy Rebels,Bhavik Surani,3.0,0,13,18,1,6.00,3,1
+19051,Rowdy Rebels,Naresh Patel,4.0,0,15,14,2,3.50,0,0
+19051,Rowdy Rebels,Shrinath Amin,2.0,0,4,33,1,16.50,0,0
+19051,Rowdy Rebels,Zoheb Khalid*,4.0,2,19,23,1,5.75,0,0
+19051,Rowdy Rebels,Darshil Mistry,2.0,0,7,9,2,4.50,3,0
+19051,Rowdy Rebels,Kushal Kumar,1.0,0,1,19,0,19.00,5,0
+19051,PUNJAB XI,Nitesh Tomer,2.0,0,10,8,0,4.00,6,0
+19051,PUNJAB XI,Lovely Singh,4.0,0,11,25,1,6.25,0,1
+19051,PUNJAB XI,Azam Mohammad,4.0,0,17,18,3,4.50,3,0
+19051,PUNJAB XI,Nasir Khan,4.0,0,15,23,3,5.75,1,0
+19051,PUNJAB XI,Sukhwinder Singh*,2.0,0,5,16,0,8.00,0,0
+19055,Plainsboro Knights,Sesha Sai Veerla,4.0,0,17,8,1,2.00,1,0
+19055,Plainsboro Knights,Raghuraman Varadharajan,1.0,0,3,5,0,5.00,2,0
+19055,Plainsboro Knights,Chinmaya Sahu,4.0,0,16,9,1,2.25,1,0
+19055,Plainsboro Knights,Lokesh Prabakaran,1.0,1,6,0,2,0.00,0,0
+19055,Plainsboro Knights,Anil Poply,3.3,0,17,6,3,1.71,2,0
+19055,Fdu Giants,Viral Parekh,4.0,0,16,14,0,3.50,0,0
+19055,Fdu Giants,Ankit Chopra,3.0,0,13,10,1,3.33,2,0
+19055,Fdu Giants,Kunal Patel,0.4,0,1,8,0,12.00,0,0
+19058,11spartans,Pratik Patel (savali),4.0,0,13,50,0,12.50,3,0
+19058,11spartans,Soham Brahmbhatt,2.0,0,9,6,2,3.00,0,0
+19058,11spartans,Krunal Patel,3.0,0,12,6,2,2.00,0,0
+19058,11spartans,Neel Patel-13,3.0,0,10,13,3,4.33,0,0
+19058,11spartans,Rajan Patel,3.0,2,16,2,3,0.67,0,0
+19058,Pway Lions,Shail Shah,4.0,2,21,9,3,2.25,6,0
+19058,Pway Lions,Nish Patel,4.0,0,19,18,2,4.50,2,0
+19058,Pway Lions,Udit Patel - Pway Lions,3.0,0,13,19,1,6.33,5,0
+19058,Pway Lions,Bhavik Patel,3.2,1,17,9,3,2.70,1,0
+19067,Maha CC,Tamaas Khan,4.0,0,14,24,0,6.00,1,3
+19067,Maha CC,Ishan Shah,2.0,0,7,14,0,7.00,1,0
+19067,Maha CC,Jay Soni,3.0,0,11,11,2,3.67,1,0
+19067,Maha CC,Rizwan Bajwa,3.0,0,10,18,2,6.00,1,0
+19067,Maha CC,Dhrumil Shah,2.0,0,7,18,1,9.00,2,0
+19067,Maha CC,Danish Shaikh*,2.0,0,8,5,2,2.50,1,0
+19067,Plainsboro Knights,Shan A S,2.0,0,4,15,0,7.50,0,0
+19067,Plainsboro Knights,Raghuraman Varadharajan,2.0,0,6,31,1,15.50,2,0
+19067,Plainsboro Knights,Chinmaya Sahu,2.0,0,8,11,0,5.50,1,0
+19067,Plainsboro Knights,Anil Poply,1.0,0,0,18,0,18.00,1,0
+19067,Plainsboro Knights,Lokesh Prabakaran,1.5,0,7,16,2,8.73,4,0
+19069,Piscataway Avengers,Mit Patel,4.0,0,17,10,2,2.50,0,0
+19069,Piscataway Avengers,Dharmesh Patel,4.0,1,15,12,1,3.00,1,0
+19069,Piscataway Avengers,Krunal Shah,3.0,0,11,9,1,3.00,0,0
+19069,Piscataway Avengers,Ujjaval Patel,4.0,0,14,34,1,8.50,3,0
+19069,Piscataway Avengers,Krunal Patel* †,1.0,0,3,3,1,3.00,0,0
+19069,Gujarat United XI,Daksh Patel,1.0,0,3,15,0,15.00,0,2
+19069,Gujarat United XI,Avi Shah,4.0,0,11,24,3,6.00,1,0
+19069,Gujarat United XI,Raj Patel,2.0,0,3,12,0,6.00,0,0
+19069,Gujarat United XI,Krunal Patel,1.4,0,3,14,0,8.40,2,0
+19069,Gujarat United XI,Neel Patel,1.0,0,2,7,1,7.00,0,0
+19071,Newport CC,Mahendran Prakasam,1.0,0,2,4,0,4.00,0,0
+19071,Newport CC,Arun Prasad G*,1.0,0,1,8,0,8.00,0,0
+19071,Newport CC,Gokul Das Maharajan,4.0,0,10,22,0,5.50,0,0
+19071,Newport CC,Emmanuel Samuel Nair,4.0,0,11,31,1,7.75,0,0
+19071,Newport CC,Narender Reddy Bojja,3.0,0,12,17,1,5.67,1,0
+19071,Newport CC,Vinit Shah,3.0,0,10,26,2,8.67,2,0
+19071,F5,Subramaniam Sampath,4.0,0,11,36,1,9.00,1,0
+19071,F5,⁠thulasi Thota,4.0,0,15,19,2,4.75,1,0
+19071,F5,Sujesh Nair,4.0,0,15,23,1,5.75,3,0
+19071,F5,Vimalendu Kumar,4.0,0,16,24,4,6.00,3,0
+19072,Blasters,Gurudutt Patel*,4.0,0,11,25,0,6.25,0,1
+19072,Blasters,Gunjan Patel,2.0,0,5,24,0,12.00,0,1
+19072,Blasters,Khiamuddin Mohammad,3.0,0,8,20,1,6.67,1,0
+19072,Blasters,Jay Patel (jp),4.0,0,11,31,1,7.75,3,0
+19072,Blasters,Manthan Patel,3.0,0,7,31,1,10.33,2,0
+19072,Rowdy Rebels,Bhavik Surani,4.0,0,12,15,1,3.75,0,0
+19072,Rowdy Rebels,Anoop Hegde,3.0,0,9,22,1,7.33,0,1
+19072,Rowdy Rebels,Soham Kapadia,2.0,0,5,31,1,15.50,5,0
+19072,Rowdy Rebels,Zoheb Khalid*,3.4,0,11,22,5,6.00,3,0
+19072,Rowdy Rebels,Darshil Mistry,1.0,0,3,11,1,11.00,2,0
+19090,Juggernaut,Kailash Naithani,4.0,0,13,25,0,6.25,1,0
+19090,Juggernaut,Jenish Patel,4.0,0,17,17,3,4.25,2,0
+19090,Juggernaut,Kartik Patel,3.0,0,8,39,2,13.00,4,0
+19090,Juggernaut,Hemant Patel*,4.0,0,15,24,3,6.00,5,0
+19090,Juggernaut,Karan P,1.0,0,5,1,2,1.00,0,0
+19090,Storm Riders,Shobhit Gupta,3.1,0,8,31,0,9.79,2,0
+19090,Storm Riders,Mitul Patel,3.0,0,12,11,1,3.67,0,0
+19090,Storm Riders,Rishabh Tewari,4.0,0,14,31,2,7.75,2,0
+19090,Storm Riders,Noor Randhawa,4.0,0,10,34,2,8.50,2,0
+19091,Mercer Challengers,Deepesh Naidu,3.0,0,13,8,2,2.67,0,0
+19091,Mercer Challengers,Saqi Syed,4.0,0,17,17,3,4.25,1,0
+19091,Mercer Challengers,Samit Kumbhani,4.0,0,15,14,1,3.50,0,0
+19091,Mercer Challengers,Sheshank Reddy,3.0,0,8,21,0,7.00,5,0
+19091,Mercer Challengers,Vishal Srivastava,2.0,0,4,15,2,7.50,1,0
+19091,Fdu Giants,Nishant Sharma,1.2,0,1,26,0,19.50,0,0
+19091,Fdu Giants,Ravish Parekh,4.0,0,15,20,2,5.00,1,0
+19091,Fdu Giants,Ankit Chopra,4.0,1,19,13,1,3.25,1,0
+19091,Fdu Giants,Kunal Patel,3.0,0,12,17,4,5.67,1,0
+19095,Blue Aces CC,Dheeraj Dubey*,3.0,0,8,33,0,11.00,0,0
+19095,Blue Aces CC,Tharak Ram,3.0,0,13,21,1,7.00,2,0
+19095,Blue Aces CC,Ravish Sikha,4.0,0,15,16,3,4.00,5,0
+19095,Blue Aces CC,Surya Nallamilli,1.0,0,2,14,0,14.00,0,1
+19095,Blue Aces CC,Amol Rukmangad,3.0,0,9,14,4,4.67,0,0
+19095,Blue Aces CC,Prabhakar Vudumula,2.0,0,6,10,1,5.00,1,0
+19095,Jersey Titans,Mitul Patel,3.0,0,10,34,1,11.33,4,0
+19095,Jersey Titans,Krunal Patel,1.0,0,1,24,0,24.00,1,0
+19095,Jersey Titans,Keyur Choksi,4.0,0,14,26,2,6.50,0,2
+19095,Jersey Titans,Jay Domadiya*,4.0,1,16,18,5,4.50,0,0
+19095,Jersey Titans,Ravin Patel,0.5,0,3,10,0,12.00,0,1
+19098,SAMP XI,Divyesh Morkar,2.0,0,4,11,0,5.50,0,0
+19098,SAMP XI,Ankit Patel*,4.0,1,18,10,5,2.50,1,0
+19098,SAMP XI,Bhaumik Patel,4.0,0,15,15,1,3.75,1,0
+19098,SAMP XI,Smit Patel,3.0,0,13,18,1,6.00,5,2
+19098,SAMP XI,Monil Patel,3.0,0,13,12,2,4.00,2,0
+19098,Nj Braves,Swar Shah,4.0,0,13,12,2,3.00,0,0
+19098,Nj Braves,Divyesh Dobaria*,1.0,0,2,7,0,7.00,2,0
+19098,Nj Braves,Vinoth Suseendran †,2.0,0,8,10,4,5.00,1,0
+19098,Nj Braves,Vipul Patel,4.0,0,19,8,2,2.00,3,0
+19098,Nj Braves,Pranav Patel,2.3,0,8,24,2,9.60,1,0
+19100,PUNJAB XI,Nitesh Tomer,4.0,0,14,24,2,6.00,4,0
+19100,PUNJAB XI,Lovely Singh,3.0,0,8,16,0,5.33,2,0
+19100,PUNJAB XI,Jasmeet Singh,4.0,0,9,29,1,7.25,1,0
+19100,PUNJAB XI,Nasir Khan,4.0,0,16,14,4,3.50,2,0
+19100,PUNJAB XI,Azam Mohammad,1.0,0,4,9,0,9.00,1,0
+19100,11spartans,Krunal Patel,2.0,0,6,13,0,6.50,0,0
+19100,11spartans,Neel Patel-13,2.0,0,4,16,0,8.00,0,0
+19100,11spartans,Pratik Patel (savali),2.0,0,10,15,2,7.50,2,1
+19100,11spartans,Rajan Patel,3.0,0,5,32,1,10.67,0,0
+19100,11spartans,Ravi Rathod,1.0,0,2,17,0,17.00,0,0
+19110,Gryffindors,Subodh Singh*,4.0,0,14,33,3,8.25,1,0
+19110,Gryffindors,Vinayak B,4.0,0,11,51,3,12.75,1,0
+19110,Gryffindors,Manoj Menon,2.0,0,5,20,1,10.00,0,0
+19110,Gryffindors,Sandeep Reddy Chidipudi,1.0,0,1,10,0,10.00,0,0
+19110,Gryffindors,Abakas Sahoo,2.0,0,4,35,0,17.50,1,0
+19110,Gryffindors,Harish Bangera,2.0,0,2,29,0,14.50,0,0
+19110,Gryffindors,Sanket Kulkarni †,1.0,0,3,13,2,13.00,0,1
+19110,Pway Lions,Kush Choksi,4.0,0,12,33,1,8.25,2,1
+19110,Pway Lions,Nish Patel,4.0,0,15,12,2,3.00,0,0
+19110,Pway Lions,Ankush Patel,2.0,0,3,28,1,14.00,0,0
+19110,Pway Lions,Dhaivat Patel,3.0,1,16,9,1,3.00,1,1
+19110,Pway Lions,Ronak Rana †,2.0,0,7,16,3,8.00,1,1
+19110,Pway Lions,Akshar Patel,1.0,0,2,12,1,12.00,0,0
+19123,Edison Rebelz,Gurmeet Singh,4.0,0,13,26,4,6.50,0,0
+19123,Edison Rebelz,Yash Solanki,1.0,0,3,15,0,15.00,1,0
+19123,Edison Rebelz,Sourav Mazumder,4.0,0,15,19,2,4.75,0,0
+19123,Edison Rebelz,Zubin Shah,4.0,0,13,30,2,7.50,0,0
+19123,Edison Rebelz,Soumyabrata Paul,2.2,0,5,21,2,9.00,0,0
+19123,RHG,Baseer Ahmed Mohammed,2.0,0,7,8,0,4.00,0,0
+19123,RHG,Kevin Shah*,4.0,0,12,13,2,3.25,0,0
+19123,RHG,Hiren Joshi,2.0,0,6,13,2,6.50,0,0
+19123,RHG,Upjeet Singh,4.0,0,13,22,2,5.50,0,1
+19123,RHG,Nuvan T,3.0,0,13,5,2,1.67,0,0
+19123,RHG,Harsh Viradiya,0.5,0,3,2,2,2.40,0,0
+19133,Nj Tigers,Naveed Azam*,3.0,0,9,26,0,8.67,3,0
+19133,Nj Tigers,Noman Ali,1.0,0,3,8,0,8.00,0,0
+19133,Nj Tigers,Faisal Mehmood,4.0,0,10,41,1,10.25,3,0
+19133,Nj Tigers,Saad Talat Siddiqui,3.0,0,10,29,1,9.67,0,1
+19133,Nj Tigers,Saad Naeem,1.0,0,4,6,1,6.00,1,0
+19133,Nj Tigers,Haider Naveed Akram,4.0,0,12,30,3,7.50,1,0
+19133,Gcc,Romil Patel (gcc),4.0,0,12,24,1,6.00,0,0
+19133,Gcc,Sahil Patel,4.0,1,18,23,1,5.75,4,0
+19133,Gcc,Parin Patel (gcc),4.0,0,7,36,2,9.00,2,1
+19133,Gcc,Mrugesh Patel,4.0,0,11,28,2,7.00,5,0
+19141,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,11,23,2,5.75,0,0
+19141,Parsippany Phoenix XI,Govind Somvanshi,4.0,0,11,40,1,10.00,0,1
+19141,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,11,29,2,7.25,0,0
+19141,Parsippany Phoenix XI,Naveen Rayal,4.0,0,12,21,2,5.25,1,0
+19141,Youth For Sewa,Aillu N,4.0,0,14,16,3,4.00,1,0
+19141,Youth For Sewa,Ram Jammula,4.0,0,16,14,2,3.50,1,1
+19141,Youth For Sewa,Balu Y,2.0,0,6,16,1,8.00,0,0
+19141,Youth For Sewa,Nazareth John,4.0,0,12,26,2,6.50,8,1
+19141,Youth For Sewa,Tauseef Ahmed,2.0,0,6,14,0,7.00,0,0
+19144,WCC,Tushar Lenka*,2.0,0,6,13,0,6.50,0,0
+19144,WCC,Nisar Ahmad,4.0,1,15,15,2,3.75,1,0
+19144,WCC,Nahid Sarkar,1.0,0,2,7,0,7.00,0,0
+19144,WCC,Santosh Thanekar,2.0,0,6,8,1,4.00,2,0
+19144,WCC,Faran Mir,3.0,0,8,15,1,5.00,0,0
+19144,WCC,Sarwar Ali Shah,1.0,0,2,4,1,4.00,0,0
+19144,WCC,Harikishore Malireddy,2.5,0,11,6,3,2.12,0,0
+19144,Hudson Hurricanes,Sravan Nekkanti,3.3,0,14,16,3,4.57,2,0
+19144,Hudson Hurricanes,Vinyas Ramachandra,2.0,0,5,16,1,8.00,0,0
+19144,Hudson Hurricanes,Kamran Khan,2.0,0,2,22,0,11.00,1,0
+19144,Hudson Hurricanes,Pratik Mane,1.0,0,4,10,0,10.00,3,0
+19144,Hudson Hurricanes,Rohit Pradhan,1.0,0,0,11,0,11.00,1,0
+19145,Sreeshti,Yogen Phanse,2.0,0,5,13,1,6.50,1,0
+19145,Sreeshti,Nimish Deshpande,2.0,0,3,16,0,8.00,1,0
+19145,Sreeshti,Shuvradeep Mukherjee,1.0,0,1,16,0,16.00,1,0
+19145,Sreeshti,Sumesh Mathew,3.0,0,7,17,1,5.67,0,1
+19145,Sreeshti,Monang Shah,4.0,0,13,31,3,7.75,0,0
+19145,Sreeshti,Mahesh Nagappa,2.0,0,4,28,1,14.00,1,0
+19145,Sreeshti,Harshal Gupta,2.0,0,4,19,0,9.50,0,0
+19145,Plainsboro Eagles,Chandra Koganti,4.0,0,11,33,2,8.25,1,0
+19145,Plainsboro Eagles,Rajesh Paruchuri,3.4,0,14,16,4,4.36,1,0
+19145,Plainsboro Eagles,Bharath Reddy,4.0,0,12,39,1,9.75,3,0
+19145,Plainsboro Eagles,Narender Kumar,3.0,0,8,21,2,7.00,1,0
+19147,Desi Warriors,Nauman Basit,4.0,0,14,34,2,8.50,3,1
+19147,Desi Warriors,Rakesh Kotha,2.0,0,5,25,0,12.50,0,1
+19147,Desi Warriors,Harinadha Reddy,4.0,0,9,31,1,7.75,3,0
+19147,Desi Warriors,Sarbjitsingh Sahota,3.0,0,11,33,1,11.00,0,0
+19147,Desi Warriors,Rakesh Kar,3.0,0,11,18,1,6.00,0,0
+19147,Jetha 11,Jigar D Patel,2.0,0,10,7,1,3.50,0,0
+19147,Jetha 11,Prit Patel,3.0,1,14,11,3,3.67,4,0
+19147,Jetha 11,Dipal Patel*,4.0,0,15,14,3,3.50,1,1
+19147,Jetha 11,Naran Prajapati,2.0,0,5,24,1,12.00,0,0
+19147,Jetha 11,Gary Patel,2.3,0,10,8,2,3.20,3,0
+19152,Jersey Boys,Vineet Luthra,4.0,0,17,16,3,4.00,1,0
+19152,Jersey Boys,Vikul Rajpara,4.0,0,9,36,2,9.00,1,0
+19152,Jersey Boys,Sushil Kumar,4.0,0,17,12,1,3.00,0,0
+19152,Jersey Boys,Madhur Kaushik,4.0,0,16,10,1,2.50,0,1
+19152,Samudhra Gladiators,Sandeep Shetty,1.0,0,4,2,0,2.00,0,0
+19152,Samudhra Gladiators,Suraj Pai Madhukar,1.0,0,3,11,1,11.00,1,0
+19152,Samudhra Gladiators,Naveen R Sripathi,4.0,0,6,46,1,11.50,3,0
+19152,Samudhra Gladiators,Ankur Chaturvedi,3.1,0,12,18,0,5.68,1,0
+19154,Veerans,Aditya Rathor,4.0,0,13,36,1,9.00,1,1
+19154,Veerans,Shabbeer Syed,4.0,0,13,35,2,8.75,2,0
+19154,Veerans,Kamalraj Rajamanickam,4.0,0,11,26,0,6.50,1,0
+19154,Veerans,Sundip Helchal*,4.0,1,15,24,2,6.00,4,0
+19154,Team Highlanders,Ravi Kanth,3.0,0,7,29,0,9.67,0,0
+19154,Team Highlanders,Raja Kuppan,1.0,0,1,26,0,26.00,1,0
+19154,Team Highlanders,Manikandan Swaminathan,2.4,0,7,31,0,11.62,1,0
+19154,Team Highlanders,Vijay Narayanan Nadar,1.0,0,1,14,0,14.00,1,0
+19154,Team Highlanders,Syed Abhinash,3.0,0,10,16,2,5.33,1,0
+19154,Team Highlanders,Suresh Ganesan,1.0,0,5,6,0,6.00,0,0
+19155,Aryans,Sourabh Guha*,4.0,0,17,12,3,3.00,0,0
+19155,Aryans,Arpit Panchal,4.0,0,18,14,0,3.50,2,0
+19155,Aryans,Smith Dsouza,4.0,0,16,29,2,7.25,2,0
+19155,Aryans,Ajay Shankar,2.0,0,5,19,1,9.50,0,1
+19155,Aryans,Joydeep Das,2.0,0,8,14,0,7.00,2,0
+19155,Falcons,Sairam Raavi*,4.0,0,14,14,3,3.50,0,0
+19155,Falcons,Sai Ritheesh Sudham,4.0,0,18,10,2,2.50,1,0
+19155,Falcons,Manikanta Arumilli,3.0,0,7,24,0,8.00,0,0
+19155,Falcons,Sunil Gudapati,2.0,0,6,17,1,8.50,0,0
+19155,Falcons,Srinath Gentyala,2.0,0,8,11,3,5.50,1,0
+19159,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,15,12,2,3.00,2,0
+19159,Nj Stars CC,Zain Pervaiz,3.0,0,11,25,3,8.33,1,0
+19159,Nj Stars CC,Yasir Mohammad,4.0,0,13,26,0,6.50,2,0
+19159,Nj Stars CC,Muhammad Haseeb,3.0,0,10,10,2,3.33,1,0
+19159,Nj Stars CC,Fahad Kabir,2.0,0,6,15,0,7.50,0,0
+19159,Warriors,Prasad Fernando,3.0,0,13,21,0,7.00,0,0
+19159,Warriors,Mitul Patel,2.0,0,9,19,2,9.50,6,1
+19159,Warriors,Himanshu Patel,3.0,0,11,17,2,5.67,0,2
+19159,Warriors,Rumit Patel,3.0,0,9,29,0,9.67,0,0
+19159,Warriors,Rakesh Patel,2.1,0,8,11,0,5.08,1,0
+19186,Edison Rebelz,Ritwik Roy,2.0,0,4,9,1,4.50,0,0
+19186,Edison Rebelz,Chintan. Kamdar,2.0,0,6,22,2,11.00,5,1
+19186,Edison Rebelz,Gurmeet Singh,4.0,0,8,41,1,10.25,2,0
+19186,Edison Rebelz,Soumyabrata Paul,4.0,1,15,28,2,7.00,2,0
+19186,Edison Rebelz,Yash Solanki,4.0,0,12,16,0,4.00,0,0
+19186,Youth For Sewa,Manikanta Raja Kottu,3.0,0,8,13,1,4.33,0,0
+19186,Youth For Sewa,Eswar Vennapusa,2.0,0,3,14,0,7.00,3,1
+19186,Youth For Sewa,Balu Y,1.5,0,6,12,3,6.55,0,0
+19186,Youth For Sewa,Ram V*,4.0,0,13,28,3,7.00,1,0
+19186,Youth For Sewa,Nazareth John,1.0,0,3,14,1,14.00,0,0
+19186,Youth For Sewa,Tauseef Ahmed,4.0,0,16,24,2,6.00,2,0
+19188,WCC,Tushar Lenka,2.0,0,3,15,0,7.50,1,0
+19188,WCC,Santosh Thanekar,1.0,0,2,9,0,9.00,0,0
+19188,WCC,Nisar Ahmad,4.0,2,18,13,2,3.25,1,0
+19188,WCC,Nahid Sarkar,3.0,0,9,29,1,9.67,2,1
+19188,WCC,Harikishore Malireddy,4.0,1,19,9,3,2.25,1,0
+19188,WCC,Sivaram Chowdary,1.0,0,4,14,0,14.00,2,0
+19188,WCC,Sarwar Ali Shah,1.0,0,3,8,1,8.00,0,0
+19188,Sreeshti,Mahesh Nagappa,2.0,0,7,6,1,3.00,0,0
+19188,Sreeshti,Sumesh Mathew,3.1,0,9,28,2,8.84,3,0
+19188,Sreeshti,Sanjay Dak,1.0,0,4,7,0,7.00,0,0
+19188,Sreeshti,Monang Shah,2.0,0,8,16,1,8.00,3,0
+19188,Sreeshti,Kamal Choudhury,4.0,0,13,19,1,4.75,1,0
+19188,Sreeshti,Harshal Gupta,1.0,0,1,23,0,23.00,0,0
+19194,Falcons,Sairam Raavi*,4.0,0,8,39,0,9.75,2,0
+19194,Falcons,Sai Ritheesh Sudham,4.0,0,10,35,2,8.75,2,0
+19194,Falcons,Rohan Reddy Ravula,4.0,0,17,17,3,4.25,0,0
+19194,Falcons,Manikanta Arumilli,3.0,0,8,37,0,12.33,3,0
+19194,Falcons,Srinath Gentyala,1.0,0,2,9,0,9.00,0,0
+19194,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,16,18,2,4.50,0,2
+19194,Nj Stars CC,Fahad Kabir,3.0,0,8,26,2,8.67,2,0
+19194,Nj Stars CC,Zain Pervaiz,4.0,0,12,25,1,6.25,1,1
+19194,Nj Stars CC,Vijay Gore,1.0,0,2,22,0,22.00,2,0
+19194,Nj Stars CC,Muhammad Haseeb,4.0,0,14,17,2,4.25,2,0
+19198,Plainsboro Eagles,Chandra Koganti,4.0,0,10,31,0,7.75,0,0
+19198,Plainsboro Eagles,Rajesh Paruchuri,4.0,0,9,52,2,13.00,3,0
+19198,Plainsboro Eagles,Narender Kumar,3.0,0,6,34,0,11.33,0,0
+19198,Plainsboro Eagles,Bharath Reddy,4.0,0,8,50,0,12.50,1,0
+19198,Plainsboro Eagles,Shiva Ungarala,1.0,0,2,16,0,16.00,0,1
+19198,Desi Warriors,Varun Gurram,1.0,0,2,13,0,13.00,1,0
+19198,Desi Warriors,Rakesh Kotha,1.3,0,2,22,1,14.67,0,1
+19198,Desi Warriors,Harshil Patel,3.0,0,7,32,3,10.67,4,0
+19198,Desi Warriors,Rigved Nagarkar,4.0,0,13,18,2,4.50,2,0
+19198,Desi Warriors,Sai Kancharla,4.0,0,11,35,3,8.75,6,1
+19198,Desi Warriors,Madhav Reddy,1.0,0,1,8,0,8.00,0,0
+19200,Veerans,Naveen Elangovan*,3.0,0,8,32,1,10.67,2,0
+19200,Veerans,Kamalraj Rajamanickam,4.0,0,14,38,1,9.50,0,0
+19200,Veerans,Sundip Helchal,4.0,0,13,30,2,7.50,3,0
+19200,Veerans,Shabbeer Syed,2.0,0,3,13,0,6.50,0,0
+19200,Veerans,Aditya Rathor,3.0,0,11,16,4,5.33,2,0
+19200,RHG,Kevin Shah,4.0,1,17,7,2,1.75,0,0
+19200,RHG,Raj Patel,4.0,1,20,21,2,5.25,7,0
+19200,RHG,Hiren Joshi,2.0,0,8,5,1,2.50,1,0
+19200,RHG,Nuvan T,4.0,0,17,12,4,3.00,2,0
+19204,Hudson Hurricanes,Sravan Nekkanti,4.0,0,19,16,2,4.00,1,0
+19204,Hudson Hurricanes,Vinyas Ramachandra,4.0,0,13,33,3,8.25,3,0
+19204,Hudson Hurricanes,Niket Dalal,3.0,0,7,22,0,7.33,5,0
+19204,Hudson Hurricanes,Ved Arya,2.0,0,4,14,1,7.00,0,0
+19204,Hudson Hurricanes,Shubham Pawar,1.0,0,2,17,0,17.00,1,1
+19204,Hudson Hurricanes,Aniket Dalal*,2.0,0,6,13,2,6.50,2,0
+19204,Aryans,Smith Dsouza,4.0,0,14,30,1,7.50,4,0
+19204,Aryans,Arpit Panchal,3.0,0,10,21,2,7.00,2,0
+19204,Aryans,Ajay Shankar,4.0,0,20,9,3,2.25,4,0
+19204,Aryans,Gajendra Kumar,3.5,0,14,18,3,4.70,1,0
+19205,Nj Tigers,Waqas Choudhary,4.0,0,18,18,3,4.50,2,0
+19205,Nj Tigers,Noman Ali,1.0,0,2,13,0,13.00,1,1
+19205,Nj Tigers,Naveed Azam,3.0,0,12,27,3,9.00,2,0
+19205,Nj Tigers,Tahir Mehmood,3.0,0,10,16,1,5.33,0,0
+19205,Nj Tigers,Faisal Mehmood*,4.0,0,13,32,1,8.00,2,0
+19205,Nj Tigers,Saad Talat Siddiqui,1.0,0,3,9,1,9.00,0,0
+19205,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,18,14,5,3.50,8,0
+19205,Samudhra Gladiators,Sandeep Shetty,2.0,0,8,15,1,7.50,0,0
+19205,Samudhra Gladiators,Naveen R Sripathi,3.0,0,12,8,3,2.67,1,0
+19205,Samudhra Gladiators,Ankur Chaturvedi,2.0,0,7,6,0,3.00,1,0
+19207,Parsippany Phoenix XI,Jeyaram Ramadoss,1.0,0,4,7,0,7.00,0,0
+19207,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,1,19,18,4,4.50,3,0
+19207,Parsippany Phoenix XI,Naveen Rayal,4.0,0,17,15,1,3.75,3,0
+19207,Parsippany Phoenix XI,Govind Somvanshi,3.5,0,10,17,3,4.43,1,0
+19207,Parsippany Phoenix XI,Avinash Jonnalagadda,1.0,0,3,6,0,6.00,0,0
+19207,Parsippany Phoenix XI,Brahma M,1.0,0,3,9,2,9.00,1,0
+19207,Warriors,Abhishek Patel*,4.0,1,17,12,2,3.00,0,0
+19207,Warriors,Rumit Patel,4.0,0,18,11,3,2.75,2,0
+19207,Warriors,Jeet Patel,1.0,0,3,8,0,8.00,0,0
+19207,Warriors,Rakesh Patel,3.0,1,13,6,2,2.00,1,0
+19207,Warriors,Prasad Fernando,2.2,0,10,7,1,3.00,1,2
+19213,Gcc,Mrugesh Patel,4.0,0,17,17,1,4.25,5,0
+19213,Gcc,Romil Patel (gcc),4.0,0,11,37,2,9.25,0,0
+19213,Gcc,Sahil Patel,3.0,0,6,33,2,11.00,1,0
+19213,Gcc,Het Vaidya (gcc),3.0,0,10,27,1,9.00,4,0
+19213,Gcc,Hardik(gcc) Rana,2.0,0,7,21,0,10.50,1,0
+19213,Jetha 11,Dipal Patel,4.0,0,16,16,3,4.00,3,0
+19213,Jetha 11,Haren Patel,4.0,0,11,32,0,8.00,1,0
+19213,Jetha 11,Naran Prajapati,4.0,0,13,21,1,5.25,3,0
+19213,Jetha 11,Nirav Patel*,1.0,0,2,10,1,10.00,0,0
+19213,Jetha 11,Kishan Patel,3.0,0,9,29,3,9.67,0,1
+19216,Jersey Boys,Vikul Rajpara,1.0,0,4,9,0,9.00,0,1
+19216,Jersey Boys,Sushil Kumar,4.0,0,19,13,4,3.25,2,0
+19216,Jersey Boys,Fenil Shah*,3.0,0,6,26,0,8.67,2,0
+19216,Jersey Boys,Vineet Luthra,4.0,0,13,17,1,4.25,0,0
+19216,Jersey Boys,Madhur Kaushik,4.0,0,17,21,2,5.25,1,0
+19216,Team Highlanders,Ravi Kanth,3.0,0,11,26,1,8.67,3,0
+19216,Team Highlanders,Annamalai Ramamoorthi,1.0,0,4,7,0,7.00,0,0
+19216,Team Highlanders,Raja Kuppan,2.0,0,6,19,2,9.50,2,0
+19216,Team Highlanders,Syed Abhinash,1.0,0,1,22,1,22.00,3,0
+19216,Team Highlanders,Suresh Ganesan,1.0,0,3,4,0,4.00,0,0
+19216,Team Highlanders,Vijay Narayanan Nadar,0.5,0,2,12,0,14.40,0,0
+19231,Jersey Titans,Mitul Patel,2.0,0,9,6,2,3.00,0,0
+19231,Jersey Titans,Jay Domadiya*,4.0,0,12,14,2,3.50,0,0
+19231,Jersey Titans,Ravin Patel,3.5,0,11,15,2,3.91,0,0
+19231,Jersey Titans,Jay Patel,3.0,0,12,16,1,5.33,2,0
+19231,Jersey Titans,Milan Dave,2.0,0,8,14,2,7.00,5,0
+19231,SAMP XI,Ankit Patel*,3.0,0,12,20,2,6.67,4,0
+19231,SAMP XI,Bhaumik Patel,4.0,0,17,18,1,4.50,2,0
+19231,SAMP XI,Parag Patel,3.0,0,12,19,2,6.33,1,0
+19231,SAMP XI,Monil Patel,0.4,0,2,10,0,15.00,0,0
+19240,Rowdy Rebels,Bhavik Surani,4.0,1,20,4,1,1.00,0,0
+19240,Rowdy Rebels,Anoop Hegde,4.0,0,14,30,3,7.50,9,0
+19240,Rowdy Rebels,Naresh Patel,4.0,0,14,19,1,4.75,2,0
+19240,Rowdy Rebels,Zoheb Khalid*,2.0,0,3,22,0,11.00,0,0
+19240,Rowdy Rebels,Darshil Mistry,2.0,0,4,24,0,12.00,2,0
+19240,Nj Braves,Swar Shah,4.0,0,11,30,1,7.50,1,0
+19240,Nj Braves,Tejas Patel,2.0,0,8,17,0,8.50,1,1
+19240,Nj Braves,Vipul Patel,4.0,0,14,17,1,4.25,1,0
+19240,Nj Braves,Jenish Shah,4.0,0,11,20,2,5.00,0,0
+19240,Nj Braves,Vinoth Suseendran †,2.0,0,8,10,1,5.00,1,0
+19249,Maha CC,Sudhanshoo Vashisht,3.0,0,10,19,1,6.33,2,0
+19249,Maha CC,Siddharth Verma,2.0,0,7,15,0,7.50,2,0
+19249,Maha CC,Ishan Shah,4.0,0,15,17,1,4.25,2,0
+19249,Maha CC,Tamaas Khan,2.0,0,7,10,2,5.00,0,0
+19249,Maha CC,Danish Shaikh,3.0,0,10,26,1,8.67,2,0
+19249,Maha CC,Dhrumil Shah,2.0,0,6,24,2,12.00,2,0
+19249,Mercer Challengers,Ankur Parekh,2.0,0,5,21,1,10.50,3,0
+19249,Mercer Challengers,Saqi Syed,2.0,0,6,20,0,10.00,1,0
+19249,Mercer Challengers,Vishal Srivastava,4.0,0,14,16,1,4.00,0,0
+19249,Mercer Challengers,Sheshank Reddy,2.0,0,5,22,1,11.00,0,0
+19249,Mercer Challengers,Deepesh Naidu,3.4,1,12,25,4,6.82,0,0
+19249,Mercer Challengers,Sai Deepak Dogiparthi,1.0,0,3,8,0,8.00,0,0
+19251,Blasters,Anish Patel,2.0,0,7,10,1,5.00,0,0
+19251,Blasters,Harsh Amin,2.0,0,7,22,0,11.00,1,0
+19251,Blasters,Harsh Bhavsar,4.0,0,12,24,2,6.00,2,0
+19251,Blasters,Khiamuddin Mohammad,2.0,0,5,17,0,8.50,1,1
+19251,Blasters,Haroon Ahmadi,2.0,0,7,13,2,6.50,3,0
+19251,Blasters,Dinesh Kumavat,4.0,0,10,41,1,10.25,4,0
+19251,11spartans,Neel Patel-13,2.0,0,5,17,0,8.50,0,0
+19251,11spartans,Soham Brahmbhatt,4.0,0,9,34,3,8.50,3,0
+19251,11spartans,Rajan Patel,2.0,0,4,33,1,16.50,0,0
+19251,11spartans,Jay Trivedi,2.3,0,6,32,2,12.80,0,0
+19251,11spartans,Jay Patel,3.0,1,13,16,3,5.33,2,0
+19254,Juggernaut,Kailash Naithani,3.0,0,6,49,1,16.33,2,1
+19254,Juggernaut,Hemant Patel*,4.0,0,12,24,3,6.00,1,0
+19254,Juggernaut,Jenish Patel,4.0,0,15,23,5,5.75,0,0
+19254,Juggernaut,Kartik Patel,3.0,0,10,23,1,7.67,2,0
+19254,Juggernaut,Karan P,2.0,0,5,17,0,8.50,1,0
+19254,Newport CC,Emmanuel Samuel Nair,4.0,0,16,14,2,3.50,1,1
+19254,Newport CC,Farukh Manzoor,3.0,1,11,13,2,4.33,1,0
+19254,Newport CC,Narender Reddy Bojja,3.1,0,9,27,3,8.53,2,0
+19254,Newport CC,Gokul Das Maharajan,4.0,0,13,23,3,5.75,2,0
+19256,Blue Aces CC,Dheeraj Dubey*,3.0,0,7,17,1,5.67,1,0
+19256,Blue Aces CC,Sandip Nandurkar,3.0,0,9,20,1,6.67,1,0
+19256,Blue Aces CC,Rajendra Prasad Challa,3.0,0,11,24,2,8.00,3,0
+19256,Blue Aces CC,Tharak Ram,3.0,1,15,4,2,1.33,0,0
+19256,Blue Aces CC,Ravish Sikha,2.0,0,8,7,1,3.50,3,0
+19256,Blue Aces CC,Prabhakar Vudumula,2.0,0,8,11,1,5.50,2,0
+19256,Plainsboro Knights,Gowtham Akula,3.0,0,10,21,1,7.00,2,0
+19256,Plainsboro Knights,Shan A S,3.0,0,11,8,2,2.67,1,0
+19256,Plainsboro Knights,Lokesh Prabakaran,2.0,0,4,16,0,8.00,1,0
+19256,Plainsboro Knights,Chinmaya Sahu,4.0,0,14,22,4,5.50,2,1
+19256,Plainsboro Knights,Raghuraman Varadharajan,3.3,0,9,22,1,6.29,0,0
+19260,Gryffindors,Bikash Ghibila,4.0,0,8,20,1,5.00,0,0
+19260,Gryffindors,Bandiss P,2.0,0,5,10,0,5.00,0,0
+19260,Gryffindors,Kishan Patel,2.0,0,7,13,1,6.50,1,0
+19260,Gryffindors,Subodh Singh*,2.0,0,7,25,2,12.50,2,0
+19260,Gryffindors,Harish Bangera,3.0,1,13,15,2,5.00,0,0
+19260,Gryffindors,Ankit Patel,3.0,0,6,31,2,10.33,2,1
+19260,PUNJAB XI,Nitesh Tomer,2.0,0,6,19,2,9.50,3,0
+19260,PUNJAB XI,Lovely Singh,2.0,0,7,18,1,9.00,0,0
+19260,PUNJAB XI,Jasmeet Singh,4.0,1,17,13,2,3.25,1,0
+19260,PUNJAB XI,Nasir Khan,4.0,0,10,17,2,4.25,0,0
+19260,PUNJAB XI,Azam Mohammad,4.0,0,13,28,0,7.00,3,0
+19266,Gujarat United XI,Avi Shah,4.0,1,19,11,2,2.75,3,0
+19266,Gujarat United XI,Raj Patel,2.3,0,7,16,2,6.40,5,0
+19266,Gujarat United XI,Daksh Patel,4.0,1,18,11,4,2.75,0,0
+19266,Gujarat United XI,Krunal Patel,3.0,0,13,7,2,2.33,2,0
+19266,Gujarat United XI,Karan Patel,1.0,0,4,11,0,11.00,1,0
+19266,F5,Subramaniam Sampath,1.0,0,5,1,1,1.00,0,0
+19266,F5,Sujesh Nair,4.0,2,23,5,2,1.25,1,0
+19266,F5,Vimalendu Kumar,4.0,0,18,15,1,3.75,4,0
+19266,F5,⁠thulasi Thota,2.3,0,9,15,1,6.00,1,0
+19266,F5,Harihara Ganeshan,4.0,0,15,16,2,4.00,2,0
+19268,Fdu Giants,Kunal Patel,4.0,0,11,29,2,7.25,2,0
+19268,Fdu Giants,Sunit Shirke,4.0,0,9,40,3,10.00,2,1
+19268,Fdu Giants,Viral Parekh,4.0,0,12,28,1,7.00,2,1
+19268,Fdu Giants,Ankit Chopra,4.0,0,14,26,0,6.50,0,0
+19268,Storm Riders,Sameer Kulkarni,3.0,0,10,10,0,3.33,0,0
+19268,Storm Riders,Gourang Patel,3.0,0,12,9,1,3.00,3,0
+19268,Storm Riders,Mitul Patel,2.0,0,5,9,2,4.50,1,0
+19268,Storm Riders,Shobhit Gupta,3.0,1,13,5,2,1.67,0,0
+19268,Storm Riders,Satish Sarode,2.0,0,7,7,2,3.50,1,1
+19268,Storm Riders,Ankit Bhardwaj,0.2,0,1,1,1,3.00,0,0
+19270,Piscataway Avengers,Mit Patel,4.0,0,16,26,1,6.50,2,0
+19270,Piscataway Avengers,Ujjaval Patel,4.0,0,13,22,1,5.50,1,0
+19270,Piscataway Avengers,Dharmesh Patel,1.0,0,1,25,0,25.00,0,0
+19270,Piscataway Avengers,Krunal Shah,2.0,0,6,23,1,11.50,2,0
+19270,Piscataway Avengers,Harsh Patel,0.2,0,1,9,0,27.00,1,1
+19270,Piscataway Avengers,Rimal Patel,3.4,0,13,24,3,6.55,2,1
+19270,Piscataway Avengers,Sherry Singh,1.0,0,2,18,0,18.00,0,1
+19270,Pway Lions,Nish Patel,4.0,0,12,13,3,3.25,1,0
+19270,Pway Lions,Bhavik Patel,3.3,0,8,35,2,10.00,2,0
+19270,Pway Lions,Udit Patel - Pway Lions,4.0,0,11,37,1,9.25,1,0
+19270,Pway Lions,Dhaivat Patel,4.0,0,9,40,3,10.00,1,2
+19281,Gryffindors,Subodh Singh*,3.0,0,6,36,1,12.00,0,0
+19281,Gryffindors,Kishan Patel,4.0,2,17,22,2,5.50,1,0
+19281,Gryffindors,Harish Bangera,4.0,0,13,18,0,4.50,0,0
+19281,Gryffindors,Bikash Ghibila,3.0,0,5,28,4,9.33,1,0
+19281,Gryffindors,Sohil Kothari,1.3,0,4,14,3,9.33,3,0
+19281,Blasters,Anish Patel,4.0,0,10,36,2,9.00,1,0
+19281,Blasters,Priyankk Patel,4.0,0,17,21,3,5.25,0,0
+19281,Blasters,Manthan Patel,4.0,0,12,28,2,7.00,4,0
+19281,Blasters,Khiamuddin Mohammad,2.3,0,9,19,0,7.60,2,1
+19281,Blasters,Gunjan Patel,1.0,0,4,15,0,15.00,0,1
+19288,SAMP XI,Divyesh Morkar,4.0,0,14,20,2,5.00,2,0
+19288,SAMP XI,Ankit Patel*,4.0,0,8,45,0,11.25,2,0
+19288,SAMP XI,Akshay P,4.0,0,10,34,2,8.50,0,0
+19288,SAMP XI,Monil Patel,1.0,0,2,14,0,14.00,1,0
+19288,SAMP XI,Parag Patel,3.0,0,8,31,3,10.33,0,1
+19288,Plainsboro Knights,Gowtham Akula,2.0,0,6,20,1,10.00,3,0
+19288,Plainsboro Knights,Shan A S,4.0,0,13,25,1,6.25,0,0
+19288,Plainsboro Knights,Lokesh Prabakaran,2.0,1,9,5,1,2.50,1,0
+19288,Plainsboro Knights,Raghuraman Varadharajan,3.0,0,9,19,2,6.33,0,0
+19288,Plainsboro Knights,Ankit Parikh,3.0,1,12,11,2,3.67,0,0
+19288,Plainsboro Knights,Anil Poply,1.0,0,3,8,0,8.00,0,0
+19288,Plainsboro Knights,Kalyana Krishna Kondapalli,1.0,0,1,18,0,18.00,2,1
+19299,Jersey Titans,Mitul Patel,1.0,0,5,15,1,15.00,9,0
+19299,Jersey Titans,Ravin Patel,2.0,1,11,8,0,4.00,2,0
+19299,Jersey Titans,Milan Dave,2.0,0,8,7,2,3.50,1,0
+19299,Jersey Titans,Pavan Patel,1.0,0,5,8,0,8.00,1,1
+19299,Jersey Titans,Jay Domadiya*,3.0,0,16,8,4,2.67,1,0
+19299,Jersey Titans,Komal(kc) Patel,2.2,0,11,4,3,1.71,1,0
+19299,Rowdy Rebels,Bhavik Surani,3.0,0,10,17,1,5.67,1,1
+19299,Rowdy Rebels,Anoop Hegde,2.2,0,8,20,0,8.57,0,0
+19299,Rowdy Rebels,Naresh Patel,2.0,1,8,13,1,6.50,1,0
+19299,Rowdy Rebels,Zoheb Khalid*,1.0,0,3,6,0,6.00,0,0
+19300,Fdu Giants,Kunal Patel,1.0,0,3,12,1,12.00,0,0
+19300,Fdu Giants,Ankit Chopra,3.0,0,10,29,0,9.67,0,2
+19300,Fdu Giants,Ravish Parekh,3.0,0,10,31,0,10.33,2,0
+19300,Fdu Giants,Gautam Ahuja,4.0,0,18,18,5,4.50,0,1
+19300,Fdu Giants,Hardeep Singh,4.0,0,11,25,1,6.25,1,0
+19300,Fdu Giants,Sunit Shirke,1.0,0,3,17,0,17.00,1,1
+19300,Newport CC,Gokul Das Maharajan,4.0,1,15,15,2,3.75,2,0
+19300,Newport CC,Emmanuel Samuel Nair,4.0,0,11,26,2,6.50,0,0
+19300,Newport CC,Narender Reddy Bojja,4.0,0,7,37,2,9.25,0,0
+19300,Newport CC,Sai Charan,2.0,0,1,20,0,10.00,3,0
+19300,Newport CC,Arun Prasad G*,2.0,0,4,13,2,6.50,0,0
+19301,Gujarat United XI,Shivam Patel,4.0,0,13,23,4,5.75,2,1
+19301,Gujarat United XI,Mihir Vaghasia,2.0,0,2,16,0,8.00,1,0
+19301,Gujarat United XI,Avi Shah,3.5,0,14,33,1,8.61,0,1
+19301,Gujarat United XI,Daksh Patel,4.0,0,16,27,3,6.75,1,1
+19301,Gujarat United XI,Krunal Patel,2.0,0,8,8,1,4.00,1,0
+19301,Juggernaut,Kailash Naithani,2.0,0,9,7,2,3.50,1,0
+19301,Juggernaut,Jatan Vaidya,2.0,0,4,16,1,8.00,1,1
+19301,Juggernaut,Jenish Patel,4.0,0,13,27,4,6.75,1,0
+19301,Juggernaut,Hemant Patel*,3.0,0,7,32,0,10.67,1,0
+19301,Juggernaut,Karan P,4.0,0,12,29,0,7.25,4,0
+19302,Maha CC,Sudhanshoo Vashisht,4.0,0,17,15,2,3.75,0,0
+19302,Maha CC,Dhrumil Shah,3.0,0,9,17,1,5.67,3,0
+19302,Maha CC,Tamaas Khan,2.0,0,3,16,0,8.00,0,0
+19302,Maha CC,Ishan Shah,4.0,0,13,21,1,5.25,1,0
+19302,Maha CC,Rizwan Bajwa,1.0,0,4,10,1,10.00,0,0
+19302,Maha CC,Danish Shaikh,2.0,0,2,21,1,10.50,0,0
+19302,Storm Riders,Mitul Patel,4.0,0,13,30,1,7.50,1,0
+19302,Storm Riders,Rishabh Tewari,4.0,1,16,16,5,4.00,4,0
+19302,Storm Riders,Gourang Patel,4.0,0,17,14,0,3.50,4,0
+19302,Storm Riders,Shobhit Gupta,2.0,0,6,19,3,9.50,0,1
+19302,Storm Riders,Sameer Kulkarni,1.0,0,5,1,1,1.00,0,0
+19304,Mercer Challengers,Ankur Parekh,2.0,0,4,34,0,17.00,0,2
+19304,Mercer Challengers,Deepesh Naidu,3.0,1,14,14,2,4.67,0,0
+19304,Mercer Challengers,Samit Kumbhani,4.0,0,14,29,3,7.25,3,0
+19304,Mercer Challengers,Vishal Srivastava,2.0,0,9,9,1,4.50,3,0
+19304,Mercer Challengers,Sheshank Reddy,3.0,1,14,13,1,4.33,1,0
+19304,Mercer Challengers,Saqi Syed,2.0,1,7,16,1,8.00,0,0
+19304,Blue Aces CC,Rajendra Prasad Challa,3.0,0,9,19,0,6.33,2,0
+19304,Blue Aces CC,Dheeraj Dubey*,2.0,0,5,21,1,10.50,0,0
+19304,Blue Aces CC,Parth Shah Tiranga,4.0,1,19,10,2,2.50,1,1
+19304,Blue Aces CC,Surya Nallamilli,3.0,0,8,25,1,8.33,3,0
+19304,Blue Aces CC,Prabhakar Vudumula,4.0,0,14,11,4,2.75,0,0
+19318,Piscataway Avengers,Mit Patel,2.0,1,10,7,1,3.50,0,0
+19318,Piscataway Avengers,Dharmesh Patel,3.0,0,10,22,0,7.33,1,1
+19318,Piscataway Avengers,Rimal Patel,4.0,0,13,41,2,10.25,1,0
+19318,Piscataway Avengers,Ujjaval Patel,3.0,0,8,46,0,15.33,2,0
+19318,Piscataway Avengers,Harsh Patel,4.0,0,14,23,2,5.75,2,0
+19318,PUNJAB XI,Nitesh Tomer,1.0,0,1,14,1,14.00,1,1
+19318,PUNJAB XI,Jasmeet Singh,2.0,0,5,16,1,8.00,0,1
+19318,PUNJAB XI,Lovely Singh,1.0,0,2,4,0,4.00,0,0
+19318,PUNJAB XI,Azam Mohammad,3.0,0,9,36,0,12.00,6,0
+19318,PUNJAB XI,Nasir Khan,3.0,0,7,37,1,12.33,2,0
+19318,PUNJAB XI,Sukhwinder Singh*,1.5,0,3,36,0,19.64,1,1
+19323,Nj Braves,Swar Shah,4.0,1,16,22,3,5.50,2,1
+19323,Nj Braves,Vinoth Suseendran †,3.3,0,13,23,3,6.57,4,0
+19323,Nj Braves,Vipul Patel,4.0,0,17,16,1,4.00,1,0
+19323,Nj Braves,Jenish Shah,4.0,0,21,15,3,3.75,6,0
+19323,11spartans,Krunal Patel,3.0,0,13,19,2,6.33,3,0
+19323,11spartans,Neel Patel-13,2.0,0,5,11,0,5.50,1,0
+19323,11spartans,Soham Brahmbhatt,3.4,0,16,15,4,4.09,1,0
+19323,11spartans,Ravi Rathod,2.0,0,9,4,1,2.00,1,0
+19323,11spartans,Jay Trivedi,3.0,1,17,9,3,3.00,1,1
+19324,F5,Deniz Baby,3.0,0,5,35,2,11.67,1,0
+19324,F5,Sujesh Nair,4.0,0,9,54,1,13.50,3,2
+19324,F5,Rixon Devassy,3.0,0,8,30,3,10.00,0,0
+19324,F5,Vimalendu Kumar,4.0,0,12,27,2,6.75,5,0
+19324,F5,Harihara Ganeshan,1.0,0,2,15,0,15.00,0,0
+19324,F5,⁠thulasi Thota,1.0,0,2,22,1,22.00,0,0
+19324,Pway Lions,Shail Shah,4.0,0,17,19,3,4.75,0,1
+19324,Pway Lions,Neel Patel*,2.0,0,8,14,0,7.00,2,0
+19324,Pway Lions,Bhavik Patel,2.0,0,5,20,1,10.00,1,0
+19324,Pway Lions,Dhaivat Patel,3.0,0,7,15,1,5.00,1,0
+19324,Pway Lions,Ronak Rana †,3.0,0,13,9,0,3.00,1,0
+19324,Pway Lions,Ankush Patel,2.0,0,6,18,2,9.00,0,0
+19332,Edison Rebelz,Zubin Shah,4.0,0,11,33,1,8.25,2,0
+19332,Edison Rebelz,Sourav Mazumder,4.0,0,13,35,2,8.75,0,0
+19332,Edison Rebelz,Gurmeet Singh,4.0,0,15,16,1,4.00,0,0
+19332,Edison Rebelz,Soumyabrata Paul,3.0,0,2,32,0,10.67,1,0
+19332,Edison Rebelz,Dhaval Shah,1.0,0,1,8,0,8.00,0,0
+19332,Warriors,Rumit Patel,3.0,0,13,19,2,6.33,1,0
+19332,Warriors,Kirtan Patel,4.0,1,17,15,3,3.75,3,0
+19332,Warriors,Himanshu Patel,3.0,0,10,14,2,4.67,1,0
+19332,Warriors,Prasad Fernando,1.0,0,2,17,0,17.00,0,0
+19332,Warriors,Rakesh Patel,2.0,0,3,23,1,11.50,1,0
+19332,Warriors,Dhaval Patel,0.4,0,3,1,1,1.50,0,0
+19353,Gcc,Karan Patel,4.0,0,13,25,1,6.25,1,0
+19353,Gcc,Mrugesh Patel,4.0,0,11,18,3,4.50,2,0
+19353,Gcc,Sahil Patel,4.0,0,15,20,2,5.00,3,0
+19353,Gcc,Nirav Rana(gcc),3.2,0,13,21,4,6.30,0,0
+19353,Plainsboro Eagles,Chandra Koganti,4.0,1,18,17,2,4.25,3,0
+19353,Plainsboro Eagles,Rajesh Paruchuri,4.0,0,15,15,1,3.75,3,0
+19353,Plainsboro Eagles,Bharath Reddy,2.0,0,6,17,0,8.50,3,0
+19353,Plainsboro Eagles,Bhargav Reddy Napa*,4.0,0,13,28,2,7.00,0,1
+19353,Plainsboro Eagles,Srinivas Reddy Ch,2.0,0,7,8,2,4.00,0,0
+19356,Nj Tigers,Rajinder (suraj) Singh,4.0,0,18,15,4,3.75,3,0
+19356,Nj Tigers,Tahir Mehmood,4.0,0,14,27,4,6.75,3,3
+19356,Nj Tigers,Haider Naveed Akram,4.0,0,9,24,1,6.00,2,0
+19356,Nj Tigers,Faisal Mehmood*,4.0,0,18,6,0,1.50,0,0
+19356,Team Highlanders,Raja Kuppan,3.1,0,15,12,2,3.79,2,0
+19356,Team Highlanders,Annamalai Ramamoorthi,2.0,0,8,12,1,6.00,0,0
+19356,Team Highlanders,Manikandan Swaminathan,4.0,1,17,14,1,3.50,2,0
+19356,Team Highlanders,Suresh Ganesan,1.0,0,3,8,0,8.00,0,0
+19356,Team Highlanders,Vijay Narayanan Nadar,1.0,0,1,13,0,13.00,0,0
+19356,Team Highlanders,Syed Abhinash,4.0,0,13,17,2,4.25,1,0
+19359,Jersey Boys,Vikul Rajpara,1.0,0,3,6,0,6.00,0,0
+19359,Jersey Boys,Vineet Luthra,3.0,0,5,47,1,15.67,0,0
+19359,Jersey Boys,Sushil Kumar,2.0,0,8,18,1,9.00,0,0
+19359,Jersey Boys,Amit Patel,3.0,0,6,31,1,10.33,0,0
+19359,Jersey Boys,Madhur Kaushik,4.0,0,6,49,0,12.25,0,0
+19359,Jersey Boys,Vikas Chaudhary,3.0,0,7,26,1,8.67,2,0
+19359,RHG,Kevin Shah*,4.0,0,15,22,4,5.50,0,0
+19359,RHG,Hiren Joshi,2.0,0,8,16,0,8.00,0,1
+19359,RHG,Upjeet Singh,3.0,0,11,9,0,3.00,0,0
+19359,RHG,Parth Thakkar,4.0,0,11,25,2,6.25,1,1
+19359,RHG,Nuvan T,2.0,0,8,8,1,4.00,1,0
+19359,RHG,Harsh Viradiya,1.0,0,1,19,0,19.00,0,0
+19361,Youth For Sewa,Aillu N,4.0,0,16,26,1,6.50,7,0
+19361,Youth For Sewa,Manikanta Raja Kottu,3.0,0,14,14,0,4.67,2,0
+19361,Youth For Sewa,Balu Y,3.0,0,7,36,2,12.00,2,0
+19361,Youth For Sewa,Anand Vemuri,3.0,0,11,20,5,6.67,2,0
+19361,Youth For Sewa,Rohith Reddy,2.0,0,2,40,0,20.00,0,2
+19361,Youth For Sewa,Rajesh Kondru,1.0,0,1,16,0,16.00,0,0
+19361,Veerans,Kamalraj Rajamanickam,4.0,0,9,46,1,11.50,0,0
+19361,Veerans,Shabbeer Syed,3.0,0,6,45,2,15.00,1,1
+19361,Veerans,Sundip Helchal*,3.4,0,16,21,4,5.73,2,0
+19361,Veerans,Aditya Rathor,4.0,0,7,41,1,10.25,0,0
+19363,Desi Warriors,Nauman Basit,3.0,0,10,9,0,3.00,0,0
+19363,Desi Warriors,Varun Gurram,4.0,0,14,11,3,2.75,1,0
+19363,Desi Warriors,Sai Kancharla,3.0,0,13,21,2,7.00,1,0
+19363,Desi Warriors,Partha Chatterjee,2.0,0,7,17,1,8.50,1,1
+19363,Desi Warriors,Harshil Patel,3.0,0,11,16,2,5.33,1,0
+19363,Desi Warriors,Rakesh Kar,1.0,0,1,5,1,5.00,0,0
+19363,WCC,Tushar Lenka,2.0,0,8,5,1,2.50,1,0
+19363,WCC,Nisar Ahmad,2.0,0,9,4,0,2.00,1,0
+19363,WCC,Nahid Sarkar,2.0,0,10,5,2,2.50,2,0
+19363,WCC,Harikishore Malireddy,2.0,0,8,9,1,4.50,0,0
+19363,WCC,Sai Sudhan,2.0,1,11,7,3,3.50,1,0
+19363,WCC,Faran Mir,1.4,0,8,8,1,4.80,2,0
+19368,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,14,19,1,4.75,3,0
+19368,Samudhra Gladiators,Sandeep Shetty,1.0,0,4,4,1,4.00,2,0
+19368,Samudhra Gladiators,Harshad Patil,3.0,0,10,14,3,4.67,1,0
+19368,Samudhra Gladiators,Naveen R Sripathi,4.0,1,16,26,4,6.50,1,0
+19368,Samudhra Gladiators,Ankur Chaturvedi,3.0,0,9,34,1,11.33,0,1
+19368,Jetha 11,Jigar D Patel,4.0,0,17,11,4,2.75,3,0
+19368,Jetha 11,Dipal Patel,4.0,0,10,38,1,9.50,5,0
+19368,Jetha 11,Haren Patel,1.0,0,3,8,0,8.00,0,0
+19368,Jetha 11,Gary Patel,2.0,0,4,24,0,12.00,0,0
+19368,Jetha 11,Divyesh Patel,2.0,0,6,18,0,9.00,0,1
+19371,Aryans,Sourabh Guha*,4.0,0,9,30,0,7.50,0,0
+19371,Aryans,Henil Balsara,4.0,0,11,32,1,8.00,2,0
+19371,Aryans,Ajay Shankar,4.0,0,10,35,2,8.75,2,0
+19371,Aryans,Joydeep Das,4.0,0,11,46,1,11.50,1,1
+19371,Sreeshti,Nimish Deshpande,1.0,0,2,7,0,7.00,2,0
+19371,Sreeshti,Sumesh Mathew,4.0,1,16,24,4,6.00,6,0
+19371,Sreeshti,Harshal Gupta,2.0,0,8,19,1,9.50,0,0
+19371,Sreeshti,Kamal Choudhury,4.0,0,12,31,1,7.75,2,0
+19371,Sreeshti,Monang Shah,4.0,0,13,18,2,4.50,1,0
+19371,Sreeshti,Mahesh Nagappa,1.0,0,1,13,0,13.00,0,0
+19374,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,15,12,2,3.00,0,0
+19374,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,13,21,2,5.25,2,0
+19374,Parsippany Phoenix XI,Naveen Rayal,4.0,0,14,19,0,4.75,5,0
+19374,Parsippany Phoenix XI,Govind Somvanshi,4.0,0,14,26,4,6.50,1,0
+19374,Falcons,Sairam Raavi*,3.0,0,14,13,2,4.33,0,0
+19374,Falcons,Sai Ritheesh Sudham,2.4,0,10,26,0,9.75,8,1
+19374,Falcons,Manikanta Arumilli,2.0,0,6,15,0,7.50,0,0
+19374,Falcons,Rajesh Rachakonda,2.0,0,5,22,0,11.00,2,0
+19374,Falcons,Srinath Gentyala,1.0,0,3,7,1,7.00,1,0
+19375,Nj Stars CC,Vijay Gore,1.0,0,3,14,0,14.00,0,0
+19375,Nj Stars CC,Zain Pervaiz,4.0,0,13,24,1,6.00,1,1
+19375,Nj Stars CC,Sajeel Ahmed,2.0,0,10,7,0,3.50,0,0
+19375,Nj Stars CC,Sunny Desai,2.0,0,5,26,0,13.00,2,0
+19375,Nj Stars CC,Muhammad Haseeb,4.0,0,15,22,3,5.50,3,0
+19375,Nj Stars CC,Akram Abubakar,3.0,0,8,21,1,7.00,3,0
+19375,Hudson Hurricanes,Sravan Nekkanti,4.0,0,20,20,4,5.00,5,0
+19375,Hudson Hurricanes,Aniket Dalal*,4.0,0,14,29,1,7.25,1,0
+19375,Hudson Hurricanes,Rohit Pradhan,2.3,0,11,16,1,6.40,2,0
+19375,Hudson Hurricanes,Pratik Mane,4.0,0,20,12,3,3.00,8,0
+19375,Hudson Hurricanes,Utkarsh Mishra,1.0,0,1,13,0,13.00,0,0
+19384,Team Highlanders,Ravi Kanth,4.0,0,16,20,3,5.00,2,1
+19384,Team Highlanders,Raja Kuppan,4.0,0,14,31,2,7.75,0,1
+19384,Team Highlanders,Suresh Ganesan,2.0,0,6,20,1,10.00,0,0
+19384,Team Highlanders,Manikandan Swaminathan,3.0,0,10,24,0,8.00,1,0
+19384,Team Highlanders,Syed Abhinash,3.0,0,5,21,0,7.00,2,0
+19384,Jetha 11,Haren Patel,4.0,0,15,25,3,6.25,2,0
+19384,Jetha 11,Pintu Patel,1.0,0,2,12,0,12.00,0,0
+19384,Jetha 11,Dipal Patel,4.0,1,12,22,0,5.50,2,0
+19384,Jetha 11,Eijaz Mulla,3.4,0,13,24,4,6.55,0,0
+19384,Jetha 11,Gary Patel,3.0,0,5,35,0,11.67,1,0
+19399,Edison Rebelz,Ritwik Roy,1.0,0,4,6,1,6.00,1,0
+19399,Edison Rebelz,Gurmeet Singh,4.0,0,13,27,1,6.75,0,0
+19399,Edison Rebelz,Sourav Mazumder,4.0,0,18,14,3,3.50,1,0
+19399,Edison Rebelz,Yash Solanki,4.0,1,18,17,2,4.25,3,0
+19399,Edison Rebelz,Ankit Somani,1.0,0,2,7,0,7.00,0,0
+19399,Edison Rebelz,Zubin Shah*,2.0,0,7,12,1,6.00,0,0
+19399,Falcons,Manikanta Arumilli,1.0,0,3,14,0,14.00,0,2
+19399,Falcons,Srinath Gentyala,1.0,0,3,6,1,6.00,0,0
+19399,Falcons,Sairam Raavi*,2.2,0,6,25,0,10.71,3,0
+19399,Falcons,Rajesh Rachakonda,2.0,0,6,28,0,14.00,3,1
+19399,Falcons,Ravindar Perala †,1.0,0,3,14,0,14.00,0,0
+19401,Nj Tigers,Mubassir Mansuri,3.0,0,8,25,2,8.33,1,0
+19401,Nj Tigers,Faisal Mehmood,4.0,0,14,26,3,6.50,0,0
+19401,Nj Tigers,Haider Naveed Akram,4.0,0,15,29,1,7.25,2,0
+19401,Nj Tigers,Tahir Mehmood,1.0,0,3,14,1,14.00,0,2
+19401,Nj Tigers,Noman Ali,1.0,0,1,28,1,28.00,0,0
+19401,Nj Tigers,Babar Jumani,2.0,0,7,24,2,12.00,3,0
+19401,RHG,Zafran Hussain,4.0,1,17,12,2,3.00,2,0
+19401,RHG,Kevin Shah,2.0,0,9,3,1,1.50,0,0
+19401,RHG,Hiren Joshi,4.0,0,14,25,2,6.25,0,1
+19401,RHG,Nuvan T,2.0,0,9,17,0,8.50,0,2
+19401,RHG,Upjeet Singh,3.0,0,11,17,1,5.67,0,2
+19401,RHG,Chirag Bhatt,1.0,0,3,6,0,6.00,0,0
+19405,Jersey Boys,Vikul Rajpara,2.0,0,5,24,0,12.00,3,0
+19405,Jersey Boys,Sushil Kumar,4.0,0,12,19,3,4.75,1,0
+19405,Jersey Boys,Vineet Luthra,4.0,0,13,19,3,4.75,1,0
+19405,Jersey Boys,Madhur Kaushik,3.5,0,16,19,2,4.96,1,2
+19405,Jersey Boys,Vikas Chaudhary,1.0,0,2,9,0,9.00,0,0
+19405,Youth For Sewa,Aillu N,4.0,0,17,23,4,5.75,4,1
+19405,Youth For Sewa,Manikanta Raja Kottu,2.0,0,6,17,0,8.50,0,0
+19405,Youth For Sewa,Ram V*,2.0,0,6,22,0,11.00,3,1
+19405,Youth For Sewa,Tauseef Ahmed,1.0,0,1,14,0,14.00,1,0
+19405,Youth For Sewa,Nazareth John,2.4,0,8,15,0,5.62,1,0
+19415,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,16,16,2,4.00,3,0
+19415,Parsippany Phoenix XI,Naveen Rayal,4.0,0,9,29,0,7.25,1,1
+19415,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,15,12,1,3.00,1,0
+19415,Parsippany Phoenix XI,Govind Somvanshi,3.0,0,8,21,1,7.00,0,0
+19415,Parsippany Phoenix XI,Tej Reddy,1.0,0,2,7,1,7.00,0,0
+19415,Hudson Hurricanes,Aniket Dalal*,4.0,0,14,18,3,4.50,3,1
+19415,Hudson Hurricanes,Rohit Pradhan,3.0,0,6,21,0,7.00,1,0
+19415,Hudson Hurricanes,Pratik Mane,4.0,1,20,21,3,5.25,9,0
+19415,Hudson Hurricanes,Sravan Nekkanti,4.0,0,16,15,1,3.75,2,0
+19415,Hudson Hurricanes,Shubham Pawar,1.0,0,1,5,1,5.00,0,0
+19419,Veerans,Kamalraj Rajamanickam,4.0,0,15,21,2,5.25,1,0
+19419,Veerans,Sundip Helchal,4.0,1,11,24,1,6.00,0,0
+19419,Veerans,Naveen Elangovan*,2.0,0,5,31,1,15.50,0,1
+19419,Veerans,Shabbeer Syed,3.0,0,7,34,1,11.33,2,0
+19419,Veerans,Aditya Rathor,2.0,0,7,23,1,11.50,3,0
+19419,Veerans,Arun Tamilarasan,1.0,0,2,21,0,21.00,1,1
+19419,Warriors,Abhishek Patel*,2.0,0,5,21,0,10.50,2,0
+19419,Warriors,Rumit Patel,2.0,0,8,22,2,11.00,0,0
+19419,Warriors,Kirtan Patel,4.0,0,14,31,1,7.75,3,0
+19419,Warriors,Dhaval Patel,4.0,0,11,40,0,10.00,3,0
+19419,Warriors,Prasad Fernando,3.0,0,8,39,1,13.00,4,0
+19419,Warriors,Mitul Patel,1.0,0,4,11,0,11.00,3,0
+19421,Nj Stars CC,Fahad Kabir,4.0,0,11,21,2,5.25,2,0
+19421,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,10,33,1,8.25,0,1
+19421,Nj Stars CC,Zain Pervaiz,4.0,2,18,15,2,3.75,0,0
+19421,Nj Stars CC,Akram Abubakar,2.0,0,8,22,1,11.00,7,0
+19421,Nj Stars CC,Muhammad Haseeb,2.0,0,8,17,1,8.50,0,0
+19421,Sreeshti,Nimish Deshpande,2.0,0,7,17,0,8.50,1,0
+19421,Sreeshti,Kamal Choudhury,3.0,0,12,23,1,7.67,1,0
+19421,Sreeshti,Monang Shah,4.0,1,17,25,2,6.25,6,0
+19421,Sreeshti,Harshal Gupta,2.2,0,7,23,1,9.86,1,1
+19421,Sreeshti,Mahesh Nagappa,1.0,0,1,11,0,11.00,1,0
+19421,Sreeshti,Sumesh Mathew,1.0,0,2,14,0,14.00,1,0
+19422,Samudhra Gladiators,Dileep Reddy,3.0,0,10,13,1,4.33,0,0
+19422,Samudhra Gladiators,Sandeep Shetty,2.0,1,10,2,0,1.00,0,0
+19422,Samudhra Gladiators,Naveen R Sripathi,4.0,0,12,18,2,4.50,0,0
+19422,Samudhra Gladiators,Ankur Chaturvedi,4.0,2,18,12,1,3.00,3,0
+19422,Samudhra Gladiators,Harshad Patil,3.0,0,8,19,1,6.33,1,0
+19422,Plainsboro Eagles,Chandra Koganti,3.0,0,11,30,1,10.00,3,0
+19422,Plainsboro Eagles,Rajesh Paruchuri,2.0,0,6,19,1,9.50,1,1
+19422,Plainsboro Eagles,Ashok Gandu,1.0,0,3,13,1,13.00,0,0
+19422,Plainsboro Eagles,Srinivas Reddy Ch,0.5,0,3,7,0,8.40,0,0
+19423,Desi Warriors,Varun Gurram,2.0,0,7,18,1,9.00,0,0
+19423,Desi Warriors,Sai Kancharla,4.0,0,17,13,3,3.25,3,0
+19423,Desi Warriors,Sarbjitsingh Sahota,4.0,0,13,20,1,5.00,4,0
+19423,Desi Warriors,Rigved Nagarkar,2.0,0,6,9,1,4.50,3,0
+19423,Desi Warriors,Rakesh Kar,3.0,0,11,13,2,4.33,0,0
+19423,Desi Warriors,Harshil Patel,1.0,0,2,9,0,9.00,0,0
+19423,Aryans,Sourabh Guha*,2.4,0,8,9,1,3.38,1,0
+19423,Aryans,Henil Balsara,3.0,0,10,21,1,7.00,1,0
+19423,Aryans,Arpit Panchal,4.0,0,15,18,0,4.50,1,0
+19423,Aryans,Gajendra Kumar,4.0,0,14,18,3,4.50,2,0
+19423,Aryans,Ali Raza,1.0,0,3,17,0,17.00,1,0
+19424,WCC,Santosh Thanekar,2.0,0,8,8,1,4.00,1,0
+19424,WCC,Sai Sudhan,3.0,0,9,18,2,6.00,1,0
+19424,WCC,Nisar Ahmad,4.0,1,16,11,2,2.75,0,0
+19424,WCC,Nahid Sarkar,3.0,0,14,13,2,4.33,1,1
+19424,WCC,Harikishore Malireddy,3.4,0,15,10,2,2.73,0,1
+19424,Gcc,Sahil Patel,2.3,0,6,24,0,9.60,0,0
+19424,Gcc,Mrugesh Patel,2.0,0,6,16,1,8.00,1,0
+19424,Gcc,Nirav Rana(gcc),2.0,0,3,21,1,10.50,1,0
+19438,F5,Subramaniam Sampath,2.0,0,8,7,1,3.50,0,0
+19438,F5,Rixon Devassy,4.0,0,16,11,1,2.75,0,0
+19438,F5,Sujesh Nair,4.0,0,16,11,1,2.75,2,0
+19438,F5,Vimalendu Kumar,4.0,0,15,26,2,6.50,4,0
+19438,F5,⁠thulasi Thota,2.0,0,8,15,3,7.50,1,0
+19438,PUNJAB XI,Nitesh Tomer,4.0,0,17,18,1,4.50,2,0
+19438,PUNJAB XI,Adnan Perviaz,1.0,0,4,10,0,10.00,3,1
+19438,PUNJAB XI,Jasmeet Singh,4.0,0,16,18,1,4.50,2,0
+19438,PUNJAB XI,Lovely Singh,1.2,0,4,12,1,9.00,0,0
+19438,PUNJAB XI,Nasir Khan,3.0,0,9,14,1,4.67,2,0
+19443,Blue Aces CC,Dheeraj Dubey*,4.0,0,16,18,2,4.50,2,0
+19443,Blue Aces CC,Tharak Ram,4.0,1,16,27,4,6.75,0,1
+19443,Blue Aces CC,Sandip Nandurkar,3.0,0,6,38,0,12.67,1,0
+19443,Blue Aces CC,Surya Nallamilli,3.0,0,12,23,1,7.67,1,0
+19443,Blue Aces CC,Prabhakar Vudumula,2.0,0,5,18,0,9.00,1,1
+19443,Storm Riders,Mitul Patel,2.0,0,3,31,0,15.50,1,0
+19443,Storm Riders,Rishabh Tewari,4.0,0,14,27,3,6.75,1,0
+19443,Storm Riders,Shobhit Gupta,2.3,0,3,35,0,14.00,0,0
+19443,Storm Riders,Sameer Kulkarni,1.0,0,2,10,0,10.00,0,0
+19443,Storm Riders,Gourang Patel,2.0,0,5,24,2,12.00,0,0
+19453,Rowdy Rebels,Soham Kapadia,4.0,0,17,12,3,3.00,2,0
+19453,Rowdy Rebels,Bhavik Surani,3.0,0,13,23,2,7.67,0,1
+19453,Rowdy Rebels,Naresh Patel,4.0,1,18,10,2,2.50,4,0
+19453,Rowdy Rebels,Zoheb Khalid*,4.0,0,15,17,2,4.25,1,0
+19453,Rowdy Rebels,Darshil Mistry,0.5,0,2,4,0,4.80,0,0
+19453,Plainsboro Knights,Ankit Parikh,4.0,0,17,12,1,3.00,0,1
+19453,Plainsboro Knights,Anil Poply,4.0,0,18,17,1,4.25,1,0
+19453,Plainsboro Knights,Raghuraman Varadharajan,4.0,0,17,13,3,3.25,1,0
+19453,Plainsboro Knights,Gowtham Akula,1.0,0,3,7,1,7.00,0,1
+19453,Plainsboro Knights,Lokesh Prabakaran,2.1,0,10,9,3,4.15,0,1
+19455,Juggernaut,Kailash Naithani,4.0,0,15,27,0,6.75,2,0
+19455,Juggernaut,Jenish Patel,3.5,0,14,37,4,9.65,3,0
+19455,Juggernaut,Hemant Patel*,4.0,1,13,59,2,14.75,2,1
+19455,Juggernaut,Karan P,4.0,0,17,17,3,4.25,3,0
+19455,Pway Lions,Nish Patel,4.0,0,17,20,3,5.00,0,0
+19455,Pway Lions,Bhavik Patel,4.0,0,16,17,1,4.25,2,0
+19455,Pway Lions,Ronak Rana †,3.0,0,11,24,1,8.00,2,0
+19455,Pway Lions,Drumil Amin,1.4,0,6,14,2,8.40,0,0
+19455,Pway Lions,Dhaivat Patel,2.0,0,6,21,3,10.50,0,0
+19458,Piscataway Avengers,Mit Patel,4.0,0,15,20,3,5.00,3,0
+19458,Piscataway Avengers,Ujjaval Patel,2.0,1,9,10,1,5.00,1,0
+19458,Piscataway Avengers,Pujan Patel,4.0,0,18,11,0,2.75,2,0
+19458,Piscataway Avengers,Dharmesh Patel,3.0,0,11,13,3,4.33,1,0
+19458,Piscataway Avengers,Sherry Singh,3.0,0,11,15,1,5.00,0,0
+19458,Blasters,Harsh Amin,3.0,0,11,16,1,5.33,0,0
+19458,Blasters,Anish Patel,1.0,0,4,4,0,4.00,2,0
+19458,Blasters,Priyankk Patel,2.0,0,4,27,1,13.50,0,0
+19458,Blasters,Gurudutt Patel*,1.2,0,3,25,1,18.75,2,0
+19464,Nj Braves,Swar Shah,4.0,0,10,30,1,7.50,2,0
+19464,Nj Braves,Jenish Shah,4.0,0,18,13,3,3.25,3,0
+19464,Nj Braves,Vipul Patel,4.0,0,13,28,2,7.00,11,0
+19464,Nj Braves,Praveen Shetty,4.0,0,13,24,3,6.00,5,1
+19464,Gryffindors,Sunil Satghare,1.0,0,2,5,0,5.00,1,0
+19464,Gryffindors,Harish Bangera,4.0,1,20,18,5,4.50,2,0
+19464,Gryffindors,Subodh Singh*,4.0,0,18,22,3,5.50,0,0
+19464,Gryffindors,Ankit Patel,3.0,0,12,21,1,7.00,2,2
+19464,Gryffindors,Bikash Ghibila,2.3,0,9,17,0,6.80,1,0
+19464,Gryffindors,Siddhartha Nayak,1.0,0,3,17,0,17.00,5,0
+19466,Mercer Challengers,Deepesh Naidu,3.0,0,10,17,1,5.67,0,0
+19466,Mercer Challengers,Samit Kumbhani,3.5,0,14,12,3,3.13,0,0
+19466,Mercer Challengers,Ankur Parekh,3.0,0,15,11,2,3.67,4,1
+19466,Mercer Challengers,Sheshank Reddy,3.0,0,12,16,0,5.33,0,0
+19466,Mercer Challengers,Sai Deepak Dogiparthi,3.0,1,15,14,3,4.67,3,0
+19466,SAMP XI,Akshay P,4.0,0,12,25,2,6.25,1,0
+19466,SAMP XI,Hiren Patel,4.0,0,14,28,2,7.00,3,0
+19466,SAMP XI,Ankit Patel,4.0,0,15,15,2,3.75,0,0
+19466,SAMP XI,Monil Patel,0.5,0,4,3,0,3.60,2,0
+19480,Maha CC,Sudhanshoo Vashisht,4.0,0,14,29,4,7.25,4,0
+19480,Maha CC,Ishan Shah,4.0,2,19,9,0,2.25,1,0
+19480,Maha CC,Siddharth Verma,2.0,0,3,26,1,13.00,0,1
+19480,Maha CC,Rizwan Bajwa,4.0,0,13,21,4,5.25,0,0
+19480,Maha CC,Danish Shaikh,1.5,0,3,30,1,16.36,0,0
+19480,Newport CC,Emmanuel Samuel Nair,4.0,0,16,21,5,5.25,3,0
+19480,Newport CC,Gokul Das Maharajan,4.0,1,12,22,1,5.50,0,0
+19480,Newport CC,Narender Reddy Bojja,4.0,0,11,28,2,7.00,2,1
+19480,Newport CC,Vinit Shah,1.5,0,4,33,0,18.00,1,1
+19480,Newport CC,Saikumar Katepalli,1.0,0,1,12,0,12.00,0,1
+19483,Fdu Giants,Ravish Parekh,3.0,0,9,28,0,9.33,1,1
+19483,Fdu Giants,Nishant Sharma,3.0,0,8,17,0,5.67,0,0
+19483,Fdu Giants,Ashish Kansal,4.0,0,12,31,4,7.75,3,0
+19483,Fdu Giants,Ankit Chopra,4.0,0,11,22,2,5.50,2,0
+19483,Fdu Giants,Kartik Patel,1.0,0,4,13,0,13.00,1,0
+19483,Fdu Giants,Vinit Arora,1.0,0,3,5,0,5.00,1,0
+19483,Gujarat United XI,Parth Bhavsar,4.0,0,15,10,3,2.50,1,0
+19483,Gujarat United XI,Avi Shah,4.0,0,17,13,4,3.25,0,0
+19483,Gujarat United XI,Karan Patel,2.0,0,4,10,0,5.00,0,0
+19483,Gujarat United XI,Daksh Patel,3.2,0,14,15,3,4.50,1,0
+19483,Gujarat United XI,Mihir Patel,1.0,0,2,9,0,9.00,0,1
+19486,Jersey Titans,Jay Patel,4.0,0,15,21,2,5.25,5,0
+19486,Jersey Titans,Milan Dave,4.0,0,14,19,3,4.75,0,0
+19486,Jersey Titans,Komal(kc) Patel,4.0,0,11,53,1,13.25,6,2
+19486,Jersey Titans,Jay Domadiya*,3.4,0,13,26,4,7.09,0,0
+19486,11spartans,Krunal Patel,2.0,0,5,21,0,10.50,0,0
+19486,11spartans,Neel Patel-13,2.0,0,8,11,0,5.50,1,0
+19486,11spartans,Soham Brahmbhatt,4.0,0,12,31,3,7.75,3,0
+19486,11spartans,Pratik Patel (savali),2.0,0,7,16,2,8.00,3,0
+19486,11spartans,Jay Trivedi,2.0,0,5,16,0,8.00,2,1
+19486,11spartans,Rajan Patel,4.0,0,14,27,2,6.75,2,0
+19492,Plainsboro Knights,Ankit Parikh,4.0,0,7,57,2,14.25,0,0
+19492,Plainsboro Knights,Anil Poply,4.0,0,11,41,3,10.25,6,0
+19492,Plainsboro Knights,Gowtham Akula,1.0,0,1,26,0,26.00,0,0
+19492,Plainsboro Knights,Lokesh Prabakaran,3.0,0,7,41,3,13.67,1,0
+19492,Plainsboro Knights,Raghuraman Varadharajan,4.0,0,17,12,2,3.00,0,0
+19492,11spartans,Krunal Patel,3.0,0,12,15,2,5.00,0,0
+19492,11spartans,Neel Patel-13,3.4,0,10,42,3,11.45,1,1
+19492,11spartans,Soham Brahmbhatt,2.0,0,6,19,1,9.50,0,0
+19492,11spartans,Ravi Rathod,1.0,0,1,14,0,14.00,0,0
+19492,11spartans,Rajan Patel,3.0,0,5,41,1,13.67,0,0
+19497,Blasters,Gurudutt Patel*,1.0,0,2,10,0,10.00,0,1
+19497,Blasters,Gunjan Patel,4.0,0,12,23,3,5.75,5,0
+19497,Blasters,Manthan Patel,3.0,0,5,33,2,11.00,1,0
+19497,Blasters,Neel Patel-24,4.0,0,13,38,1,9.50,5,2
+19497,Blasters,Hardik Patel,4.0,0,8,25,2,6.25,2,0
+19497,F5,Deniz Baby,2.0,0,7,16,1,8.00,5,0
+19497,F5,Harihara Ganeshan,2.0,0,6,9,1,4.50,0,0
+19497,F5,Sujesh Nair,2.4,0,8,27,1,10.12,5,0
+19497,F5,Vimalendu Kumar,4.0,0,14,24,3,6.00,4,0
+19497,F5,Rixon Devassy,2.0,0,9,8,2,4.00,0,0
+19507,Storm Riders,Rishabh Tewari,3.0,1,15,7,1,2.33,0,0
+19507,Storm Riders,Sameer Kulkarni,3.0,0,10,12,1,4.00,0,0
+19507,Storm Riders,Shobhit Gupta,4.0,1,18,10,3,2.50,0,0
+19507,Storm Riders,Mitul Patel,3.0,0,11,15,3,5.00,0,0
+19507,Storm Riders,Sachin Kamtekar,0.4,0,4,0,1,0.00,0,0
+19507,SAMP XI,Tirth Patel,3.0,0,9,24,0,8.00,1,0
+19507,SAMP XI,Monil Patel,2.0,0,6,6,0,3.00,0,0
+19507,SAMP XI,Akshay P,0.5,0,1,16,0,19.20,1,0
+19511,Maha CC,Sudhanshoo Vashisht,2.2,0,7,18,1,7.71,0,0
+19511,Maha CC,Shah Meer,4.0,0,15,27,6,6.75,2,0
+19511,Maha CC,Rizwan Bajwa,4.0,0,14,13,1,3.25,0,0
+19511,Maha CC,Ishan Shah,3.0,0,13,15,0,5.00,1,0
+19511,Maha CC,Tamaas Khan,2.0,0,7,15,1,7.50,0,0
+19511,Gujarat United XI,Mihir Vaghasia,2.0,0,5,10,1,5.00,3,0
+19511,Gujarat United XI,Parth Bhavsar,4.0,0,13,18,2,4.50,1,0
+19511,Gujarat United XI,Avi Shah,4.0,0,15,26,1,6.50,0,0
+19511,Gujarat United XI,Daksh Patel,4.0,1,19,14,2,3.50,0,0
+19511,Gujarat United XI,Raj Patel,2.0,0,10,10,0,5.00,4,2
+19515,Blue Aces CC,Dheeraj Dubey*,4.0,1,16,31,3,7.75,0,0
+19515,Blue Aces CC,Tharak Ram,4.0,0,14,19,1,4.75,0,0
+19515,Blue Aces CC,Sandip Nandurkar,4.0,0,17,19,3,4.75,6,0
+19515,Blue Aces CC,Prabhakar Vudumula,4.0,0,14,32,0,8.00,0,0
+19515,Newport CC,Gokul Das Maharajan,4.0,0,18,14,3,3.50,0,0
+19515,Newport CC,Emmanuel Samuel Nair,4.0,0,8,26,2,6.50,1,0
+19515,Newport CC,Farukh Manzoor,3.0,0,10,31,0,10.33,2,0
+19515,Newport CC,Narender Reddy Bojja,4.0,0,17,11,4,2.75,1,0
+19515,Newport CC,Saikumar Katepalli,1.0,0,1,20,0,20.00,2,0
+19516,Rowdy Rebels,Soham Kapadia,4.0,0,9,29,4,7.25,1,0
+19516,Rowdy Rebels,Bhavik Surani,4.0,0,16,17,0,4.25,1,1
+19516,Rowdy Rebels,Zoheb Khalid*,3.0,0,8,26,1,8.67,1,0
+19516,Rowdy Rebels,Darshil Mistry,3.0,0,8,23,2,7.67,1,0
+19516,Rowdy Rebels,Zohair Ahmad Siddiui,2.0,0,2,29,1,14.50,0,0
+19516,Mercer Challengers,Deepesh Naidu,2.0,0,9,10,0,5.00,1,0
+19516,Mercer Challengers,Ankur Parekh,3.0,0,8,15,1,5.00,1,0
+19516,Mercer Challengers,Saqi Syed,3.0,0,9,19,2,6.33,0,0
+19516,Mercer Challengers,Sheshank Reddy,4.0,0,12,14,3,3.50,0,0
+19516,Mercer Challengers,Vishal Srivastava,2.5,0,8,17,3,6.00,1,0
+19525,Nj Braves,Swar Shah,4.0,0,14,23,0,5.75,0,0
+19525,Nj Braves,Pranav Patel,2.0,0,4,22,1,11.00,1,0
+19525,Nj Braves,Jenish Shah,4.0,0,19,16,4,4.00,3,0
+19525,Nj Braves,Vipul Patel,4.0,1,20,10,1,2.50,0,0
+19525,Nj Braves,Pradeep Jeyapaul*,2.0,0,5,22,1,11.00,0,0
+19525,Piscataway Avengers,Mit Patel,3.0,0,13,13,1,4.33,2,0
+19525,Piscataway Avengers,Dharmesh Patel,3.4,0,11,24,2,6.55,2,0
+19525,Piscataway Avengers,Harsh Patel,2.0,0,6,13,0,6.50,0,0
+19525,Piscataway Avengers,Krunal Shah,1.0,0,3,10,0,10.00,2,0
+19525,Piscataway Avengers,Rimal Patel*,3.0,0,10,20,1,6.67,0,0
+19525,Piscataway Avengers,Pujan Patel,1.0,0,2,14,1,14.00,0,0
+19533,Gryffindors,Kishan Patel,4.0,0,13,49,1,12.25,4,0
+19533,Gryffindors,Harish Bangera,4.0,0,16,21,0,5.25,2,1
+19533,Gryffindors,Subodh Singh*,4.0,0,15,41,3,10.25,3,0
+19533,Gryffindors,Johncy V,4.0,1,15,23,1,5.75,1,1
+19533,Jersey Titans,Ravin Patel,4.0,0,14,28,2,7.00,2,0
+19533,Jersey Titans,Jay Domadiya*,4.0,0,15,33,2,8.25,1,0
+19533,Jersey Titans,Jay Patel,3.3,1,15,20,4,5.71,8,0
+19533,Jersey Titans,Hitesh Pandya,2.0,0,8,20,2,10.00,3,0
+19538,Juggernaut,Kartik Patel,4.0,0,15,23,3,5.75,3,0
+19538,Juggernaut,Hemant Patel*,4.0,0,16,24,1,6.00,6,0
+19538,Juggernaut,Jenish Patel,3.0,0,6,63,0,21.00,1,1
+19538,Juggernaut,Karan P,4.0,0,16,39,3,9.75,0,0
+19538,Juggernaut,Sandip Amin,1.0,0,6,1,1,1.00,1,0
+19538,PUNJAB XI,Nitesh Tomer,2.0,0,7,24,0,12.00,1,1
+19538,PUNJAB XI,Lovely Singh,2.0,0,3,27,1,13.50,2,0
+19538,PUNJAB XI,Jasmeet Singh,4.0,0,12,26,3,6.50,1,0
+19538,PUNJAB XI,Nasir Khan,4.0,0,8,37,2,9.25,2,0
+19538,PUNJAB XI,Azam Mohammad,4.0,0,12,25,2,6.25,2,0
+19540,Fdu Giants,Kunal Patel,2.0,0,5,34,1,17.00,4,0
+19540,Fdu Giants,Ravish Parekh,4.0,0,11,58,3,14.50,4,0
+19540,Fdu Giants,Basheer Shaik,3.0,0,12,22,0,7.33,0,3
+19540,Fdu Giants,Ankit Chopra*,4.0,0,14,33,4,8.25,3,3
+19540,Fdu Giants,Kartik Patel,3.0,0,9,38,1,12.67,2,0
+19540,Pway Lions,Kush Choksi,4.0,0,16,16,2,4.00,2,0
+19540,Pway Lions,Ankush Patel,2.0,0,6,18,1,9.00,0,0
+19540,Pway Lions,Drumil Amin,4.0,0,9,30,0,7.50,0,0
+19540,Pway Lions,Sagar Patel,3.0,0,8,39,3,13.00,0,0
+19540,Pway Lions,Bhavik Patel,3.0,0,8,15,2,5.00,0,0
+19547,RHG,Raj Patel,4.0,0,18,7,2,1.75,1,0
+19547,RHG,Kevin Shah*,3.0,0,8,27,0,9.00,1,0
+19547,RHG,Zafran Hussain,3.0,0,8,31,0,10.33,1,4
+19547,RHG,Hiren Joshi,3.0,0,11,22,3,7.33,2,0
+19547,RHG,Parth Thakkar,2.3,0,10,7,3,2.80,2,0
+19547,Jetha 11,Jigar D Patel,2.0,0,10,6,3,3.00,0,0
+19547,Jetha 11,Dipal Patel,2.3,0,9,9,2,3.60,0,0
+19547,Jetha 11,Vikas Patel,2.0,0,8,8,4,4.00,4,0
+19547,Jetha 11,Gary Patel,1.0,0,5,2,1,2.00,1,0
+19554,Nj Tigers,Mubassir Mansuri,2.0,0,5,17,1,8.50,3,0
+19554,Nj Tigers,Nasir Mehmood,2.0,1,10,2,2,1.00,0,0
+19554,Nj Tigers,Haider Naveed Akram,2.0,0,6,13,0,6.50,2,0
+19554,Nj Tigers,Rajinder (suraj) Singh,3.0,0,14,15,3,5.00,2,0
+19554,Nj Tigers,Faisal Mehmood*,3.0,0,14,17,4,5.67,2,0
+19554,Youth For Sewa,Aillu N,3.0,0,14,21,1,7.00,6,1
+19554,Youth For Sewa,Ram V*,2.0,0,8,17,0,8.50,7,0
+19554,Youth For Sewa,Anand Vemuri,1.0,0,2,10,0,10.00,0,0
+19554,Youth For Sewa,Eswar Vennapusa,1.2,0,4,17,1,12.75,3,2
+19557,Edison Rebelz,Chintan. Kamdar,3.0,0,8,27,1,9.00,2,0
+19557,Edison Rebelz,Gurmeet Singh,4.0,0,7,28,1,7.00,1,0
+19557,Edison Rebelz,Sourav Mazumder,4.0,0,3,36,0,9.00,2,0
+19557,Edison Rebelz,Ankit Somani,1.0,0,2,11,0,11.00,1,0
+19557,Edison Rebelz,Soumyabrata Paul,3.0,0,5,27,2,9.00,1,0
+19557,Edison Rebelz,Varun Shah,1.0,0,0,11,0,11.00,0,0
+19557,Hudson Hurricanes,Sravan Nekkanti,4.0,0,13,27,1,6.75,2,0
+19557,Hudson Hurricanes,Utkarsh Mishra,4.0,0,14,22,5,5.50,4,0
+19557,Hudson Hurricanes,Ved Arya,4.0,0,10,29,2,7.25,3,1
+19557,Hudson Hurricanes,Aniket Dalal*,2.0,0,3,31,0,15.50,1,1
+19557,Hudson Hurricanes,Rohit Pradhan,2.0,0,5,21,1,10.50,1,0
+19562,Falcons,Sairam Raavi*,4.0,0,11,49,1,12.25,1,0
+19562,Falcons,Rajesh Rachakonda,4.0,0,9,52,1,13.00,1,2
+19562,Falcons,Sai Ritheesh Sudham,4.0,0,14,38,3,9.50,3,1
+19562,Falcons,Manikanta Arumilli,4.0,0,10,31,3,7.75,0,0
+19562,Veerans,Naveen Elangovan*,2.0,0,7,19,1,9.50,1,0
+19562,Veerans,Kamalraj Rajamanickam,3.0,0,9,33,1,11.00,0,0
+19562,Veerans,Uma Maheswara Rao Patibandla,2.0,0,6,24,0,12.00,1,0
+19562,Veerans,Sundip Helchal,4.0,0,15,24,3,6.00,2,1
+19562,Veerans,Amit Sharma,3.0,0,12,14,4,4.67,1,0
+19562,Veerans,Aditya Rathor,1.5,0,6,17,1,9.27,0,0
+19570,Team Highlanders,Ravi Kanth,2.0,0,6,16,0,8.00,6,1
+19570,Team Highlanders,Raja Kuppan,4.0,0,15,17,1,4.25,4,0
+19570,Team Highlanders,Syed Abhinash,3.0,1,11,13,3,4.33,0,0
+19570,Team Highlanders,Manikandan Swaminathan,3.0,0,9,24,0,8.00,0,0
+19570,Team Highlanders,Suresh Ganesan,4.0,1,14,30,2,7.50,0,0
+19570,Plainsboro Eagles,Chandra Koganti,4.0,0,15,19,0,4.75,2,1
+19570,Plainsboro Eagles,Rajesh Paruchuri,4.0,0,8,36,0,9.00,2,0
+19570,Plainsboro Eagles,Bharath Reddy,4.0,0,10,25,3,6.25,3,0
+19570,Plainsboro Eagles,Srinivas Reddy Ch,3.0,0,8,21,0,7.00,0,0
+19571,WCC,Tushar Lenka,2.0,0,8,7,1,3.50,0,0
+19571,WCC,Santosh Thanekar,1.0,0,3,3,0,3.00,0,0
+19571,WCC,Nisar Ahmad,3.0,0,8,21,0,7.00,0,0
+19571,WCC,Nahid Sarkar,3.0,0,12,12,1,4.00,1,0
+19571,WCC,Sai Sudhan,4.0,0,15,18,5,4.50,1,0
+19571,WCC,Harikishore Malireddy,3.0,0,8,15,1,5.00,1,0
+19571,Samudhra Gladiators,Vinit Bharadwaj,3.0,0,10,16,2,5.33,2,0
+19571,Samudhra Gladiators,Harshad Patil,4.0,0,13,18,3,4.50,3,1
+19571,Samudhra Gladiators,Naveen R Sripathi,4.0,1,16,24,2,6.00,3,0
+19571,Samudhra Gladiators,Ankur Chaturvedi,4.0,0,16,10,3,2.50,1,0
+19575,Warriors,Abhishek Patel*,1.0,0,4,2,1,2.00,0,0
+19575,Warriors,Prasad Fernando,4.0,0,14,24,0,6.00,0,0
+19575,Warriors,Mitul Patel,3.0,0,6,37,1,12.33,0,0
+19575,Warriors,Jeet Patel,4.0,0,14,44,4,11.00,8,2
+19575,Warriors,Himanshu Patel,4.0,0,7,38,0,9.50,1,0
+19575,Jersey Boys,Vineet Luthra,4.0,1,18,19,4,4.75,2,0
+19575,Jersey Boys,Sushil Kumar,4.0,0,16,27,2,6.75,2,0
+19575,Jersey Boys,Amit Patel,4.0,0,9,46,2,11.50,6,0
+19575,Jersey Boys,Madhur Kaushik,2.0,0,2,51,0,25.50,1,2
+19575,Jersey Boys,Vikas Chaudhary,0.2,0,0,6,0,18.00,0,0
+19580,Desi Warriors,Nauman Basit,4.0,1,14,41,1,10.25,1,1
+19580,Desi Warriors,Sarbjitsingh Sahota,4.0,0,13,34,1,8.50,2,1
+19580,Desi Warriors,Rakesh Kar,1.0,0,3,13,0,13.00,0,1
+19580,Desi Warriors,Partha Chatterjee,3.0,0,10,24,0,8.00,2,0
+19580,Desi Warriors,Sai Kancharla,4.0,0,12,41,1,10.25,1,0
+19580,Nj Stars CC,Abdul Wali Siddiqee,3.0,0,5,24,1,8.00,0,0
+19580,Nj Stars CC,Muhammad Haseeb,3.0,0,8,16,1,5.33,1,0
+19580,Nj Stars CC,Zain Pervaiz,4.0,1,14,26,2,6.50,2,0
+19580,Nj Stars CC,Sajeel Ahmed,3.0,1,13,15,2,5.00,0,1
+19580,Nj Stars CC,Vijay Gore,2.0,0,6,18,1,9.00,1,0
+19580,Nj Stars CC,Sunny Desai,1.0,0,2,14,0,14.00,0,0
+19581,Gcc,Sahil Patel,4.0,1,16,18,1,4.50,0,0
+19581,Gcc,Parin Patel (gcc),4.0,0,7,45,2,11.25,6,0
+19581,Gcc,Nirav Rana(gcc),4.0,0,11,39,0,9.75,1,0
+19581,Gcc,Mrugesh Patel,4.0,0,13,29,1,7.25,2,0
+19581,Aryans,Sourabh Guha*,2.0,0,6,21,0,10.50,1,0
+19581,Aryans,Arpit Panchal,2.0,0,5,29,1,14.50,0,0
+19581,Aryans,Ajay Shankar,3.0,0,8,37,0,12.33,5,0
+19581,Aryans,Gajendra Kumar,4.0,0,15,24,2,6.00,2,0
+19581,Aryans,Sudarshan Hegde,4.0,0,10,22,3,5.50,1,0
+19581,Aryans,Aaditya Kumar,0.1,0,0,1,0,6.00,0,0
+19585,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,13,21,0,5.25,5,0
+19585,Parsippany Phoenix XI,Govind Somvanshi,3.0,0,11,9,3,3.00,2,0
+19585,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,14,14,2,3.50,0,0
+19585,Parsippany Phoenix XI,Naveen Rayal,4.0,0,13,32,1,8.00,4,1
+19585,Parsippany Phoenix XI,Jeyaram Ramadoss,1.0,0,3,4,0,4.00,1,0
+19585,Sreeshti,Santosh Mesta,1.0,0,4,2,0,2.00,0,0
+19585,Sreeshti,Mahesh Nagappa,2.0,0,7,12,0,6.00,1,0
+19585,Sreeshti,Sumesh Mathew,4.0,2,19,11,1,2.75,1,0
+19585,Sreeshti,Kamal Choudhury,4.0,1,14,21,2,5.25,0,0
+19585,Sreeshti,Sanjay Dak,2.0,0,7,15,3,7.50,0,0
+19585,Sreeshti,Monang Shah,2.0,0,8,10,1,5.00,1,0
+19585,Sreeshti,Harshal Gupta,1.0,0,4,5,1,5.00,0,0
+19602,WCC,Santosh Thanekar,3.0,0,12,7,2,2.33,1,0
+19602,WCC,Avaneesh Reddy,2.0,0,7,13,0,6.50,1,1
+19602,WCC,Nisar Ahmad*,3.0,3,18,0,3,0.00,0,0
+19602,WCC,Sai Sudhan,3.0,0,10,19,2,6.33,1,1
+19602,WCC,Harikishore Malireddy,2.4,0,10,9,3,3.38,1,0
+19602,Team Highlanders,Ravi Kanth,1.0,0,4,7,1,7.00,2,0
+19602,Team Highlanders,Raja Kuppan,3.4,0,12,27,2,7.36,0,1
+19602,Team Highlanders,Syed Abhinash,2.0,1,6,11,0,5.50,0,0
+19602,Team Highlanders,Manikandan Swaminathan,1.0,0,4,7,0,7.00,0,0
+19615,Jersey Boys,Vikul Rajpara,1.0,0,3,8,1,8.00,0,0
+19615,Jersey Boys,Sushil Kumar,4.0,1,17,16,1,4.00,2,0
+19615,Jersey Boys,Vineet Luthra,3.0,0,8,37,1,12.33,0,0
+19615,Jersey Boys,Vikas Chaudhary,4.0,0,14,24,2,6.00,0,0
+19615,Jersey Boys,Madhur Kaushik,4.0,0,10,35,2,8.75,2,3
+19615,Falcons,Sairam Raavi*,4.0,0,11,37,1,9.25,2,1
+19615,Falcons,Manikanta Arumilli,4.0,0,14,31,3,7.75,3,1
+19615,Falcons,Sai Ritheesh Sudham,3.0,0,7,24,1,8.00,2,0
+19615,Falcons,Pavan Kalyan Bakkani,3.4,0,10,29,1,7.91,3,0
+19621,Edison Rebelz,Sourav Mazumder,4.0,0,7,55,0,13.75,3,0
+19621,Edison Rebelz,Yash Solanki,4.0,0,13,18,1,4.50,0,0
+19621,Edison Rebelz,Ayush Shah,1.0,0,4,9,1,9.00,3,0
+19621,Edison Rebelz,Aditya Shah,2.0,0,3,38,0,19.00,1,0
+19621,Edison Rebelz,Gurmeet Singh,4.0,0,12,20,3,5.00,2,0
+19621,Edison Rebelz,Shalin Patel,1.0,0,3,12,1,12.00,1,0
+19621,Sreeshti,Mahesh Nagappa,2.0,0,8,18,1,9.00,0,0
+19621,Sreeshti,Sumesh Mathew,4.0,0,9,21,2,5.25,1,0
+19621,Sreeshti,Sanjay Dak,3.0,0,6,17,1,5.67,0,0
+19621,Sreeshti,Kamal Choudhury,3.0,0,9,12,2,4.00,0,0
+19621,Sreeshti,Monang Shah,2.0,0,6,10,2,5.00,1,0
+19621,Sreeshti,Anal Patel,1.0,0,3,6,0,6.00,0,0
+19621,Sreeshti,Shuvradeep Mukherjee,1.0,0,2,4,0,4.00,0,0
+19622,Plainsboro Eagles,Chandra Koganti,4.0,0,11,37,2,9.25,1,0
+19622,Plainsboro Eagles,Srinivas Reddy Ch,3.0,0,6,22,0,7.33,0,0
+19622,Plainsboro Eagles,Bharath Reddy,4.0,0,12,24,0,6.00,1,0
+19622,Plainsboro Eagles,Sai Manish Varma Mudunuri,2.0,0,3,31,0,15.50,1,0
+19622,Plainsboro Eagles,Shiva Ungarala,3.0,0,9,23,3,7.67,2,0
+19622,RHG,Baseer Ahmed Mohammed,3.0,0,8,25,0,8.33,1,0
+19622,RHG,Nuvan T,4.0,0,14,16,2,4.00,3,0
+19622,RHG,Hiren Joshi,4.0,1,16,17,4,4.25,2,0
+19622,RHG,Zafran Hussain,4.0,0,11,23,2,5.75,1,0
+19622,RHG,Stavan Patel,1.0,0,1,10,0,10.00,0,0
+19632,Nj Tigers,Naveed Azam,2.0,0,5,40,0,20.00,3,0
+19632,Nj Tigers,Haider Naveed Akram,4.0,1,16,24,0,6.00,1,0
+19632,Nj Tigers,Waqas Choudhary,4.0,0,14,28,2,7.00,3,1
+19632,Nj Tigers,Faisal Mehmood*,4.0,0,10,57,1,14.25,1,0
+19632,Nj Tigers,Saad Naeem,2.0,0,2,39,1,19.50,1,0
+19632,Warriors,Abhishek Patel*,3.0,0,11,18,3,6.00,0,0
+19632,Warriors,Rumit Patel,3.0,0,13,10,2,3.33,0,0
+19632,Warriors,Prasad Fernando,3.0,2,15,8,2,2.67,2,0
+19632,Warriors,Himanshu Patel,2.0,0,10,3,2,1.50,0,1
+19632,Warriors,Dharmik Patel,1.0,0,4,2,0,2.00,0,0
+19632,Warriors,Rakesh Patel,2.0,1,10,2,0,1.00,0,0
+19632,Warriors,Rafe Shaikh,1.0,0,5,4,0,4.00,2,1
+19632,Warriors,Dharmesh Patel,1.0,0,5,2,0,2.00,1,0
+19635,Gcc,Romil Patel (gcc),4.0,0,9,41,1,10.25,4,0
+19635,Gcc,Sahil Patel,4.0,0,10,53,2,13.25,2,0
+19635,Gcc,Nirav Rana(gcc),2.0,0,2,33,0,16.50,0,0
+19635,Gcc,Mrugesh Patel*,2.0,0,4,32,0,16.00,0,0
+19635,Gcc,Sapan Parikh,4.0,0,16,26,2,6.50,3,0
+19635,Nj Stars CC,Abdul Wali Siddiqee,2.0,0,4,19,0,9.50,1,0
+19635,Nj Stars CC,Fahad Kabir,3.0,0,7,23,2,7.67,1,0
+19635,Nj Stars CC,Zain Pervaiz,3.3,0,17,13,3,3.71,0,0
+19635,Nj Stars CC,Muhammad Haseeb,2.0,0,7,11,2,5.50,1,0
+19635,Nj Stars CC,Sajeel Ahmed,2.0,0,8,8,1,4.00,0,0
+19635,Nj Stars CC,Akram Abubakar,1.0,0,4,9,1,9.00,7,0
+19636,Youth For Sewa,Manikanta Raja Kottu,3.0,0,12,25,1,8.33,2,2
+19636,Youth For Sewa,Aillu N,4.0,0,8,51,0,12.75,2,0
+19636,Youth For Sewa,Anand Vemuri,4.0,0,9,50,2,12.50,2,0
+19636,Youth For Sewa,Ammar Ahmed,2.0,0,5,28,2,14.00,2,0
+19636,Youth For Sewa,Nazareth John,1.0,0,2,13,0,13.00,1,0
+19636,Youth For Sewa,Tauseef Ahmed,2.0,0,6,23,1,11.50,2,0
+19636,Jetha 11,Haren Patel,2.0,0,6,27,1,13.50,0,0
+19636,Jetha 11,Dipal Patel*,3.5,0,10,36,6,9.39,5,0
+19636,Jetha 11,Vikas Patel,1.0,0,2,20,1,20.00,0,0
+19636,Jetha 11,Naran Prajapati,3.0,1,10,20,1,6.67,2,1
+19636,Jetha 11,Kishan Patel,1.0,0,4,8,0,8.00,1,1
+19636,Jetha 11,Jignesh Mukhi Patel,1.0,0,0,16,0,16.00,0,0
+19638,Aryans,Sourabh Guha*,4.0,0,8,30,2,7.50,0,0
+19638,Aryans,Ajay Shankar,4.0,0,11,24,1,6.00,3,0
+19638,Aryans,Gajendra Kumar,4.0,0,10,46,3,11.50,3,1
+19638,Aryans,Sudarshan Hegde,4.0,0,10,41,2,10.25,4,0
+19638,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,10,38,2,9.50,3,0
+19638,Samudhra Gladiators,Naveen R Sripathi,4.0,1,18,12,2,3.00,0,0
+19638,Samudhra Gladiators,Dileep Reddy,1.0,0,2,18,0,18.00,0,0
+19638,Samudhra Gladiators,Sandeep Shetty,3.0,0,9,21,2,7.00,1,0
+19638,Samudhra Gladiators,Harshad Patil,3.2,1,14,11,4,3.30,2,0
+19642,Veerans,Naveen Elangovan*,4.0,0,13,22,2,5.50,1,0
+19642,Veerans,Kamalraj Rajamanickam,4.0,0,12,13,2,3.25,0,0
+19642,Veerans,Sundip Helchal,4.0,0,12,21,3,5.25,3,0
+19642,Veerans,Uma Maheswara Rao Patibandla,2.0,0,7,16,1,8.00,1,0
+19642,Veerans,Aditya Rathor,2.0,0,4,10,0,5.00,2,0
+19642,Hudson Hurricanes,Sravan Nekkanti,4.0,0,15,17,1,4.25,2,0
+19642,Hudson Hurricanes,Aniket Dalal*,4.0,0,13,28,2,7.00,2,2
+19642,Hudson Hurricanes,Pratik Mane,3.3,0,13,26,3,7.43,10,0
+19642,Hudson Hurricanes,Ved Arya,3.0,0,10,12,1,4.00,0,0
+19645,Parsippany Phoenix XI,Govind Somvanshi,4.0,0,15,12,1,3.00,1,0
+19645,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,11,35,0,8.75,0,0
+19645,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,9,45,2,11.25,0,0
+19645,Parsippany Phoenix XI,Naveen Rayal,4.0,0,13,48,6,12.00,8,1
+19645,Desi Warriors,Varun Gurram,1.0,0,2,7,0,7.00,0,0
+19645,Desi Warriors,Rakesh Kotha,3.0,0,15,7,5,2.33,1,0
+19645,Desi Warriors,Harshil Patel,1.0,0,3,15,2,15.00,2,0
+19645,Desi Warriors,Sai Kancharla,2.0,0,10,5,0,2.50,0,0
+19645,Desi Warriors,Rakesh Kar,2.4,0,12,5,2,1.88,0,1
+19661,Juggernaut,Kailash Naithani,4.0,0,15,23,3,5.75,1,0
+19661,Juggernaut,Jatan Vaidya,4.0,0,8,33,2,8.25,2,0
+19661,Juggernaut,Jenish Patel,4.0,0,13,32,3,8.00,3,2
+19661,Juggernaut,Karan P,3.0,0,4,27,1,9.00,3,0
+19661,Juggernaut,Sandip Amin,1.0,0,1,11,0,11.00,0,0
+19661,Blasters,Anish Patel,4.0,0,18,21,3,5.25,0,1
+19661,Blasters,Priyankk Patel,3.0,0,14,7,2,2.33,0,0
+19661,Blasters,Harsh Amin,2.0,0,3,27,2,13.50,2,0
+19661,Blasters,Manthan Patel*,1.0,0,1,19,0,19.00,0,1
+19661,Blasters,Gunjan Patel,1.0,0,5,6,2,6.00,0,0
+19663,Blue Aces CC,Dheeraj Dubey*,2.0,0,3,24,1,12.00,0,0
+19663,Blue Aces CC,Tharak Ram,3.0,0,12,9,2,3.00,0,0
+19663,Blue Aces CC,Sandip Nandurkar,3.2,1,18,11,4,3.30,1,0
+19663,Blue Aces CC,Rajendra Prasad Challa,3.0,0,12,17,2,5.67,0,0
+19663,Blue Aces CC,Prabhakar Vudumula,1.0,0,4,8,0,8.00,1,0
+19663,Gujarat United XI,Avi Shah,3.4,0,13,20,4,5.45,0,0
+19663,Gujarat United XI,Mihir Vaghasia,1.0,0,4,11,0,11.00,1,0
+19663,Gujarat United XI,Daksh Patel,3.0,0,9,34,2,11.33,0,0
+19663,Gujarat United XI,Karan Patel,1.0,0,3,9,0,9.00,1,0
+19670,Gryffindors,Sunil Satghare,1.0,0,5,3,0,3.00,2,0
+19670,Gryffindors,Johncy V,4.0,1,15,15,2,3.75,1,0
+19670,Gryffindors,Subodh Singh*,3.5,0,16,13,7,3.39,0,0
+19670,Gryffindors,Harish Bangera,4.0,0,17,23,0,5.75,1,1
+19670,Gryffindors,Ankit Patel,1.0,0,2,13,0,13.00,0,1
+19670,Gryffindors,Siddhartha Nayak,1.0,0,3,13,1,13.00,0,0
+19670,Plainsboro Knights,Raghuraman Varadharajan,4.0,0,15,23,4,5.75,3,0
+19670,Plainsboro Knights,Ankit Parikh,4.0,0,19,21,1,5.25,5,0
+19670,Plainsboro Knights,Anil Poply,4.0,1,19,13,2,3.25,2,0
+19670,Plainsboro Knights,Lokesh Prabakaran,1.4,0,4,24,0,14.40,3,0
+19678,Jersey Titans,Mitul Patel,4.0,0,5,31,0,7.75,2,0
+19678,Jersey Titans,Milan Dave,4.0,0,9,33,0,8.25,2,1
+19678,Jersey Titans,Ravin Patel,4.0,0,15,25,3,6.25,0,0
+19678,Jersey Titans,Jay Domadiya*,4.0,0,10,27,3,6.75,3,0
+19678,Piscataway Avengers,Mit Patel,4.0,0,18,6,2,1.50,0,0
+19678,Piscataway Avengers,Ujjaval Patel,2.0,0,8,17,1,8.50,2,0
+19678,Piscataway Avengers,Dharmesh Patel,3.0,0,8,21,0,7.00,0,0
+19678,Piscataway Avengers,Harsh Patel,3.3,0,14,13,3,3.71,3,0
+19678,Piscataway Avengers,Rimal Patel*,2.0,1,10,8,4,4.00,1,0
+19679,Storm Riders,Rishabh Tewari,2.4,0,14,4,1,1.50,2,0
+19679,Storm Riders,Sameer Kulkarni,1.0,0,3,11,2,11.00,0,0
+19679,Storm Riders,Shobhit Gupta,2.0,0,7,11,1,5.50,0,0
+19679,Storm Riders,Apurv Jain* †,4.0,0,17,7,1,1.75,0,0
+19679,Storm Riders,Satish Sarode,2.0,0,8,15,0,7.50,2,1
+19679,Storm Riders,Mitul Patel,2.0,0,11,2,3,1.00,1,0
+19679,Storm Riders,Sabeel Shaikh,1.0,0,4,3,1,3.00,1,0
+19679,Rowdy Rebels,Anoop Hegde*,1.0,0,2,8,0,8.00,1,0
+19679,Rowdy Rebels,Naresh Patel,4.0,0,17,10,4,2.50,0,0
+19679,Rowdy Rebels,Soham Kapadia,2.0,0,8,11,0,5.50,1,0
+19679,Rowdy Rebels,Darshil Mistry,2.0,0,5,15,0,7.50,0,0
+19679,Rowdy Rebels,Muhammad Sajid,1.0,0,2,14,0,14.00,2,0
+19685,Nj Braves,Swar Shah,4.0,0,10,19,1,4.75,2,0
+19685,Nj Braves,Menak Patel,2.0,1,8,14,1,7.00,0,0
+19685,Nj Braves,Jenish Shah,4.0,0,12,25,0,6.25,2,0
+19685,Nj Braves,Vipul Patel,4.0,0,13,19,1,4.75,1,0
+19685,Nj Braves,Pranav Patel,2.0,0,4,21,1,10.50,1,1
+19685,F5,Subramaniam Sampath,1.5,0,5,11,2,6.00,0,0
+19685,F5,Sujesh Nair,3.0,0,9,24,0,8.00,1,0
+19685,F5,Vimalendu Kumar,4.0,0,12,24,1,6.00,3,0
+19685,F5,Harihara Ganeshan,2.0,0,5,15,1,7.50,0,0
+19685,F5,⁠thulasi Thota,1.0,0,1,26,0,26.00,1,0
+19687,Newport CC,Mahendran Prakasam,4.0,0,15,14,2,3.50,0,0
+19687,Newport CC,Salam Shamlan,4.0,0,14,24,3,6.00,3,0
+19687,Newport CC,Emmanuel Samuel Nair,4.0,0,17,7,2,1.75,0,0
+19687,Newport CC,Gokul Das Maharajan,4.0,0,17,9,2,2.25,2,0
+19687,SAMP XI,Ankit Patel*,2.0,0,5,22,1,11.00,0,0
+19687,SAMP XI,Ziaullah Khan,2.0,0,8,6,0,3.00,0,1
+19687,SAMP XI,Hiren Patel,2.0,0,7,8,1,4.00,0,0
+19687,SAMP XI,Jaydev Zala,1.0,0,2,8,0,8.00,0,0
+19687,SAMP XI,Arya Patel,0.2,0,0,13,0,39.00,1,0
+19692,Maha CC,Dhrumil Shah,2.0,0,5,27,0,13.50,1,0
+19692,Maha CC,Ishan Shah,4.0,0,13,29,3,7.25,1,1
+19692,Maha CC,Sudhanshoo Vashisht,4.0,0,15,27,1,6.75,5,0
+19692,Maha CC,Raza Malik,4.0,0,13,27,2,6.75,3,1
+19692,Maha CC,Shah Meer,1.0,0,2,16,0,16.00,2,0
+19692,Maha CC,Rizwan Bajwa,1.0,0,1,19,0,19.00,1,0
+19692,Pway Lions,Kush Choksi,4.0,0,12,26,2,6.50,0,0
+19692,Pway Lions,Nish Patel,4.0,0,13,34,3,8.50,1,0
+19692,Pway Lions,Sagar Patel,4.0,0,14,18,2,4.50,0,0
+19692,Pway Lions,Bhavik Patel,3.0,0,11,9,2,3.00,1,0
+19698,11spartans,Neel Patel-13,4.0,1,20,9,2,2.25,0,0
+19698,11spartans,Soham Brahmbhatt,4.0,0,13,22,2,5.50,3,0
+19698,11spartans,Krunal Patel,4.0,0,15,13,4,3.25,1,0
+19698,11spartans,Pratik Patel (savali),2.4,0,8,16,1,6.00,2,0
+19698,Mercer Challengers,Deepesh Naidu,1.0,0,1,18,0,18.00,0,0
+19698,Mercer Challengers,Vishal Srivastava,2.0,0,7,13,2,6.50,0,0
+19698,Mercer Challengers,Samit Kumbhani,1.0,0,4,12,1,12.00,2,0
+19698,Mercer Challengers,Sheshank Reddy,2.4,0,11,19,1,7.12,1,0
+19698,Mercer Challengers,Sai Deepak Dogiparthi,2.0,2,12,0,2,0.00,0,0
+19699,PUNJAB XI,Nitesh Tomer,4.0,0,9,41,2,10.25,4,1
+19699,PUNJAB XI,Kashif Khan,2.0,0,3,34,0,17.00,1,0
+19699,PUNJAB XI,Jasmeet Singh*,4.0,0,12,29,3,7.25,0,0
+19699,PUNJAB XI,Nasir Khan,4.0,0,14,14,2,3.50,0,1
+19699,PUNJAB XI,Amit Kumar,2.0,0,3,27,1,13.50,1,0
+19699,Fdu Giants,Sunit Shirke,2.0,0,7,15,0,7.50,0,0
+19699,Fdu Giants,Gautam Ahuja,1.0,0,3,16,0,16.00,0,1
+19699,Fdu Giants,Ankit Chopra*,3.2,1,14,10,4,3.00,1,0
+19699,Fdu Giants,Viral Parekh,4.0,1,16,24,4,6.00,2,1
+19699,Fdu Giants,Gowtham Kadaba,2.0,0,9,20,1,10.00,4,0
+19699,Fdu Giants,Basheer Shaik,2.0,1,9,4,0,2.00,0,1
+19715,Falcons,Sairam Raavi*,4.0,0,9,47,1,11.75,10,0
+19715,Falcons,Sai Ritheesh Sudham,4.0,0,12,37,0,9.25,2,0
+19715,Falcons,Manikanta Arumilli,1.0,0,2,19,0,19.00,0,0
+19715,Falcons,Srinath Gentyala,4.0,0,11,39,3,9.75,5,2
+19715,Falcons,Ajith Nalluri,3.0,0,6,29,1,9.67,6,0
+19715,11spartans,Neel Patel-13,4.0,0,19,7,4,1.75,2,0
+19715,11spartans,Krunal Patel,2.0,0,4,23,1,11.50,0,0
+19715,11spartans,Pratik Patel (savali),3.2,0,14,8,4,2.40,0,0
+19715,11spartans,Rajan Patel,2.0,0,5,13,1,6.50,0,0
+19715,11spartans,Ravi Rathod,2.0,0,5,8,0,4.00,1,0
+19721,Youth For Sewa,Manikanta Raja Kottu,3.0,0,10,14,2,4.67,3,0
+19721,Youth For Sewa,Venkata Voona,2.5,0,14,3,4,1.06,0,0
+19721,Youth For Sewa,Aillu N,2.0,0,11,6,2,3.00,5,0
+19721,SAMP XI,Parag Patel,1.0,0,3,13,0,13.00,0,0
+19721,SAMP XI,Monil Patel,1.0,0,3,5,0,5.00,2,0
+19721,SAMP XI,Vipin Patel,0.3,0,0,10,0,20.00,2,0
+19725,Desi Warriors,Varun Gurram,4.0,0,10,34,2,8.50,3,0
+19725,Desi Warriors,Rigved Nagarkar,4.0,0,15,18,1,4.50,4,0
+19725,Desi Warriors,Sarbjitsingh Sahota,2.0,0,8,13,0,6.50,0,1
+19725,Desi Warriors,Partha Chatterjee,2.0,0,7,18,0,9.00,2,0
+19725,Desi Warriors,Harshil Patel,2.0,0,7,6,2,3.00,0,0
+19725,Desi Warriors,Rakesh Kar,2.0,0,5,13,1,6.50,1,0
+19725,F5,Subramaniam Sampath,2.0,0,6,7,1,3.50,0,0
+19725,F5,Deniz Baby,4.0,0,7,25,2,6.25,2,0
+19725,F5,Rixon Devassy,3.1,0,16,19,3,6.00,9,1
+19725,F5,Sujesh Nair,4.0,1,17,12,4,3.00,2,0
+19725,F5,Varun Athi,1.0,0,5,6,0,6.00,2,0
+19725,F5,⁠thulasi Thota,1.0,0,2,9,0,9.00,0,0
+19729,Blue Aces CC,Rajendra Prasad Challa,3.1,0,12,17,1,5.37,0,0
+19729,Blue Aces CC,Tharak Ram,4.0,0,15,23,4,5.75,0,0
+19729,Blue Aces CC,Dheeraj Dubey*,3.0,0,6,32,1,10.67,0,0
+19729,Blue Aces CC,Sandip Nandurkar,3.0,0,10,25,2,8.33,3,0
+19729,Blue Aces CC,Prabhakar Vudumula,1.0,0,3,13,1,13.00,0,0
+19729,RHG,Kevin Shah,4.0,0,10,30,1,7.50,0,0
+19729,RHG,Hiren Joshi,4.0,0,13,20,3,5.00,1,0
+19729,RHG,Upjeet Singh,4.0,0,11,16,1,4.00,1,1
+19729,RHG,Baseer Ahmed Mohammed,4.0,0,14,29,3,7.25,0,0
+19730,Sreeshti,Sumesh Mathew,4.0,0,8,43,0,10.75,5,0
+19730,Sreeshti,Sanjay Dak,4.0,0,14,18,1,4.50,2,0
+19730,Sreeshti,Monang Shah,4.0,0,13,20,0,5.00,1,0
+19730,Sreeshti,Kamal Choudhury,4.0,0,14,22,5,5.50,1,0
+19730,Piscataway Avengers,Jignesh Patel,3.0,0,10,8,1,2.67,0,0
+19730,Piscataway Avengers,Dharmesh Patel,3.0,0,11,13,0,4.33,0,0
+19730,Piscataway Avengers,Sherry Singh,3.0,0,10,16,3,5.33,0,0
+19730,Piscataway Avengers,Ujjaval Patel,3.0,0,11,17,3,5.67,2,1
+19730,Piscataway Avengers,Rimal Patel*,4.0,1,15,22,2,5.50,3,0
+19736,Warriors,Saurabh Patel,1.0,0,5,2,1,2.00,0,1
+19736,Warriors,Dharmesh Patel,3.0,0,11,11,2,3.67,3,1
+19736,Warriors,Gaurang Rana,3.0,0,10,16,1,5.33,0,1
+19736,Warriors,Prasad Fernando,4.0,1,18,14,3,3.50,2,0
+19736,Warriors,Jeet Patel,4.0,0,12,19,3,4.75,2,0
+19736,Warriors,Rafe Shaikh,1.0,0,4,10,0,10.00,0,1
+19736,Rowdy Rebels,Bhavik Surani,2.0,0,6,14,1,7.00,2,0
+19736,Rowdy Rebels,Soham Kapadia,2.0,0,4,27,0,13.50,1,0
+19736,Rowdy Rebels,Darshil Mistry,1.0,0,3,10,0,10.00,1,0
+19736,Rowdy Rebels,Naresh Patel,2.1,0,4,22,1,10.15,0,0
+19738,Hudson Hurricanes,Rohit Pradhan,2.0,0,4,13,0,6.50,1,0
+19738,Hudson Hurricanes,Rohith Kodangal Varala,1.0,0,1,5,0,5.00,0,0
+19738,Hudson Hurricanes,Aniket Dalal*,4.0,1,16,16,2,4.00,1,0
+19738,Hudson Hurricanes,Ved Arya,3.0,0,10,11,2,3.67,1,0
+19738,Hudson Hurricanes,Sravan Nekkanti,4.0,1,21,5,3,1.25,1,0
+19738,Hudson Hurricanes,Pratik Mane,2.0,0,8,9,1,4.50,0,0
+19738,Gryffindors,Subodh Singh*,4.0,0,15,16,4,4.00,2,0
+19738,Gryffindors,Harish Bangera,4.0,1,18,14,1,3.50,2,0
+19738,Gryffindors,Johncy V,3.0,0,14,16,1,5.33,1,1
+19738,Gryffindors,Sunil Satghare,2.0,0,6,15,1,7.50,1,0
+19738,Gryffindors,Siddhartha Nayak,1.0,0,4,2,1,2.00,0,0
+19745,Fdu Giants,Lucky Pk,2.0,0,3,19,0,9.50,0,0
+19745,Fdu Giants,Sunit Shirke,4.0,0,11,27,2,6.75,1,0
+19745,Fdu Giants,Gaurav Gupta,2.0,0,5,20,0,10.00,0,1
+19745,Fdu Giants,Ankit Chopra,4.0,0,13,25,2,6.25,0,0
+19745,Fdu Giants,Kartik Patel,3.0,0,9,16,2,5.33,1,0
+19745,Fdu Giants,Dhruv Patel,1.0,0,4,9,3,9.00,2,0
+19745,Samudhra Gladiators,Naveen R Sripathi,4.0,0,16,11,2,2.75,2,0
+19745,Samudhra Gladiators,Ankur Chaturvedi,3.2,0,10,22,2,6.60,0,0
+19745,Samudhra Gladiators,Sandeep Shetty,3.0,0,12,20,4,6.67,5,0
+19745,Samudhra Gladiators,Suraj Pai Madhukar,2.0,0,6,6,0,3.00,0,0
+19745,Samudhra Gladiators,Harshad Patil,2.0,1,8,8,2,4.00,2,0
+19751,Gcc,Sahil Patel,4.0,0,13,33,0,8.25,5,0
+19751,Gcc,Parin Patel (gcc),4.0,0,14,19,2,4.75,0,0
+19751,Gcc,Priten Patel (gcc),2.0,0,4,29,1,14.50,6,0
+19751,Gcc,Mrugesh Patel*,4.0,0,14,22,3,5.50,3,0
+19751,Gcc,Karan Patel,2.0,0,7,18,2,9.00,2,0
+19751,Juggernaut,Hemant Patel*,2.0,0,8,19,0,9.50,0,1
+19751,Juggernaut,Kailash Naithani,3.0,0,11,26,0,8.67,6,0
+19751,Juggernaut,Jatan Vaidya,2.0,0,5,26,0,13.00,1,0
+19751,Juggernaut,Karan P,3.0,0,9,26,0,8.67,1,0
+19751,Juggernaut,Sandip Amin,2.5,0,7,28,4,9.88,2,1
+19760,WCC,Tushar Lenka,2.0,0,10,3,2,1.50,1,0
+19760,WCC,Nahid Sarkar,4.0,0,13,47,1,11.75,0,0
+19760,WCC,Nisar Ahmad,4.0,0,17,18,1,4.50,2,0
+19760,WCC,Harikishore Malireddy,1.0,0,3,11,0,11.00,0,0
+19760,WCC,Sarwar Ali Shah,3.0,0,10,19,0,6.33,1,0
+19760,WCC,Sai Sudhan,2.0,0,4,26,0,13.00,0,0
+19760,Pway Lions,Nish Patel,4.0,1,19,18,3,4.50,1,1
+19760,Pway Lions,Sagar Patel,4.0,0,17,19,4,4.75,1,0
+19760,Pway Lions,Bhavik Patel,3.1,0,14,21,2,6.63,1,0
+19760,Pway Lions,Dhaivat Patel,3.0,1,12,26,1,8.67,0,0
+19761,Edison Rebelz,Zubin Shah,4.0,0,13,22,0,5.50,0,0
+19761,Edison Rebelz,Imran Khan,1.0,0,4,10,0,10.00,0,0
+19761,Edison Rebelz,Yash Solanki,4.0,0,11,16,1,4.00,0,0
+19761,Edison Rebelz,Chintan. Kamdar,4.0,0,15,23,2,5.75,5,0
+19761,Edison Rebelz,Ritwik Roy,3.0,0,8,26,3,8.67,1,2
+19761,Jersey Titans,Mitul Patel,3.0,0,11,14,2,4.67,3,0
+19761,Jersey Titans,Jay Patel,2.1,0,9,12,3,5.54,2,0
+19761,Jersey Titans,Jay Domadiya*,4.0,0,13,13,1,3.25,1,0
+19761,Jersey Titans,Ravin Patel,3.0,0,12,10,3,3.33,1,0
+19771,Mercer Challengers,Deepesh Naidu,4.0,0,7,24,1,6.00,0,0
+19771,Mercer Challengers,Saqi Syed,4.0,0,15,23,3,5.75,1,0
+19771,Mercer Challengers,Samit Kumbhani,3.0,0,7,29,1,9.67,0,0
+19771,Mercer Challengers,Sheshank Reddy,3.0,0,12,21,1,7.00,0,0
+19771,Mercer Challengers,Sai Deepak Dogiparthi,2.0,0,7,19,0,9.50,0,1
+19771,Jersey Boys,Vineet Luthra,4.0,1,16,9,1,2.25,1,0
+19771,Jersey Boys,Sushil Kumar,4.0,0,12,23,4,5.75,0,0
+19771,Jersey Boys,Vikul Rajpara,1.0,0,1,8,0,8.00,0,0
+19771,Jersey Boys,Vikas Chaudhary,2.0,0,7,15,0,7.50,1,2
+19771,Jersey Boys,Madhur Kaushik,1.0,0,3,9,0,9.00,0,1
+19771,Jersey Boys,Fenil Shah*,4.0,0,13,28,4,7.00,1,0
+19775,Plainsboro Eagles,Srinivas Reddy Ch,3.0,0,11,20,2,6.67,0,0
+19775,Plainsboro Eagles,Bhargav Reddy Napa*,4.0,0,14,27,1,6.75,0,0
+19775,Plainsboro Eagles,Shiva Ungarala,4.0,0,12,24,3,6.00,1,0
+19775,Plainsboro Eagles,Bharath Reddy,4.0,0,12,19,1,4.75,0,0
+19775,Plainsboro Eagles,Tushar Choksi,1.0,0,0,10,1,10.00,2,0
+19775,Gujarat United XI,Parth Bhavsar,4.0,0,15,10,1,2.50,0,0
+19775,Gujarat United XI,Mihir Vaghasia,1.0,0,1,10,0,10.00,1,0
+19775,Gujarat United XI,Parth Patel,2.5,0,6,25,0,8.82,3,0
+19775,Gujarat United XI,Mihir Patel,1.0,0,6,1,2,1.00,0,1
+19775,Gujarat United XI,Avi Shah,3.0,0,6,29,1,9.67,1,0
+19775,Gujarat United XI,Daksh Patel,4.0,0,9,26,2,6.50,0,0
+19781,Storm Riders,Sameer Kulkarni,2.0,0,8,6,2,3.00,0,0
+19781,Storm Riders,Apurv Jain* †,2.1,0,5,8,2,3.69,0,0
+19781,Storm Riders,Shreyas Najan,3.0,0,10,17,0,5.67,0,0
+19781,Storm Riders,Rishabh Tewari,4.0,0,18,12,2,3.00,1,0
+19781,Storm Riders,Mitul Patel,4.0,3,23,1,3,0.25,0,0
+19781,Nj Tigers,Amad Babar,1.0,0,1,6,0,6.00,1,0
+19781,Nj Tigers,Haider Naveed Akram,3.0,0,8,18,1,6.00,2,0
+19781,Nj Tigers,Nasir Mehmood,1.0,0,2,7,0,7.00,0,1
+19781,Nj Tigers,Waqas Choudhary,1.0,0,4,7,1,7.00,0,0
+19781,Nj Tigers,Mubassir Mansuri,0.4,0,0,8,0,12.00,1,0
+19789,Newport CC,Salam Shamlan,1.0,0,3,4,0,4.00,1,0
+19789,Newport CC,Narender Reddy Bojja,4.0,0,11,30,1,7.50,1,1
+19789,Newport CC,Gokul Das Maharajan,4.0,0,12,40,1,10.00,5,1
+19789,Newport CC,Emmanuel Samuel Nair,4.0,0,9,49,0,12.25,0,0
+19789,Newport CC,Arun Prasad G*,3.0,0,11,18,3,6.00,3,0
+19789,Jetha 11,Dipal Patel,3.2,0,15,16,3,4.80,1,0
+19789,Jetha 11,Haren Patel,3.0,0,6,27,2,9.00,1,0
+19789,Jetha 11,Eijaz Mulla,4.0,0,12,28,4,7.00,2,0
+19789,Jetha 11,Gary Patel,2.0,0,7,8,1,4.00,0,0
+19795,Blasters,Anish Patel,3.0,0,9,21,2,7.00,0,0
+19795,Blasters,Ridham Shah,1.0,0,3,15,0,15.00,2,0
+19795,Blasters,Neel Patel-24,3.0,0,9,18,2,6.00,2,0
+19795,Blasters,Jay Patel (jp),4.0,0,12,33,1,8.25,3,0
+19795,Blasters,Priyankk Patel,1.0,0,2,15,0,15.00,1,0
+19795,Blasters,Harsh Amin,4.0,0,11,31,2,7.75,0,0
+19795,Nj Stars CC,Muhammad Haseeb,4.0,0,16,25,2,6.25,1,0
+19795,Nj Stars CC,Vijay Gore,1.0,0,4,4,0,4.00,1,0
+19795,Nj Stars CC,Zain Pervaiz,4.0,1,16,20,4,5.00,0,0
+19795,Nj Stars CC,Sajeel Ahmed,4.0,0,8,41,0,10.25,1,0
+19795,Nj Stars CC,Akram Abubakar,3.0,0,11,28,0,9.33,11,0
+19799,Parsippany Phoenix XI,Govind Somvanshi,3.0,0,7,27,1,9.00,0,0
+19799,Parsippany Phoenix XI,Raghuveer Bethelli,4.0,0,15,9,3,2.25,0,0
+19799,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,14,18,2,4.50,1,0
+19799,Parsippany Phoenix XI,Naveen Rayal,4.0,0,16,26,3,6.50,2,0
+19799,Parsippany Phoenix XI,Jeyaram Ramadoss,0.2,0,2,0,1,0.00,0,0
+19799,Nj Braves,Jenish Shah,4.0,1,20,8,2,2.00,1,0
+19799,Nj Braves,Vipul Patel,4.0,0,16,16,0,4.00,0,0
+19799,Nj Braves,Swar Shah,4.0,0,13,25,3,6.25,0,0
+19799,Nj Braves,Pranav Patel,2.0,0,3,20,0,10.00,2,0
+19799,Nj Braves,Vinoth Suseendran †,2.0,1,10,12,0,6.00,0,0
+19800,Veerans,Naveen Elangovan*,4.0,1,17,9,1,2.25,2,0
+19800,Veerans,Kamalraj Rajamanickam,4.0,0,12,34,3,8.50,1,0
+19800,Veerans,Sundip Helchal,4.0,0,13,20,3,5.00,1,0
+19800,Veerans,Shabbeer Syed,1.0,0,3,9,0,9.00,0,0
+19800,Veerans,Aditya Rathor,3.0,0,14,12,3,4.00,2,0
+19800,Plainsboro Knights,Raghuraman Varadharajan,4.0,0,14,18,0,4.50,1,0
+19800,Plainsboro Knights,Ankit Parikh,4.0,0,15,24,1,6.00,0,1
+19800,Plainsboro Knights,Lokesh Prabakaran,2.0,0,9,14,1,7.00,2,0
+19800,Plainsboro Knights,Gowtham Akula,2.0,0,6,11,1,5.50,0,0
+19800,Plainsboro Knights,Chinmaya Sahu,3.0,0,8,18,1,6.00,1,0
+19802,Aryans,Arpit Panchal,2.0,0,8,11,1,5.50,2,0
+19802,Aryans,Sourabh Guha*,2.0,0,6,18,1,9.00,0,0
+19802,Aryans,Gajendra Kumar,4.0,0,10,34,2,8.50,4,0
+19802,Aryans,Sudarshan Hegde,4.0,0,17,8,4,2.00,1,0
+19802,Aryans,Ajay Shankar,4.0,0,13,20,1,5.00,1,0
+19802,PUNJAB XI,Azam Mohammad,2.0,0,7,21,0,10.50,2,0
+19802,PUNJAB XI,Jasmeet Singh,3.5,0,9,36,2,9.39,0,0
+19802,PUNJAB XI,Lovely Singh,2.0,0,5,18,1,9.00,0,0
+19802,PUNJAB XI,Nasir Khan,3.0,1,10,17,0,5.67,1,0
+19824,Edison Rebelz,Ashish Rout,2.0,0,15,20,2,10.00,1,0
+19824,Edison Rebelz,Ankit Somani,2.0,0,3,30,0,15.00,4,0
+19824,Edison Rebelz,Imran Khan,4.0,0,12,24,0,6.00,4,0
+19824,Edison Rebelz,Gurmeet Singh,4.0,0,11,30,1,7.50,1,0
+19824,Edison Rebelz,Yash Solanki,4.0,0,3,20,1,5.00,0,0
+19824,Plainsboro Knights,Raghuraman Varadharajan,2.0,1,9,3,1,1.50,0,0
+19824,Plainsboro Knights,Ankit Parikh,2.0,0,9,6,1,3.00,0,0
+19824,Plainsboro Knights,Lokesh Prabakaran,3.0,0,13,11,2,3.67,0,0
+19824,Plainsboro Knights,Chinmaya Sahu,2.0,0,9,4,2,2.00,1,0
+19824,Plainsboro Knights,Gowtham Akula,2.0,0,6,12,0,6.00,0,0
+19824,Plainsboro Knights,Siva Kandivalasa,2.0,0,8,5,3,2.50,0,1
+19828,Jetha 11,Jigar D Patel,2.0,0,10,3,0,1.50,1,0
+19828,Jetha 11,Eijaz Mulla,4.0,0,17,15,4,3.75,2,0
+19828,Jetha 11,Dipal Patel,3.0,1,14,7,0,2.33,0,0
+19828,Jetha 11,Gary Patel,2.3,0,9,10,3,4.00,0,1
+19828,Jetha 11,Divyesh Patel,2.0,0,9,7,3,3.50,3,0
+19828,Gujarat United XI,Mihir Vaghasia,1.0,0,3,8,0,8.00,1,0
+19828,Gujarat United XI,Avi Shah,3.0,1,12,13,1,4.33,0,0
+19828,Gujarat United XI,Daksh Patel,2.0,0,5,11,1,5.50,0,1
+19828,Gujarat United XI,Rohang Patel,1.0,0,1,6,0,6.00,1,0
+19828,Gujarat United XI,Tirth Patel (jr),0.2,0,1,5,0,15.00,1,0
+19836,WCC,Sai Sudhan,4.0,0,14,23,3,5.75,2,0
+19836,WCC,Nahid Sarkar,2.0,1,8,4,1,2.00,0,0
+19836,WCC,Nisar Ahmad*,2.0,0,8,14,0,7.00,0,0
+19836,WCC,Harikishore Malireddy,3.1,1,17,4,5,1.26,2,0
+19836,WCC,Sarwar Ali Shah,3.0,0,12,14,1,4.67,2,0
+19836,PUNJAB XI,Jasmeet Singh,3.0,0,12,7,1,2.33,0,0
+19836,PUNJAB XI,Nasir Khan,3.0,0,5,22,0,7.33,1,0
+19836,PUNJAB XI,Azam Mohammad,1.0,0,3,9,1,9.00,0,0
+19836,PUNJAB XI,Lovely Singh,1.5,0,6,19,1,10.36,4,0
+19836,PUNJAB XI,Sunny Singh,1.0,0,3,3,0,3.00,0,0
+19847,Jersey Titans,Mitul Patel,4.0,0,15,30,3,7.50,3,1
+19847,Jersey Titans,Pavan Patel,3.0,0,8,22,1,7.33,6,0
+19847,Jersey Titans,Jay Domadiya*,4.0,0,15,14,0,3.50,2,0
+19847,Jersey Titans,Ravin Patel,4.0,0,14,13,3,3.25,1,0
+19847,Jersey Titans,Krunal Patel,0.5,0,2,11,1,13.20,3,0
+19847,Parsippany Phoenix XI,Satish Kumar Durgam,3.0,0,12,11,1,3.67,2,0
+19847,Parsippany Phoenix XI,Naveen Rayal*,4.0,0,15,23,2,5.75,1,0
+19847,Parsippany Phoenix XI,Govind Somvanshi,1.0,0,2,14,0,14.00,1,0
+19847,Parsippany Phoenix XI,Raghuveer Bethelli,3.0,0,6,23,2,7.67,0,0
+19847,Parsippany Phoenix XI,Jeyaram Ramadoss,1.3,0,5,9,0,6.00,0,0
+19856,Nj Braves,Kunal Merchant,4.0,0,12,25,1,6.25,0,0
+19856,Nj Braves,Vipul Patel,4.0,0,19,10,1,2.50,0,0
+19856,Nj Braves,Jenish Shah,3.0,0,10,33,2,11.00,4,0
+19856,Nj Braves,Vinoth Suseendran †,2.0,0,4,29,0,14.50,2,0
+19856,Nj Braves,Menak Patel,3.0,0,5,25,1,8.33,2,0
+19856,Nj Stars CC,Fahad Kabir,3.4,0,14,21,4,5.73,1,1
+19856,Nj Stars CC,Zain Pervaiz,4.0,0,16,19,3,4.75,2,0
+19856,Nj Stars CC,Abdul Wali Siddiqee,1.0,0,4,11,0,11.00,1,2
+19856,Nj Stars CC,Sajeel Ahmed,3.0,0,4,21,0,7.00,0,0
+19856,Nj Stars CC,Muhammad Haseeb,4.0,0,13,22,2,5.50,1,0
+19857,Jersey Boys,Vikul Rajpara,2.0,0,6,16,0,8.00,4,0
+19857,Jersey Boys,Vineet Luthra,4.0,1,14,21,1,5.25,0,0
+19857,Jersey Boys,Sushil Kumar,4.0,0,15,30,3,7.50,1,1
+19857,Jersey Boys,Vikas Chaudhary,1.0,0,4,4,0,4.00,0,1
+19857,Jersey Boys,Madhur Kaushik,4.0,0,13,29,2,7.25,1,0
+19857,Jersey Boys,Fenil Shah*,1.0,0,2,17,0,17.00,1,1
+19857,Storm Riders,Apurv Jain* †,1.0,0,4,2,1,2.00,0,0
+19857,Storm Riders,Shobhit Gupta,1.0,0,2,4,1,4.00,0,0
+19857,Storm Riders,Rishabh Tewari,1.4,0,5,5,0,3.00,0,0
+19857,Storm Riders,Mitul Patel,1.0,0,2,7,1,7.00,0,0
+19877,Youth For Sewa,Manikanta Raja Kottu,1.0,0,2,20,0,20.00,1,0
+19877,Youth For Sewa,Aillu N,4.0,0,14,25,1,6.25,3,0
+19877,Youth For Sewa,Venkata Voona,1.0,0,2,18,1,18.00,0,0
+19877,Youth For Sewa,Tauseef Ahmed,2.0,0,9,15,0,7.50,2,0
+19877,Youth For Sewa,Ram V*,2.0,0,5,22,0,11.00,0,0
+19877,Youth For Sewa,Eswar Vennapusa,3.0,0,12,23,2,7.67,9,0
+19877,Youth For Sewa,Mihira Teja Narvaneni,3.0,0,8,37,1,12.33,5,2
+19877,Blue Aces CC,Dheeraj Dubey*,4.0,0,13,33,2,8.25,2,0
+19877,Blue Aces CC,Tharak Ram,2.0,0,4,30,1,15.00,2,1
+19877,Blue Aces CC,Rajendra Prasad Challa,4.0,1,17,12,2,3.00,1,0
+19877,Blue Aces CC,Sandip Nandurkar,2.0,0,5,37,2,18.50,0,2
+19877,Blue Aces CC,Surya Nallamilli,2.1,0,5,11,3,5.08,0,0
+19883,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,15,17,0,4.25,1,0
+19883,Samudhra Gladiators,Harshad Patil,2.0,0,7,15,0,7.50,0,0
+19883,Samudhra Gladiators,Sandeep Shetty,2.0,0,6,17,1,8.50,2,0
+19883,Samudhra Gladiators,Naveen R Sripathi,4.0,0,11,28,2,7.00,2,0
+19883,Samudhra Gladiators,Ankur Chaturvedi,4.0,0,10,28,2,7.00,2,0
+19883,Juggernaut,Kailash Naithani,4.0,0,11,21,2,5.25,0,0
+19883,Juggernaut,Karan P,3.5,0,9,38,1,9.91,2,0
+19883,Juggernaut,Sandip Amin,1.0,0,2,11,0,11.00,1,0
+19883,Juggernaut,Sudheer Maddirala,1.0,0,1,16,0,16.00,2,2
+19883,Juggernaut,Hemant Patel*,2.0,0,4,20,0,10.00,1,0
+19888,SAMP XI,Hardik Patel,3.0,0,9,40,2,13.33,3,0
+19888,SAMP XI,Smit Patel,4.0,0,12,44,3,11.00,1,0
+19888,SAMP XI,Monil Patel,4.0,0,10,63,0,15.75,2,0
+19888,SAMP XI,Jatin Patel,1.0,0,1,23,0,23.00,0,1
+19888,SAMP XI,Keyur Patel,1.0,0,3,14,0,14.00,0,0
+19888,SAMP XI,Ankit Patel*,3.0,0,8,49,1,16.33,1,0
+19888,Warriors,Mitul Patel,4.0,0,15,24,3,6.00,3,1
+19888,Warriors,Rumit Patel,2.5,2,16,4,2,1.41,3,0
+19888,Warriors,Prasad Fernando,3.0,0,13,17,2,5.67,5,1
+19888,Warriors,Jeet Patel,3.0,0,14,11,3,3.67,1,0
+19888,Warriors,Krupal Patel,1.0,0,4,2,0,2.00,0,0
+19888,Warriors,Dharmik Patel,1.0,0,5,1,0,1.00,0,0
+19888,Warriors,Neel Patel,1.0,0,3,11,0,11.00,0,0
+19895,Gcc,Sahil Patel,4.0,0,12,26,0,6.50,2,0
+19895,Gcc,Hemil Patel Gcc,3.0,0,7,29,1,9.67,2,1
+19895,Gcc,Mrugesh Patel*,4.0,0,9,36,1,9.00,9,0
+19895,Gcc,Sapan Parikh,4.0,0,16,15,2,3.75,2,0
+19895,Gcc,Dhaval Patel,1.0,0,2,9,0,9.00,0,0
+19895,F5,Subramaniam Sampath,4.0,0,15,15,2,3.75,0,0
+19895,F5,Vimalendu Kumar,4.0,0,16,9,3,2.25,1,0
+19895,F5,⁠thulasi Thota,2.0,0,5,26,0,13.00,6,0
+19895,F5,Sandeep Goud,4.0,1,17,26,2,6.50,9,0
+19895,F5,Vinod Kannan*,2.0,0,7,12,0,6.00,1,0
+19899,Piscataway Avengers,Mit Patel,4.0,0,11,15,3,3.75,1,0
+19899,Piscataway Avengers,Ujjaval Patel,4.0,0,16,11,3,2.75,2,0
+19899,Piscataway Avengers,Dharmesh Patel,4.0,1,18,10,1,2.50,0,0
+19899,Piscataway Avengers,Pujan Patel,3.0,0,12,9,1,3.00,2,0
+19899,Piscataway Avengers,Rimal Patel*,1.0,0,3,5,1,5.00,1,0
+19899,Desi Warriors,Varun Gurram,2.0,0,5,22,0,11.00,0,0
+19899,Desi Warriors,Nauman Basit,2.0,0,6,26,2,13.00,2,0
+19899,Desi Warriors,Rakesh Kotha,0.2,0,0,7,0,21.00,0,0
+19900,Rowdy Rebels,Anoop Hegde,4.0,2,22,3,0,0.75,1,0
+19900,Rowdy Rebels,Zoheb Khalid*,4.0,0,15,23,2,5.75,0,0
+19900,Rowdy Rebels,Darshil Mistry,4.0,0,12,15,1,3.75,1,0
+19900,Rowdy Rebels,Kushal Kumar,4.0,0,14,16,2,4.00,4,0
+19900,Falcons,Sairam Raavi*,4.0,0,16,19,1,4.75,1,0
+19900,Falcons,Deepak Sunku,3.0,0,11,15,1,5.00,1,0
+19900,Falcons,Ajith Nalluri,1.0,0,4,8,0,8.00,1,0
+19900,Falcons,Rajesh Rachakonda,3.0,0,9,13,0,4.33,1,1
+19900,Falcons,Nakul Limbachiya,2.0,1,9,3,1,1.50,0,0
+19904,Team Highlanders,Raja Kuppan,4.0,0,13,17,1,4.25,2,0
+19904,Team Highlanders,Ravi Kanth,4.0,0,18,16,2,4.00,3,0
+19904,Team Highlanders,Suresh Ganesan,4.0,0,13,31,1,7.75,4,0
+19904,Team Highlanders,Sivakumar Sivasubramonian,2.0,0,9,13,1,6.50,2,0
+19904,Team Highlanders,Manikandan Swaminathan,2.0,0,6,10,1,5.00,0,0
+19904,Fdu Giants,Viral Parekh,4.0,0,13,23,1,5.75,1,1
+19904,Fdu Giants,Ankit Chopra*,4.0,0,15,16,2,4.00,2,2
+19904,Fdu Giants,Ashish Kansal,2.0,0,8,13,0,6.50,0,0
+19904,Fdu Giants,Ravish Parekh,1.0,0,2,11,0,11.00,1,0
+19904,Fdu Giants,Nishant Sharma,4.0,0,17,23,4,5.75,3,0
+19904,Fdu Giants,Gaurav Gupta,1.0,0,5,7,0,7.00,1,0
+19905,Sreeshti,Mahesh Nagappa,4.0,0,11,34,1,8.50,3,0
+19905,Sreeshti,Monang Shah,4.0,0,13,13,2,3.25,0,0
+19905,Sreeshti,Kamal Choudhury,4.0,0,18,10,2,2.50,2,0
+19905,Sreeshti,Sumesh Mathew,4.0,0,18,10,3,2.50,1,0
+19905,Gryffindors,Subodh Singh*,4.0,0,13,33,3,8.25,1,0
+19905,Gryffindors,Harish Bangera,3.0,0,12,19,2,6.33,0,0
+19905,Gryffindors,Johncy V,1.0,0,4,2,0,2.00,0,0
+19905,Gryffindors,Siddhartha Nayak,1.0,0,2,9,0,9.00,1,0
+19905,Gryffindors,Sandeep Reddy Chidipudi,0.3,0,1,5,0,10.00,0,0
+19906,Hudson Hurricanes,Sravan Nekkanti,4.0,0,14,34,2,8.50,2,0
+19906,Hudson Hurricanes,Vinyas Ramachandra,4.0,0,8,39,1,9.75,2,0
+19906,Hudson Hurricanes,Aniket Dalal*,2.0,0,6,19,1,9.50,0,0
+19906,Hudson Hurricanes,Ved Arya,3.0,0,14,12,2,4.00,3,0
+19906,Hudson Hurricanes,Pratik Mane,3.0,0,9,23,0,7.67,4,0
+19906,11spartans,Neel Patel-13,4.0,0,15,28,3,7.00,3,1
+19906,11spartans,Ravi Rathod,1.0,0,2,18,0,18.00,1,0
+19906,11spartans,Soham Brahmbhatt,4.0,0,13,30,2,7.50,2,0
+19906,11spartans,Pratik Patel (savali),4.0,1,15,20,5,5.00,1,0
+19906,11spartans,Jay Trivedi,2.0,0,3,17,0,8.50,0,0
+19908,RHG,Kevin Shah,4.0,0,19,7,3,1.75,2,0
+19908,RHG,Baseer Ahmed Mohammed,4.0,0,10,29,0,7.25,1,0
+19908,RHG,Hiren Joshi,4.0,0,18,21,1,5.25,5,1
+19908,RHG,Zafran Hussain,4.0,1,13,27,2,6.75,1,0
+19908,Maha CC,Sudhanshoo Vashisht,3.0,1,11,14,1,4.67,0,0
+19908,Maha CC,Ishan Shah,4.0,0,18,16,4,4.00,3,1
+19908,Maha CC,Dhrumil Shah,1.0,0,4,7,0,7.00,0,0
+19908,Maha CC,Tamaas Khan,3.0,0,5,16,0,5.33,0,0
+19908,Maha CC,Rizwan Bajwa,3.0,0,10,26,2,8.67,1,1
+19908,Maha CC,Kashish Shah †,0.3,0,0,11,0,22.00,0,0
+19920,Hudson Hurricanes,Vinyas Ramachandra,2.0,0,5,17,1,8.50,1,0
+19920,Hudson Hurricanes,Aniket Dalal*,1.0,0,2,14,0,14.00,2,1
+19920,Hudson Hurricanes,Sravan Nekkanti,2.1,0,8,6,1,2.77,0,0
+19920,Hudson Hurricanes,Ved Arya,4.0,0,21,8,2,2.00,5,0
+19920,Hudson Hurricanes,Pratik Mane,2.0,0,10,13,4,6.50,4,1
+19920,Hudson Hurricanes,Rohit Pradhan,2.0,0,6,6,1,3.00,0,0
+19920,Rowdy Rebels,Bhavik Surani,4.0,0,17,17,3,4.25,0,0
+19920,Rowdy Rebels,Anoop Hegde,2.0,0,6,22,0,11.00,0,0
+19920,Rowdy Rebels,Naresh Patel,4.0,0,16,8,1,2.00,0,0
+19920,Rowdy Rebels,Zoheb Khalid*,2.1,0,5,19,0,8.77,0,1
+19920,Rowdy Rebels,Darshil Mistry,1.0,0,3,4,0,4.00,1,0
+19921,Juggernaut,Hemant Patel*,4.0,0,11,21,0,5.25,2,0
+19921,Juggernaut,Kailash Naithani,4.0,0,17,10,3,2.50,0,1
+19921,Juggernaut,Jatan Vaidya,4.0,0,11,22,4,5.50,0,0
+19921,Juggernaut,Karan P,3.4,0,13,15,2,4.09,2,0
+19921,Team Highlanders,Ravi Kanth,2.0,0,8,11,2,5.50,1,0
+19921,Team Highlanders,Raja Kuppan,3.0,0,11,26,1,8.67,2,1
+19921,Team Highlanders,Syed Abhinash,3.4,1,16,16,1,4.36,0,0
+19921,Team Highlanders,Suresh Ganesan,2.0,0,7,19,0,9.50,1,0
+19930,F5,Subramaniam Sampath,4.0,1,19,13,1,3.25,0,0
+19930,F5,⁠thulasi Thota,4.0,0,10,38,3,9.50,2,2
+19930,F5,Deniz Baby,4.0,0,12,40,2,10.00,3,1
+19930,F5,Sandeep Goud,1.0,0,2,25,1,25.00,2,2
+19930,F5,Vinod Kannan*,3.0,0,11,30,1,10.00,1,1
+19930,Samudhra Gladiators,Vinit Bharadwaj,3.0,0,11,13,2,4.33,1,0
+19930,Samudhra Gladiators,Sandeep Shetty,2.0,0,6,18,1,9.00,3,0
+19930,Samudhra Gladiators,Harshad Patil,4.0,0,16,13,0,3.25,5,0
+19930,Samudhra Gladiators,Naveen R Sripathi,4.0,0,13,34,5,8.50,2,0
+19930,Samudhra Gladiators,Vinit Bharadwaj,1.0,0,3,10,0,10.00,2,0
+19930,Samudhra Gladiators,Sandeep Shetty,1.3,0,4,15,1,10.00,1,0
+19933,11spartans,Krunal Patel,3.0,0,9,18,2,6.00,1,0
+19933,11spartans,Neel Patel-13,3.0,0,9,21,2,7.00,0,0
+19933,11spartans,Soham Brahmbhatt,4.0,0,9,37,3,9.25,0,0
+19933,11spartans,Ravi Rathod,3.0,0,9,37,2,12.33,6,0
+19933,11spartans,Rajan Patel,3.0,0,11,16,0,5.33,0,0
+19933,Sreeshti,Sumesh Mathew,4.0,0,14,28,2,7.00,3,0
+19933,Sreeshti,Kamal Choudhury,4.0,0,15,16,1,4.00,1,1
+19933,Sreeshti,Monang Shah,4.0,0,9,48,1,12.00,1,0
+19933,Sreeshti,Mahesh Nagappa,2.0,0,4,26,0,13.00,1,0
+19933,Sreeshti,Nimish Deshpande,1.1,0,3,16,1,13.71,1,0
+19937,Youth For Sewa,Kowsik Dondapati,4.0,0,11,35,1,8.75,1,0
+19937,Youth For Sewa,Venkata Voona,4.0,0,13,20,4,5.00,3,2
+19937,Youth For Sewa,Dheeraj Reddy,4.0,0,15,18,1,4.50,1,0
+19937,Youth For Sewa,Aillu N,4.0,1,16,25,1,6.25,7,1
+19937,Maha CC,Dhrumil Shah,4.0,0,12,28,2,7.00,2,0
+19937,Maha CC,Shah Meer,2.0,0,6,19,0,9.50,0,0
+19937,Maha CC,Ishan Shah,1.0,0,3,11,0,11.00,0,0
+19937,Maha CC,Danish Shaikh,3.0,0,6,24,1,8.00,4,0
+19937,Maha CC,Rizwan Bajwa,1.0,0,2,12,1,12.00,0,0
+19937,Maha CC,Jay Soni,1.3,0,5,5,1,3.33,1,0
+19939,Blue Aces CC,Dheeraj Dubey*,1.0,0,2,16,0,16.00,3,1
+19939,Blue Aces CC,Rajendra Prasad Challa,3.0,0,13,23,1,7.67,0,0
+19939,Blue Aces CC,Tharak Ram,2.0,0,6,28,1,14.00,0,1
+19939,Blue Aces CC,Sandip Nandurkar,2.0,0,8,21,2,10.50,1,0
+19939,Blue Aces CC,Prabhakar Vudumula,2.0,0,8,24,1,12.00,2,0
+19939,Blue Aces CC,Amol Rukmangad,2.3,0,10,6,5,2.40,0,1
+19939,Warriors,Abhishek Patel*,2.0,0,7,20,1,10.00,0,1
+19939,Warriors,Prasad Fernando,4.0,0,12,24,2,6.00,2,0
+19939,Warriors,Kirtan Patel,4.0,0,14,15,1,3.75,2,0
+19939,Warriors,Rumit Patel,2.0,0,7,6,1,3.00,1,0
+19939,Warriors,Jeet Patel,4.0,0,10,37,4,9.25,5,1
+19942,Fdu Giants,Sunit Shirke,4.0,0,13,28,1,7.00,4,0
+19942,Fdu Giants,Viral Parekh,4.0,0,16,16,2,4.00,1,0
+19942,Fdu Giants,Ankit Chopra*,4.0,0,16,25,2,6.25,2,0
+19942,Fdu Giants,Kunal Patel,3.0,0,12,18,1,6.00,2,0
+19942,Fdu Giants,Dhruv Patel,1.0,0,1,11,0,11.00,0,0
+19942,RHG,Kevin Shah*,2.0,1,9,9,1,4.50,0,0
+19942,RHG,Hiren Joshi,3.0,0,12,23,3,7.67,4,0
+19942,RHG,Zafran Hussain,2.3,0,8,10,2,4.00,2,0
+19942,RHG,Nuvan T,2.0,1,11,1,3,0.50,0,0
+19948,SAMP XI,Aayush Patel*,2.0,0,6,10,0,5.00,1,0
+19948,SAMP XI,Jaydev Zala,3.0,0,9,25,1,8.33,1,0
+19948,SAMP XI,Ronny Patel,2.0,0,9,6,2,3.00,0,0
+19948,SAMP XI,Tirth Patel,4.0,0,12,22,2,5.50,4,0
+19948,SAMP XI,Arya Patel,3.2,0,12,14,3,4.20,0,0
+19948,Falcons,Sairam Raavi*,3.1,0,12,17,2,5.37,0,0
+19948,Falcons,Manikanta Arumilli,4.0,1,19,16,5,4.00,0,0
+19948,Falcons,Srinath Gentyala,3.0,0,14,9,1,3.00,0,0
+19956,Gcc,Sahil Patel,4.0,0,13,31,1,7.75,0,0
+19956,Gcc,Karan Patel,2.0,0,9,11,1,5.50,0,0
+19956,Gcc,Sapan Parikh,4.0,0,7,43,1,10.75,3,0
+19956,Gcc,Mrugesh Patel,2.0,0,2,31,0,15.50,0,0
+19956,Gcc,Hardik(gcc) Rana,4.0,0,17,17,4,4.25,0,0
+19956,Piscataway Avengers,Jignesh Patel,2.0,0,6,7,1,3.50,1,0
+19956,Piscataway Avengers,Rimal Patel*,3.1,0,12,22,3,6.95,1,0
+19956,Piscataway Avengers,Ujjaval Patel,3.0,0,11,29,2,9.67,0,0
+19956,Piscataway Avengers,Mit Patel,2.0,0,6,19,0,9.50,0,0
+19956,Piscataway Avengers,Sherry Singh,3.0,0,15,4,3,1.33,1,0
+19956,Piscataway Avengers,Harsh Patel,2.0,0,8,16,1,8.00,3,1
+19960,Gryffindors,Kishan Patel,3.0,0,11,18,0,6.00,2,0
+19960,Gryffindors,Johncy V,2.0,0,4,14,1,7.00,0,0
+19960,Gryffindors,Subodh Singh*,4.0,0,12,28,1,7.00,2,0
+19960,Gryffindors,Harish Bangera,3.0,0,8,19,1,6.33,1,0
+19960,Gryffindors,Bikash Ghibila,2.0,0,7,7,0,3.50,2,0
+19960,Gryffindors,Ankit Patel,2.0,0,8,12,1,6.00,1,0
+19960,Desi Warriors,Varun Gurram,2.0,0,5,18,1,9.00,0,0
+19960,Desi Warriors,Harinadha Reddy,4.0,1,16,14,2,3.50,1,1
+19960,Desi Warriors,Rakesh Kar,2.0,0,7,16,0,8.00,0,0
+19960,Desi Warriors,Sarbjitsingh Sahota,4.0,0,10,25,1,6.25,3,3
+19960,Desi Warriors,Rigved Nagarkar,2.0,0,8,9,1,4.50,0,0
+19960,Desi Warriors,Harshil Patel,2.0,0,8,13,3,6.50,1,0
+19979,Blasters,Harsh Amin,3.0,0,6,23,1,7.67,0,0
+19979,Blasters,Chirag Patel,3.0,0,7,31,1,10.33,1,1
+19979,Blasters,Neel Patel-24,4.0,0,10,37,2,9.25,2,0
+19979,Blasters,Jay Patel (jp),4.0,0,12,28,0,7.00,0,0
+19979,Blasters,Manthan Patel*,2.0,0,5,26,1,13.00,0,0
+19979,WCC,Sai Sudhan,3.0,0,12,13,2,4.33,1,0
+19979,WCC,Sarwar Ali Shah,2.1,0,11,2,4,0.92,1,0
+19979,WCC,Nisar Ahmad,3.0,0,11,11,2,3.67,1,0
+19979,WCC,Nahid Sarkar,3.0,0,8,26,1,8.67,2,0
+19979,WCC,Harikishore Malireddy,2.0,0,6,14,1,7.00,1,1
+19980,Nj Tigers,Naveed Azam*,2.0,0,9,5,0,2.50,2,0
+19980,Nj Tigers,Nasir Mehmood,1.0,0,5,2,0,2.00,1,0
+19980,Nj Tigers,Rajinder (suraj) Singh,4.0,0,9,30,0,7.50,1,1
+19980,Nj Tigers,Haider Naveed Akram,4.0,0,12,31,2,7.75,0,0
+19980,Nj Tigers,Tahir Mehmood,1.0,0,3,13,0,13.00,0,1
+19980,Nj Tigers,Faisal Mehmood,4.0,0,15,13,3,3.25,2,0
+19980,Gujarat United XI,Mihir Vaghasia,2.0,0,5,25,2,12.50,5,0
+19980,Gujarat United XI,Avi Shah,4.0,0,16,12,3,3.00,1,0
+19980,Gujarat United XI,Karan Patel*,4.0,0,13,23,2,5.75,3,0
+19980,Gujarat United XI,Daksh Patel,3.0,0,11,18,0,6.00,0,1
+19980,Gujarat United XI,Rohang Patel,2.0,0,12,3,1,1.50,3,0
+19983,Mercer Challengers,Deepesh Naidu,2.0,0,5,12,0,6.00,0,0
+19983,Mercer Challengers,Anup Satya,1.0,0,4,3,0,3.00,1,0
+19983,Mercer Challengers,Sai Deepak Dogiparthi,4.0,0,13,13,4,3.25,2,0
+19983,Mercer Challengers,Samit Kumbhani,3.3,0,14,19,5,5.43,3,0
+19983,Mercer Challengers,Sheshank Reddy,3.0,0,14,7,0,2.33,0,0
+19983,Mercer Challengers,Sandip Borse,1.0,0,3,4,1,4.00,1,0
+19983,Edison Rebelz,Yash Solanki,2.0,0,7,14,0,7.00,1,0
+19983,Edison Rebelz,Sourav Mazumder,2.0,0,4,16,0,8.00,0,0
+19983,Edison Rebelz,Imran Khan,2.0,0,5,8,0,4.00,1,0
+19983,Edison Rebelz,Soumyabrata Paul*,2.0,0,5,13,0,6.50,1,0
+19983,Edison Rebelz,Srikant P,1.0,0,4,3,1,3.00,0,1
+19983,Edison Rebelz,Ankit Somani,1.0,0,5,4,1,4.00,0,0
+19983,Edison Rebelz,Kironmoy Banerjee,0.1,0,0,4,0,24.00,0,0
+20003,PUNJAB XI,Jasmeet Singh,2.0,0,4,14,0,7.00,0,1
+20003,PUNJAB XI,Lovely Singh,2.0,0,6,13,1,6.50,0,0
+20003,PUNJAB XI,Azam Mohammad,4.0,0,11,27,3,6.75,1,0
+20003,PUNJAB XI,Sunny Singh,4.0,0,11,25,3,6.25,2,0
+20003,PUNJAB XI,Nasir Khan,4.0,0,11,19,2,4.75,1,0
+20003,Plainsboro Eagles,Chandra Koganti,2.0,0,4,36,0,18.00,1,0
+20003,Plainsboro Eagles,Rajesh Paruchuri,4.0,0,12,26,4,6.50,2,0
+20003,Plainsboro Eagles,Bharath Reddy,3.0,0,9,26,3,8.67,4,0
+20003,Plainsboro Eagles,Srinivas Reddy Ch,1.0,0,4,8,0,8.00,1,0
+20003,Plainsboro Eagles,Sai Manish Varma Mudunuri,0.4,0,1,3,0,4.50,0,0
+20009,Nj Braves,Kunal Merchant,4.0,0,16,27,3,6.75,3,0
+20009,Nj Braves,Vipul Patel,4.0,0,12,29,2,7.25,0,0
+20009,Nj Braves,Jenish Shah,4.0,0,11,22,1,5.50,3,0
+20009,Nj Braves,Menak Patel,4.0,0,13,20,2,5.00,0,1
+20009,Aryans,Arpit Panchal,3.3,0,10,22,1,6.29,0,0
+20009,Aryans,Gajendra Kumar,4.0,0,16,19,2,4.75,0,0
+20009,Aryans,Ajay Shankar,4.0,0,12,27,2,6.75,4,0
+20009,Aryans,Sourabh Guha*,2.0,0,6,14,2,7.00,0,0
+20009,Aryans,Joydeep Das,1.0,0,2,17,0,17.00,0,0
+20014,Newport CC,Salam Shamlan,1.0,0,3,8,0,8.00,0,0
+20014,Newport CC,Farukh Manzoor,4.0,0,10,25,2,6.25,0,0
+20014,Newport CC,Gokul Das Maharajan,4.0,0,12,23,1,5.75,0,2
+20014,Newport CC,Emmanuel Samuel Nair,4.0,1,9,29,2,7.25,0,0
+20014,Newport CC,Narender Reddy Bojja,3.0,0,7,22,0,7.33,0,0
+20014,Jersey Boys,Vineet Luthra,4.0,0,17,17,4,4.25,0,0
+20014,Jersey Boys,Sushil Kumar,4.0,0,15,27,1,6.75,1,1
+20014,Jersey Boys,Vikul Rajpara,3.0,0,9,13,0,4.33,0,0
+20014,Jersey Boys,Vikas Chaudhary,3.5,0,9,43,1,11.22,6,0
+20014,Jersey Boys,Amit Patel,1.0,0,3,10,0,10.00,2,0
+20015,Pway Lions,Bhavik Patel,4.0,0,10,41,2,10.25,1,0
+20015,Pway Lions,Drumil Amin,4.0,0,10,30,3,7.50,3,0
+20015,Pway Lions,Dhaivat Patel,3.1,1,12,17,3,5.37,0,0
+20015,Pway Lions,Vraj Shah,4.0,0,14,24,2,6.00,1,0
+20015,Jetha 11,Dipal Patel,3.5,1,15,18,2,4.70,0,0
+20015,Jetha 11,Jigar D Patel,4.0,0,12,41,2,10.25,3,0
+20015,Jetha 11,Divyesh Patel,4.0,0,12,29,1,7.25,1,1
+20015,Jetha 11,Gary Patel,1.3,0,2,17,0,11.33,0,0
+20015,Jetha 11,Haren Patel,1.3,0,4,10,1,6.67,0,0
+20019,Jersey Titans,Mitul Patel,2.1,0,9,10,2,4.62,0,0
+20019,Jersey Titans,Milan Dave,3.0,0,12,17,2,5.67,1,0
+20019,Jersey Titans,Ravin Patel,4.0,0,14,24,3,6.00,1,0
+20019,Jersey Titans,Jay Patel,3.0,0,13,9,2,3.00,2,0
+20019,Jersey Titans,Komal(kc) Patel,2.0,0,4,16,0,8.00,2,1
+20019,Nj Stars CC,Abdul Wali Siddiqee,4.0,0,14,19,0,4.75,0,0
+20019,Nj Stars CC,Muhammad Haseeb,4.0,0,16,10,2,2.50,1,0
+20019,Nj Stars CC,Zain Pervaiz,4.0,0,16,17,1,4.25,2,0
+20019,Nj Stars CC,Yasir Mohammad,1.0,0,1,13,0,13.00,0,0
+20019,Nj Stars CC,Sajeel Ahmed,3.0,0,9,12,3,4.00,0,0
+20020,Storm Riders,Rishabh Tewari,4.0,0,16,28,1,7.00,2,0
+20020,Storm Riders,Mitul Patel,4.0,1,17,14,3,3.50,0,0
+20020,Storm Riders,Shobhit Gupta,3.0,0,8,30,1,10.00,1,0
+20020,Storm Riders,Apurv Jain* †,4.0,0,14,25,2,6.25,1,0
+20020,Storm Riders,Sameer Kulkarni,1.0,0,3,10,1,10.00,1,0
+20020,Veerans,Naveen Elangovan*,2.0,0,8,7,0,3.50,0,0
+20020,Veerans,Kamalraj Rajamanickam,3.0,0,9,22,0,7.33,0,0
+20020,Veerans,Sundip Helchal,4.0,0,15,29,2,7.25,2,0
+20020,Veerans,Amit Sharma,1.0,0,4,18,0,18.00,6,0
+20020,Veerans,Shabbeer Syed,3.0,0,6,24,0,8.00,1,0
+20020,Veerans,Aditya Rathor,1.0,0,1,11,0,11.00,1,0
+20022,Plainsboro Knights,Raghuraman Varadharajan,4.0,2,19,13,1,3.25,1,0
+20022,Plainsboro Knights,Shan A S,1.0,0,4,8,1,8.00,0,0
+20022,Plainsboro Knights,Lokesh Prabakaran,4.0,0,15,27,2,6.75,3,0
+20022,Plainsboro Knights,Siva Kandivalasa,4.0,0,14,21,3,5.25,1,1
+20022,Plainsboro Knights,Gowtham Akula,1.2,0,6,8,3,6.00,1,0
+20022,Parsippany Phoenix XI,Govind Somvanshi,2.0,0,6,12,0,6.00,0,0
+20022,Parsippany Phoenix XI,Raghuveer Bethelli,3.0,0,8,17,1,5.67,1,0
+20022,Parsippany Phoenix XI,Satish Kumar Durgam,3.0,0,11,20,1,6.67,2,0
+20022,Parsippany Phoenix XI,Naveen Rayal,3.0,0,10,24,1,8.00,4,0
+20022,Parsippany Phoenix XI,Sujan Kumar,1.0,0,1,5,0,5.00,0,0
+20036,Blasters,Gunjan Patel,3.5,0,10,18,1,4.70,0,0
+20036,Blasters,Manthan Patel*,4.0,0,10,20,2,5.00,1,0
+20036,Blasters,Harsh Amin,4.0,1,14,15,3,3.75,0,0
+20036,Blasters,Chirag Patel,2.0,0,4,18,0,9.00,1,0
+20036,Blasters,Rushi Vyas,2.0,0,4,9,2,4.50,1,0
+20036,Plainsboro Eagles,Bharath Reddy,3.0,0,7,24,0,8.00,0,0
+20036,Plainsboro Eagles,Chandra Koganti,2.0,0,5,14,0,7.00,2,0
+20036,Plainsboro Eagles,Sai Manish Varma Mudunuri,2.0,0,8,9,2,4.50,0,0
+20036,Plainsboro Eagles,Bhargav Reddy Napa*,3.0,1,10,18,0,6.00,1,1
+20036,Plainsboro Eagles,Akhilesh Goud Janagam,1.0,0,2,16,0,16.00,2,0
+20043,Jersey Boys,Vikul Rajpara,3.4,0,14,16,4,4.36,1,0
+20043,Jersey Boys,Sushil Kumar,4.0,0,12,28,1,7.00,1,0
+20043,Jersey Boys,Fenil Shah*,4.0,0,17,9,1,2.25,1,0
+20043,Jersey Boys,Vineet Luthra,4.0,0,20,6,3,1.50,2,0
+20043,Gujarat United XI,Shivam Patel,3.0,0,10,25,1,8.33,0,1
+20043,Gujarat United XI,Parth Bhavsar,4.0,0,14,16,2,4.00,0,0
+20043,Gujarat United XI,Avi Shah,3.0,0,11,20,2,6.67,0,2
+20044,Nj Stars CC,Abdul Wali Siddiqee,4.0,1,17,18,3,4.50,1,0
+20044,Nj Stars CC,Fahad Kabir,4.0,0,10,34,1,8.50,0,1
+20044,Nj Stars CC,Zain Pervaiz,4.0,0,16,17,2,4.25,3,0
+20044,Nj Stars CC,Muhammad Haseeb,4.0,0,17,15,3,3.75,1,0
+20044,Plainsboro Knights,Ankit Parikh,3.0,0,12,8,0,2.67,1,0
+20044,Plainsboro Knights,Chinmaya Sahu,4.0,1,17,12,5,3.00,2,0
+20044,Plainsboro Knights,Lokesh Prabakaran,2.0,1,10,2,2,1.00,0,0
+20044,Plainsboro Knights,Balaji Kesavsn,2.3,0,12,4,3,1.60,1,0
+20051,Mercer Challengers,Deepesh Naidu,4.0,0,14,33,4,8.25,1,0
+20051,Mercer Challengers,Vishal Srivastava,4.0,0,15,14,1,3.50,2,0
+20051,Mercer Challengers,Sandip Borse,1.0,0,3,4,1,4.00,1,0
+20051,Mercer Challengers,Samit Kumbhani,3.0,0,4,30,0,10.00,0,0
+20051,Mercer Challengers,Sheshank Reddy,4.0,0,11,25,2,6.25,0,0
+20051,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,15,21,2,5.25,1,2
+20051,Parsippany Phoenix XI,Naveen Rayal,4.0,0,13,26,1,6.50,3,0
+20051,Parsippany Phoenix XI,Raghuveer Bethelli,3.0,0,8,15,3,5.00,0,0
+20051,Parsippany Phoenix XI,Sujan Kumar,3.0,0,9,14,4,4.67,0,0
+20057,Veerans,Kamalraj Rajamanickam,4.0,0,13,30,4,7.50,1,0
+20057,Veerans,Sundip Helchal*,4.0,0,11,28,2,7.00,1,0
+20057,Veerans,Aditya Rathor,4.0,0,9,42,2,10.50,3,0
+20057,Veerans,Shabbeer Syed,2.0,0,5,24,0,12.00,1,0
+20057,Veerans,Raj Koladiya,2.0,0,4,12,0,6.00,1,0
+20057,Newport CC,Emmanuel Samuel Nair,3.5,1,15,24,4,6.26,1,0
+20057,Newport CC,Gokul Das Maharajan,4.0,0,14,16,1,4.00,1,0
+20057,Newport CC,Farukh Manzoor,3.0,0,6,21,1,7.00,1,0
+20057,Newport CC,Narender Reddy Bojja,1.0,0,2,17,0,17.00,0,0
+20057,Newport CC,Saikumar Katepalli,3.0,0,7,19,3,6.33,3,0
+20059,Nj Braves,Tejas Patel,4.0,0,15,18,1,4.50,2,1
+20059,Nj Braves,Menak Patel,4.0,0,8,30,1,7.50,0,0
+20059,Nj Braves,Kunal Merchant,4.0,0,5,45,0,11.25,1,0
+20059,Nj Braves,Jenish Shah,4.0,0,9,49,1,12.25,5,0
+20059,WCC,Tushar Lenka,4.0,0,11,25,1,6.25,1,0
+20059,WCC,Nahid Sarkar,2.2,0,7,10,2,4.29,1,0
+20059,WCC,Sarwar Ali Shah,3.0,0,10,12,2,4.00,1,0
+20059,WCC,Avaneesh Reddy,3.0,1,15,5,4,1.67,1,0
+20059,WCC,Harikishore Malireddy,2.0,0,10,3,0,1.50,1,0
+20062,Jetha 11,Dipal Patel,4.0,0,15,23,0,5.75,0,0
+20062,Jetha 11,Eijaz Mulla,4.0,0,14,17,3,4.25,0,0
+20062,Jetha 11,Jignesh Mukhi Patel,2.0,0,5,18,1,9.00,0,0
+20062,Jetha 11,Divyesh Patel,4.0,0,14,32,1,8.00,2,1
+20062,Jetha 11,Nirav Patel*,2.0,0,4,26,0,13.00,2,0
+20062,PUNJAB XI,Nasir Khan,4.0,0,14,14,2,3.50,1,1
+20062,PUNJAB XI,Jasmeet Singh,3.0,0,10,26,1,8.67,1,0
+20062,PUNJAB XI,Sunny Singh,4.0,0,11,27,2,6.75,6,1
+20062,PUNJAB XI,Nitesh Tomer,2.0,0,5,16,0,8.00,2,1
+20062,PUNJAB XI,Lovely Singh,3.0,0,5,28,2,9.33,0,0
+20070,Edison Rebelz,Pushpendra Singh,4.0,2,21,8,5,2.00,0,0
+20070,Edison Rebelz,Yash Solanki,4.0,0,15,29,1,7.25,2,0
+20070,Edison Rebelz,Imran Khan,4.0,0,16,20,1,5.00,1,0
+20070,Edison Rebelz,Soumyabrata Paul,4.0,0,7,33,0,8.25,1,1
+20070,Storm Riders,Shobhit Gupta,4.0,1,17,12,3,3.00,0,0
+20070,Storm Riders,Sameer Kulkarni,4.0,0,12,32,1,8.00,1,0
+20070,Storm Riders,Apurv Jain* †,2.4,0,9,15,2,5.62,0,0
+20070,Storm Riders,Rishabh Tewari,4.0,1,17,11,2,2.75,2,0
+20070,Storm Riders,Satish Sarode,1.0,0,3,13,0,13.00,5,0
+20071,Jersey Titans,Milan Dave,3.0,0,13,5,0,1.67,0,0
+20071,Jersey Titans,Ravin Patel,3.0,0,11,20,1,6.67,0,0
+20071,Jersey Titans,Jay Domadiya*,4.0,0,15,25,1,6.25,2,1
+20071,Jersey Titans,Parimal Domadiya,4.0,0,14,13,3,3.25,3,0
+20071,Jersey Titans,Komal(kc) Patel,1.0,0,4,7,2,7.00,0,0
+20071,Aryans,Ajay Shankar,2.0,0,7,14,0,7.00,1,1
+20071,Aryans,Gajendra Kumar,2.0,1,7,13,0,6.50,1,0
+20071,Aryans,Hema Siddartha Reddy Yalluri,2.0,0,6,14,0,7.00,0,1
+20071,Aryans,Joydeep Das,1.0,0,2,20,0,20.00,0,0
+20071,Aryans,Willison Lopes,0.5,0,2,14,0,16.80,1,0
+20074,Nj Tigers,Haider Naveed Akram,4.0,0,10,51,0,12.75,1,0
+20074,Nj Tigers,Saad Talat Siddiqui,4.0,0,10,29,2,7.25,0,1
+20074,Nj Tigers,Naveed Azam*,3.0,0,5,49,0,16.33,2,1
+20074,Nj Tigers,Waqas Choudhary,3.0,0,5,44,0,14.67,0,0
+20074,Nj Tigers,Shazain Yusuf,2.0,0,6,23,2,11.50,1,0
+20074,Pway Lions,Shail Shah,4.0,0,18,22,2,5.50,0,0
+20074,Pway Lions,Kush Choksi,4.0,0,16,20,3,5.00,2,0
+20074,Pway Lions,Dhaivat Patel,4.0,0,13,42,3,10.50,1,0
+20074,Pway Lions,Nish Patel,3.0,0,11,31,0,10.33,0,0
+20074,Pway Lions,Prit Patel(pd),0.2,0,2,0,1,0.00,0,0
+20090,Rowdy Rebels,Anoop Hegde,3.0,0,11,22,1,7.33,1,0
+20090,Rowdy Rebels,Naresh Patel,3.0,0,10,14,3,4.67,1,0
+20090,Rowdy Rebels,Soham Kapadia,2.0,0,6,6,1,3.00,0,0
+20090,Rowdy Rebels,Bhavik Surani,3.0,0,12,8,4,2.67,0,0
+20090,Rowdy Rebels,Zoheb Khalid*,1.0,0,2,5,0,5.00,1,0
+20090,Rowdy Rebels,Darshil Mistry,1.0,0,5,6,1,6.00,0,0
+20090,Sreeshti,Nimish Deshpande,1.0,0,3,4,1,4.00,1,0
+20090,Sreeshti,Nutan Kunchapu,1.0,0,2,16,1,16.00,4,0
+20090,Sreeshti,Kamal Choudhury,2.0,0,7,22,1,11.00,2,0
+20090,Sreeshti,Monang Shah,1.0,0,3,11,0,11.00,0,0
+20090,Sreeshti,Amol Manjrekar* †,1.0,0,1,11,0,11.00,0,0
+20091,Falcons,Sairam Raavi*,4.0,0,11,43,1,10.75,3,1
+20091,Falcons,Sai Ritheesh Sudham,4.0,0,12,30,3,7.50,6,0
+20091,Falcons,Srinath Gentyala,4.0,0,8,31,0,7.75,0,1
+20091,Falcons,Sunil Gudapati,4.0,0,11,26,1,6.50,6,0
+20091,Blue Aces CC,Dheeraj Dubey*,2.0,0,6,18,0,9.00,1,0
+20091,Blue Aces CC,Rajendra Prasad Challa,3.0,1,12,20,2,6.67,0,1
+20091,Blue Aces CC,Sandip Nandurkar,2.2,0,8,20,4,8.57,1,0
+20091,Blue Aces CC,Surya Nallamilli,1.0,0,3,15,0,15.00,1,0
+20091,Blue Aces CC,Amol Rukmangad,2.0,0,7,17,2,8.50,3,0
+20091,Blue Aces CC,Prabhakar Vudumula,2.0,0,8,12,2,6.00,3,0
+20094,RHG,Hiren Joshi,4.0,0,14,23,3,5.75,3,0
+20094,RHG,Zafran Hussain,4.0,0,17,10,3,2.50,2,0
+20094,RHG,Baseer Ahmed Mohammed,3.0,0,10,16,1,5.33,1,0
+20094,RHG,Kevin Shah*,4.0,0,13,19,1,4.75,1,0
+20094,RHG,Nuvan T,1.0,0,4,8,0,8.00,0,0
+20094,Juggernaut,Kailash Naithani,4.0,0,14,25,3,6.25,0,0
+20094,Juggernaut,Hemant Patel*,1.0,0,2,13,0,13.00,2,0
+20094,Juggernaut,Jatan Vaidya,2.0,0,3,20,1,10.00,1,0
+20094,Juggernaut,Karan P,1.5,0,2,19,1,10.36,0,0
+20097,Hudson Hurricanes,Sravan Nekkanti,4.0,0,17,21,4,5.25,2,0
+20097,Hudson Hurricanes,Pratik Mane,4.0,0,16,22,1,5.50,6,0
+20097,Hudson Hurricanes,Ved Arya,4.0,0,16,24,2,6.00,1,1
+20097,Hudson Hurricanes,Rohit Pradhan,3.0,0,6,24,1,8.00,1,0
+20097,Hudson Hurricanes,Aniket Dalal*,1.0,0,2,9,1,9.00,0,0
+20097,SAMP XI,Tirth Patel,4.0,0,17,20,1,5.00,3,0
+20097,SAMP XI,Jaydev Zala,4.0,0,14,16,4,4.00,3,0
+20097,SAMP XI,Ankit Patel*,4.0,0,13,23,2,5.75,3,0
+20097,SAMP XI,Arya Patel,4.0,0,8,21,1,5.25,0,1
+20102,Gcc,Nirav Rana(gcc),4.0,0,15,12,2,3.00,1,1
+20102,Gcc,Samir Patel,3.0,1,12,15,4,5.00,4,0
+20102,Gcc,Sapan Parikh,4.0,0,10,37,0,9.25,2,0
+20102,Gcc,Parth Patel,2.0,0,8,14,1,7.00,1,2
+20102,Gcc,Dhaval Patel,3.0,0,5,32,1,10.67,0,0
+20102,Gryffindors,Johncy V,3.0,0,14,11,0,3.67,4,0
+20102,Gryffindors,Siddhartha Nayak,1.0,0,4,9,0,9.00,2,0
+20102,Gryffindors,Harish Bangera,3.0,0,7,23,0,7.67,2,0
+20102,Gryffindors,Subodh Singh*,3.5,0,12,38,4,9.91,1,0
+20102,Gryffindors,Kishan Patel,2.0,0,5,20,0,10.00,1,1
+20102,Gryffindors,Ankit Patel,1.0,0,1,11,0,11.00,0,0
+20113,Maha CC,Sudhanshoo Vashisht,4.0,0,11,39,2,9.75,6,0
+20113,Maha CC,Dhrumil Shah,3.0,0,6,58,1,19.33,6,0
+20113,Maha CC,Nisarg Thakar,2.0,0,5,19,2,9.50,0,0
+20113,Maha CC,Jay Soni,3.0,0,4,43,0,14.33,0,0
+20113,Maha CC,Avineet Sharma,4.0,0,15,17,4,4.25,8,0
+20113,Warriors,Rumit Patel,4.0,0,12,23,2,5.75,0,1
+20113,Warriors,Prasad Fernando,4.0,0,13,25,1,6.25,0,0
+20113,Warriors,Jeet Patel,2.0,0,6,22,1,11.00,1,0
+20113,Warriors,Dhaval Patel,1.0,0,2,17,0,17.00,3,0
+20113,Warriors,Dharmik Patel,3.0,0,8,20,1,6.67,0,0
+20113,Warriors,Abhishek Patel*,2.0,0,8,14,2,7.00,0,0
+20115,Samudhra Gladiators,Vinit Bharadwaj,3.0,0,10,28,0,9.33,0,1
+20115,Samudhra Gladiators,Sandeep Shetty*,1.0,0,4,2,1,2.00,0,0
+20115,Samudhra Gladiators,Harshad Patil,3.2,0,11,30,5,9.00,3,0
+20115,Samudhra Gladiators,Naveen R Sripathi,4.0,0,10,30,1,7.50,3,0
+20115,Samudhra Gladiators,Ankur Chaturvedi,4.0,0,19,19,3,4.75,3,1
+20115,Piscataway Avengers,Mit Patel,4.0,1,13,20,2,5.00,0,0
+20115,Piscataway Avengers,Dharmesh Patel,3.0,0,10,12,0,4.00,0,0
+20115,Piscataway Avengers,Krunal Shah,3.1,0,12,12,5,3.79,0,0
+20115,Piscataway Avengers,Shan Tennakoon,1.0,0,4,13,1,13.00,0,1
+20115,Piscataway Avengers,Rimal Patel*,2.0,0,4,22,1,11.00,1,0
+20115,Piscataway Avengers,Sherry Singh,1.0,0,6,1,1,1.00,1,0
+20121,Team Highlanders,Ravi Kanth,2.0,0,4,19,0,9.50,3,0
+20121,Team Highlanders,Raja Kuppan,4.0,1,15,15,3,3.75,1,0
+20121,Team Highlanders,Syed Abhinash,4.0,0,12,21,1,5.25,3,0
+20121,Team Highlanders,Manikandan Swaminathan,4.0,0,13,19,2,4.75,5,0
+20121,Team Highlanders,Suresh Ganesan,2.0,0,5,10,1,5.00,0,0
+20121,F5,Subramaniam Sampath*,2.0,0,8,12,1,6.00,0,0
+20121,F5,Harihara Ganeshan,2.0,0,8,6,0,3.00,2,0
+20121,F5,Sujesh Nair,4.0,0,14,19,2,4.75,2,0
+20121,F5,⁠thulasi Thota,4.0,0,14,18,1,4.50,2,0
+20121,F5,Vimalendu Kumar,4.0,0,16,25,3,6.25,7,0
+20122,Youth For Sewa,Venkata Voona,3.0,0,6,15,2,5.00,1,1
+20122,Youth For Sewa,Manikanta Raja Kottu,4.0,0,15,10,4,2.50,0,0
+20122,Youth For Sewa,Rohith Reddy,4.0,0,15,13,2,3.25,1,0
+20122,Youth For Sewa,Balu Y,4.0,0,13,21,1,5.25,4,0
+20122,Youth For Sewa,Rajesh Kondru,1.0,0,2,9,0,9.00,0,0
+20122,Fdu Giants,Viral Parekh,2.0,0,7,15,0,7.50,1,1
+20122,Fdu Giants,Nishant Sharma,3.0,1,12,22,2,7.33,4,0
+20122,Fdu Giants,Ankit Chopra*,3.0,0,13,15,1,5.00,1,0
+20122,Fdu Giants,Ankit Patel,2.0,0,8,11,0,5.50,2,0
+20122,Fdu Giants,Ashish Kansal,1.1,0,3,10,0,8.57,0,0
+20125,11spartans,Neel Patel-13,4.0,0,10,30,0,7.50,0,1
+20125,11spartans,Krunal Patel,4.0,0,15,21,4,5.25,1,0
+20125,11spartans,Jay Trivedi,2.0,0,6,18,1,9.00,2,0
+20125,11spartans,Ravi Rathod,3.2,0,15,14,3,4.20,5,0
+20125,11spartans,Rajan Patel,2.0,0,6,14,1,7.00,0,0
+20125,Desi Warriors,Nauman Basit,3.0,1,16,7,3,2.33,2,0
+20125,Desi Warriors,Varun Gurram,2.4,0,11,9,2,3.38,1,0
+20125,Desi Warriors,Harinadha Reddy,3.0,0,13,8,2,2.67,0,0
+20125,Desi Warriors,Rakesh Kar,3.0,0,11,10,2,3.33,0,0
+20125,Desi Warriors,Harshil Patel,1.0,0,6,1,1,1.00,1,0
+20141,Piscataway Avengers,Mit Patel,4.0,0,14,19,0,4.75,1,0
+20141,Piscataway Avengers,Sherry Singh,2.0,0,9,9,0,4.50,1,0
+20141,Piscataway Avengers,Krunal Shah,4.0,0,13,23,2,5.75,1,0
+20141,Piscataway Avengers,Shan Tennakoon,1.0,0,2,10,0,10.00,0,0
+20141,Piscataway Avengers,Dharmesh Patel,4.0,1,13,15,0,3.75,0,0
+20141,Piscataway Avengers,Rimal Patel*,1.0,0,4,7,1,7.00,1,1
+20141,Team Highlanders,Ravi Kanth,1.0,0,2,24,0,24.00,0,0
+20141,Team Highlanders,Yokesh Rajaram*,4.0,0,15,12,1,3.00,3,0
+20141,Team Highlanders,Vijay Narayanan Nadar,2.0,0,7,14,1,7.00,3,0
+20141,Team Highlanders,Manikandan Swaminathan,3.0,0,11,18,2,6.00,2,0
+20141,Team Highlanders,Suresh Ganesan,0.4,0,1,18,0,27.00,0,0
+20144,SAMP XI,Akshay P,2.0,0,5,17,0,8.50,1,0
+20144,SAMP XI,Ankit Patel*,3.0,1,9,21,2,7.00,3,0
+20144,SAMP XI,Tirth Patel,2.0,0,5,22,0,11.00,4,0
+20144,SAMP XI,Smit Patel,3.0,0,3,50,0,16.67,0,0
+20144,SAMP XI,Nisarg Amin,2.0,0,3,28,0,14.00,0,0
+20144,SAMP XI,Monil Patel,2.0,0,4,12,1,6.00,1,0
+20144,SAMP XI,Aaryan Patel,2.0,0,5,29,3,14.50,2,1
+20144,Sreeshti,Sumesh Mathew,3.4,0,11,24,5,6.55,0,0
+20144,Sreeshti,Nimish Deshpande,3.0,0,9,18,0,6.00,3,0
+20144,Sreeshti,Monang Shah,4.0,1,17,26,4,6.50,0,0
+20144,Sreeshti,Kamal Choudhury,3.0,0,10,22,0,7.33,1,0
+20144,Sreeshti,Amol Manjrekar* †,2.0,0,9,7,1,3.50,1,0
+20146,Desi Warriors,Rigved Nagarkar,2.0,0,10,7,0,3.50,0,0
+20146,Desi Warriors,Sai Kancharla,4.0,0,10,26,2,6.50,1,0
+20146,Desi Warriors,Harinadha Reddy,4.0,0,13,17,3,4.25,1,2
+20146,Desi Warriors,Sarbjitsingh Sahota,2.0,0,2,21,0,10.50,2,1
+20146,Desi Warriors,Rakesh Kar,2.0,0,7,18,1,9.00,0,0
+20146,Desi Warriors,Harshil Patel,2.0,0,6,12,0,6.00,1,0
+20146,Rowdy Rebels,Bhavik Surani,2.0,0,5,18,2,9.00,1,0
+20146,Rowdy Rebels,Soham Kapadia,1.0,0,1,14,0,14.00,0,0
+20146,Rowdy Rebels,Naresh Patel,3.3,0,8,29,0,8.29,1,0
+20146,Rowdy Rebels,Darshil Mistry,1.0,0,0,18,0,18.00,0,0
+20146,Rowdy Rebels,Zohair Ahmad Siddiui,1.0,0,2,12,0,12.00,0,0
+20146,Rowdy Rebels,Zoheb Khalid*,2.0,0,8,11,2,5.50,1,0
+20150,Youth For Sewa,Venkata Voona,4.0,0,13,27,2,6.75,4,0
+20150,Youth For Sewa,Anand Vemuri,3.3,0,14,13,4,3.71,3,0
+20150,Youth For Sewa,Manikanta Raja Kottu,2.0,0,6,21,0,10.50,1,0
+20150,Youth For Sewa,Tauseef Ahmed,1.0,0,1,11,0,11.00,1,0
+20150,Youth For Sewa,Balu Y,2.0,1,12,2,3,1.00,2,0
+20150,Youth For Sewa,Rohith Reddy,1.0,0,4,6,1,6.00,1,1
+20150,Youth For Sewa,Eswar Vennapusa*,1.0,0,0,7,0,7.00,1,0
+20150,Juggernaut,Kailash Naithani,3.3,0,13,21,1,6.00,0,0
+20150,Juggernaut,Kartik Patel,4.0,0,11,28,2,7.00,3,0
+20150,Juggernaut,Shrenik Patel,4.0,0,16,16,3,4.00,0,0
+20150,Juggernaut,Karan P,4.0,0,15,19,2,4.75,0,0
+20156,Blue Aces CC,Surya Nallamilli,3.0,0,7,22,0,7.33,0,0
+20156,Blue Aces CC,Tharak Ram,4.0,0,11,18,1,4.50,0,0
+20156,Blue Aces CC,Dheeraj Dubey*,4.0,0,10,31,2,7.75,4,0
+20156,Blue Aces CC,Sandip Nandurkar,2.0,0,7,19,1,9.50,1,0
+20156,Blue Aces CC,Amol Rukmangad,1.0,0,2,14,1,14.00,0,0
+20156,Blue Aces CC,Prabhakar Vudumula,2.0,0,6,9,0,4.50,0,0
+20156,Hudson Hurricanes,Sravan Nekkanti,4.0,0,18,11,2,2.75,1,1
+20156,Hudson Hurricanes,Vinyas Ramachandra,3.0,0,10,32,1,10.67,0,0
+20156,Hudson Hurricanes,Aniket Dalal*,3.0,0,8,16,2,5.33,1,2
+20156,Hudson Hurricanes,Ved Arya,3.2,0,11,17,4,5.10,3,0
+20157,Falcons,Sairam Raavi*,4.0,0,20,20,5,5.00,3,0
+20157,Falcons,Raj Tiguti,4.0,1,11,25,1,6.25,4,0
+20157,Falcons,Srinath Gentyala,3.0,0,13,7,2,2.33,2,0
+20157,Falcons,Sai Ritheesh Sudham,3.0,1,14,7,2,2.33,3,0
+20157,Maha CC,Sudhanshoo Vashisht,3.0,0,8,24,0,8.00,0,0
+20157,Maha CC,Tamaas Khan,2.0,0,3,13,1,6.50,0,0
+20157,Maha CC,Ishan Shah,2.0,0,6,17,1,8.50,1,0
+20157,Maha CC,Rizwan Bajwa,2.0,1,10,11,2,5.50,2,1
+20158,Gryffindors,Subodh Singh*,4.0,0,15,16,1,4.00,1,0
+20158,Gryffindors,Johncy V,4.0,0,19,24,3,6.00,7,1
+20158,Gryffindors,Harish Bangera,3.0,0,9,31,0,10.33,1,0
+20158,Gryffindors,Sanket Kulkarni †,1.0,0,3,12,0,12.00,3,1
+20158,Gryffindors,Ankit Patel,4.0,0,16,18,3,4.50,2,0
+20158,Samudhra Gladiators,Vinit Bharadwaj,4.0,0,9,19,1,4.75,3,0
+20158,Samudhra Gladiators,Sandheep Sridar,1.0,0,2,9,0,9.00,0,0
+20158,Samudhra Gladiators,Harshad Patil,4.0,0,18,19,5,4.75,5,0
+20158,Samudhra Gladiators,Suraj Pai Madhukar,4.0,0,12,23,2,5.75,2,1
+20158,Samudhra Gladiators,Sandeep Shetty*,3.0,0,4,27,0,9.00,0,0
+20163,Fdu Giants,Kunal Patel,1.0,0,2,14,0,14.00,0,0
+20163,Fdu Giants,Ravish Parekh,3.0,0,10,35,2,11.67,6,1
+20163,Fdu Giants,Viral Parekh,4.0,0,18,20,2,5.00,1,1
+20163,Fdu Giants,Shubh Bhardwaj,2.1,0,9,12,2,5.54,3,0
+20163,Fdu Giants,Ankit Chopra*,4.0,2,21,7,3,1.75,1,0
+20163,Fdu Giants,Kartik Patel,1.0,0,3,14,0,14.00,1,0
+20163,Warriors,Abhishek Patel*,3.0,0,8,20,1,6.67,1,0
+20163,Warriors,Rumit Patel,3.0,0,10,11,1,3.67,0,0
+20163,Warriors,Kirtan Patel,4.0,0,14,25,5,6.25,1,0
+20163,Warriors,Jeet Patel,4.0,0,14,21,1,5.25,3,0
+20163,Warriors,Rakesh Patel,2.0,0,7,12,0,6.00,3,0
+20182,Gcc,Sahil Patel,4.0,0,9,45,1,11.25,3,0
+20182,Gcc,Parin Patel (gcc),3.0,0,10,34,1,11.33,2,0
+20182,Gcc,Mrugesh Patel,4.0,0,12,30,1,7.50,6,0
+20182,Gcc,Hardik(gcc) Rana,2.0,0,7,20,2,10.00,0,0
+20182,Gcc,Priten Patel (gcc),3.0,0,8,32,1,10.67,4,0
+20182,11spartans,Soham Brahmbhatt,4.0,0,16,26,4,6.50,4,0
+20182,11spartans,Pratik Patel (savali),4.0,0,16,19,2,4.75,3,0
+20182,11spartans,Jay Trivedi,2.0,0,7,10,1,5.00,0,0
+20182,11spartans,Rajan Patel,3.1,0,12,18,3,5.68,0,0
+20182,11spartans,Ravi Rathod,2.0,0,5,25,0,12.50,2,0
+20200,Jersey Boys,Vineet Luthra,4.0,0,15,9,3,2.25,0,0
+20200,Jersey Boys,Sushil Kumar,4.0,0,16,22,3,5.50,4,0
+20200,Jersey Boys,Vikul Rajpara,4.0,0,12,22,2,5.50,2,0
+20200,Jersey Boys,Vikas Chaudhary,1.0,0,5,5,0,5.00,1,0
+20200,Jersey Boys,Madhur Kaushik,2.4,0,7,18,2,6.75,8,0
+20200,Pway Lions,Kush Choksi,4.0,0,15,16,2,4.00,0,1
+20200,Pway Lions,Nish Patel,4.0,1,17,18,3,4.50,1,0
+20200,Pway Lions,Drumil Amin,3.1,1,14,10,4,3.16,0,0
+20200,Pway Lions,Dhaivat Patel,3.0,0,9,19,1,6.33,0,0
+20201,WCC,Tushar Lenka,1.0,0,3,9,0,9.00,1,0
+20201,WCC,Santosh Thanekar,1.0,0,2,11,0,11.00,0,0
+20201,WCC,Nisar Ahmad,4.0,1,17,13,1,3.25,0,0
+20201,WCC,Nahid Sarkar,4.0,0,17,13,4,3.25,2,1
+20201,WCC,Harikishore Malireddy,3.0,0,10,13,1,4.33,2,0
+20201,WCC,Sarwar Ali Shah,3.0,0,8,23,3,7.67,2,1
+20201,Jersey Titans,Milan Dave,3.0,1,13,13,3,4.33,3,0
+20201,Jersey Titans,Ravin Patel,4.0,0,14,17,2,4.25,3,0
+20201,Jersey Titans,Jay Patel,3.0,0,12,29,2,9.67,5,0
+20201,Jersey Titans,Jay Domadiya*,4.0,0,18,7,3,1.75,0,0
+20205,Newport CC,Mahendran Prakasam,3.0,0,11,21,2,7.00,4,1
+20205,Newport CC,Farukh Manzoor,3.0,0,11,17,2,5.67,0,1
+20205,Newport CC,Gokul Das Maharajan,4.0,0,13,16,1,4.00,3,0
+20205,Newport CC,Emmanuel Samuel Nair,4.0,0,7,28,1,7.00,1,0
+20205,Newport CC,Narender Reddy Bojja,2.0,0,8,10,2,5.00,0,0
+20205,Edison Rebelz,Jagadeesh Gandhi Agakrishnamurthy,4.0,1,17,21,3,5.25,6,0
+20205,Edison Rebelz,Yash Solanki,4.0,0,11,30,0,7.50,4,0
+20205,Edison Rebelz,Sourav Mazumder,3.4,0,11,16,1,4.36,0,0
+20205,Edison Rebelz,Soumyabrata Paul*,1.0,0,3,8,0,8.00,4,0
+20205,Edison Rebelz,Shailesh Khadapkar,1.0,0,1,11,0,11.00,1,0
+20205,Edison Rebelz,Srikant P,1.0,0,2,8,0,8.00,0,0
+20207,Nj Tigers,Saad Talat Siddiqui,2.0,0,4,23,0,11.50,1,0
+20207,Nj Tigers,Mubassir Mansuri,2.0,1,9,10,1,5.00,0,0
+20207,Nj Tigers,Faisal Mehmood,4.0,0,16,14,2,3.50,3,0
+20207,Nj Tigers,Rajinder (suraj) Singh,4.0,0,8,39,2,9.75,2,1
+20207,Nj Tigers,Haider Naveed Akram,4.0,0,12,16,3,4.00,1,0
+20207,PUNJAB XI,Nitesh Tomer,3.0,0,11,22,0,7.33,2,1
+20207,PUNJAB XI,Sunny Singh,4.0,1,18,10,3,2.50,1,0
+20207,PUNJAB XI,Nasir Khan,4.0,0,17,10,3,2.50,2,0
+20207,PUNJAB XI,Jasmeet Singh,3.0,0,6,40,1,13.33,2,1
+20207,PUNJAB XI,Amir Rashid,1.0,0,1,10,0,10.00,0,0
+20207,PUNJAB XI,Azam Mohammad,1.0,0,3,9,1,9.00,0,0
+20209,Gujarat United XI,Karan Patel,4.0,0,16,19,1,4.75,0,0
+20209,Gujarat United XI,Parth Patel,4.0,0,11,29,2,7.25,2,0
+20209,Gujarat United XI,Avi Shah,3.0,0,10,14,1,4.67,0,0
+20209,Gujarat United XI,Rohang Patel,2.0,0,5,15,3,7.50,1,1
+20209,Gujarat United XI,Daksh Patel,3.0,0,8,31,1,10.33,1,3
+20209,Veerans,Amit Sharma,3.4,0,9,35,0,9.55,2,0
+20209,Veerans,Kamalraj Rajamanickam,3.0,0,5,32,0,10.67,2,0
+20209,Veerans,Sundip Helchal,4.0,0,13,28,1,7.00,1,0
+20209,Veerans,Uma Maheswara Rao Patibandla,2.0,0,5,16,2,8.00,0,0
+20211,Plainsboro Eagles,Ashok Gandu,4.0,1,14,12,2,3.00,2,0
+20211,Plainsboro Eagles,Bharath Reddy*,4.0,0,16,14,3,3.50,0,0
+20211,Plainsboro Eagles,Vasi M,2.0,0,6,22,1,11.00,0,1
+20211,Plainsboro Eagles,Srinivas Reddy Ch,1.0,0,3,11,0,11.00,0,0
+20211,Plainsboro Eagles,Sai Manish Varma Mudunuri,2.0,0,5,17,1,8.50,2,1
+20211,Plainsboro Eagles,Tushar Choksi,3.0,0,10,8,2,2.67,0,0
+20211,Nj Braves,Swar Shah,3.0,0,3,28,0,9.33,1,0
+20211,Nj Braves,Menak Patel,4.0,0,12,18,2,4.50,0,1
+20211,Nj Braves,Vipul Patel,3.0,0,8,11,2,3.67,0,0
+20211,Nj Braves,Jenish Shah,3.0,0,6,27,1,9.00,4,0
+20214,Jetha 11,Haren Patel,3.0,0,11,22,1,7.33,0,0
+20214,Jetha 11,Eijaz Mulla,3.0,0,10,15,0,5.00,1,0
+20214,Jetha 11,Dipal Patel,4.0,0,13,15,5,3.75,3,0
+20214,Jetha 11,Dhruvil Dagli,2.0,0,5,22,1,11.00,1,3
+20214,Jetha 11,Gary Patel,4.0,0,12,48,0,12.00,0,0
+20214,Blasters,Priyankk Patel,4.0,0,16,22,3,5.50,2,0
+20214,Blasters,Jay Patel (jp),4.0,0,13,27,3,6.75,1,0
+20214,Blasters,Manthan Patel,2.0,0,10,24,2,12.00,1,1
+20214,Blasters,Chirag Patel,4.0,0,9,39,0,9.75,1,1
+20214,Blasters,Gunjan Patel,0.4,0,2,1,2,1.50,1,0
+20225,Mercer Challengers,Vishal Srivastava,4.0,1,15,17,0,4.25,2,0
+20225,Mercer Challengers,Ankur Parekh,4.0,0,11,31,1,7.75,2,0
+20225,Mercer Challengers,Sheshank Reddy,4.0,0,9,54,3,13.50,0,1
+20225,Mercer Challengers,Anup Satya,2.0,0,4,19,1,9.50,1,0
+20225,Mercer Challengers,Deepesh Naidu,2.0,0,7,16,0,8.00,1,0
+20225,Nj Stars CC,Abdul Wali Siddiqee,4.0,1,17,13,2,3.25,1,0
+20225,Nj Stars CC,Zain Pervaiz,3.3,1,13,15,3,4.29,3,0
+20225,Nj Stars CC,Muhammad Haseeb,3.0,1,14,5,2,1.67,1,0
+20225,Nj Stars CC,Imran Raja*,1.0,0,4,2,1,2.00,0,0
+20225,Nj Stars CC,Sunny Desai,2.0,0,8,5,2,2.50,1,0
+20232,Storm Riders,Sameer Kulkarni,2.0,0,9,9,1,4.50,0,0
+20232,Storm Riders,Apurv Jain* †,3.4,2,17,11,5,3.00,0,0
+20232,Storm Riders,Rishabh Tewari,2.0,0,9,5,0,2.50,1,0
+20232,Storm Riders,Shobhit Gupta,2.0,0,9,4,1,2.00,0,0
+20232,Storm Riders,Abhishek Varma,2.0,0,7,8,2,4.00,2,0
+20232,Storm Riders,Shreyas Najan,1.0,0,3,13,1,13.00,0,0
+20232,Parsippany Phoenix XI,Satish Kumar Durgam,4.0,0,14,25,1,6.25,1,0
+20232,Parsippany Phoenix XI,Naveen Rayal,3.0,0,9,17,2,5.67,2,0
+20232,Parsippany Phoenix XI,Raghuveer Bethelli,2.0,0,9,6,1,3.00,0,0
+20232,Parsippany Phoenix XI,Sujan Kumar,0.1,0,0,6,0,36.00,0,0
+20233,Aryans,Sourabh Guha*,4.0,0,12,26,0,6.50,1,0
+20233,Aryans,Aaditya Kumar,1.0,0,2,16,0,16.00,1,1
+20233,Aryans,Hema Siddartha Reddy Yalluri,1.0,0,2,9,0,9.00,0,0
+20233,Aryans,Arpit Panchal,4.0,0,12,39,1,9.75,5,1
+20233,Aryans,Gajendra Kumar,4.0,0,15,13,4,3.25,0,0
+20233,Aryans,Ajay Shankar,2.0,0,8,12,0,6.00,2,1
+20233,Plainsboro Knights,Raghuraman Varadharajan,4.0,0,14,21,3,5.25,0,0
+20233,Plainsboro Knights,Ankit Parikh,4.0,0,14,18,1,4.50,0,0
+20233,Plainsboro Knights,Siva Kandivalasa,3.0,0,6,28,0,9.33,1,0
+20233,Plainsboro Knights,Chinmaya Sahu,3.4,0,14,15,2,4.09,1,0

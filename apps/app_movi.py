@@ -156,7 +156,7 @@ fig_t5 = go.Figure(go.Bar(
                    "Runs: %{customdata[1]} · SR: %{customdata[2]:.0f}<extra></extra>")))
 fig_t5.update_layout(yaxis=dict(categoryorder="total ascending"),
                      xaxis=dict(range=[0, t5["index"].max() * 1.18]))
-st.plotly_chart(bar_layout(fig_t5, "MOVI", 280), use_container_width=True, config=PCFG)
+st.plotly_chart(bar_layout(fig_t5, "MOVI", 280), width="stretch", config=PCFG)
 st.caption(f"🥇 {t5.iloc[0]['batter']} leads {latest} "
            f"({int(t5.iloc[0]['runs'])} runs, SR {t5.iloc[0]['sr']:.0f}).")
 st.divider()
@@ -179,7 +179,7 @@ fig = go.Figure(go.Bar(
                    "Runs: %{customdata[3]}<br>Strike rate: %{customdata[4]:.1f} · "
                    "Death SR: %{customdata[5]:.1f}<extra></extra>")))
 fig.update_layout(yaxis=dict(categoryorder="total ascending"))
-st.plotly_chart(bar_layout(fig, "MOVI", 330), use_container_width=True, config=PCFG)
+st.plotly_chart(bar_layout(fig, "MOVI", 330), width="stretch", config=PCFG)
 st.caption("🥇 Gold = the season's top middle-order batsman.")
 
 st.markdown(f"**What set {winner['batter']} apart**")
@@ -192,7 +192,7 @@ fig_c = go.Figure(go.Bar(
 fig_c.add_vline(x=0, line_color="#888", line_width=1)
 fig_c.update_layout(xaxis=dict(range=[compdf["v"].min() - 1, compdf["v"].max() + 1]))
 st.plotly_chart(bar_layout(fig_c, "Relative strength (vs season's middle order)", 300),
-                use_container_width=True, config=PCFG)
+                width="stretch", config=PCFG)
 st.caption("How far above (orange) or below (grey) the season's middle-order "
            "average this batsman ranked on each skill.")
 st.divider()
@@ -206,7 +206,7 @@ show = top3[["season", "Rank", "batter", "team", "runs", "sr", "index"]].rename(
     "runs": "Runs", "sr": "SR", "index": "MOVI"})
 show["SR"] = show["SR"].round(1)
 show["MOVI"] = show["MOVI"].round(2)
-st.dataframe(show, use_container_width=True, hide_index=True, height=430)
+st.dataframe(show, width="stretch", hide_index=True, height=430)
 st.caption("The three highest-MOVI middle-order batsmen of every season. "
            "Swipe the table sideways to see every column.")
 st.divider()
@@ -219,7 +219,7 @@ if not repeats.empty:
                              text=[f"  {v}×" for v in rc.values], textposition="outside"))
     fig_r.update_layout(xaxis=dict(dtick=1, range=[0, rc.values.max() + 0.6]))
     st.plotly_chart(bar_layout(fig_r, "Seasons as best middle-order batsman", 240),
-                    use_container_width=True, config=PCFG)
+                    width="stretch", config=PCFG)
     st.divider()
 
 # ── Did the league recognise them? (fixed at the standard threshold) ─────────
@@ -235,7 +235,7 @@ rec_tbl = rec.copy()
 rec_tbl["other_award"] = rec_tbl["other_award"].replace("", "—")
 rec_tbl = rec_tbl.rename(columns={
     "season": "Season", "batter": "MOVI #1", "other_award": "Other award that season"})
-st.dataframe(rec_tbl, use_container_width=True, hide_index=True, height=430)
+st.dataframe(rec_tbl, width="stretch", hide_index=True, height=430)
 st.caption(
     f"At the standard {DEFAULT_MIN_MATCHES}-match qualification, in **{unrec} of "
     f"{len(rec)}** seasons the best middle-order batsman won no individual IPL award "
@@ -270,7 +270,7 @@ fig_d.add_trace(go.Scatter(
 fig_d.update_layout(yaxis=dict(dtick=1, autorange="reversed"),
                     legend=dict(orientation="h", yanchor="bottom", y=1.01, x=0))
 st.plotly_chart(bar_layout(fig_d, "Season strike rate", 620),
-                use_container_width=True, config=PCFG)
+                width="stretch", config=PCFG)
 faster = int((dumb["mo_sr"] > dumb["oc_sr"]).sum())
 gap = (dumb["mo_sr"] - dumb["oc_sr"]).mean()
 st.caption(

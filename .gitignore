@@ -1,6 +1,7 @@
 # data
 data/raw/
 data/processed/
+TNPL
 
 # claude code (local-only files)
 .claude/settings.local.json
@@ -37,3 +38,8 @@ latex/*.synctex.gz
 
 #other
 existing_research
+
+# dbt
+ipl_dbt/target/
+ipl_dbt/logs/
+ipl_dbt/dbt_packages/

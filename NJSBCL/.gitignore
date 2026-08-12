@@ -1,0 +1,4 @@
+node_modules/
+.pw-profile/
+.mcp.json
+.venv/

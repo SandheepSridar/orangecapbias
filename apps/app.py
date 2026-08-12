@@ -108,11 +108,11 @@ if tab == "A · Winner Positions":
     )
     fig.update_traces(textposition="outside")
     fig.update_layout(showlegend=False, yaxis_range=[0, 19])
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.markdown("**Season-by-season breakdown**")
     a_display = a[["season", "winner", "team", "total_runs", "avg_batting_position", "position_group", "playoff_team"]]
-    st.dataframe(a_display, use_container_width=True, hide_index=True)
+    st.dataframe(a_display, width="stretch", hide_index=True)
 
     _latest = OC_WINNERS.sort_index().iloc[-1]
     st.caption(
@@ -158,7 +158,7 @@ elif tab == "B · Balls Faced":
         ),
     ))
     fig.update_layout(showlegend=True, legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     st.caption("🏆 Gold stars mark each season's actual Orange Cap winner — they cluster at the top of the opener distribution.")
 
     b = d["b"].set_index("position_group").reindex(POSITION_ORDER)
@@ -168,7 +168,7 @@ elif tab == "B · Balls Faced":
             "avg_balls": "Mean", "median_balls": "Median",
             "min_balls": "Min", "max_balls": "Max", "batter_seasons": "N (batter-seasons)"
         }),
-        use_container_width=True,
+        width="stretch",
     )
 
     st.info(
@@ -212,7 +212,7 @@ elif tab == "C · Powerplay Access":
                 x=grp, y=107, text=f"🏆 ×{n}", showarrow=False,
                 font=dict(size=13, color=GOLD),
             )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     st.caption(
         "🏆 markers show how many of the 19 Orange Cap winners batted in each group — "
         "all of them in the two leftmost (powerplay-rich) groups. The phase mix above is *why*."
@@ -288,7 +288,7 @@ elif tab == "D · Normalised Rankings":
         yaxis=dict(autorange="reversed", title="Rank", dtick=1),
         height=500,
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     st.caption("🏆 Gold = the actual Orange Cap winner. Orange = rank changed after normalisation. Grey = rank unchanged.")
 
     if winner_name is not None:
@@ -351,7 +351,7 @@ elif tab == "D · Normalised Rankings":
             height=max(250, len(projected) * 55),
             margin=dict(l=140),
         )
-        st.plotly_chart(fig_ci, use_container_width=True)
+        st.plotly_chart(fig_ci, width="stretch")
         st.caption(
             "Dots = projected 14-match total. Bars = 95% confidence interval. "
             "Orange dashed line = actual season #1's run tally. "
@@ -396,7 +396,7 @@ elif tab == "E · Playoff Advantage":
         hovertemplate="🏆 <b>%{customdata[0]}</b> (%{customdata[1]})<br>Matches: %{y}<extra></extra>",
     ))
     fig.update_layout(showlegend=True, legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     st.caption("🏆 Gold stars mark each Orange Cap winner — almost all sit in the playoff column with the most matches.")
 
     st.info(
@@ -466,7 +466,7 @@ elif tab == "F · Non-Playoff Elites":
             continue
         x_positions = [f'{row["batter"]}<br>{row["season"]}' for _, row in season_rows.iterrows()]
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     st.caption(
         "Blue = actual runs. Orange extension = projected extra runs to reach 16 matches. "
         "Orange bars indicate the batter would have surpassed the actual OC winner on a level playing field. "
@@ -484,7 +484,7 @@ elif tab == "F · Non-Playoff Elites":
             "would_have_beaten_oc": "Would Beat OC Winner?",
         })
         .sort_values("season"),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -565,7 +565,7 @@ elif tab == "G · Best Middle Order":
             yaxis=dict(categoryorder="total ascending"),
             height=360, margin=dict(l=10, r=10, t=10, b=10),
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         st.caption("🥇 Gold = the season's top middle-order batsman.")
 
     with right:
@@ -585,7 +585,7 @@ elif tab == "G · Best Middle Order":
             xaxis_title="z-score (vs season's middle order)", yaxis_title="",
             height=360, margin=dict(l=10, r=10, t=10, b=10),
         )
-        st.plotly_chart(fig_c, use_container_width=True)
+        st.plotly_chart(fig_c, width="stretch")
         st.caption("Each bar = how far above (orange) or below (grey) the season's "
                    "middle-order average this player ranked on that skill.")
 
@@ -596,7 +596,7 @@ elif tab == "G · Best Middle Order":
     show = moi_best[["season", "batter", "team", "avg_pos", "matches", "runs",
                      "sr", "death_sr", "index"]].rename(columns={
         "avg_pos": "Avg Pos", "sr": "Strike Rate", "death_sr": "Death SR", "index": "Index"})
-    st.dataframe(show, use_container_width=True, hide_index=True)
+    st.dataframe(show, width="stretch", hide_index=True)
 
     # ── Recurring winners ────────────────────────────────────────────────────
     st.markdown("**The uncrowned regulars** — players who top the index most often")
@@ -608,7 +608,7 @@ elif tab == "G · Best Middle Order":
     fig_r.update_layout(xaxis_title="Seasons as best middle-order batsman", yaxis_title="",
                         height=260, margin=dict(l=10, r=10, t=10, b=10),
                         xaxis=dict(dtick=1))
-    st.plotly_chart(fig_r, use_container_width=True)
+    st.plotly_chart(fig_r, width="stretch")
 
     st.divider()
 
@@ -642,7 +642,7 @@ elif tab == "G · Best Middle Order":
         yaxis=dict(dtick=1, autorange="reversed"),
         height=560, margin=dict(l=10, r=10, t=10, b=10),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0))
-    st.plotly_chart(fig_d, use_container_width=True)
+    st.plotly_chart(fig_d, width="stretch")
 
     faster = int((dumb["mo_sr"] > dumb["oc_sr"]).sum())
     gap = (dumb["mo_sr"] - dumb["oc_sr"]).mean()

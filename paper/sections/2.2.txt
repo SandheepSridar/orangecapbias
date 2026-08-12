@@ -1,17 +1,12 @@
----------------------------------------------------------------------------------
-Write subsection "2.2 Unit of Analysis" for an academic paper's methodology
-  section, ~80 words, plain academic prose. Facts:
-  - The base table has one row per delivery, carrying: match metadata (season, date,
-    stage, teams), the innings/over/ball position, the batter and bowler, the runs
-    (batter, extras, total), wicket information, and several derived fields.
-  - The analyses use two aggregations of this table: per-delivery, and batter-season
-    (one row per batter per season).
-  - Only the first and second innings are used.
-  Do not mention results or statistical tests. Just describe the data structure.
+Hi Katie,
 
-  Two notes so it lands cleanly:
-  - The "derived fields" it refers to (batting position, phase, etc.) get defined in 2.3 — so here you only need to say they exist, not explain them. That keeps 2.2 short and
-  avoids overlap.
-  - Keep the same tense you settled on in 2.1 (you landed on present: "is analyzed"), so the two subsections read consistently.
+I came across your LinkedIn post about the AI Engineer openings at MassMutual and wanted to reach out directly about the mid-level role.
 
-  ---------------------------------------------------------------------------------
+I'm a developer focused on agentic AI and data engineering - I've built end-to-end pipelines using PySpark and the Claude API, with projects deployed as production Streamlit apps. What draws me specifically to MassMutual is the combination of your team's focus on real business impact and the insurance domain itself - I have a background in the insurance industry, so I'm not coming in cold on the business context, which I think shortens the ramp considerably.
+
+The agentic AI direction your team is taking is exactly the space I've been working in, and I'd love the opportunity to contribute to it in a more focused capacity.
+
+Would you be open to a quick chat, or should I apply directly through the link in your post? Either way, happy to share more about my background.
+
+Thanks for your time,
+Sandheep

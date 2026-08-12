@@ -145,43 +145,58 @@ misses the playoffs.
 ## Project Structure
 
 ```
-ipl-orange-cap-bias/
+orangecapbias/
 │
-├── CLAUDE.md                   ← This file
-├── README.md                   ← Public-facing project description
+├── CLAUDE.md                        ← This file
+├── EXAMPLES.md                      ← Coding guideline examples
+├── requirements.txt
 │
 ├── data/
-│   ├── raw/                    ← Downloaded Cricsheet JSON files (gitignored)
-│   │   └── ipl_json/           ← Extracted match JSONs
-│   ├── processed/              ← Cleaned, flattened dataframes
-│   │   ├── ball_by_ball.parquet
-│   │   ├── batter_season.parquet
-│   │   └── orange_cap_winners.csv
+│   ├── raw/                         ← Cricsheet JSON files (gitignored)
+│   ├── processed/                   ← ball_by_ball.parquet + ipl.duckdb (gitignored)
 │   └── reference/
-│       └── orange_cap_winners.csv   ← Manual list: season, winner, runs, position
+│       ├── orange_cap_winners.csv   ← 19-season winner reference
+│       └── movi_recognition.csv     ← MOVI season-winners vs IPL awards
 │
-├── notebooks/
-│   ├── 01_data_ingestion.ipynb      ← Parse Cricsheet JSONs → flat dataframe
-│   ├── 02_eda.ipynb                 ← Exploratory data analysis
-│   ├── 03_position_bias.ipynb       ← Core analysis: position vs runs
-│   ├── 04_playoff_bias.ipynb        ← Matches played disadvantage analysis
-│   └── 05_visualizations.ipynb     ← All final charts for the paper
+├── ipl_dbt/                         ← dbt project (ELT transform layer)
+│   ├── dbt_project.yml
+│   ├── profiles.yml                 ← DuckDB connection (run with --profiles-dir .)
+│   ├── seeds/orange_cap_winners.csv
+│   ├── macros/position_group.sql    ← reusable CASE macro
+│   └── models/
+│       ├── sources.yml
+│       ├── staging/stg_ball_by_ball.sql
+│       ├── intermediate/            ← int_batter_season, int_team_season
+│       └── marts/                   ← mart_position_bias, mart_normalized_rankings, mart_movi
 │
 ├── src/
-│   ├── parse_cricsheet.py      ← JSON parser → pandas DataFrame
-│   ├── features.py             ← Derived field calculations
-│   ├── stats.py                ← Statistical tests (t-tests, correlations)
-│   └── visualize.py            ← Reusable chart functions
+│   ├── parse_cricsheet.py           ← JSON → ball_by_ball.parquet
+│   ├── load_to_duckdb.py            ← parquet → DuckDB raw schema (run before dbt)
+│   ├── build_tables.py              ← regenerate outputs/tables/ CSVs
+│   ├── stats.py                     ← 6 statistical tests → stats_results.csv
+│   ├── middle_order_index.py        ← MOVI calculation → middle_order_*.csv
+│   └── visualize.py                 ← 6 publication figures → outputs/figures/
+│
+├── apps/
+│   ├── app.py                       ← Streamlit: Orange Cap bias dashboard
+│   └── app_movi.py                  ← Streamlit: MOVI explorer
+│
+├── website/                         ← Static HTML/JS MOVI public site
 │
 ├── outputs/
-│   ├── figures/                ← Final charts (PNG/SVG) for paper
-│   └── tables/                 ← Summary stat tables (CSV/LaTeX)
+│   ├── figures/                     ← PNG + SVG charts for paper
+│   └── tables/                      ← CSV outputs consumed by apps + paper
 │
 ├── paper/
-│   ├── draft_v1.md             ← Paper draft in Markdown
-│   └── references.bib          ← Bibliography
+│   ├── sections/                    ← Draft text (abstract, introduction, 2.1, 2.2 …)
+│   └── notes/                       ← Analysis memos (movi_analysis, super_striker …)
 │
-└── requirements.txt
+├── notebooks/
+│   └── 01_data_ingestion.ipynb
+│
+└── docs/
+    ├── documentation.md             ← Pipeline + script reference
+    └── analysis_queries_legacy.sql  ← Pre-dbt Databricks queries (archived)
 ```
 
 ---

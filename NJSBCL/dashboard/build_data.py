@@ -1,0 +1,608 @@
+"""Build data.js for the NJSBCL competition-analysis dashboard.
+
+Reads the scraped CSVs/schedule exports in ../data/ and precomputes everything
+the dashboard needs per opponent team: top batsmen/bowlers, dismissal
+breakdowns, toss advice, head-to-head vs our team, and upcoming fixtures.
+Mirrors the website/build_data.py -> data.js pattern used for MOVI.
+
+Usage: source ../.venv/bin/activate && python3 build_data.py
+"""
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+
+import pandas as pd
+
+DATA_DIR = Path(__file__).parent.parent / "data"
+OUT_FILE = Path(__file__).parent / "data.js"
+TODAY = datetime(2026, 8, 11)
+
+SERIES = {
+    "division1": {
+        "label": "2026 Division 1",
+        "gladiators": "Samudhra Gladiators",
+        "bat_csv": "division1_scorecards_batting.csv",
+        "bowl_csv": "division1_scorecards_bowling.csv",
+        "schedule_xlsx": "division1_schedule.xlsx",
+        "totals_csv": "division1_true_totals.csv",
+        "points_csv": "division1_points_table.csv",
+        "overs_csv": "division1_gladiators_overs.csv",
+    },
+    "weekenders": {
+        "label": "2026 Weekenders Cup",
+        "gladiators": "VRK Gladiators",
+        "bat_csv": "weekenderscup_scorecards_batting.csv",
+        "bowl_csv": "weekenderscup_scorecards_bowling.csv",
+        "schedule_xlsx": "weekenderscup_schedule.xlsx",
+        "totals_csv": "weekenderscup_true_totals.csv",
+        "points_csv": "weekenderscup_points_table.csv",
+        "overs_csv": "weekenderscup_gladiators_overs.csv",
+    },
+}
+
+ELO_START = 1500
+ELO_K = 32
+MIN_OVERS_FOR_WEAKNESS = 8
+MIN_DEATH_OVERS = 3
+
+
+def clean_name(n):
+    if pd.isna(n):
+        return ""
+    n = re.sub(r"[*†]", "", str(n)).strip()
+    return re.sub(r"\s+", " ", n)
+
+
+def abbrev(full):
+    words = full.split(" ")
+    if len(words) == 1:
+        return full
+    return " ".join(words[:-1]) + " " + words[-1][0]
+
+
+def parse_dismissal(raw):
+    """Returns (type, bowler_raw_abbrev_or_None)."""
+    if pd.isna(raw):
+        return (None, None)
+    s = str(raw).strip()
+    low = s.lower()
+    if low == "not out":
+        return (None, None)
+    if low.startswith("run out"):
+        return ("Run Out", None)
+    if low.startswith("retired"):
+        return ("Retired", None)
+    if low.startswith("hit wicket"):
+        return ("Hit Wicket", s[len("Hit Wicket"):].strip() or None)
+    if low.startswith("handled"):
+        return ("Handled Ball", None)
+    if low.startswith("c&b") or low.startswith("c &b"):
+        m = re.match(r"c\s*&\s*b\s+(.*)", s, re.IGNORECASE)
+        return ("Caught & Bowled", m.group(1).strip() if m else None)
+    if low.startswith("lbw"):
+        parts = s.rsplit(" b ", 1)
+        return ("LBW", parts[1].strip() if len(parts) == 2 else None)
+    if low.startswith("st ") or low.startswith("st."):
+        parts = s.rsplit(" b ", 1)
+        return ("Stumped", parts[1].strip() if len(parts) == 2 else None)
+    if low.startswith("c ") or low.startswith("c†") or s.startswith("c\xa0"):
+        parts = s.rsplit(" b ", 1)
+        return ("Caught", parts[1].strip() if len(parts) == 2 else None)
+    if low.startswith("b "):
+        return ("Bowled", s[2:].strip())
+    return ("Other", None)
+
+
+def overs_to_balls(o):
+    if pd.isna(o):
+        return 0
+    whole = int(o)
+    frac = round((float(o) - whole) * 10)
+    return whole * 6 + frac
+
+
+def balls_to_overs_str(b):
+    return f"{b // 6}.{b % 6}"
+
+
+def build_abbrev_map(bowl):
+    """(team, abbrev-or-full lowercased) -> clean full bowler name, built from the
+    complete scorecards_bowling roster. Used to resolve short forms like "Vinit B"
+    seen in dismissal text and over-by-over tables back to a canonical full name."""
+    abbrev_map = {}
+    for _, row in bowl.iterrows():
+        full = row["bowlerClean"]
+        if not full:
+            continue
+        abbrev_map[(row["team"], abbrev(full).lower())] = full
+        abbrev_map[(row["team"], full.lower())] = full
+    return abbrev_map
+
+
+def load_series(key, cfg):
+    bat = pd.read_csv(DATA_DIR / cfg["bat_csv"])
+    bowl = pd.read_csv(DATA_DIR / cfg["bowl_csv"])
+    bat["team"] = bat["team"].str.strip()
+    bowl["team"] = bowl["team"].str.strip()
+    bat["playerClean"] = bat["player"].apply(clean_name)
+    bowl["bowlerClean"] = bowl["bowler"].apply(clean_name)
+
+    dtypes = bat["dismissal"].apply(parse_dismissal)
+    bat["dtype"] = dtypes.apply(lambda x: x[0])
+    bat["dbowlerRaw"] = dtypes.apply(lambda x: x[1])
+
+    abbrev_map = build_abbrev_map(bowl)
+
+    teams_per_match = bat.groupby("matchId")["team"].unique().to_dict()
+
+    def resolve_bowler(row):
+        if pd.isna(row["dbowlerRaw"]):
+            return None
+        others = [t for t in teams_per_match[row["matchId"]] if t != row["team"]]
+        if not others:
+            return None
+        return abbrev_map.get((others[0], str(row["dbowlerRaw"]).strip().lower()))
+
+    bat["bowlerResolved"] = bat.apply(resolve_bowler, axis=1)
+
+    # True final scores (batter-runs sum excludes extras, which are large enough in
+    # this league — 10-20 runs/innings — to flip real results). listMatches.do embeds
+    # the official score1/score2 in batting order, which we use instead.
+    totals = pd.read_csv(DATA_DIR / cfg["totals_csv"])
+    totals_map = {
+        int(r["matchId"]): (int(r["score1"]), int(r["score2"]))
+        for _, r in totals.iterrows()
+    }
+
+    # team order per match (first team encountered in scorecards == batted first,
+    # matching the order score1/score2 are listed in on listMatches.do)
+    team_order_2 = {}
+    for match_id, grp in bat.groupby("matchId"):
+        teams_seen = list(dict.fromkeys(grp["team"]))
+        if len(teams_seen) == 2:
+            team_order_2[match_id] = teams_seen
+
+    match_rows = []
+    skipped = 0
+    for match_id, teams in team_order_2.items():
+        if match_id not in totals_map:
+            skipped += 1
+            continue
+        team1, team2 = teams
+        score1, score2 = totals_map[match_id]
+        if score1 == score2:
+            res1, res2 = "Tie", "Tie"
+        elif score1 > score2:
+            res1, res2 = "Win", "Loss"
+        else:
+            res1, res2 = "Loss", "Win"
+        match_rows.append({
+            "matchId": match_id, "team": team1, "opponent": team2,
+            "teamScore": score1, "oppScore": score2,
+            "battedFirst": True, "result": res1,
+        })
+        match_rows.append({
+            "matchId": match_id, "team": team2, "opponent": team1,
+            "teamScore": score2, "oppScore": score1,
+            "battedFirst": False, "result": res2,
+        })
+    if skipped:
+        print(f"  WARNING: {skipped} matches had no true-totals row, skipped from results")
+    results = pd.DataFrame(match_rows)
+
+    return bat, bowl, results, abbrev_map
+
+
+def team_batting_agg(bat, team):
+    sub = bat[bat["team"] == team].copy()
+    grp = sub.groupby("playerClean")
+    rows = []
+    for player, g in grp:
+        innings = len(g)
+        notouts = (g["dtype"].isna()).sum()
+        outs = innings - notouts
+        runs = int(g["R"].sum())
+        balls = int(g["B"].sum())
+        avg = round(runs / outs, 1) if outs > 0 else runs
+        sr = round(100 * runs / balls, 1) if balls > 0 else 0
+        rows.append({
+            "player": player, "innings": innings, "runs": runs, "balls": balls,
+            "notouts": int(notouts), "avg": avg, "sr": sr,
+            "hs": int(g["R"].max()), "fours": int(g["4s"].sum()), "sixes": int(g["6s"].sum()),
+        })
+    return pd.DataFrame(rows).sort_values("runs", ascending=False).reset_index(drop=True)
+
+
+def team_bowling_agg(bowl, team):
+    sub = bowl[bowl["team"] == team].copy()
+    sub["balls"] = sub["O"].apply(overs_to_balls)
+    grp = sub.groupby("bowlerClean")
+    rows = []
+    for player, g in grp:
+        wkts = int(g["W"].sum())
+        balls = int(g["balls"].sum())
+        runs = int(g["R"].sum())
+        econ = round(runs / (balls / 6), 2) if balls > 0 else 0
+        avg = round(runs / wkts, 1) if wkts > 0 else None
+        rows.append({
+            "player": player, "wickets": wkts, "overs": balls_to_overs_str(balls),
+            "runs": runs, "econ": econ, "avg": avg,
+        })
+    return pd.DataFrame(rows).sort_values("wickets", ascending=False).reset_index(drop=True)
+
+
+def bowler_weakness_pool(bowl, min_overs=MIN_OVERS_FOR_WEAKNESS):
+    """Per-bowler-per-team season stats used to rank 'weak bowlers to target':
+    poor economy, prone to an expensive spell (worst single-match economy), and
+    leaks extra runs via wides/no-balls. Z-scored across the whole league (both
+    teams' bowlers) so a team's weakest options are judged against the full field,
+    not just their own teammates. min_overs filters out small-sample cameos."""
+    sub = bowl.copy()
+    sub["balls"] = sub["O"].apply(overs_to_balls)
+    sub["matchOvers"] = sub["balls"] / 6
+    sub["matchEcon"] = sub.apply(
+        lambda r: round(r["R"] / r["matchOvers"], 2) if r["matchOvers"] > 0 else 0, axis=1
+    )
+    rows = []
+    for (team, player), g in sub.groupby(["team", "bowlerClean"]):
+        total_overs = g["balls"].sum() / 6
+        if total_overs < min_overs:
+            continue
+        runs = int(g["R"].sum())
+        econ = round(runs / total_overs, 2)
+        worst_econ = round(g["matchEcon"].max(), 2)
+        extras = int(g["wides"].sum() + g["noballs"].sum())
+        extras_rate = round(extras / total_overs, 2)
+        rows.append({
+            "team": team, "player": player, "overs": round(total_overs, 1),
+            "wickets": int(g["W"].sum()), "econ": econ, "worstEcon": worst_econ,
+            "extras": extras, "extrasRate": extras_rate,
+        })
+    pool = pd.DataFrame(rows)
+    if pool.empty:
+        return pool
+    for col in ["econ", "worstEcon", "extrasRate"]:
+        mean, std = pool[col].mean(), pool[col].std()
+        pool[col + "Z"] = (pool[col] - mean) / std if std > 0 else 0.0
+    pool["weaknessScore"] = pool[["econZ", "worstEconZ", "extrasRateZ"]].mean(axis=1)
+    return pool
+
+
+def weak_bowlers(pool, team, top_n=3):
+    if pool.empty:
+        return []
+    sub = pool[pool["team"] == team].sort_values("weaknessScore", ascending=False).head(top_n)
+    return [
+        {
+            "player": r["player"], "overs": r["overs"], "wickets": int(r["wickets"]),
+            "econ": r["econ"], "worstEcon": r["worstEcon"],
+            "extras": int(r["extras"]), "extrasRate": r["extrasRate"],
+        }
+        for _, r in sub.iterrows()
+    ]
+
+
+def bowler_strength_pool(bowl, min_overs=MIN_OVERS_FOR_WEAKNESS):
+    """Per-bowler-per-team season stats highlighting bowling strengths: low economy and a
+    high dot-ball rate (building pressure, drying up scoring). Z-scored across the whole
+    league so a team's best options are judged against the full field. Mirrors
+    bowler_weakness_pool but for the opposite purpose — who to build an attack around,
+    rather than who to target."""
+    sub = bowl.copy()
+    sub["balls"] = sub["O"].apply(overs_to_balls)
+    rows = []
+    for (team, player), g in sub.groupby(["team", "bowlerClean"]):
+        total_balls = int(g["balls"].sum())
+        total_overs = total_balls / 6
+        if total_overs < min_overs:
+            continue
+        runs = int(g["R"].sum())
+        dots = int(g["Dot"].sum())
+        econ = round(runs / total_overs, 2)
+        dot_pct = round(100 * dots / total_balls, 1) if total_balls else 0.0
+        rows.append({
+            "team": team, "player": player, "overs": round(total_overs, 1),
+            "wickets": int(g["W"].sum()), "econ": econ, "dotPct": dot_pct,
+        })
+    pool = pd.DataFrame(rows)
+    if pool.empty:
+        return pool
+    econ_mean, econ_std = pool["econ"].mean(), pool["econ"].std()
+    dot_mean, dot_std = pool["dotPct"].mean(), pool["dotPct"].std()
+    econ_z = (pool["econ"] - econ_mean) / econ_std if econ_std > 0 else 0.0
+    dot_z = (pool["dotPct"] - dot_mean) / dot_std if dot_std > 0 else 0.0
+    pool["strengthScore"] = (dot_z - econ_z) / 2  # low econ (negated) + high dot%, equal weight
+    return pool
+
+
+def bowling_strengths(pool, team, top_n=3):
+    if pool.empty:
+        return []
+    sub = pool[pool["team"] == team].sort_values("strengthScore", ascending=False).head(top_n)
+    return [
+        {
+            "player": r["player"], "overs": r["overs"], "wickets": int(r["wickets"]),
+            "econ": r["econ"], "dotPct": r["dotPct"],
+        }
+        for _, r in sub.iterrows()
+    ]
+
+
+def load_death_overs(cfg, gladiators, abbrev_map):
+    """Last-3-overs bowling figures for OUR team only, from a dedicated over-by-over
+    scrape (data/<series>_gladiators_overs.csv — see the rescrape-njsbcl skill's death-overs
+    step). Not opponent-specific: this is about who we trust with the ball late, regardless
+    of who we're facing. Returns None if that file hasn't been scraped yet."""
+    path = DATA_DIR / cfg["overs_csv"]
+    if not path.exists():
+        return None
+    overs = pd.read_csv(path)
+    death_parts = []
+    for _, g in overs.groupby("matchId"):
+        max_over = g["overNum"].max()
+        death_parts.append(g[g["overNum"] > max_over - 3])
+    death = pd.concat(death_parts, ignore_index=True) if death_parts else overs.iloc[0:0]
+    death = death.copy()
+    death["bowlerResolved"] = death["bowler"].apply(
+        lambda b: abbrev_map.get((gladiators, clean_name(b).lower()), clean_name(b))
+    )
+    return death
+
+
+def death_overs_leaders(death_df, min_overs=MIN_DEATH_OVERS, top_n=3):
+    """Bowlers ranked by economy across their last-3-overs spells, best first."""
+    if death_df is None or death_df.empty:
+        return []
+    rows = []
+    for player, g in death_df.groupby("bowlerResolved"):
+        overs_bowled = len(g)
+        if overs_bowled < min_overs:
+            continue
+        runs = int(g["runs"].sum())
+        rows.append({
+            "player": player, "oversBowled": overs_bowled, "runs": runs,
+            "econ": round(runs / overs_bowled, 2),
+        })
+    return sorted(rows, key=lambda r: r["econ"])[:top_n]
+
+
+def dismissal_breakdown(bat, team, player):
+    sub = bat[(bat["team"] == team) & (bat["playerClean"] == player) & bat["dtype"].notna()]
+    total = len(sub)
+    if total == 0:
+        return {"total": 0, "breakdown": []}
+    counts = sub["dtype"].value_counts()
+    breakdown = [{"type": t, "count": int(c), "pct": round(100 * c / total, 1)} for t, c in counts.items()]
+    return {"total": total, "breakdown": breakdown}
+
+
+def wickettype_breakdown(bat, bowler_full_name):
+    sub = bat[(bat["bowlerResolved"] == bowler_full_name) & bat["dtype"].notna()]
+    total = len(sub)
+    if total == 0:
+        return {"total": 0, "breakdown": []}
+    counts = sub["dtype"].value_counts()
+    breakdown = [{"type": t, "count": int(c), "pct": round(100 * c / total, 1)} for t, c in counts.items()]
+    return {"total": total, "breakdown": breakdown}
+
+
+def toss_advice(results, team):
+    sub = results[(results["team"] == team) & (results["result"] != "Tie")]
+    bat1 = sub[sub["battedFirst"]]
+    bat2 = sub[~sub["battedFirst"]]
+    bat1_wins = int((bat1["result"] == "Win").sum())
+    bat2_wins = int((bat2["result"] == "Win").sum())
+    bat1_n, bat2_n = len(bat1), len(bat2)
+    bat1_pct = round(100 * bat1_wins / bat1_n, 0) if bat1_n else None
+    bat2_pct = round(100 * bat2_wins / bat2_n, 0) if bat2_n else None
+    avg_score_bat1 = round(bat1["teamScore"].mean(), 0) if bat1_n else None
+    avg_chase_success = round(bat2[bat2["result"] == "Win"]["teamScore"].mean(), 0) if (bat2["result"] == "Win").any() else None
+
+    recommendation, reason = None, None
+    if bat1_pct is not None and bat2_pct is not None and bat1_n >= 3 and bat2_n >= 3:
+        if bat2_pct < bat1_pct - 10:
+            recommendation = "bat"
+            reason = f"They win only {bat2_pct:.0f}% chasing vs {bat1_pct:.0f}% setting a total — bat first and force them to chase."
+        elif bat1_pct < bat2_pct - 10:
+            recommendation = "bowl"
+            reason = f"They win only {bat1_pct:.0f}% batting first vs {bat2_pct:.0f}% chasing — bowl first and put them in."
+        else:
+            recommendation = "even"
+            reason = f"No strong lean ({bat1_pct:.0f}% batting first vs {bat2_pct:.0f}% chasing) — pick based on conditions."
+    else:
+        recommendation = "insufficient"
+        reason = "Not enough completed matches yet for a confident toss recommendation."
+
+    return {
+        "battingFirst": {"matches": bat1_n, "wins": bat1_wins, "winPct": bat1_pct, "avgScore": avg_score_bat1},
+        "chasing": {"matches": bat2_n, "wins": bat2_wins, "winPct": bat2_pct, "avgChaseSuccess": avg_chase_success},
+        "recommendation": recommendation, "reason": reason,
+    }
+
+
+def par_score_and_target(results, team, min_sample=3):
+    """Two matchup-specific numbers for facing `team`:
+    - parScoreToSet: the average total that has beaten them this season (across all their
+      losses, whether they batted first or second) — what to aim for if we bat first.
+    - targetToChase: their average score when batting first (win or lose) — a read on what
+      we'll likely need to chase if we bowl first.
+    Both require a minimum sample of qualifying matches or return None (not enough data)."""
+    losses = results[(results["team"] == team) & (results["result"] == "Loss")]
+    par_score = round(losses["oppScore"].mean()) if len(losses) >= min_sample else None
+
+    bat1 = results[(results["team"] == team) & (results["battedFirst"])]
+    target = round(bat1["teamScore"].mean()) if len(bat1) >= min_sample else None
+
+    return {
+        "parScoreToSet": {"value": par_score, "sampleSize": int(len(losses))},
+        "targetToChase": {"value": target, "sampleSize": int(len(bat1))},
+    }
+
+
+def boundary_dependency(bat, team):
+    sub = bat[bat["team"] == team]
+    runs = sub["R"].sum()
+    boundary_runs = sub["4s"].sum() * 4 + sub["6s"].sum() * 6
+    return round(100 * boundary_runs / runs, 1) if runs > 0 else 0
+
+
+def head_to_head(results, gladiators, opponent):
+    sub = results[(results["team"] == gladiators) & (results["opponent"] == opponent)]
+    matches = []
+    for _, r in sub.iterrows():
+        matches.append({
+            "matchId": int(r["matchId"]), "battedFirst": bool(r["battedFirst"]),
+            "gladiatorsScore": int(r["teamScore"]), "opponentScore": int(r["oppScore"]),
+            "result": r["result"],
+        })
+    wins = int((sub["result"] == "Win").sum())
+    losses = int((sub["result"] == "Loss").sum())
+    ties = int((sub["result"] == "Tie").sum())
+    return {"played": len(sub), "wins": wins, "losses": losses, "ties": ties, "matches": matches}
+
+
+def load_points_table(cfg):
+    """team -> {group, rank, rankOf, mat, won, lost, tie, pts, winPct, netRR}."""
+    pts = pd.read_csv(DATA_DIR / cfg["points_csv"])
+    group_sizes = pts.groupby("group").size().to_dict()
+    out = {}
+    for _, r in pts.iterrows():
+        # a handful of rows have a trailing "*" (site footnote for a points adjustment,
+        # e.g. forfeit penalty) — strip it, the numeric value itself is still correct
+        pts_match = re.match(r"-?\d+", str(r["pts"]))
+        out[r["team"].strip()] = {
+            "group": r["group"], "rank": int(r["rank"]), "rankOf": int(group_sizes[r["group"]]),
+            "mat": int(r["mat"]), "won": int(r["won"]), "lost": int(r["lost"]), "tie": int(r["tie"]),
+            "pts": int(pts_match.group()) if pts_match else None,
+            "winPct": float(str(r["winpct"]).rstrip("%")),
+            "netRR": float(r["netrr"]),
+        }
+    return out
+
+
+def compute_elo(results):
+    """Standard Elo, processed in matchId order (a solid chronological proxy — matchIds
+    increase monotonically with match date on this site). Returns team -> rating."""
+    rating = {}
+    one_row_per_match = results.drop_duplicates("matchId", keep="first").sort_values("matchId")
+    for _, r in one_row_per_match.iterrows():
+        a, b = r["team"], r["opponent"]
+        ra = rating.setdefault(a, ELO_START)
+        rb = rating.setdefault(b, ELO_START)
+        exp_a = 1 / (1 + 10 ** ((rb - ra) / 400))
+        if r["result"] == "Win":
+            actual_a = 1.0
+        elif r["result"] == "Loss":
+            actual_a = 0.0
+        else:
+            actual_a = 0.5
+        rating[a] = ra + ELO_K * (actual_a - exp_a)
+        rating[b] = rb + ELO_K * ((1 - actual_a) - (1 - exp_a))
+    return {team: round(r) for team, r in rating.items()}
+
+
+def win_probability(elo_a, elo_b):
+    return round(100 / (1 + 10 ** ((elo_b - elo_a) / 400)), 1)
+
+
+def load_upcoming(cfg, team, n=3):
+    df = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
+    df = df[(df["Team One"] == team) | (df["Team Two"] == team)].copy()
+    df["parsedDate"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
+    upcoming = df[df["parsedDate"] >= TODAY].sort_values("parsedDate").head(n)
+    out = []
+    for _, r in upcoming.iterrows():
+        opponent = r["Team Two"] if r["Team One"] == team else r["Team One"]
+        out.append({
+            "date": r["parsedDate"].strftime("%a, %b %d %Y"),
+            "time": str(r["Time"]),
+            "opponent": opponent,
+            "venue": r["Ground"] if pd.notna(r["Ground"]) else "TBD",
+        })
+    return out
+
+
+def build():
+    out = {"generated": TODAY.strftime("%Y-%m-%d"), "series": {}}
+
+    for key, cfg in SERIES.items():
+        print(f"=== {key} ===")
+        bat, bowl, results, abbrev_map = load_series(key, cfg)
+        gladiators = cfg["gladiators"]
+
+        upcoming = load_upcoming(cfg, gladiators)
+        print(f"  upcoming: {len(upcoming)}")
+
+        standings = load_points_table(cfg)
+        elo = compute_elo(results)
+        gladiators_elo = elo.get(gladiators, ELO_START)
+        print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
+              f"{gladiators} elo: {round(gladiators_elo)}")
+
+        # opponents = everyone Samudhra/VRK Gladiators has played or is scheduled to play
+        sched = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
+        sched_g = sched[(sched["Team One"] == gladiators) | (sched["Team Two"] == gladiators)]
+        opponents = sorted({
+            (r["Team Two"] if r["Team One"] == gladiators else r["Team One"])
+            for _, r in sched_g.iterrows()
+        })
+        print(f"  opponents: {len(opponents)}")
+
+        weakness_pool = bowler_weakness_pool(bowl)
+        strength_pool = bowler_strength_pool(bowl)
+        print(f"  bowlers qualifying for weakness ranking (>= {MIN_OVERS_FOR_WEAKNESS} overs): {len(weakness_pool)}")
+
+        death_overs = load_death_overs(cfg, gladiators, abbrev_map)
+        death_leaders = death_overs_leaders(death_overs)
+        print(f"  death-overs data: {'none scraped yet' if death_overs is None else f'{len(death_overs)} death-over rows, {len(death_leaders)} qualifying bowlers'}")
+
+        teams_data = {}
+        all_teams_in_data = sorted(set(bat["team"].unique()) | set([gladiators]))
+        for team in all_teams_in_data:
+            bat_agg = team_batting_agg(bat, team)
+            bowl_agg = team_bowling_agg(bowl, team)
+            top_bat = bat_agg.head(3).to_dict("records")
+            for b in top_bat:
+                b["dismissals"] = dismissal_breakdown(bat, team, b["player"])
+            top_bowl = bowl_agg.head(3).to_dict("records")
+            for b in top_bowl:
+                b["wicketTypes"] = wickettype_breakdown(bat, b["player"])
+
+            sub_res = results[results["team"] == team]
+            wins = int((sub_res["result"] == "Win").sum())
+            losses = int((sub_res["result"] == "Loss").sum())
+            ties = int((sub_res["result"] == "Tie").sum())
+
+            team_elo = elo.get(team, ELO_START)
+            teams_data[team] = {
+                "matches": len(sub_res), "wins": wins, "losses": losses, "ties": ties,
+                "topBatsmen": top_bat, "topBowlers": top_bowl,
+                "toss": toss_advice(results, team),
+                "parTarget": par_score_and_target(results, team),
+                "boundaryDependencyPct": boundary_dependency(bat, team),
+                "weakBowlers": weak_bowlers(weakness_pool, team),
+                "bowlingStrengths": bowling_strengths(strength_pool, team),
+                "headToHead": head_to_head(results, gladiators, team) if team != gladiators else None,
+                "standing": standings.get(team),
+                "elo": team_elo,
+                # Gladiators' win probability if they played this team today, per current Elo
+                "gladiatorsWinProbability": (
+                    None if team == gladiators else win_probability(gladiators_elo, team_elo)
+                ),
+            }
+        print(f"  teams computed: {len(teams_data)}")
+
+        out["series"][key] = {
+            "label": cfg["label"], "gladiators": gladiators,
+            "opponents": opponents, "upcoming": upcoming, "teams": teams_data,
+            "deathOversLeaders": death_leaders,
+        }
+
+    js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"
+    OUT_FILE.write_text(js)
+    print(f"Wrote {OUT_FILE} ({OUT_FILE.stat().st_size / 1024:.0f} KB)")
+
+
+if __name__ == "__main__":
+    build()
