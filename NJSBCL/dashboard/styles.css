@@ -128,7 +128,19 @@ section h2 .q {
 .fixture-opp { font-size: 1.05rem; font-weight: 700; margin-top: 0.3rem; }
 .fixture-venue { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
 .fixture-venue::before { content: "📍 "; }
+.fixture-card.highlighted {
+  border-color: rgba(255,195,0,0.4);
+  background: linear-gradient(180deg, rgba(255,195,0,0.07), var(--panel) 65%);
+}
 .empty-note { color: var(--muted); font-size: 0.88rem; font-style: italic; }
+
+.show-more-btn {
+  display: block; margin: 1rem auto 0; padding: 0.55rem 1.3rem;
+  background: #0f1420; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--text); font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  font-family: inherit; transition: border-color .15s ease;
+}
+.show-more-btn:hover { border-color: var(--gold); }
 
 /* ── Stat tiles (side-by-side comparison) ─────────────────────────── */
 .compare-grid {

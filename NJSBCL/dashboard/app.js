@@ -42,6 +42,7 @@ const SERIES_KEYS = Object.keys(NJSBCL_DATA.series);
 const state = {
   series: SERIES_KEYS[0],
   opponent: null,
+  showAllFixtures: false,
 };
 
 function currentSeriesData() { return NJSBCL_DATA.series[state.series]; }
@@ -59,6 +60,7 @@ function buildSeriesPills() {
     b.addEventListener("click", () => {
       if (state.series === key) return;
       state.series = key;
+      state.showAllFixtures = false;
       const opts = currentSeriesData().opponents;
       state.opponent = opts.includes(state.opponent) ? state.opponent : opts[0];
       box.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
@@ -115,16 +117,21 @@ function renderWinProb() {
 }
 
 /* ── Fixtures ──────────────────────────────────────────────────────── */
+const FIXTURES_HIGHLIGHT_COUNT = 3;
+
 function renderFixtures() {
   const grid = $("fixture-grid");
+  const toggle = $("fixtures-toggle");
   grid.innerHTML = "";
   const s = currentSeriesData();
   if (!s.upcoming.length) {
     grid.appendChild(el("div", "empty-note", "No upcoming fixtures scheduled."));
+    toggle.hidden = true;
     return;
   }
-  s.upcoming.forEach((m) => {
-    const c = el("div", "fixture-card");
+  const visible = state.showAllFixtures ? s.upcoming : s.upcoming.slice(0, FIXTURES_HIGHLIGHT_COUNT);
+  visible.forEach((m, i) => {
+    const c = el("div", `fixture-card${i < FIXTURES_HIGHLIGHT_COUNT ? " highlighted" : ""}`);
     c.append(
       el("div", "fixture-date", `${m.date} · ${m.time}`),
       el("div", "fixture-opp", `vs ${m.opponent}`),
@@ -132,6 +139,16 @@ function renderFixtures() {
     );
     grid.appendChild(c);
   });
+
+  const remaining = s.upcoming.length - FIXTURES_HIGHLIGHT_COUNT;
+  if (remaining <= 0) {
+    toggle.hidden = true;
+  } else {
+    toggle.hidden = false;
+    toggle.textContent = state.showAllFixtures
+      ? "Show fewer"
+      : `Show all ${s.upcoming.length} upcoming matches`;
+  }
 }
 
 /* ── Toss advice ───────────────────────────────────────────────────── */
@@ -492,5 +509,9 @@ populateOpponentSelect();
 $("opponent-select").addEventListener("change", (e) => {
   state.opponent = e.target.value;
   renderAll();
+});
+$("fixtures-toggle").addEventListener("click", () => {
+  state.showAllFixtures = !state.showAllFixtures;
+  renderFixtures();
 });
 renderAll();

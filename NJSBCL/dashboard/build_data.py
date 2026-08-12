@@ -624,11 +624,14 @@ def win_probability(elo_a, elo_b):
     return round(100 / (1 + 10 ** ((elo_b - elo_a) / 400)), 1)
 
 
-def load_upcoming(cfg, team, n=3):
+def load_upcoming(cfg, team):
+    """All remaining scheduled matches for `team`, soonest first. The dashboard shows
+    the first 3 highlighted with the rest behind a "show all" toggle — no cap here so
+    that toggle has real data to expand into."""
     df = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
     df = df[(df["Team One"] == team) | (df["Team Two"] == team)].copy()
     df["parsedDate"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
-    upcoming = df[df["parsedDate"] >= TODAY].sort_values("parsedDate").head(n)
+    upcoming = df[df["parsedDate"] >= TODAY].sort_values("parsedDate")
     out = []
     for _, r in upcoming.iterrows():
         opponent = r["Team Two"] if r["Team One"] == team else r["Team One"]
