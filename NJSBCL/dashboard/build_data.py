@@ -251,12 +251,23 @@ def bowler_weakness_pool(bowl, min_overs=MIN_OVERS_FOR_WEAKNESS):
             continue
         runs = int(g["R"].sum())
         econ = round(runs / total_overs, 2)
-        worst_econ = round(g["matchEcon"].max(), 2)
+        worst_row = g.loc[g["matchEcon"].idxmax()]
+        # worstEcon (a rate) is used only internally below to pick which match was the
+        # worst and to rank bowlers against each other — it is NOT shown to the user as
+        # a "runs/over" figure. Extrapolating a 2-3 ball spell up to a per-over rate
+        # produces alarming-looking but meaningless numbers (13 runs off 2 legal balls
+        # would read as "39/over", which never actually happened). Instead we surface the
+        # raw runs conceded and raw balls bowled (legal deliveries + wides + no-balls) in
+        # that spell, e.g. "13 runs off 3 balls" — true regardless of spell length.
+        worst_econ = round(worst_row["matchEcon"], 2)
+        worst_spell_runs = int(worst_row["R"])
+        worst_spell_balls = overs_to_balls(worst_row["O"]) + int(worst_row["wides"]) + int(worst_row["noballs"])
         extras = int(g["wides"].sum() + g["noballs"].sum())
         extras_rate = round(extras / total_overs, 2)
         rows.append({
             "team": team, "player": player, "overs": round(total_overs, 1),
             "wickets": int(g["W"].sum()), "econ": econ, "worstEcon": worst_econ,
+            "worstSpellRuns": worst_spell_runs, "worstSpellBalls": worst_spell_balls,
             "extras": extras, "extrasRate": extras_rate,
         })
     pool = pd.DataFrame(rows)
@@ -276,7 +287,8 @@ def weak_bowlers(pool, team, top_n=3):
     return [
         {
             "player": r["player"], "overs": r["overs"], "wickets": int(r["wickets"]),
-            "econ": r["econ"], "worstEcon": r["worstEcon"],
+            "econ": r["econ"],
+            "worstSpellRuns": int(r["worstSpellRuns"]), "worstSpellBalls": int(r["worstSpellBalls"]),
             "extras": int(r["extras"]), "extrasRate": r["extrasRate"],
         }
         for _, r in sub.iterrows()

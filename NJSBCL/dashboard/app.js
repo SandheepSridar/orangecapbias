@@ -369,7 +369,7 @@ function renderBowlingBattle() {
     them.weakBowlers.forEach((b, i) => {
       targetBox.appendChild(bowlerCard(i + 1, false, b.player, `${b.overs} overs · ${b.wickets} wkts`, [
         `econ <b>${b.econ}</b>`,
-        `worst spell <b>${b.worstEcon}</b>/over`,
+        `worst spell: <b>${b.worstSpellRuns}</b> runs off <b>${b.worstSpellBalls}</b> balls`,
         `<b>${b.extras}</b> extras (${b.extrasRate}/over)`,
       ]));
     });
