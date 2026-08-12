@@ -90,7 +90,7 @@ select#opponent-select {
 section { margin: 2.4rem 0; }
 section h2 {
   font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;
-  display: flex; align-items: baseline; gap: 0.6rem;
+  display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
 }
 section h2 .q {
   font-size: 0.78rem; font-weight: 500; color: var(--muted); font-style: italic;
@@ -138,12 +138,17 @@ section h2 .q {
   padding: 1.1rem 1.2rem;
 }
 .compare-tile .ct-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem; }
-.ct-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.2rem 0; }
+.ct-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.15rem 0.6rem; padding: 0.2rem 0; }
 .ct-row + .ct-row { border-top: 1px solid var(--line); margin-top: 0.35rem; padding-top: 0.55rem; }
 .ct-team { font-size: 0.85rem; font-weight: 600; }
 .ct-team.us { color: var(--gold); }
 .ct-team.them { color: var(--blue); }
 .ct-val { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 640px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .ct-row { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+}
 
 /* ── Toss advice card ──────────────────────────────────────────────── */
 .toss-card {
@@ -268,4 +273,7 @@ footer { text-align: center; padding: 3rem 1.5rem 1.5rem; color: var(--grey); fo
 @media (max-width: 560px) {
   .controls { flex-direction: column; align-items: stretch; }
   .h2h-record .big { font-size: 1.5rem; }
+  .nav-sub { display: none; }
+  main { padding: 0 1rem; }
+  .page-header { padding: 1.6rem 0 1.1rem; }
 }
