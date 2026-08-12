@@ -447,6 +447,16 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   disasters (e.g. 4 wickets for 4 runs right after the one big partnership). Rendered as a
   "Batting collapses" section (par-target-row style) showing collapse % + worst instance, both
   teams, right before "Top 3 batsmen".
+- There's a second page, `charts.html` (+ `charts.js`), added 2026-08-12 — Gladiators-only
+  season charts, not opponent-specific. All derived from data already in `data.js` under each
+  series' `gladiatorsCharts` key: no new scraping needed for it, just keep running
+  `build_data.py` as normal and it regenerates alongside everything else. Contents: a suggested
+  best playing XI (`best_playing_xi()` — batting value = average+strike rate, bowling value =
+  economy+dot%, both z-scored against the *whole league* via `batter_strength_pool()` /
+  `bowler_strength_pool()`, not just our own squad; keeper identified from the scorecard's `†`
+  marker), an Elo rating trajectory chart (`compute_elo(results, track_team=...)` now optionally
+  returns a match-by-match history alongside the final ratings), and full squad batting/bowling
+  leaderboards (every player who's played for us, not just the top 3 shown on the main page).
 
 ## TODO for a future rescrape — toss data (not yet implemented)
 

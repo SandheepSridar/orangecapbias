@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Gladiators Charts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">Gladiators season charts</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+  </span>
+</nav>
+
+<main>
+  <header class="page-header">
+    <h1>Our squad, all season long</h1>
+    <p>Season-wide numbers for our own team, not tied to any one opponent — best XI, form
+      trajectory, and full squad leaderboards. Pick a series below.</p>
+    <div class="data-updated-badge" id="data-updated-badge"></div>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Series</label>
+      <div class="pills" id="series-pills"></div>
+    </div>
+  </div>
+
+  <section id="sec-bestxi">
+    <h2>Best playing XI <span class="q">— who gives us the best chance of winning?</span></h2>
+    <p class="subhead">Ranked by a batting value score (average + strike rate) and a bowling
+      value score (economy + dot-ball rate), both measured against the <em>whole league</em>, not
+      just our own squad — so this reflects real quality, not just "best of our bunch." The
+      wicketkeeper is set from scorecard credit, then we fill 5 more batting spots, enough bowling
+      options to cover a full attack, and the best value left over. Min 5 innings batted / 8 overs
+      bowled to qualify — small-sample cameos are excluded.</p>
+    <div id="bestxi-list"></div>
+  </section>
+
+  <section id="sec-elo-trend">
+    <h2>Form over the season <span class="q">— Elo rating after every match</span></h2>
+    <p class="subhead">Same Elo model driving the main page's win probability — this just traces
+      how it's moved match by match. Green dot = win, red = loss, grey = tie.</p>
+    <div class="chart-card" id="elo-chart"></div>
+  </section>
+
+  <section id="sec-bat-leaderboard">
+    <h2>Squad batting leaderboard <span class="q">— every player who's batted for us this season</span></h2>
+    <div class="chart-card" id="bat-leaderboard"></div>
+  </section>
+
+  <section id="sec-bowl-leaderboard">
+    <h2>Squad bowling leaderboard <span class="q">— every player who's bowled for us this season</span></h2>
+    <div class="chart-card" id="bowl-leaderboard"></div>
+  </section>
+
+  <section id="sec-other-metrics">
+    <h2>Other season metrics</h2>
+    <div class="metric-grid" id="other-metrics-grid"></div>
+  </section>
+
+  <footer>Built from 2026 season scorecards scraped from cricclubs.com/NJSBCL · matches with no result (abandoned/no play) are excluded.</footer>
+</main>
+
+<div class="tooltip" id="tooltip" hidden></div>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+</body>
+</html>

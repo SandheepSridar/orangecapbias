@@ -497,6 +497,122 @@ def bowling_strengths(pool, team, top_n=3):
     ]
 
 
+MIN_INNINGS_FOR_BAT_STRENGTH = 5
+
+
+def batter_strength_pool(bat, min_innings=MIN_INNINGS_FOR_BAT_STRENGTH):
+    """Per-batter-per-team season stats highlighting batting value: batting average and
+    strike rate, z-scored across the whole league (same equal-weight composite pattern as
+    bowler_strength_pool) so a player's value is judged against the full field, not just
+    their own teammates. min_innings filters out small-sample cameos."""
+    rows = []
+    for (team, player), g in bat.groupby(["team", "playerClean"]):
+        innings = len(g)
+        if innings < min_innings:
+            continue
+        notouts = int(g["dtype"].isna().sum())
+        outs = innings - notouts
+        runs = int(g["R"].sum())
+        balls = int(g["B"].sum())
+        avg = round(runs / outs, 1) if outs > 0 else float(runs)
+        sr = round(100 * runs / balls, 1) if balls > 0 else 0.0
+        rows.append({"team": team, "player": player, "innings": innings, "runs": runs, "avg": avg, "sr": sr})
+    pool = pd.DataFrame(rows)
+    if pool.empty:
+        return pool
+    avg_mean, avg_std = pool["avg"].mean(), pool["avg"].std()
+    sr_mean, sr_std = pool["sr"].mean(), pool["sr"].std()
+    avg_z = (pool["avg"] - avg_mean) / avg_std if avg_std > 0 else 0.0
+    sr_z = (pool["sr"] - sr_mean) / sr_std if sr_std > 0 else 0.0
+    pool["battingScore"] = (avg_z + sr_z) / 2
+    return pool
+
+
+def best_playing_xi(bat, bat_pool, bowl_pool, team):
+    """Suggests a Playing XI from `team`'s full-season squad: the designated wicketkeeper
+    (identified from the '†' marker cricclubs uses in the raw scorecard), the best 5
+    remaining batting options by battingScore, enough bowling options by strengthScore to
+    cover a full attack (aiming for 5 recognized bowlers in the XI), then fills any
+    remaining spots with the best leftover combined value. Both scores come from
+    league-wide z-scored pools (batter_strength_pool / bowler_strength_pool), so this
+    reflects each player's value against the whole league, not just their own teammates."""
+    squad_bat = bat_pool[bat_pool["team"] == team].set_index("player") if not bat_pool.empty else bat_pool
+    squad_bowl = bowl_pool[bowl_pool["team"] == team].set_index("player") if not bowl_pool.empty else bowl_pool
+
+    wk_rows = bat[(bat["team"] == team) & (bat["player"].str.contains("†", na=False))]
+    keeper = wk_rows["playerClean"].value_counts().idxmax() if not wk_rows.empty else None
+
+    all_players = sorted(set(squad_bat.index) | set(squad_bowl.index) | ({keeper} if keeper else set()))
+    roster = {}
+    for p in all_players:
+        has_bat = p in squad_bat.index
+        has_bowl = p in squad_bowl.index
+        roster[p] = {
+            "player": p, "isKeeper": p == keeper,
+            "battingScore": round(float(squad_bat.loc[p, "battingScore"]), 2) if has_bat else None,
+            "bowlingScore": round(float(squad_bowl.loc[p, "strengthScore"]), 2) if has_bowl else None,
+            "battingStats": {
+                "innings": int(squad_bat.loc[p, "innings"]), "runs": int(squad_bat.loc[p, "runs"]),
+                "avg": float(squad_bat.loc[p, "avg"]), "sr": float(squad_bat.loc[p, "sr"]),
+            } if has_bat else None,
+            "bowlingStats": {
+                "overs": float(squad_bowl.loc[p, "overs"]), "wickets": int(squad_bowl.loc[p, "wickets"]),
+                "econ": float(squad_bowl.loc[p, "econ"]), "dotPct": float(squad_bowl.loc[p, "dotPct"]),
+            } if has_bowl else None,
+        }
+
+    picked = []
+
+    def pick(p):
+        if p is not None and p not in picked and p in roster:
+            picked.append(p)
+
+    pick(keeper)
+
+    batters_ranked = sorted(
+        (p for p in roster if roster[p]["battingScore"] is not None),
+        key=lambda p: -roster[p]["battingScore"],
+    )
+    for p in batters_ranked:
+        if len(picked) >= 6:
+            break
+        pick(p)
+
+    bowlers_ranked = sorted(
+        (p for p in roster if roster[p]["bowlingScore"] is not None),
+        key=lambda p: -roster[p]["bowlingScore"],
+    )
+
+    def bowling_count():
+        return sum(1 for p in picked if roster[p]["bowlingScore"] is not None)
+
+    for p in bowlers_ranked:
+        if bowling_count() >= 5 or len(picked) >= 11:
+            break
+        pick(p)
+
+    remaining = sorted(
+        (p for p in roster if p not in picked),
+        key=lambda p: -((roster[p]["battingScore"] or 0) + (roster[p]["bowlingScore"] or 0)),
+    )
+    for p in remaining:
+        if len(picked) >= 11:
+            break
+        pick(p)
+
+    players = []
+    for p in picked[:11]:
+        r = roster[p]
+        role = (
+            "Wicketkeeper" if r["isKeeper"] else
+            "All-rounder" if r["battingScore"] is not None and r["bowlingScore"] is not None else
+            "Batter" if r["battingScore"] is not None else
+            "Bowler"
+        )
+        players.append({**r, "role": role})
+    return {"players": players, "squadSize": len(roster)}
+
+
 def load_death_overs(cfg, gladiators, abbrev_map):
     """Last-3-overs bowling figures for OUR team only, from a dedicated over-by-over
     scrape (data/<series>_gladiators_overs.csv — see the rescrape-njsbcl skill's death-overs
@@ -649,10 +765,13 @@ def load_points_table(cfg):
     return out
 
 
-def compute_elo(results):
+def compute_elo(results, track_team=None):
     """Standard Elo, processed in matchId order (a solid chronological proxy — matchIds
-    increase monotonically with match date on this site). Returns team -> rating."""
+    increase monotonically with match date on this site). Returns team -> rating, plus
+    (if track_team is given) that team's rating after each of its own matches, for
+    charting its form trajectory across the season."""
     rating = {}
+    history = []
     one_row_per_match = results.drop_duplicates("matchId", keep="first").sort_values("matchId")
     for _, r in one_row_per_match.iterrows():
         a, b = r["team"], r["opponent"]
@@ -667,7 +786,16 @@ def compute_elo(results):
             actual_a = 0.5
         rating[a] = ra + ELO_K * (actual_a - exp_a)
         rating[b] = rb + ELO_K * ((1 - actual_a) - (1 - exp_a))
-    return {team: round(r) for team, r in rating.items()}
+        if track_team is not None and track_team in (a, b):
+            opponent = b if track_team == a else a
+            team_result = r["result"] if track_team == a else (
+                "Win" if r["result"] == "Loss" else "Loss" if r["result"] == "Win" else "Tie"
+            )
+            history.append({
+                "matchId": int(r["matchId"]), "elo": round(rating[track_team]),
+                "opponent": opponent, "result": team_result,
+            })
+    return {team: round(r) for team, r in rating.items()}, history
 
 
 def win_probability(elo_a, elo_b):
@@ -708,7 +836,7 @@ def build():
         print(f"  upcoming: {len(upcoming)}")
 
         standings = load_points_table(cfg)
-        elo = compute_elo(results)
+        elo, gladiators_elo_history = compute_elo(results, track_team=gladiators)
         gladiators_elo = elo.get(gladiators, ELO_START)
         print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
               f"{gladiators} elo: {round(gladiators_elo)}")
@@ -769,10 +897,25 @@ def build():
             }
         print(f"  teams computed: {len(teams_data)}")
 
+        bat_strength_pool = batter_strength_pool(bat)
+        best_xi = best_playing_xi(bat, bat_strength_pool, strength_pool, gladiators)
+        league_avg_collapse_pct = (
+            round(sum(t["battingCollapses"]["collapsePct"] for t in teams_data.values()) / len(teams_data))
+            if teams_data else 0
+        )
+        gladiators_charts = {
+            "bestXI": best_xi,
+            "eloHistory": gladiators_elo_history,
+            "battingLeaderboard": team_batting_agg(bat, gladiators).to_dict("records"),
+            "bowlingLeaderboard": team_bowling_agg(bowl, gladiators).to_dict("records"),
+            "leagueAvgCollapsePct": league_avg_collapse_pct,
+        }
+        print(f"  best XI: {len(best_xi['players'])} players from a qualifying squad of {best_xi['squadSize']}")
+
         out["series"][key] = {
             "label": cfg["label"], "gladiators": gladiators,
             "opponents": opponents, "upcoming": upcoming, "teams": teams_data,
-            "deathOversLeaders": death_leaders,
+            "deathOversLeaders": death_leaders, "gladiatorsCharts": gladiators_charts,
         }
 
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"

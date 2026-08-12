@@ -1,9 +1,15 @@
 # NJSBCL Scout — competition-analysis dashboard
 
 Static site (no build step, no framework) modeled on `../../website/` (MOVI).
-Pick a series (Division 1 / Weekenders Cup) and an opponent — everything else
-(toss advice, top batsmen/bowlers, dismissal breakdowns, head-to-head,
-upcoming fixtures) updates for that matchup.
+Two pages sharing the same `data.js`:
+
+- **`index.html`** — pick a series (Division 1 / Weekenders Cup) and an opponent;
+  everything (toss advice, top batsmen/bowlers, dismissal breakdowns, head-to-head,
+  upcoming fixtures) updates for that matchup.
+- **`charts.html`** — Gladiators-only season charts, not tied to a specific opponent:
+  suggested best playing XI, Elo rating trajectory across the season, full squad
+  batting/bowling leaderboards, home/away and toss splits. Linked from the top nav
+  on both pages.
 
 ## View it
 
