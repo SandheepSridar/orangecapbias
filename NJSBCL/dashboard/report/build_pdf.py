@@ -1,11 +1,11 @@
-"""Builds the NJSBCL Scout PDF intelligence report for the next upcoming match from
-report_data.json (produced by extract_report_data.js) and saves it to ~/Downloads/.
+"""Builds one NJSBCL Scout PDF intelligence report covering every match falling on
+the upcoming weekend (across all series), from the report_data_<series>.json files
+produced by extract_report_data.js, and saves it to ~/Downloads/.
 
 Usage: uv run --with fpdf2 python3 build_pdf.py
 """
 import json
-import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from fpdf import FPDF
@@ -178,22 +178,24 @@ def dismissal_line(pdf, breakdown, max_width):
     return f"{breakdown[0]['type']} {breakdown[0]['pct']}%"  # last resort, always fits len-wise
 
 
-def main():
-    data = json.loads((HERE / "report_data.json").read_text())
+def parse_fixture_date(date_str):
+    """'Sat, Aug 16 2026' -> date(2026, 8, 16)."""
+    return datetime.strptime(date_str.split(", ")[-1], "%b %d %Y").date()
+
+
+def upcoming_weekend(today=None):
+    """The Saturday/Sunday of the nearest upcoming (or current) weekend."""
+    today = today or datetime.now().date()
+    saturday = today + timedelta(days=(5 - today.weekday()) % 7)
+    return saturday, saturday + timedelta(days=1)
+
+
+def render_match(pdf, data):
     us, them = data["us"], data["them"]
     gladiators, opponent = data["gladiators"], data["opponent"]
     fixture = data["fixture"]
 
-    pdf = Report()
-    pdf.title_line = f"{gladiators} vs {opponent}"
-    pdf.set_auto_page_break(auto=True, margin=16)
-    pdf.set_margins(16, 14, 16)
-    pdf.add_page()
-
-    # ── Title block ──────────────────────────────────────────────────
-    pdf.set_font("Helvetica", "B", 20)
-    pdf.set_text_color(*DARK)
-    pdf.cell(0, 10, "NJSBCL Scout - Match Intelligence Report", new_x="LMARGIN", new_y="NEXT")
+    # ── Match header ─────────────────────────────────────────────────
     pdf.set_font("Helvetica", "B", 15)
     pdf.set_text_color(*GOLD)
     pdf.cell(0, 9, clean(f"{gladiators}  vs  {opponent}"), new_x="LMARGIN", new_y="NEXT")
@@ -201,7 +203,6 @@ def main():
     pdf.set_text_color(*MUTED)
     pdf.cell(0, 6, clean(f"{data['seriesLabel']} - {fixture['date']}, {fixture['time']} - {fixture['venue']}"),
              new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(0, 6, clean(f"Built from dashboard data as of {data['generated']}"), new_x="LMARGIN", new_y="NEXT")
     pdf.ln(4)
 
     # ── Win probability ──────────────────────────────────────────────
@@ -370,8 +371,52 @@ def main():
     xi = data["gladiatorsCharts"]["bestXI"]["players"]
     rows = [[p["player"], p["role"]] for p in xi]
     pdf.subhead_table("Suggested best XI", ["Player", "Role"], rows, [70, 60], align=["L", "L"])
+    pdf._ensure_space(6)
+    picker_url = "https://gladiators-analytics-e791a5.netlify.app/charts"
+    pdf.set_font("Helvetica", "", 8.5)
+    pdf.set_text_color(*BLUE)
+    pdf.cell(0, 5, clean(f"Mix and match by availability: {picker_url}"), link=picker_url,
+             new_x="LMARGIN", new_y="NEXT")
 
-    out_name = f"NJSBCL_Scout_Report_{re.sub(r'[^A-Za-z0-9]+', '_', opponent).strip('_')}_{fixture['date'].split(', ')[-1].replace(' ', '-')}.pdf"
+
+def main():
+    files = sorted(HERE.glob("report_data_*.json"))
+    if not files:
+        raise SystemExit("No report_data_*.json files found - run extract_report_data.js first.")
+
+    all_data = [json.loads(f.read_text()) for f in files]
+    saturday, sunday = upcoming_weekend()
+    weekend_data = sorted(
+        (d for d in all_data if parse_fixture_date(d["fixture"]["date"]) in (saturday, sunday)),
+        key=lambda d: parse_fixture_date(d["fixture"]["date"]),
+    )
+    if not weekend_data:
+        raise SystemExit(f"No upcoming matches found for the weekend of {saturday} - {sunday}.")
+
+    pdf = Report()
+    pdf.title_line = " / ".join(f"vs {d['opponent']}" for d in weekend_data)
+    pdf.set_auto_page_break(auto=True, margin=16)
+    pdf.set_margins(16, 14, 16)
+    pdf.add_page()
+
+    # ── Cover ────────────────────────────────────────────────────────
+    pdf.set_font("Helvetica", "B", 20)
+    pdf.set_text_color(*DARK)
+    pdf.cell(0, 10, "NJSBCL Scout - Weekend Match Intelligence Report", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "", 10)
+    pdf.set_text_color(*MUTED)
+    pdf.cell(0, 6, clean(f"Weekend of {saturday.strftime('%b %d')} - {sunday.strftime('%b %d, %Y')}"),
+             new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 6, clean(f"Built from dashboard data as of {weekend_data[0]['generated']}"),
+             new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(4)
+
+    for i, data in enumerate(weekend_data):
+        if i > 0:
+            pdf.add_page()
+        render_match(pdf, data)
+
+    out_name = f"NJSBCL_Scout_Report_Weekend_{saturday.strftime('%b-%d')}-{sunday.strftime('%d-%Y')}.pdf"
     out_path = DOWNLOADS / out_name
     pdf.output(str(out_path))
     print(f"Wrote {out_path}")

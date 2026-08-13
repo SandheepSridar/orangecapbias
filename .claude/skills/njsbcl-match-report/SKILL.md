@@ -1,6 +1,6 @@
 ---
 name: njsbcl-match-report
-description: Generate a PDF scouting/intelligence report for the next upcoming NJSBCL match (whichever series it's in) from everything already in the dashboard's data.js, and save it to ~/Downloads. Use when Sandheep asks to "make a scouting report", "PDF for the next match", "match intelligence report", or similar.
+description: Generate a single PDF scouting/intelligence report covering every upcoming NJSBCL match on the nearest weekend (across both series) from everything already in the dashboard's data.js, and save it to ~/Downloads. Use when Sandheep asks to "make a scouting report", "PDF for the next match", "match intelligence report", or similar.
 user-invocable: true
 ---
 
@@ -8,8 +8,10 @@ user-invocable: true
 
 Builds a print-ready PDF report — win probability, toss advice, opponent's key
 batsmen/bowlers, bowling battle, recent form, and our own squad's win-dependency
-appendix — for whichever match is soonest across **both** series (Division 1 and
-Weekenders Cup), and saves it to `~/Downloads`.
+appendix — for **every** match falling on the nearest upcoming (or current)
+Saturday/Sunday, across **both** series (Division 1 and Weekenders Cup), combined
+into one PDF, and saves it to `~/Downloads`. If only one series has a match that
+weekend, the PDF just covers that one match.
 
 This does **not** re-scrape anything. It's built entirely from
 `NJSBCL/dashboard/data.js` as it currently stands — the same data the dashboard
@@ -19,17 +21,18 @@ this automatically; ask Sandheep, since it's a 20-30 minute interactive scrape).
 ## Steps
 
 1. `cd NJSBCL/dashboard/report`
-2. `node extract_report_data.js` — reads `../data.js`, compares both series'
-   `upcoming[0]` fixture dates, picks whichever is soonest, and writes
-   `report_data.json` (our team, the opponent, our squad-wide charts data for
-   that series). Prints which match it picked — sanity-check this matches what
-   Sandheep expects before moving on (e.g. if he specifically wants the
-   *Division 1* match and Weekenders happens to be sooner, tell him and ask
-   which one he wants — don't just silently pick the earliest).
-3. `uv run --with fpdf2 python3 build_pdf.py` — reads `report_data.json`, builds
-   the PDF, and saves it to
-   `~/Downloads/NJSBCL_Scout_Report_<Opponent>_<Date>.pdf`. Prints the full path
-   on success.
+2. `node extract_report_data.js` — reads `../data.js` and, for each series with
+   an upcoming fixture, writes `report_data_<seriesKey>.json` (our team, the
+   opponent, our squad-wide charts data) for that series' next match. Prints
+   which match it picked per series — sanity-check these against what Sandheep
+   expects (e.g. if he only wants the *Division 1* match, tell him both series
+   have matches this weekend and ask if he wants both combined or just one).
+3. `uv run --with fpdf2 python3 build_pdf.py` — reads every
+   `report_data_*.json`, keeps only the fixtures landing on the nearest
+   Saturday/Sunday, and builds one combined PDF (each match as its own section,
+   ordered by date), saved to
+   `~/Downloads/NJSBCL_Scout_Report_Weekend_<StartDate>-<EndDate>.pdf`. Prints
+   the full path on success.
 4. Tell Sandheep the file landed in Downloads with its exact filename.
 
 ## Files
@@ -40,9 +43,11 @@ this automatically; ask Sandheep, since it's a 20-30 minute interactive scrape).
   consume.
 - `build_pdf.py` — Python + `fpdf2` (fetched on demand via `uv run --with
   fpdf2`, no persistent install needed). All layout logic lives in a `Report`
-  subclass of `FPDF`.
-- `report_data.json` — regenerated fresh each run by step 2; not meant to be
-  committed or hand-edited.
+  subclass of `FPDF`; per-match content is in `render_match()`, called once per
+  weekend fixture from `main()`.
+- `report_data_<seriesKey>.json` — regenerated fresh each run by step 2 (one
+  per series with an upcoming fixture); not meant to be committed or
+  hand-edited.
 
 ## fpdf2 gotchas already solved here — preserve these if you touch build_pdf.py
 

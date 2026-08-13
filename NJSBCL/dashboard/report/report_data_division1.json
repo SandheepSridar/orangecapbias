@@ -1,0 +1,1394 @@
+{
+  "generated": "2026-08-11",
+  "seriesKey": "division1",
+  "seriesLabel": "2026 Division 1",
+  "gladiators": "Samudhra Gladiators",
+  "opponent": "11spartans",
+  "fixture": {
+    "date": "Sun, Aug 16 2026",
+    "time": "08:00 AM",
+    "opponent": "11spartans",
+    "venue": "11Spartans"
+  },
+  "us": {
+    "matches": 15,
+    "wins": 13,
+    "losses": 2,
+    "ties": 0,
+    "topBatsmen": [
+      {
+        "player": "Naveen R Sripathi",
+        "innings": 13,
+        "runs": 291,
+        "balls": 205,
+        "notouts": 1,
+        "avg": 24.2,
+        "sr": 142,
+        "hs": 60,
+        "fours": 6,
+        "sixes": 30,
+        "dismissals": {
+          "total": 12,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 9,
+              "pct": 75
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 2,
+              "pct": 16.7
+            },
+            {
+              "type": "Run Out",
+              "count": 1,
+              "pct": 8.3
+            }
+          ]
+        },
+        "recentForm": {
+          "innings": [
+            {
+              "runs": 19,
+              "notOut": false
+            },
+            {
+              "runs": 45,
+              "notOut": false
+            },
+            {
+              "runs": 60,
+              "notOut": true
+            },
+            {
+              "runs": 45,
+              "notOut": false
+            },
+            {
+              "runs": 1,
+              "notOut": false
+            }
+          ],
+          "last5Mean": 34,
+          "seasonMean": 22.4,
+          "trend": "hot"
+        }
+      },
+      {
+        "player": "Harshad Patil",
+        "innings": 13,
+        "runs": 192,
+        "balls": 143,
+        "notouts": 2,
+        "avg": 17.5,
+        "sr": 134.3,
+        "hs": 45,
+        "fours": 4,
+        "sixes": 20,
+        "dismissals": {
+          "total": 11,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 7,
+              "pct": 63.6
+            },
+            {
+              "type": "Bowled",
+              "count": 3,
+              "pct": 27.3
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 1,
+              "pct": 9.1
+            }
+          ]
+        },
+        "recentForm": {
+          "innings": [
+            {
+              "runs": 28,
+              "notOut": false
+            },
+            {
+              "runs": 12,
+              "notOut": false
+            },
+            {
+              "runs": 1,
+              "notOut": false
+            },
+            {
+              "runs": 0,
+              "notOut": false
+            },
+            {
+              "runs": 41,
+              "notOut": false
+            }
+          ],
+          "last5Mean": 16.4,
+          "seasonMean": 14.8,
+          "trend": "steady"
+        }
+      },
+      {
+        "player": "Sandeep Shetty",
+        "innings": 15,
+        "runs": 186,
+        "balls": 172,
+        "notouts": 2,
+        "avg": 14.3,
+        "sr": 108.1,
+        "hs": 29,
+        "fours": 3,
+        "sixes": 18,
+        "dismissals": {
+          "total": 13,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 10,
+              "pct": 76.9
+            },
+            {
+              "type": "Bowled",
+              "count": 3,
+              "pct": 23.1
+            }
+          ]
+        },
+        "recentForm": {
+          "innings": [
+            {
+              "runs": 18,
+              "notOut": false
+            },
+            {
+              "runs": 2,
+              "notOut": false
+            },
+            {
+              "runs": 18,
+              "notOut": false
+            },
+            {
+              "runs": 17,
+              "notOut": false
+            },
+            {
+              "runs": 11,
+              "notOut": false
+            }
+          ],
+          "last5Mean": 13.2,
+          "seasonMean": 12.4,
+          "trend": "steady"
+        }
+      }
+    ],
+    "topBowlers": [
+      {
+        "player": "Naveen R Sripathi",
+        "wickets": 30,
+        "overs": "53.0",
+        "runs": 300,
+        "econ": 5.66,
+        "avg": 10,
+        "dotPct": 58.2,
+        "wicketTypes": {
+          "total": 30,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 22,
+              "pct": 73.3
+            },
+            {
+              "type": "Bowled",
+              "count": 6,
+              "pct": 20
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 2,
+              "pct": 6.7
+            }
+          ]
+        }
+      },
+      {
+        "player": "Harshad Patil",
+        "wickets": 26,
+        "overs": "37.4",
+        "runs": 207,
+        "econ": 5.5,
+        "avg": 8,
+        "dotPct": 59.3,
+        "wicketTypes": {
+          "total": 26,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 18,
+              "pct": 69.2
+            },
+            {
+              "type": "Bowled",
+              "count": 7,
+              "pct": 26.9
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 1,
+              "pct": 3.8
+            }
+          ]
+        }
+      },
+      {
+        "player": "Vinit Bharadwaj",
+        "wickets": 24,
+        "overs": "44.0",
+        "runs": 232,
+        "econ": 5.27,
+        "avg": 9.7,
+        "dotPct": 58.7,
+        "wicketTypes": {
+          "total": 24,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 15,
+              "pct": 62.5
+            },
+            {
+              "type": "Bowled",
+              "count": 8,
+              "pct": 33.3
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 1,
+              "pct": 4.2
+            }
+          ]
+        }
+      }
+    ],
+    "toss": {
+      "battingFirst": {
+        "matches": 10,
+        "wins": 9,
+        "winPct": 90,
+        "avgScore": 108
+      },
+      "chasing": {
+        "matches": 5,
+        "wins": 4,
+        "winPct": 80,
+        "avgChaseSuccess": 88
+      },
+      "recommendation": "even",
+      "reason": "No strong lean (90% batting first vs 80% chasing) — pick based on conditions."
+    },
+    "parTarget": {
+      "parScoreToSet": {
+        "value": null,
+        "sampleSize": 2
+      },
+      "targetToChase": {
+        "value": 108,
+        "sampleSize": 10
+      }
+    },
+    "boundaryDependencyPct": 60.9,
+    "weakBowlers": [
+      {
+        "player": "Harshad Patil",
+        "overs": 37.7,
+        "wickets": 26,
+        "econ": 5.5,
+        "worstSpellRuns": 18,
+        "worstSpellBalls": 7,
+        "extras": 36,
+        "extrasRate": 0.96
+      },
+      {
+        "player": "Sandeep Shetty",
+        "overs": 27.5,
+        "wickets": 15,
+        "econ": 6.47,
+        "worstSpellRuns": 15,
+        "worstSpellBalls": 10,
+        "extras": 17,
+        "extrasRate": 0.62
+      },
+      {
+        "player": "Suraj Pai Madhukar",
+        "overs": 8,
+        "wickets": 5,
+        "econ": 5.25,
+        "worstSpellRuns": 11,
+        "worstSpellBalls": 7,
+        "extras": 5,
+        "extrasRate": 0.62
+      }
+    ],
+    "bowlingStrengths": [
+      {
+        "player": "Ankur Chaturvedi",
+        "overs": 42.5,
+        "wickets": 19,
+        "econ": 5.04,
+        "dotPct": 62.7
+      },
+      {
+        "player": "Vinit Bharadwaj",
+        "overs": 44,
+        "wickets": 24,
+        "econ": 5.27,
+        "dotPct": 58.7
+      },
+      {
+        "player": "Harshad Patil",
+        "overs": 37.7,
+        "wickets": 26,
+        "econ": 5.5,
+        "dotPct": 59.3
+      }
+    ],
+    "homeAway": {
+      "home": {
+        "matches": 8,
+        "wins": 8,
+        "winPct": 100
+      },
+      "away": {
+        "matches": 7,
+        "wins": 5,
+        "winPct": 71
+      }
+    },
+    "battingCollapses": {
+      "totalInnings": 15,
+      "collapseCount": 11,
+      "collapsePct": 73,
+      "worst": {
+        "matchId": 19205,
+        "opponent": "Nj Tigers",
+        "wickets": 4,
+        "runs": 16
+      },
+      "minWickets": 3,
+      "maxRuns": 20,
+      "topNPositions": 7
+    },
+    "recentResults": [
+      {
+        "matchId": 19745,
+        "opponent": "Fdu Giants",
+        "result": "Win"
+      },
+      {
+        "matchId": 19883,
+        "opponent": "Juggernaut",
+        "result": "Win"
+      },
+      {
+        "matchId": 19930,
+        "opponent": "F5",
+        "result": "Win"
+      },
+      {
+        "matchId": 20115,
+        "opponent": "Piscataway Avengers",
+        "result": "Loss"
+      },
+      {
+        "matchId": 20158,
+        "opponent": "Gryffindors",
+        "result": "Win"
+      }
+    ],
+    "keyBatsmanWinImpact": {
+      "threshold": 19,
+      "highN": 7,
+      "lowN": 6,
+      "highWinPct": 100,
+      "lowWinPct": 67,
+      "swing": 33
+    },
+    "headToHead": null,
+    "standing": {
+      "group": "A",
+      "rank": 2,
+      "rankOf": 20,
+      "mat": 15,
+      "won": 13,
+      "lost": 2,
+      "tie": 0,
+      "pts": 61,
+      "winPct": 86.67,
+      "netRR": 1.7247
+    },
+    "elo": 1624,
+    "gladiatorsWinProbability": null
+  },
+  "them": {
+    "matches": 14,
+    "wins": 9,
+    "losses": 5,
+    "ties": 0,
+    "topBatsmen": [
+      {
+        "player": "Rahul Patel",
+        "innings": 13,
+        "runs": 198,
+        "balls": 161,
+        "notouts": 2,
+        "avg": 18,
+        "sr": 123,
+        "hs": 48,
+        "fours": 12,
+        "sixes": 17,
+        "dismissals": {
+          "total": 11,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 9,
+              "pct": 81.8
+            },
+            {
+              "type": "Bowled",
+              "count": 2,
+              "pct": 18.2
+            }
+          ]
+        },
+        "recentForm": {
+          "innings": [
+            {
+              "runs": 7,
+              "notOut": false
+            },
+            {
+              "runs": 19,
+              "notOut": true
+            },
+            {
+              "runs": 11,
+              "notOut": true
+            },
+            {
+              "runs": 48,
+              "notOut": false
+            },
+            {
+              "runs": 10,
+              "notOut": false
+            }
+          ],
+          "last5Mean": 19,
+          "seasonMean": 15.2,
+          "trend": "hot"
+        }
+      },
+      {
+        "player": "Jay Trivedi",
+        "innings": 12,
+        "runs": 143,
+        "balls": 143,
+        "notouts": 1,
+        "avg": 13,
+        "sr": 100,
+        "hs": 44,
+        "fours": 11,
+        "sixes": 9,
+        "dismissals": {
+          "total": 11,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 8,
+              "pct": 72.7
+            },
+            {
+              "type": "Bowled",
+              "count": 1,
+              "pct": 9.1
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 1,
+              "pct": 9.1
+            },
+            {
+              "type": "Run Out",
+              "count": 1,
+              "pct": 9.1
+            }
+          ]
+        },
+        "recentForm": {
+          "innings": [
+            {
+              "runs": 26,
+              "notOut": false
+            },
+            {
+              "runs": 8,
+              "notOut": false
+            },
+            {
+              "runs": 44,
+              "notOut": true
+            },
+            {
+              "runs": 1,
+              "notOut": false
+            },
+            {
+              "runs": 12,
+              "notOut": false
+            }
+          ],
+          "last5Mean": 18.2,
+          "seasonMean": 11.9,
+          "trend": "hot"
+        }
+      },
+      {
+        "player": "Pratik Patel (savali)",
+        "innings": 9,
+        "runs": 138,
+        "balls": 107,
+        "notouts": 1,
+        "avg": 17.2,
+        "sr": 129,
+        "hs": 61,
+        "fours": 10,
+        "sixes": 11,
+        "dismissals": {
+          "total": 8,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 5,
+              "pct": 62.5
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 2,
+              "pct": 25
+            },
+            {
+              "type": "Run Out",
+              "count": 1,
+              "pct": 12.5
+            }
+          ]
+        },
+        "recentForm": {
+          "innings": [
+            {
+              "runs": 3,
+              "notOut": false
+            },
+            {
+              "runs": 16,
+              "notOut": false
+            },
+            {
+              "runs": 11,
+              "notOut": false
+            },
+            {
+              "runs": 18,
+              "notOut": false
+            },
+            {
+              "runs": 61,
+              "notOut": false
+            }
+          ],
+          "last5Mean": 21.8,
+          "seasonMean": 15.3,
+          "trend": "hot"
+        }
+      }
+    ],
+    "topBowlers": [
+      {
+        "player": "Soham Brahmbhatt",
+        "wickets": 24,
+        "overs": "35.4",
+        "runs": 242,
+        "econ": 6.79,
+        "avg": 10.1,
+        "dotPct": 54.2,
+        "wicketTypes": {
+          "total": 24,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 21,
+              "pct": 87.5
+            },
+            {
+              "type": "Bowled",
+              "count": 2,
+              "pct": 8.3
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 1,
+              "pct": 4.2
+            }
+          ]
+        }
+      },
+      {
+        "player": "Krunal Patel",
+        "wickets": 23,
+        "overs": "32.0",
+        "runs": 166,
+        "econ": 5.19,
+        "avg": 7.2,
+        "dotPct": 62,
+        "wicketTypes": {
+          "total": 30,
+          "breakdown": [
+            {
+              "type": "Caught",
+              "count": 23,
+              "pct": 76.7
+            },
+            {
+              "type": "Bowled",
+              "count": 5,
+              "pct": 16.7
+            },
+            {
+              "type": "Hit Wicket",
+              "count": 1,
+              "pct": 3.3
+            },
+            {
+              "type": "Caught & Bowled",
+              "count": 1,
+              "pct": 3.3
+            }
+          ]
+        }
+      },
+      {
+        "player": "Pratik Patel (savali)",
+        "wickets": 22,
+        "overs": "25.4",
+        "runs": 159,
+        "econ": 6.19,
+        "avg": 7.2,
+        "dotPct": 61.7,
+        "wicketTypes": {
+          "total": 0,
+          "breakdown": []
+        }
+      }
+    ],
+    "toss": {
+      "battingFirst": {
+        "matches": 9,
+        "wins": 6,
+        "winPct": 67,
+        "avgScore": 130
+      },
+      "chasing": {
+        "matches": 5,
+        "wins": 3,
+        "winPct": 60,
+        "avgChaseSuccess": 93
+      },
+      "recommendation": "even",
+      "reason": "No strong lean (67% batting first vs 60% chasing) — pick based on conditions."
+    },
+    "parTarget": {
+      "parScoreToSet": {
+        "value": 104,
+        "sampleSize": 5
+      },
+      "targetToChase": {
+        "value": 130,
+        "sampleSize": 9
+      }
+    },
+    "boundaryDependencyPct": 70.9,
+    "weakBowlers": [
+      {
+        "player": "Ravi Rathod",
+        "overs": 16.3,
+        "wickets": 6,
+        "econ": 8.94,
+        "worstSpellRuns": 18,
+        "worstSpellBalls": 7,
+        "extras": 17,
+        "extrasRate": 1.04
+      },
+      {
+        "player": "Jay Trivedi",
+        "overs": 13.5,
+        "wickets": 7,
+        "econ": 7.56,
+        "worstSpellRuns": 32,
+        "worstSpellBalls": 15,
+        "extras": 7,
+        "extrasRate": 0.52
+      },
+      {
+        "player": "Rajan Patel",
+        "overs": 29.2,
+        "wickets": 17,
+        "econ": 7.27,
+        "worstSpellRuns": 33,
+        "worstSpellBalls": 12,
+        "extras": 2,
+        "extrasRate": 0.07
+      }
+    ],
+    "bowlingStrengths": [
+      {
+        "player": "Krunal Patel",
+        "overs": 32,
+        "wickets": 23,
+        "econ": 5.19,
+        "dotPct": 62
+      },
+      {
+        "player": "Pratik Patel (savali)",
+        "overs": 25.7,
+        "wickets": 22,
+        "econ": 6.19,
+        "dotPct": 61.7
+      },
+      {
+        "player": "Neel Patel-13",
+        "overs": 39.7,
+        "wickets": 19,
+        "econ": 5.75,
+        "dotPct": 58.4
+      }
+    ],
+    "homeAway": {
+      "home": {
+        "matches": 6,
+        "wins": 2,
+        "winPct": 33
+      },
+      "away": {
+        "matches": 8,
+        "wins": 7,
+        "winPct": 88
+      }
+    },
+    "battingCollapses": {
+      "totalInnings": 14,
+      "collapseCount": 5,
+      "collapsePct": 36,
+      "worst": {
+        "matchId": 19058,
+        "opponent": "Pway Lions",
+        "wickets": 6,
+        "runs": 18
+      },
+      "minWickets": 3,
+      "maxRuns": 20,
+      "topNPositions": 7
+    },
+    "recentResults": [
+      {
+        "matchId": 19715,
+        "opponent": "Falcons",
+        "result": "Win"
+      },
+      {
+        "matchId": 19906,
+        "opponent": "Hudson Hurricanes",
+        "result": "Win"
+      },
+      {
+        "matchId": 19933,
+        "opponent": "Sreeshti",
+        "result": "Win"
+      },
+      {
+        "matchId": 20125,
+        "opponent": "Desi Warriors",
+        "result": "Loss"
+      },
+      {
+        "matchId": 20182,
+        "opponent": "Gcc",
+        "result": "Win"
+      }
+    ],
+    "keyBatsmanWinImpact": {
+      "threshold": 11,
+      "highN": 8,
+      "lowN": 5,
+      "highWinPct": 75,
+      "lowWinPct": 40,
+      "swing": 35
+    },
+    "headToHead": {
+      "played": 0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "matches": []
+    },
+    "standing": {
+      "group": "B",
+      "rank": 7,
+      "rankOf": 20,
+      "mat": 15,
+      "won": 9,
+      "lost": 5,
+      "tie": 0,
+      "pts": 44,
+      "winPct": 64.29,
+      "netRR": 1.2593
+    },
+    "elo": 1550,
+    "gladiatorsWinProbability": 60.5
+  },
+  "gladiatorsCharts": {
+    "winDependency": [
+      {
+        "player": "Naveen R Sripathi",
+        "role": "bat",
+        "matches": 13,
+        "metric": "runs (median 19)",
+        "goodWinPct": 100,
+        "badWinPct": 67,
+        "swing": 33
+      },
+      {
+        "player": "Ankur Chaturvedi",
+        "role": "bowl",
+        "matches": 12,
+        "metric": "economy (median 4.7)",
+        "goodWinPct": 100,
+        "badWinPct": 67,
+        "swing": 33
+      },
+      {
+        "player": "Naveen R Sripathi",
+        "role": "bowl",
+        "matches": 14,
+        "metric": "economy (median 5.4)",
+        "goodWinPct": 100,
+        "badWinPct": 71,
+        "swing": 29
+      },
+      {
+        "player": "Vinit Bharadwaj",
+        "role": "bowl",
+        "matches": 13,
+        "metric": "economy (median 4.8)",
+        "goodWinPct": 100,
+        "badWinPct": 80,
+        "swing": 20
+      },
+      {
+        "player": "Harshad Patil",
+        "role": "bowl",
+        "matches": 13,
+        "metric": "economy (median 4.8)",
+        "goodWinPct": 100,
+        "badWinPct": 83,
+        "swing": 17
+      },
+      {
+        "player": "Harshad Patil",
+        "role": "bat",
+        "matches": 13,
+        "metric": "runs (median 12)",
+        "goodWinPct": 88,
+        "badWinPct": 80,
+        "swing": 8
+      }
+    ],
+    "bestXI": {
+      "players": [
+        {
+          "player": "Sanju S",
+          "isKeeper": true,
+          "battingScore": -0.14,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 10,
+            "runs": 70,
+            "avg": 8.8,
+            "sr": 97.2
+          },
+          "bowlingStats": null,
+          "role": "Wicketkeeper"
+        },
+        {
+          "player": "Naveen R Sripathi",
+          "isKeeper": false,
+          "battingScore": 1.57,
+          "bowlingScore": 0.59,
+          "battingStats": {
+            "innings": 13,
+            "runs": 291,
+            "avg": 24.2,
+            "sr": 142
+          },
+          "bowlingStats": {
+            "wickets": 30,
+            "econ": 5.66,
+            "dotPct": 58.2
+          },
+          "role": "All-rounder"
+        },
+        {
+          "player": "Harshad Patil",
+          "isKeeper": false,
+          "battingScore": 0.99,
+          "bowlingScore": 0.73,
+          "battingStats": {
+            "innings": 13,
+            "runs": 192,
+            "avg": 17.5,
+            "sr": 134.3
+          },
+          "bowlingStats": {
+            "wickets": 26,
+            "econ": 5.5,
+            "dotPct": 59.3
+          },
+          "role": "All-rounder"
+        },
+        {
+          "player": "Dileep Reddy",
+          "isKeeper": false,
+          "battingScore": 0.58,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 6,
+            "runs": 88,
+            "avg": 17.6,
+            "sr": 104.8
+          },
+          "bowlingStats": {
+            "wickets": 1,
+            "econ": 7.75,
+            "dotPct": 50
+          },
+          "role": "Batter"
+        },
+        {
+          "player": "Sridhara Raju",
+          "isKeeper": false,
+          "battingScore": 0.42,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 9,
+            "runs": 69,
+            "avg": 11.5,
+            "sr": 123.2
+          },
+          "bowlingStats": null,
+          "role": "Batter"
+        },
+        {
+          "player": "Sandeep Shetty",
+          "isKeeper": false,
+          "battingScore": 0.4,
+          "bowlingScore": 0.09,
+          "battingStats": {
+            "innings": 15,
+            "runs": 186,
+            "avg": 14.3,
+            "sr": 108.1
+          },
+          "bowlingStats": {
+            "wickets": 15,
+            "econ": 6.47,
+            "dotPct": 55.2
+          },
+          "role": "All-rounder"
+        },
+        {
+          "player": "Ankur Chaturvedi",
+          "isKeeper": false,
+          "battingScore": -0.12,
+          "bowlingScore": 1.14,
+          "battingStats": {
+            "innings": 6,
+            "runs": 39,
+            "avg": 13,
+            "sr": 78
+          },
+          "bowlingStats": {
+            "wickets": 19,
+            "econ": 5.04,
+            "dotPct": 62.7
+          },
+          "role": "All-rounder"
+        },
+        {
+          "player": "Vinit Bharadwaj",
+          "isKeeper": false,
+          "battingScore": 0.07,
+          "bowlingScore": 0.77,
+          "battingStats": {
+            "innings": 8,
+            "runs": 45,
+            "avg": 7.5,
+            "sr": 118.4
+          },
+          "bowlingStats": {
+            "wickets": 24,
+            "econ": 5.27,
+            "dotPct": 58.7
+          },
+          "role": "All-rounder"
+        },
+        {
+          "player": "Suraj Pai Madhukar",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": 0.44,
+          "battingStats": {
+            "innings": 2,
+            "runs": 2,
+            "avg": 2,
+            "sr": 33.3
+          },
+          "bowlingStats": {
+            "wickets": 5,
+            "econ": 5.25,
+            "dotPct": 54.2
+          },
+          "role": "Bowler"
+        },
+        {
+          "player": "Ashish Shetty",
+          "isKeeper": false,
+          "battingScore": -0.02,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 12,
+            "runs": 146,
+            "avg": 12.2,
+            "sr": 89
+          },
+          "bowlingStats": null,
+          "role": "Batter"
+        },
+        {
+          "player": "Anilreddy Aleti",
+          "isKeeper": false,
+          "battingScore": -0.31,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 12,
+            "runs": 61,
+            "avg": 6.8,
+            "sr": 95.3
+          },
+          "bowlingStats": null,
+          "role": "Batter"
+        }
+      ],
+      "roster": [
+        {
+          "player": "Anilreddy Aleti",
+          "isKeeper": false,
+          "battingScore": -0.31,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 12,
+            "runs": 61,
+            "avg": 6.8,
+            "sr": 95.3
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Ankur Chaturvedi",
+          "isKeeper": false,
+          "battingScore": -0.12,
+          "bowlingScore": 1.14,
+          "battingStats": {
+            "innings": 6,
+            "runs": 39,
+            "avg": 13,
+            "sr": 78
+          },
+          "bowlingStats": {
+            "wickets": 19,
+            "econ": 5.04,
+            "dotPct": 62.7
+          }
+        },
+        {
+          "player": "Ashish Shetty",
+          "isKeeper": false,
+          "battingScore": -0.02,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 12,
+            "runs": 146,
+            "avg": 12.2,
+            "sr": 89
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Avteet Chayal",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 3,
+            "runs": 32,
+            "avg": 10.7,
+            "sr": 86.5
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Dileep Reddy",
+          "isKeeper": false,
+          "battingScore": 0.58,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 6,
+            "runs": 88,
+            "avg": 17.6,
+            "sr": 104.8
+          },
+          "bowlingStats": {
+            "wickets": 1,
+            "econ": 7.75,
+            "dotPct": 50
+          }
+        },
+        {
+          "player": "Harshad Patil",
+          "isKeeper": false,
+          "battingScore": 0.99,
+          "bowlingScore": 0.73,
+          "battingStats": {
+            "innings": 13,
+            "runs": 192,
+            "avg": 17.5,
+            "sr": 134.3
+          },
+          "bowlingStats": {
+            "wickets": 26,
+            "econ": 5.5,
+            "dotPct": 59.3
+          }
+        },
+        {
+          "player": "Naveen R Sripathi",
+          "isKeeper": false,
+          "battingScore": 1.57,
+          "bowlingScore": 0.59,
+          "battingStats": {
+            "innings": 13,
+            "runs": 291,
+            "avg": 24.2,
+            "sr": 142
+          },
+          "bowlingStats": {
+            "wickets": 30,
+            "econ": 5.66,
+            "dotPct": 58.2
+          }
+        },
+        {
+          "player": "Sandeep Shetty",
+          "isKeeper": false,
+          "battingScore": 0.4,
+          "bowlingScore": 0.09,
+          "battingStats": {
+            "innings": 15,
+            "runs": 186,
+            "avg": 14.3,
+            "sr": 108.1
+          },
+          "bowlingStats": {
+            "wickets": 15,
+            "econ": 6.47,
+            "dotPct": 55.2
+          }
+        },
+        {
+          "player": "Sandheep Sridar",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": null,
+          "battingStats": null,
+          "bowlingStats": {
+            "wickets": 0,
+            "econ": 9,
+            "dotPct": 33.3
+          }
+        },
+        {
+          "player": "Sanju S",
+          "isKeeper": true,
+          "battingScore": -0.14,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 10,
+            "runs": 70,
+            "avg": 8.8,
+            "sr": 97.2
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Sridhara Raju",
+          "isKeeper": false,
+          "battingScore": 0.42,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 9,
+            "runs": 69,
+            "avg": 11.5,
+            "sr": 123.2
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Suraj Pai Madhukar",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": 0.44,
+          "battingStats": {
+            "innings": 2,
+            "runs": 2,
+            "avg": 2,
+            "sr": 33.3
+          },
+          "bowlingStats": {
+            "wickets": 5,
+            "econ": 5.25,
+            "dotPct": 54.2
+          }
+        },
+        {
+          "player": "Sushil Golecha",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": null,
+          "battingStats": null,
+          "bowlingStats": {
+            "wickets": 2,
+            "econ": 8,
+            "dotPct": 38.9
+          }
+        },
+        {
+          "player": "Tejdeep Maddirala",
+          "isKeeper": false,
+          "battingScore": -0.55,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 12,
+            "runs": 98,
+            "avg": 8.2,
+            "sr": 71.5
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Vardaan Joshi",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 1,
+            "runs": 1,
+            "avg": 1,
+            "sr": 50
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Vinit Bharadwaj",
+          "isKeeper": false,
+          "battingScore": 0.07,
+          "bowlingScore": 0.77,
+          "battingStats": {
+            "innings": 8,
+            "runs": 45,
+            "avg": 7.5,
+            "sr": 118.4
+          },
+          "bowlingStats": {
+            "wickets": 24,
+            "econ": 5.27,
+            "dotPct": 58.7
+          }
+        },
+        {
+          "player": "Vipul Joshi",
+          "isKeeper": false,
+          "battingScore": -0.32,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 6,
+            "runs": 36,
+            "avg": 9,
+            "sr": 83.7
+          },
+          "bowlingStats": null
+        },
+        {
+          "player": "Willish Patel",
+          "isKeeper": false,
+          "battingScore": null,
+          "bowlingScore": null,
+          "battingStats": {
+            "innings": 4,
+            "runs": 47,
+            "avg": 11.8,
+            "sr": 188
+          },
+          "bowlingStats": null
+        }
+      ],
+      "squadSize": 18
+    }
+  },
+  "deathOversLeaders": [
+    {
+      "player": "Ankur Chaturvedi",
+      "oversBowled": 12,
+      "runs": 63,
+      "econ": 5.25
+    },
+    {
+      "player": "Vinit Bharadwaj",
+      "oversBowled": 5,
+      "runs": 28,
+      "econ": 5.6
+    },
+    {
+      "player": "Naveen R Sripathi",
+      "oversBowled": 8,
+      "runs": 49,
+      "econ": 6.12
+    }
+  ]
+}
