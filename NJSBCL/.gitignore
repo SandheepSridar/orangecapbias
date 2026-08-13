@@ -2,3 +2,4 @@ node_modules/
 .pw-profile/
 .mcp.json
 .venv/
+dashboard/report/report_data.json
