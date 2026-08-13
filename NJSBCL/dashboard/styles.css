@@ -55,6 +55,32 @@ a { color: var(--blue); text-decoration: none; }
 }
 .nav-link:hover { background: rgba(255,195,0,0.1); }
 
+/* ── Side TOC — only shown on wide screens, in the gutter beside the
+   centered <main>. Below the breakpoint there isn't room without
+   overlapping content, so it's hidden and users just scroll as before. ── */
+.side-toc {
+  display: none; position: fixed; top: 6.5rem; left: 2rem; width: 12.5rem;
+  flex-direction: column; gap: 0.15rem;
+  max-height: calc(100vh - 8rem); overflow-y: auto; z-index: 40;
+}
+.side-toc-label {
+  font-size: 0.7rem; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.5rem; padding: 0 0.7rem;
+}
+.side-toc-link {
+  color: var(--muted); font-size: 0.85rem; padding: 0.42rem 0.7rem;
+  border-radius: 8px; border-left: 2px solid transparent;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.side-toc-link:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.side-toc-link.active {
+  color: var(--gold); border-left-color: var(--gold);
+  background: rgba(255,195,0,0.09); font-weight: 600;
+}
+@media (min-width: 1480px) {
+  .side-toc { display: flex; }
+}
+
 main { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
 
 /* ── Header / controls ─────────────────────────────────────────────── */
@@ -100,7 +126,7 @@ select#opponent-select {
 .matchup-label .opponent { color: var(--blue); font-weight: 700; }
 
 /* ── Sections ──────────────────────────────────────────────────────── */
-section { margin: 2.4rem 0; }
+section { margin: 2.4rem 0; scroll-margin-top: 5.5rem; }
 section h2 {
   font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;
   display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;

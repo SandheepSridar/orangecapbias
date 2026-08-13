@@ -614,9 +614,39 @@ function renderAll() {
   renderMetrics();
 }
 
+/* ── Side nav scrollspy ────────────────────────────────────────────── */
+function initSideToc() {
+  const toc = $("side-toc");
+  if (!toc) return;
+  const links = [...toc.querySelectorAll(".side-toc-link")];
+  const sections = links
+    .map((l) => document.getElementById(l.getAttribute("href").slice(1)))
+    .filter(Boolean);
+  const setActive = (id) => {
+    links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${id}`));
+  };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: "-15% 0px -75% 0px", threshold: 0 }
+  );
+  sections.forEach((s) => observer.observe(s));
+  // The last section's top can never reach the rootMargin band above once the
+  // page runs out of room to scroll further, so it'd otherwise stay stuck on
+  // whichever section was active before — force it once we hit true bottom.
+  window.addEventListener("scroll", () => {
+    const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
+    if (atBottom && sections.length) setActive(sections[sections.length - 1].id);
+  }, { passive: true });
+}
+
 renderDataUpdated();
 buildSeriesPills();
 populateOpponentSelect();
+initSideToc();
 $("opponent-select").addEventListener("change", (e) => {
   state.opponent = e.target.value;
   renderAll();
