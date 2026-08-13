@@ -1,0 +1,392 @@
+season,batter,team,avg_pos,matches,innings,runs,mean_rpi,median_rpi,sr,death_sr
+2016,Abhishek Baljeetsingh Tanwar,Nellai Royal Kings,5.745,5,5,39,7.8,9.0,88.6364,103.7037
+2016,Adithya Arun,Dindigul Dragons,7.0,1,1,4,4.0,4.0,80.0,80.0
+2016,Adithya Ganesh,Trichy Grand Cholas,6.897,4,4,40,10.0,10.5,108.1081,122.2222
+2016,Akash Sumra,SKM Salem Spartans,6.944,5,5,36,7.2,6.0,100.0,90.625
+2016,Akkil Srinaath,Trichy Grand Cholas,6.216,4,4,72,18.0,16.5,150.0,174.1935
+2016,Akshay V Srinivasan,Lyca Kovai Kings,4.333,5,5,38,7.6,1.0,102.7027,140.0
+2016,Anton Andrew Subikshan,Siechem Madurai Panthers,5.556,2,2,5,2.5,2.5,62.5,
+2016,Ashwin Venkataraman,Dindigul Dragons,4.467,4,4,52,13.0,5.5,115.5556,
+2016,Baba Indrajith,Trichy Grand Cholas,3.975,7,7,113,16.1429,21.0,93.3884,139.2857
+2016,Baskaran Rahul,Chepauk Super Gillies,6.0,1,1,0,0.0,0.0,0.0,
+2016,Chandrasekar Ganapathy,IDream Tiruppur Tamizhans,6.444,5,5,46,9.2,8.0,135.2941,178.2609
+2016,GV Vignesh,Nellai Royal Kings,4.154,3,3,21,7.0,3.0,91.3043,50.0
+2016,Jagatheesan Kousik,Trichy Grand Cholas,6.113,6,6,124,20.6667,16.5,118.0952,186.2069
+2016,Jamaluddin Syed Mohammad,Lyca Kovai Kings,3.824,7,7,90,12.8571,10.0,90.9091,87.5
+2016,Jothimani Gowjith Subhash,Chepauk Super Gillies,4.871,7,7,61,8.7143,2.0,103.3898,176.9231
+2016,K Vishal Vaidhya,IDream Tiruppur Tamizhans,4.0,4,4,34,8.5,8.5,64.1509,
+2016,L Ganesh,Trichy Grand Cholas,5.083,4,4,21,5.25,5.5,91.3043,100.0
+2016,M Lakshmi Narayanan,Nellai Royal Kings,5.953,5,5,43,8.6,9.0,102.381,66.6667
+2016,M Mohammed,Lyca Kovai Kings,6.679,7,7,105,15.0,12.0,214.2857,214.2857
+2016,M Shajahan,IDream Tiruppur Tamizhans,6.561,2,2,41,20.5,20.5,102.5,
+2016,Maan K Bafna,Siechem Madurai Panthers,5.783,4,4,44,11.0,11.5,100.0,83.3333
+2016,Malolan Rangarajan,Nellai Royal Kings,5.907,7,7,107,15.2857,17.0,127.381,148.4848
+2016,Masood Shahrukh Khan,Trichy Grand Cholas,4.138,6,6,72,12.0,12.5,116.129,166.6667
+2016,Murugan Ashwin,Dindigul Dragons,4.593,6,6,105,17.5,8.0,131.25,150.0
+2016,Murugesan Kamlesh,Lyca Kovai Kings,6.0,1,1,9,9.0,9.0,69.2308,0.0
+2016,P Francis Rokins,Siechem Madurai Panthers,6.257,6,6,74,12.3333,10.0,108.8235,129.1667
+2016,Pitchaiayan Sakthi,Siechem Madurai Panthers,6.31,4,4,45,11.25,14.0,109.7561,96.4286
+2016,R Rajkumar,IDream Tiruppur Tamizhans,5.909,7,7,101,14.4286,7.0,187.037,225.0
+2016,Rajagopal Sathish,Chepauk Super Gillies,4.851,9,9,139,15.4444,1.0,171.6049,202.2727
+2016,Rajendran Vivek,Dindigul Dragons,5.846,5,5,42,8.4,7.0,168.0,170.8333
+2016,Rajhamany Srinivasan,IDream Tiruppur Tamizhans,3.753,7,7,188,26.8571,15.0,113.253,109.0909
+2016,Ramsingh  Sanjay Yadav,Nellai Royal Kings,4.824,6,6,136,22.6667,20.0,140.2062,137.037
+2016,Ravichandran Ashwin,Dindigul Dragons,5.59,2,2,64,32.0,32.0,168.4211,226.3158
+2016,S Abishiek,Dindigul Dragons,4.286,2,2,19,9.5,9.5,67.8571,83.3333
+2016,S Aswin Kumar,Siechem Madurai Panthers,5.0,2,2,9,4.5,4.5,64.2857,
+2016,S Dinesh,Dindigul Dragons,4.0,1,1,8,8.0,8.0,44.4444,
+2016,S Harish Kumar,Lyca Kovai Kings,4.315,7,7,116,16.5714,13.0,131.8182,122.8571
+2016,S Sujay,IDream Tiruppur Tamizhans,7.0,1,1,2,2.0,2.0,66.6667,66.6667
+2016,Selvam Suresh Kumar,Siechem Madurai Panthers,4.395,7,7,113,16.1429,19.0,103.6697,111.1111
+2016,Srikkanth Anirudha,IDream Tiruppur Tamizhans,3.97,7,7,115,16.4286,7.0,118.5567,134.4828
+2016,Subramanian Anand,SKM Salem Spartans,4.662,7,7,62,8.8571,7.0,95.3846,166.6667
+2016,Umashankar Sushil,SKM Salem Spartans,4.202,7,7,85,12.1429,7.0,85.8586,117.6471
+2016,Uthirasamy Sasidev,Chepauk Super Gillies,5.526,6,6,71,11.8333,15.0,133.9623,137.931
+2016,Vijaykumar Yo Mahesh,Chepauk Super Gillies,4.672,6,6,54,9.0,10.5,87.0968,187.5
+2016,Wilkins Joseph Victor,Dindigul Dragons,4.386,5,5,61,12.2,4.0,107.0175,66.6667
+2016,Yamuna Sunny Kumar Singh,Dindigul Dragons,5.974,5,5,53,10.6,7.0,143.2432,141.6667
+2017,Abhishek Baljeetsingh Tanwar,Nellai Royal Kings,6.174,4,4,84,21.0,13.5,186.6667,202.9412
+2017,Adhithya Giridhar,Trichy Grand Cholas,3.857,3,3,19,6.3333,2.0,95.0,50.0
+2017,Adithya Ganesh,Trichy Grand Cholas,6.125,4,4,41,10.25,7.5,102.5,93.75
+2017,Akash Sumra,SKM Salem Spartans,6.234,5,5,57,11.4,15.0,121.2766,129.7297
+2017,Akkil Srinaath,Trichy Grand Cholas,4.424,7,7,102,14.5714,11.0,127.5,133.3333
+2017,Akshay V Srinivasan,Lyca Kovai Kings,4.158,5,5,125,25.0,34.0,137.3626,175.5556
+2017,Alagh Chelliah Prathiban,Trichy Grand Cholas,7.0,1,1,1,1.0,1.0,33.3333,33.3333
+2017,Ashwin Venkataraman,Dindigul Dragons,4.527,5,5,96,19.2,19.0,104.3478,83.3333
+2017,Baskaran Rahul,Chepauk Super Gillies,6.0,1,1,11,11.0,11.0,110.0,110.0
+2017,Chandrasekar Ganapathy,IDream Tiruppur Tamizhans,5.761,6,6,98,16.3333,19.0,150.7692,169.2308
+2017,Chezhian Nishaanth,Nellai Royal Kings,3.902,4,4,65,16.25,14.0,135.4167,
+2017,Jagatheesan Kousik,Trichy Grand Cholas,4.268,6,6,104,17.3333,13.0,109.4737,115.3846
+2017,K Deeban Lingesh,Lyca Kovai Kings,4.818,2,2,13,6.5,6.5,130.0,133.3333
+2017,M Mohammed,Lyca Kovai Kings,5.582,4,4,70,17.5,18.0,132.0755,196.1538
+2017,M Shajahan,IDream Tiruppur Tamizhans,4.747,8,8,209,26.125,26.5,145.1389,146.6667
+2017,Malolan Rangarajan,Nellai Royal Kings,4.971,7,7,86,12.2857,13.0,124.6377,161.7647
+2017,Masood Shahrukh Khan,Siechem Madurai Panthers,3.917,6,6,60,10.0,3.5,100.0,0.0
+2017,Mitchell Anthony Mannays,Trichy Grand Cholas,6.0,1,1,0,0.0,0.0,0.0,0.0
+2017,Murugan Ashwin,Dindigul Dragons,4.0,2,2,14,7.0,7.0,107.6923,
+2017,N Ganesh,Siechem Madurai Panthers,6.4,3,3,9,3.0,1.0,112.5,200.0
+2017,P Francis Rokins,Siechem Madurai Panthers,5.286,2,2,16,8.0,8.0,76.1905,88.8889
+2017,R Kavin,Nellai Royal Kings,5.882,3,3,26,8.6667,9.0,162.5,600.0
+2017,R Rajan,Nellai Royal Kings,7.0,2,2,23,11.5,11.5,76.6667,
+2017,R Rajkumar,IDream Tiruppur Tamizhans,6.25,6,6,20,3.3333,0.5,71.4286,86.3636
+2017,Rajagopal Sathish,Chepauk Super Gillies,5.833,8,8,70,8.75,4.5,98.5915,123.3333
+2017,Rajendran Vivek,Dindigul Dragons,6.716,5,5,124,24.8,32.0,177.1429,188.0952
+2017,Rajhamany Srinivasan,IDream Tiruppur Tamizhans,3.921,6,6,47,7.8333,5.5,78.3333,50.0
+2017,Ravi Karthikeyan,Siechem Madurai Panthers,4.296,4,4,20,5.0,4.0,80.0,100.0
+2017,Ravisrinivasan Sai Kishore,Chepauk Super Gillies,7.0,3,3,1,0.3333,0.0,20.0,33.3333
+2017,S Aravind,SKM Salem Spartans,5.0,2,2,33,16.5,16.5,91.6667,0.0
+2017,S Harish Kumar,Lyca Kovai Kings,5.633,6,6,84,14.0,9.5,182.6087,213.7931
+2017,S Karthik,Chepauk Super Gillies,3.778,8,8,196,24.5,24.5,112.6437,114.2857
+2017,S Santosh Shiv,SKM Salem Spartans,4.0,2,2,7,3.5,3.5,63.6364,
+2017,S Sujay,Nellai Royal Kings,5.429,2,2,6,3.0,3.0,85.7143,120.0
+2017,S Swaminathan,IDream Tiruppur Tamizhans,7.0,1,1,15,15.0,15.0,62.5,
+2017,SP Nathan,SKM Salem Spartans,4.118,6,6,149,24.8333,18.0,150.5051,150.0
+2017,Sathiamoorty Vasanth Saravanan,Chepauk Super Gillies,4.759,8,8,94,11.75,11.5,123.6842,175.8621
+2017,Selvam Suresh Kumar,Siechem Madurai Panthers,4.633,5,5,84,16.8,16.0,109.0909,92.8571
+2017,Sivagnanan Senthilnathan,Siechem Madurai Panthers,7.0,2,2,8,4.0,4.0,80.0,100.0
+2017,Subramanian Anand,SKM Salem Spartans,5.023,7,7,107,15.2857,13.0,127.381,147.3684
+2017,Uthirasamy Sasidev,Chepauk Super Gillies,4.561,8,8,158,19.75,18.0,132.7731,158.3333
+2017,Varun Chakravarthy Vinod,IDream Tiruppur Tamizhans,7.0,1,1,0,0.0,0.0,0.0,
+2017,Wenseslaus Antony Dhas,Chepauk Super Gillies,4.566,6,6,177,29.5,32.5,166.9811,140.0
+2017,Wilkins Joseph Victor,Dindigul Dragons,5.224,5,5,71,14.2,8.0,94.6667,147.619
+2018,A Aarif,Chepauk Super Gillies,6.306,3,3,52,17.3333,14.0,106.1224,125.9259
+2018,Abhishek Baljeetsingh Tanwar,Siechem Madurai Panthers,6.416,8,8,88,11.0,9.0,117.3333,152.1739
+2018,Akash Sumra,SKM Salem Spartans,5.857,4,4,13,3.25,3.5,61.9048,60.0
+2018,Akkil Srinaath,Lyca Kovai Kings,5.086,6,6,101,16.8333,5.0,127.8481,116.6667
+2018,Akshay V Srinivasan,SKM Salem Spartans,4.167,3,3,99,33.0,42.0,165.0,184.6154
+2018,Ashwin Venkataraman,Lyca Kovai Kings,4.169,8,8,180,22.5,21.5,101.6949,148.1481
+2018,Baskaran Rahul,Chepauk Super Gillies,5.141,5,5,92,18.4,14.0,110.8434,122.7273
+2018,Chandrasekar Ganapathy,Trichy Grand Cholas,5.077,6,6,63,10.5,4.0,161.5385,235.0
+2018,Jagatheesan Kousik,Siechem Madurai Panthers,4.724,8,8,167,20.875,18.0,146.4912,170.0
+2018,K Deeban Lingesh,VB Kanchi Veerans,4.778,3,3,40,13.3333,16.0,111.1111,120.0
+2018,Laxmesha Suryaprakash,IDream Tiruppur Tamizhans,3.75,3,3,23,7.6667,8.0,71.875,100.0
+2018,M Mohammed,Dindigul Dragons,6.721,5,5,79,15.8,12.0,141.0714,146.5116
+2018,M Prasanth Rajesh,Lyca Kovai Kings,6.848,6,6,92,15.3333,15.5,122.6667,140.7407
+2018,M Shajahan,IDream Tiruppur Tamizhans,4.798,7,7,118,16.8571,18.0,140.4762,167.5676
+2018,Malolan Rangarajan,SKM Salem Spartans,6.8,5,5,52,10.4,4.0,118.1818,93.5484
+2018,Mohan Abhinav,Dindigul Dragons,6.815,6,6,30,5.0,1.0,115.3846,145.0
+2018,Murugan Ashwin,Chepauk Super Gillies,5.725,7,7,163,23.2857,22.0,122.5564,141.6667
+2018,Nidhish S Rajagopal,SKM Salem Spartans,4.0,2,2,59,29.5,29.5,147.5,233.3333
+2018,P Francis Rokins,VB Kanchi Veerans,5.337,5,5,130,26.0,16.0,144.4444,206.25
+2018,Pradosh Ranjan Paul,Lyca Kovai Kings,4.5,2,2,4,2.0,2.0,57.1429,100.0
+2018,R Kavin,IDream Tiruppur Tamizhans,5.333,5,5,17,3.4,3.0,68.0,100.0
+2018,R Rajkumar,IDream Tiruppur Tamizhans,4.267,7,7,102,14.5714,11.0,137.8378,160.0
+2018,RS Mokit Hariharan,VB Kanchi Veerans,4.687,4,4,59,14.75,12.5,89.3939,105.2632
+2018,Rajagopal Sathish,SKM Salem Spartans,5.361,7,7,233,33.2857,24.0,182.0312,207.4074
+2018,Rajendran Vivek,Dindigul Dragons,3.833,7,7,262,37.4286,42.0,209.6,371.4286
+2018,Ramalingam Rohit,Dindigul Dragons,5.419,3,3,74,24.6667,15.0,121.3115,260.0
+2018,Ramsingh  Sanjay Yadav,VB Kanchi Veerans,6.29,5,5,85,17.0,12.0,144.0678,173.0769
+2018,Ramsingh Sonu Yadav,Trichy Grand Cholas,7.0,3,3,52,17.3333,21.0,130.0,200.0
+2018,Ravi Karthikeyan,Siechem Madurai Panthers,4.043,5,5,49,9.8,8.0,104.2553,100.0
+2018,Ravi Kumar Rohith,Lyca Kovai Kings,3.87,9,9,113,12.5556,5.0,107.619,211.7647
+2018,Ravichandran Ashwin,Dindigul Dragons,5.0,1,1,42,42.0,42.0,150.0,206.6667
+2018,S Abishiek,SKM Salem Spartans,4.93,3,3,54,18.0,17.0,135.0,87.5
+2018,S Harish Kumar,Chepauk Super Gillies,5.667,5,5,50,10.0,8.0,156.25,226.6667
+2018,SP Nathan,Siechem Madurai Panthers,4.0,2,2,12,6.0,6.0,52.1739,50.0
+2018,Sathiamoorty Vasanth Saravanan,Trichy Grand Cholas,4.793,3,3,85,28.3333,23.0,157.4074,203.4483
+2018,Selvam Suresh Kumar,Trichy Grand Cholas,4.305,7,7,225,32.1429,35.0,131.5789,196.3636
+2018,U Mukilesh,VB Kanchi Veerans,4.571,2,2,9,4.5,4.5,64.2857,
+2018,U Vishal,VB Kanchi Veerans,4.0,1,1,25,25.0,25.0,119.0476,
+2018,Uthirasamy Sasidev,Chepauk Super Gillies,4.6,7,7,100,14.2857,11.0,105.2632,100.0
+2018,V Arun Kumar,Chepauk Super Gillies,4.667,2,2,1,0.5,0.5,33.3333,0.0
+2018,V Subramania Siva,VB Kanchi Veerans,5.14,4,4,59,14.75,13.0,113.4615,33.3333
+2018,Varun M Totadri,Dindigul Dragons,6.333,2,2,1,0.5,0.5,11.1111,33.3333
+2018,Vijaykumar Yo Mahesh,IDream Tiruppur Tamizhans,6.556,4,4,19,4.75,2.5,73.0769,84.2105
+2018,Wenseslaus Antony Dhas,Lyca Kovai Kings,3.762,8,8,86,10.75,7.5,107.5,124.2424
+2018,Yamuna Sunny Kumar Singh,Chepauk Super Gillies,5.9,4,4,18,4.5,2.5,60.0,110.0
+2019,A Aarif,Chepauk Super Gillies,4.808,4,4,23,5.75,3.5,88.4615,100.0
+2019,A Venkatesh,SKM Salem Spartans,5.568,3,3,40,13.3333,10.0,108.1081,115.3846
+2019,Abhishek Baljeetsingh Tanwar,Siechem Madurai Panthers,6.78,8,8,83,10.375,9.0,109.2105,146.0
+2019,Adithya Ganesh,Trichy Grand Cholas,4.0,3,3,123,41.0,43.0,113.8889,111.7647
+2019,Akash Sumra,Siechem Madurai Panthers,6.5,3,3,28,9.3333,10.0,100.0,111.7647
+2019,Akkil Srinaath,Lyca Kovai Kings,5.158,6,6,119,19.8333,19.5,135.2273,137.8378
+2019,Chandrasekar Ganapathy,Trichy Grand Cholas,4.414,5,5,44,8.8,9.0,75.8621,77.2727
+2019,Jagatheesan Kousik,Siechem Madurai Panthers,4.609,8,8,195,24.375,24.0,122.6415,158.9286
+2019,K Mani Bharathi,Trichy Grand Cholas,5.441,7,7,96,13.7143,14.0,162.7119,190.0
+2019,M Shajahan,IDream Tiruppur Tamizhans,5.723,6,6,103,17.1667,14.0,110.7527,140.0
+2019,M Suresh Babu,Lyca Kovai Kings,7.0,1,1,0,0.0,0.0,0.0,0.0
+2019,MS Promoth,Siechem Madurai Panthers,6.0,1,1,1,1.0,1.0,20.0,
+2019,MS Sanjay,Trichy Grand Cholas,6.0,1,1,1,1.0,1.0,25.0,25.0
+2019,Maan K Bafna,IDream Tiruppur Tamizhans,3.914,7,7,65,9.2857,2.0,94.2029,125.0
+2019,Malolan Rangarajan,Lyca Kovai Kings,4.561,5,5,48,9.6,11.0,133.3333,175.0
+2019,Mohan Abhinav,Dindigul Dragons,6.0,4,4,37,9.25,8.0,74.0,50.0
+2019,Muhammed Adnan Khan,Lyca Kovai Kings,3.75,2,2,2,1.0,1.0,50.0,
+2019,Murugan Ashwin,Chepauk Super Gillies,5.853,7,7,88,12.5714,14.0,88.8889,136.1111
+2019,Murugesan Kamlesh,SKM Salem Spartans,4.143,3,3,37,12.3333,16.0,142.3077,
+2019,N Sarangarajan Chaturved,Dindigul Dragons,3.897,7,7,94,13.4286,14.0,120.5128,217.3913
+2019,N Selva Kumaran,Siechem Madurai Panthers,6.559,2,2,32,16.0,16.0,96.9697,
+2019,Nidhish S Rajagopal,SKM Salem Spartans,3.764,5,5,68,13.6,13.0,98.5507,
+2019,P Francis Rokins,VB Kanchi Veerans,5.909,4,4,33,8.25,3.0,103.125,357.1429
+2019,Pradosh Ranjan Paul,Lyca Kovai Kings,3.83,5,5,113,22.6,18.0,114.1414,158.3333
+2019,R Nilesh Subramanian,Siechem Madurai Panthers,4.273,6,6,71,11.8333,10.0,112.6984,223.0769
+2019,R Rajkumar,IDream Tiruppur Tamizhans,6.4,6,6,64,10.6667,10.0,106.6667,170.8333
+2019,RS Jaganath Sinivas,Lyca Kovai Kings,7.0,2,2,27,13.5,13.5,225.0,200.0
+2019,RS Mokit Hariharan,VB Kanchi Veerans,7.0,1,1,25,25.0,25.0,113.6364,110.0
+2019,Rajagopal Sathish,VB Kanchi Veerans,5.55,7,7,178,25.4286,22.0,183.5052,211.2903
+2019,Rajendran Karthikeyan,SKM Salem Spartans,7.0,1,1,4,4.0,4.0,40.0,66.6667
+2019,Rajendran Vivek,Dindigul Dragons,4.827,9,9,121,13.4444,11.0,153.1646,172.4138
+2019,Ravichandran Ashwin,Dindigul Dragons,3.778,6,6,136,22.6667,19.0,141.6667,184.6154
+2019,S Abishiek,SKM Salem Spartans,4.288,6,6,42,7.0,5.0,76.3636,
+2019,S Ashwin Balaji,IDream Tiruppur Tamizhans,6.0,1,1,11,11.0,11.0,91.6667,120.0
+2019,S Ganesh,IDream Tiruppur Tamizhans,5.628,3,3,41,13.6667,14.0,97.619,116.6667
+2019,S Harish Kumar,Chepauk Super Gillies,5.99,9,9,150,16.6667,10.0,161.2903,188.5714
+2019,S Senthil Nathan,SKM Salem Spartans,5.971,4,4,43,10.75,9.0,126.4706,131.25
+2019,S Shubham Mehta,SKM Salem Spartans,5.0,1,1,0,0.0,0.0,0.0,
+2019,Sabin Somatha Karnavar,Siechem Madurai Panthers,6.25,2,2,12,6.0,6.0,63.1579,50.0
+2019,Sathiamoorty Vasanth Saravanan,SKM Salem Spartans,5.881,6,6,65,10.8333,8.5,114.0351,100.0
+2019,Sumant Jain,Dindigul Dragons,4.548,9,9,113,12.5556,10.0,109.7087,131.25
+2019,Tushar Raheja,Siechem Madurai Panthers,5.0,1,1,3,3.0,3.0,75.0,
+2019,Umashankar Sushil,Chepauk Super Gillies,5.6,3,3,26,8.6667,4.0,89.6552,100.0
+2019,Uthirasamy Sasidev,Chepauk Super Gillies,5.01,8,8,221,27.625,26.5,117.5532,165.8537
+2019,V Maaruthi Raghav,Trichy Grand Cholas,4.85,3,3,42,14.0,15.0,105.0,88.2353
+2019,Vijay Shankar,Chepauk Super Gillies,4.0,3,3,10,3.3333,3.0,76.9231,
+2019,Vijaykumar Yo Mahesh,IDream Tiruppur Tamizhans,5.944,4,4,29,7.25,3.5,82.8571,113.3333
+2019,Wenseslaus Antony Dhas,Lyca Kovai Kings,4.938,6,6,119,19.8333,9.5,148.75,106.6667
+2021,Abhishek Baljeetsingh Tanwar,Lyca Kovai Kings,6.943,6,6,88,14.6667,13.0,176.0,184.7826
+2021,Adithya Ganesh,Trichy Grand Cholas,4.571,9,9,249,27.6667,28.0,107.7922,160.0
+2021,Affan Khader,IDream Tiruppur Tamizhans,7.0,1,1,0,0.0,0.0,0.0,
+2021,Akash Sumra,Trichy Grand Cholas,6.0,2,2,1,0.5,0.5,33.3333,33.3333
+2021,Arjun P Murthy,Nellai Royal Kings,5.533,4,4,45,11.25,5.0,166.6667,189.4737
+2021,Ashwin Venkataraman,Lyca Kovai Kings,4.119,4,4,53,13.25,14.0,79.1045,
+2021,Atheeq Ur Rahman,Lyca Kovai Kings,4.0,1,1,3,3.0,3.0,37.5,
+2021,Baba Indrajith,Nellai Royal Kings,5.48,5,5,123,24.6,26.0,130.8511,175.0
+2021,Daryl Sunder Ferrario,SKM Salem Spartans,5.0,5,5,124,24.8,30.0,116.9811,160.5263
+2021,Jagatheesan Kousik,Siechem Madurai Panthers,4.843,7,7,165,23.5714,29.0,130.9524,213.8889
+2021,K Mani Bharathi,Dindigul Dragons,3.944,9,9,187,20.7778,16.0,137.5,86.6667
+2021,M Mohammed,IDream Tiruppur Tamizhans,6.926,7,7,96,13.7143,10.0,86.4865,135.8491
+2021,M Rooban Raj,IDream Tiruppur Tamizhans,5.0,1,1,0,0.0,0.0,0.0,
+2021,M Shajahan,Siechem Madurai Panthers,5.426,4,4,43,10.75,11.0,86.0,118.75
+2021,M Suganesh,SKM Salem Spartans,7.0,1,1,8,8.0,8.0,61.5385,
+2021,MS Sanjay,Dindigul Dragons,4.0,2,2,3,1.5,1.5,15.7895,14.2857
+2021,Maan K Bafna,IDream Tiruppur Tamizhans,4.006,7,7,180,25.7143,16.0,109.0909,169.2308
+2021,Masood Shahrukh Khan,Lyca Kovai Kings,5.369,7,7,210,30.0,26.0,177.9661,209.8039
+2021,Muhammed Adnan Khan,Trichy Grand Cholas,4.419,7,7,107,15.2857,9.0,108.0808,14.2857
+2021,Murugan Ashwin,SKM Salem Spartans,6.657,6,6,117,19.5,14.5,113.5922,130.9091
+2021,P Francis Rokins,IDream Tiruppur Tamizhans,4.902,7,7,129,18.4286,12.0,102.381,140.0
+2021,P Sugendhiran,Siechem Madurai Panthers,5.636,2,2,9,4.5,4.5,81.8182,112.5
+2021,R Mithun,Siechem Madurai Panthers,6.828,3,3,18,6.0,4.0,64.2857,75.0
+2021,RS Jaganath Sinivas,Chepauk Super Gillies,5.191,5,5,50,10.0,8.0,111.1111,192.8571
+2021,RS Mokit Hariharan,Dindigul Dragons,4.86,9,9,117,13.0,6.0,110.3774,152.5
+2021,Rajagopal Sathish,Chepauk Super Gillies,5.541,8,8,141,17.625,11.0,145.3608,155.102
+2021,Rajendran Vivek,Dindigul Dragons,4.862,9,9,240,26.6667,16.0,157.8947,168.6275
+2021,Rajhamany Srinivasan,Dindigul Dragons,3.824,7,7,125,17.8571,14.0,106.8376,
+2021,Ramalingam Rohit,Siechem Madurai Panthers,4.0,2,2,6,3.0,3.0,50.0,33.3333
+2021,Ramsingh  Sanjay Yadav,Nellai Royal Kings,4.989,6,6,126,21.0,26.5,151.8072,180.0
+2021,Ramsingh Sonu Yadav,Chepauk Super Gillies,5.634,5,5,42,8.4,7.0,107.6923,150.0
+2021,Ravi Karthikeyan,SKM Salem Spartans,4.381,3,3,8,2.6667,2.0,42.1053,33.3333
+2021,Ravisrinivasan Sai Kishore,Chepauk Super Gillies,5.308,4,4,53,13.25,10.5,106.0,88.8889
+2021,S Aravind,IDream Tiruppur Tamizhans,4.447,5,5,40,8.0,7.0,95.2381,180.0
+2021,S Harish Kumar,Chepauk Super Gillies,6.712,7,7,72,10.2857,7.0,146.9388,156.0976
+2021,S Sujay,Chepauk Super Gillies,4.132,4,4,28,7.0,9.0,77.7778,180.0
+2021,S Swaminathan,Dindigul Dragons,6.692,8,8,42,5.25,3.0,107.6923,125.8065
+2021,Tushar Raheja,IDream Tiruppur Tamizhans,4.412,5,5,42,8.4,9.0,87.5,150.0
+2021,U Mukilesh,Lyca Kovai Kings,5.208,5,5,52,10.4,6.0,100.0,117.6471
+2021,Umashankar Sushil,SKM Salem Spartans,4.286,5,5,55,11.0,11.0,100.0,64.7059
+2021,Uthirasamy Sasidev,Chepauk Super Gillies,4.566,9,9,163,18.1111,18.0,108.6667,107.1429
+2021,Wenseslaus Antony Dhas,Trichy Grand Cholas,5.165,7,7,109,15.5714,13.0,123.8636,148.2143
+2022,Adithya Ganesh,Trichy Grand Cholas,4.32,5,5,103,20.6,15.0,105.102,131.0345
+2022,Akash Sumra,Trichy Grand Cholas,6.0,1,1,1,1.0,1.0,14.2857,14.2857
+2022,Andimani Ganga Pradeep,Dindigul Dragons,4.429,4,4,42,10.5,8.5,123.5294,133.3333
+2022,Atheeq Ur Rahman,Trichy Grand Cholas,4.75,2,2,11,5.5,5.5,68.75,
+2022,Baba Indrajith,Nellai Royal Kings,4.747,7,7,91,13.0,9.0,112.3457,169.2308
+2022,CH Jitendra Kumar,Nellai Royal Kings,7.0,2,2,23,11.5,11.5,127.7778,131.25
+2022,Daryl Sunder Ferrario,SKM Salem Spartans,4.159,7,7,144,20.5714,13.0,107.4627,129.4118
+2022,Guruswamy Ajitesh,Nellai Royal Kings,5.75,5,5,129,25.8,17.0,243.3962,266.6667
+2022,Jafar Jamal,SKM Salem Spartans,3.979,5,5,34,6.8,6.0,72.3404,33.3333
+2022,Jagatheesan Kousik,Siechem Madurai Panthers,4.965,8,8,102,12.75,11.5,93.578,118.4211
+2022,Karaparambil Satish Monish,Dindigul Dragons,6.833,4,4,54,13.5,10.5,145.9459,142.8571
+2022,M Rooban Raj,Nellai Royal Kings,7.0,1,1,0,0.0,0.0,0.0,0.0
+2022,MS Sanjay,Trichy Grand Cholas,7.0,1,1,4,4.0,4.0,50.0,50.0
+2022,Maan K Bafna,IDream Tiruppur Tamizhans,4.576,7,7,182,26.0,26.0,107.0588,141.4634
+2022,Masood Shahrukh Khan,Lyca Kovai Kings,5.62,8,8,187,23.375,20.5,164.0351,209.2593
+2022,Mohan Abhinav,Lyca Kovai Kings,7.0,1,1,1,1.0,1.0,50.0,50.0
+2022,Muhammed Adnan Khan,Trichy Grand Cholas,5.458,2,2,23,11.5,11.5,95.8333,66.6667
+2022,Murugan Ashwin,SKM Salem Spartans,5.581,7,7,93,13.2857,11.0,108.1395,116.6667
+2022,N Niranjan,Trichy Grand Cholas,4.25,2,2,28,14.0,14.0,87.5,
+2022,N Sarangarajan Chaturved,Siechem Madurai Panthers,4.221,8,8,180,22.5,15.5,136.3636,135.2941
+2022,N Selva Kumaran,Lyca Kovai Kings,7.0,1,1,0,0.0,0.0,0.0,
+2022,P Francis Rokins,IDream Tiruppur Tamizhans,4.928,4,4,55,13.75,15.0,68.75,125.0
+2022,P Sugendhiran,Trichy Grand Cholas,6.0,1,1,1,1.0,1.0,25.0,0.0
+2022,Poovathinga Shijit Chandran,Lyca Kovai Kings,4.026,6,6,76,12.6667,13.0,104.1096,220.0
+2022,R Rajkumar,IDream Tiruppur Tamizhans,4.971,6,6,36,6.0,5.5,105.8824,115.7895
+2022,RS Jaganath Sinivas,Chepauk Super Gillies,7.0,1,1,0,0.0,0.0,0.0,
+2022,RS Mokit Hariharan,Dindigul Dragons,4.881,6,6,68,11.3333,7.0,113.3333,187.5
+2022,Rajagopal Sathish,Chepauk Super Gillies,5.621,8,8,80,10.0,6.5,148.1481,183.3333
+2022,Rajendran Vivek,Dindigul Dragons,5.784,6,6,107,17.8333,9.0,150.7042,225.0
+2022,Ramsingh  Sanjay Yadav,Nellai Royal Kings,4.201,9,9,452,50.2222,55.0,186.7769,230.5556
+2022,Ramsingh Sonu Yadav,Chepauk Super Gillies,4.583,6,6,107,17.8333,19.0,152.8571,166.6667
+2022,Ravi Karthikeyan,SKM Salem Spartans,5.403,5,5,63,12.6,12.0,96.9231,100.0
+2022,Ravisrinivasan Sai Kishore,Chepauk Super Gillies,4.495,5,5,111,22.2,19.0,124.7191,50.0
+2022,S Abishiek,SKM Salem Spartans,5.453,7,7,85,12.1429,13.0,80.9524,82.5
+2022,S Ganesh,SKM Salem Spartans,3.818,4,4,46,11.5,11.0,71.875,110.0
+2022,S Gohulmoorthi,Trichy Grand Cholas,7.0,2,2,5,2.5,2.5,29.4118,71.4286
+2022,S Rithik Easwaran,Siechem Madurai Panthers,5.08,4,4,59,14.75,8.0,118.0,200.0
+2022,Selvam Suresh Kumar,IDream Tiruppur Tamizhans,5.37,4,4,18,4.5,4.5,72.0,114.2857
+2022,Tushar Raheja,IDream Tiruppur Tamizhans,5.592,6,6,124,20.6667,19.0,124.0,192.3077
+2022,U Mukilesh,Lyca Kovai Kings,4.966,7,7,124,17.7143,6.0,144.186,166.6667
+2022,Uthirasamy Sasidev,Chepauk Super Gillies,4.83,8,8,204,25.5,15.0,132.4675,200.0
+2022,Wenseslaus Antony Dhas,Trichy Grand Cholas,6.0,2,2,14,7.0,7.0,73.6842,
+2022,Xavier Thalaivan Sargunam,Siechem Madurai Panthers,7.0,1,1,3,3.0,3.0,42.8571,40.0
+2023,Adithya Ganesh,Dindigul Dragons,4.0,9,9,195,21.6667,19.0,125.8065,182.3529
+2023,Akash Sumra,SKM Salem Spartans,4.386,5,5,61,12.2,10.0,110.9091,142.8571
+2023,Akshay V Srinivasan,Trichy Grand Cholas,5.8,3,3,9,3.0,0.0,64.2857,112.5
+2023,Atheeq Ur Rahman,Lyca Kovai Kings,5.679,5,5,122,24.4,19.0,164.8649,176.3158
+2023,Balchander Anirudh,IDream Tiruppur Tamizhans,4.688,7,7,125,17.8571,15.0,132.9787,160.4167
+2023,C Sarath Kumar,Dindigul Dragons,6.4,5,5,137,27.4,25.0,163.0952,170.5882
+2023,CH Jitendra Kumar,Chepauk Super Gillies,5.0,1,1,13,13.0,13.0,144.4444,
+2023,D Sudhan,Siechem Madurai Panthers,7.0,2,2,4,2.0,2.0,44.4444,50.0
+2023,Daryl Sunder Ferrario,Trichy Grand Cholas,4.406,7,7,154,22.0,21.0,119.3798,115.3846
+2023,G Kishoor,Dindigul Dragons,6.0,1,1,2,2.0,2.0,50.0,
+2023,J Gowri Sankar,SKM Salem Spartans,6.0,1,1,17,17.0,17.0,50.0,75.0
+2023,Jafar Jamal,Trichy Grand Cholas,4.533,6,6,142,23.6667,7.5,167.0588,255.5556
+2023,K Deeban Lingesh,Siechem Madurai Panthers,5.792,4,4,38,9.5,9.0,84.4444,
+2023,K Mani Bharathi,Trichy Grand Cholas,4.156,5,5,90,18.0,2.0,102.2727,128.5714
+2023,Laxmesha Suryaprakash,Nellai Royal Kings,4.344,6,6,86,14.3333,16.0,143.3333,0.0
+2023,M Shajahan,Trichy Grand Cholas,6.0,1,1,13,13.0,13.0,72.2222,
+2023,Maan K Bafna,SKM Salem Spartans,3.973,5,5,54,10.8,10.0,154.2857,
+2023,Masood Shahrukh Khan,Lyca Kovai Kings,5.726,7,7,133,19.0,17.0,190.0,200.0
+2023,Nidhish S Rajagopal,Nellai Royal Kings,3.762,6,6,205,34.1667,30.5,135.7616,145.0
+2023,R Mithun,Nellai Royal Kings,7.0,1,1,3,3.0,3.0,75.0,75.0
+2023,R Rajkumar,Trichy Grand Cholas,6.907,7,7,90,12.8571,3.0,121.6216,200.0
+2023,R Ram Arvindh,Lyca Kovai Kings,5.056,9,9,90,10.0,3.0,130.4348,161.5385
+2023,R Sibi,Chepauk Super Gillies,7.0,1,1,31,31.0,31.0,110.7143,146.1538
+2023,RS Mokit Hariharan,SKM Salem Spartans,4.514,5,5,60,12.0,14.0,90.9091,50.0
+2023,Rajagopal Sathish,Chepauk Super Gillies,6.0,1,1,0,0.0,0.0,0.0,0.0
+2023,Rajendran Vivek,IDream Tiruppur Tamizhans,4.986,7,7,87,12.4286,11.0,131.8182,148.5714
+2023,Ramsingh  Sanjay Yadav,Chepauk Super Gillies,4.168,7,7,102,14.5714,15.0,115.9091,258.3333
+2023,Ramsingh Sonu Yadav,Nellai Royal Kings,5.546,7,7,115,16.4286,17.0,123.6559,125.0
+2023,Ravichandran Ashwin,Dindigul Dragons,4.625,2,2,6,3.0,3.0,37.5,
+2023,S Abishiek,SKM Salem Spartans,5.5,6,6,46,7.6667,8.0,74.1935,175.0
+2023,S Ganesh,IDream Tiruppur Tamizhans,5.375,2,2,4,2.0,2.0,57.1429,60.0
+2023,S Harish Kumar,Chepauk Super Gillies,6.074,7,7,86,12.2857,9.0,108.8608,147.8261
+2023,S Lakshay Jain,Nellai Royal Kings,5.833,2,2,14,7.0,7.0,48.2759,
+2023,S Madhan Kumar,Chepauk Super Gillies,4.615,3,3,8,2.6667,3.0,66.6667,75.0
+2023,S Rithik Easwaran,Nellai Royal Kings,4.649,8,8,152,19.0,18.0,165.2174,276.9231
+2023,S Sri Abisek,Siechem Madurai Panthers,4.897,5,5,71,14.2,17.0,112.6984,25.0
+2023,SJ Arun Kumar,Nellai Royal Kings,4.238,3,3,16,5.3333,3.0,80.0,75.0
+2023,SP Vinod,Trichy Grand Cholas,6.417,2,2,2,1.0,1.0,16.6667,
+2023,Subodh Bhati,Dindigul Dragons,6.119,6,6,88,14.6667,12.0,151.7241,152.7778
+2023,Sunny Sandhu,SKM Salem Spartans,5.17,5,5,182,36.4,29.0,137.8788,175.0
+2023,Swapnil Singh,Siechem Madurai Panthers,4.795,8,8,150,18.75,15.5,131.5789,165.2174
+2023,U Mukilesh,Lyca Kovai Kings,4.608,8,8,202,25.25,24.0,122.4242,170.0
+2023,Uthirasamy Sasidev,Chepauk Super Gillies,7.0,6,6,80,13.3333,11.0,111.1111,114.8936
+2023,Vijay Shankar,IDream Tiruppur Tamizhans,4.25,6,6,144,24.0,28.0,130.9091,125.7143
+2023,Washington Sundar,Siechem Madurai Panthers,4.856,5,5,119,23.8,18.0,138.3721,180.7692
+2023,Wenseslaus Antony Dhas,Trichy Grand Cholas,6.514,7,7,59,8.4286,9.0,81.9444,84.2105
+2024,Abhishek Baljeetsingh Tanwar,Chepauk Super Gillies,6.884,7,7,96,13.7143,10.0,223.2558,223.2558
+2024,Atheeq Ur Rahman,Lyca Kovai Kings,6.345,6,6,81,13.5,10.5,150.0,148.3871
+2024,Balchander Anirudh,IDream Tiruppur Tamizhans,3.839,9,9,142,15.7778,14.0,124.5614,75.0
+2024,Boopathi Vaishna Kumar,Dindigul Dragons,4.468,9,9,94,10.4444,3.0,128.7671,114.8148
+2024,C Andre Siddarth,Chepauk Super Gillies,5.227,5,5,62,12.4,9.0,100.0,76.4706
+2024,C Sarath Kumar,Dindigul Dragons,5.149,8,8,92,11.5,10.5,127.7778,118.9189
+2024,CH Jitendra Kumar,Chepauk Super Gillies,6.0,1,1,14,14.0,14.0,66.6667,75.0
+2024,Daryl Sunder Ferrario,Chepauk Super Gillies,5.02,7,7,67,9.5714,4.0,136.7347,209.5238
+2024,Jafar Jamal,Trichy Grand Cholas,5.783,6,6,177,29.5,35.5,141.6,175.7576
+2024,Laxmesha Suryaprakash,Nellai Royal Kings,5.288,4,4,51,12.75,4.0,100.0,128.0
+2024,M Akram Khan,Siechem Madurai Panthers,5.25,2,2,12,6.0,6.0,75.0,
+2024,Maan K Bafna,IDream Tiruppur Tamizhans,6.339,2,2,76,38.0,38.0,140.7407,127.2727
+2024,Masood Shahrukh Khan,Lyca Kovai Kings,5.311,7,7,225,32.1429,50.0,182.9268,250.9434
+2024,Muhammed Adnan Khan,SKM Salem Spartans,5.132,5,5,86,17.2,10.0,128.3582,133.3333
+2024,N Sarangarajan Chaturved,Siechem Madurai Panthers,5.055,6,6,75,12.5,9.0,141.5094,190.4762
+2024,NS Harish,Nellai Royal Kings,5.286,6,6,73,12.1667,9.5,135.1852,92.8571
+2024,Nidhish S Rajagopal,Nellai Royal Kings,4.451,6,6,91,15.1667,9.0,119.7368,200.0
+2024,P Nirmal Kumar,Trichy Grand Cholas,4.298,2,2,49,24.5,24.5,106.5217,
+2024,P Saravanan,Siechem Madurai Panthers,6.421,5,5,60,12.0,7.0,162.1622,134.6154
+2024,Poovathinga Shijit Chandran,SKM Salem Spartans,5.795,4,4,31,7.75,5.0,81.5789,114.2857
+2024,Pradosh Ranjan Paul,Chepauk Super Gillies,4.082,6,6,222,37.0,34.5,134.5455,161.3636
+2024,R Rajan,SKM Salem Spartans,7.0,1,1,53,53.0,53.0,135.8974,200.0
+2024,R Ram Arvindh,Lyca Kovai Kings,5.482,6,6,86,14.3333,12.5,104.878,147.619
+2024,Rajagopal Sathish,Chepauk Super Gillies,6.679,3,3,26,8.6667,9.0,104.0,104.0
+2024,Ramsingh  Sanjay Yadav,Trichy Grand Cholas,5.395,7,7,226,32.2857,24.0,148.6842,201.8868
+2024,Ramsingh Sonu Yadav,Nellai Royal Kings,6.079,6,6,118,19.6667,16.0,163.8889,205.7143
+2024,Ravisrinivasan Sai Kishore,IDream Tiruppur Tamizhans,5.6,7,7,43,6.1429,2.0,100.0,92.3077
+2024,S Dinesh Raj,Dindigul Dragons,6.96,6,6,40,6.6667,2.5,160.0,172.7273
+2024,S Ganesh,IDream Tiruppur Tamizhans,6.127,8,8,167,20.875,13.5,127.4809,166.6667
+2024,S Mohamed Ali,IDream Tiruppur Tamizhans,5.444,8,8,173,21.625,22.5,141.8033,174.2857
+2024,S Rithik Easwaran,Nellai Royal Kings,5.506,6,6,108,18.0,8.5,133.3333,142.1053
+2024,S Sri Abisek,Siechem Madurai Panthers,5.0,2,2,22,11.0,11.0,104.7619,
+2024,SJ Arun Kumar,Nellai Royal Kings,5.56,4,4,15,3.75,4.5,62.5,33.3333
+2024,Sudhan Sanjeevi Kandepan,SKM Salem Spartans,4.0,1,1,6,6.0,6.0,100.0,
+2024,Sunny Sandhu,SKM Salem Spartans,6.319,5,5,61,12.2,10.0,135.5556,147.3684
+2024,Swapnil Singh,Siechem Madurai Panthers,6.343,3,3,36,12.0,17.0,105.8824,154.5455
+2024,U Mukilesh,Lyca Kovai Kings,4.429,8,8,195,24.375,17.5,122.6415,161.5385
+2024,Uthirasamy Sasidev,Siechem Madurai Panthers,5.773,6,6,89,14.8333,13.5,141.2698,172.2222
+2024,Vijay Shankar,IDream Tiruppur Tamizhans,4.6,2,2,20,10.0,10.0,100.0,100.0
+2025,Aakaash Sharma,Dindigul Dragons,7.0,1,1,4,4.0,4.0,66.6667,66.6667
+2025,Atheeq Ur Rahman,Siechem Madurai Panthers,4.535,7,7,202,28.8571,36.0,132.8947,169.2308
+2025,Boopathi Vaishna Kumar,SKM Salem Spartans,7.0,2,2,31,15.5,15.5,114.8148,133.3333
+2025,C Andre Siddarth,Lyca Kovai Kings,4.688,7,7,131,18.7143,21.0,107.377,178.5714
+2025,C Sarath Kumar,Siechem Madurai Panthers,6.244,5,5,80,16.0,8.0,90.9091,113.6364
+2025,Dinesh H,Dindigul Dragons,6.364,4,4,25,6.25,4.0,119.0476,137.5
+2025,Eshwar M,SKM Salem Spartans,4.56,2,2,37,18.5,18.5,154.1667,100.0
+2025,Hunny Saini,Dindigul Dragons,5.548,10,10,162,16.2,13.0,182.0225,208.1081
+2025,Jafar Jamal,Trichy Grand Cholas,5.944,8,8,127,15.875,12.0,147.6744,165.9091
+2025,K Vishal Vaidhya,Lyca Kovai Kings,3.981,3,3,48,16.0,13.0,94.1176,83.3333
+2025,KT Madhava Prasad,Lyca Kovai Kings,6.925,4,4,44,11.0,10.5,112.8205,121.4286
+2025,L Pradheep Vishal,Lyca Kovai Kings,6.72,2,2,18,9.0,9.0,72.0,72.2222
+2025,Maan K Bafna,Dindigul Dragons,4.346,6,6,61,10.1667,3.5,117.3077,100.0
+2025,Masood Shahrukh Khan,Lyca Kovai Kings,5.044,7,7,218,31.1429,25.0,166.4122,233.3333
+2025,Murugan Ashwin,Siechem Madurai Panthers,6.688,6,6,68,11.3333,7.0,89.4737,97.0588
+2025,NS Harish,Nellai Royal Kings,5.754,6,6,98,16.3333,9.0,160.6557,211.1111
+2025,Narayan Jagadeesan,Chepauk Super Gillies,4.037,7,7,180,25.7143,13.0,173.0769,166.6667
+2025,PS Nirmal Kumar,Nellai Royal Kings,4.043,5,5,74,14.8,10.0,105.7143,120.0
+2025,Pradosh Ranjan Paul,IDream Tiruppur Tamizhans,4.285,6,6,146,24.3333,23.0,108.1481,113.3333
+2025,R Kavin,SKM Salem Spartans,3.949,6,6,86,14.3333,2.0,113.1579,150.0
+2025,R Rajkumar,Trichy Grand Cholas,6.698,8,8,200,25.0,20.0,198.0198,201.5873
+2025,R Vimal Khumar,Dindigul Dragons,4.624,9,9,240,26.6667,24.0,142.8571,221.2121
+2025,RK Jayant,Dindigul Dragons,6.289,2,2,43,21.5,21.5,100.0,12.5
+2025,Rajendran Vivek,SKM Salem Spartans,5.14,7,7,60,8.5714,2.0,127.6596,200.0
+2025,Ramsingh  Sanjay Yadav,Trichy Grand Cholas,5.062,8,8,196,24.5,19.0,117.3653,164.5833
+2025,Ramsingh Sonu Yadav,Nellai Royal Kings,6.276,6,6,133,22.1667,19.0,133.0,167.5
+2025,S Ganesh,Siechem Madurai Panthers,5.237,4,4,41,10.25,12.0,113.8889,141.6667
+2025,S Guru Raghavendran,Lyca Kovai Kings,4.951,5,5,43,8.6,7.0,110.2564,60.0
+2025,S Mohamed Ali,IDream Tiruppur Tamizhans,4.75,7,7,100,14.2857,16.0,136.9863,166.6667
+2025,S Rithik Easwaran,Nellai Royal Kings,4.963,7,7,104,14.8571,12.0,131.6456,300.0
+2025,S Shyam Sundar,Siechem Madurai Panthers,4.0,1,1,0,0.0,0.0,0.0,
+2025,S Sunil Krishna,Chepauk Super Gillies,7.0,2,2,34,17.0,17.0,154.5455,177.7778
+2025,Sunny Sandhu,SKM Salem Spartans,5.473,7,7,129,18.4286,15.0,144.9438,148.6486
+2025,Swapnil Singh,Chepauk Super Gillies,6.0,6,6,85,14.1667,7.5,166.6667,207.6923
+2025,U Mukilesh,Trichy Grand Cholas,6.094,7,7,57,8.1429,7.0,89.0625,110.5263
+2025,Uthirasamy Sasidev,IDream Tiruppur Tamizhans,5.369,5,5,115,23.0,18.0,182.5397,212.766
+2025,V Anovankar,IDream Tiruppur Tamizhans,6.0,2,2,28,14.0,14.0,186.6667,186.6667
+2025,Vijay Shankar,Chepauk Super Gillies,4.104,9,9,251,27.8889,28.0,153.9877,181.4815

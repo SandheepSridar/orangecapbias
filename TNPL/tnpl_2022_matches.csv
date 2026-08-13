@@ -1,0 +1,33 @@
+match_id,name,description,date,status,home_team,home_score,away_team,away_score,winner,deliveries
+1312874,Chepauk Super Gillies v Nellai Royal Kings,1st Match,2022-06-23T13:45Z,,Chepauk Super Gillies,184/7 (20 ov),Nellai Royal Kings,184/4,Nellai Royal Kings,260
+1312875,Dindigul Dragons v Ruby Trichy Warriors,2nd Match,2022-06-24T13:45Z,,Dindigul Dragons,144/8,Trichy Grand Cholas,"147/2 (19/20 ov, target 145)",Trichy Grand Cholas,246
+1312876,Siechem Madurai Panthers v Chepauk Super Gillies,3rd Match,2022-06-25T09:45Z,,Siechem Madurai Panthers,"136/6 (18.1/20 ov, target 136)",Chepauk Super Gillies,135/8,Chepauk Super Gillies,238
+1312877,Salem Spartans v Nellai Royal Kings,4th Match,2022-06-25T13:45Z,,SKM Salem Spartans,149/7,Nellai Royal Kings,"152/5 (17.4/20 ov, target 150)",Nellai Royal Kings,237
+1312878,Lyca Kovai Kings v Dindigul Dragons,5th Match,2022-06-26T13:45Z,,Lyca Kovai Kings,188/8,Dindigul Dragons,"190/5 (19.2/20 ov, target 189)",Dindigul Dragons,250
+1312879,Ruby Trichy Warriors v IDream Tiruppur Tamizhans,6th Match,2022-06-27T13:45Z,,Trichy Grand Cholas,157/6,IDream Tiruppur Tamizhans,"158/6 (18.5/20 ov, target 158)",IDream Tiruppur Tamizhans,242
+1312880,Nellai Royal Kings v Dindigul Dragons,7th Match,2022-06-30T09:45Z,,Nellai Royal Kings,"133/2 (11/12 ov, target 131)",Dindigul Dragons,130/5 (12/12 ov),Dindigul Dragons,146
+1312881,Siechem Madurai Panthers v Lyca Kovai Kings,8th Match,2022-06-30T13:45Z,,Siechem Madurai Panthers,"154/8 (19.5/20 ov, target 152)",Lyca Kovai Kings,151,Lyca Kovai Kings,248
+1312882,IDream Tiruppur Tamizhans v Dindigul Dragons,9th Match,2022-07-04T13:45Z,,IDream Tiruppur Tamizhans,145/8,Dindigul Dragons,"148/1 (18.1/20 ov, target 146)",Dindigul Dragons,237
+1312883,Siechem Madurai Panthers v Nellai Royal Kings,10th Match,2022-07-05T13:45Z,,Siechem Madurai Panthers,"183/8 (20 ov, target 210)",Nellai Royal Kings,209/3,Nellai Royal Kings,259
+1312884,Lyca Kovai Kings v Salem Spartans,11th Match,2022-07-06T09:45Z,,Lyca Kovai Kings,"149/2 (16.3/20 ov, target 147)",SKM Salem Spartans,146/9,SKM Salem Spartans,232
+1312885,Ruby Trichy Warriors v Chepauk Super Gillies,12th Match,2022-07-06T13:45Z,,Trichy Grand Cholas,"159/6 (20 ov, target 204)",Chepauk Super Gillies,203/8,Chepauk Super Gillies,249
+1312886,Dindigul Dragons v Siechem Madurai Panthers,13th Match,2022-07-07T13:45Z,,Dindigul Dragons,122/9,Siechem Madurai Panthers,"126/3 (15.3/20 ov, target 123)",Siechem Madurai Panthers,224
+1312887,Nellai Royal Kings v IDream Tiruppur Tamizhans,14th Match,2022-07-10T09:45Z,,Nellai Royal Kings,"121/4 (15.3/20 ov, target 118)",IDream Tiruppur Tamizhans,117/8,IDream Tiruppur Tamizhans,219
+1312888,Ruby Trichy Warriors v Lyca Kovai Kings,15th Match,2022-07-10T13:45Z,,Trichy Grand Cholas,135,Lyca Kovai Kings,"138/5 (17/20 ov, target 136)",Lyca Kovai Kings,238
+1312889,Salem Spartans v Siechem Madurai Panthers,16th Match,2022-07-11T13:45Z,,SKM Salem Spartans,"126/9 (20 ov, target 166)",Siechem Madurai Panthers,165/7,Siechem Madurai Panthers,249
+1312890,Chepauk Super Gillies v Lyca Kovai Kings,17th Match,2022-07-12T13:45Z,,Chepauk Super Gillies,"171/5 (18.5/20 ov, target 171)",Lyca Kovai Kings,170/7,Lyca Kovai Kings,249
+1312891,IDream Tiruppur Tamizhans v Salem Spartans,18th Match,2022-07-13T13:45Z,,IDream Tiruppur Tamizhans,135/5,SKM Salem Spartans,"103 (19.2/20 ov, target 136)",SKM Salem Spartans,244
+1312892,Nellai Royal Kings v Ruby Trichy Warriors,19th Match,2022-07-15T13:45Z,,Nellai Royal Kings,236/2,Trichy Grand Cholas,"170/7 (20 ov, target 237)",Trichy Grand Cholas,257
+1312893,Lyca Kovai Kings v IDream Tiruppur Tamizhans,20th Match,2022-07-16T09:45Z,,Lyca Kovai Kings,"158/1 (15.2/20 ov, target 158)",IDream Tiruppur Tamizhans,157/7,IDream Tiruppur Tamizhans,215
+1312894,Chepauk Super Gillies v Dindigul Dragons,21st Match,2022-07-16T13:45Z,,Chepauk Super Gillies,"139/5 (19.2/20 ov, target 139)",Dindigul Dragons,138/5,Dindigul Dragons,248
+1312895,Salem Spartans v Chepauk Super Gillies,22nd Match,2022-07-19T13:45Z,,SKM Salem Spartans,113/6,Chepauk Super Gillies,"117/3 (14.5/20 ov, target 114)",Chepauk Super Gillies,213
+1312896,IDream Tiruppur Tamizhans v Siechem Madurai Panthers,23rd Match,2022-07-20T13:45Z,,IDream Tiruppur Tamizhans,129/7,Siechem Madurai Panthers,"76 (17.2/20 ov, target 130)",Siechem Madurai Panthers,229
+1312897,Salem Spartans v Ruby Trichy Warriors,24th Match,2022-07-21T13:45Z,,SKM Salem Spartans,87 (19.5 ov),Trichy Grand Cholas,"26/2 (5 ov, target 23)",Trichy Grand Cholas,155
+1312898,Chepauk Super Gillies v IDream Tiruppur Tamizhans,25th Match,2022-07-22T13:45Z,,Chepauk Super Gillies,133/9,IDream Tiruppur Tamizhans,"73 (19.3/20 ov, target 134)",IDream Tiruppur Tamizhans,243
+1312899,Lyca Kovai Kings v Nellai Royal Kings,26th Match,2022-07-23T13:45Z,,Lyca Kovai Kings,177/4,Nellai Royal Kings,"172/9 (20 ov, target 178)",Nellai Royal Kings,255
+1312900,Siechem Madurai Panthers v Ruby Trichy Warriors,27th Match,2022-07-24T09:45Z,,Siechem Madurai Panthers,136/6,Trichy Grand Cholas,"100 (18.4/20 ov, target 137)",Trichy Grand Cholas,239
+1312901,Dindigul Dragons v Salem Spartans,28th Match,2022-07-24T13:45Z,,Dindigul Dragons,"106/9 (20 ov, target 125)",SKM Salem Spartans,124/8,SKM Salem Spartans,247
+1312902,Lyca Kovai Kings v Siechem Madurai Panthers, Eliminator,2022-07-26T13:45Z,,Lyca Kovai Kings,"72/0 (9.5 ov, target 53)",Siechem Madurai Panthers,126/7 (20 ov),Siechem Madurai Panthers,186
+1312903,Nellai Royal Kings v Chepauk Super Gillies,Qualifier 1,2022-07-27T13:45Z,,Nellai Royal Kings,140,Chepauk Super Gillies,"141/5 (19.2/20 ov, target 141)",Chepauk Super Gillies,246
+1312904,Lyca Kovai Kings v Nellai Royal Kings,Qualifier 2,2022-07-29T13:45Z,,Lyca Kovai Kings,"209/8 (20 ov, target 209)",Nellai Royal Kings,208/6,Nellai Royal Kings,246
+1312905,Lyca Kovai Kings v Chepauk Super Gillies,Final,2022-07-31T13:45Z,,Lyca Kovai Kings,138/9 (17/17 ov),Chepauk Super Gillies,"14/2 (4/17 ov, target 139)",Chepauk Super Gillies,130

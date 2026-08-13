@@ -1,0 +1,33 @@
+match_id,name,description,date,status,home_team,home_score,away_team,away_score,winner,deliveries
+1548206,Dindigul Dragons v IDream Tiruppur Tamizhans,1st Match,2026-08-04T14:00Z,post,Dindigul Dragons,"111/3 (18.3/20 ov, target 108)",IDream Tiruppur Tamizhans,107,Dindigul Dragons,216
+1548207,Madurai Panthers v Trichy Grand Cholas,2nd Match,2026-08-05T10:00Z,post,Madurai Panthers,"174/8 (19.4/20 ov, target 174)",Trichy Grand Cholas,173/7,Madurai Panthers,249
+1548208,Chepauk Super Gillies v Nellai Royal Kings,3rd Match,2026-08-05T14:00Z,post,Chepauk Super Gillies,"154 (17.2/20 ov, target 205)",Nellai Royal Kings,204/6,Nellai Royal Kings,229
+1548209,VIDA Kovai Kings v SKM Salem Spartans,4th Match,2026-08-06T14:00Z,post,VIDA Kovai Kings,194/8,SKM Salem Spartans,"160 (19.4/20 ov, target 195)",VIDA Kovai Kings,247
+1548210,Chepauk Super Gillies v IDream Tiruppur Tamizhans,5th Match,2026-08-07T10:00Z,post,Chepauk Super Gillies,205/8,IDream Tiruppur Tamizhans,"206/3 (18/20 ov, target 206)",IDream Tiruppur Tamizhans,239
+1548211,Dindigul Dragons v Nellai Royal Kings,6th Match,2026-08-07T14:00Z,post,Dindigul Dragons,170/7,Nellai Royal Kings,"172/4 (17.4/20 ov, target 171)",Nellai Royal Kings,240
+1548212,VIDA Kovai Kings v Madurai Panthers,7th Match,2026-08-08T10:00Z,post,VIDA Kovai Kings,239/4,Madurai Panthers,"240/4 (19.3/20 ov, target 240)",Madurai Panthers,247
+1548213,SKM Salem Spartans v Trichy Grand Cholas,8th Match,2026-08-08T14:00Z,post,SKM Salem Spartans,152/9,Trichy Grand Cholas,"155/3 (17/20 ov, target 153)",Trichy Grand Cholas,229
+1548214,Chepauk Super Gillies v Dindigul Dragons,9th Match,2026-08-09T10:00Z,post,Chepauk Super Gillies,"131/3 (16.2/20 ov, target 127)",Dindigul Dragons,126/8,Chepauk Super Gillies,227
+1548215,IDream Tiruppur Tamizhans v Nellai Royal Kings,10th Match,2026-08-09T14:00Z,post,IDream Tiruppur Tamizhans,"207/2 (18.1/20 ov, target 207)",Nellai Royal Kings,206/8,IDream Tiruppur Tamizhans,240
+1548216,SKM Salem Spartans v Madurai Panthers,11th Match,2026-08-10T14:00Z,post,SKM Salem Spartans,"159/9 (20 ov, target 196)",Madurai Panthers,195/8,Madurai Panthers,247
+1548217,Nellai Royal Kings v Trichy Grand Cholas,12th Match,2026-08-11T10:00Z,post,Nellai Royal Kings,"137 (18/20 ov, target 183)",Trichy Grand Cholas,182/8,Trichy Grand Cholas,244
+1548218,IDream Tiruppur Tamizhans v VIDA Kovai Kings,13th Match,2026-08-11T14:00Z,post,IDream Tiruppur Tamizhans,"167/6 (18/20 ov, target 167)",VIDA Kovai Kings,166/8,IDream Tiruppur Tamizhans,240
+1548219,Chepauk Super Gillies v SKM Salem Spartans,14th Match,2026-08-12T10:00Z,post,Chepauk Super Gillies,"186/5 (16.4/20 ov, target 183)",SKM Salem Spartans,182/7,Chepauk Super Gillies,223
+1548220,Dindigul Dragons v Madurai Panthers,15th Match,2026-08-12T14:00Z,post,Dindigul Dragons,"150/6 (18 ov, target 172)",Madurai Panthers,171/7 (18/18 ov),Madurai Panthers,226
+1548221,VIDA Kovai Kings v Nellai Royal Kings,16th Match,2026-08-13T10:00Z,pre,VIDA Kovai Kings,,Nellai Royal Kings,,,0
+1548222,IDream Tiruppur Tamizhans v Trichy Grand Cholas,17th Match,2026-08-13T14:00Z,pre,IDream Tiruppur Tamizhans,,Trichy Grand Cholas,,,0
+1548223,Dindigul Dragons v SKM Salem Spartans,18th Match,2026-08-14T10:00Z,pre,Dindigul Dragons,,SKM Salem Spartans,,,0
+1548224,Chepauk Super Gillies v Madurai Panthers,19th Match,2026-08-14T14:00Z,pre,Chepauk Super Gillies,,Madurai Panthers,,,0
+1548225,VIDA Kovai Kings v Trichy Grand Cholas,20th Match,2026-08-15T14:00Z,pre,VIDA Kovai Kings,,Trichy Grand Cholas,,,0
+1548226,Chepauk Super Gillies v VIDA Kovai Kings,21st Match,2026-08-18T14:00Z,pre,Chepauk Super Gillies,,VIDA Kovai Kings,,,0
+1548227,Dindigul Dragons v Trichy Grand Cholas,22nd Match,2026-08-19T14:00Z,pre,Dindigul Dragons,,Trichy Grand Cholas,,,0
+1548228,IDream Tiruppur Tamizhans v Madurai Panthers,23rd Match,2026-08-20T10:00Z,pre,IDream Tiruppur Tamizhans,,Madurai Panthers,,,0
+1548229,Nellai Royal Kings v SKM Salem Spartans,24th Match,2026-08-20T14:00Z,pre,Nellai Royal Kings,,SKM Salem Spartans,,,0
+1548230,Dindigul Dragons v VIDA Kovai Kings,25th Match,2026-08-21T10:00Z,pre,Dindigul Dragons,,VIDA Kovai Kings,,,0
+1548231,Chepauk Super Gillies v Trichy Grand Cholas,26th Match,2026-08-21T14:00Z,pre,Chepauk Super Gillies,,Trichy Grand Cholas,,,0
+1548232,IDream Tiruppur Tamizhans v SKM Salem Spartans,27th Match,2026-08-22T10:00Z,pre,IDream Tiruppur Tamizhans,,SKM Salem Spartans,,,0
+1548233,Nellai Royal Kings v Madurai Panthers,28th Match,2026-08-22T14:00Z,pre,Nellai Royal Kings,,Madurai Panthers,,,0
+1548234,TBC v TBC,Qualifier 1,2026-08-23T14:00Z,pre,TBA,,TBA,,,0
+1548235,TBC v TBC,Eliminator,2026-08-24T14:00Z,pre,TBA,,TBA,,,0
+1548236,TBC v TBC,Qualifier 2,2026-08-26T14:00Z,pre,TBA,,TBA,,,0
+1548237,TBC v TBC,Final,2026-08-28T14:00Z,pre,TBA,,TBA,,,0

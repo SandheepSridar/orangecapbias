@@ -1,0 +1,217 @@
+match_id,innings,over,ball,batter,non_striker,bowler,runs_total,runs_batter,runs_extras,play_type,is_wicket,wicket_kind,dismissed,team_score
+1489138,1,1,1,VP Amit Sathvik,Tushar Raheja,Venkatesh Bhuvaneshwar,4,4,0,four,0,,,4/0
+1489138,1,1,2,VP Amit Sathvik,Tushar Raheja,Venkatesh Bhuvaneshwar,0,0,0,no run,0,,,4/0
+1489138,1,1,3,VP Amit Sathvik,Tushar Raheja,Venkatesh Bhuvaneshwar,1,1,0,run,0,,,5/0
+1489138,1,1,4,Tushar Raheja,VP Amit Sathvik,Venkatesh Bhuvaneshwar,1,1,0,run,0,,,6/0
+1489138,1,1,5,VP Amit Sathvik,Tushar Raheja,Venkatesh Bhuvaneshwar,4,4,0,four,0,,,10/0
+1489138,1,1,6,VP Amit Sathvik,Tushar Raheja,Venkatesh Bhuvaneshwar,4,4,0,four,0,,,14/0
+1489138,1,2,1,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,1,1,0,run,0,,,15/0
+1489138,1,2,2,VP Amit Sathvik,Tushar Raheja,Ravichandran Ashwin,1,1,0,run,0,,,16/0
+1489138,1,2,3,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,4,4,0,four,0,,,20/0
+1489138,1,2,4,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,0,0,0,no run,0,,,20/0
+1489138,1,2,5,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,1,1,0,run,0,,,21/0
+1489138,1,2,6,VP Amit Sathvik,Tushar Raheja,Ravichandran Ashwin,1,1,0,run,0,,,22/0
+1489138,1,3,1,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,4,4,0,four,0,,,26/0
+1489138,1,3,2,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,0,0,0,no run,0,,,26/0
+1489138,1,3,3,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,1,1,0,run,0,,,27/0
+1489138,1,3,4,Tushar Raheja,VP Amit Sathvik,Varun Chakravarthy Vinod,1,1,0,run,0,,,28/0
+1489138,1,3,5,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,0,0,0,no run,0,,,28/0
+1489138,1,3,6,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,0,0,0,no run,0,,,28/0
+1489138,1,4,1,Tushar Raheja,VP Amit Sathvik,Ganeshan Periyaswamy,1,1,0,run,0,,,29/0
+1489138,1,4,2,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,0,0,0,no run,0,,,29/0
+1489138,1,4,3,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,2,2,0,run,0,,,31/0
+1489138,1,4,4,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,1,1,0,run,0,,,32/0
+1489138,1,4,5,Tushar Raheja,VP Amit Sathvik,Ganeshan Periyaswamy,0,0,0,no run,0,,,32/0
+1489138,1,4,6,Tushar Raheja,VP Amit Sathvik,Ganeshan Periyaswamy,2,2,0,run,0,,,34/0
+1489138,1,5,1,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,2,2,0,run,0,,,36/0
+1489138,1,5,2,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,4,4,0,four,0,,,40/0
+1489138,1,5,3,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,0,0,0,no run,0,,,40/0
+1489138,1,5,4,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,4,4,0,four,0,,,44/0
+1489138,1,5,5,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,1,1,0,run,0,,,45/0
+1489138,1,5,6,Tushar Raheja,VP Amit Sathvik,Varun Chakravarthy Vinod,6,6,0,six,0,,,51/0
+1489138,1,6,1,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,6,6,0,six,0,,,57/0
+1489138,1,6,2,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,0,0,0,no run,0,,,57/0
+1489138,1,6,3,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,6,6,0,six,0,,,63/0
+1489138,1,6,4,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,1,1,0,run,0,,,64/0
+1489138,1,6,5,Tushar Raheja,VP Amit Sathvik,Ganeshan Periyaswamy,1,1,0,run,0,,,65/0
+1489138,1,6,6,VP Amit Sathvik,Tushar Raheja,Ganeshan Periyaswamy,4,4,0,four,0,,,69/0
+1489138,1,7,1,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,0,0,0,no run,0,,,69/0
+1489138,1,7,2,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,4,4,0,four,0,,,73/0
+1489138,1,7,3,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,1,1,0,run,0,,,74/0
+1489138,1,7,4,VP Amit Sathvik,Tushar Raheja,Ravichandran Ashwin,6,6,0,six,0,,,80/0
+1489138,1,7,5,VP Amit Sathvik,Tushar Raheja,Ravichandran Ashwin,1,1,0,run,0,,,81/0
+1489138,1,7,6,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,1,1,0,run,0,,,82/0
+1489138,1,8,1,Tushar Raheja,VP Amit Sathvik,Ravichandran Sasidharan,1,1,0,run,0,,,83/0
+1489138,1,8,2,VP Amit Sathvik,Tushar Raheja,Ravichandran Sasidharan,1,1,0,run,0,,,84/0
+1489138,1,8,3,Tushar Raheja,VP Amit Sathvik,Ravichandran Sasidharan,4,4,0,four,0,,,88/0
+1489138,1,8,4,Tushar Raheja,VP Amit Sathvik,Ravichandran Sasidharan,1,0,1,wide,0,,,89/0
+1489138,1,8,5,Tushar Raheja,VP Amit Sathvik,Ravichandran Sasidharan,0,0,0,no run,0,,,89/0
+1489138,1,8,6,Tushar Raheja,VP Amit Sathvik,Ravichandran Sasidharan,6,6,0,six,0,,,95/0
+1489138,1,8,7,Tushar Raheja,VP Amit Sathvik,Ravichandran Sasidharan,4,4,0,four,0,,,99/0
+1489138,1,9,1,VP Amit Sathvik,Tushar Raheja,Ravichandran Ashwin,1,1,0,run,0,,,100/0
+1489138,1,9,2,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,0,0,0,no run,0,,,100/0
+1489138,1,9,3,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,2,2,0,run,0,,,102/0
+1489138,1,9,4,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,0,0,0,no run,0,,,102/0
+1489138,1,9,5,Tushar Raheja,VP Amit Sathvik,Ravichandran Ashwin,1,1,0,run,0,,,103/0
+1489138,1,9,6,VP Amit Sathvik,Tushar Raheja,Ravichandran Ashwin,0,0,0,no run,0,,,103/0
+1489138,1,10,1,Tushar Raheja,VP Amit Sathvik,Varun Chakravarthy Vinod,0,0,0,no run,0,,,103/0
+1489138,1,10,2,Tushar Raheja,VP Amit Sathvik,Varun Chakravarthy Vinod,1,1,0,run,0,,,104/0
+1489138,1,10,3,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,1,1,0,run,0,,,105/0
+1489138,1,10,4,Tushar Raheja,VP Amit Sathvik,Varun Chakravarthy Vinod,1,1,0,run,0,,,106/0
+1489138,1,10,5,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,4,4,0,four,0,,,110/0
+1489138,1,10,6,VP Amit Sathvik,Tushar Raheja,Varun Chakravarthy Vinod,0,0,0,no run,0,,,110/0
+1489138,1,11,1,Tushar Raheja,VP Amit Sathvik,Venkatesh Bhuvaneshwar,1,0,1,no ball,0,,,111/0
+1489138,1,11,2,Tushar Raheja,VP Amit Sathvik,Venkatesh Bhuvaneshwar,1,0,1,no ball,0,,,112/0
+1489138,1,11,3,Tushar Raheja,VP Amit Sathvik,Venkatesh Bhuvaneshwar,4,4,0,four,0,,,116/0
+1489138,1,11,4,Tushar Raheja,VP Amit Sathvik,Venkatesh Bhuvaneshwar,4,4,0,four,0,,,120/0
+1489138,1,11,5,Tushar Raheja,VP Amit Sathvik,Venkatesh Bhuvaneshwar,1,1,0,run,0,,,121/0
+1489138,1,11,6,VP Amit Sathvik,Tushar Raheja,Venkatesh Bhuvaneshwar,0,0,0,out,1,caught,VP Amit Sathvik,121/1
+1489138,1,11,7,Ravisrinivasan Sai Kishore,Tushar Raheja,Venkatesh Bhuvaneshwar,1,1,0,run,0,,,122/1
+1489138,1,11,8,Tushar Raheja,Ravisrinivasan Sai Kishore,Venkatesh Bhuvaneshwar,1,1,0,run,0,,,123/1
+1489138,1,12,1,Tushar Raheja,Ravisrinivasan Sai Kishore,M Karthik Saran,2,2,0,run,0,,,125/1
+1489138,1,12,2,Tushar Raheja,Ravisrinivasan Sai Kishore,M Karthik Saran,1,1,0,run,0,,,126/1
+1489138,1,12,3,Ravisrinivasan Sai Kishore,Tushar Raheja,M Karthik Saran,0,0,0,no run,0,,,126/1
+1489138,1,12,4,Ravisrinivasan Sai Kishore,Tushar Raheja,M Karthik Saran,0,0,0,no run,0,,,126/1
+1489138,1,12,5,Ravisrinivasan Sai Kishore,Tushar Raheja,M Karthik Saran,2,0,2,wide,0,,,128/1
+1489138,1,12,6,Tushar Raheja,Ravisrinivasan Sai Kishore,M Karthik Saran,1,1,0,run,0,,,129/1
+1489138,1,12,7,Ravisrinivasan Sai Kishore,Tushar Raheja,M Karthik Saran,0,0,0,out,1,bowled,Ravisrinivasan Sai Kishore,129/2
+1489138,1,13,1,Tushar Raheja,S Mohamed Ali,Ravichandran Sasidharan,1,1,0,run,0,,,130/2
+1489138,1,13,2,S Mohamed Ali,Tushar Raheja,Ravichandran Sasidharan,1,1,0,run,0,,,131/2
+1489138,1,13,3,Tushar Raheja,S Mohamed Ali,Ravichandran Sasidharan,1,1,0,run,0,,,132/2
+1489138,1,13,4,S Mohamed Ali,Tushar Raheja,Ravichandran Sasidharan,2,2,0,run,0,,,134/2
+1489138,1,13,5,S Mohamed Ali,Tushar Raheja,Ravichandran Sasidharan,1,1,0,run,0,,,135/2
+1489138,1,13,6,Tushar Raheja,S Mohamed Ali,Ravichandran Sasidharan,6,6,0,six,0,,,141/2
+1489138,1,14,1,S Mohamed Ali,Tushar Raheja,M Karthik Saran,2,2,0,run,0,,,143/2
+1489138,1,14,2,S Mohamed Ali,Tushar Raheja,M Karthik Saran,2,2,0,run,0,,,145/2
+1489138,1,14,3,S Mohamed Ali,Tushar Raheja,M Karthik Saran,2,2,0,run,0,,,147/2
+1489138,1,14,4,S Mohamed Ali,Tushar Raheja,M Karthik Saran,1,1,0,run,0,,,148/2
+1489138,1,14,5,Tushar Raheja,S Mohamed Ali,M Karthik Saran,1,1,0,run,0,,,149/2
+1489138,1,14,6,S Mohamed Ali,Tushar Raheja,M Karthik Saran,0,0,0,no run,0,,,149/2
+1489138,1,15,1,Tushar Raheja,S Mohamed Ali,Ravichandran Ashwin,0,0,0,no run,0,,,149/2
+1489138,1,15,2,Tushar Raheja,S Mohamed Ali,Ravichandran Ashwin,1,1,0,run,0,,,150/2
+1489138,1,15,3,S Mohamed Ali,Tushar Raheja,Ravichandran Ashwin,1,1,0,run,0,,,151/2
+1489138,1,15,4,Tushar Raheja,S Mohamed Ali,Ravichandran Ashwin,0,0,0,no run,0,,,151/2
+1489138,1,15,5,Tushar Raheja,S Mohamed Ali,Ravichandran Ashwin,6,6,0,six,0,,,157/2
+1489138,1,15,6,Tushar Raheja,S Mohamed Ali,Ravichandran Ashwin,3,3,0,run,0,,,160/2
+1489138,1,16,1,Tushar Raheja,S Mohamed Ali,M Karthik Saran,0,0,0,out,1,caught,Tushar Raheja,160/3
+1489138,1,16,2,Uthirasamy Sasidev,S Mohamed Ali,M Karthik Saran,1,1,0,run,0,,,161/3
+1489138,1,16,3,S Mohamed Ali,Uthirasamy Sasidev,M Karthik Saran,2,2,0,run,0,,,163/3
+1489138,1,16,4,S Mohamed Ali,Uthirasamy Sasidev,M Karthik Saran,1,0,1,wide,0,,,164/3
+1489138,1,16,5,S Mohamed Ali,Uthirasamy Sasidev,M Karthik Saran,4,4,0,four,0,,,168/3
+1489138,1,16,6,S Mohamed Ali,Uthirasamy Sasidev,M Karthik Saran,4,4,0,four,0,,,172/3
+1489138,1,16,7,S Mohamed Ali,Uthirasamy Sasidev,M Karthik Saran,1,1,0,run,0,,,173/3
+1489138,1,17,1,S Mohamed Ali,Uthirasamy Sasidev,Varun Chakravarthy Vinod,0,0,0,out,1,caught,S Mohamed Ali,173/4
+1489138,1,17,2,V Anovankar,Uthirasamy Sasidev,Varun Chakravarthy Vinod,6,6,0,six,0,,,179/4
+1489138,1,17,3,V Anovankar,Uthirasamy Sasidev,Varun Chakravarthy Vinod,1,1,0,run,0,,,180/4
+1489138,1,17,4,Uthirasamy Sasidev,V Anovankar,Varun Chakravarthy Vinod,1,1,0,run,0,,,181/4
+1489138,1,17,5,V Anovankar,Uthirasamy Sasidev,Varun Chakravarthy Vinod,0,0,0,no run,0,,,181/4
+1489138,1,17,6,V Anovankar,Uthirasamy Sasidev,Varun Chakravarthy Vinod,1,1,0,run,0,,,182/4
+1489138,1,18,1,V Anovankar,Uthirasamy Sasidev,Ganeshan Periyaswamy,2,2,0,run,0,,,184/4
+1489138,1,18,2,V Anovankar,Uthirasamy Sasidev,Ganeshan Periyaswamy,1,0,1,bye,0,,,185/4
+1489138,1,18,3,Uthirasamy Sasidev,V Anovankar,Ganeshan Periyaswamy,1,1,0,run,0,,,186/4
+1489138,1,18,4,V Anovankar,Uthirasamy Sasidev,Ganeshan Periyaswamy,1,1,0,run,0,,,187/4
+1489138,1,18,5,Uthirasamy Sasidev,V Anovankar,Ganeshan Periyaswamy,1,1,0,run,0,,,188/4
+1489138,1,18,6,V Anovankar,Uthirasamy Sasidev,Ganeshan Periyaswamy,6,6,0,six,0,,,194/4
+1489138,1,19,1,Uthirasamy Sasidev,V Anovankar,M Karthik Saran,6,6,0,six,0,,,200/4
+1489138,1,19,2,Uthirasamy Sasidev,V Anovankar,M Karthik Saran,4,4,0,four,0,,,204/4
+1489138,1,19,3,Uthirasamy Sasidev,V Anovankar,M Karthik Saran,1,1,0,run,0,,,205/4
+1489138,1,19,4,V Anovankar,Uthirasamy Sasidev,M Karthik Saran,1,1,0,run,0,,,206/4
+1489138,1,19,5,Uthirasamy Sasidev,V Anovankar,M Karthik Saran,1,1,0,run,0,,,207/4
+1489138,1,19,6,V Anovankar,Uthirasamy Sasidev,M Karthik Saran,4,4,0,four,0,,,211/4
+1489138,1,20,1,Uthirasamy Sasidev,V Anovankar,Ganeshan Periyaswamy,4,4,0,four,0,,,215/4
+1489138,1,20,2,Uthirasamy Sasidev,V Anovankar,Ganeshan Periyaswamy,0,0,0,no run,0,,,215/4
+1489138,1,20,3,Uthirasamy Sasidev,V Anovankar,Ganeshan Periyaswamy,0,0,0,out,1,caught,Uthirasamy Sasidev,215/5
+1489138,1,20,4,M Mathivannan,V Anovankar,Ganeshan Periyaswamy,1,0,1,wide,0,,,216/5
+1489138,1,20,5,M Mathivannan,V Anovankar,Ganeshan Periyaswamy,1,0,1,leg bye,0,,,217/5
+1489138,1,20,6,V Anovankar,M Mathivannan,Ganeshan Periyaswamy,2,2,0,run,0,,,219/5
+1489138,1,20,7,V Anovankar,M Mathivannan,Ganeshan Periyaswamy,1,1,0,run,0,,,220/5
+1489138,2,1,1,Ravichandran Ashwin,Atul Vitkar,Thangarasu Natarajan,0,0,0,no run,0,,,0/0
+1489138,2,1,2,Ravichandran Ashwin,Atul Vitkar,Thangarasu Natarajan,0,0,0,no run,0,,,0/0
+1489138,2,1,3,Ravichandran Ashwin,Atul Vitkar,Thangarasu Natarajan,1,1,0,run,0,,,1/0
+1489138,2,1,4,Atul Vitkar,Ravichandran Ashwin,Thangarasu Natarajan,4,4,0,four,0,,,5/0
+1489138,2,1,5,Atul Vitkar,Ravichandran Ashwin,Thangarasu Natarajan,0,0,0,no run,0,,,5/0
+1489138,2,1,6,Atul Vitkar,Ravichandran Ashwin,Thangarasu Natarajan,4,4,0,four,0,,,9/0
+1489138,2,2,1,Ravichandran Ashwin,Atul Vitkar,Ragupathy Silambarasan,0,0,0,out,1,bowled,Ravichandran Ashwin,9/1
+1489138,2,2,2,Baba Indrajith,Atul Vitkar,Ragupathy Silambarasan,4,4,0,four,0,,,13/1
+1489138,2,2,3,Baba Indrajith,Atul Vitkar,Ragupathy Silambarasan,0,0,0,no run,0,,,13/1
+1489138,2,2,4,Baba Indrajith,Atul Vitkar,Ragupathy Silambarasan,4,4,0,four,0,,,17/1
+1489138,2,2,5,Baba Indrajith,Atul Vitkar,Ragupathy Silambarasan,1,1,0,run,0,,,18/1
+1489138,2,2,6,Atul Vitkar,Baba Indrajith,Ragupathy Silambarasan,0,0,0,no run,0,,,18/1
+1489138,2,3,1,Baba Indrajith,Atul Vitkar,Thangarasu Natarajan,0,0,0,out,1,bowled,Baba Indrajith,18/2
+1489138,2,3,2,R Vimal Khumar,Atul Vitkar,Thangarasu Natarajan,0,0,0,no run,0,,,18/2
+1489138,2,3,3,R Vimal Khumar,Atul Vitkar,Thangarasu Natarajan,6,6,0,six,0,,,24/2
+1489138,2,3,4,R Vimal Khumar,Atul Vitkar,Thangarasu Natarajan,0,0,0,no run,0,,,24/2
+1489138,2,3,5,R Vimal Khumar,Atul Vitkar,Thangarasu Natarajan,0,0,0,no run,0,,,24/2
+1489138,2,3,6,R Vimal Khumar,Atul Vitkar,Thangarasu Natarajan,4,4,0,four,0,,,28/2
+1489138,2,4,1,Atul Vitkar,R Vimal Khumar,Ragupathy Silambarasan,1,1,0,run,0,,,29/2
+1489138,2,4,2,R Vimal Khumar,Atul Vitkar,Ragupathy Silambarasan,0,0,0,no run,0,,,29/2
+1489138,2,4,3,R Vimal Khumar,Atul Vitkar,Ragupathy Silambarasan,0,0,0,out,1,caught,R Vimal Khumar,29/3
+1489138,2,4,4,Dinesh H,Atul Vitkar,Ragupathy Silambarasan,1,1,0,run,0,,,30/3
+1489138,2,4,5,Atul Vitkar,Dinesh H,Ragupathy Silambarasan,1,1,0,run,0,,,31/3
+1489138,2,4,6,Dinesh H,Atul Vitkar,Ragupathy Silambarasan,0,0,0,no run,0,,,31/3
+1489138,2,5,1,Atul Vitkar,Dinesh H,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,32/3
+1489138,2,5,2,Dinesh H,Atul Vitkar,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,33/3
+1489138,2,5,3,Atul Vitkar,Dinesh H,Ravisrinivasan Sai Kishore,4,4,0,four,0,,,37/3
+1489138,2,5,4,Atul Vitkar,Dinesh H,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,38/3
+1489138,2,5,5,Dinesh H,Atul Vitkar,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,39/3
+1489138,2,5,6,Atul Vitkar,Dinesh H,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,39/3
+1489138,2,6,1,Dinesh H,Atul Vitkar,S Mohan Prasath,0,0,0,out,1,caught,Dinesh H,39/4
+1489138,2,6,2,Hunny Saini,Atul Vitkar,S Mohan Prasath,4,4,0,four,0,,,43/4
+1489138,2,6,3,Hunny Saini,Atul Vitkar,S Mohan Prasath,0,0,0,no run,0,,,43/4
+1489138,2,6,4,Hunny Saini,Atul Vitkar,S Mohan Prasath,6,6,0,six,0,,,49/4
+1489138,2,6,5,Hunny Saini,Atul Vitkar,S Mohan Prasath,0,0,0,no run,0,,,49/4
+1489138,2,6,6,Hunny Saini,Atul Vitkar,S Mohan Prasath,6,6,0,six,0,,,55/4
+1489138,2,7,1,Atul Vitkar,Hunny Saini,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,56/4
+1489138,2,7,2,Hunny Saini,Atul Vitkar,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,57/4
+1489138,2,7,3,Atul Vitkar,Hunny Saini,Ravisrinivasan Sai Kishore,0,0,0,out,1,run out,Hunny Saini,57/5
+1489138,2,7,4,M Karthik Saran,Atul Vitkar,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,57/5
+1489138,2,7,5,M Karthik Saran,Atul Vitkar,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,57/5
+1489138,2,7,6,M Karthik Saran,Atul Vitkar,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,58/5
+1489138,2,8,1,M Karthik Saran,Atul Vitkar,Esakkimuthu A,1,1,0,run,0,,,59/5
+1489138,2,8,2,Atul Vitkar,M Karthik Saran,Esakkimuthu A,4,4,0,four,0,,,63/5
+1489138,2,8,3,Atul Vitkar,M Karthik Saran,Esakkimuthu A,1,1,0,run,0,,,64/5
+1489138,2,8,4,M Karthik Saran,Atul Vitkar,Esakkimuthu A,1,1,0,run,0,,,65/5
+1489138,2,8,5,Atul Vitkar,M Karthik Saran,Esakkimuthu A,1,0,1,leg bye,0,,,66/5
+1489138,2,8,6,M Karthik Saran,Atul Vitkar,Esakkimuthu A,4,4,0,four,0,,,70/5
+1489138,2,9,1,Atul Vitkar,M Karthik Saran,S Mohan Prasath,1,0,1,bye,0,,,71/5
+1489138,2,9,2,M Karthik Saran,Atul Vitkar,S Mohan Prasath,0,0,0,out,1,bowled,M Karthik Saran,71/6
+1489138,2,9,3,Varun Chakravarthy Vinod,Atul Vitkar,S Mohan Prasath,0,0,0,no run,0,,,71/6
+1489138,2,9,4,Varun Chakravarthy Vinod,Atul Vitkar,S Mohan Prasath,0,0,0,no run,0,,,71/6
+1489138,2,9,5,Varun Chakravarthy Vinod,Atul Vitkar,S Mohan Prasath,1,1,0,run,0,,,72/6
+1489138,2,9,6,Atul Vitkar,Varun Chakravarthy Vinod,S Mohan Prasath,1,1,0,run,0,,,73/6
+1489138,2,10,1,Atul Vitkar,Varun Chakravarthy Vinod,Esakkimuthu A,0,0,0,no run,0,,,73/6
+1489138,2,10,2,Atul Vitkar,Varun Chakravarthy Vinod,Esakkimuthu A,1,1,0,run,0,,,74/6
+1489138,2,10,3,Varun Chakravarthy Vinod,Atul Vitkar,Esakkimuthu A,6,6,0,six,0,,,80/6
+1489138,2,10,4,Varun Chakravarthy Vinod,Atul Vitkar,Esakkimuthu A,0,0,0,out,1,caught,Varun Chakravarthy Vinod,80/7
+1489138,2,10,5,Venkatesh Bhuvaneshwar,Atul Vitkar,Esakkimuthu A,1,0,1,wide,0,,,81/7
+1489138,2,10,6,Venkatesh Bhuvaneshwar,Atul Vitkar,Esakkimuthu A,1,1,0,run,0,,,82/7
+1489138,2,10,7,Atul Vitkar,Venkatesh Bhuvaneshwar,Esakkimuthu A,0,0,0,out,1,caught,Atul Vitkar,82/8
+1489138,2,11,1,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,82/8
+1489138,2,11,2,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,82/8
+1489138,2,11,3,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,82/8
+1489138,2,11,4,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,83/8
+1489138,2,11,5,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,84/8
+1489138,2,11,6,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,2,2,0,run,0,,,86/8
+1489138,2,12,1,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,Esakkimuthu A,1,1,0,run,0,,,87/8
+1489138,2,12,2,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,87/8
+1489138,2,12,3,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,87/8
+1489138,2,12,4,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,87/8
+1489138,2,12,5,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,87/8
+1489138,2,12,6,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,1,1,0,run,0,,,88/8
+1489138,2,13,1,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,2,2,0,run,0,,,90/8
+1489138,2,13,2,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,91/8
+1489138,2,13,3,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,91/8
+1489138,2,13,4,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,92/8
+1489138,2,13,5,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,0,0,0,no run,0,,,92/8
+1489138,2,13,6,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Ravisrinivasan Sai Kishore,1,1,0,run,0,,,93/8
+1489138,2,14,1,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,5,0,5,bye,0,,,98/8
+1489138,2,14,2,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,98/8
+1489138,2,14,3,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,2,2,0,run,0,,,100/8
+1489138,2,14,4,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,100/8
+1489138,2,14,5,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,0,0,0,no run,0,,,100/8
+1489138,2,14,6,Venkatesh Bhuvaneshwar,Ravichandran Sasidharan,Esakkimuthu A,1,1,0,run,0,,,101/8
+1489138,2,14,7,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,Esakkimuthu A,1,1,0,run,0,,,102/8
+1489138,2,15,1,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,M Mathivannan,0,0,0,no run,0,,,102/8
+1489138,2,15,2,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,M Mathivannan,0,0,0,no run,0,,,102/8
+1489138,2,15,3,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,M Mathivannan,0,0,0,no run,0,,,102/8
+1489138,2,15,4,Ravichandran Sasidharan,Venkatesh Bhuvaneshwar,M Mathivannan,0,0,0,out,2,run out,Venkatesh Bhuvaneshwar,102/10

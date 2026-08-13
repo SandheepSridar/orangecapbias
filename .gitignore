@@ -1,7 +1,6 @@
 # data
 data/raw/
 data/processed/
-TNPL
 
 # claude code (local-only files)
 .claude/settings.local.json
