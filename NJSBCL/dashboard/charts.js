@@ -264,6 +264,37 @@ function renderLeaderboard(containerId, players, valueKey, labelFn, colorVar) {
   });
 }
 
+/* ── Win dependency ────────────────────────────────────────────────── */
+function renderWinDependency() {
+  const s = currentSeriesData();
+  const box = $("win-dependency-list");
+  box.innerHTML = "";
+  const rows = s.gladiatorsCharts.winDependency;
+  if (!rows || !rows.length) {
+    box.appendChild(el("div", "empty-note", "Not enough matches yet to split anyone's games into a reliable good/bad comparison."));
+    return;
+  }
+  rows.forEach((r, i) => {
+    const card = el("div", "target-card positive");
+    const rank = el("div", "target-rank", String(i + 1));
+    const body = el("div", "target-body");
+    const top = el("div", "target-top");
+    const roleLabel = r.role === "bat" ? "Batting" : "Bowling";
+    top.append(
+      el("span", "target-name", r.player),
+      el("span", "target-meta", `${roleLabel} · ${r.matches} matches · ${r.metric}`),
+    );
+    const stats = el("div", "target-stats");
+    stats.appendChild(el("span", "target-stat", `swing <b>+${r.swing}pp</b>`));
+    const note = el("div", "mt-note",
+      `We win <b class="gold">${r.goodWinPct}%</b> of matches in his good half, but only
+       <b>${r.badWinPct}%</b> in his bad half.`);
+    body.append(top, stats, note);
+    card.append(rank, body);
+    box.appendChild(card);
+  });
+}
+
 /* ── Other season metrics ─────────────────────────────────────────── */
 function renderOtherMetrics() {
   const s = currentSeriesData();
@@ -305,6 +336,7 @@ function renderAll() {
   const s = currentSeriesData();
   renderAvailabilityChips();
   renderBestXI();
+  renderWinDependency();
   renderEloChart();
   renderLeaderboard("bat-leaderboard", s.gladiatorsCharts.battingLeaderboard, "runs",
     (p) => `${p.runs} (avg ${p.avg}, SR ${p.sr})`, "var(--gold)");

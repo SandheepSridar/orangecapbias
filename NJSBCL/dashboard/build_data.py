@@ -320,6 +320,101 @@ def recent_form(bat, team, player, n=5, min_innings=3):
     }
 
 
+def key_batsman_win_impact(bat, results, team, player, min_each_bucket=3):
+    """How much `team`'s win rate swings with `player`'s batting: split his innings into
+    at-or-above vs below his own season median score, and compare the team's win% in each
+    bucket. Answers "how much does it help to get him out early?" — low-score innings are
+    the closest proxy available for an early dismissal (no per-match dismissal-over data
+    exists for opponent teams, only runs scored, same limitation as elsewhere in this file).
+    Requires at least `min_each_bucket` matches on both sides of the split, else returns None
+    (too small a sample in a ~14-match season to mean anything)."""
+    sub = bat[(bat["team"] == team) & (bat["playerClean"] == player)][["matchId", "R"]].copy()
+    res_map = results[(results["team"] == team) & (results["result"] != "Tie")].set_index("matchId")["result"]
+    sub = sub[sub["matchId"].isin(res_map.index)]
+    if len(sub) < min_each_bucket * 2:
+        return None
+    median = sub["R"].median()
+    sub["result"] = sub["matchId"].map(res_map)
+    high = sub[sub["R"] >= median]
+    low = sub[sub["R"] < median]
+    if len(high) < min_each_bucket or len(low) < min_each_bucket:
+        return None
+    high_win = round(100 * (high["result"] == "Win").mean())
+    low_win = round(100 * (low["result"] == "Win").mean())
+    return {
+        "threshold": int(median), "highN": len(high), "lowN": len(low),
+        "highWinPct": high_win, "lowWinPct": low_win, "swing": high_win - low_win,
+    }
+
+
+def win_dependency(bat, bowl, results, team, min_matches=6, min_each_bucket=3,
+                    min_bat_median=10, min_avg_overs=2.0, top_n=6):
+    """Ranks every player who's batted OR bowled for `team` by how much the team's win rate
+    swings between their good and bad games — a role-agnostic "who do we depend on to win"
+    leaderboard, not just a batting-runs one. For batters: at-or-above vs below their own
+    season median runs that innings. For bowlers: at-or-below (better) vs above (worse) their
+    own season median economy that spell. Both sides need `min_each_bucket` matches, and a
+    player needs `min_matches` total appearances to be considered at all — this is a small
+    (~14-match) season, so this stays a "notable pattern," not a rigorous causal claim; framed
+    that way in the UI copy, not as this file's problem to solve.
+
+    Two extra floors keep this from surfacing noise: `min_bat_median` drops tail-order
+    batters whose "good" bucket is really just "got to bat at all" (a median of 3-4 runs
+    splits mostly on whether he faced more than a couple of balls, not on a real knock), and
+    `min_avg_overs` drops one-over part-timers whose economy swings wildly on a small sample."""
+    res_map = results[(results["team"] == team) & (results["result"] != "Tie")].set_index("matchId")["result"]
+
+    out = []
+    bat_sub = bat[bat["team"] == team]
+    for player, g in bat_sub.groupby("playerClean"):
+        g = g[g["matchId"].isin(res_map.index)]
+        if len(g) < min_matches:
+            continue
+        median = g["R"].median()
+        if median < min_bat_median:
+            continue
+        result = g["matchId"].map(res_map)
+        high = result[g["R"] >= median]
+        low = result[g["R"] < median]
+        if len(high) < min_each_bucket or len(low) < min_each_bucket:
+            continue
+        good_win = 100 * (high == "Win").mean()
+        bad_win = 100 * (low == "Win").mean()
+        out.append({
+            "player": player, "role": "bat", "matches": int(len(g)),
+            "metric": f"runs (median {int(median)})",
+            "goodWinPct": round(good_win), "badWinPct": round(bad_win),
+            "swing": round(good_win - bad_win),
+        })
+
+    bowl_sub = bowl[bowl["team"] == team]
+    for player, g in bowl_sub.groupby("bowlerClean"):
+        g = g[g["matchId"].isin(res_map.index)]
+        if len(g) < min_matches:
+            continue
+        avg_overs = g["O"].apply(overs_to_balls).mean() / 6
+        if avg_overs < min_avg_overs:
+            continue
+        median = g["Econ"].median()
+        result = g["matchId"].map(res_map)
+        good = result[g["Econ"] <= median]   # lower economy = better bowling
+        bad = result[g["Econ"] > median]
+        if len(good) < min_each_bucket or len(bad) < min_each_bucket:
+            continue
+        good_win = 100 * (good == "Win").mean()
+        bad_win = 100 * (bad == "Win").mean()
+        out.append({
+            "player": player, "role": "bowl", "matches": int(len(g)),
+            "metric": f"economy (median {median:.1f})",
+            "goodWinPct": round(good_win), "badWinPct": round(bad_win),
+            "swing": round(good_win - bad_win),
+        })
+
+    out = [r for r in out if r["swing"] > 0]  # a 0/negative swing isn't "who we depend on"
+    out.sort(key=lambda r: r["swing"], reverse=True)
+    return out[:top_n]
+
+
 def team_recent_form(results, team, n=5):
     """Last-n match results for `team` (any opponent, not just Gladiators), oldest to
     newest — matchId order as the chronological proxy used everywhere else in this file.
@@ -939,6 +1034,10 @@ def build():
                 "homeAway": home_away_record(results, team),
                 "battingCollapses": detect_collapses(bat, results, team),
                 "recentResults": team_recent_form(results, team),
+                "keyBatsmanWinImpact": (
+                    key_batsman_win_impact(bat, results, team, top_bat[0]["player"])
+                    if top_bat else None
+                ),
                 "headToHead": head_to_head(results, gladiators, team) if team != gladiators else None,
                 "standing": standings.get(team),
                 "elo": team_elo,
@@ -961,6 +1060,7 @@ def build():
             "battingLeaderboard": team_batting_agg(bat, gladiators).to_dict("records"),
             "bowlingLeaderboard": team_bowling_agg(bowl, gladiators).to_dict("records"),
             "leagueAvgCollapsePct": league_avg_collapse_pct,
+            "winDependency": win_dependency(bat, bowl, results, gladiators),
         }
         print(f"  best XI: {len(best_xi['players'])} players from a qualifying squad of {best_xi['squadSize']}")
 

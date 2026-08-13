@@ -560,6 +560,20 @@ function renderMetrics() {
      <div class="mt-note">share of their top-3 batsmen's runs scored by their #1 — the higher this is,
      the more a match plan built around containing/removing him early pays off.</div>`));
 
+  const wi = them.keyBatsmanWinImpact;
+  const wiPlayer = them.topBatsmen[0]?.player ?? "their top scorer";
+  grid.appendChild(el("div", "metric-tile",
+    wi
+      ? `<h3>What if we get ${wiPlayer} out early?</h3>
+         <div style="font-size:1.6rem;font-weight:800;font-family:'Sora',sans-serif;">${wi.swing >= 0 ? "+" : ""}${wi.swing}pp</div>
+         <div class="mt-note">${state.opponent} win <b>${wi.highWinPct}%</b> of matches (${wi.highN}) when he scores
+         ${wi.threshold}+, but just <b>${wi.lowWinPct}%</b> (${wi.lowN}) when he's held under ${wi.threshold}.
+         Low-score innings are the closest proxy we have for an early dismissal — no ball-by-ball timing
+         for opponent teams, only runs scored.</div>`
+      : `<h3>What if we get ${wiPlayer} out early?</h3>
+         <div style="font-size:1.6rem;font-weight:800;font-family:'Sora',sans-serif;">—</div>
+         <div class="mt-note">not enough matches yet to split his innings into a reliable high/low-score comparison.</div>`));
+
   grid.appendChild(el("div", "metric-tile",
     `<h3>${state.opponent} boundary dependence</h3>
      <div style="font-size:1.6rem;font-weight:800;font-family:'Sora',sans-serif;">${them.boundaryDependencyPct}%</div>
