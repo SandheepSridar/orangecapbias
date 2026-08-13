@@ -139,6 +139,15 @@ function renderFixtures() {
       el("div", "fixture-venue", m.venue),
     );
     const opp = s.teams[m.opponent];
+    if (opp && opp.recentResults && opp.recentResults.length) {
+      const form = el("div", "fixture-form");
+      opp.recentResults.forEach((r) => {
+        const dot = el("span", `form-dot ${r.result.toLowerCase()}`, r.result[0]);
+        bindTooltip(dot, `${r.result} vs ${r.opponent}`);
+        form.appendChild(dot);
+      });
+      c.appendChild(form);
+    }
     if (us && opp) {
       const pct = Math.round(eloWinPct(us.elo, opp.elo));
       const badge = el("div", `fixture-winprob ${pct >= 50 ? "favored" : "underdog"}`, `${pct}% win probability`);

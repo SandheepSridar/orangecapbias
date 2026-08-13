@@ -320,6 +320,20 @@ def recent_form(bat, team, player, n=5, min_innings=3):
     }
 
 
+def team_recent_form(results, team, n=5):
+    """Last-n match results for `team` (any opponent, not just Gladiators), oldest to
+    newest — matchId order as the chronological proxy used everywhere else in this file.
+    Powers the W/L/T form strip shown next to upcoming fixtures."""
+    sub = results[results["team"] == team].sort_values("matchId")
+    if sub.empty:
+        return []
+    last_n = sub.tail(n)
+    return [
+        {"matchId": int(r["matchId"]), "opponent": r["opponent"], "result": r["result"]}
+        for _, r in last_n.iterrows()
+    ]
+
+
 def detect_collapses(bat, results, team, min_wickets=3, max_runs=20, top_n_positions=7):
     """Finds the worst 'batting collapse' per innings for `team`: the longest run of
     min_wickets+ consecutive dismissals (in scorecard row order, which is batting/arrival
@@ -924,6 +938,7 @@ def build():
                 "bowlingStrengths": bowling_strengths(strength_pool, team),
                 "homeAway": home_away_record(results, team),
                 "battingCollapses": detect_collapses(bat, results, team),
+                "recentResults": team_recent_form(results, team),
                 "headToHead": head_to_head(results, gladiators, team) if team != gladiators else None,
                 "standing": standings.get(team),
                 "elo": team_elo,

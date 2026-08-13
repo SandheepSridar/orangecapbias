@@ -147,6 +147,15 @@ section h2 .q {
 }
 .fixture-winprob.favored { background: rgba(255,195,0,0.15); color: var(--gold); border: 1px solid rgba(255,195,0,0.4); }
 .fixture-winprob.underdog { background: rgba(58,134,255,0.15); color: var(--blue); border: 1px solid rgba(58,134,255,0.4); }
+.fixture-form { display: flex; gap: 0.3rem; margin-top: 0.55rem; }
+.form-dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  font-size: 0.7rem; font-weight: 700; cursor: default;
+}
+.form-dot.win { background: rgba(45,212,167,0.15); color: var(--win); border: 1px solid rgba(45,212,167,0.4); }
+.form-dot.loss { background: rgba(255,107,107,0.15); color: var(--loss); border: 1px solid rgba(255,107,107,0.4); }
+.form-dot.tie { background: rgba(147,155,173,0.15); color: var(--muted); border: 1px solid rgba(147,155,173,0.4); }
 .fixture-card.highlighted {
   border-color: rgba(255,195,0,0.4);
   background: linear-gradient(180deg, rgba(255,195,0,0.07), var(--panel) 65%);
