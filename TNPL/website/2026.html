@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOVI 2026 (provisional) — TNPL</title>
+<meta name="description" content="Provisional, in-progress MOVI leaderboard for TNPL 2026 — recalculated live as the season is played, separate from the finished 2016–2025 index.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand">🏏 MOVI</span>
+  <div class="navlinks">
+    <a href="index.html">← 2016–2025 index</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="reveal" style="padding-top: 6.5rem;">
+  <p class="hero-kicker" style="text-align:left;">TNPL · 2026 · PROVISIONAL</p>
+  <h2>Season in progress</h2>
+  <p>
+    🚧 This page tracks TNPL 2026 <strong>while it's still being played</strong> —
+    <span id="progress-note"></span> Numbers here are provisional and will shift
+    as more matches are added. This season is deliberately kept <strong>separate</strong>
+    from the main <a href="index.html">2016–2025 MOVI index</a>; it will be folded
+    in once 2026 concludes and the final awards are known.
+  </p>
+</section>
+
+<section id="controls" class="reveal">
+  <h2>Set the bar</h2>
+  <p class="muted">
+    Recomputed live in your browser, same methodology as the main index.
+  </p>
+  <div class="control-block">
+    <label>Minimum matches to qualify (so far)</label>
+    <div class="pills" id="pills-matches"></div>
+    <p class="hint">💡 Suggested: <strong>4</strong> — with only 15 matches played, most
+      teams have had 3–4 games so far.</p>
+  </div>
+  <div class="control-block">
+    <label>Lowest average batting position to include</label>
+    <div class="pills" id="pills-pos"></div>
+  </div>
+  <p class="threshold-note" id="threshold-note"></p>
+</section>
+
+<section id="explorer" class="reveal">
+  <h2>Provisional leaderboard</h2>
+  <div class="barchart" id="explorer-bars"></div>
+  <p class="caption">🥇 Gold = the current #1 middle-order batsman. Hover a bar for details.</p>
+  <h3 class="chart-title" id="breakdown-title"></h3>
+  <div class="divchart" id="breakdown"></div>
+  <p class="caption">How far above (orange) or below (grey) the field average this batsman ranks on each skill, so far.</p>
+  <p class="caption" id="leader-note" style="margin-top:1.4rem;"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>MOVI 2026 — provisional, in-progress · Data: ESPN Cricinfo TNPL ball-by-ball</p>
+</footer>
+
+<div class="tooltip" id="tooltip" hidden></div>
+
+<script src="data_2026.js"></script>
+<script src="app_2026.js"></script>
+</body>
+</html>
