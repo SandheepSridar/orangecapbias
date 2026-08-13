@@ -158,17 +158,24 @@ def form_string(recent_results):
     return " ".join(r["result"][0] for r in recent_results) if recent_results else "no data"
 
 
-def dismissal_line(breakdown, max_types=3):
-    """Comma-joined 'Type pct%' summary, capped at `max_types` — fpdf2's plain cell()
-    doesn't wrap, so an uncapped list can overflow into the next column for anyone
-    with 4+ dismissal types on record."""
+def dismissal_line(pdf, breakdown, max_width):
+    """Comma-joined 'Type pct%' summary, dynamically truncated (with a trailing
+    "(+N more)") to actually fit `max_width` mm at the table body font. A fixed
+    type-count cap isn't enough — fpdf2's plain cell() doesn't wrap, so even a
+    3-type line can still overflow into the next column depending on how long the
+    type names are (e.g. "Caught & Bowled")."""
     if not breakdown:
         return "no dismissal data"
-    shown = breakdown[:max_types]
-    line = ", ".join(f"{b['type']} {b['pct']}%" for b in shown)
-    if len(breakdown) > max_types:
-        line += f" (+{len(breakdown) - max_types} more)"
-    return line
+    pdf.set_font("Helvetica", "", 8.5)
+    n = len(breakdown)
+    for keep in range(n, 0, -1):
+        shown = breakdown[:keep]
+        line = ", ".join(f"{b['type']} {b['pct']}%" for b in shown)
+        if keep < n:
+            line += f" (+{n - keep} more)"
+        if pdf.get_string_width(clean(line)) <= max_width:
+            return line
+    return f"{breakdown[0]['type']} {breakdown[0]['pct']}%"  # last resort, always fits len-wise
 
 
 def main():
@@ -274,7 +281,7 @@ def main():
     for b in them["topBatsmen"]:
         trend = b.get("recentForm", {}).get("trend", "-") if b.get("recentForm") else "-"
         rows.append([b["player"], str(b["innings"]), str(b["runs"]), str(b["avg"]), str(b["sr"]),
-                     dismissal_line(b["dismissals"]["breakdown"]), trend])
+                     dismissal_line(pdf, b["dismissals"]["breakdown"], 62), trend])
     pdf.table(
         ["Player", "Inns", "Runs", "Avg", "SR", "Gets out", "Form"],
         rows, [34, 12, 16, 14, 14, 66, 16],
@@ -297,7 +304,8 @@ def main():
     rows = []
     for b in them["topBowlers"]:
         wt = b.get("wicketTypes", {}).get("breakdown", [])
-        rows.append([b["player"], str(b["wickets"]), str(b["overs"]), str(b["econ"]), dismissal_line(wt)])
+        rows.append([b["player"], str(b["wickets"]), str(b["overs"]), str(b["econ"]),
+                     dismissal_line(pdf, wt, 78)])
     pdf.table(
         ["Player", "Wkts", "Overs", "Econ", "Wicket types"],
         rows, [40, 16, 18, 16, 82],
