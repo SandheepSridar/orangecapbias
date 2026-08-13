@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Changelog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">What's changed</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link" href="charts.html">Gladiators charts →</a>
+  </span>
+</nav>
+
+<main>
+  <header class="page-header">
+    <h1>Changelog</h1>
+    <p>What's been added to the Scout dashboard, most recent first.</p>
+  </header>
+
+  <!-- last-recorded-commit: f370f0c47 -->
+  <section id="sec-changelog">
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Thu, Aug 13 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Opponent recent form on fixture cards</b> — W/L/T dots showing each upcoming opponent's last 5 results league-wide (not just head-to-head vs us), with a hover tooltip for each result.</li>
+      </ul>
+    </div>
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Wed, Aug 12 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Chase-pacing calculator</b> — enter a chase target on the matchup page and it's split into four 4-over blocks, weighted by the opponent's bowling strength.</li>
+        <li><b>Squad roster</b> added to the charts page, plus fixes to the playing-XI selection logic.</li>
+        <li><b>Best playing XI picker</b> — interactive: toggle a player's availability and the suggested XI recalculates live in the browser.</li>
+        <li><b>New "Gladiators charts" page</b> — Elo rating history, full squad batting/bowling leaderboards, other season metrics.</li>
+        <li><b>Batting collapse detection</b> — flags how often an innings falls apart (3+ of the top 7 batsmen out for a combined ≤20 runs).</li>
+        <li><b>Upcoming fixtures expanded</b> — added a win-probability badge per fixture and a "show all upcoming matches" toggle.</li>
+        <li><b>Home/away splits</b> — win% at home vs away per team.</li>
+      </ul>
+    </div>
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Tue, Aug 11 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Per-batsman recent form</b> — hot/cold/steady trend badges based on last-5-innings form vs season average.</li>
+        <li><b>Weak-bowler feature fixes.</b></li>
+        <li><b>Bowler-matchup labels</b> — "Our top bowlers" vs "Bowlers to target for runs" column headers.</li>
+        <li><b>Mobile-friendly layout fixes.</b></li>
+        <li><b>Dashboard built from scratch</b> — scraped Division 1 + Weekenders Cup data (scorecards, points tables, schedules) and built the initial site.</li>
+      </ul>
+    </div>
+
+  </section>
+</main>
+
+</body>
+</html>
