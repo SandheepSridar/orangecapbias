@@ -73,6 +73,10 @@
       specific, same for both series. It's a small season and these are simple stat
       comparisons, not a tactical review: read as a data-backed conversation starter, not a
       verdict.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-insights">AI insights</a>
+    </div>
     <div class="ai-insights-list" id="ai-insights-list"></div>
   </section>
 
@@ -83,18 +87,31 @@
       beating a weak one. The probability below is just the standard Elo win-expectancy formula
       applied to each team's rating right now. It's a form/strength estimate, not a crystal
       ball — it doesn't know about toss, weather, or who's available to play.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-elo">Win probability (Elo)</a>
+    </div>
     <div class="winprob-card" id="winprob-card"></div>
   </section>
 
   <section id="sec-upcoming">
     <h2>Upcoming fixtures</h2>
     <p class="subhead">Next 3 matches highlighted — use the button below to see the full remaining schedule.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-elo">Win probability (Elo)</a>
+    </div>
     <div class="fixture-grid" id="fixture-grid"></div>
     <button class="show-more-btn" id="fixtures-toggle" hidden></button>
   </section>
 
   <section id="sec-toss">
     <h2>What should I do if I win the toss? <span class="q">— based on how each team performs batting first vs. chasing</span></h2>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-toss">Toss advice</a>
+      <a class="methodology-link" href="methodology.html#sec-partarget">Par score &amp; target</a>
+    </div>
     <div class="toss-card" id="toss-card"></div>
   </section>
 
@@ -104,6 +121,10 @@
       bowling strength: a smaller ask against their best bowlers (assumed to open and close the
       innings), a bigger one against the weaker/part-time overs typically bowled in the middle.
       This is a pacing guide, not a guarantee — actual bowling changes vary by match.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-chase">Chase-pacing calculator</a>
+    </div>
     <div class="chase-input-row">
       <label for="chase-target-input">Target to chase</label>
       <input type="number" id="chase-target-input" min="1" placeholder="e.g. 130">
@@ -113,6 +134,12 @@
 
   <section id="sec-record">
     <h2>Season record &amp; head-to-head</h2>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-homeaway">Home / away record</a>
+      <a class="methodology-link" href="methodology.html#sec-boundary">Boundary dependence</a>
+      <a class="methodology-link" href="methodology.html#sec-h2h">Head-to-head</a>
+    </div>
     <div class="compare-grid" id="record-grid"></div>
     <div class="toss-card" id="h2h-card" style="margin-top:0.9rem;"></div>
   </section>
@@ -122,6 +149,10 @@
     <p class="subhead">A collapse = 3 or more of the top 7 batsmen dismissed for a combined 20 runs
       or fewer, at any point in the innings. Restricted to the top 7 because the last few batters
       going cheap at the end is normal in this format, not a real collapse.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-collapse">Batting collapses</a>
+    </div>
     <div class="par-target-row" id="collapse-row"></div>
   </section>
 
@@ -131,6 +162,11 @@
       stumps less, set catching fields; mostly bowled/LBW → bowl straight and full. Last 5 scores
       show recent form — hot streak (25%+ above their season average) or cold and due a
       bounce-back (25%+ below).</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-dismissal">Dismissal breakdown</a>
+      <a class="methodology-link" href="methodology.html#sec-form">Recent form</a>
+    </div>
     <div class="player-columns">
       <div>
         <div class="team-column-label us" id="bat-label-us"></div>
@@ -147,6 +183,10 @@
     <h2>Top 3 bowlers <span class="q">— what dismissals do their best bowlers get?</span></h2>
     <p class="subhead">Shows how each bowler takes wickets: mostly caught → they rely on fielders,
       look to hit gaps; mostly bowled/LBW → play straight, watch the stumps.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-dismissal">Wicket-type breakdown</a>
+    </div>
     <div class="player-columns">
       <div>
         <div class="team-column-label us" id="bowl-label-us"></div>
@@ -169,6 +209,10 @@
       cameo can look absurd once scaled up to "runs/over," so we just report what happened.</p>
     <p class="subhead disclaimer">Figures are pulled directly from scraped scorecards and can
       occasionally reflect scoring inaccuracies on the source site.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-bowlbattle">Bowling battle</a>
+    </div>
     <div class="player-columns">
       <div>
         <div class="column-kicker positive">Our top bowlers</div>
@@ -191,6 +235,10 @@
       rate, and extras rate against everyone else who bowled that block this season (green =
       strong, red = weak). Hover a cell for the full breakdown. Minimum 3 overs bowled in a block
       to show a number.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-phase">Bowler by phase</a>
+    </div>
     <div class="phase-table-wrap" id="phase-table-wrap"></div>
   </section>
 
@@ -199,11 +247,21 @@
     <p class="subhead">Our bowlers ranked by economy across the final 3 overs of the innings when
       we're fielding, this season. Not opponent-specific — same list regardless of who's selected
       above. Minimum 3 death overs bowled to qualify.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-death">Death overs</a>
+    </div>
     <div id="death-list"></div>
   </section>
 
   <section id="sec-metrics">
     <h2>Other useful signals</h2>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-leanon">Top-scorer dependence</a>
+      <a class="methodology-link" href="methodology.html#sec-impact">Key-batsman win impact</a>
+      <a class="methodology-link" href="methodology.html#sec-boundary">Boundary dependence</a>
+    </div>
     <div class="metric-grid" id="metric-grid"></div>
   </section>
 

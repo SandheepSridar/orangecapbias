@@ -47,6 +47,10 @@
       bowled to qualify — small-sample cameos are excluded.</p>
     <p class="subhead">Click a player below to mark them unavailable for this match — the XI
       reshuffles instantly from the rest of the squad.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-bestxi">Best XI selection</a>
+    </div>
     <div class="avail-chips" id="avail-chips"></div>
     <p class="empty-note" id="bestxi-note" hidden></p>
     <div id="bestxi-list"></div>
@@ -58,6 +62,10 @@
       "good" half and "bad" half — runs for batters, economy for bowlers — and compare our win rate
       in each. The gap ("swing") is how much our result seems to move with that player specifically.
       Small season, so read this as a notable pattern, not a guarantee.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-dependency">Win dependency</a>
+    </div>
     <div id="win-dependency-list"></div>
   </section>
 
@@ -65,21 +73,39 @@
     <h2>Form over the season <span class="q">— Elo rating after every match</span></h2>
     <p class="subhead">Same Elo model driving the main page's win probability — this just traces
       how it's moved match by match. Green dot = win, red = loss, grey = tie.</p>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-elo">Win probability (Elo)</a>
+    </div>
     <div class="chart-card" id="elo-chart"></div>
   </section>
 
   <section id="sec-bat-leaderboard">
     <h2>Squad batting leaderboard <span class="q">— every player who's batted for us this season</span></h2>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-basics">The basics (average, strike rate)</a>
+    </div>
     <div class="chart-card" id="bat-leaderboard"></div>
   </section>
 
   <section id="sec-bowl-leaderboard">
     <h2>Squad bowling leaderboard <span class="q">— every player who's bowled for us this season</span></h2>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-basics">The basics (economy, dot-ball %)</a>
+    </div>
     <div class="chart-card" id="bowl-leaderboard"></div>
   </section>
 
   <section id="sec-other-metrics">
     <h2>Other season metrics</h2>
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-homeaway">Home / away record</a>
+      <a class="methodology-link" href="methodology.html#sec-collapse">Batting collapses</a>
+      <a class="methodology-link" href="methodology.html#sec-toss">Toss advice</a>
+    </div>
     <div class="metric-grid" id="other-metrics-grid"></div>
   </section>
 

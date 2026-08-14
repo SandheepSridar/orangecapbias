@@ -32,6 +32,7 @@
   <a href="#sec-homeaway" class="side-toc-link">Home / away record</a>
   <a href="#sec-collapse" class="side-toc-link">Batting collapses</a>
   <a href="#sec-form" class="side-toc-link">Recent form</a>
+  <a href="#sec-leanon" class="side-toc-link">Top-scorer dependence</a>
   <a href="#sec-impact" class="side-toc-link">Key-batsman win impact</a>
   <a href="#sec-dismissal" class="side-toc-link">Dismissal breakdowns</a>
   <a href="#sec-bowlbattle" class="side-toc-link">Bowling battle</a>
@@ -195,6 +196,20 @@ otherwise     → "steady"</div>
       <div class="doc-example-label">Example</div>
       <p>Season average = 20 runs/innings. Average across the last 5 innings = 30. Ratio = 30 ÷
         20 = <b>1.5</b>, past the 1.25 threshold → tagged <b>"hot."</b></p>
+    </div>
+  </section>
+
+  <section id="sec-leanon">
+    <h2>Top-scorer dependence <span class="q">— how much do they lean on one player?</span></h2>
+    <p class="subhead">What share of a team's top-3 run-scorers' combined runs this season came
+      from their #1 scorer alone. Higher means the batting is more concentrated in one player —
+      containing or removing him early matters more.</p>
+    <div class="formula">dependence % = 100 × top scorer's runs ÷ (top scorer's + #2's + #3's runs)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A team's top 3 run-scorers have 400, 250, and 150 runs this season (800 combined).
+        Dependence = 100 × 400 ÷ 800 = <b>50%</b> — half of their top order's output comes from
+        one player.</p>
     </div>
   </section>
 
