@@ -910,14 +910,12 @@ def insight_batting_order(roster, avg_position):
     if len(candidates) < 2:
         return None
     candidates.sort(key=lambda c: -c[1])
-    best = max(
-        ((player, score, pos, pos - rank) for rank, (player, score, pos) in enumerate(candidates, start=1)),
-        key=lambda c: c[3],
+    player, score, pos, rank, gap = max(
+        ((player, score, pos, rank, pos - rank) for rank, (player, score, pos) in enumerate(candidates, start=1)),
+        key=lambda c: c[4],
     )
-    player, score, pos, gap = best
     if gap <= 0:
         return None
-    rank = next(i for i, c in enumerate(candidates, start=1) if c[0] == player)
     return {
         "title": f"Move {player.split()[0]} up the batting order",
         "detail": (

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Methodology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">How the numbers are calculated</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link" href="charts.html">Gladiators charts →</a>
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </span>
+</nav>
+
+<nav class="side-toc" id="side-toc" aria-label="Jump to section">
+  <span class="side-toc-label">On this page</span>
+  <a href="#sec-basics" class="side-toc-link">The basics</a>
+  <a href="#sec-zscore" class="side-toc-link">Comparing players fairly</a>
+  <a href="#sec-elo" class="side-toc-link">Win probability</a>
+  <a href="#sec-toss" class="side-toc-link">Toss advice</a>
+  <a href="#sec-chase" class="side-toc-link">Chase-pacing calculator</a>
+  <a href="#sec-homeaway" class="side-toc-link">Home / away record</a>
+  <a href="#sec-collapse" class="side-toc-link">Batting collapses</a>
+  <a href="#sec-form" class="side-toc-link">Recent form</a>
+  <a href="#sec-impact" class="side-toc-link">Key-batsman win impact</a>
+  <a href="#sec-dismissal" class="side-toc-link">Dismissal breakdowns</a>
+  <a href="#sec-bowlbattle" class="side-toc-link">Bowling battle</a>
+  <a href="#sec-phase" class="side-toc-link">Bowler by phase</a>
+  <a href="#sec-death" class="side-toc-link">Death overs</a>
+  <a href="#sec-boundary" class="side-toc-link">Boundary dependence</a>
+  <a href="#sec-partarget" class="side-toc-link">Par score &amp; target</a>
+  <a href="#sec-h2h" class="side-toc-link">Head-to-head</a>
+  <a href="#sec-dependency" class="side-toc-link">Win dependency</a>
+  <a href="#sec-bestxi" class="side-toc-link">Best XI selection</a>
+  <a href="#sec-insights" class="side-toc-link">AI insights</a>
+</nav>
+
+<main>
+  <header class="page-header">
+    <h1>Methodology</h1>
+    <p>Every metric on this dashboard, how it's actually calculated, and a small worked example
+      with made-up round numbers so the arithmetic is easy to follow. Source: <code>build_data.py</code>
+      (server-side, run once per rescrape) unless noted as client-side.</p>
+  </header>
+
+  <section id="sec-basics">
+    <h2>The basics <span class="q">— the building blocks everything else uses</span></h2>
+    <p class="subhead">Four numbers that show up almost everywhere else on this page, so they're
+      covered once here instead of re-explained each time.</p>
+    <div class="formula">batting average = total runs ÷ times out   (not-outs don't count as an "out")
+strike rate     = 100 × total runs ÷ balls faced
+
+economy rate    = runs conceded ÷ overs bowled
+dot-ball %      = 100 × dot balls ÷ legal balls bowled</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p><b>Batting:</b> a player scores 20, 35*, 10, 45 across 4 innings (the * means not out).
+        They were out 3 times for a total of 110 runs, so average = 110 ÷ 3 = <b>36.7</b>. If
+        those 4 innings took 80 balls total, strike rate = 100 × 110 ÷ 80 = <b>137.5</b>.</p>
+      <p><b>Bowling:</b> a bowler concedes 24 runs in 4 overs → economy = 24 ÷ 4 = <b>6.0</b>. If
+        14 of the 24 legal balls in that spell went for zero runs, dot-ball % = 100 × 14 ÷ 24 =
+        <b>58.3%</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-zscore">
+    <h2>Comparing players fairly <span class="q">— z-scores</span></h2>
+    <p class="subhead">Several rankings below (bowling strengths/weaknesses, batting/bowling
+      quality for the Best XI, bowler-by-phase) judge a player against the <em>whole league</em>
+      rather than just their own teammates, so "our best bowler" actually means something. A
+      z-score says how many standard deviations above or below the league average a number is.</p>
+    <div class="formula">z = (player's value − league average) ÷ league standard deviation</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Across the whole league, bowling economy averages 6.0 with a standard deviation of 1.2.
+        A bowler with economy 4.8 has z = (4.8 − 6.0) ÷ 1.2 = <b>−1.0</b> — a full standard
+        deviation <em>better</em> than average (lower economy is better, which is why economy's
+        z-score gets flipped/negated before being combined with other stats below — a more
+        negative raw economy z needs to count as a <em>positive</em> contribution).</p>
+    </div>
+    <p class="doc-note">Composite scores (like "strengthScore" or "battingScore" below) are just
+      the average of two or three z-scores — each stat contributes equally, none dominates just
+      because it happens to be measured in bigger numbers.</p>
+  </section>
+
+  <section id="sec-elo">
+    <h2>Win probability <span class="q">— Elo rating</span></h2>
+    <p class="subhead">Same rating system chess uses. Every team starts the season at 1500.
+      After each completed match, both teams' ratings move based on the result and how surprising
+      it was — beating a stronger team gains more than beating a weaker one. Processed in
+      chronological order (match ID order) across every match in the season, not just ours.</p>
+    <div class="formula">expected win% for A = 1 ÷ (1 + 10^((Elo_B − Elo_A) ÷ 400))
+actual result       = 1 for a win, 0 for a loss, 0.5 for a tie
+new Elo_A            = old Elo_A + K × (actual − expected)     [K = 32]</div>
+    <p class="subhead">The win-probability number shown on the matchup page is just this same
+      "expected win%" formula applied to both teams' <em>current</em> ratings — it doesn't know
+      about toss, weather, or who's actually available to play.</p>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Team A is rated 1550, Team B 1500. Expected win% for A = 1 ÷ (1 + 10^((1500−1550)÷400))
+        = 1 ÷ (1 + 10^−0.125) ≈ <b>57.7%</b>. Say A wins: new Elo_A = 1550 + 32 × (1 − 0.577) ≈
+        <b>1564</b>. Team B drops by the same amount it "should" have — new Elo_B = 1500 + 32 ×
+        (0 − 0.423) ≈ <b>1487</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-toss">
+    <h2>Toss advice <span class="q">— bat first or bowl first?</span></h2>
+    <p class="subhead">Compares a team's win% batting first vs win% chasing this season (needs at
+      least 3 completed matches on each side). If one is at least 10 percentage points worse than
+      the other, that's the recommendation; otherwise it's a coin flip either way.</p>
+    <div class="formula">if chasing win% ≤ batting-first win% − 10pp  → recommend "bat first"
+if batting-first win% ≤ chasing win% − 10pp  → recommend "bowl first"
+otherwise                                     → "no strong lean, pick on conditions"</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A team has won 7 of 10 matches batting first (70%) but only 4 of 10 chasing (40%). The
+        gap is 30 percentage points — well past the 10pp threshold — so the recommendation is
+        <b>"bat first, force them to chase."</b></p>
+    </div>
+  </section>
+
+  <section id="sec-chase">
+    <h2>Chase-pacing calculator <span class="q">— client-side, matchup page</span></h2>
+    <p class="subhead">The only calculator on this list that runs entirely in your browser
+      (<code>app.js</code>'s <code>renderChasePlan()</code>), recomputing live as you type a
+      target. It splits a chase into four 4-over blocks and assumes the fielding team's best
+      bowlers (lowest economy, "bowling strengths") open and close the innings while their
+      weakest ("weak bowlers") cover the middle — a standard captaincy pattern. Each block's
+      share of the target is weighted by the block's assumed economy, so a tougher block asks for
+      fewer runs.</p>
+    <div class="formula">block economies = [strong, weak, weak, strong]   (their average econ in each pool)
+block target   = round(total target × block econ ÷ sum of all 4 econs)
+(any 1-2 run rounding drift is absorbed into the last block, so the four always sum to the target)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Target = 120. Their strong bowlers average econ 5, weak bowlers average econ 8 → block
+        econs = [5, 8, 8, 5], summing to 26. Block 1 = round(120 × 5 ÷ 26) = <b>23</b>. Block 2 =
+        round(120 × 8 ÷ 26) = <b>37</b>. Block 3 = <b>37</b>. Block 4 = <b>23</b>. Total = 23 + 37
+        + 37 + 23 = 120 — matches the target exactly.</p>
+    </div>
+  </section>
+
+  <section id="sec-homeaway">
+    <h2>Home / away record <span class="q">— season record grid</span></h2>
+    <p class="subhead">Win% split by venue. Venue is worked out from the schedule export's
+      "Ground" field, which is reliably just the hosting team's own name — matched to each
+      completed match by team-pair and chronological order (the schedule and results tables
+      don't share a match ID).</p>
+    <div class="formula">home win% = 100 × home wins ÷ home matches played
+away win% = 100 × away wins ÷ away matches played</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A team plays 8 matches at home (5 wins) and 6 away (2 wins). Home win% = 100 × 5 ÷ 8 =
+        <b>63%</b>. Away win% = 100 × 2 ÷ 6 = <b>33%</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-collapse">
+    <h2>Batting collapses <span class="q">— how often does the innings fall apart?</span></h2>
+    <p class="subhead">Looks only at the top 7 batters in each innings (scorecard row order =
+      batting/arrival order — the tail folding cheaply at the end of a 10-11 batter innings is
+      normal, not a "collapse"). Finds the longest run of 3 or more <em>consecutive</em>
+      dismissals whose combined runs add up to 20 or fewer. If one exists, that innings counts as
+      a collapse; the biggest qualifying stretch (most wickets, ties broken by fewest runs) is
+      flagged as that innings' worst instance.</p>
+    <div class="formula">collapse% = 100 × innings with a qualifying stretch ÷ total innings</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Top-7 scores in one innings: 40, 5, 0, 3, 30, 2, 15. The 5, 0, 3 stretch is 3 consecutive
+        wickets for 5 + 0 + 3 = 8 runs — under the 20-run cap, so this innings counts as a
+        collapse, flagged as <b>"3 wickets for 8 runs."</b></p>
+    </div>
+  </section>
+
+  <section id="sec-form">
+    <h2>Recent form <span class="q">— hot / cold / steady</span></h2>
+    <p class="subhead">Compares a batter's average over their last 5 innings to their season
+      average. Needs at least 3 innings total to render a verdict at all.</p>
+    <div class="formula">ratio = (last-5-innings average) ÷ (season average)
+ratio ≥ 1.25  → "hot"
+ratio ≤ 0.75  → "cold"
+otherwise     → "steady"</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Season average = 20 runs/innings. Average across the last 5 innings = 30. Ratio = 30 ÷
+        20 = <b>1.5</b>, past the 1.25 threshold → tagged <b>"hot."</b></p>
+    </div>
+  </section>
+
+  <section id="sec-impact">
+    <h2>Key-batsman win impact <span class="q">— "what if we get him out early?"</span></h2>
+    <p class="subhead">Splits a specific batter's innings into "scored at-or-above his own season
+      median" vs "scored below it" (needs 3+ matches on each side), then compares the
+      <em>team's</em> win% in matches from each bucket. Low-score innings are the closest proxy
+      available for an early dismissal — there's no per-match dismissal-timing data for opponent
+      teams, only final runs scored.</p>
+    <div class="formula">swing = (team win% when he scores ≥ his median) − (team win% when he scores &lt; his median)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>His season median score is 25. In the 5 matches he scored 25+, the team won 4 (80%). In
+        the 5 matches he scored under 25, the team won 1 (20%). Swing = 80 − 20 =
+        <b>+60 percentage points</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-dismissal">
+    <h2>Dismissal &amp; wicket-type breakdowns <span class="q">— how do they get out / take wickets?</span></h2>
+    <p class="subhead">For a batter: what % of their dismissals this season were each type
+      (Bowled, Caught, LBW, Run Out, …). For a bowler: same idea, but the types of wickets
+      <em>they've</em> taken. Not-outs are excluded from the batter's total.</p>
+    <div class="formula">% for a dismissal type = 100 × count of that type ÷ total dismissals</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A batter has been dismissed 10 times this season: 5 Caught, 3 Bowled, 2 LBW → Caught
+        <b>50%</b>, Bowled <b>30%</b>, LBW <b>20%</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-bowlbattle">
+    <h2>Bowling battle <span class="q">— strengths &amp; weaknesses</span></h2>
+    <p class="subhead">Two mirrored rankings, both z-scored against the whole league (min 8 overs
+      bowled to qualify for either).</p>
+    <p class="subhead"><b>Bowling strengths</b> (our best, to build the attack around): low
+      economy plus a high dot-ball rate.</p>
+    <div class="formula">strengthScore = ( z(dot-ball %) − z(economy) ) ÷ 2</div>
+    <p class="subhead"><b>Weak bowlers to target</b> (opponent's weakest): poor economy, a bad
+      single-match spell, and extras (wides/no-balls) leaked.</p>
+    <div class="formula">weaknessScore = ( z(economy) + z(worst single-match economy) + z(extras rate) ) ÷ 3</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example (bowling strengths)</div>
+      <p>League-wide, economy averages 6.5 (std dev 1.0) and dot-ball % averages 45% (std dev
+        10%). Bowler A has economy 5.0 and dot-ball % 60%. Economy z = (5.0 − 6.5) ÷ 1.0 = −1.5,
+        negated to <b>+1.5</b>. Dot-ball z = (60 − 45) ÷ 10 = <b>+1.5</b>. strengthScore =
+        (1.5 + 1.5) ÷ 2 = <b>+1.5</b> — a full 1.5 standard deviations better than league average
+        on both counts.</p>
+    </div>
+  </section>
+
+  <section id="sec-phase">
+    <h2>Bowler by phase <span class="q">— who's best in which 4-over block?</span></h2>
+    <p class="subhead">Splits the season into four 4-over blocks of a 16-over innings (overs
+      1-4/5-8/9-12/13-16) and ranks our own bowlers within each block. Needs ball-by-ball detail
+      (not just over totals) to compute dot-ball %, wicket rate, and extras rate — min 3 overs
+      bowled in that specific block to qualify. Z-scored against only the other bowlers who
+      bowled in that <em>same</em> block, not the whole season.</p>
+    <div class="formula">wicket rate  = wickets ÷ overs bowled (in that block)
+extras rate  = (wides + no-balls) ÷ overs bowled (in that block)
+phaseScore   = ( z(dot%) + z(wicket rate) − z(extras rate) ) ÷ 3</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Two bowlers bowled overs 13-16 this season. Across just those two, dot% averages 60%
+        (std dev 10%) and wicket rate averages 0.8/over (std dev 0.4). Bowler A: dot 70%, wicket
+        rate 1.2/over, extras rate 0 → dot z = +1.0, wicket-rate z = +1.0, extras z = 0 (say the
+        league average extras rate here is also 0) → phaseScore = (1.0 + 1.0 − 0) ÷ 3 ≈
+        <b>+0.67</b>, ranking above Bowler B.</p>
+    </div>
+  </section>
+
+  <section id="sec-death">
+    <h2>Death overs (last 3) <span class="q">— who do we trust under pressure?</span></h2>
+    <p class="subhead">Narrower and simpler than bowler-by-phase: looks only at the literal last
+      3 overs of each innings we bowled (e.g. overs 12-14 of a 14-over innings, not a fixed
+      "overs 13-16" range), and ranks purely by economy — no dot%/wicket-rate/extras composite.
+      Min 3 such overs bowled to qualify.</p>
+    <div class="formula">economy (death overs) = runs conceded in the last 3 overs ÷ overs bowled in the last 3 overs</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A bowler has bowled 5 "death overs" across the season for a combined 28 runs → economy =
+        28 ÷ 5 = <b>5.6</b>. Lower is better; bowlers are ranked lowest economy first.</p>
+    </div>
+  </section>
+
+  <section id="sec-boundary">
+    <h2>Boundary dependence <span class="q">— how much comes from fours and sixes?</span></h2>
+    <div class="formula">boundary dependence % = 100 × (fours × 4 + sixes × 6) ÷ total runs scored</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A team scores 600 runs across the season, including 40 fours and 20 sixes. Boundary runs
+        = 40 × 4 + 20 × 6 = 280. Boundary dependence = 100 × 280 ÷ 600 = <b>46.7%</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-partarget">
+    <h2>Par score to set &amp; target to chase <span class="q">— matchup-specific numbers</span></h2>
+    <p class="subhead"><b>Par score to set:</b> the opponent's average score, across every match
+      this season they <em>lost</em> (whether they batted first or second) — roughly "this is
+      what it takes to beat them." <b>Target to chase:</b> their own average score when they
+      batted first — a read on what to expect if we win the toss and bowl. Both need at least 3
+      qualifying matches.</p>
+    <div class="formula">par score to set  = average(opponent's score) across their losses this season
+target to chase   = average(opponent's score) across matches they batted first</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>An opponent has lost 4 matches this season, conceding scores of 145, 160, 150, and 165.
+        Par score to set = (145 + 160 + 150 + 165) ÷ 4 = <b>155</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-h2h">
+    <h2>Head-to-head <span class="q">— just a tally</span></h2>
+    <p class="subhead">No formula here — just every completed match between us and this specific
+      opponent this season, with the result and both scores, plus a wins/losses/ties count.</p>
+  </section>
+
+  <section id="sec-dependency">
+    <h2>Win dependency <span class="q">— who do we depend on to win?</span></h2>
+    <p class="subhead">Role-agnostic version of the key-batsman idea above, run for every player
+      (batting <em>or</em> bowling) with 6+ matches. Splits their games into a "good half" and
+      "bad half" against their own season median, then compares team win% in each. Only players
+      with a positive swing are kept, top 6 by swing. Two extra floors keep this from surfacing
+      noise: batters need a season-median of at least 10 runs (otherwise "good half" just means
+      "batted longer, not better"), and bowlers need to average at least 2 overs a match (so
+      one-over cameos don't swing wildly on a tiny sample).</p>
+    <div class="formula">batting: good half = innings with runs ≥ his own season median
+bowling: good half = spells with economy ≤ his own season median  (lower economy = better)
+swing = (team win% in good half) − (team win% in bad half)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A batter's season median is 18 runs. In matches he scored 18+, the team won 6 of 8
+        (75%). In matches he scored under 18, the team won 2 of 8 (25%). Swing = 75 − 25 =
+        <b>+50 percentage points</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-bestxi">
+    <h2>Best XI selection <span class="q">— battingScore, bowlingScore, and the picking order</span></h2>
+    <p class="subhead">Two more z-scored-against-the-whole-league composites, same pattern as the
+      bowling battle above.</p>
+    <div class="formula">battingScore = ( z(batting average) + z(strike rate) ) ÷ 2      [min 5 innings]
+bowlingScore = ( z(dot-ball %) − z(economy) ) ÷ 2            [min 8 overs — same formula as strengthScore]</div>
+    <p class="subhead">The XI itself is picked in a fixed order: (1) the wicketkeeper (identified
+      from the scorecard's † marker) is auto-picked; (2) fill up to 6 batting spots by
+      battingScore, best first; (3) add bowling options by bowlingScore until 5 recognized
+      bowlers are in the XI; (4) fill any remaining spots by combined value (the sum of whichever
+      scores a player has — someone with <em>no</em> qualifying score at all ranks dead last, not
+      "neutral," so an unproven player only gets picked once every real option is exhausted).</p>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Four candidates for the last batting spot, ranked by battingScore: Player A (+0.8),
+        Player B (+0.1), Player C (no qualifying innings yet), Player D (−0.3). Picking order is
+        A, then B, then D — Player C, despite having "no negative score," is treated as worse
+        than even D's below-average +(−0.3) and picked last, as a fallback only.</p>
+    </div>
+  </section>
+
+  <section id="sec-insights">
+    <h2>AI insights <span class="q">— top 3 things worth changing</span></h2>
+    <p class="subhead">Three fixed checks, each comparing "who the numbers say is best" against
+      "who's actually getting the overs or the batting position." Each one returns nothing if
+      there's no real gap to report — the list is never padded to force exactly 3 insights.</p>
+    <p class="subhead"><b>1. Phase-bowling mismatch:</b> across the four bowler-by-phase blocks,
+      the biggest gap between a block's top-phaseScore bowler and whoever actually bowled the
+      most overs there.</p>
+    <p class="subhead"><b>2. Batting-order mismatch:</b> the batter with the biggest gap between
+      their battingScore quality-rank (1 = best in the squad) and their actual average batting
+      position this season (from scorecard row order).</p>
+    <p class="subhead"><b>3. Season-wide bowling workload mismatch:</b> our best bowler by
+      strengthScore vs whoever's actually bowled the most overs overall, when they differ and
+      the latter has bowled more.</p>
+    <div class="formula">batting-order gap = actual average batting position − quality rank (1 = best battingScore)
+(the batter with the single largest positive gap is the one surfaced — quality far
+ outstripping where they actually bat in the order)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A squad's battingScore ranking (best first): #1 Player A, #2 Player B, #3 Player C.
+        Their actual average batting positions this season are 3.5, 5.4, and 2.0. Gaps: A =
+        3.5 − 1 = 2.5; B = 5.4 − 2 = <b>3.4</b>; C = 2.0 − 3 = −1.0. Player B has the biggest gap
+        → the insight reads <b>"Move Player B up the batting order."</b></p>
+    </div>
+  </section>
+
+  <footer>Built from 2026 season scorecards scraped from cricclubs.com/NJSBCL. All worked
+    examples on this page use simple made-up numbers for clarity — they aren't pulled from a
+    real match.</footer>
+</main>
+
+<script>
+/* Side-nav scrollspy — same logic as app.js's initSideToc(), copied standalone here since
+   this page doesn't load data.js/app.js (no opponent picker, no dashboard state to init). */
+(function () {
+  const toc = document.getElementById("side-toc");
+  if (!toc) return;
+  const links = [...toc.querySelectorAll(".side-toc-link")];
+  const sections = links
+    .map((l) => document.getElementById(l.getAttribute("href").slice(1)))
+    .filter(Boolean);
+  const setActive = (id) => {
+    links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === `#${id}`));
+  };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: "-15% 0px -75% 0px", threshold: 0 }
+  );
+  sections.forEach((s) => observer.observe(s));
+  window.addEventListener("scroll", () => {
+    const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
+    if (atBottom && sections.length) setActive(sections[sections.length - 1].id);
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
