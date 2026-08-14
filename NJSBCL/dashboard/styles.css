@@ -125,6 +125,33 @@ select#opponent-select {
 .matchup-label .gladiators { color: var(--gold); font-weight: 700; }
 .matchup-label .opponent { color: var(--blue); font-weight: 700; }
 
+/* ── AI insights ───────────────────────────────────────────────────── */
+.ai-insights {
+  background: linear-gradient(135deg, rgba(255,195,0,0.1), rgba(58,134,255,0.05));
+  border: 1px solid rgba(255,195,0,0.35); border-radius: var(--radius);
+  padding: 1.5rem 1.6rem 1.7rem;
+}
+.ai-disclaimer {
+  font-size: 0.78rem; color: var(--muted); font-style: italic; margin-top: 0.3rem;
+  max-width: 52rem; line-height: 1.5;
+}
+.ai-insights-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.1rem; margin-top: 1.2rem;
+}
+.ai-insight-card {
+  position: relative; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 10px; padding: 1.1rem 1.2rem 1rem;
+}
+.ai-insight-rank {
+  position: absolute; top: -0.65rem; left: 1.1rem; background: var(--gold); color: var(--bg);
+  font-family: "Sora", sans-serif; font-weight: 800; font-size: 0.78rem;
+  width: 1.5rem; height: 1.5rem; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ai-insight-title { font-weight: 700; font-size: 0.98rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.ai-insight-detail { font-size: 0.84rem; color: var(--muted); line-height: 1.5; }
+
 /* ── Sections ──────────────────────────────────────────────────────── */
 section { margin: 2.4rem 0; scroll-margin-top: 5.5rem; }
 section h2 {
@@ -261,6 +288,24 @@ section h2 .q {
 .chase-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 .chase-runs { font-family: "Sora", sans-serif; font-size: 1.6rem; font-weight: 800; margin-top: 0.3rem; color: var(--gold); }
 .chase-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }
+
+/* ── Bowler-by-phase heatmap table ────────────────────────────────── */
+.phase-table-wrap { overflow-x: auto; }
+.phase-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.phase-table th, .phase-table td { padding: 0.55rem 0.7rem; text-align: center; white-space: nowrap; }
+.phase-table th {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted);
+  font-weight: 600; border-bottom: 1px solid var(--line);
+}
+.phase-table th:first-child, .phase-table td:first-child { text-align: left; }
+.phase-td-name { font-weight: 600; }
+.phase-table tbody tr:not(:last-child) td { border-bottom: 1px solid var(--line); }
+.phase-cell {
+  display: inline-block; min-width: 2.8rem; padding: 0.25rem 0.55rem; border-radius: 8px;
+  border: 1px solid var(--line); font-family: "Sora", sans-serif; font-weight: 700; cursor: default;
+}
+.phase-cell.top { font-weight: 800; }
+.phase-cell.empty { border-color: transparent; color: var(--muted); font-weight: 400; }
 
 /* ── Head-to-head ──────────────────────────────────────────────────── */
 .h2h-record { display: flex; gap: 1.6rem; align-items: baseline; margin-bottom: 0.9rem; flex-wrap: wrap; }

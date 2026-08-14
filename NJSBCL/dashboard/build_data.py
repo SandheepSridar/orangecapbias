@@ -97,8 +97,9 @@ def parse_dismissal(raw):
 def overs_to_balls(o):
     if pd.isna(o):
         return 0
+    o = float(o)  # accepts both the raw numeric "O" column and balls_to_overs_str()'s "X.Y" strings
     whole = int(o)
-    frac = round((float(o) - whole) * 10)
+    frac = round((o - whole) * 10)
     return whole * 6 + frac
 
 
@@ -759,25 +760,83 @@ def best_playing_xi(bat, bowl, bat_pool, bowl_pool, team):
     }
 
 
-def load_death_overs(cfg, gladiators, abbrev_map):
-    """Last-3-overs bowling figures for OUR team only, from a dedicated over-by-over
-    scrape (data/<series>_gladiators_overs.csv — see the rescrape-njsbcl skill's death-overs
-    step). Not opponent-specific: this is about who we trust with the ball late, regardless
-    of who we're facing. Returns None if that file hasn't been scraped yet."""
+def load_gladiators_overs(cfg, gladiators, abbrev_map):
+    """Full-season over-by-over bowling detail for OUR team only (one row per over bowled),
+    from a dedicated over-by-over scrape (data/<series>_gladiators_overs.csv — see the
+    rescrape-njsbcl skill's over-by-over step). Not opponent-specific: this is about our own
+    bowling patterns regardless of who we're facing. Returns None if that file hasn't been
+    scraped yet."""
     path = DATA_DIR / cfg["overs_csv"]
     if not path.exists():
         return None
-    overs = pd.read_csv(path)
-    death_parts = []
-    for _, g in overs.groupby("matchId"):
-        max_over = g["overNum"].max()
-        death_parts.append(g[g["overNum"] > max_over - 3])
-    death = pd.concat(death_parts, ignore_index=True) if death_parts else overs.iloc[0:0]
-    death = death.copy()
-    death["bowlerResolved"] = death["bowler"].apply(
+    overs = pd.read_csv(path).copy()
+    overs["bowlerResolved"] = overs["bowler"].apply(
         lambda b: abbrev_map.get((gladiators, clean_name(b).lower()), clean_name(b))
     )
-    return death
+    return overs
+
+
+def death_overs_only(overs_df):
+    """Last-3-overs-of-the-innings subset of a full-season overs dataframe."""
+    if overs_df is None or overs_df.empty:
+        return overs_df
+    death_parts = []
+    for _, g in overs_df.groupby("matchId"):
+        max_over = g["overNum"].max()
+        death_parts.append(g[g["overNum"] > max_over - 3])
+    return pd.concat(death_parts, ignore_index=True) if death_parts else overs_df.iloc[0:0]
+
+
+PHASE_BOUNDARIES = [(1, 4), (5, 8), (9, 12), (13, 16)]
+PHASE_LABELS = ["Overs 1-4", "Overs 5-8", "Overs 9-12", "Overs 13-16"]
+MIN_PHASE_OVERS = 3
+
+
+def bowler_phase_breakdown(overs_df, min_overs=MIN_PHASE_OVERS):
+    """Which of our bowlers is strongest in each 4-over block of a 16-over innings, ranked by
+    a composite of dot-ball %, wicket rate (wickets/over), and extras rate (wides+noballs/over,
+    negated) — each z-scored against the other bowlers who qualify in that same block, mirroring
+    the whole-season bowlingStrengths z-scoring pattern. Needs the ball-by-ball detail columns
+    from the extended over-by-over scrape (legalBalls/dots/wickets/wides/noballs) — returns []
+    on the older runs-only scrape format."""
+    if overs_df is None or overs_df.empty or "legalBalls" not in overs_df.columns:
+        return []
+    phases = []
+    for label, (lo, hi) in zip(PHASE_LABELS, PHASE_BOUNDARIES):
+        block = overs_df[(overs_df["overNum"] >= lo) & (overs_df["overNum"] <= hi)]
+        bowlers = []
+        for player, g in block.groupby("bowlerResolved"):
+            legal_balls = int(g["legalBalls"].sum())
+            overs_bowled = legal_balls / 6
+            if overs_bowled < min_overs:
+                continue
+            dots = int(g["dots"].sum())
+            wickets = int(g["wickets"].sum())
+            extras = int(g["wides"].sum() + g["noballs"].sum())
+            runs = int(g["runs"].sum())
+            bowlers.append({
+                "player": player, "overs": round(overs_bowled, 1), "runs": runs, "wickets": wickets,
+                "econ": round(runs / overs_bowled, 2),
+                "dotPct": round(100 * dots / legal_balls, 1),
+                "wicketRate": round(wickets / overs_bowled, 2),
+                "extrasRate": round(extras / overs_bowled, 2),
+            })
+        if bowlers:
+            def zscore(vals, x):
+                mean = sum(vals) / len(vals)
+                std = (sum((v - mean) ** 2 for v in vals) / len(vals)) ** 0.5
+                return (x - mean) / std if std > 0 else 0.0
+            dot_vals = [b["dotPct"] for b in bowlers]
+            wkt_vals = [b["wicketRate"] for b in bowlers]
+            ext_vals = [b["extrasRate"] for b in bowlers]
+            for b in bowlers:
+                b["phaseScore"] = round((
+                    zscore(dot_vals, b["dotPct"]) + zscore(wkt_vals, b["wicketRate"])
+                    - zscore(ext_vals, b["extrasRate"])
+                ) / 3, 2)
+            bowlers.sort(key=lambda b: -b["phaseScore"])
+        phases.append({"phase": label, "bowlers": bowlers})
+    return phases
 
 
 def death_overs_leaders(death_df, min_overs=MIN_DEATH_OVERS, top_n=3):
@@ -795,6 +854,113 @@ def death_overs_leaders(death_df, min_overs=MIN_DEATH_OVERS, top_n=3):
             "econ": round(runs / overs_bowled, 2),
         })
     return sorted(rows, key=lambda r: r["econ"])[:top_n]
+
+
+def batting_position_avg(bat, team):
+    """Average batting position per player this season, derived from scorecard row order
+    within each (matchId, team) innings — same "row order = batting order" assumption
+    detect_collapses() already relies on."""
+    sub = bat[bat["team"] == team].copy()
+    sub["position"] = sub.groupby("matchId").cumcount() + 1
+    return sub.groupby("playerClean")["position"].mean().round(1).to_dict()
+
+
+def insight_phase_bowling(bowler_phases):
+    """AI-insight candidate: the phase with the biggest gap between its top-ranked bowler
+    (by phaseScore) and whoever actually bowled the most overs there, when they differ —
+    a direct 'this bowler should get more of the ball in this block' signal straight from
+    the bowler-by-phase breakdown."""
+    best = None
+    for phase in bowler_phases:
+        bowlers = phase["bowlers"]
+        if len(bowlers) < 2:
+            continue
+        top = bowlers[0]
+        most_used = max(bowlers, key=lambda b: b["overs"])
+        if most_used["player"] == top["player"]:
+            continue
+        gap = top["phaseScore"] - most_used["phaseScore"]
+        if gap <= 0:
+            continue
+        if best is None or gap > best["gap"]:
+            best = {"phase": phase["phase"], "top": top, "mostUsed": most_used, "gap": gap}
+    if best is None:
+        return None
+    top, most_used, phase_label = best["top"], best["mostUsed"], best["phase"]
+    return {
+        "title": f"Bowl {top['player'].split()[0]} more in the {phase_label.lower()}",
+        "detail": (
+            f"In {phase_label.lower()} this season, {top['player']} has the strongest record of "
+            f"anyone who's bowled there — econ {top['econ']}, {top['dotPct']}% dot balls, "
+            f"{top['wicketRate']} wkt/over across {top['overs']} overs. But {most_used['player']} "
+            f"has actually bowled the most there ({most_used['overs']} overs, econ "
+            f"{most_used['econ']}) despite a clearly worse record in that block."
+        ),
+    }
+
+
+def insight_batting_order(roster, avg_position):
+    """AI-insight candidate: the qualifying batter with the biggest gap between their
+    batting-quality rank (battingScore, best first) and their actual average batting
+    position this season — the strongest 'should be batting higher' signal available."""
+    candidates = [
+        (r["player"], r["battingScore"], avg_position[r["player"]])
+        for r in roster if r["battingScore"] is not None and r["player"] in avg_position
+    ]
+    if len(candidates) < 2:
+        return None
+    candidates.sort(key=lambda c: -c[1])
+    best = max(
+        ((player, score, pos, pos - rank) for rank, (player, score, pos) in enumerate(candidates, start=1)),
+        key=lambda c: c[3],
+    )
+    player, score, pos, gap = best
+    if gap <= 0:
+        return None
+    rank = next(i for i, c in enumerate(candidates, start=1) if c[0] == player)
+    return {
+        "title": f"Move {player.split()[0]} up the batting order",
+        "detail": (
+            f"{player} has the #{rank} batting quality score in the squad this season "
+            f"(average + strike rate, z-scored against the whole league) but has batted at an "
+            f"average position of {pos:.1f} — well down the order for someone rated that highly."
+        ),
+    }
+
+
+def insight_bowling_workload(bowling_strengths, bowling_leaderboard):
+    """AI-insight candidate: season-wide version of the same underused-talent idea — our
+    best economy/dot-rate bowler (bowlingStrengths) vs whoever's actually bowled the most
+    overs overall, when they differ."""
+    if not bowling_strengths or not bowling_leaderboard:
+        return None
+    top = bowling_strengths[0]
+    most_used = max(bowling_leaderboard, key=lambda p: overs_to_balls(p["overs"]))
+    if most_used["player"] == top["player"]:
+        return None
+    if overs_to_balls(most_used["overs"]) <= overs_to_balls(top["overs"]):
+        return None
+    return {
+        "title": f"Bowl {top['player'].split()[0]} more overall",
+        "detail": (
+            f"{top['player']} rates as our best bowler this season on economy + dot-ball rate "
+            f"(econ {top['econ']}, {top['dotPct']}% dots) but has bowled {top['overs']} overs "
+            f"total, while {most_used['player']} has bowled the most of anyone on the squad "
+            f"({most_used['overs']} overs, econ {most_used['econ']})."
+        ),
+    }
+
+
+def build_ai_insights(bowler_phases, roster, avg_position, bowling_strengths, bowling_leaderboard):
+    """Top-3 (or fewer, if a series doesn't have enough data for one) data-backed 'things the
+    team should try that it isn't doing now' — each generator surfaces one concrete gap between
+    who the numbers say is best and who's actually getting the overs/batting position."""
+    generators = [
+        lambda: insight_phase_bowling(bowler_phases),
+        lambda: insight_batting_order(roster, avg_position),
+        lambda: insight_bowling_workload(bowling_strengths, bowling_leaderboard),
+    ]
+    return [r for r in (g() for g in generators) if r is not None]
 
 
 def dismissal_breakdown(bat, team, player):
@@ -1000,9 +1166,12 @@ def build():
         strength_pool = bowler_strength_pool(bowl)
         print(f"  bowlers qualifying for weakness ranking (>= {MIN_OVERS_FOR_WEAKNESS} overs): {len(weakness_pool)}")
 
-        death_overs = load_death_overs(cfg, gladiators, abbrev_map)
+        gladiators_overs = load_gladiators_overs(cfg, gladiators, abbrev_map)
+        death_overs = death_overs_only(gladiators_overs)
         death_leaders = death_overs_leaders(death_overs)
         print(f"  death-overs data: {'none scraped yet' if death_overs is None else f'{len(death_overs)} death-over rows, {len(death_leaders)} qualifying bowlers'}")
+        bowler_phases = bowler_phase_breakdown(gladiators_overs)
+        print(f"  bowler-by-phase: {sum(len(p['bowlers']) for p in bowler_phases)} qualifying bowler-phase entries across {len(bowler_phases)} phases")
 
         teams_data = {}
         all_teams_in_data = sorted(set(bat["team"].unique()) | set([gladiators]))
@@ -1054,15 +1223,23 @@ def build():
             round(sum(t["battingCollapses"]["collapsePct"] for t in teams_data.values()) / len(teams_data))
             if teams_data else 0
         )
+        bowling_leaderboard = team_bowling_agg(bowl, gladiators).to_dict("records")
+        ai_insights = build_ai_insights(
+            bowler_phases, best_xi["roster"], batting_position_avg(bat, gladiators),
+            teams_data[gladiators]["bowlingStrengths"], bowling_leaderboard,
+        )
         gladiators_charts = {
             "bestXI": best_xi,
             "eloHistory": gladiators_elo_history,
             "battingLeaderboard": team_batting_agg(bat, gladiators).to_dict("records"),
-            "bowlingLeaderboard": team_bowling_agg(bowl, gladiators).to_dict("records"),
+            "bowlingLeaderboard": bowling_leaderboard,
             "leagueAvgCollapsePct": league_avg_collapse_pct,
             "winDependency": win_dependency(bat, bowl, results, gladiators),
+            "bowlerPhases": bowler_phases,
+            "aiInsights": ai_insights,
         }
         print(f"  best XI: {len(best_xi['players'])} players from a qualifying squad of {best_xi['squadSize']}")
+        print(f"  AI insights: {len(ai_insights)}")
 
         out["series"][key] = {
             "label": cfg["label"], "gladiators": gladiators,

@@ -51,6 +51,19 @@ the page via `javascript_tool`, build a `Blob`, `URL.createObjectURL`, and click
 no truncation. Then `mv` it into `NJSBCL/data/` via Bash. This is the pattern for everything
 below.
 
+**Gotcha found 2026-08-14: the Bash tool's own read access to `~/Downloads` can be blocked**
+(`ls`/`cat`/`mv` all fail with "Operation not permitted", even with the sandbox override) while
+it can still *write* new files there fine (e.g. a Python script's `pdf.output()` call succeeds).
+This looks like a macOS TCC permission gap specific to reading Chrome-downloaded files (which
+carry a quarantine attribute) rather than anything wrong with the scrape. Workaround: use Finder
+via `osascript` instead of `mv`/`cat` —
+```
+osascript -e 'tell application "Finder" to duplicate file (POSIX file "/Users/sandheepsridar/Downloads/X.csv") to POSIX file "/Users/sandheepsridar/Documents/VS_Projects/orangecapbias/NJSBCL/data"'
+```
+— which reliably has the access Bash lacks. Copies into the project dir with Bash access
+afterward normally. Try the normal `mv`/`cat` first each time in case the permission gets
+granted; fall back to this if it 403s.
+
 ## Step 1 — True match totals (do this first, it's fast and everything else depends on it)
 
 **Why not just sum the batting scorecard rows:** summing individual batters' runs excludes
@@ -291,12 +304,13 @@ Move to `NJSBCL/data/division1_points_table.csv` / `weekenderscup_points_table.c
 `pts` values may have a trailing `*` (site footnote, usually a forfeit-penalty adjustment) —
 `build_data.py` already strips it when parsing, no action needed here.
 
-## Step 4c — Over-by-over data for our own bowlers (death-overs metric)
+## Step 4c — Over-by-over ball detail for our own bowlers (death-overs + bowler-by-phase)
 
-Powers the "Death overs (last 3)" dashboard section — who to trust with the ball in the closing
-overs. Scoped to **our own bowling figures only** (Samudhra Gladiators / VRK Gladiators), not the
-whole league — this is about who WE hand the ball to, not opponent scouting, so the match list is
-small (~15 + ~13 matches) and cheap to redo every rescrape.
+Powers the "Death overs (last 3)" and "Bowler by phase" dashboard sections — who to trust with
+the ball in different parts of the innings. Scoped to **our own bowling figures only** (Samudhra
+Gladiators / VRK Gladiators), not the whole league — this is about who WE hand the ball to, not
+opponent scouting, so the match list is small (~15 + ~13 matches) and cheap to redo every
+rescrape.
 
 First get the matchId list for our own team (already-combined scorecards CSVs are the easiest
 source, no new page needed):
@@ -321,11 +335,50 @@ The page has one `<table>` per innings titled `"<Team> Batting"`, with rows `#, 
 Score` — one row per over, where the "Bowler" cell mixes the bowler's short name with that over's
 ball-by-ball outcomes (e.g. `"Kishan P 6 0 0 0 0 1wd 0"`). We only want the table where the
 *opponent* is batting (i.e. where OUR team was bowling) — the other team's name appears in the
-title:
+title.
+
+**Ball-token catalog** (verified 2026-08-14 across a sample spanning both series — re-verify if
+tokens outside this set show up, don't silently drop them): a plain digit (`"0"`, `"4"`, …) is a
+legal delivery worth that many runs off the bat (`"0"` = dot); `"Nwd"` / `"Nnb"` are a wide /
+no-ball worth N total runs, **not** a legal delivery (doesn't count toward the over's 6 balls);
+`"Nb"` is a bye worth N runs, **is** a legal delivery; `"W"` is a wicket on a legal ball for 0
+runs; `"NW"` is a wicket on a legal ball where N runs were already completed (e.g. a run-out
+after a run or two). Only `wd`/`nb` tokens are extra (non-legal) balls — everything else,
+including byes and wickets, counts as one of the over's 6 legal deliveries.
+
+**Bowler-name-vs-first-token split gotcha:** an earlier version of this scraper's split regex
+only recognized plain digits, `Nwd`/`Nnb`, and bare `W` as "this is where the ball sequence
+starts" — it missed `NW` (wicket-after-runs) and `Nb` (byes), so those tokens got silently glued
+onto the bowler name instead of parsed as ball outcomes (e.g. `"Vinit B 1b 9 0 0 0 6 0"` --
+extracted bowler as `"Vinit B 1b"`). Use `isBallToken()` below, which covers the full catalog.
+Also: two bowlers sharing a first name get disambiguated by cricclubs with an extra initial
+inconsistently between rows (e.g. `"Naveen R S"` vs `"Naveen R S R"` for the same actual player,
+seen once in 416 overs) — don't worry about this at the scrape stage, `build_data.py`'s existing
+`abbrev_map` resolution (same lookup already used for scorecards) absorbs it fine; verified no
+duplicate/split player entries in the final `data.js` output.
 
 ```js
 function clean(s){ return s.replace(/\s+/g,' ').trim(); }
 function csvEscape(s){ s=String(s??''); if(/[",\n]/.test(s)) return '"'+s.replace(/"/g,'""')+'"'; return s; }
+function isBallToken(t){ return /^\d+(wd|nb|b)?$/i.test(t) || /^\d*W$/i.test(t); }
+function parseBallTokens(bowlerCell){
+  const parts = bowlerCell.split(' ');
+  let splitIdx = parts.length;
+  for (let i = 0; i < parts.length; i++) { if (isBallToken(parts[i])) { splitIdx = i; break; } }
+  return { bowler: parts.slice(0, splitIdx).join(' '), tokens: parts.slice(splitIdx) };
+}
+function classify(tokens){
+  let legalBalls=0, dots=0, wickets=0, wides=0, noballs=0;
+  for (const t of tokens) {
+    const wm = t.match(/^(\d*)W$/i);
+    if (wm) { legalBalls++; wickets++; if (!wm[1] || parseInt(wm[1],10)===0) dots++; continue; }
+    if (/^\d+wd$/i.test(t)) { wides++; continue; }
+    if (/^\d+nb$/i.test(t)) { noballs++; continue; }
+    if (/^\d+b$/i.test(t)) { legalBalls++; continue; }
+    if (/^\d+$/.test(t)) { legalBalls++; if (t === '0') dots++; continue; }
+  }
+  return {legalBalls, dots, wickets, wides, noballs};
+}
 async function fetchOverByOver(matchId, gladiatorsTeamName){
   const url = `https://cricclubs.com/NJSBCL/overbyoverscoreview.do?matchId=${matchId}&clubId=2690`;
   const res = await fetch(url);
@@ -343,11 +396,11 @@ async function fetchOverByOver(matchId, gladiatorsTeamName){
   for (const tr of trs) {
     const cells = [...tr.children].map(c=>clean(c.innerText));
     if (cells.length < 4) continue;
-    const [overNum, bowlerCell, runs] = cells;
+    const [overNum, bowlerCell, runsCell] = cells;
     if (!overNum || !/^\d+$/.test(overNum)) continue;
-    const m = bowlerCell.match(/^(.*?)\s+((?:\d+(?:wd|nb)?|W)(?:\s+(?:\d+(?:wd|nb)?|W))*)$/i);
-    const bowler = m ? m[1].trim() : bowlerCell;
-    rows.push([matchId, overNum, bowler, runs].map(csvEscape).join(','));
+    const {bowler, tokens} = parseBallTokens(bowlerCell);
+    const {legalBalls, dots, wickets, wides, noballs} = classify(tokens);
+    rows.push([matchId, overNum, bowler, runsCell, legalBalls, dots, wickets, wides, noballs].map(csvEscape).join(','));
   }
   return {rows, blocked:false};
 }
@@ -380,18 +433,28 @@ JSON.stringify(r);
 ```
 
 Move + rename with a header row prepended (no combine script needed, small enough to handle
-directly):
+directly — see the Downloads-read-permission gotcha above if `mv`/`cat` 403):
 
 ```
 mv ~/Downloads/d1_gladiators_overs.csv data/division1_gladiators_overs.csv
 mv ~/Downloads/wk_gladiators_overs.csv data/weekenderscup_gladiators_overs.csv
-# prepend "matchId,overNum,bowler,runs" as the header row to each file
+# prepend "matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs" as the header row
 ```
 
-`build_data.py`'s `load_death_overs()` reads these directly (skips gracefully with `None` if the
-files don't exist, so this step is optional but should be kept current each rescrape) — it takes
-the last 3 over-numbers of each match as the death overs and resolves bowler short names via the
-same `abbrev_map` used elsewhere.
+Sanity check: every row's `legalBalls` should be 6, **except** a small tail of rows (~2-3% of
+overs, all near an innings' last over) where the innings ended mid-over — either all out (a
+`wickets` count will be present) or the chasing team reached its target before the over
+finished (no wicket needed). If a non-6 row shows up mid-innings with no wicket and isn't a
+chase-completed situation, something broke in the token classification — recheck against the
+ball-token catalog above rather than assuming it's fine.
+
+`build_data.py`'s `load_gladiators_overs()` reads these directly (skips gracefully with `None`
+if the files don't exist, so this step is optional but should be kept current each rescrape) and
+resolves bowler short names via the same `abbrev_map` used elsewhere. `death_overs_only()` takes
+the last 3 over-numbers of each match for the death-overs card; `bowler_phase_breakdown()` splits
+the full season into four 4-over blocks (1-4/5-8/9-12/13-16) for the phase-breakdown card — see
+that function's docstring in `build_data.py` for the composite ranking (z-scored dot% + wicket
+rate - extras rate, all per over) and the `legalBalls`/`dots`/etc. columns it needs.
 
 ## Step 5 — Rebuild the dashboard
 
@@ -426,6 +489,15 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   rate) for our own bowlers, from the same scorecard data.
 - `build_data.py` also computes a "death overs (last 3)" ranking for our own bowlers from the
   dedicated over-by-over scrape in step 4c — see that step for the scrape itself.
+- Added 2026-08-14: a **bowler-by-phase breakdown** on `charts.html` (`gladiatorsCharts.bowlerPhases`),
+  splitting the season into four 4-over blocks of a 16-over innings and ranking our bowlers within
+  each block by a composite of dot-ball %, wicket rate, and (negated) extras rate, all z-scored
+  against whoever else bowled in that block — same z-scoring pattern as `bowlingStrengths`, just
+  scoped to our own squad per-phase instead of season-wide. Needs the ball-by-ball detail columns
+  (`legalBalls`/`dots`/`wickets`/`wides`/`noballs`) added to the over-by-over CSV in step 4c that
+  day — falls back to `[]` gracefully on the older runs-only format. `load_death_overs()` was
+  split into `load_gladiators_overs()` (generic loader) + `death_overs_only()` (last-3 filter) so
+  both this and the death-overs card share one CSV read.
 - `build_data.py` also computes a **home/away win-rate split** per team, purely derived from data
   already scraped in earlier steps — no new scrape needed. It works despite the schedule's
   `Ground` field not being a real venue (see the venue-data TODO below): `Ground` reliably names

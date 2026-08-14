@@ -525,6 +525,96 @@ function renderBowlingBattle() {
   }
 }
 
+/* ── AI insights ──────────────────────────────────────────────────── */
+function renderAiInsights() {
+  const s = currentSeriesData();
+  const box = $("ai-insights-list");
+  box.innerHTML = "";
+  const insights = s.gladiatorsCharts.aiInsights || [];
+  if (!insights.length) {
+    box.appendChild(el("div", "empty-note", "Not enough data yet this season to surface a confident insight."));
+    return;
+  }
+  insights.forEach((ins, i) => {
+    const card = el("div", "ai-insight-card");
+    card.append(
+      el("div", "ai-insight-rank", String(i + 1)),
+      el("div", "ai-insight-title", ins.title),
+      el("div", "ai-insight-detail", ins.detail),
+    );
+    box.appendChild(card);
+  });
+}
+
+/* ── Bowler by phase (heatmap table) ─────────────────────────────────── */
+function phaseCellColor(score) {
+  const clamped = Math.max(-2, Math.min(2, score));
+  const mag = Math.abs(clamped) / 2;
+  const rgb = clamped >= 0 ? "45,212,167" : "255,107,107";
+  return {
+    bg: `rgba(${rgb},${(0.08 + mag * 0.22).toFixed(2)})`,
+    border: `rgba(${rgb},${(0.25 + mag * 0.35).toFixed(2)})`,
+    color: clamped >= 0 ? "var(--win)" : "var(--loss)",
+  };
+}
+
+function renderBowlerPhaseTable() {
+  const s = currentSeriesData();
+  const wrap = $("phase-table-wrap");
+  wrap.innerHTML = "";
+  const phases = s.gladiatorsCharts.bowlerPhases || [];
+  if (!phases.length || !phases.some((p) => p.bowlers.length)) {
+    wrap.appendChild(el("div", "empty-note", `Not enough over-by-over data for ${s.gladiators} yet to break this down by phase.`));
+    return;
+  }
+
+  const byPlayer = new Map();
+  phases.forEach((phase) => {
+    phase.bowlers.forEach((b) => {
+      if (!byPlayer.has(b.player)) byPlayer.set(b.player, {});
+      byPlayer.get(b.player)[phase.phase] = b;
+    });
+  });
+  const totalOvers = (p) => Object.values(byPlayer.get(p)).reduce((sum, e) => sum + e.overs, 0);
+  const players = [...byPlayer.keys()].sort((a, b) => totalOvers(b) - totalOvers(a));
+
+  const table = document.createElement("table");
+  table.className = "phase-table";
+  const thead = el("thead");
+  const headRow = el("tr");
+  headRow.appendChild(el("th", null, "Bowler"));
+  phases.forEach((p) => headRow.appendChild(el("th", null, p.phase)));
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+
+  const tbody = el("tbody");
+  players.forEach((player) => {
+    const row = el("tr");
+    row.appendChild(el("td", "phase-td-name", player));
+    phases.forEach((phase) => {
+      const entry = byPlayer.get(player)[phase.phase];
+      const td = el("td");
+      if (!entry) {
+        td.appendChild(el("span", "phase-cell empty", "—"));
+      } else {
+        const isTop = phase.bowlers[0] && phase.bowlers[0].player === player;
+        const cell = el("span", `phase-cell${isTop ? " top" : ""}`, String(entry.econ));
+        const c = phaseCellColor(entry.phaseScore);
+        cell.style.background = c.bg;
+        cell.style.borderColor = c.border;
+        cell.style.color = c.color;
+        bindTooltip(cell, `${entry.overs} overs · ${entry.wickets}w<br>dot <b>${entry.dotPct}%</b> ·
+          wkt rate <b>${entry.wicketRate}</b>/over · extras <b>${entry.extrasRate}</b>/over`);
+        td.appendChild(cell);
+      }
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+}
+
 /* ── Death overs (last 3) ─────────────────────────────────────────── */
 function renderDeathOvers() {
   const s = currentSeriesData();
@@ -615,6 +705,7 @@ function updateMatchupLabel() {
 
 function renderAll() {
   updateMatchupLabel();
+  renderAiInsights();
   renderWinProb();
   renderFixtures();
   renderToss();
@@ -624,6 +715,7 @@ function renderAll() {
   renderCollapses();
   renderPlayers();
   renderBowlingBattle();
+  renderBowlerPhaseTable();
   renderDeathOvers();
   renderMetrics();
 }
