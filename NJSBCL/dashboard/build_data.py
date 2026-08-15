@@ -197,7 +197,7 @@ def load_series(key, cfg):
 
 
 def attach_venue(results, cfg):
-    """Adds a 'venue' column ('Home'/'Away') to `results` by matching each completed
+    """Adds 'venue' ('Home'/'Away') and 'date' columns to `results` by matching each completed
     match to a row in the schedule export.
 
     The schedule and results tables don't share a match ID — schedule only has team
@@ -221,7 +221,7 @@ def attach_venue(results, cfg):
     for _, r in sched.sort_values("parsedDate").iterrows():
         t1, t2, ground = str(r["Team One"]).strip(), str(r["Team Two"]).strip(), str(r["Ground"]).strip()
         pair = frozenset({t1.lower(), t2.lower()})
-        sched_by_pair.setdefault(pair, []).append(ground)
+        sched_by_pair.setdefault(pair, []).append((ground, r["parsedDate"]))
 
     one_row_per_match = results.drop_duplicates("matchId", keep="first").sort_values("matchId")
     results_by_pair = {}
@@ -230,14 +230,17 @@ def attach_venue(results, cfg):
         results_by_pair.setdefault(pair, []).append((r["matchId"], r["team"], r["opponent"]))
 
     venue_map = {}  # matchId -> {team: "Home"/"Away"}
+    date_map = {}   # matchId -> "Aug 15, 2026" (same regardless of team perspective)
     matched, no_schedule_row, ground_mismatch = 0, 0, 0
     for pair, matches in results_by_pair.items():
-        grounds = sched_by_pair.get(pair, [])
+        rows = sched_by_pair.get(pair, [])
         for i, (match_id, team, opponent) in enumerate(matches):
-            if i >= len(grounds):
+            if i >= len(rows):
                 no_schedule_row += 1
                 continue
-            ground_norm = grounds[i].lower()
+            ground, date = rows[i]
+            date_map[match_id] = date.strftime("%b %d, %Y")
+            ground_norm = ground.lower()
             if ground_norm == team.lower():
                 host = team
             elif ground_norm == opponent.lower():
@@ -253,6 +256,7 @@ def attach_venue(results, cfg):
 
     results = results.copy()
     results["venue"] = results.apply(lambda r: venue_map.get(r["matchId"], {}).get(r["team"]), axis=1)
+    results["date"] = results["matchId"].map(date_map)
     stats = {
         "totalMatches": len(one_row_per_match), "matched": matched,
         "noScheduleRow": no_schedule_row, "groundMismatch": ground_mismatch,
@@ -961,6 +965,335 @@ def build_ai_insights(bowler_phases, roster, avg_position, bowling_strengths, bo
     return [r for r in (g() for g in generators) if r is not None]
 
 
+def latest_completed_match(results, team):
+    """Most recent completed match for `team` (matchId order as the chronological proxy used
+    everywhere else in this file)."""
+    sub = results[results["team"] == team].sort_values("matchId")
+    if sub.empty:
+        return None
+    r = sub.iloc[-1]
+    return {
+        "matchId": int(r["matchId"]), "opponent": r["opponent"], "result": r["result"],
+        "teamScore": int(r["teamScore"]), "oppScore": int(r["oppScore"]),
+        "battedFirst": bool(r["battedFirst"]), "date": r["date"] if pd.notna(r["date"]) else None,
+    }
+
+
+# ── Match points table (Star of the Match) ──────────────────────────────
+# A transparent, fixed-formula points system (batting + bowling only — no fielding credit,
+# since fielder names aren't extracted from dismissal text anywhere in this pipeline) so
+# "who had the biggest impact" is a disclosed calculation, not a judgment call. Modeled on the
+# common fantasy-cricket points pattern: base value for the raw output (runs / wickets + dots),
+# plus a strike-rate/economy modifier once a player has faced/bowled enough to make the rate
+# meaningful.
+BATTING_POINTS_MIN_BALLS = 10
+BOWLING_POINTS_MIN_OVERS = 2.0
+
+
+def batting_points(runs, balls, fours, sixes):
+    pts = runs + fours * 1 + sixes * 2
+    if balls >= BATTING_POINTS_MIN_BALLS:
+        sr = 100 * runs / balls if balls else 0
+        if sr >= 150:
+            pts += 10
+        elif sr >= 125:
+            pts += 5
+        elif sr < 60:
+            pts -= 5
+    return round(pts, 1)
+
+
+def bowling_points(wickets, runs_conceded, dots, balls):
+    overs = balls / 6
+    pts = wickets * 20 + dots * 1
+    if overs >= BOWLING_POINTS_MIN_OVERS:
+        econ = runs_conceded / overs if overs else 0
+        if econ <= 4:
+            pts += 10
+        elif econ <= 6:
+            pts += 5
+        elif econ >= 10:
+            pts -= 10
+        elif econ >= 8:
+            pts -= 5
+    return round(pts, 1)
+
+
+def league_points_stats(bat, bowl):
+    """Mean/std of batting_points()/bowling_points() across every row in the whole league this
+    season — the baseline match_points_table() z-scores against. Needed because the two raw
+    scales aren't comparable: a routine bowling spell (a few wickets, a run of dots) racks up
+    far more raw points than a routine batting innings just because wickets are worth 20 points
+    apiece and dots add up fast, so ranking on raw points alone structurally favours bowling
+    (and, by stacking both, all-rounders) over specialist batting. Z-scoring each discipline
+    against its own league-wide distribution before combining removes that scale bias — a
+    performance is judged by how it compares to a normal day in the *same* discipline, not
+    against the other one's bigger numbers. Verified 2026-08-16: median bowling spell this
+    season scores ~32-35 raw points vs ~3-5 for a median batting innings, a ~7-10x gap that
+    made a modest 3-wicket haul routinely outscore a well-struck fifty before this fix."""
+    bat_pts = bat.apply(lambda r: batting_points(r["R"], r["B"], r["4s"], r["6s"]), axis=1)
+    bowl_balls = bowl["O"].apply(overs_to_balls)
+    bowl_pts = bowl.apply(
+        lambda r: bowling_points(r["W"], r["R"], r["Dot"], overs_to_balls(r["O"])), axis=1
+    )
+    return {
+        "battingMean": bat_pts.mean(), "battingStd": bat_pts.std(),
+        "bowlingMean": bowl_pts.mean(), "bowlingStd": bowl_pts.std(),
+    }
+
+
+def match_points_table(bat, bowl, match_id, team, league_stats):
+    """Every one of `team`'s players who batted or bowled in `match_id`, ranked by a combined
+    impact score (sum of whichever z-scores apply — batting only, bowling only, or both for an
+    all-rounder) — the full, disclosed working behind the Star of the Match pick (rows[0])."""
+    bat_sub = bat[(bat["matchId"] == match_id) & (bat["team"] == team)]
+    bowl_sub = bowl[(bowl["matchId"] == match_id) & (bowl["team"] == team)]
+    points = {}
+    for _, r in bat_sub.iterrows():
+        p = r["playerClean"]
+        points.setdefault(p, {"player": p, "battingPoints": 0.0, "bowlingPoints": 0.0,
+                               "battingZ": None, "bowlingZ": None,
+                               "battingLine": None, "bowlingLine": None})
+        bp = batting_points(r["R"], r["B"], r["4s"], r["6s"])
+        points[p]["battingPoints"] = bp
+        points[p]["battingZ"] = round((bp - league_stats["battingMean"]) / league_stats["battingStd"], 2) \
+            if league_stats["battingStd"] else 0.0
+        points[p]["battingLine"] = f"{int(r['R'])} ({int(r['B'])}b)"
+    for _, r in bowl_sub.iterrows():
+        p = r["bowlerClean"]
+        balls = overs_to_balls(r["O"])
+        points.setdefault(p, {"player": p, "battingPoints": 0.0, "bowlingPoints": 0.0,
+                               "battingZ": None, "bowlingZ": None,
+                               "battingLine": None, "bowlingLine": None})
+        bp = bowling_points(int(r["W"]), int(r["R"]), int(r["Dot"]), balls)
+        points[p]["bowlingPoints"] = bp
+        points[p]["bowlingZ"] = round((bp - league_stats["bowlingMean"]) / league_stats["bowlingStd"], 2) \
+            if league_stats["bowlingStd"] else 0.0
+        points[p]["bowlingLine"] = f"{int(r['W'])}/{int(r['R'])} ({balls_to_overs_str(balls)} ov)"
+    rows = list(points.values())
+    for r in rows:
+        zs = [z for z in (r["battingZ"], r["bowlingZ"]) if z is not None]
+        r["impactScore"] = round(sum(zs), 2) if zs else 0.0
+    rows.sort(key=lambda r: -r["impactScore"])
+    return rows
+
+
+# ── Post-match "what we got right / wrong" verdicts ─────────────────────
+# Each generator checks one pre-match signal the dashboard already surfaces (toss read, par
+# score, key-batsman threshold, bowling strengths/weaknesses) against what actually happened in
+# the latest completed match, and returns a verdict only when the evidence is reasonably
+# clear-cut — never forced to fill a quota. Deliberately excludes squad-selection/availability
+# ("did our top picks even play") from right/wrong — who's on the field is volatile and not
+# something this recap should second-guess; every check here is about how the players who
+# actually took the field performed, not who they were.
+PAR_TARGET_NEAR = 5     # runs within par counts as "met it"
+PAR_TARGET_MISS = 15    # runs short of par counts as a clear miss
+ECON_MARGIN = 1.0       # how far off season economy counts as "held up" / "let him off"
+
+
+def verdict_toss_right(match, them_toss):
+    rec = them_toss["recommendation"]
+    if rec not in ("bat", "bowl"):
+        return None
+    followed = (rec == "bat" and match["battedFirst"]) or (rec == "bowl" and not match["battedFirst"])
+    if followed and match["result"] == "Win":
+        choice = "batted first" if match["battedFirst"] else "bowled first"
+        return {"title": f"Read the format right — we {choice}, as advised",
+                "detail": them_toss["reason"] + f" We {choice} today and won."}
+    return None
+
+
+def verdict_toss_wrong(match, them_toss):
+    rec = them_toss["recommendation"]
+    if rec not in ("bat", "bowl"):
+        return None
+    followed = (rec == "bat" and match["battedFirst"]) or (rec == "bowl" and not match["battedFirst"])
+    if followed and match["result"] == "Loss":
+        choice = "batted first" if match["battedFirst"] else "bowled first"
+        return {"title": "Followed the format read and still lost",
+                "detail": them_toss["reason"] + f" We {choice} today, matching the read, but lost anyway."}
+    return None
+
+
+def verdict_par_target_right(match, them_par):
+    if match["battedFirst"]:
+        par = them_par["parScoreToSet"]["value"]
+        if par is None or match["teamScore"] < par - PAR_TARGET_NEAR:
+            return None
+        return {"title": f"Posted at/near the par score ({match['teamScore']} vs par {par})",
+                "detail": f"Par score to set against {match['opponent']} is {par} runs (their "
+                          f"average losing total this season). We scored {match['teamScore']}."}
+    target = them_par["targetToChase"]["value"]
+    if target is None or match["oppScore"] > target - PAR_TARGET_NEAR:
+        return None
+    return {"title": "Held them well below their usual first-innings total",
+            "detail": f"{match['opponent']} average {target} runs batting first this season; "
+                      f"we held them to {match['oppScore']}."}
+
+
+def verdict_par_target_wrong(match, them_par):
+    if match["battedFirst"]:
+        par = them_par["parScoreToSet"]["value"]
+        if par is None or match["teamScore"] > par - PAR_TARGET_MISS:
+            return None
+        return {"title": "Fell short of the par score",
+                "detail": f"Par score to set against {match['opponent']} is {par} (their average "
+                          f"losing total). We managed {match['teamScore']}."}
+    target = them_par["targetToChase"]["value"]
+    if target is None or match["oppScore"] < target + PAR_TARGET_MISS:
+        return None
+    return {"title": "Let them well past their usual first-innings total",
+            "detail": f"{match['opponent']} average {target} runs batting first this season; "
+                      f"they posted {match['oppScore']} against us."}
+
+
+def verdict_key_batsman_right(match, bat, them):
+    impact = them.get("keyBatsmanWinImpact")
+    top = them["topBatsmen"][0]["player"] if them["topBatsmen"] else None
+    if not impact or not top:
+        return None
+    sub = bat[(bat["matchId"] == match["matchId"]) & (bat["team"] == match["opponent"]) & (bat["playerClean"] == top)]
+    if sub.empty:
+        return None
+    runs = int(sub.iloc[0]["R"])
+    if runs >= impact["threshold"]:
+        return None
+    return {"title": f"Held {top} below his tipping point",
+            "detail": f"{match['opponent']} win {impact['highWinPct']}% of matches when {top} scores "
+                      f"{impact['threshold']}+, but just {impact['lowWinPct']}% when he doesn't. "
+                      f"He made {runs} today."}
+
+
+def verdict_key_batsman_wrong(match, bat, them):
+    impact = them.get("keyBatsmanWinImpact")
+    top = them["topBatsmen"][0]["player"] if them["topBatsmen"] else None
+    if not impact or not top:
+        return None
+    sub = bat[(bat["matchId"] == match["matchId"]) & (bat["team"] == match["opponent"]) & (bat["playerClean"] == top)]
+    if sub.empty:
+        return None
+    runs = int(sub.iloc[0]["R"])
+    if runs < impact["threshold"]:
+        return None
+    return {"title": f"Let {top} bat past his tipping point",
+            "detail": f"{match['opponent']} win {impact['highWinPct']}% of matches when {top} scores "
+                      f"{impact['threshold']}+ (vs {impact['lowWinPct']}% when he doesn't) — he made "
+                      f"{runs} today."}
+
+
+def verdict_bowling_strength_right(match, bowl, gladiators, us_strengths):
+    for b in us_strengths:
+        sub = bowl[(bowl["matchId"] == match["matchId"]) & (bowl["team"] == gladiators) & (bowl["bowlerClean"] == b["player"])]
+        if sub.empty:
+            continue
+        r = sub.iloc[0]
+        balls = overs_to_balls(r["O"])
+        if balls == 0:
+            continue
+        econ_today = r["R"] / (balls / 6)
+        if econ_today <= b["econ"] + ECON_MARGIN:
+            return {"title": f"{b['player']} backed up his season economy",
+                    "detail": f"Rated our most economical bowler this season (econ {b['econ']}). "
+                              f"Today: {int(r['W'])}/{int(r['R'])} at econ {round(econ_today, 2)}."}
+    return None
+
+
+def verdict_bowling_strength_wrong(match, bowl, gladiators, us_strengths):
+    """Only fires for a bowler who actually took the ball today — who did or didn't feature is
+    squad selection, not a strategic call this recap should second-guess. This checks how the
+    bowlers we had performed, not who was picked."""
+    for b in us_strengths:
+        sub = bowl[(bowl["matchId"] == match["matchId"]) & (bowl["team"] == gladiators) & (bowl["bowlerClean"] == b["player"])]
+        if sub.empty:
+            continue
+        r = sub.iloc[0]
+        balls = overs_to_balls(r["O"])
+        if balls == 0:
+            continue
+        econ_today = r["R"] / (balls / 6)
+        if econ_today >= b["econ"] + ECON_MARGIN:
+            return {"title": f"{b['player']} had an uncharacteristically expensive day",
+                    "detail": f"Rated our most economical bowler this season (econ {b['econ']}), "
+                              f"but went for {round(econ_today, 2)}/over today "
+                              f"({int(r['W'])}/{int(r['R'])} off {balls_to_overs_str(balls)} overs)."}
+    return None
+
+
+def verdict_weak_bowler_right(match, bowl, them_weak):
+    for b in them_weak:
+        sub = bowl[(bowl["matchId"] == match["matchId"]) & (bowl["team"] == match["opponent"]) & (bowl["bowlerClean"] == b["player"])]
+        if sub.empty:
+            continue
+        r = sub.iloc[0]
+        balls = overs_to_balls(r["O"])
+        if balls == 0:
+            continue
+        econ_today = r["R"] / (balls / 6)
+        if econ_today >= b["econ"] + ECON_MARGIN:
+            return {"title": f"Cashed in on {b['player']}, exactly as flagged",
+                    "detail": f"One of their weakest bowlers this season (econ {b['econ']}) — "
+                              f"went for {round(econ_today, 2)}/over against us today."}
+    return None
+
+
+def verdict_weak_bowler_wrong(match, bowl, them_weak):
+    for b in them_weak:
+        sub = bowl[(bowl["matchId"] == match["matchId"]) & (bowl["team"] == match["opponent"]) & (bowl["bowlerClean"] == b["player"])]
+        if sub.empty:
+            continue
+        r = sub.iloc[0]
+        balls = overs_to_balls(r["O"])
+        if balls == 0:
+            continue
+        econ_today = r["R"] / (balls / 6)
+        if econ_today <= b["econ"] - ECON_MARGIN:
+            return {"title": f"Let {b['player']} off the hook",
+                    "detail": f"Flagged as one of their weakest bowlers this season (econ "
+                              f"{b['econ']}), but bowled at {round(econ_today, 2)}/over against us "
+                              f"today — better than his norm."}
+    return None
+
+
+def build_match_recap(bat, bowl, results, gladiators, teams_data):
+    """Post-match 'what we got right / wrong' plus Star of the Match for the latest completed
+    match, or None if this team hasn't played yet. Each right/wrong bucket is capped at 3 and
+    never padded — a quiet match with no clear signal just returns fewer."""
+    match = latest_completed_match(results, gladiators)
+    if match is None:
+        return None
+    them = teams_data[match["opponent"]]
+    us_strengths = teams_data[gladiators]["bowlingStrengths"]
+
+    right_generators = [
+        lambda: verdict_toss_right(match, them["toss"]),
+        lambda: verdict_par_target_right(match, them["parTarget"]),
+        lambda: verdict_key_batsman_right(match, bat, them),
+        lambda: verdict_bowling_strength_right(match, bowl, gladiators, us_strengths),
+        lambda: verdict_weak_bowler_right(match, bowl, them["weakBowlers"]),
+    ]
+    wrong_generators = [
+        lambda: verdict_toss_wrong(match, them["toss"]),
+        lambda: verdict_par_target_wrong(match, them["parTarget"]),
+        lambda: verdict_key_batsman_wrong(match, bat, them),
+        lambda: verdict_bowling_strength_wrong(match, bowl, gladiators, us_strengths),
+        lambda: verdict_weak_bowler_wrong(match, bowl, them["weakBowlers"]),
+    ]
+    right = [r for r in (g() for g in right_generators) if r is not None][:3]
+    wrong = [r for r in (g() for g in wrong_generators) if r is not None][:3]
+
+    points = match_points_table(bat, bowl, match["matchId"], gladiators, league_points_stats(bat, bowl))
+    star = points[0] if points else None
+
+    return {
+        "matchId": match["matchId"], "opponent": match["opponent"], "result": match["result"],
+        "date": match["date"],
+        "gladiatorsScore": match["teamScore"], "opponentScore": match["oppScore"],
+        "battedFirst": match["battedFirst"],
+        "right": right, "wrong": wrong,
+        "starOfMatch": star, "pointsTable": points,
+    }
+
+
 def dismissal_breakdown(bat, team, player):
     sub = bat[(bat["team"] == team) & (bat["playerClean"] == player) & bat["dtype"].notna()]
     total = len(sub)
@@ -1239,10 +1572,18 @@ def build():
         print(f"  best XI: {len(best_xi['players'])} players from a qualifying squad of {best_xi['squadSize']}")
         print(f"  AI insights: {len(ai_insights)}")
 
+        match_recap = build_match_recap(bat, bowl, results, gladiators, teams_data)
+        if match_recap is None:
+            print("  match recap: no completed matches yet")
+        else:
+            star_name = match_recap["starOfMatch"]["player"] if match_recap["starOfMatch"] else None
+            print(f"  match recap: {len(match_recap['right'])} right, {len(match_recap['wrong'])} wrong, star={star_name}")
+
         out["series"][key] = {
             "label": cfg["label"], "gladiators": gladiators,
             "opponents": opponents, "upcoming": upcoming, "teams": teams_data,
             "deathOversLeaders": death_leaders, "gladiatorsCharts": gladiators_charts,
+            "matchRecap": match_recap,
         }
 
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"

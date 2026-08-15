@@ -151,6 +151,35 @@ select#opponent-select {
 }
 .ai-insight-title { font-weight: 700; font-size: 0.98rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
 .ai-insight-detail { font-size: 0.84rem; color: var(--muted); line-height: 1.5; }
+.ai-insight-card.positive .ai-insight-rank { background: var(--win); }
+.ai-insight-card.negative .ai-insight-rank { background: var(--loss); }
+
+/* ── Match recap ───────────────────────────────────────────────────── */
+.recap-header { font-size: 0.95rem; margin-bottom: 1rem; }
+.recap-date { color: var(--muted); font-size: 0.82rem; margin-left: 0.5rem; }
+.star-card {
+  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(255,195,0,0.12), rgba(255,195,0,0.02));
+  border: 1px solid rgba(255,195,0,0.4); border-radius: var(--radius);
+  padding: 1.2rem 1.4rem; margin-bottom: 1.4rem;
+}
+.star-badge { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); font-weight: 800; }
+.star-name { font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.4rem; margin-top: 0.25rem; }
+.star-lines { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
+.star-points { margin-left: auto; text-align: right; }
+.star-points .num { font-family: "Sora", sans-serif; font-weight: 800; font-size: 2rem; color: var(--gold); line-height: 1; }
+.star-points .label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.recap-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.2rem; }
+.recap-col h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.8rem; }
+.recap-col.right h3 { color: var(--win); }
+.recap-col.wrong h3 { color: var(--loss); }
+.recap-col .ai-insight-card { margin-bottom: 1.3rem; }
+.points-table-wrap { margin-top: 1.6rem; }
+.points-table-wrap h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 0.7rem; }
+.points-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.points-table th, .points-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--line); }
+.points-table th { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.points-table td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
 
 /* ── Sections ──────────────────────────────────────────────────────── */
 section { margin: 2.4rem 0; scroll-margin-top: 5.5rem; }

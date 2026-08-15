@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Last Match Recap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">What we got right, what we got wrong, who stood out</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link" href="charts.html">Gladiators charts →</a>
+    <a class="nav-link" href="methodology.html">Methodology</a>
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </span>
+</nav>
+
+<main>
+  <header class="page-header">
+    <h1>Last match recap</h1>
+    <p>Auto-generated after each completed match: pre-match reads (toss advice, par score,
+      key-batsman threshold, bowling strengths/weaknesses) checked against what actually
+      happened, plus a fully disclosed points-based Star of the Match. Never judges squad
+      selection — only how the players who actually took the field performed, since who's
+      available is volatile and outside anyone's control. Pick a series below.</p>
+    <div class="data-updated-badge" id="data-updated-badge"></div>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Series</label>
+      <div class="pills" id="series-pills"></div>
+    </div>
+  </div>
+
+  <section id="sec-recap">
+    <div class="methodology-links">
+      <span class="methodology-links-label">How this is calculated:</span>
+      <a class="methodology-link" href="methodology.html#sec-recap-verdicts">Right/wrong verdicts</a>
+      <a class="methodology-link" href="methodology.html#sec-star">Star of the Match</a>
+    </div>
+    <div id="recap-content"></div>
+  </section>
+
+  <footer>Built from 2026 season scorecards scraped from cricclubs.com/NJSBCL · matches with no result (abandoned/no play) are excluded.</footer>
+</main>
+
+<script src="data.js"></script>
+<script src="recap.js"></script>
+</body>
+</html>

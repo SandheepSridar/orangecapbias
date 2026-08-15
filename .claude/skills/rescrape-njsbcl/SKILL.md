@@ -465,8 +465,49 @@ python3 build_data.py
 
 Spot-check the output against something you know is true — e.g. Samudhra Gladiators' win/loss
 record should match the points table shown on the NJSBCL homepage (2026 Division 1 tab), or ask
-Sandheep for a result he can eyeball. Then tell him it's done — he can just open
-`NJSBCL/dashboard/index.html` (or refresh it if already open) to see the refreshed data.
+Sandheep for a result he can eyeball. Then run Step 6 below before calling it done.
+
+## Step 6 — Data quality checks
+
+**Always run this after `build_data.py`, every rescrape — not optional.** It exists because a
+single missing trailing newline in a CSV once silently glued two rows into one (a real incident,
+2026-08-15 — see the Notes entry below) and the only symptom was a cryptic `ParserError` several
+functions deep inside `build_data.py`. This script catches that whole class of problem right
+after the scrape, with a clear message pointing at the actual row.
+
+```
+cd NJSBCL && source .venv/bin/activate
+python3 dq_checks.py
+```
+
+Exits non-zero (and prints `FAIL` lines) if anything looks broken: corrupted/merged CSV rows,
+duplicate or invalid matchIds, out-of-range scores/wickets, a team missing from the points table,
+a bowling row with runs but zero balls bowled, `gladiators_overs.csv` missing its ball-detail
+columns or failing the legal-balls-per-over sanity check, `data.js` not parsing as valid JSON, or
+a series silently missing from `data.js` entirely. `WARN` lines don't fail the run but are worth
+a glance (e.g. `bowlerPhases`/`deathOversLeaders` coming back empty — expected if
+`gladiators_overs.csv` wasn't scraped this round, a real problem if it was).
+
+If it exits clean, tell Sandheep the rescrape is done — he can open `NJSBCL/dashboard/index.html`
+(or refresh it if already open) to see the refreshed data. If it fails, fix the underlying data
+before saying the rescrape is done — don't report success with known-bad data just because
+`build_data.py` itself didn't crash (it often won't; corrupted data quietly produces wrong
+numbers, not an exception).
+
+## What each dashboard feature needs from this scrape
+
+Every feature on the dashboard is covered by the steps above — there's no feature that needs a
+scrape this skill doesn't already do. Use this table to confirm that, or to know which step to
+re-run if only one feature looks stale:
+
+| Dashboard feature(s) | Data source | Scrape step |
+|---|---|---|
+| Match results, Elo ratings + win probability, toss advice, par score/target to chase | `*_true_totals.csv` | Step 1 |
+| Top batsmen/bowlers, dismissal & wicket-type breakdowns, recent form, batting collapses, boundary dependence, top-scorer dependence, key-batsman win impact, win dependency, Best XI, squad leaderboards, bowling battle (strengths/weaknesses), strike-bowler match-up, chase-pacing calculator | `*_scorecards_batting.csv`, `*_scorecards_bowling.csv` | Steps 2-3 |
+| Upcoming fixtures, home/away record | `*_schedule.xlsx` | Step 4 |
+| Standings, season record | `*_points_table.csv` | Step 4b |
+| Bowler by phase, death overs (last 3), 2 of the 3 AI insights (phase-bowling mismatch, bowling-workload mismatch) | `*_gladiators_overs.csv` | Step 4c |
+| Last match recap (right/wrong verdicts + Star of the Match), the 3rd AI insight (batting-order mismatch) | reuses scorecards + true totals — no separate scrape | Steps 1-3 |
 
 ## Notes
 
@@ -498,6 +539,22 @@ Sandheep for a result he can eyeball. Then tell him it's done — he can just op
   day — falls back to `[]` gracefully on the older runs-only format. `load_death_overs()` was
   split into `load_gladiators_overs()` (generic loader) + `death_overs_only()` (last-3 filter) so
   both this and the death-overs card share one CSV read.
+- Added 2026-08-15: a **"Last match recap"** section on `index.html` (`matchRecap`, per series) —
+  auto-generated after every completed match, no separate scrape needed (reads the same
+  scorecards/true-totals CSVs step 1-2 already produce). Two parts: (1) up to 3 "right" and 3
+  "wrong" verdicts from `build_match_recap()`, each comparing a pre-match read the dashboard
+  already computes (toss advice, par score, key-batsman threshold, bowling strengths/weaknesses,
+  Best XI) against what actually happened in `latest_completed_match()`; (2) a disclosed
+  points-based **Star of the Match** (`match_points_table()` — batting: runs + boundaries + a
+  strike-rate bonus/penalty past 10 balls faced; bowling: wickets + dots + an economy
+  bonus/penalty past 2 overs; no fielding credit, since fielder names aren't parsed out of
+  dismissal text anywhere in this pipeline). Verified against a real match (VRK vs Jersey City
+  Dominators, 2026-08-15) added by hand-appending one match's rows directly to the combined
+  `weekenderscup_true_totals.csv`/`_scorecards_batting.csv`/`_scorecards_bowling.csv` (skipping
+  the raw-batch scrape+combine dance for a single already-known match) — this is exactly what hit
+  the missing-trailing-newline bug that motivated Step 6's `dq_checks.py`: appending straight onto
+  a file with no trailing `\n` silently concatenates onto the last line instead of starting a new
+  one. Run Step 6 after any hand-edit to these CSVs, not just after a full scrape.
 - `build_data.py` also computes a **home/away win-rate split** per team, purely derived from data
   already scraped in earlier steps — no new scrape needed. It works despite the schedule's
   `Ground` field not being a real venue (see the venue-data TODO below): `Ground` reliably names

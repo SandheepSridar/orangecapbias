@@ -17,6 +17,7 @@
   <span class="nav-right">
     <span class="nav-sub">How the numbers are calculated</span>
     <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link" href="recap.html">Last match recap</a>
     <a class="nav-link" href="charts.html">Gladiators charts →</a>
     <a class="nav-link" href="changelog.html">Changelog</a>
   </span>
@@ -44,6 +45,8 @@
   <a href="#sec-dependency" class="side-toc-link">Win dependency</a>
   <a href="#sec-bestxi" class="side-toc-link">Best XI selection</a>
   <a href="#sec-insights" class="side-toc-link">AI insights</a>
+  <a href="#sec-recap-verdicts" class="side-toc-link">Match recap verdicts</a>
+  <a href="#sec-star" class="side-toc-link">Star of the Match</a>
 </nav>
 
 <main>
@@ -392,6 +395,82 @@ bowlingScore = ( z(dot-ball %) − z(economy) ) ÷ 2            [min 8 overs —
         Their actual average batting positions this season are 3.5, 5.4, and 2.0. Gaps: A =
         3.5 − 1 = 2.5; B = 5.4 − 2 = <b>3.4</b>; C = 2.0 − 3 = −1.0. Player B has the biggest gap
         → the insight reads <b>"Move Player B up the batting order."</b></p>
+    </div>
+  </section>
+
+  <section id="sec-recap-verdicts">
+    <h2>Right/wrong verdicts <span class="q">— last-match recap</span></h2>
+    <p class="subhead">After each completed match, five checks compare a pre-match read the
+      dashboard already surfaces elsewhere against what actually happened. Each check only
+      returns a verdict when the evidence is reasonably clear-cut (a fixed margin, not a coin
+      flip) — a quiet match can come back with fewer than 3 in either bucket rather than being
+      padded to fill a quota. All five checks use full-season stats (which include the match just
+      played, since removing one match out of 15-20 barely moves a season average).</p>
+    <p class="subhead">Deliberately excludes squad selection ("did our top-rated picks even
+      play today") from right/wrong — who's actually available and picked is volatile and not a
+      strategic call this recap should second-guess. Every check below only evaluates how the
+      players who actually took the field performed, not who they were.</p>
+    <p class="subhead"><b>1. Format read:</b> did we bat/bowl first as the toss-advice
+      recommendation said, and did we win? <b>2. Par score:</b> batting first, did we score at or
+      near the par score to set (within 5 runs right, 15+ short is wrong)? Bowling first, did we
+      hold them near/below their usual first-innings total? <b>3. Key batsman:</b> did their
+      #1 run-scorer finish above or below his own "tipping point" threshold? <b>4. Bowling
+      strengths:</b> for whichever of our top economy/dot-rate bowlers actually bowled, did their
+      economy today back up their season number (within 1.0/over) or blow well past it?
+      <b>5. Weak bowlers:</b> when one of their flagged weakest bowlers actually bowled, did we
+      punish him (economy 1.0+/over worse than his season rate) or let him off (1.0+/over
+      better)?</p>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>Toss advice for an opponent says "bat first" (they win only 35% chasing vs 70% setting a
+        total). We bat first today and win → <b>right</b>, "read the format right." If instead we
+        bat first and lose, or we bowl first (going against the read) — no verdict either way,
+        since the evidence doesn't cleanly confirm or contradict the model.</p>
+    </div>
+  </section>
+
+  <section id="sec-star">
+    <h2>Star of the Match <span class="q">— a disclosed, bias-checked formula, not a judgment call</span></h2>
+    <p class="subhead">Batting and bowling only — fielding (catches, run-outs, stumpings) isn't
+      credited, since fielder names aren't extracted from dismissal text anywhere in this
+      pipeline. Every player who batted or bowled gets an impact score; highest wins. The full
+      score table for every player is shown alongside the pick, so the ranking is always
+      checkable, not just asserted.</p>
+    <p class="subhead"><b>Raw points, then z-scored — not raw points alone.</b> An earlier
+      version of this ranked players on raw points directly, and it was biased: wickets are
+      worth 20 points each and dot balls add up fast, so a routine bowling spell scored far more
+      than a routine batting innings just from the discipline's own arithmetic, not because it
+      was actually the better performance. Checked against every batting/bowling row this season
+      (2026-08-16): median bowling spell scored ~32-35 raw points vs ~3-5 for a median batting
+      innings — a ~7-10x gap that let a modest 3-wicket haul routinely outrank a well-struck
+      fifty, and compounded further for all-rounders, who stacked both scales. The fix: z-score
+      each discipline's raw points against its own league-wide distribution before combining —
+      same pattern this dashboard already uses everywhere else two different units need a fair
+      comparison (bowling strengths, Best XI, bowler-by-phase) — so a performance is judged
+      against a normal day in the <em>same</em> discipline, not against the other one's bigger
+      numbers.</p>
+    <div class="formula">batting points = runs + (4s &times; 1) + (6s &times; 2) + SR bonus   [SR bonus only if 10+ balls faced]
+  SR &ge; 150 &rarr; +10   |   SR &ge; 125 &rarr; +5   |   SR &lt; 60 &rarr; &minus;5
+
+bowling points = (wickets &times; 20) + (dot balls &times; 1) + economy bonus   [econ bonus only if 2+ overs bowled]
+  econ &le; 4 &rarr; +10   |   econ &le; 6 &rarr; +5   |   econ &ge; 10 &rarr; &minus;10   |   econ &ge; 8 &rarr; &minus;5
+
+battingZ = (batting points &minus; league-wide mean batting points) &divide; league-wide std dev
+bowlingZ = (bowling points &minus; league-wide mean bowling points) &divide; league-wide std dev
+
+impact score = battingZ + bowlingZ   (whichever apply — 0 contribution from a discipline not played)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>A bowler returns 4/8 off 4 overs (17 dot balls, econ 2.0) — bowling points = (4 &times;
+        20) + 17 + 10 (econ &le; 4 bonus) = <b>107</b>. Against a league-wide bowling mean of
+        ~36 and std dev of ~31 this season, bowlingZ = (107 &minus; 36) &divide; 31 &asymp;
+        <b>+2.31</b>. He also scored 12 off 9 balls (1 four, 1 six) — under the 10-ball minimum
+        for a strike-rate bonus, so batting points = 12 + 1 + 2 = <b>15</b>; against a batting
+        mean of ~10 and std dev of ~16, battingZ = (15 &minus; 10) &divide; 16 &asymp; <b>+0.30</b>.
+        Impact score = 2.31 + 0.30 = <b>+2.61</b>. A teammate who instead scored an unbeaten 67
+        off 30 balls with big boundary hitting (67 raw batting points) would score battingZ =
+        (67 &minus; 10) &divide; 16 &asymp; <b>+3.59</b> — now correctly ranking above the bowling
+        performance, which the old raw-points version would have gotten backwards.</p>
     </div>
   </section>
 
