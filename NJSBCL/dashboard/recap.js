@@ -99,6 +99,26 @@ function renderMatchRecap() {
   columns.append(rightCol, wrongCol);
   box.appendChild(columns);
 
+  if (recap.insightFollowthrough && recap.insightFollowthrough.length) {
+    const wrap = el("div", "followthrough-wrap");
+    wrap.appendChild(el("h3", null, "AI insight follow-through"));
+    wrap.appendChild(el("p", "doc-note", "Did we act on this season's AI insights, and what "
+      + "happened? Kept separate from right/wrong above since the outcome here is often mixed "
+      + "— the correct call and a bad individual result aren't mutually exclusive."));
+    const list = el("div", "ai-insights-list");
+    recap.insightFollowthrough.forEach((f, i) => {
+      const card = el("div", `ai-insight-card${f.actionable ? "" : " dim"}`);
+      card.append(
+        el("div", "ai-insight-rank", String(i + 1)),
+        el("div", "ai-insight-title", f.title),
+        el("div", "ai-insight-detail", f.detail),
+      );
+      list.appendChild(card);
+    });
+    wrap.appendChild(list);
+    box.appendChild(wrap);
+  }
+
   if (recap.pointsTable && recap.pointsTable.length) {
     const wrap = el("div", "points-table-wrap");
     wrap.appendChild(el("h3", null, "Full match impact scores"));

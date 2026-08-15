@@ -49,6 +49,7 @@
   <a href="#sec-bestxi" class="side-toc-link">Best XI selection</a>
   <a href="#sec-insights" class="side-toc-link">AI insights</a>
   <a href="#sec-recap-verdicts" class="side-toc-link">Match recap verdicts</a>
+  <a href="#sec-followthrough" class="side-toc-link">AI insight follow-through</a>
   <a href="#sec-star" class="side-toc-link">Star of the Match</a>
 </nav>
 
@@ -403,12 +404,13 @@ bowlingScore = ( z(dot-ball %) − z(economy) ) ÷ 2            [min 8 overs —
 
   <section id="sec-recap-verdicts">
     <h2>Right/wrong verdicts <span class="q">— last-match recap</span></h2>
-    <p class="subhead">After each completed match, five checks compare a pre-match read the
-      dashboard already surfaces elsewhere against what actually happened. Each check only
-      returns a verdict when the evidence is reasonably clear-cut (a fixed margin, not a coin
-      flip) — a quiet match can come back with fewer than 3 in either bucket rather than being
-      padded to fill a quota. All five checks use full-season stats (which include the match just
-      played, since removing one match out of 15-20 barely moves a season average).</p>
+    <p class="subhead">After each completed match, six checks (five of which have a "wrong"
+      mirror — the sixth only ever reports a hit, see #6) compare a pre-match read the dashboard
+      already surfaces elsewhere against what actually happened. Each check only returns a
+      verdict when the evidence is reasonably clear-cut (a fixed margin, not a coin flip) — a
+      quiet match can come back with fewer than 3 in either bucket rather than being padded to
+      fill a quota. All checks use full-season stats (which include the match just played, since
+      removing one match out of 15-20 barely moves a season average).</p>
     <p class="subhead">Deliberately excludes squad selection ("did our top-rated picks even
       play today") from right/wrong — who's actually available and picked is volatile and not a
       strategic call this recap should second-guess. Every check below only evaluates how the
@@ -422,13 +424,47 @@ bowlingScore = ( z(dot-ball %) − z(economy) ) ÷ 2            [min 8 overs —
       economy today back up their season number (within 1.0/over) or blow well past it?
       <b>5. Weak bowlers:</b> when one of their flagged weakest bowlers actually bowled, did we
       punish him (economy 1.0+/over worse than his season rate) or let him off (1.0+/over
-      better)?</p>
+      better)? <b>6. Bowling weaknesses, broader net:</b> whoever conceded the highest economy
+      for the opposition this match (min 2 overs) — if he wasn't already one of the 3 explicitly
+      flagged weakest bowlers, this only speaks up if his season economy independently sits
+      above the league average too, so a single expensive day doesn't get misread as a season-
+      long pattern that isn't actually there. When it fires, also folds in team-wide extras
+      (wides/no-balls) if notably high next to their own season rate.</p>
     <div class="doc-example">
       <div class="doc-example-label">Example</div>
       <p>Toss advice for an opponent says "bat first" (they win only 35% chasing vs 70% setting a
         total). We bat first today and win → <b>right</b>, "read the format right." If instead we
         bat first and lose, or we bowl first (going against the read) — no verdict either way,
         since the evidence doesn't cleanly confirm or contradict the model.</p>
+    </div>
+  </section>
+
+  <section id="sec-followthrough">
+    <h2>AI insight follow-through <span class="q">— did we act on it, and what happened?</span></h2>
+    <p class="subhead">For each of this season's (up to 3) AI insights, checks whether it was
+      actionable this match (the player it's about actually took the field) and, if so, whether
+      the recommendation was followed and what happened. Kept separate from the right/wrong
+      verdicts above on purpose — the outcome here is often genuinely mixed ("followed, but
+      didn't pay off today"), which a clean hit/miss verdict can't represent honestly. Each of
+      the 3 insight types is checked differently:</p>
+    <p class="subhead"><b>Batting-order insight</b> ("Move X up the order"): not actionable if X
+      didn't bat. If he did, followed = his batting position this match is at least half a spot
+      higher than his season-average position. Outcome reads off his actual score — 20+ counts
+      as paying off; anything less is reported as the correct call with a bad individual result
+      (plus a note that it cost nothing, when we still won). <b>Phase-bowling insight</b> ("Bowl
+      X more in overs Y-Z"): not actionable if X didn't bowl at all; followed = he bowled at
+      least one over specifically inside that phase this match (checked against the same
+      ball-by-ball data bowler-by-phase uses). <b>Bowling-workload insight</b> ("Bowl X more
+      overall"): not actionable if X didn't bowl; followed = he bowled 3+ overs (a near-full
+      allotment of the 4-over max).</p>
+    <div class="doc-example">
+      <div class="doc-example-label">Example</div>
+      <p>The season's AI insights include "Move Harshad up the batting order" (season-average
+        position 5.5). Today he batted at #2 — well up from 5.5, so followed = true — but was out
+        for a 3-ball duck. Since we still won the match, the follow-through note reads: "He
+        batted at #2 (up from his 5.5 season-average position, matching our insight), but was out
+        for a 3-ball duck. Correct process, bad individual outcome — though it cost nothing given
+        the final margin."</p>
     </div>
   </section>
 

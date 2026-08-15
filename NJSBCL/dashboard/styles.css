@@ -161,6 +161,7 @@ select#opponent-select {
 .ai-insight-detail { font-size: 0.84rem; color: var(--muted); line-height: 1.5; }
 .ai-insight-card.positive .ai-insight-rank { background: var(--win); }
 .ai-insight-card.negative .ai-insight-rank { background: var(--loss); }
+.ai-insight-card.dim { opacity: 0.65; }
 
 /* ── Match recap ───────────────────────────────────────────────────── */
 .recap-header { font-size: 0.95rem; margin-bottom: 1rem; }
@@ -184,6 +185,10 @@ select#opponent-select {
 .recap-col .ai-insight-card { margin-bottom: 1.3rem; }
 .points-table-wrap { margin-top: 1.6rem; }
 .points-table-wrap h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 0.7rem; }
+.followthrough-wrap { margin-top: 1.8rem; }
+.followthrough-wrap h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 0.4rem; }
+.followthrough-wrap .doc-note { margin-top: 0; margin-bottom: 1.1rem; }
+.followthrough-wrap .ai-insights-list { margin-top: 0; }
 .points-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
 .points-table th, .points-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--line); }
 .points-table th { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); font-weight: 600; }

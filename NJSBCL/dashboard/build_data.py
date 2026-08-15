@@ -891,6 +891,7 @@ def insight_phase_bowling(bowler_phases):
     if best is None:
         return None
     top, most_used, phase_label = best["top"], best["mostUsed"], best["phase"]
+    phase_bounds = PHASE_BOUNDARIES[PHASE_LABELS.index(phase_label)]
     return {
         "title": f"Bowl {top['player'].split()[0]} more in the {phase_label.lower()}",
         "detail": (
@@ -900,6 +901,8 @@ def insight_phase_bowling(bowler_phases):
             f"has actually bowled the most there ({most_used['overs']} overs, econ "
             f"{most_used['econ']}) despite a clearly worse record in that block."
         ),
+        "type": "phaseBowling", "player": top["player"],
+        "phaseLabel": phase_label, "phaseBounds": phase_bounds,
     }
 
 
@@ -927,6 +930,7 @@ def insight_batting_order(roster, avg_position):
             f"(average + strike rate, z-scored against the whole league) but has batted at an "
             f"average position of {pos:.1f} — well down the order for someone rated that highly."
         ),
+        "type": "battingOrder", "player": player, "seasonAvgPosition": pos,
     }
 
 
@@ -950,6 +954,7 @@ def insight_bowling_workload(bowling_strengths, bowling_leaderboard):
             f"total, while {most_used['player']} has bowled the most of anyone on the squad "
             f"({most_used['overs']} overs, econ {most_used['econ']})."
         ),
+        "type": "bowlingWorkload", "player": top["player"],
     }
 
 
@@ -1254,7 +1259,132 @@ def verdict_weak_bowler_wrong(match, bowl, them_weak):
     return None
 
 
-def build_match_recap(bat, bowl, results, gladiators, teams_data):
+def verdict_bowling_weakness_right(match, bowl, them_weak, weakness_pool):
+    """Broader than the named-weak-bowler check above: looks at whoever conceded the highest
+    economy for the opposition this match (min 2 overs bowled). Skips anyone already one of the
+    3 explicitly flagged weakest bowlers — that's verdict_weak_bowler_right's job, and covering
+    the same bowler twice would just be a duplicate bullet — and only speaks up for someone
+    outside that list if his season economy independently marks him as below the league average
+    too, so this doesn't just restate "he had one expensive day" as a season-long pattern that
+    isn't really there. Plus, when the team's overall extras this match are notably high next to
+    their own season rate, folds that in as supporting context, same two-part shape as the
+    manual recap this feature was modeled on."""
+    sub = bowl[(bowl["matchId"] == match["matchId"]) & (bowl["team"] == match["opponent"])].copy()
+    if sub.empty:
+        return None
+    sub["balls"] = sub["O"].apply(overs_to_balls)
+    sub = sub[sub["balls"] >= 12]
+    if sub.empty:
+        return None
+    sub["econToday"] = sub["R"] / (sub["balls"] / 6)
+    worst = sub.loc[sub["econToday"].idxmax()]
+    player = worst["bowlerClean"]
+    if player in {b["player"] for b in them_weak}:
+        return None
+    season_row = weakness_pool[(weakness_pool["team"] == match["opponent"]) & (weakness_pool["player"] == player)] \
+        if not weakness_pool.empty else weakness_pool
+    season_econ = float(season_row.iloc[0]["econ"]) if not season_row.empty else None
+    if season_econ is None or worst["econToday"] < season_econ + ECON_MARGIN:
+        return None
+    league_avg_econ = weakness_pool["econ"].mean() if not weakness_pool.empty else None
+    if league_avg_econ is None or season_econ <= league_avg_econ:
+        return None
+
+    detail = (f"{player} went for {int(worst['R'])} off {balls_to_overs_str(int(worst['balls']))} "
+              f"(econ {round(worst['econToday'], 2)}), the most expensive spell of the match — "
+              f"consistent with him not being one of their trusted bowlers.")
+    team_bowl = bowl[bowl["team"] == match["opponent"]].copy()
+    team_bowl["extras"] = team_bowl["wides"] + team_bowl["noballs"]
+    per_match_extras = team_bowl.groupby("matchId")["extras"].sum()
+    this_match_extras = int(sub["wides"].sum() + sub["noballs"].sum())
+    if len(per_match_extras) >= 5 and this_match_extras >= per_match_extras.mean() + 3:
+        wd, nb = int(sub["wides"].sum()), int(sub["noballs"].sum())
+        nb_part = f" + {nb} no-ball{'s' if nb != 1 else ''}" if nb else ""
+        detail += (f" Their attack also leaked {wd} wide{'s' if wd != 1 else ''}{nb_part} "
+                   f"({this_match_extras} extras) to us, matching the extras-prone profile we'd "
+                   f"flagged for their bowling unit generally.")
+    return {"title": "Their bowling weaknesses tracked", "detail": detail}
+
+
+def ai_insight_followthrough(insights, match, bat, bowl, gladiators, gladiators_overs):
+    """For each of this season's (up to 3) AI insights, checks whether it was actionable this
+    match (the player it's about actually took the field) and, if so, whether the
+    recommendation was followed and what happened — kept separate from the right/wrong verdicts
+    above because the outcome here is often genuinely mixed ('followed, but didn't pay off
+    today'), not a clean hit or miss the way those are."""
+    out = []
+    for insight in insights:
+        itype, player = insight.get("type"), insight.get("player")
+
+        if itype == "battingOrder":
+            sub = bat[(bat["matchId"] == match["matchId"]) & (bat["team"] == gladiators)].reset_index(drop=True)
+            idx = sub.index[sub["playerClean"] == player]
+            if idx.empty:
+                out.append({"title": insight["title"], "actionable": False,
+                            "detail": f"{player} didn't bat for us today, so this recommendation wasn't in play."})
+                continue
+            position = int(idx[0]) + 1
+            row = sub.loc[idx[0]]
+            runs, balls = int(row["R"]), int(row["B"])
+            season_pos = insight.get("seasonAvgPosition")
+            followed = season_pos is not None and position < season_pos - 0.5
+            if followed:
+                if runs >= 20:
+                    detail = (f"He batted at #{position} (up from his {season_pos:.1f} season-average "
+                              f"position, matching our insight) and it paid off — {runs} ({balls}b).")
+                else:
+                    score_desc = f"a {balls}-ball duck" if runs == 0 else f"{runs} ({balls}b)"
+                    tail = " — though it cost nothing given the final margin." if match["result"] == "Win" else ""
+                    detail = (f"He batted at #{position} (up from his {season_pos:.1f} season-average "
+                              f"position, matching our insight), but was out for {score_desc}. Correct "
+                              f"process, bad individual outcome{tail}")
+            else:
+                detail = (f"He batted at #{position} today" +
+                          (f" — about the same as his {season_pos:.1f} season-average position, so "
+                           f"this one wasn't really acted on." if season_pos is not None else "."))
+            out.append({"title": insight["title"], "actionable": True, "followed": followed, "detail": detail})
+
+        elif itype == "phaseBowling":
+            if gladiators_overs is None:
+                out.append({"title": insight["title"], "actionable": False,
+                            "detail": "Over-by-over data isn't available for this match."})
+                continue
+            lo, hi = insight["phaseBounds"]
+            match_overs = gladiators_overs[
+                (gladiators_overs["matchId"] == match["matchId"]) & (gladiators_overs["bowlerResolved"] == player)
+            ]
+            phase_overs = match_overs[(match_overs["overNum"] >= lo) & (match_overs["overNum"] <= hi)]
+            if phase_overs.empty:
+                detail = (f"{player} didn't bowl in {insight['phaseLabel'].lower()} today" +
+                          (" (though he did bowl elsewhere in the innings)." if not match_overs.empty else "."))
+                out.append({"title": insight["title"], "actionable": not match_overs.empty,
+                            "followed": False, "detail": detail})
+                continue
+            legal_balls = int(phase_overs["legalBalls"].sum())
+            runs = int(phase_overs["runs"].sum())
+            econ = round(runs / (legal_balls / 6), 2) if legal_balls else None
+            detail = (f"He bowled {len(phase_overs)} over(s) in {insight['phaseLabel'].lower()} today "
+                      f"(econ {econ}) — the recommendation was followed.")
+            out.append({"title": insight["title"], "actionable": True, "followed": True, "detail": detail})
+
+        elif itype == "bowlingWorkload":
+            sub = bowl[(bowl["matchId"] == match["matchId"]) & (bowl["team"] == gladiators) & (bowl["bowlerClean"] == player)]
+            if sub.empty:
+                out.append({"title": insight["title"], "actionable": False,
+                            "detail": f"{player} didn't bowl for us today, so this recommendation wasn't in play."})
+                continue
+            r = sub.iloc[0]
+            balls = overs_to_balls(r["O"])
+            followed = balls >= 18  # 3+ overs of a 4-over max allotment
+            econ = round(r["R"] / (balls / 6), 2) if balls else None
+            detail = (f"He bowled {balls_to_overs_str(balls)} overs today (econ {econ})" +
+                      (", a full workload — recommendation followed." if followed
+                       else ", still on the light side for someone we'd want bowling more."))
+            out.append({"title": insight["title"], "actionable": True, "followed": followed, "detail": detail})
+    return out
+
+
+def build_match_recap(bat, bowl, results, gladiators, teams_data, ai_insights, gladiators_overs, weakness_pool):
     """Post-match 'what we got right / wrong' plus Star of the Match for the latest completed
     match, or None if this team hasn't played yet. Each right/wrong bucket is capped at 3 and
     never padded — a quiet match with no clear signal just returns fewer."""
@@ -1270,6 +1400,7 @@ def build_match_recap(bat, bowl, results, gladiators, teams_data):
         lambda: verdict_key_batsman_right(match, bat, them),
         lambda: verdict_bowling_strength_right(match, bowl, gladiators, us_strengths),
         lambda: verdict_weak_bowler_right(match, bowl, them["weakBowlers"]),
+        lambda: verdict_bowling_weakness_right(match, bowl, them["weakBowlers"], weakness_pool),
     ]
     wrong_generators = [
         lambda: verdict_toss_wrong(match, them["toss"]),
@@ -1284,6 +1415,8 @@ def build_match_recap(bat, bowl, results, gladiators, teams_data):
     points = match_points_table(bat, bowl, match["matchId"], gladiators, league_points_stats(bat, bowl))
     star = points[0] if points else None
 
+    followthrough = ai_insight_followthrough(ai_insights, match, bat, bowl, gladiators, gladiators_overs)
+
     return {
         "matchId": match["matchId"], "opponent": match["opponent"], "result": match["result"],
         "date": match["date"],
@@ -1291,6 +1424,7 @@ def build_match_recap(bat, bowl, results, gladiators, teams_data):
         "battedFirst": match["battedFirst"],
         "right": right, "wrong": wrong,
         "starOfMatch": star, "pointsTable": points,
+        "insightFollowthrough": followthrough,
     }
 
 
@@ -1572,7 +1706,8 @@ def build():
         print(f"  best XI: {len(best_xi['players'])} players from a qualifying squad of {best_xi['squadSize']}")
         print(f"  AI insights: {len(ai_insights)}")
 
-        match_recap = build_match_recap(bat, bowl, results, gladiators, teams_data)
+        match_recap = build_match_recap(bat, bowl, results, gladiators, teams_data,
+                                         ai_insights, gladiators_overs, weakness_pool)
         if match_recap is None:
             print("  match recap: no completed matches yet")
         else:
