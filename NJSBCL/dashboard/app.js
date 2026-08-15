@@ -61,8 +61,9 @@ function buildSeriesPills() {
       if (state.series === key) return;
       state.series = key;
       state.showAllFixtures = false;
-      const opts = currentSeriesData().opponents;
-      state.opponent = opts.includes(state.opponent) ? state.opponent : opts[0];
+      const s = currentSeriesData();
+      const nextOpponent = s.upcoming && s.upcoming.length ? s.upcoming[0].opponent : s.opponents[0];
+      state.opponent = s.opponents.includes(state.opponent) ? state.opponent : nextOpponent;
       box.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
       b.classList.add("active");
       populateOpponentSelect();
@@ -78,7 +79,8 @@ function populateOpponentSelect() {
   const prev = state.opponent;
   sel.innerHTML = "";
   s.opponents.forEach((opp) => sel.appendChild(el("option", null, opp)));
-  state.opponent = s.opponents.includes(prev) ? prev : s.opponents[0];
+  const nextOpponent = s.upcoming && s.upcoming.length ? s.upcoming[0].opponent : s.opponents[0];
+  state.opponent = s.opponents.includes(prev) ? prev : nextOpponent;
   sel.value = state.opponent;
 }
 

@@ -16,7 +16,11 @@ import pandas as pd
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 OUT_FILE = Path(__file__).parent / "data.js"
-TODAY = datetime(2026, 8, 11)
+# Real current date, not a fixed snapshot — load_upcoming() filters the schedule against this,
+# so a hardcoded date here would silently stop dropping played matches from "upcoming fixtures"
+# once that date passed (caught 2026-08-16: a match played the day before was still showing as
+# upcoming because this was frozen at 2026-08-11).
+TODAY = datetime.now()
 
 SERIES = {
     "division1": {
@@ -1579,17 +1583,36 @@ def win_probability(elo_a, elo_b):
     return round(100 / (1 + 10 ** ((elo_b - elo_a) / 400)), 1)
 
 
-def load_upcoming(cfg, team):
-    """All remaining scheduled matches for `team`, soonest first. The dashboard shows
-    the first 3 highlighted with the rest behind a "show all" toggle — no cap here so
-    that toggle has real data to expand into."""
+def load_upcoming(cfg, team, results):
+    """All remaining scheduled matches for `team` that haven't been played yet, soonest first.
+    The dashboard shows the first 3 highlighted with the rest behind a "show all" toggle — no
+    cap here so that toggle has real data to expand into.
+
+    A pure date-vs-today cutoff isn't enough on its own: a match played earlier today is
+    already done, but the calendar day hasn't rolled over yet, so it'd still pass a ">= today"
+    filter and wrongly show as upcoming (caught 2026-08-15/16: exactly this). So on top of the
+    date filter, also drop any schedule row that already has a matching completed result for
+    this team — same opponent, same date (results' 'date' column comes from attach_venue()'s
+    schedule matching, already run by the time this is called)."""
     df = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
     df = df[(df["Team One"] == team) | (df["Team Two"] == team)].copy()
     df["parsedDate"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
-    upcoming = df[df["parsedDate"] >= TODAY].sort_values("parsedDate")
+    df["opponent"] = df.apply(lambda r: r["Team Two"] if r["Team One"] == team else r["Team One"], axis=1)
+
+    played = {
+        (r["opponent"], r["date"])
+        for _, r in results[results["team"] == team].iterrows() if pd.notna(r.get("date"))
+    }
+
+    # date-only comparison — TODAY carries a time-of-day (datetime.now()) but schedule dates are
+    # midnight-only, so comparing full datetimes would incorrectly drop a match scheduled for
+    # later today the moment the clock passes midnight.
+    upcoming = df[df["parsedDate"] >= pd.Timestamp(TODAY.date())].sort_values("parsedDate")
     out = []
     for _, r in upcoming.iterrows():
-        opponent = r["Team Two"] if r["Team One"] == team else r["Team One"]
+        opponent = r["opponent"]
+        if (opponent, r["parsedDate"].strftime("%b %d, %Y")) in played:
+            continue
         out.append({
             "date": r["parsedDate"].strftime("%a, %b %d %Y"),
             "time": str(r["Time"]),
@@ -1609,7 +1632,7 @@ def build():
         print(f"  venue matching: {venue_stats['matched']}/{venue_stats['totalMatches']} matches "
               f"({venue_stats['noScheduleRow']} no schedule row, {venue_stats['groundMismatch']} ground mismatch)")
 
-        upcoming = load_upcoming(cfg, gladiators)
+        upcoming = load_upcoming(cfg, gladiators, results)
         print(f"  upcoming: {len(upcoming)}")
 
         standings = load_points_table(cfg)
