@@ -1388,7 +1388,8 @@ def ai_insight_followthrough(insights, match, bat, bowl, gladiators, gladiators_
     return out
 
 
-def build_match_recap(bat, bowl, results, gladiators, teams_data, ai_insights, gladiators_overs, weakness_pool):
+def build_match_recap(bat, bowl, results, gladiators, teams_data, ai_insights, gladiators_overs,
+                       weakness_pool, league_stats):
     """Post-match 'what we got right / wrong' plus Star of the Match for the latest completed
     match, or None if this team hasn't played yet. Each right/wrong bucket is capped at 3 and
     never padded — a quiet match with no clear signal just returns fewer."""
@@ -1416,7 +1417,7 @@ def build_match_recap(bat, bowl, results, gladiators, teams_data, ai_insights, g
     right = [r for r in (g() for g in right_generators) if r is not None][:3]
     wrong = [r for r in (g() for g in wrong_generators) if r is not None][:3]
 
-    points = match_points_table(bat, bowl, match["matchId"], gladiators, league_points_stats(bat, bowl))
+    points = match_points_table(bat, bowl, match["matchId"], gladiators, league_stats)
     star = points[0] if points else None
 
     followthrough = ai_insight_followthrough(ai_insights, match, bat, bowl, gladiators, gladiators_overs)
@@ -1430,6 +1431,32 @@ def build_match_recap(bat, bowl, results, gladiators, teams_data, ai_insights, g
         "starOfMatch": star, "pointsTable": points,
         "insightFollowthrough": followthrough,
     }
+
+
+def season_star_leaderboard(bat, bowl, results, gladiators, league_stats):
+    """'Star of the tournament so far' — each Gladiators player's Star of the Match impact score
+    (same z-scored formula, see league_points_stats) summed across every completed match this
+    season. Ranked by total, not per-match average: a tournament-long standout is about total
+    contribution delivered over the season, not efficiency in a small sample, same reasoning as
+    why real player-of-the-series awards go to cumulative impact rather than a rate stat."""
+    match_ids = sorted(results[results["team"] == gladiators]["matchId"].unique())
+    totals = {}
+    for match_id in match_ids:
+        rows = match_points_table(bat, bowl, int(match_id), gladiators, league_stats)
+        for i, r in enumerate(rows):
+            entry = totals.setdefault(r["player"], {
+                "player": r["player"], "totalImpact": 0.0, "matches": 0, "motmCount": 0,
+            })
+            entry["totalImpact"] += r["impactScore"]
+            entry["matches"] += 1
+            if i == 0:
+                entry["motmCount"] += 1
+    rows = list(totals.values())
+    for r in rows:
+        r["totalImpact"] = round(r["totalImpact"], 2)
+        r["avgImpact"] = round(r["totalImpact"] / r["matches"], 2)
+    rows.sort(key=lambda r: -r["totalImpact"])
+    return rows
 
 
 def dismissal_breakdown(bat, team, player):
@@ -1716,6 +1743,8 @@ def build():
             bowler_phases, best_xi["roster"], batting_position_avg(bat, gladiators),
             teams_data[gladiators]["bowlingStrengths"], bowling_leaderboard,
         )
+        league_stats = league_points_stats(bat, bowl)
+        star_leaderboard = season_star_leaderboard(bat, bowl, results, gladiators, league_stats)
         gladiators_charts = {
             "bestXI": best_xi,
             "eloHistory": gladiators_elo_history,
@@ -1725,12 +1754,14 @@ def build():
             "winDependency": win_dependency(bat, bowl, results, gladiators),
             "bowlerPhases": bowler_phases,
             "aiInsights": ai_insights,
+            "starLeaderboard": star_leaderboard,
         }
         print(f"  best XI: {len(best_xi['players'])} players from a qualifying squad of {best_xi['squadSize']}")
         print(f"  AI insights: {len(ai_insights)}")
+        print(f"  star leaderboard: {len(star_leaderboard)} players across {len(results[results['team'] == gladiators])} matches")
 
         match_recap = build_match_recap(bat, bowl, results, gladiators, teams_data,
-                                         ai_insights, gladiators_overs, weakness_pool)
+                                         ai_insights, gladiators_overs, weakness_pool, league_stats)
         if match_recap is None:
             print("  match recap: no completed matches yet")
         else:

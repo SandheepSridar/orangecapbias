@@ -67,9 +67,9 @@ a { color: var(--blue); text-decoration: none; }
    centered <main>. Below the breakpoint there isn't room without
    overlapping content, so it's hidden and users just scroll as before. ── */
 .side-toc {
-  display: none; position: fixed; top: 6.5rem; left: 2rem; width: 12.5rem;
+  display: none; position: fixed; top: 8.8rem; left: 2rem; width: 12.5rem;
   flex-direction: column; gap: 0.15rem;
-  max-height: calc(100vh - 8rem); overflow-y: auto; z-index: 40;
+  max-height: calc(100vh - 10.3rem); overflow-y: auto; z-index: 40;
 }
 .side-toc-label {
   font-size: 0.7rem; font-weight: 700; color: var(--muted);
@@ -194,6 +194,23 @@ select#opponent-select {
 .points-table th, .points-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--line); }
 .points-table th { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .points-table td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* ── Tournament star ticker (season-long, top 2 per series, horizontal
+   auto-scrolling strip — like a stock ticker / news-headline crawl) ────── */
+.ticker-bar { display: flex; align-items: center; background: var(--panel); border-bottom: 1px solid var(--line); height: 2.5rem; }
+.ticker-label { flex-shrink: 0; padding: 0 1rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold); border-right: 1px solid var(--line); white-space: nowrap; }
+.ticker-viewport { flex: 1; overflow: hidden; height: 100%; -webkit-mask-image: linear-gradient(to right, transparent, #000 2rem, #000 calc(100% - 2rem), transparent); mask-image: linear-gradient(to right, transparent, #000 2rem, #000 calc(100% - 2rem), transparent); }
+.ticker-track { display: flex; align-items: center; height: 100%; width: max-content; animation: ticker-scroll linear infinite; }
+.ticker-bar:hover .ticker-track { animation-play-state: paused; }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-item { display: flex; align-items: center; gap: 0.45rem; padding: 0 1.4rem; font-size: 0.8rem; white-space: nowrap; }
+.ticker-item .ti-series { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; color: var(--muted); }
+.ticker-item .ti-rank { font-weight: 700; color: var(--muted); }
+.ticker-item .ti-player { font-weight: 600; }
+.ticker-item .ti-impact { font-weight: 800; font-variant-numeric: tabular-nums; }
+.ticker-item.ti-leader .ti-rank, .ticker-item.ti-leader .ti-player, .ticker-item.ti-leader .ti-impact { color: var(--gold); }
+.ticker-sep { color: var(--line); }
+@media (max-width: 560px) { .ticker-label { display: none; } }
 
 /* ── Sections ──────────────────────────────────────────────────────── */
 section { margin: 2.4rem 0; scroll-margin-top: 5.5rem; }
