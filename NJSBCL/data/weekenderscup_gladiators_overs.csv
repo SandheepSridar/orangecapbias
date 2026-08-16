@@ -4,9 +4,9 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 18687,3,Vinit B,3,6,3,0,0,0
 18687,4,Willish P,4,6,4,0,2,0
 18687,5,Ankur C,2,6,4,0,0,0
-18687,6,sandeep s,14,6,2,1,2,0
+18687,6,Sandeep S,14,6,2,1,2,0
 18687,7,Ankur C,1,6,5,0,0,0
-18687,8,sandeep s,2,6,4,1,0,0
+18687,8,Sandeep S,2,6,4,1,0,0
 18687,9,Harshad P,3,6,5,2,2,0
 18687,10,Vipul J,5,6,4,1,2,1
 18687,11,Harshad P,8,6,3,0,2,0
@@ -16,9 +16,9 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 18687,15,Ashish S,4,6,4,0,2,0
 18687,16,Willish P R,5,5,1,1,1,0
 18893,1,Vinit B,2,6,5,1,0,0
-18893,2,sandeep s,2,6,4,1,0,0
+18893,2,Sandeep S,2,6,4,1,0,0
 18893,3,Vinit B,3,6,3,0,0,0
-18893,4,sandeep s,2,6,5,1,1,0
+18893,4,Sandeep S,2,6,5,1,1,0
 18893,5,Sushil G,2,6,4,0,0,0
 18893,6,Suraj Pai M,0,6,6,0,0,0
 18893,7,Sushil G,16,6,2,0,0,0
@@ -31,9 +31,9 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 18893,14,Harshad P,3,6,4,0,1,0
 18893,15,Baseer Ahmed,9,6,3,1,0,0
 18893,16,Harshad P,6,6,5,0,0,0
-19017,1,sandeep s,3,6,3,0,0,0
+19017,1,Sandeep S,3,6,3,0,0,0
 19017,2,Suraj Pai M,10,6,1,0,0,0
-19017,3,sandeep s,8,6,2,0,1,0
+19017,3,Sandeep S,8,6,2,0,1,0
 19017,4,Ankur C,4,6,5,0,1,1
 19017,5,Ashish S,10,6,4,1,2,0
 19017,6,Ankur C,2,6,4,0,0,0
@@ -46,7 +46,7 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 19017,13,Suraj Pai M,3,6,4,0,0,0
 19017,14,Harshad P,20,6,1,0,1,0
 19106,1,Baseer Ahmed,4,6,3,0,1,0
-19106,2,sandeep s,9,6,2,0,2,0
+19106,2,Sandeep S,9,6,2,0,2,0
 19106,3,Baseer Ahmed,4,6,2,1,0,0
 19106,4,Suraj Pai M,5,6,1,1,0,0
 19106,5,Baseer Ahmed,2,6,4,1,0,0
@@ -54,9 +54,9 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 19106,7,Avteet C,1,6,5,0,0,0
 19106,8,Sushil G,3,6,4,0,0,0
 19106,9,Willish P,7,6,3,0,1,0
-19106,10,sandeep s,5,6,3,0,1,0
+19106,10,Sandeep S,5,6,3,0,1,0
 19106,11,Willish P,2,6,4,1,0,0
-19106,12,sandeep s,3,6,4,0,0,0
+19106,12,Sandeep S,3,6,4,0,0,0
 19106,13,Harshad P,3,6,4,0,0,0
 19106,14,Suraj Pai M,3,6,3,2,0,0
 19106,15,Harshad P,4,6,3,0,1,0
@@ -69,18 +69,18 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 19257,6,Ankur C,1,6,6,1,1,0
 19257,7,Vinit B,2,6,5,0,0,0
 19257,8,Ankur C,1,6,6,1,1,0
-19257,9,sandeep s,1,6,5,1,0,0
+19257,9,Sandeep S,1,6,5,1,0,0
 19257,10,Harshad P,10,6,2,0,0,0
-19257,11,sandeep s,2,6,5,1,0,0
+19257,11,Sandeep S,2,6,5,1,0,0
 19257,12,Harshad P,14,6,2,0,0,0
 19257,13,Naveen R S,9,6,3,0,0,0
 19257,14,Ankur C,3,6,3,1,0,0
 19257,15,Naveen R S,7,6,3,0,0,0
 19257,16,Vinit B,10,6,1,1,0,0
 19316,1,Vinit B,9,6,3,0,0,0
-19316,2,sandeep s,2,6,6,0,2,0
+19316,2,Sandeep S,2,6,6,0,2,0
 19316,3,Vinit B,6,6,4,0,1,0
-19316,4,sandeep s,5,6,3,1,1,0
+19316,4,Sandeep S,5,6,3,1,1,0
 19316,5,Avteet C,3,6,3,0,0,0
 19316,6,Sushil G,3,6,3,1,0,0
 19316,7,Avteet C,7,6,4,1,0,0
@@ -90,13 +90,13 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 19316,11,Tejdeep M,14,6,4,1,7,0
 19316,12,Harshad P,2,3,3,2,2,0
 19465,1,Vipul J,3,6,6,0,0,2
-19465,2,sandeep s,4,6,3,1,0,0
+19465,2,Sandeep S,4,6,3,1,0,0
 19465,3,Harshad P,12,6,3,1,3,0
-19465,4,sandeep s,1,6,6,1,1,0
+19465,4,Sandeep S,1,6,6,1,1,0
 19465,5,Ankur C,1,6,5,0,0,0
-19465,6,sandeep s,1,6,5,1,0,0
+19465,6,Sandeep S,1,6,5,1,0,0
 19465,7,Naveen R S,11,6,1,1,0,1
-19465,8,sandeep s,1,6,5,0,0,0
+19465,8,Sandeep S,1,6,5,0,0,0
 19465,9,Ankur C,13,6,4,1,2,0
 19465,10,Naveen R S,5,6,4,1,0,0
 19465,11,Ashish S,12,6,2,0,3,1
@@ -125,15 +125,15 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 19694,3,Ankur C,9,6,3,0,0,0
 19694,4,Vinit B,5,6,4,0,0,0
 19694,5,Ankur C,4,6,5,2,0,0
-19694,6,sandeep s,2,6,4,1,0,0
+19694,6,Sandeep S,2,6,4,1,0,0
 19694,7,Suraj Pai M,11,6,3,0,0,1
-19694,8,sandeep s,12,6,4,1,2,0
+19694,8,Sandeep S,12,6,4,1,2,0
 19694,9,Vinit B,2,6,4,0,0,0
 19694,10,Ankur C,0,6,6,2,0,0
 19694,11,Vinit B,5,6,3,0,0,0
-19694,12,sandeep s,10,6,2,0,0,0
+19694,12,Sandeep S,10,6,2,0,0,0
 19694,13,Ankur C,0,6,6,0,0,0
-19694,14,sandeep s,3,6,4,1,1,0
+19694,14,Sandeep S,3,6,4,1,1,0
 19694,15,Avteet C,0,6,6,2,0,0
 19694,16,Suraj Pai M,0,2,2,1,0,0
 19769,1,Avteet C,1,6,5,2,0,0
@@ -159,9 +159,9 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 19992,7,Harshad P,11,6,4,2,2,0
 19992,8,Vinit B,1,6,5,0,0,0
 19992,9,Harshad P,2,6,4,1,0,0
-19992,10,sandeep s,2,6,5,1,1,0
+19992,10,Sandeep S,2,6,5,1,1,0
 19992,11,Naveen R S,0,6,6,1,0,0
-19992,12,sandeep s,1,3,2,1,0,0
+19992,12,Sandeep S,1,3,2,1,0,0
 20069,1,Vinit B,2,6,5,1,1,0
 20069,2,Avteet C,6,6,3,0,0,0
 20069,3,Harshad P,1,6,5,2,0,0
@@ -190,3 +190,15 @@ matchId,overNum,bowler,runs,legalBalls,dots,wickets,wides,noballs
 20215,14,Harshad P,8,6,4,1,0,0
 20215,15,Avteet C,9,6,3,0,0,0
 20215,16,Harshad P,8,6,2,2,0,0
+20288,1,Vinit B,4,6,3,0,1,0
+20288,2,Sandeep S,1,6,5,0,0,0
+20288,3,Harshad P,5,6,2,0,1,0
+20288,4,Vinit B,2,6,4,2,0,0
+20288,5,Baseer Ahmed,2,6,4,1,0,0
+20288,6,Vinit B,1,6,5,1,0,0
+20288,7,Baseer Ahmed,1,6,5,2,0,0
+20288,8,Harshad P,2,6,4,0,0,0
+20288,9,Sandeep S,4,6,4,1,0,1
+20288,10,Harshad P,1,6,6,1,1,0
+20288,11,Vinit B,1,6,5,1,0,0
+20288,12,Baseer Ahmed,2,2,1,1,1,0
