@@ -1,5 +1,5 @@
 /* NJSBCL Scout — "Star of the tournament" ticker, shared across every page except
-   methodology.html/changelog.html. Top 2 players per series (by season-total z-scored impact
+   methodology.html/changelog.html. Top 3 players per series (by season-total z-scored impact
    score, see build_data.py's season_star_leaderboard), rendered as a horizontal
    auto-scrolling strip like a stock ticker / news-headline crawl. Reads the same NJSBCL_DATA
    global as the rest of the dashboard. Wrapped in an IIFE so it doesn't collide with each
@@ -15,7 +15,7 @@
     const out = [];
     Object.keys(NJSBCL_DATA.series).forEach((key) => {
       const label = SERIES_LABEL[key] || key;
-      const rows = (NJSBCL_DATA.series[key].gladiatorsCharts.starLeaderboard || []).slice(0, 2);
+      const rows = (NJSBCL_DATA.series[key].gladiatorsCharts.starLeaderboard || []).slice(0, 3);
       rows.forEach((r, i) => out.push({ label, rank: i + 1, player: r.player, impact: r.totalImpact }));
     });
     return out;
