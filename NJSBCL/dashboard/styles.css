@@ -107,6 +107,7 @@ main { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
 .data-updated-badge::before { content: "🕓"; }
 
 .controls {
+  position: sticky; top: 62px; z-index: 45;
   display: flex; flex-wrap: wrap; gap: 1.4rem; align-items: flex-end;
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 1.1rem 1.3rem; margin: 1rem 0 2rem;
