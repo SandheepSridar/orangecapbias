@@ -627,6 +627,21 @@ footer { text-align: center; padding: 3rem 1.5rem 1.5rem; color: var(--grey); fo
   .ticker-item { padding: 0 1rem; font-size: 0.76rem; }
 }
 
+/* ── Mobile collapsible sections ──────────────────────────────────────
+   mobile-sections.js marks every top-level <section> as .collapsible and
+   starts it .collapsed, on every viewport — the actual hiding only
+   applies below the mobile breakpoint, so desktop is untouched even
+   though the classes are present in the DOM there too. ── */
+@media (max-width: 780px) {
+  section.collapsible > h2 { cursor: pointer; user-select: none; position: relative; padding-right: 1.7rem; }
+  .collapse-chevron {
+    position: absolute; right: 0; top: 0.1em; font-size: 0.8em; color: var(--muted);
+    transition: transform .2s ease;
+  }
+  section.collapsible.collapsed .collapse-chevron { transform: rotate(-90deg); }
+  section.collapsible.collapsed > *:not(h2) { display: none; }
+}
+
 /* ── Mobile tables ─────────────────────────────────────────────────────
    .phase-table-wrap already scrolls horizontally (4 phase columns don't
    fit at phone widths) — add a right-edge fade so the hidden columns read
