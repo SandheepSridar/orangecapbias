@@ -598,3 +598,46 @@ footer { text-align: center; padding: 3rem 1.5rem 1.5rem; color: var(--grey); fo
   main { padding: 0 1rem; }
   .page-header { padding: 1.6rem 0 1.1rem; }
 }
+
+/* ── Mobile nav ────────────────────────────────────────────────────────
+   Desktop assumes the brand + nav-sub + 3-4 nav-link pills all fit on one
+   row. Below ~780px they don't — instead of wrapping (which used to blow
+   the topnav up to 3+ lines tall and break every sticky-offset elsewhere
+   on the page), nav-right becomes its own horizontally swipeable strip so
+   .topnav stays a single, fixed-height row no matter how many links it
+   holds. .controls' sticky offset below is recalibrated to match this
+   shorter mobile nav height (measured live, not guessed). ── */
+@media (max-width: 780px) {
+  .topnav { padding: 0.6rem 1rem; gap: 0.6rem; }
+  .brand { font-size: 0.95rem; flex-shrink: 0; white-space: nowrap; }
+  .nav-sub { display: none; }
+  .nav-right {
+    flex: 1 1 auto; min-width: 0;
+    flex-wrap: nowrap; gap: 0.5rem; overflow-x: auto; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.4rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 1.4rem), transparent);
+    padding-right: 1.4rem;
+  }
+  .nav-right::-webkit-scrollbar { display: none; }
+  .nav-link { flex-shrink: 0; padding: 0.4rem 0.75rem; font-size: 0.8rem; }
+
+  .controls { top: 56px; }
+
+  .ticker-bar { height: 2.2rem; }
+  .ticker-item { padding: 0 1rem; font-size: 0.76rem; }
+}
+
+/* ── Mobile tables ─────────────────────────────────────────────────────
+   .phase-table-wrap already scrolls horizontally (4 phase columns don't
+   fit at phone widths) — add a right-edge fade so the hidden columns read
+   as "swipe for more" instead of looking like the data was cut off. The
+   recap points table has only 4 narrow columns; tightening its padding
+   lets it fit natively instead, which reads better than a scroll hint. ── */
+@media (max-width: 640px) {
+  .phase-table-wrap {
+    overflow-x: auto;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.6rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 1.6rem), transparent);
+  }
+  .points-table th, .points-table td { padding: 0.4rem 0.35rem; font-size: 0.76rem; }
+}
