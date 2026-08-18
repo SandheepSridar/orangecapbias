@@ -8,7 +8,7 @@ exports.handler = async function () {
   }
 
   const now = new Date();
-  const since = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
+  const since = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
   const query = `
     query {
       viewer {
