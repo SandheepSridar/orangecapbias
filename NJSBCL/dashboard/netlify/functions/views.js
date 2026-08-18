@@ -7,14 +7,15 @@ exports.handler = async function () {
     return { statusCode: 500, body: JSON.stringify({ error: 'CF_API_TOKEN not set' }) };
   }
 
-  const now = new Date().toISOString();
+  const now = new Date();
+  const since = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
   const query = `
     query {
       viewer {
         accounts(filter: { accountTag: "${ACCOUNT_ID}" }) {
           rumPageloadEventsAdaptiveGroups(
             limit: 1
-            filter: { siteTag: "${SITE_TAG}", datetime_geq: "2026-01-01T00:00:00Z", datetime_leq: "${now}" }
+            filter: { siteTag: "${SITE_TAG}", datetime_geq: "${since.toISOString()}", datetime_leq: "${now.toISOString()}" }
           ) {
             count
           }
