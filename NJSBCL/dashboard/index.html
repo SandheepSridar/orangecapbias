@@ -283,5 +283,19 @@
 <script src="tournament_star.js"></script>
 <script src="app.js"></script>
 <script src="mobile-sections.js"></script>
+<script>
+(function () {
+  if (new URLSearchParams(location.search).has('notrack')) {
+    localStorage.setItem('cf_notrack', '1');
+  }
+  if (!localStorage.getItem('cf_notrack')) {
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', '{"token": "923ae2140c224a73a0d1a4c30b38c433"}');
+    document.body.appendChild(s);
+  }
+})();
+</script>
 </body>
 </html>
