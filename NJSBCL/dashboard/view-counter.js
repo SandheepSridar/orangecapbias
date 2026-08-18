@@ -5,7 +5,7 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (typeof data.views === 'number') {
-        el.textContent = data.views.toLocaleString() + ' views';
+        el.textContent = data.views.toLocaleString() + ' views in the last 90 days';
       }
     })
     .catch(function () {});
