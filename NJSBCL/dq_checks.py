@@ -101,6 +101,35 @@ for key, cfg in SERIES.items():
     check("true_totals: wickets are in [0, 11]",
           totals["wkts1"].between(0, 11).all() and totals["wkts2"].between(0, 11).all())
 
+    def duplicate_severity(df, name_col, threshold=3):
+        """A handful of isolated (matchId, team) duplicates on 1-2 names is consistent
+        with a genuine bowling second spell or a rare same-name-different-player
+        collision — both confirmed to actually occur in this data (see
+        aggregate_bowling_spells() in build_data.py, and weekenders matchId 19417's two
+        different real players both named "Jithin Varghese"). `threshold`+ distinct
+        names duplicated for the same (matchId, team) instead looks like the whole
+        scorecard got appended twice — that's the dangerous case worth failing on."""
+        dupe_mask = df.duplicated(subset=["matchId", "team", name_col])
+        dupes = df.loc[dupe_mask, ["matchId", "team", name_col]].drop_duplicates()
+        counts = dupes.groupby(["matchId", "team"]).size()
+        return counts[counts >= threshold], counts[counts < threshold]
+
+    bat_bad, bat_mild = duplicate_severity(bat, "player")
+    check("scorecards_batting: no signs of a whole match double-scraped", bat_bad.empty,
+          f"matchId+team with 3+ duplicated players: {list(bat_bad.index)}")
+    warn(bat_mild.empty, "scorecards_batting has isolated player-name duplicates",
+         f"{list(bat_mild.index)} — likely a same-name-different-player collision "
+         f"(confirmed to happen, e.g. weekenders 19417 'Jithin Varghese'); spot check "
+         f"the live scorecard before assuming corruption")
+
+    bowl_bad, bowl_mild = duplicate_severity(bowl, "bowler")
+    check("scorecards_bowling: no signs of a whole match double-scraped", bowl_bad.empty,
+          f"matchId+team with 3+ duplicated bowlers: {list(bowl_bad.index)}")
+    warn(bowl_mild.empty, "scorecards_bowling has isolated bowler-name duplicates",
+         f"{list(bowl_mild.index)} — likely a genuine second spell (build_data.py's "
+         f"aggregate_bowling_spells() combines these) or a rare name collision; spot "
+         f"check the live scorecard if unsure")
+
     bat_matches = set(bat["matchId"].unique())
     totals_matches = set(totals["matchId"].unique())
     missing_from_totals = bat_matches - totals_matches

@@ -111,6 +111,43 @@ def balls_to_overs_str(b):
     return f"{b // 6}.{b % 6}"
 
 
+def aggregate_bowling_spells(bowl):
+    """A bowler occasionally gets two separate rows in the same match on cricclubs.com
+    itself — a genuine second spell, not a scraping artifact (verified 2026-08-22 by
+    cross-checking playerId on live scorecards for 3 real cases: Vinit Bharadwaj and
+    Sandeep I Shetty in division1 matchId 19930, Vamshidhar Reddy in weekenders matchId
+    19523 — all confirmed same person across both their rows). Without this, every
+    downstream "this bowler's match figures" lookup (verdict_bowling_strength_*,
+    verdict_weak_bowler_*, match_points_table) only ever saw whichever spell happened to
+    be the first row, silently dropping the other. Combine into one row per (matchId,
+    team, bowlerClean) so those all see the full match figures.
+
+    Known residual risk: the exact same match (weekenders 19417) also has a bowling
+    duplicate for "Jithin Varghese" that is NOT a real second spell — it's two different
+    Staten Island Strikers players who happen to share a name (confirmed via differing
+    playerId on the live scorecard), and this function has no way to tell that apart from
+    a genuine spell since the scraper doesn't capture playerId. It gets merged into one
+    fake combined figure anyway. Low blast radius today (affects opponent-team
+    weak-bowler flagging only, and only if that fabricated line happens to rank among a
+    team's 3 weakest), but a real gap — the proper fix is scraping playerId and grouping
+    by that instead of by name.
+
+    NOT applied to batting at all: the same name-collision risk applies there too, but
+    with no confirmed genuine repeat-innings case to justify merging (unlike bowling,
+    where 3 real multi-spell cases were confirmed), the balance favors leaving batting
+    rows as scraped and letting dq_checks flag duplicates for a human to eyeball."""
+    bowl = bowl.copy()
+    bowl["_balls"] = bowl["O"].apply(overs_to_balls)
+    agg = bowl.groupby(["matchId", "team", "bowlerClean"], as_index=False).agg(
+        bowler=("bowler", "first"), _balls=("_balls", "sum"), M=("M", "sum"),
+        Dot=("Dot", "sum"), R=("R", "sum"), W=("W", "sum"),
+        wides=("wides", "sum"), noballs=("noballs", "sum"),
+    )
+    agg["O"] = agg["_balls"].apply(lambda b: float(balls_to_overs_str(b)))
+    agg["Econ"] = agg.apply(lambda r: round(r["R"] / (r["_balls"] / 6), 2) if r["_balls"] else 0.0, axis=1)
+    return agg.drop(columns="_balls")
+
+
 def build_abbrev_map(bowl):
     """(team, abbrev-or-full lowercased) -> clean full bowler name, built from the
     complete scorecards_bowling roster. Used to resolve short forms like "Vinit B"
@@ -132,6 +169,7 @@ def load_series(key, cfg):
     bowl["team"] = bowl["team"].str.strip()
     bat["playerClean"] = bat["player"].apply(clean_name)
     bowl["bowlerClean"] = bowl["bowler"].apply(clean_name)
+    bowl = aggregate_bowling_spells(bowl)
 
     dtypes = bat["dismissal"].apply(parse_dismissal)
     bat["dtype"] = dtypes.apply(lambda x: x[0])
@@ -1225,7 +1263,7 @@ def verdict_bowling_strength_wrong(match, bowl, gladiators, us_strengths):
         if balls == 0:
             continue
         econ_today = r["R"] / (balls / 6)
-        if econ_today >= b["econ"] + ECON_MARGIN:
+        if econ_today > b["econ"] + ECON_MARGIN:
             return {"title": f"{b['player']} had an uncharacteristically expensive day",
                     "detail": f"Rated our most economical bowler this season (econ {b['econ']}), "
                               f"but went for {round(econ_today, 2)}/over today "
