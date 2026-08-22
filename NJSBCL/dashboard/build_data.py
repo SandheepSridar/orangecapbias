@@ -350,6 +350,11 @@ def key_batsman_win_impact(bat, results, team, player, min_each_bucket=3):
         return None
     high_win = round(100 * (high["result"] == "Win").mean())
     low_win = round(100 * (low["result"] == "Win").mean())
+    if high_win <= low_win:
+        # Inverted or flat split: scoring more didn't actually track with winning more, so
+        # this player isn't a "key batsman" signal by this metric — just noise on a small
+        # sample. Reporting it anyway would let the right/wrong verdicts fire backwards.
+        return None
     return {
         "threshold": int(median), "highN": len(high), "lowN": len(low),
         "highWinPct": high_win, "lowWinPct": low_win, "swing": high_win - low_win,
