@@ -664,7 +664,7 @@ function renderMetrics() {
          for opponent teams, only runs scored.</div>`
       : `<h3>What if we get ${wiPlayer} out early?</h3>
          <div style="font-size:1.6rem;font-weight:800;font-family:'Sora',sans-serif;">—</div>
-         <div class="mt-note">not enough matches yet to split his innings into a reliable high/low-score comparison.</div>`));
+         <div class="mt-note">not enough of a consistent pattern between his scoring and their results to call this either way.</div>`));
 
   grid.appendChild(el("div", "metric-tile",
     `<h3>${state.opponent} boundary dependence</h3>
