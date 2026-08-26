@@ -1616,22 +1616,6 @@ def load_points_table(cfg):
     return out
 
 
-def parse_runs_overs(s):
-    """Parses the points table's "for"/"against" field, e.g. "2269/238.5" -> (2269 runs,
-    1433 balls). Verified 2026-08-26 against the site's own published NetRR: despite the
-    rule book's NRR section describing a different fraction-of-an-over decimal table for
-    manual calculation (1 ball=.17, 2=.33, 3=.50 ...), the site's own "for"/"against"
-    export actually uses the ordinary scorecard "overs.balls" notation (same as every
-    other overs field on this site) — recomputing NRR from these fields with
-    overs_to_balls() reproduced the CSV's own netrr column to 4 decimal places for both
-    Pway Lions (3.5844) and Samudhra Gladiators (1.7525); the rule book's fraction table
-    would NOT have reproduced those values, so that's confirmed to be the wrong parser
-    for this particular field even though it's the "official" formula for computing NRR
-    by hand from raw ball-by-ball data."""
-    runs_str, overs_str = str(s).split("/")
-    return int(runs_str), overs_to_balls(float(overs_str))
-
-
 def full_standings_table(cfg):
     """Every team in every group, in rank order — the raw material for a standalone
     standings page. Unlike load_points_table() (a team -> row dict used to annotate a
@@ -1643,8 +1627,6 @@ def full_standings_table(cfg):
         rows = []
         for _, r in g.sort_values("rank").iterrows():
             pts_match = re.match(r"-?\d+", str(r["pts"]))
-            for_runs, for_balls = parse_runs_overs(r["for"])
-            against_runs, against_balls = parse_runs_overs(r["against"])
             rows.append({
                 "rank": int(r["rank"]), "team": r["team"].strip(),
                 "mat": int(r["mat"]), "won": int(r["won"]), "lost": int(r["lost"]),
@@ -1652,69 +1634,9 @@ def full_standings_table(cfg):
                 "pts": int(pts_match.group()) if pts_match else None,
                 "winPct": float(str(r["winpct"]).rstrip("%")),
                 "netRR": float(r["netrr"]),
-                "forRuns": for_runs, "forBalls": for_balls,
-                "againstRuns": against_runs, "againstBalls": against_balls,
             })
         groups.append({"group": group, "rows": rows})
     return groups
-
-
-def promotion_scenario(cfg, gladiators, standings_table, results):
-    """What it takes for `gladiators` to reach #1 in their group, or move up a spot,
-    given remaining fixtures — the "path to #1" section on the standings page. Each
-    team's remaining games come from load_upcoming() (the same real fixture list — date,
-    time, opponent — already used for our own upcoming-matches card), not a games-played
-    count, so the UI can show actual bullet-point fixtures ("beat X on date Y") instead
-    of just an abstract remaining-count.
-
-    Points are base-case only: every remaining win assumed worth 4 points. The rule
-    book's bonus point (winning by >=1.25x the loser's run rate) can't be predicted
-    for a hypothetical future match, so it's left out of the ceiling numbers and
-    surfaced as a caveat in the UI instead of baked into a false-precision figure.
-
-    "Clinchable" means our maximum possible points (if we win every remaining match)
-    exceeds that rival's maximum possible points (if THEY also win every remaining
-    match) — i.e. we'd finish above them on points alone regardless of how their
-    results go. When it's not clinchable, our result and theirs are still entangled;
-    the UI needs to say so rather than implying a guarantee that doesn't exist."""
-    group = next((g for g in standings_table if any(r["team"] == gladiators for r in g["rows"])), None)
-    if group is None:
-        return None
-    rows = group["rows"]
-    us = next(r for r in rows if r["team"] == gladiators)
-
-    def team_view(row):
-        fixtures = load_upcoming(cfg, row["team"], results)
-        remaining = len(fixtures)
-        return {
-            "team": row["team"], "pts": row["pts"], "netRR": row["netRR"],
-            "remaining": remaining, "ceiling": row["pts"] + 4 * remaining,
-            "fixtures": fixtures,
-        }
-
-    us_view = team_view(us)
-    already_first = us["rank"] == 1
-
-    def rival_view(rival):
-        rv = team_view(rival)
-        rv["gapNow"] = rival["pts"] - us["pts"]
-        rv["clinchable"] = us_view["ceiling"] > rv["ceiling"]
-        return rv
-
-    leader = rows[0]
-    above = next((r for r in rows if r["rank"] == us["rank"] - 1), None)
-
-    return {
-        "group": group["group"], "rank": us["rank"], "rankOf": len(rows),
-        "pts": us["pts"], "netRR": us["netRR"],
-        "remaining": us_view["remaining"], "ceiling": us_view["ceiling"], "fixtures": us_view["fixtures"],
-        "forRuns": us["forRuns"], "forBalls": us["forBalls"],
-        "againstRuns": us["againstRuns"], "againstBalls": us["againstBalls"],
-        "alreadyFirst": already_first,
-        "tiedOnPointsWithLeader": (not already_first) and us["pts"] == leader["pts"],
-        "leader": None if already_first else rival_view(leader),
-        "above": None if (already_first or above is None or above["team"] == leader["team"]) else rival_view(above),
-    }
 
 
 def compute_elo(results, track_team=None):
@@ -1822,11 +1744,6 @@ def build():
         })
         print(f"  opponents: {len(opponents)}")
 
-        promo_scenario = promotion_scenario(cfg, gladiators, standings_table, results)
-        if promo_scenario:
-            print(f"  promotion scenario: rank {promo_scenario['rank']}/{promo_scenario['rankOf']} "
-                  f"in Group {promo_scenario['group']}, {promo_scenario['remaining']} games left")
-
         weakness_pool = bowler_weakness_pool(bowl)
         strength_pool = bowler_strength_pool(bowl)
         print(f"  bowlers qualifying for weakness ranking (>= {MIN_OVERS_FOR_WEAKNESS} overs): {len(weakness_pool)}")
@@ -1923,7 +1840,6 @@ def build():
             "opponents": opponents, "upcoming": upcoming, "teams": teams_data,
             "deathOversLeaders": death_leaders, "gladiatorsCharts": gladiators_charts,
             "matchRecap": match_recap, "standingsTable": standings_table,
-            "promotionScenario": promo_scenario,
         }
 
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"
