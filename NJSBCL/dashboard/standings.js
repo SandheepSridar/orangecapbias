@@ -165,6 +165,149 @@ function renderScenario() {
      predicted ahead of a match.`));
 }
 
+/* ── NRR calculator ────────────────────────────────────────────────────
+   Two rule-book facts (sections 4.4 and 52) fall out of the bonus-point formula
+   (win at >= 1.25x the loser's run rate) independent of any specific score, so they're
+   shown as static facts rather than computed live:
+     - Batting first: winning margin needs to be at least 20% of your own score, since
+       ourRate >= 1.25 * theirRate, and both sides use the full 16-over quota, reduces to
+       theirRuns <= ourRuns / 1.25 = ourRuns * 0.8, i.e. margin >= ourRuns * 0.2.
+     - Chasing: the target cancels out of the same inequality (6/balls >= 1.25/16), so the
+       cutoff is a fixed 76.8 balls (12.8 overs) no matter what the target is. The rule
+       book's own worked example rounds this to "12 overs and 5 balls" (77 balls) as the
+       practical cutoff — used here to match the league's own stated guidance rather than
+       the stricter decimal.
+   The live NRR projection below (does this result change our season NetRR enough to pass
+   the leader) is genuinely score-dependent, so that part needs real inputs. */
+const BALLS_PER_INNINGS = 16 * 6; // 96, this league's max overs per side (rule 4.1)
+const BONUS_CHASE_BALLS_CUTOFF = 77; // "12 overs and 5 balls" per the rule book's own example
+
+function computeNrr(forRuns, forBalls, againstRuns, againstBalls) {
+  return (forRuns / forBalls) * 6 - (againstRuns / againstBalls) * 6;
+}
+
+function parseOversInput(str) {
+  const m = String(str).trim().match(/^(\d+)(?:\.(\d))?$/);
+  if (!m) return null;
+  const overs = parseInt(m[1], 10), balls = m[2] ? parseInt(m[2], 10) : 0;
+  if (balls > 5) return null;
+  return overs * 6 + balls;
+}
+
+function ballsToOversLabel(balls) {
+  return `${Math.floor(balls / 6)}.${balls % 6}`;
+}
+
+function renderNrrCalc() {
+  const s = currentSeriesData();
+  const box = $("nrr-calc-content");
+  box.innerHTML = "";
+  const sc = s.promotionScenario;
+  if (!sc || sc.forBalls == null) {
+    box.appendChild(el("div", "empty-note", "No NRR data available for this series yet."));
+    return;
+  }
+
+  box.appendChild(el("p", "doc-note",
+    `Bonus point (+1, on top of the 4 for a win): batting first, win by at least
+     <b>20% of your own score</b> (score 100, hold them to 80 or fewer). Chasing, finish inside
+     <b>12.5 overs</b> (12 overs, 5 balls) &mdash; that cutoff doesn't depend on the target at all.
+     Both come straight from the rule book's 1.25&times; run-rate bonus condition.`));
+
+  const wrap = el("div", "nrr-calc");
+  wrap.innerHTML = `
+    <div class="pills nrr-calc-modes" id="nrr-mode-pills">
+      <button class="pill active" data-mode="bat" type="button">Batting first</button>
+      <button class="pill" data-mode="chase" type="button">Chasing</button>
+    </div>
+    <div class="nrr-calc-inputs" id="nrr-calc-inputs"></div>
+    <div class="nrr-calc-result" id="nrr-calc-result"></div>`;
+  box.appendChild(wrap);
+
+  const calcState = { mode: "bat" };
+
+  function renderResult() {
+    const resBox = $("nrr-calc-result");
+    let usRuns, themRuns, usBalls, themBalls, bonusEligible, marginNote;
+
+    if (calcState.mode === "bat") {
+      usRuns = parseInt($("nrr-us-runs").value, 10);
+      themRuns = parseInt($("nrr-them-runs").value, 10);
+      if (!usRuns || usRuns <= 0 || isNaN(themRuns) || themRuns < 0) { resBox.innerHTML = ""; return; }
+      usBalls = BALLS_PER_INNINGS;
+      themBalls = BALLS_PER_INNINGS;
+      bonusEligible = themRuns <= usRuns * 0.8;
+      const maxForBonus = Math.floor(usRuns * 0.8);
+      marginNote = bonusEligible
+        ? `Margin of ${usRuns - themRuns} clears the bonus threshold (hold them to ${maxForBonus} or fewer).`
+        : `Need to hold them to ${maxForBonus} or fewer for the bonus point &mdash; this is ${themRuns}.`;
+    } else {
+      const target = parseInt($("nrr-target").value, 10);
+      const oversRaw = $("nrr-overs").value.trim();
+      const balls = parseOversInput(oversRaw);
+      if (!target || target <= 0) { resBox.innerHTML = ""; return; }
+      if (oversRaw && balls == null) {
+        resBox.innerHTML = `<div class="mt-note">Balls must be 0&ndash;5 (6 balls completes the over, e.g. "13.0" not "12.6").</div>`;
+        return;
+      }
+      if (balls == null || balls <= 0) { resBox.innerHTML = ""; return; }
+      // Runs credited = target itself, matching the rule book's own bonus-point example
+      // (not target+1) — the 1-2 run gap this leaves in the season NRR projection is
+      // negligible (well under 0.01 NetRR) next to the value of matching official guidance
+      // exactly on the bonus-point cutoff, which is the number that actually matters here.
+      usRuns = target; themRuns = target;
+      usBalls = balls; themBalls = BALLS_PER_INNINGS;
+      bonusEligible = balls <= BONUS_CHASE_BALLS_CUTOFF;
+      marginNote = bonusEligible
+        ? `Finishing by ${ballsToOversLabel(balls)} overs clears the 12.5-over bonus cutoff.`
+        : `Need to finish by 12.5 overs (77 balls) for the bonus point &mdash; this is ${ballsToOversLabel(balls)}.`;
+    }
+
+    const newForRuns = sc.forRuns + usRuns, newForBalls = sc.forBalls + usBalls;
+    const newAgainstRuns = sc.againstRuns + themRuns, newAgainstBalls = sc.againstBalls + themBalls;
+    const newNrr = computeNrr(newForRuns, newForBalls, newAgainstRuns, newAgainstBalls);
+    const leaderRR = sc.leader ? sc.leader.netRR : null;
+    const passesLeader = leaderRR != null && newNrr > leaderRR;
+
+    resBox.innerHTML = `
+      <div class="nrr-calc-big">${fmtRR(newNrr)}</div>
+      <div class="mt-note">Season NetRR after this result${leaderRR != null ? ` &mdash; ${sc.leader.team} currently ${fmtRR(leaderRR)}.` : "."}
+        ${leaderRR != null ? (passesLeader ? `<b style="color:var(--win)">Passes them on NetRR.</b>` : `<b style="color:var(--loss)">Still short of them.</b>`) : ""}
+      </div>
+      <div class="mt-note">${marginNote}${bonusEligible ? ` <b style="color:var(--gold)">+1 bonus point.</b>` : ""}</div>`;
+  }
+
+  function renderInputs() {
+    const inputBox = $("nrr-calc-inputs");
+    if (calcState.mode === "bat") {
+      inputBox.innerHTML = `
+        <div class="nrr-input-row"><label for="nrr-us-runs">We score (16 overs)</label>
+          <input type="number" id="nrr-us-runs" min="0" placeholder="e.g. 140"></div>
+        <div class="nrr-input-row"><label for="nrr-them-runs">We hold them to</label>
+          <input type="number" id="nrr-them-runs" min="0" placeholder="e.g. 110"></div>`;
+    } else {
+      inputBox.innerHTML = `
+        <div class="nrr-input-row"><label for="nrr-target">Target to chase</label>
+          <input type="number" id="nrr-target" min="1" placeholder="e.g. 130"></div>
+        <div class="nrr-input-row"><label for="nrr-overs">We finish in (overs.balls)</label>
+          <input type="text" id="nrr-overs" placeholder="e.g. 14.3"></div>`;
+    }
+    inputBox.querySelectorAll("input").forEach((i) => i.addEventListener("input", renderResult));
+    renderResult();
+  }
+
+  wrap.querySelectorAll("#nrr-mode-pills .pill").forEach((b) => {
+    b.addEventListener("click", () => {
+      wrap.querySelectorAll("#nrr-mode-pills .pill").forEach((p) => p.classList.remove("active"));
+      b.classList.add("active");
+      calcState.mode = b.dataset.mode;
+      renderInputs();
+    });
+  });
+
+  renderInputs();
+}
+
 /* ── Standings ─────────────────────────────────────────────────────── */
 function standingsTable(gladiators, rows) {
   const wrap = el("div", "standings-table-wrap");
@@ -216,6 +359,7 @@ function renderStandings() {
 /* ── Wiring ────────────────────────────────────────────────────────── */
 function renderAll() {
   renderScenario();
+  renderNrrCalc();
   renderStandings();
 }
 

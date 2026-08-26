@@ -139,6 +139,29 @@ forfeit                        = 0 points to the forfeiting team, 4 to the oppon
       since they're different situations. Ranking within a group goes by points first, then
       head-to-head record, then net run rate (NRR) as the tiebreaker — see the rule book for the
       full tiebreaker order.</p>
+    <p class="subhead"><b>Net run rate</b>, straight from the rule book: a season-long average, not
+      a per-match number — every remaining match nudges it by only a little.</p>
+    <div class="formula">NRR = (total runs scored &divide; total overs faced) &minus; (total runs conceded &divide; total overs bowled)</div>
+    <p class="subhead">A team all out before using its full quota of overs is still credited with
+      the full quota (16) for that innings, not the over it was dismissed in — this only matters
+      for a team that gets bowled out; a team using all its overs naturally needs no adjustment.</p>
+    <p class="subhead"><b>Bonus point</b> (rule 52): the winning team gets an extra point if their
+      run rate for that match was at least 1.25&times; the losing team's. Working the inequality
+      through for each side of the game gives two fixed, target-independent cutoffs the standings
+      page's NRR calculator uses directly:</p>
+    <div class="formula">batting first: margin needed &ge; 20% of your own score
+  (ourRuns &ge; 1.25 &times; theirRuns, both sides on the full 16-over quota, rearranges to theirRuns &le; ourRuns &times; 0.8)
+
+chasing: finish within 12.8 overs, regardless of the target
+  (6 &divide; balls &ge; 1.25 &divide; 16 &mdash; the target cancels out of both sides)</div>
+    <div class="doc-example">
+      <div class="doc-example-label">Example (from the rule book itself)</div>
+      <p>Team A scores 80 off 16 overs (run rate 5). Team B needs a run rate of at least 5 &times;
+        1.25 = <b>6.25</b> to also earn the bonus — i.e. chasing 80 down in at most 80 &divide; 6.25 =
+        <b>12.8 overs</b>. The rule book rounds this to "12 overs and 5 balls" (77 balls) as the
+        practical cutoff, which is what the calculator uses rather than the stricter 76.8-ball
+        decimal, to match the league's own stated guidance.</p>
+    </div>
   </section>
 
   <section id="sec-toss">

@@ -427,6 +427,25 @@ section h2 .q {
   font-size: 0.86rem; line-height: 1.55;
 }
 
+/* ── NRR calculator ────────────────────────────────────────────────── */
+.nrr-calc { margin-top: 1.6rem; }
+.nrr-calc-modes { margin-bottom: 1rem; }
+.nrr-calc-inputs { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.1rem; }
+.nrr-input-row { display: flex; flex-direction: column; gap: 0.35rem; }
+.nrr-input-row label { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+.nrr-input-row input {
+  background: #0f1420; color: var(--text); border: 1px solid var(--line);
+  border-radius: 10px; padding: 0.5rem 0.9rem; font-size: 1rem; font-family: inherit;
+  width: 9rem; font-variant-numeric: tabular-nums;
+}
+.nrr-input-row input:focus { outline: none; border-color: var(--gold); }
+.nrr-calc-result {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1rem 1.2rem; min-height: 1rem;
+}
+.nrr-calc-big { font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.8rem; color: var(--gold); }
+.nrr-calc-result .mt-note { margin-top: 0.4rem; }
+
 /* ── Standings ─────────────────────────────────────────────────────── */
 .standings-group-wrap { margin-top: 1.6rem; }
 .standings-group-wrap h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 0.7rem; }
