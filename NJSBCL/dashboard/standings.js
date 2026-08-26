@@ -52,6 +52,48 @@ function scenarioCard(title, bigText, note) {
   return card;
 }
 
+/* One row of the checklist. `runningPts` shown on the right for our own matches (a win
+   moves the total forward by 4); omitted for a rival's fixture, since we don't control
+   or know their outcome — those rows just flag "this one's worth watching." */
+function scenarioStep(num, title, date, runningPts) {
+  const watch = runningPts == null;
+  const step = el("div", `scenario-step${watch ? " watch" : ""}`);
+  const running = watch ? "" : `<div class="scenario-step-running"><span class="num">${runningPts}</span><span class="lbl">pts</span></div>`;
+  step.innerHTML = `<div class="scenario-step-num">${num}</div>
+    <div class="scenario-step-body">
+      <div class="scenario-step-title">${title}</div>
+      <div class="scenario-step-date">${date}</div>
+    </div>
+    ${running}`;
+  return step;
+}
+
+function ourChecklist(sc, heading) {
+  const wrap = el("div", "scenario-block");
+  wrap.appendChild(el("h3", null, heading));
+  const steps = el("div", "scenario-steps");
+  let running = sc.pts;
+  sc.fixtures.forEach((f, i) => {
+    running += 4;
+    steps.appendChild(scenarioStep(i + 1, `Beat ${f.opponent}`, f.date, running));
+  });
+  wrap.appendChild(steps);
+  return wrap;
+}
+
+function rivalWatchlist(rival) {
+  const wrap = el("div", "scenario-block");
+  wrap.appendChild(el("h3", null, `Meanwhile, keep an eye on ${rival.team}`));
+  wrap.appendChild(el("p", "doc-note",
+    `Their remaining fixtures — any loss or tie here works in our favor, independent of what we do.`));
+  const steps = el("div", "scenario-steps");
+  rival.fixtures.forEach((f, i) => {
+    steps.appendChild(scenarioStep(i + 1, `${rival.team} vs ${f.opponent}`, f.date, null));
+  });
+  wrap.appendChild(steps);
+  return wrap;
+}
+
 function renderScenario() {
   const s = currentSeriesData();
   const box = $("scenario-content");
@@ -63,67 +105,64 @@ function renderScenario() {
   }
 
   const grid = el("div", "metric-grid");
-
   grid.appendChild(scenarioCard(
     "Current position",
     `#${sc.rank} of ${sc.rankOf}`,
     `Group ${sc.group} &middot; ${plural(sc.pts, "pt")} &middot; NetRR ${fmtRR(sc.netRR)} &middot; ${plural(sc.remaining, "game")} left`,
   ));
-
   grid.appendChild(scenarioCard(
     "If we win out",
     `${sc.ceiling} pts`,
-    `Winning all ${sc.remaining} remaining match${sc.remaining === 1 ? "" : "es"} (4 pts each, base case —
-     doesn't count any bonus point for a big-margin win) takes us to ${sc.ceiling} points.`,
+    `Base case: 4 pts per win, no bonus points assumed — those need a big win margin that can't be
+     predicted ahead of a match.`,
   ));
+  box.appendChild(grid);
+
+  if (sc.fixtures.length) {
+    box.appendChild(ourChecklist(sc, sc.alreadyFirst ? "Stay unbeaten to hold the top spot" : "What we need to do"));
+  }
 
   if (sc.alreadyFirst) {
-    grid.appendChild(scenarioCard(
-      "Defending #1",
-      "Already there",
-      `${s.gladiators} sit top of Group ${sc.group} right now. Stay ahead by not letting a rival's
-       ceiling (their points + 4&times;their remaining games) pass ours.`,
-    ));
+    box.appendChild(el("div", "scenario-verdict",
+      `${s.gladiators} are already top of Group ${sc.group}. Win out and no rival can catch up on
+       points alone — the job is to not let anyone's own ceiling pass ${sc.ceiling}.`));
   } else {
     const L = sc.leader;
-    let bigText, note;
     if (sc.tiedOnPointsWithLeader) {
-      bigText = "Tied — NetRR decides";
-      note = `Tied on points with ${L.team} right now (${L.pts} each), but ${L.team} leads on NetRR
-        (${fmtRR(L.netRR)} vs our ${fmtRR(sc.netRR)}) — that's the tiebreaker deciding #1 today. Both
-        sides have ${plural(sc.remaining, "game")} left, so expect this to stay close.`;
+      box.appendChild(el("div", "scenario-verdict",
+        `Tied on points with ${L.team} right now (${L.pts} each) — they lead on NetRR
+         (${fmtRR(L.netRR)} vs our ${fmtRR(sc.netRR)}), the actual tiebreaker for #1 today. Winning out
+         keeps us level on points at best; closing that NetRR gap (or ${L.team} slipping in points)
+         is what actually gets us to #1.`));
     } else if (L.clinchable) {
-      bigText = "In our hands";
-      note = `Win out and we finish with more points than ${L.team} can possibly reach — their ceiling
-        is ${L.ceiling}, ours is ${sc.ceiling}. #1 doesn't depend on their results.`;
+      box.appendChild(el("div", "scenario-verdict",
+        `Win out and we finish with more points than ${L.team} can possibly reach — their ceiling is
+         ${L.ceiling}, ours is ${sc.ceiling}. #1 is fully in our hands, no help needed.`));
     } else {
-      bigText = `${plural(L.gapNow, "pt")} behind`;
-      note = `Win out and we reach ${sc.ceiling} points — but ${L.team}'s own ceiling is ${L.ceiling} if
-        they also win out, so winning out alone doesn't guarantee #1. They'd need to drop at least
-        ${plural(L.ceiling - sc.ceiling, "point")} below their own ceiling too.`;
+      box.appendChild(el("div", "scenario-verdict",
+        `Win out and we reach ${sc.ceiling} — but ${L.team}'s own ceiling is ${L.ceiling} if they also
+         win out, so that alone doesn't guarantee #1. They'd need to drop at least
+         ${plural(L.ceiling - sc.ceiling, "point")} below their own ceiling too.`));
     }
-    grid.appendChild(scenarioCard(`Path to overtake ${L.team}`, bigText, note));
+    if (L.fixtures.length) box.appendChild(rivalWatchlist(L));
   }
 
   if (sc.above) {
     const A = sc.above;
-    grid.appendChild(scenarioCard(
-      `Leapfrog ${A.team}`,
-      A.clinchable ? "In our hands" : `${plural(A.gapNow, "pt")} behind`,
+    box.appendChild(el("div", "scenario-verdict",
       A.clinchable
-        ? `Win out and we finish above them regardless of their results — their ceiling is ${A.ceiling},
-           ours is ${sc.ceiling}.`
-        : `They have ${plural(A.remaining, "game")} left too (ceiling ${A.ceiling}) — winning out alone
-           isn't a guarantee.`,
-    ));
+        ? `Separately: win out and we finish above ${A.team} regardless of their results — their
+           ceiling is ${A.ceiling}, ours is ${sc.ceiling}.`
+        : `Separately, to leapfrog ${A.team} (currently ${plural(A.gapNow, "pt")} ahead): their own
+           ceiling is ${A.ceiling} if they also win out, so winning out alone isn't a guarantee there
+           either.`));
+    if (A.fixtures.length) box.appendChild(rivalWatchlist(A));
   }
 
-  box.appendChild(grid);
   box.appendChild(el("p", "doc-note",
     `Base case only: every remaining win is assumed worth 4 points, and the rule book's +1 bonus
      point (winning by 1.25&times; the loser's run rate or better) isn't baked in, since it can't be
-     predicted ahead of a match. "Remaining games" assumes the group finishes in lockstep, same as
-     it has all season.`));
+     predicted ahead of a match.`));
 }
 
 /* ── Standings ─────────────────────────────────────────────────────── */

@@ -1639,20 +1639,13 @@ def full_standings_table(cfg):
     return groups
 
 
-def promotion_scenario(gladiators, standings_table, sched):
+def promotion_scenario(cfg, gladiators, standings_table, results):
     """What it takes for `gladiators` to reach #1 in their group, or move up a spot,
-    given remaining fixtures — the "path to #1" section on the standings page.
-
-    Remaining games per team = that team's total scheduled games (schedule export,
-    home + away) minus games already reflected in the points table's `mat`. This
-    league runs its group stage in lockstep: verified 2026-08-26 that every team in
-    every group of both series had an identical (total-scheduled, mat) pair at the same
-    snapshot — everyone has played the same number of games and has the same number
-    left, at any point in the season. A team-name mismatch between the schedule export
-    and the points table (different spelling/abbreviation) would silently read as 0
-    scheduled games for that team; guarded by falling back to the group's modal
-    total-scheduled count whenever a team's own count looks like an outlier (0, or
-    less than matches already played).
+    given remaining fixtures — the "path to #1" section on the standings page. Each
+    team's remaining games come from load_upcoming() (the same real fixture list — date,
+    time, opponent — already used for our own upcoming-matches card), not a games-played
+    count, so the UI can show actual bullet-point fixtures ("beat X on date Y") instead
+    of just an abstract remaining-count.
 
     Points are base-case only: every remaining win assumed worth 4 points. The rule
     book's bonus point (winning by >=1.25x the loser's run rate) can't be predicted
@@ -1670,39 +1663,31 @@ def promotion_scenario(gladiators, standings_table, sched):
     rows = group["rows"]
     us = next(r for r in rows if r["team"] == gladiators)
 
-    def total_scheduled(team):
-        return int(((sched["Team One"] == team) | (sched["Team Two"] == team)).sum())
+    def team_view(row):
+        fixtures = load_upcoming(cfg, row["team"], results)
+        remaining = len(fixtures)
+        return {
+            "team": row["team"], "pts": row["pts"], "netRR": row["netRR"],
+            "remaining": remaining, "ceiling": row["pts"] + 4 * remaining,
+            "fixtures": fixtures,
+        }
 
-    counts = [total_scheduled(r["team"]) for r in rows]
-    mode_total = max(set(counts), key=counts.count) if counts else 0
-
-    def remaining_games(r):
-        t = total_scheduled(r["team"])
-        if t == 0 or t < r["mat"]:
-            t = mode_total
-        return max(0, t - r["mat"])
-
-    def ceiling(r):
-        return r["pts"] + 4 * remaining_games(r)
-
-    us_remaining = remaining_games(us)
-    us_ceiling = ceiling(us)
+    us_view = team_view(us)
     already_first = us["rank"] == 1
 
     def rival_view(rival):
-        return {
-            "team": rival["team"], "pts": rival["pts"], "netRR": rival["netRR"],
-            "remaining": remaining_games(rival), "ceiling": ceiling(rival),
-            "gapNow": rival["pts"] - us["pts"],
-            "clinchable": us_ceiling > ceiling(rival),
-        }
+        rv = team_view(rival)
+        rv["gapNow"] = rival["pts"] - us["pts"]
+        rv["clinchable"] = us_view["ceiling"] > rv["ceiling"]
+        return rv
 
     leader = rows[0]
     above = next((r for r in rows if r["rank"] == us["rank"] - 1), None)
 
     return {
         "group": group["group"], "rank": us["rank"], "rankOf": len(rows),
-        "pts": us["pts"], "netRR": us["netRR"], "remaining": us_remaining, "ceiling": us_ceiling,
+        "pts": us["pts"], "netRR": us["netRR"],
+        "remaining": us_view["remaining"], "ceiling": us_view["ceiling"], "fixtures": us_view["fixtures"],
         "alreadyFirst": already_first,
         "tiedOnPointsWithLeader": (not already_first) and us["pts"] == leader["pts"],
         "leader": None if already_first else rival_view(leader),
@@ -1815,7 +1800,7 @@ def build():
         })
         print(f"  opponents: {len(opponents)}")
 
-        promo_scenario = promotion_scenario(gladiators, standings_table, sched)
+        promo_scenario = promotion_scenario(cfg, gladiators, standings_table, results)
         if promo_scenario:
             print(f"  promotion scenario: rank {promo_scenario['rank']}/{promo_scenario['rankOf']} "
                   f"in Group {promo_scenario['group']}, {promo_scenario['remaining']} games left")
