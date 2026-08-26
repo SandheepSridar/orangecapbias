@@ -395,6 +395,26 @@ section h2 .q {
 .phase-cell.top { font-weight: 800; }
 .phase-cell.empty { border-color: transparent; color: var(--muted); font-weight: 400; }
 
+/* ── Standings ─────────────────────────────────────────────────────── */
+.standings-group-wrap { margin-top: 1.6rem; }
+.standings-group-wrap h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 0.7rem; }
+.standings-table-wrap { overflow-x: auto; }
+.standings-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.standings-table th, .standings-table td {
+  padding: 0.5rem 0.65rem; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.standings-table th {
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted);
+  font-weight: 600; border-bottom: 1px solid var(--line);
+}
+.standings-table th:first-child, .standings-table td:first-child,
+.standings-table th:nth-child(2), .standings-table td:nth-child(2) { text-align: left; }
+.standings-table tbody tr:not(:last-child) td { border-bottom: 1px solid var(--line); }
+.standings-table td.team-name { font-weight: 600; }
+.standings-table td.pts { font-weight: 800; color: var(--text); }
+.standings-table tr.gladiators-row td { background: rgba(255,195,0,0.08); }
+.standings-table tr.gladiators-row td.team-name { color: var(--gold); font-weight: 800; }
+
 /* ── Head-to-head ──────────────────────────────────────────────────── */
 .h2h-record { display: flex; gap: 1.6rem; align-items: baseline; margin-bottom: 0.9rem; flex-wrap: wrap; }
 .h2h-record .big { font-family: "Sora", sans-serif; font-size: 1.8rem; font-weight: 800; }
@@ -648,10 +668,11 @@ footer { text-align: center; padding: 3rem 1.5rem 1.5rem; color: var(--grey); fo
    recap points table has only 4 narrow columns; tightening its padding
    lets it fit natively instead, which reads better than a scroll hint. ── */
 @media (max-width: 640px) {
-  .phase-table-wrap {
+  .phase-table-wrap, .standings-table-wrap {
     overflow-x: auto;
     -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.6rem), transparent);
     mask-image: linear-gradient(to right, #000 calc(100% - 1.6rem), transparent);
   }
   .points-table th, .points-table td { padding: 0.4rem 0.35rem; font-size: 0.76rem; }
+  .standings-table th, .standings-table td { padding: 0.4rem 0.5rem; font-size: 0.78rem; }
 }

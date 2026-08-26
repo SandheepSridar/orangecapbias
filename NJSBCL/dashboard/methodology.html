@@ -18,6 +18,7 @@
     <span class="nav-sub">How the numbers are calculated</span>
     <a class="nav-link" href="index.html">← Matchup analysis</a>
     <a class="nav-link" href="recap.html">Last match recap</a>
+    <a class="nav-link" href="standings.html">Standings</a>
     <a class="nav-link" href="charts.html">Gladiators charts →</a>
     <a class="nav-link" href="changelog.html">Changelog</a>
   </span>
@@ -30,6 +31,7 @@
   <a href="#sec-basics" class="side-toc-link">The basics</a>
   <a href="#sec-zscore" class="side-toc-link">Comparing players fairly</a>
   <a href="#sec-elo" class="side-toc-link">Win probability</a>
+  <a href="#sec-points" class="side-toc-link">League points system</a>
   <a href="#sec-toss" class="side-toc-link">Toss advice</a>
   <a href="#sec-chase" class="side-toc-link">Chase-pacing calculator</a>
   <a href="#sec-homeaway" class="side-toc-link">Home / away record</a>
@@ -119,6 +121,24 @@ new Elo_A            = old Elo_A + K × (actual − expected)     [K = 32]</div>
         <b>1564</b>. Team B drops by the same amount it "should" have — new Elo_B = 1500 + 32 ×
         (0 − 0.423) ≈ <b>1487</b>.</p>
     </div>
+  </section>
+
+  <section id="sec-points">
+    <h2>League points system <span class="q">— standings page</span></h2>
+    <p class="subhead">Not computed by this dashboard — the standings page shows NJSBCL's own
+      official points table exactly as scraped from cricclubs.com. Included here for reference,
+      straight from the league rule book (sections 4 and 52):</p>
+    <div class="formula">win                            = 4 points
+tie (same score) or no result  = 2 points each
+loss                           = 0 points
+bonus point                    = +1 for the winning team if their run rate was
+                                  at least 1.25&times; the losing team's run rate
+forfeit                        = 0 points to the forfeiting team, 4 to the opponent</div>
+    <p class="subhead">Ties (final scores level) and no-results (washed-out/abandoned matches)
+      both split 2 points each, but the standings table tracks them in separate T and NR columns
+      since they're different situations. Ranking within a group goes by points first, then
+      head-to-head record, then net run rate (NRR) as the tiebreaker — see the rule book for the
+      full tiebreaker order.</p>
   </section>
 
   <section id="sec-toss">
