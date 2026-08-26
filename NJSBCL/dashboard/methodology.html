@@ -31,6 +31,8 @@
   <a href="#sec-basics" class="side-toc-link">The basics</a>
   <a href="#sec-zscore" class="side-toc-link">Comparing players fairly</a>
   <a href="#sec-elo" class="side-toc-link">Win probability</a>
+  <a href="#sec-points" class="side-toc-link">League points system</a>
+  <a href="#sec-scenarios" class="side-toc-link">Scenario projection</a>
   <a href="#sec-toss" class="side-toc-link">Toss advice</a>
   <a href="#sec-chase" class="side-toc-link">Chase-pacing calculator</a>
   <a href="#sec-homeaway" class="side-toc-link">Home / away record</a>
@@ -119,6 +121,62 @@ new Elo_A            = old Elo_A + K × (actual − expected)     [K = 32]</div>
         = 1 ÷ (1 + 10^−0.125) ≈ <b>57.7%</b>. Say A wins: new Elo_A = 1550 + 32 × (1 − 0.577) ≈
         <b>1564</b>. Team B drops by the same amount it "should" have — new Elo_B = 1500 + 32 ×
         (0 − 0.423) ≈ <b>1487</b>.</p>
+    </div>
+  </section>
+
+  <section id="sec-points">
+    <h2>League points system <span class="q">— straight from the rule book</span></h2>
+    <p class="subhead">Not computed by this dashboard — the standings page shows NJSBCL's own
+      official table as scraped. Reproduced here because the scenario tree projects forward with
+      it (rule book sections 4 and 52):</p>
+    <div class="formula">win                           = 4 points
+tie, or no result (washed out) = 2 points each
+loss                          = 0 points
+bonus point                   = +1 to the winner if their run rate was at least
+                                1.25&times; the loser's
+forfeit                       = 0 to the forfeiting team, 4 to the opponent</div>
+    <p class="subhead">Bonus points are the norm rather than the exception here — Samudhra have
+      taken 11 across 15 wins, VRK 11 across 12 — so a projected win is worth 4 <em>or</em> 5
+      depending on the margin, never a flat 4.</p>
+    <p class="subhead"><b>Net run rate</b> is a season-long average, which is why a single match
+      barely moves it:</p>
+    <div class="formula">NRR = (total runs scored &divide; total overs faced) &minus; (total runs conceded &divide; total overs bowled)</div>
+    <p class="subhead">Two consequences worth knowing. A side bowled out inside its overs is still
+      charged the full 16-over quota. And a <b>no-result is excluded from NRR entirely</b> — it
+      moves points without touching run rate, which is why those branches in the scenario tree
+      show the NRR unchanged.</p>
+    <p class="subhead">Within a group, ranking is points first, then head-to-head, then NRR. In
+      practice head-to-head never applies between the teams at the top here: the league runs a
+      cross-group format, so Group A teams only ever play Group B teams and two rivals in the same
+      group never meet. That makes <b>NRR the operative tiebreaker</b> for our race.</p>
+  </section>
+
+  <section id="sec-scenarios">
+    <h2>Scenario projection <span class="q">— the Road to #1 tree</span></h2>
+    <p class="subhead">Each remaining fixture branches three ways (win / loss / no-result), so
+      three matches give 27 end states. Every branch carries points and NRR forward from where we
+      actually stand today, taken from the published points table rather than re-derived.</p>
+    <p class="subhead"><b>Projected scorelines</b> blend both sides, per opponent — what we
+      typically score against what that opponent typically concedes, and vice versa:</p>
+    <div class="formula">we score   = (our average scored   + their average conceded) &divide; 2
+they score = (our average conceded + their average scored)   &divide; 2
+both innings are assumed to use the full 16 overs (96 balls)</div>
+    <p class="subhead">Blending per opponent matters: with one flat team-wide average every
+      projected match would be identical, and a leaf's NRR would depend only on <em>how many</em>
+      matches were won rather than <em>which</em> — collapsing the tree onto a handful of repeated
+      numbers.</p>
+    <p class="subhead"><b>Rival conditions</b> ("must fail to win more than N of their last 3") are
+      deliberately scored at the maximum 5 points per win rather than at a projected scoreline. A
+      rival who wins big takes the bonus point, so a condition built on projected points could be
+      quietly wrong; a looser condition that always holds is worth more than a tighter one that
+      sometimes doesn't. "Fail to win" rather than "lose" for the same reason — a no-result is
+      worth 2 and also keeps them under the win line.</p>
+    <div class="doc-example">
+      <div class="doc-example-label">Limits worth stating</div>
+      <p>This is a model, not a forecast. It assumes average scorelines, so it cannot know that a
+        side will collapse or chase in ten overs. The rank range on each leaf is a genuine
+        bracket — the worst case never understates the threat, the best case never overstates it —
+        but the exact NRR on a branch is only as good as the averages behind it.</p>
     </div>
   </section>
 

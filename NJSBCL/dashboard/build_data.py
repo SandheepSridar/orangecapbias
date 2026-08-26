@@ -7,6 +7,7 @@ Mirrors the website/build_data.py -> data.js pattern used for MOVI.
 
 Usage: source ../.venv/bin/activate && python3 build_data.py
 """
+import itertools
 import json
 import re
 from datetime import datetime
@@ -1616,17 +1617,33 @@ def load_points_table(cfg):
     return out
 
 
+def parse_runs_overs(s):
+    """Parses the points table's "for"/"against" field, e.g. "2269/238.5" -> (2269 runs,
+    1433 balls). Verified 2026-08-26: despite the rule book's NRR section describing a
+    fraction-of-an-over decimal table for calculating NRR by hand (1 ball=.17, 2=.33 ...),
+    this particular field uses the ordinary scorecard "overs.balls" notation like every
+    other overs field on the site — recomputing NRR from these with overs_to_balls()
+    reproduces the CSV's own netrr column to 4 decimals for every team spot-checked."""
+    runs_str, overs_str = str(s).split("/")
+    return int(runs_str), overs_to_balls(float(overs_str))
+
+
 def full_standings_table(cfg):
     """Every team in every group, in rank order — the raw material for a standalone
     standings page. Unlike load_points_table() (a team -> row dict used to annotate a
     single opponent's own record), this keeps every team and preserves group structure,
-    since a standings page needs to show the whole table, not just one team's line."""
+    since a standings page needs to show the whole table, not just one team's line.
+
+    The for/against run+ball aggregates come along too: the scenario tree needs them as
+    the starting point for projecting how a hypothetical result moves a team's NRR."""
     pts = pd.read_csv(DATA_DIR / cfg["points_csv"])
     groups = []
     for group, g in pts.groupby("group", sort=True):
         rows = []
         for _, r in g.sort_values("rank").iterrows():
             pts_match = re.match(r"-?\d+", str(r["pts"]))
+            for_runs, for_balls = parse_runs_overs(r["for"])
+            against_runs, against_balls = parse_runs_overs(r["against"])
             rows.append({
                 "rank": int(r["rank"]), "team": r["team"].strip(),
                 "mat": int(r["mat"]), "won": int(r["won"]), "lost": int(r["lost"]),
@@ -1634,6 +1651,8 @@ def full_standings_table(cfg):
                 "pts": int(pts_match.group()) if pts_match else None,
                 "winPct": float(str(r["winpct"]).rstrip("%")),
                 "netRR": float(r["netrr"]),
+                "forRuns": for_runs, "forBalls": for_balls,
+                "againstRuns": against_runs, "againstBalls": against_balls,
             })
         groups.append({"group": group, "rows": rows})
     return groups
@@ -1676,6 +1695,20 @@ def win_probability(elo_a, elo_b):
     return round(100 / (1 + 10 ** ((elo_b - elo_a) / 400)), 1)
 
 
+_SCHEDULE_CACHE = {}
+
+
+def _schedule_df(cfg):
+    """Memoised schedule read. load_upcoming() used to be called twice per build (once per
+    series); the scenario tree calls it once per team in our group to work out who is still
+    mathematically alive, which turned 2 Excel reads into ~40. Callers always filter-and-copy
+    before mutating, so handing out the same frame is safe."""
+    key = cfg["schedule_xlsx"]
+    if key not in _SCHEDULE_CACHE:
+        _SCHEDULE_CACHE[key] = pd.read_excel(DATA_DIR / key, header=1)
+    return _SCHEDULE_CACHE[key]
+
+
 def load_upcoming(cfg, team, results):
     """All remaining scheduled matches for `team` that haven't been played yet, soonest first.
     The dashboard shows the first 3 highlighted with the rest behind a "show all" toggle — no
@@ -1687,7 +1720,7 @@ def load_upcoming(cfg, team, results):
     date filter, also drop any schedule row that already has a matching completed result for
     this team — same opponent, same date (results' 'date' column comes from attach_venue()'s
     schedule matching, already run by the time this is called)."""
-    df = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
+    df = _schedule_df(cfg)
     df = df[(df["Team One"] == team) | (df["Team Two"] == team)].copy()
     df["parsedDate"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
     df["opponent"] = df.apply(lambda r: r["Team Two"] if r["Team One"] == team else r["Team One"], axis=1)
@@ -1713,6 +1746,240 @@ def load_upcoming(cfg, team, results):
             "venue": r["Ground"] if pd.notna(r["Ground"]) else "TBD",
         })
     return out
+
+
+# ── NRR scenario tree ──────────────────────────────────────────────────────
+# Rule-book constants (sections 4.1-4.4, 52). See methodology.html#sec-points.
+BALLS_PER_INNINGS = 16 * 6   # rule 4.1 — 16 overs a side
+WIN_POINTS = 4               # rule 4.2
+NO_RESULT_POINTS = 2         # rule 4.3 / 24.1 — washed-out matches split the points
+BONUS_RATIO = 0.8            # rule 52 — winner needs >=1.25x the loser's run rate;
+                             # with both innings at the full quota that reduces to
+                             # loserRuns <= 0.8 * winnerRuns. NB: this collapse to a pure
+                             # runs ratio only holds while both sides use 96 balls — if the
+                             # model ever uses real balls-faced, compare run rates instead.
+MIN_PROJECTION_SAMPLE = 3
+
+
+def project_scoreline(results, team, opponent):
+    """Projected (higherScore, lowerScore, bonusToWinner) for `team` vs `opponent`, blending
+    what each side typically does: our scoring against what they typically concede, and our
+    conceding against what they typically score.
+
+    Opponent-specific rather than one team-wide average on purpose. With a single average
+    every projected match is identical, so a leaf's NRR depends only on how many matches were
+    won and not which — WWL, WLW and LWW all collapse onto the same number and the tree stops
+    saying anything. Blending per opponent keeps all 27 leaves distinct (verified 2026-08-26).
+
+    Returns the scoreline sorted high/low; the caller assigns it (we win => we take the high
+    side, we lose => we take the low side) so a projection can never contradict its own leaf.
+    """
+    ours = results[results["team"] == team]
+    theirs = results[results["team"] == opponent]
+    if ours.empty:
+        return None
+    our_scored, our_conceded = ours["teamScore"].mean(), ours["oppScore"].mean()
+    if len(theirs) < MIN_PROJECTION_SAMPLE:
+        # Too little on the opponent to blend — fall back to our own season shape rather
+        # than projecting off a 1-2 match sample.
+        we, they = our_scored, our_conceded
+    else:
+        we = (our_scored + theirs["oppScore"].mean()) / 2
+        they = (our_conceded + theirs["teamScore"].mean()) / 2
+    hi, lo = (we, they) if we >= they else (they, we)
+    return hi, lo, bool(lo <= hi * BONUS_RATIO)
+
+
+def _advance(state, outcome, proj):
+    """Apply one projected match to (pts, forRuns, forBalls, againstRuns, againstBalls)."""
+    pts, fr, fb, ar, ab = state
+    if outcome == "NR":
+        # A no-result splits the points and is excluded from NRR entirely — verified
+        # 2026-08-26 across 12 teams: overs-bowled/16 tracks completed matches (W+L+T),
+        # never total. This is what makes an NR branch meaningfully different from a loss.
+        return (pts + NO_RESULT_POINTS, fr, fb, ar, ab)
+    hi, lo, bonus = proj
+    if outcome == "W":
+        return (pts + WIN_POINTS + (1 if bonus else 0),
+                fr + hi, fb + BALLS_PER_INNINGS, ar + lo, ab + BALLS_PER_INNINGS)
+    return (pts, fr + lo, fb + BALLS_PER_INNINGS, ar + hi, ab + BALLS_PER_INNINGS)
+
+
+def _state_nrr(state):
+    _, fr, fb, ar, ab = state
+    if not fb or not ab:
+        return 0.0
+    return fr / fb * 6 - ar / ab * 6
+
+
+def _base_state(row):
+    return (row["pts"], row["forRuns"], row["forBalls"], row["againstRuns"], row["againstBalls"])
+
+
+def _team_finals(cfg, results, row, fixtures):
+    """Every (pts, nrr, wins) this team can finish on across all W/L/NR combinations of its
+    own remaining fixtures. A team's finish depends only on its own results, so rivals can be
+    enumerated independently instead of cross-producting every team against every other."""
+    projs = [project_scoreline(results, row["team"], f["opponent"]) for f in fixtures]
+    finals = []
+    for combo in itertools.product(("W", "L", "NR"), repeat=len(fixtures)):
+        st = _base_state(row)
+        for outcome, proj in zip(combo, projs):
+            if proj is None:
+                continue
+            st = _advance(st, outcome, proj)
+        finals.append((st[0], _state_nrr(st), combo.count("W")))
+    return finals
+
+
+def scenario_tree(cfg, gladiators, standings_table, results):
+    """Exhaustive Win/Loss/No-result tree over the Gladiators' remaining fixtures, with each
+    leaf resolved against every rival that is still mathematically able to finish above us.
+
+    Ranking is points desc then NRR desc. The rule book puts head-to-head ahead of NRR, but
+    this league runs a cross-group format — Group A teams only ever play Group B teams — so
+    two rivals in the same group never meet and head-to-head can never apply between them
+    (verified 2026-08-26: Samudhra have never played Pway Lions, VRK never Mag11)."""
+    group = next((g for g in standings_table
+                  if any(r["team"] == gladiators for r in g["rows"])), None)
+    if group is None:
+        return None
+    rows = group["rows"]
+    us_row = next(r for r in rows if r["team"] == gladiators)
+    fixtures = load_upcoming(cfg, gladiators, results)
+    if not fixtures:
+        return None
+
+    projs = [project_scoreline(results, gladiators, f["opponent"]) for f in fixtures]
+    if any(p is None for p in projs):
+        return None
+
+    our_finals = _team_finals(cfg, results, us_row, fixtures)
+    our_floor = min(p for p, _, _ in our_finals)
+
+    rivals = []
+    for r in rows:
+        if r["team"] == gladiators:
+            continue
+        fx = load_upcoming(cfg, r["team"], results)
+        # Ceiling uses the maximum possible haul (5 = win + bonus), independent of the
+        # projection model, so the "still alive" test is a genuine upper bound.
+        if r["pts"] + 5 * len(fx) < our_floor:
+            continue
+        rivals.append({
+            "team": r["team"], "pts": r["pts"], "netRR": r["netRR"],
+            "remaining": len(fx),
+            "finals": _team_finals(cfg, results, r, fx) if fx else [(r["pts"], r["netRR"], 0)],
+        })
+
+    # Independence guard: worst-case rank assumes every rival can max out simultaneously,
+    # which only holds while no two contenders play each other.
+    contender_names = {rv["team"] for rv in rivals} | {gladiators}
+    clashes = []
+    for rv in rivals:
+        for f in load_upcoming(cfg, rv["team"], results):
+            if f["opponent"] in contender_names:
+                clashes.append(f"{rv['team']} vs {f['opponent']}")
+
+    def rival_view(rv, my_pts, my_nrr):
+        """Where this rival can finish relative to our leaf, as a genuine bound.
+
+        Deliberately scored on points at 5 per win — the maximum haul (win + bonus) — rather
+        than on the rival's projected scoreline. Projecting a rival's points would understate
+        anyone who wins by a big margin and takes the bonus, so a "must not win more than N"
+        built on projections can be quietly wrong: Mag11's projected ceiling is 76, but one
+        bonus point puts them on 77 and past a VRK side sitting on 76. A condition that can
+        be wrong is worse than a looser one that cannot.
+
+        A rival level on points is treated as passing us, because the NRR tiebreak at that
+        point depends on scorelines this model does not claim to predict.
+        """
+        n = rv["remaining"]
+        max_safe = -1
+        for w in range(n + 1):
+            if rv["pts"] + 5 * w < my_pts:
+                max_safe = w
+            else:
+                break
+        can_pass = rv["pts"] + 5 * n >= my_pts
+        # The two bounds lean opposite ways on purpose, so the reported rank range always
+        # contains the truth: canPass (-> worst rank) uses the rival's absolute ceiling and
+        # so never understates the threat, while alwaysPasses (-> best rank) requires every
+        # projected scenario of theirs to beat us and so never overstates it.
+        always_passes = all(
+            f[0] > my_pts or (f[0] == my_pts and f[1] > my_nrr) for f in rv["finals"]
+        )
+        return {
+            "team": rv["team"], "pts": rv["pts"], "netRR": round(rv["netRR"], 4),
+            "remaining": n, "maxPossiblePts": rv["pts"] + 5 * n,
+            "maxSafeWins": max_safe, "canPass": can_pass, "alwaysPasses": always_passes,
+            # "fail to win" rather than "lose": a no-result is worth 2 and also keeps them
+            # under the win line. Pway Lions and VRK each have 2 no-results this season, so
+            # saying "must lose" would be a factually wrong instruction.
+            "condition": (
+                None if not can_pass else
+                f"{rv['team']} finish level with or above us even if they win none of "
+                f"their last {n}"
+                if max_safe < 0 else
+                f"{rv['team']} must fail to win more than {max_safe} of their last {n}"
+            ),
+        }
+
+    def verdict_for(my_pts, my_nrr):
+        views = [rival_view(rv, my_pts, my_nrr) for rv in rivals]
+        can_pass = [v for v in views if v["canPass"]]
+        always_pass = [v for v in views if v["alwaysPasses"]]
+        worst, best = 1 + len(can_pass), 1 + len(always_pass)
+        return {
+            "bestRank": best, "worstRank": worst,
+            # "Guaranteed" means no rival can reach these points even winning out with a
+            # bonus every time — a claim that holds regardless of how the projection lands.
+            "top1Guaranteed": worst == 1, "top1Possible": best == 1,
+            "blockers": [v for v in can_pass if v["condition"]],
+        }
+
+    def node(prefix, state, depth):
+        n = {
+            "path": "".join(prefix),
+            "depth": depth,
+            "outcome": prefix[-1] if prefix else None,
+            "opponent": fixtures[depth - 1]["opponent"] if depth else None,
+            "date": fixtures[depth - 1]["date"] if depth else None,
+            "pts": state[0],
+            "nrr": round(_state_nrr(state), 4),
+        }
+        if depth == len(fixtures):
+            n["leaf"] = True
+            n.update(verdict_for(state[0], _state_nrr(state)))
+        else:
+            n["children"] = [
+                node(prefix + [o], _advance(state, o, projs[depth]), depth + 1)
+                for o in ("W", "L", "NR")
+            ]
+        return n
+
+    return {
+        "us": gladiators,
+        "group": group["group"],
+        "remaining": len(fixtures),
+        "base": {"pts": us_row["pts"], "nrr": round(us_row["netRR"], 4)},
+        "fixtures": fixtures,
+        "projections": [
+            {"opponent": f["opponent"], "date": f["date"],
+             "win": round(p[0], 1), "lose": round(p[1], 1), "bonus": p[2],
+             "winPts": WIN_POINTS + (1 if p[2] else 0)}
+            for f, p in zip(fixtures, projs)
+        ],
+        "contenders": [
+            {"team": rv["team"], "pts": rv["pts"], "netRR": round(rv["netRR"], 4),
+             "remaining": rv["remaining"],
+             "maxNrr": round(max(f[1] for f in rv["finals"]), 4),
+             "minNrr": round(min(f[1] for f in rv["finals"]), 4)}
+            for rv in rivals
+        ],
+        "clashes": clashes,
+        "root": node([], _base_state(us_row), 0),
+    }
 
 
 def build():
@@ -1743,6 +2010,17 @@ def build():
             for _, r in sched_g.iterrows()
         })
         print(f"  opponents: {len(opponents)}")
+
+        scenarios = scenario_tree(cfg, gladiators, standings_table, results)
+        if scenarios is None:
+            print("  NRR scenarios: none (no remaining fixtures)")
+        else:
+            n = scenarios["remaining"]
+            print(f"  NRR scenarios: {3 ** n} leaves over {n} fixtures, "
+                  f"{len(scenarios['contenders'])} live contenders")
+            if scenarios["clashes"]:
+                print(f"  WARNING: contenders play each other ({', '.join(scenarios['clashes'])}) "
+                      f"— worst-case ranks are an upper bound, not simultaneously achievable")
 
         weakness_pool = bowler_weakness_pool(bowl)
         strength_pool = bowler_strength_pool(bowl)
@@ -1840,6 +2118,7 @@ def build():
             "opponents": opponents, "upcoming": upcoming, "teams": teams_data,
             "deathOversLeaders": death_leaders, "gladiatorsCharts": gladiators_charts,
             "matchRecap": match_recap, "standingsTable": standings_table,
+            "scenarioTree": scenarios,
         }
 
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"

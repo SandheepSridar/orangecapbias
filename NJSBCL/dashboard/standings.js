@@ -40,6 +40,115 @@ function renderDataUpdated() {
   $("data-updated-badge").textContent = `Data last updated: ${formatted}`;
 }
 
+/* ── Scenario tree ─────────────────────────────────────────────────── */
+function fmtRR(rr) { return (rr >= 0 ? "+" : "") + rr.toFixed(2); }
+
+const OUTCOME_LABEL = { W: "Beat", L: "Lose to", NR: "No result vs" };
+
+function scenarioRow(node, gladiators) {
+  const row = el("div", "scenario-row" + (node.depth === 0 ? " root" : "") + (node.leaf ? " leaf" : ""));
+  row.style.setProperty("--depth", node.depth);
+
+  const cls = node.depth === 0 ? "now" : node.outcome.toLowerCase();
+  const label = node.depth === 0 ? "NOW" : node.outcome;
+  row.appendChild(el("span", `scenario-badge ${cls}`, label));
+
+  const opp = node.depth === 0
+    ? `${gladiators} as it stands`
+    : `${OUTCOME_LABEL[node.outcome]} ${node.opponent}<span class="d">${node.date}</span>`;
+  row.appendChild(el("span", "scenario-opp", opp));
+
+  const nums = el("div", "scenario-nums");
+  nums.appendChild(el("span", "scenario-num", `${node.pts}<span class="lbl">pts</span>`));
+  nums.appendChild(el("span", "scenario-num nrr", `${fmtRR(node.nrr)}<span class="lbl">nrr</span>`));
+  if (node.leaf) {
+    const v = node.top1Guaranteed ? ["yes", "#1 clinched"]
+      : node.top1Possible ? ["maybe", "#1 possible"]
+        : ["no", `${node.bestRank}${node.bestRank === 2 ? "nd" : node.bestRank === 3 ? "rd" : "th"} at best`];
+    nums.appendChild(el("span", `scenario-verdict ${v[0]}`, v[1]));
+  }
+  row.appendChild(nums);
+  return row;
+}
+
+function scenarioDetail(node) {
+  const d = el("div", "scenario-detail");
+  d.style.setProperty("--depth", node.depth);
+  const rankTxt = node.bestRank === node.worstRank
+    ? `Finishes ${node.bestRank}${node.bestRank === 1 ? "st" : node.bestRank === 2 ? "nd" : node.bestRank === 3 ? "rd" : "th"} regardless of other results.`
+    : `Finishes anywhere from ${node.bestRank}${node.bestRank === 1 ? "st" : "th"} to ${node.worstRank}${node.worstRank === 2 ? "nd" : node.worstRank === 3 ? "rd" : "th"}, depending on rivals.`;
+  if (!node.blockers.length) {
+    d.innerHTML = `${rankTxt} No rival can reach ${node.pts} points, so top spot is secure on this path.`;
+    return d;
+  }
+  d.innerHTML = `${rankTxt} For #1 on this path, all of the following must hold:`;
+  const ul = document.createElement("ul");
+  node.blockers.forEach((b) => ul.appendChild(el("li", null, b.condition)));
+  d.appendChild(ul);
+  return d;
+}
+
+function renderScenarioTree() {
+  const s = currentSeriesData();
+  const box = $("scenario-content");
+  box.innerHTML = "";
+  const st = s.scenarioTree;
+  if (!st) {
+    box.appendChild(el("div", "empty-note",
+      "No remaining fixtures — the season's group stage is complete for this team."));
+    return;
+  }
+
+  // Honest framing up front: our own NRR is not the lever here, and saying so plainly
+  // matters more than making the chart look winnable.
+  const reach = st.contenders.filter((c) => c.minNrr > 0);
+  const leader = st.contenders[0];
+  if (leader) {
+    box.appendChild(el("div", "scenario-callout",
+      `<b>Read this first.</b> ${st.us} sit on ${st.base.pts} pts / ${fmtRR(st.base.nrr)} NRR.
+       Net run rate is a season-long average, so three matches barely move it — every path below
+       lands between ${fmtRR(Math.min(...leafNrrs(st)))} and ${fmtRR(Math.max(...leafNrrs(st)))}.
+       ${leader.team} stay above ${fmtRR(leader.minNrr)} in every one of their own scenarios, so
+       <b>#1 is won by rivals dropping points, not by our run rate</b>.`));
+  }
+
+  box.appendChild(el("p", "doc-note",
+    `Projected scorelines: ` + st.projections.map((p) =>
+      `<b>${p.opponent}</b> ${p.win.toFixed(0)}&ndash;${p.lose.toFixed(0)}` +
+      (p.bonus ? ` (win = ${p.winPts} pts, clears the bonus margin)` : ` (win = ${p.winPts} pts)`)
+    ).join(" &middot; ") +
+    `. A no-result is worth 2 points and is excluded from NRR entirely, so those branches move
+     points without touching run rate.`));
+
+  const legend = el("div", "scenario-legend");
+  legend.innerHTML = `
+    <span><span class="scenario-badge w">W</span>win</span>
+    <span><span class="scenario-badge l">L</span>loss</span>
+    <span><span class="scenario-badge nr">NR</span>no result</span>
+    <span>Tap any final row for what else has to happen.</span>`;
+  box.appendChild(legend);
+
+  const tree = el("div", "scenario-tree");
+  (function walk(node) {
+    const row = scenarioRow(node, st.us);
+    tree.appendChild(row);
+    if (node.leaf) {
+      const detail = scenarioDetail(node);
+      detail.hidden = true;
+      tree.appendChild(detail);
+      row.addEventListener("click", () => { detail.hidden = !detail.hidden; });
+    }
+    (node.children || []).forEach(walk);
+  })(st.root);
+  box.appendChild(tree);
+}
+
+function leafNrrs(st) {
+  const out = [];
+  (function walk(n) { if (n.leaf) out.push(n.nrr); (n.children || []).forEach(walk); })(st.root);
+  return out;
+}
+
 /* ── Standings ─────────────────────────────────────────────────────── */
 function standingsTable(gladiators, rows) {
   const wrap = el("div", "standings-table-wrap");
@@ -90,6 +199,7 @@ function renderStandings() {
 
 /* ── Wiring ────────────────────────────────────────────────────────── */
 function renderAll() {
+  renderScenarioTree();
   renderStandings();
 }
 

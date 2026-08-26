@@ -198,6 +198,33 @@ else:
             warn(s["matchRecap"] is not None, f"{key}: matchRecap is None", "no completed matches yet, or a bug")
             check(f"{key}: upcoming fixtures list is non-empty", len(s["upcoming"]) > 0)
 
+            st = s.get("scenarioTree")
+            warn(st is not None, f"{key}: scenarioTree is None",
+                 "expected only once the season's remaining fixtures run out")
+            if st:
+                n = st["remaining"]
+                leaves = []
+
+                def _walk(node):
+                    if node.get("leaf"):
+                        leaves.append(node)
+                    for c in node.get("children", []):
+                        _walk(c)
+
+                _walk(st["root"])
+                check(f"{key}: scenarioTree has 3^{n} = {3 ** n} leaves", len(leaves) == 3 ** n,
+                      f"got {len(leaves)}")
+                # The all-no-result path must leave NRR untouched — NR matches are excluded
+                # from NRR entirely. This is the tripwire for that assumption regressing.
+                all_nr = next((l for l in leaves if set(l["path"].split("NR")) <= {""}), None)
+                check(f"{key}: all-no-result leaf leaves NRR unchanged",
+                      all_nr is not None and abs(all_nr["nrr"] - st["base"]["nrr"]) < 1e-9,
+                      f"base {st['base']['nrr']} vs leaf {all_nr['nrr'] if all_nr else 'n/a'}")
+                check(f"{key}: every leaf's bestRank <= worstRank",
+                      all(l["bestRank"] <= l["worstRank"] for l in leaves))
+                warn(not st["clashes"], f"{key}: scenarioTree contenders play each other",
+                     f"{st['clashes']} — worst-case ranks become an upper bound only")
+
 print(f"\n{len(failures)} failing check(s), {len(warnings)} warning(s).")
 if failures:
     sys.exit(1)

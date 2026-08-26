@@ -395,6 +395,64 @@ section h2 .q {
 .phase-cell.top { font-weight: 800; }
 .phase-cell.empty { border-color: transparent; color: var(--muted); font-weight: 400; }
 
+/* ── Scenario tree ─────────────────────────────────────────────────────
+   Rendered as a flat, DFS-ordered list of rows indented by --depth rather
+   than physically nested divs: the mobile collapse rule below is
+   `section.collapsible.collapsed > *:not(h2)`, which only reaches direct
+   children, and flat rows keep the connector rails trivial to draw. ── */
+.scenario-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.9rem; margin-bottom: 1.2rem; }
+.scenario-callout {
+  padding: 0.85rem 1rem; border-radius: 10px; font-size: 0.86rem; line-height: 1.55;
+  background: rgba(255,195,0,0.07); border: 1px solid rgba(255,195,0,0.35); margin-bottom: 1.2rem;
+}
+.scenario-legend { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0.9rem 0; font-size: 0.76rem; color: var(--muted); }
+.scenario-legend span { display: flex; align-items: center; gap: 0.35rem; }
+
+.scenario-tree { display: flex; flex-direction: column; gap: 0.3rem; }
+.scenario-row {
+  display: grid; align-items: center; gap: 0.7rem;
+  grid-template-columns: auto 1fr auto;
+  padding: 0.5rem 0.75rem; border-radius: 9px;
+  background: var(--panel); border: 1px solid var(--line);
+  margin-left: calc(var(--depth, 0) * 1.5rem);
+}
+.scenario-row.root { background: rgba(255,195,0,0.08); border-color: rgba(255,195,0,0.35); }
+.scenario-row.leaf { cursor: pointer; }
+.scenario-row.leaf:hover { border-color: var(--gold); }
+.scenario-badge {
+  flex-shrink: 0; min-width: 1.9rem; text-align: center; padding: 0.15rem 0.4rem;
+  border-radius: 6px; font-family: "Sora", sans-serif; font-weight: 800; font-size: 0.72rem;
+}
+.scenario-badge.w { background: var(--win); color: #06231a; }
+.scenario-badge.l { background: var(--loss); color: #2b0808; }
+.scenario-badge.nr { background: var(--grey); color: #0d1017; }
+.scenario-badge.now { background: var(--gold); color: #1a1500; }
+.scenario-opp { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.88rem; }
+.scenario-opp .d { color: var(--muted); font-size: 0.76rem; margin-left: 0.4rem; }
+.scenario-nums { display: flex; align-items: center; gap: 0.9rem; }
+.scenario-num { font-family: "Sora", sans-serif; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 0.9rem; }
+.scenario-num .lbl { font-family: "Inter", sans-serif; font-weight: 600; font-size: 0.62rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-left: 0.2rem; }
+.scenario-num.nrr { color: var(--gold); }
+.scenario-verdict { font-size: 0.68rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 999px; white-space: nowrap; }
+.scenario-verdict.yes { background: rgba(45,212,167,0.15); color: var(--win); }
+.scenario-verdict.maybe { background: rgba(255,195,0,0.15); color: var(--gold); }
+.scenario-verdict.no { background: rgba(107,115,132,0.18); color: var(--muted); }
+.scenario-detail {
+  margin-left: calc(var(--depth, 0) * 1.5rem + 1rem);
+  padding: 0.7rem 0.9rem; border-left: 2px solid var(--line);
+  font-size: 0.82rem; color: var(--muted); line-height: 1.6;
+}
+.scenario-detail ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+.scenario-detail li { margin-bottom: 0.2rem; }
+
+@media (max-width: 640px) {
+  /* Reflow, never scroll sideways: a tree that scrolls loses its indent rails off-screen.
+     Two lines per row keeps the deepest leaf readable at 390px. */
+  .scenario-row { grid-template-columns: auto 1fr; row-gap: 0.35rem; margin-left: calc(var(--depth, 0) * 0.7rem); }
+  .scenario-nums { grid-column: 1 / -1; display: flex; gap: 0.9rem; align-items: center; }
+  .scenario-detail { margin-left: calc(var(--depth, 0) * 0.7rem + 0.75rem); }
+}
+
 /* ── Standings ─────────────────────────────────────────────────────── */
 .standings-group-wrap { margin-top: 1.6rem; }
 .standings-group-wrap h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 0.7rem; }
