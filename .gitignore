@@ -42,3 +42,7 @@ existing_research
 ipl_dbt/target/
 ipl_dbt/logs/
 ipl_dbt/dbt_packages/
+
+# NJSBCL rescrape scratch space — raw per-batch scorecard downloads, rebuilt every run
+# and combined into data/*_scorecards_*.csv; not final data (see rescrape-njsbcl skill).
+NJSBCL/data/raw_scorecards/

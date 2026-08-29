@@ -1,7 +1,442 @@
 matchId,team,player,dismissal,R,B,4s,6s,SR
+20507,Aryans,Allan Dabre,c Arun Prasad G b Emmanuel Samuel N,1,6,0,0,16.67
+20507,Aryans,Smith Dsouza,c †Bala K b Farukh M,10,8,0,1,125.00
+20507,Aryans,Joydeep Das,c Saikumar K b Emmanuel Samuel N,15,12,1,0,125.00
+20507,Aryans,Sourabh Guha*,c †Bala K b Narender Reddy B,5,7,0,0,71.43
+20507,Aryans,Deependra Singh,c Dheeban J b Narender Reddy B,8,13,0,0,61.54
+20507,Aryans,Anjul Tyagi,c&b Narender Reddy B,1,6,0,0,16.67
+20507,Aryans,Gajendra Kumar,c Narender Reddy B b Emmanuel Samuel N,1,7,0,0,14.29
+20507,Aryans,Ajay Shankar,b Farukh M,12,10,0,1,120.00
+20507,Aryans,Austrin Dabre,b Emmanuel Samuel N,3,7,0,0,42.86
+20507,Aryans,Sudarshan Hegde,c Arun Prasad G b Farukh M,13,5,0,2,260.00
+20507,Aryans,Titus Faroz,not out,1,1,0,0,100.00
+20507,Newport CC,Salam Shamlan,c&b Sourabh G,0,5,0,0,0.00
+20507,Newport CC,Mahathiswar Kari,c Allan D b Sourabh G,1,3,0,0,33.33
+20507,Newport CC,Emmanuel Samuel Nair,not out,26,32,2,1,81.25
+20507,Newport CC,Dheeban Jagadeesn,c Gajendra K b Sourabh G,0,2,0,0,0.00
+20507,Newport CC,Saikumar Katepalli,c Allan D b Sudarshan H,14,11,0,2,127.27
+20507,Newport CC,Narender Reddy Bojja,run out (Gajendra K/Joydeep D),27,25,0,2,108.00
+20507,Newport CC,Arun Prasad G*,not out,0,0,0,0,0.00
+20503,Nj Braves,Pradeep Jeyapaul*,c Sushil K b Vikul R,3,7,0,0,42.86
+20503,Nj Braves,Menak Patel,c Tejas P b Vikul R,0,1,0,0,0.00
+20503,Nj Braves,Vinoth Suseendran †,b Jitendra S,1,4,0,0,25.00
+20503,Nj Braves,Tejas Patel,run out (Parth S),21,24,2,0,87.50
+20503,Nj Braves,Swar Shah,c Fenil S b Jitendra S,5,6,1,0,83.33
+20503,Nj Braves,Divyesh Dobaria,b Sushil K,34,20,1,4,170.00
+20503,Nj Braves,Vipul Patel,c Vineet L b Sushil K,15,19,0,1,78.95
+20503,Nj Braves,Hardik Bhilota,b Vineet L,11,10,1,1,110.00
+20503,Nj Braves,Praveen Shetty,not out,0,0,0,0,0.00
+20503,Nj Braves,Romil Gaglani,not out,6,5,1,0,120.00
+20503,Jersey Boys,Ravi Shah,b Kunal M,20,20,0,2,100.00
+20503,Jersey Boys,Vineet Luthra,c Divyesh D b Kunal M,11,15,0,0,73.33
+20503,Jersey Boys,Mitesh Dhinoja,c&b Kunal M,11,7,0,1,157.14
+20503,Jersey Boys,Fenil Shah*,not out,25,19,1,2,131.58
+20503,Jersey Boys,Vikul Rajpara,run out (Swar S),17,13,2,0,130.77
+20503,Jersey Boys,Jitendra Singh,not out,15,6,2,1,250.00
+20498,Edison Rebelz,Soumyabrata Paul,c Jasmeet S b Sukhwinder S,12,14,2,0,85.71
+20498,Edison Rebelz,Imran Khan,c Ali M b Sunny S,4,7,1,0,57.14
+20498,Edison Rebelz,Ashutosh Pandey,c †Wajjid S b Jasmeet S,1,4,0,0,25.00
+20498,Edison Rebelz,Shailesh Khadapkar,c&b Nasir K,12,16,1,1,75.00
+20498,Edison Rebelz,Kironmoy Banerjee,c Subham S b Nasir K,0,6,0,0,0.00
+20498,Edison Rebelz,Rupak Das* †,c Mohammed A b Nasir K,13,10,0,0,130.00
+20498,Edison Rebelz,Ashish Rout,run out (Faizan J/Mohammed A),1,3,0,0,33.33
+20498,Edison Rebelz,Anil Nair,c Subham S b Jasmeet S,2,10,0,0,20.00
+20498,Edison Rebelz,Piyush Kunwar,b Jasmeet S,6,19,0,0,31.58
+20498,Edison Rebelz,Uttam Chandrakar,c Lovely S b Sunny S,5,4,1,0,125.00
+20498,Edison Rebelz,Yash Solanki,not out,3,3,0,0,100.00
+20498,PUNJAB XI,Wajjid Sultan,not out,34,23,1,4,147.83
+20498,PUNJAB XI,Subham Singh,c Shailesh K b Imran K,8,4,2,0,200.00
+20498,PUNJAB XI,Lovely Singh,b Soumyabrata P,23,23,1,2,100.00
+20498,PUNJAB XI,Jasmeet Singh,not out,6,1,0,1,600.00
+20486,Storm Riders,Noor Randhawa,run out (SARWAR ALI S),22,19,4,0,115.79
+20486,Storm Riders,Abhishek Varma,b Nahid S,2,12,0,0,16.67
+20486,Storm Riders,Mitul Patel,c Harikishore M b Nisar A,8,18,0,0,44.44
+20486,Storm Riders,Apurv Jain* †,c&b Harikishore M,7,14,1,0,50.00
+20486,Storm Riders,Sachin Kamtekar,c Avaneesh R b Nahid S,2,6,0,0,33.33
+20486,Storm Riders,Shreyas Najan,b Nisar A,0,3,0,0,0.00
+20486,Storm Riders,Sameer Kulkarni,b SARWAR ALI S,2,5,0,0,40.00
+20486,Storm Riders,Rishabh Tewari,c Sivaram C b Harikishore M,0,6,0,0,0.00
+20486,Storm Riders,Pratik Singh,c †Siva C b SARWAR ALI S,0,2,0,0,0.00
+20486,Storm Riders,Gourang Patel,c †Siva C b SARWAR ALI S,0,1,0,0,0.00
+20486,Storm Riders,Shobhit Gupta,not out,0,2,0,0,0.00
+20486,WCC,Harikishore Malireddy,b Shobhit G,0,2,0,0,0.00
+20486,WCC,Rohit Sawardekar,not out,39,34,4,3,114.71
+20486,WCC,Siva Chirumamilla †,c †Apurv J b Rishabh T,1,8,0,0,12.50
+20486,WCC,Nisar Ahmad,St Apurv J b Gourang P,2,7,0,0,28.57
+20486,WCC,Nahid Sarkar,not out,4,1,1,0,400.00
+20480,Gujarat United XI,Sumit Panda,not out,47,41,2,2,114.63
+20480,Gujarat United XI,Karan Patel,b Vijay G,5,14,0,0,35.71
+20480,Gujarat United XI,Avi Shah,b Muhammad H,5,6,1,0,83.33
+20480,Gujarat United XI,Ajay Jadav,c Raheel A b Imran R,2,4,0,0,50.00
+20480,Gujarat United XI,Mayur Patel,St Munazam R b Vijay G,2,7,0,0,28.57
+20480,Gujarat United XI,Rohang Patel,c Raheel A b Abdul Wali S,2,8,0,0,25.00
+20480,Gujarat United XI,Mihir Vaghasia,run out (Raheel A),2,10,0,0,20.00
+20480,Gujarat United XI,Parth Patel*,not out,10,6,0,1,166.67
+20480,Nj Stars CC,Akram Abubakar,run out (Karan P),0,2,0,0,0.00
+20480,Nj Stars CC,Jahanzeb Alam,c Avi S b Karan P,8,7,0,1,114.29
+20480,Nj Stars CC,Raheel Anjum,b Avi S,4,16,0,0,25.00
+20480,Nj Stars CC,Munazam Raja †,c Ketul C b Parth P,16,15,1,1,106.67
+20480,Nj Stars CC,Imran Raja*,c †Neel P b Parth P,15,12,0,2,125.00
+20480,Nj Stars CC,Yasir Mohammad,c Ketul C b Rohang P,7,11,1,0,63.64
+20480,Nj Stars CC,Muhammad Haseeb,c Parth P b Daksh P,8,10,0,1,80.00
+20480,Nj Stars CC,Zeeshan Raja,c Ketul C b Daksh P,12,15,0,1,80.00
+20480,Nj Stars CC,Vijay Gore,not out,2,3,0,0,66.67
+20480,Nj Stars CC,Abdul Wali Siddiqee,not out,1,5,0,0,20.00
+20478,Plainsboro Eagles,Srinivas Darbha †,c †Kartik M b Deepesh N,0,1,0,0,0.00
+20478,Plainsboro Eagles,Bharath Reddy,c Jemin A b Deepesh N,0,2,0,0,0.00
+20478,Plainsboro Eagles,Akhilesh Goud Janagam,c&b Omeya A,10,12,0,1,83.33
+20478,Plainsboro Eagles,Srinivas Reddy Ch,c Omeya A b Samit K,11,19,0,0,57.89
+20478,Plainsboro Eagles,Bhargav Reddy Napa*,c Kartik M b Deepesh N,8,16,0,0,50.00
+20478,Plainsboro Eagles,Ajay Kumar Kala,c Omeya A b Samit K,23,12,3,1,191.67
+20478,Plainsboro Eagles,Sathish Kumar Selvaraj,c sandip b b Deepesh N,0,1,0,0,0.00
+20478,Plainsboro Eagles,Anilreddy Bobbala,c&b Sheshank R,0,2,0,0,0.00
+20478,Plainsboro Eagles,Tushar Choksi,run out (Samit K),8,10,1,0,80.00
+20478,Plainsboro Eagles,Himacharan Reddy,c Jemin A b Deepesh N,13,10,1,1,130.00
+20478,Plainsboro Eagles,Suresh Kokatam,not out,3,11,0,0,27.27
+20478,Mercer Challengers,Jemin Amin,c Sathish kumar S b Ajay Kumar K,1,5,0,0,20.00
+20478,Mercer Challengers,Sandip Borse,c †Srinivas D b Ajay Kumar K,6,9,1,0,66.67
+20478,Mercer Challengers,Omeya Ambre,c Srinivas reddy C b Bhargav R,4,9,0,0,44.44
+20478,Mercer Challengers,Samit Kumbhani,c Srinivas reddy C b Bhargav R,14,20,2,0,70.00
+20478,Mercer Challengers,Vasu Elluri,c Bharath R b Bhargav R,4,7,0,0,57.14
+20478,Mercer Challengers,Nikhil Saxena*,c Tushar C b Bhargav R,10,9,0,1,111.11
+20478,Mercer Challengers,Sheshank Reddy,c Srinivas reddy C b Bharath R,8,14,0,0,57.14
+20478,Mercer Challengers,Deepesh Naidu,c Bhargav R b Himacharan R,2,5,0,0,40.00
+20478,Mercer Challengers,Vishal Srivastava,c Srinivas reddy C b Himacharan R,0,2,0,0,0.00
+20478,Mercer Challengers,Kartik Malladi,c Tushar C b Bharath R,0,2,0,0,0.00
+20478,Mercer Challengers,Kushal Parikh,not out,1,2,0,0,50.00
+20473,Blasters,RAJ PATEL,c Harish Kumar A b Aditya R,3,15,0,0,20.00
+20473,Blasters,Ankit Patel,c †Harish Kumar A b Aditya R,0,1,0,0,0.00
+20473,Blasters,Manthan Patel*,c †Gopi S b Sundip H,12,13,0,1,92.31
+20473,Blasters,Tushar Patel,not out,24,34,1,0,70.59
+20473,Blasters,Gunjan Patel,c Diwakar S b Aditya R,8,8,0,1,100.00
+20473,Blasters,Jay Patel (JP),c Aditya R b Kamalraj R,2,9,0,0,22.22
+20473,Blasters,Harshu Patel,c Murugan S b Sundip H,3,4,0,0,75.00
+20473,Blasters,Vrushang Patel,c Aditya R b Shabbir S,2,5,0,0,40.00
+20473,Blasters,Preet Suthar,run out (Kamalraj R),1,2,0,0,50.00
+20473,Blasters,Chirag Patel,not out,10,5,0,1,200.00
+20473,Veerans,Kannan Thirumoorthy,b Jay P,12,10,0,2,120.00
+20473,Veerans,Aditya Rathor,c †Gunjan P b Tushar P,12,9,2,0,133.33
+20473,Veerans,Janakiram Shanmugavel,c Chirag P b Jay P,0,7,0,0,0.00
+20473,Veerans,Kamalraj Rajamanickam,c Tushar P b Chirag P,16,23,0,2,69.57
+20473,Veerans,Gopi Sendurapandian* †,Hit Wicket Manthan P,23,17,2,2,135.29
+20473,Veerans,Sundip Helchal,not out,7,6,1,0,116.67
+20473,Veerans,Diwakar Sh,c †Gunjan P b Chirag P,0,2,0,0,0.00
+20473,Veerans,Harish Kumar Ananthasayanam,run out (Neel P),1,5,0,0,20.00
+20473,Veerans,Ranjan Patel,not out,0,0,0,0,0.00
+20466,Jetha 11,Gary Patel,c Shan A b Lokesh P,13,14,1,1,92.86
+20466,Jetha 11,Parth Surti,b Sesha Sai V,1,7,0,0,14.29
+20466,Jetha 11,Nirav Patel*,c Siva K b Lokesh P,0,2,0,0,0.00
+20466,Jetha 11,Nirav Patel NJ,c †Rohit R b Ankit P,1,4,0,0,25.00
+20466,Jetha 11,Mayank Patel Patel,c †Rohit R b Ankit P,0,1,0,0,0.00
+20466,Jetha 11,Dipal Patel,c Sai Praneeth K b Raghuraman V,9,27,1,0,33.33
+20466,Jetha 11,Naran Prajapati,c Ankit P b Raghuraman V,6,13,0,0,46.15
+20466,Jetha 11,Divyesh Patel,not out,14,14,1,0,100.00
+20466,Jetha 11,Kishan Patel,c †Rohit R b Raghuraman V,2,8,0,0,25.00
+20466,Jetha 11,Dhruvil Dagli,c Sai Praneeth K b Raghuraman V,1,3,0,0,33.33
+20466,Jetha 11,Eijaz Mulla,not out,3,3,0,0,100.00
+20466,Plainsboro Knights,Rohit Ranjan* †,c †Kishan P b Naran P,11,16,0,1,68.75
+20466,Plainsboro Knights,Ankit Parikh,c Gary P b Naran P,5,13,0,0,38.46
+20466,Plainsboro Knights,SUMIT SHARMA,c †Kishan P b Naran P,12,19,0,1,63.16
+20466,Plainsboro Knights,Lokesh Prabakaran,c †Kishan P b Naran P,0,3,0,0,0.00
+20466,Plainsboro Knights,Shashank Sinha,c Mayank Patel P b Dhruvil D,0,4,0,0,0.00
+20466,Plainsboro Knights,Sai Praneeth Kalavagunta,c Naran P b Dipal P,4,13,0,0,30.77
+20466,Plainsboro Knights,Shan A S,c Divyesh P b Naran P,0,1,0,0,0.00
+20466,Plainsboro Knights,Siva Kandivalasa,run out (Gary P),5,11,0,0,45.45
+20466,Plainsboro Knights,Raghuraman Varadharajan,c Parth S b Dhruvil D,6,6,0,0,100.00
+20466,Plainsboro Knights,Sesha Sai Veerla,c Dipal P b Divyesh P,0,1,0,0,0.00
+20466,Plainsboro Knights,DHEEPAK CHANDRAMOULI,not out,0,4,0,0,0.00
+20444,PUNJAB XI,Niraj Singh,b Amit S,2,3,0,0,66.67
+20444,PUNJAB XI,Ali Maisam,c Kannan T b Sundip H,0,2,0,0,0.00
+20444,PUNJAB XI,Nasir Khan,c Sundip H b Uma Maheswara Rao P,1,6,0,0,16.67
+20444,PUNJAB XI,Subham Singh,c&b Kamalraj R,32,35,1,3,91.43
+20444,PUNJAB XI,Lovely Singh,c Harish Kumar A b Aditya R,0,10,0,0,0.00
+20444,PUNJAB XI,Sukhwinder Singh*,c Kannan T b Sundip H,0,15,0,0,0.00
+20444,PUNJAB XI,Jasmeet Singh,c Aditya R b Kamalraj R,7,3,0,1,233.33
+20444,PUNJAB XI,Rizwan Ahmed,b Kamalraj R,4,5,0,0,80.00
+20444,PUNJAB XI,Guarav Singh,b Uma Maheswara Rao P,0,1,0,0,0.00
+20444,PUNJAB XI,Faizan Januja,b Sundip H,1,5,0,0,20.00
+20444,PUNJAB XI,Sunny Singh,not out,3,3,0,0,100.00
+20444,Veerans,Kannan Thirumoorthy,c Faizan J b Sukhwinder S,8,7,0,1,114.29
+20444,Veerans,Ranjan Patel,c Rizwan A b Sunny S,9,26,0,0,34.62
+20444,Veerans,Naresh Ram,b Nasir K,3,8,0,0,37.50
+20444,Veerans,Kamalraj Rajamanickam,c Faizan J b Nasir K,0,1,0,0,0.00
+20444,Veerans,Aditya Rathor,run out (Sukhwinder S/Sunny S),4,13,0,0,30.77
+20444,Veerans,Sundip Helchal,c&b Sunny S,0,2,0,0,0.00
+20444,Veerans,Gopi Sendurapandian* †,c Nasir K b Sunny S,0,4,0,0,0.00
+20444,Veerans,Uma Maheswara Rao Patibandla,c †Faizan J b Sukhwinder S,0,1,0,0,0.00
+20444,Veerans,Harish Kumar Ananthasayanam,c Jasmeet S b Sunny S,9,12,0,1,75.00
+20444,Veerans,Amit Sharma,c Rizwan A b Guarav S,6,4,0,1,150.00
+20444,Veerans,Diwakar Sh,not out,0,1,0,0,0.00
+20437,Aryans,Calvin Dabre †,not out,10,4,1,1,250.00
+20437,Aryans,Allan Dabre,not out,1,1,0,0,100.00
+20436,Jersey Titans,Jay Domadiya*,c Deepan Sunny C b Naran P,12,11,0,2,109.09
+20436,Jersey Titans,Gaurav Darji,c Shyam P b Dipal P,28,34,0,3,82.35
+20436,Jersey Titans,Pavan Patel,c Shyam P b Divyesh P,1,4,0,0,25.00
+20436,Jersey Titans,Milan Dave,Retired Out,15,20,2,0,75.00
+20436,Jersey Titans,Sunny Patel,b Naran P,10,16,0,1,62.50
+20436,Jersey Titans,Monil Patel,not out,2,5,0,0,40.00
+20436,Jersey Titans,Ravin Patel,c † b Dipal P,0,2,0,0,0.00
+20436,Jersey Titans,Swetketu Patel,run out (Divyesh P/Vivek P),3,5,0,0,60.00
+20436,Jetha 11,Shyam Pandya,not out,72,30,2,10,240.00
+20436,Jetha 11,Deepan Sunny Chauhan,c Ravin P b Jay D,7,6,0,1,116.67
+20436,Jetha 11,Nirav Patel*,not out,3,7,0,0,42.86
+20425,Gujarat United XI,Sumit Panda,c †Amit J b Satish kumar D,5,8,0,0,62.50
+20425,Gujarat United XI,Karan Patel,run out (Raghuveer B),14,16,1,0,87.50
+20425,Gujarat United XI,Mihir Vaghasia,c †Amit J b Naveen R,5,4,1,0,125.00
+20425,Gujarat United XI,Mayur Patel,c Sujan K b Satish kumar D,1,3,0,0,33.33
+20425,Gujarat United XI,Avi Shah,b Govind S,2,12,0,0,16.67
+20425,Gujarat United XI,Parth Patel*,c †Amit J b Naveen R,2,7,0,0,28.57
+20425,Gujarat United XI,Rohang Patel,c Govind S b Naveen R,1,11,0,0,9.09
+20425,Gujarat United XI,Ankur Shah,b Naveen R,0,3,0,0,0.00
+20425,Gujarat United XI,Ketul Chaudhari,b Govind S,5,10,0,0,50.00
+20425,Gujarat United XI,Daksh Patel,c Govind S b Sujan K,9,11,0,1,81.82
+20425,Gujarat United XI,Tirth Patel (JR),not out,2,2,0,0,100.00
+20425,Parsippany Phoenix XI,Praveen Vinnakota*,c Mihir V b Avi S,10,17,1,0,58.82
+20425,Parsippany Phoenix XI,Vikasreddy Rangapur,c †Rohang P b Karan P,2,5,0,0,40.00
+20425,Parsippany Phoenix XI,Amit Jadli,b Rohang P,36,26,6,1,138.46
+20425,Parsippany Phoenix XI,Satish Kumar Durgam,not out,6,7,1,0,85.71
+20425,Parsippany Phoenix XI,Naveen Rayal,not out,5,2,1,0,250.00
+20423,Mercer Challengers,Vishal Srivastava,c Sai S b Santosh T,1,9,0,0,11.11
+20423,Mercer Challengers,Nikhil Saxena*,run out (Santosh T/Raghav S),0,2,0,0,0.00
+20423,Mercer Challengers,Omeya Ambre,b Nisar A,0,7,0,0,0.00
+20423,Mercer Challengers,Jemin Amin,c Saqib A b Nahid S,8,13,0,1,61.54
+20423,Mercer Challengers,Kartik Malladi,run out (SARWAR ALI S),12,26,0,0,46.15
+20423,Mercer Challengers,Sandip Borse,c †Siva C b Sai S,19,23,1,1,82.61
+20423,Mercer Challengers,Vasu Elluri,c Raghav S b Sai S,7,8,0,1,87.50
+20423,Mercer Challengers,Sheshank Reddy,not out,4,8,0,0,50.00
+20423,Mercer Challengers,Deepesh Naidu,b Nisar A,0,1,0,0,0.00
+20423,Mercer Challengers,Samit Kumbhani,c&b Nisar A,0,2,0,0,0.00
+20423,Mercer Challengers,Saqi Syed,not out,1,1,0,0,100.00
+20423,WCC,Nisar Ahmad,c Jemin A b Samit K,1,4,0,0,25.00
+20423,WCC,Rohit Sawardekar,c † b Samit K,13,13,1,1,100.00
+20423,WCC,Siva Chirumamilla †,not out,38,20,1,5,190.00
+20423,WCC,SARWAR ALI SHAH,c Jemin A b Sheshank R,0,9,0,0,0.00
+20423,WCC,Raghav Sehgal,c † b Sheshank R,0,1,0,0,0.00
+20423,WCC,Nikhil Patankar*,not out,6,6,0,1,100.00
+20422,Pway Lions,Dhaivat Patel,c †Rupak D b Sourav M,18,15,0,2,120.00
+20422,Pway Lions,Neel Patel*,c †Rupak D b Shrikant P,66,41,5,5,160.98
+20422,Pway Lions,Ronak Rana †,c †Rupak D b Sourav M,20,9,1,2,222.22
+20422,Pway Lions,Ankush Patel,c †Rupak D b Soumyabrata P,5,8,1,0,62.50
+20422,Pway Lions,Karan Amin,c Kironmoy B b Ashutosh P,9,7,0,1,128.57
+20422,Pway Lions,Prit Patel(PD),c Ashutosh P b Shrikant P,6,6,0,0,100.00
+20422,Pway Lions,Deep Patel,b Sourav M,8,7,0,1,114.29
+20422,Pway Lions,Shri Patel,not out,13,4,0,2,325.00
+20422,Pway Lions,Udit Patel - Pway Lions,c Ashutosh P b Shrikant P,0,1,0,0,0.00
+20422,Pway Lions,Akshar Patel,not out,6,1,0,1,600.00
+20422,Edison Rebelz,Soumyabrata Paul,c Udit P b Drumil A,8,11,1,0,72.73
+20422,Edison Rebelz,Sourav Mazumder,c Drumil A b Prit P,0,2,0,0,0.00
+20422,Edison Rebelz,Kironmoy Banerjee,c †Ronak R b Prit P,6,12,0,0,50.00
+20422,Edison Rebelz,Jagadeesh Gandhi Agakrishnamurthy,b Drumil A,0,2,0,0,0.00
+20422,Edison Rebelz,Ashutosh Pandey,c †Ronak R b Dhaivat P,3,11,0,0,27.27
+20422,Edison Rebelz,Sandeep Mistry,c Ronak R b Prit P,6,10,0,0,60.00
+20422,Edison Rebelz,Shrikant Patra,c&b Dhaivat P,0,1,0,0,0.00
+20422,Edison Rebelz,Piyush Kunwar,c Deep P b Dhaivat P,10,10,0,1,100.00
+20422,Edison Rebelz,Shailesh Khadapkar,c Akshar P b Ankush P,6,11,0,0,54.55
+20422,Edison Rebelz,Imran Khan,c †Ronak R b Akshar P,1,4,0,0,25.00
+20422,Edison Rebelz,Rupak Das* †,not out,2,3,0,0,66.67
+20417,Plainsboro Knights,Rohit Ranjan* †,run out (Tushar C),41,39,2,3,105.13
+20417,Plainsboro Knights,Ankit Parikh,run out (Rajesh P),12,11,2,0,109.09
+20417,Plainsboro Knights,SUMIT SHARMA,c Ashok G b Bharath R,3,5,0,0,60.00
+20417,Plainsboro Knights,Lokesh Prabakaran,c Pavan P b Ashok G,2,5,0,0,40.00
+20417,Plainsboro Knights,Balaji Kesavsn,b Tushar C,13,15,2,0,86.67
+20417,Plainsboro Knights,Shan A S,not out,18,14,2,1,128.57
+20417,Plainsboro Knights,Sesha Sai Veerla,run out (Bharath R),4,5,0,0,80.00
+20417,Plainsboro Knights,Gowtham Akula,run out (Bharath R),1,2,0,0,50.00
+20417,Plainsboro Eagles,Vasi M,run out (Rohit R/Balaji K),8,10,1,0,80.00
+20417,Plainsboro Eagles,Rajesh Paruchuri,c Sai Praneeth K b Raghuraman V,36,19,3,3,189.47
+20417,Plainsboro Eagles,Gopichand Pulabala,c †Rohit R b Sesha Sai V,5,8,0,0,62.50
+20417,Plainsboro Eagles,Srinivas Reddy Ch,run out (Rohit R/Ankit P),2,5,0,0,40.00
+20417,Plainsboro Eagles,Ashok Gandu,c Balaji K b Raghuraman V,5,4,1,0,125.00
+20417,Plainsboro Eagles,Ajay Kumar Kala,c †Rohit R b Lokesh P,3,6,0,0,50.00
+20417,Plainsboro Eagles,Bhargav Reddy Napa*,not out,40,20,0,5,200.00
+20417,Plainsboro Eagles,Bharath Reddy,c Ankit P b Lokesh P,2,9,0,0,22.22
+20417,Plainsboro Eagles,Tushar Choksi,not out,1,4,0,0,25.00
+20388,Samudhra Gladiators,Harshad Patil,c Rishab S b Bhavik S,22,13,0,3,169.23
+20388,Samudhra Gladiators,Vinit Bharadwaj,c Anoop H b Zoheb K,18,15,0,2,120.00
+20388,Samudhra Gladiators,Sandeep I Shetty*,c&b Zoheb K,26,23,0,3,113.04
+20388,Samudhra Gladiators,Naveen R Sripathi,c Zoheb K b Darshil M,5,8,0,0,62.50
+20388,Samudhra Gladiators,Anilreddy Aleti,c Darshil M b Bhavik S,21,19,0,1,110.53
+20388,Samudhra Gladiators,Sanju S †,run out (Darshil M/Abdulla S),9,11,0,1,81.82
+20388,Samudhra Gladiators,Avteet Chayal,not out,10,6,0,1,166.67
+20388,Samudhra Gladiators,Tejdeep Maddirala,c †Sanjeev S b Darshil M,0,1,0,0,0.00
+20388,Samudhra Gladiators,Suraj Pai Madhukar,run out (Darshil M),1,1,0,0,100.00
+20388,Rowdy Rebels,Abdulla Shaikh,c Harshad P b Naveen R S,16,18,1,0,88.89
+20388,Rowdy Rebels,Kishan Gangarama,run out (Naveen R S/Suraj Pai M),9,16,0,0,56.25
+20388,Rowdy Rebels,Zoheb Khalid*,c †Sanju S b Vinit B,0,1,0,0,0.00
+20388,Rowdy Rebels,Prerak Dalal,b Naveen R S,12,18,0,0,66.67
+20388,Rowdy Rebels,Rishab Shirur,c †Sandeep I S b Harshad P,9,10,0,1,90.00
+20388,Rowdy Rebels,Darshil Mistry,not out,21,20,0,2,105.00
+20388,Rowdy Rebels,Sanjeev Sharma,c †Sandeep I S b Harshad P,5,7,0,0,71.43
+20388,Rowdy Rebels,Kushal Kumar,c Vinit B b Harshad P,0,1,0,0,0.00
+20388,Rowdy Rebels,Shriraj Amin,c Naveen R S b Harshad P,0,1,0,0,0.00
+20388,Rowdy Rebels,Bhavik Surani,c Harshad P b Suraj Pai M,1,3,0,0,33.33
+20388,Rowdy Rebels,Anoop Hegde,not out,1,1,0,0,100.00
+20386,Fdu Giants,Aman Deshmukh,c&b Aniket D,16,36,0,0,44.44
+20386,Fdu Giants,Ankit Chopra*,c Sachin R b Ved A,34,27,1,2,125.93
+20386,Fdu Giants,Viral Parekh,c Sravan N b Aniket D,7,10,0,0,70.00
+20386,Fdu Giants,Sukhwinder Singh,c †Pavan P b Vinyas R,3,5,0,0,60.00
+20386,Fdu Giants,Dhruv Patel,c Shubham P b Vinyas R,8,4,0,1,200.00
+20386,Fdu Giants,Basheer Shaik,run out (Aniket D),4,5,0,0,80.00
+20386,Fdu Giants,Ankit Patel,c Sachin R b Aniket D,2,5,0,0,40.00
+20386,Fdu Giants,Charanjot Singh,not out,14,4,0,2,350.00
+20386,Hudson Hurricanes,Pavan Poojar †,c †Charanjot S b Shubh B,14,19,1,0,73.68
+20386,Hudson Hurricanes,Aniket Dalal*,c Basheer S b Ankit C,11,16,0,1,68.75
+20386,Hudson Hurricanes,Aman Singh,b Ankit C,11,15,1,0,73.33
+20386,Hudson Hurricanes,Shubham Pawar,c Sukhwinder S b Ankit C,25,15,2,2,166.67
+20386,Hudson Hurricanes,Sachin Rathod,c Charanjot S b Ankit P,11,12,0,1,91.67
+20386,Hudson Hurricanes,Bharat Lakhani,not out,6,11,0,0,54.55
+20386,Hudson Hurricanes,Pratik Mane,not out,12,8,0,1,150.00
+20383,F5,Vinod Kannan*,b Mitul P,10,5,1,1,200.00
+20383,F5,Mukesh Ramawat,c Dharmesh P b Mitul P,2,8,0,0,25.00
+20383,F5,⁠Thulasi Thota,b Rumit P,3,8,0,0,37.50
+20383,F5,Vimalendu Kumar,c †Abhishek P b Rumit P,18,12,1,2,150.00
+20383,F5,Arjun R †,c Aakash P b Kirtan P,7,10,0,1,70.00
+20383,F5,Jinal Jolly,c Abhishek P b Kirtan P,0,3,0,0,0.00
+20383,F5,Harihara Ganeshan,c Himanshu P b Rakesh P,17,34,3,0,50.00
+20383,F5,Subramaniam Sampath,c Kirtan P b Rumit P,0,2,0,0,0.00
+20383,F5,Jayanth Prabhu,not out,5,13,0,0,38.46
+20383,Warriors,Kirtan Patel,c ⁠Thulasi T b Harihara G,14,12,1,1,116.67
+20383,Warriors,Neel Patel,b Vimalendu K,1,4,0,0,25.00
+20383,Warriors,Dharmik Patel,b Harihara G,9,12,0,1,75.00
+20383,Warriors,Aakash Patel,not out,44,20,1,6,220.00
+20383,Warriors,Jeet Patel,c ⁠Thulasi T b Vimalendu K,1,7,0,0,14.29
+20383,Warriors,Abhishek Patel*,not out,1,5,0,0,20.00
+20381,Piscataway Avengers,Vrajesh Patel,run out (Venkata V),31,38,2,1,81.58
+20381,Piscataway Avengers,Mayank Patel,c Anand V b Ram R,11,13,0,1,84.62
+20381,Piscataway Avengers,Tirth Patel,c †Rohit R b Ram R,0,1,0,0,0.00
+20381,Piscataway Avengers,Harsh Patel,c Aillu N b Ram R,0,2,0,0,0.00
+20381,Piscataway Avengers,Dharmesh Patel*,c †Rohit R b Anand V,17,21,1,1,80.95
+20381,Piscataway Avengers,Niraj Patel,c Eswar V b Aillu N,9,10,0,1,90.00
+20381,Piscataway Avengers,Sherry Singh,c Mihira Teja N b Ram R,8,6,0,1,133.33
+20381,Piscataway Avengers,Mit Patel,not out,2,6,0,0,33.33
+20381,Youth For Sewa,Eswar Vennapusa*,c Sherry S b Dharmesh P,35,31,1,3,112.90
+20381,Youth For Sewa,Mihira Teja Narvaneni,b Dharmesh P,9,14,0,1,64.29
+20381,Youth For Sewa,Anand Vemuri,c Substitute b Harsh P,17,13,2,0,130.77
+20381,Youth For Sewa,Satish Kasireddy,c †Niraj P b Harsh P,0,1,0,0,0.00
+20381,Youth For Sewa,Tauseef Ahmed,not out,16,18,0,1,88.89
+20381,Youth For Sewa,Rohit Reddy,c Vrajesh P b Sherry S,10,12,1,0,83.33
+20381,Youth For Sewa,Balu Y,run out (Sherry S),0,2,0,0,0.00
+20381,Youth For Sewa,Nazareth John,b Mit P,0,1,0,0,0.00
+20381,Youth For Sewa,Ram R,not out,1,1,0,0,100.00
+20379,SAMP XI,Sid Zala,run out (Sahil P),27,20,2,1,135.00
+20379,SAMP XI,Smit Ray,b Sahil P,14,14,3,0,100.00
+20379,SAMP XI,Tirth Patel,c Dipen P b Samir P,3,9,0,0,33.33
+20379,SAMP XI,Akash Patel,c Parth P b Dipen P,4,9,0,0,44.44
+20379,SAMP XI,Dhruvit Patel,run out (Sahil P),42,25,2,4,168.00
+20379,SAMP XI,Samip Patel,c Parth P b Dipen P,8,11,0,1,72.73
+20379,SAMP XI,Deep Patel,not out,14,7,0,2,200.00
+20379,SAMP XI,Monil Patel,not out,1,2,0,0,50.00
+20379,Gcc,Sapan Parikh,c Dhruvit P b Ankit P,4,3,1,0,133.33
+20379,Gcc,Chintan SR,c Samip P b Arya P,14,14,1,1,100.00
+20379,Gcc,Dhaval Patel,c †Sid Z b Ankit P,6,5,1,0,120.00
+20379,Gcc,Karan Patel,c Smit R b Ankit P,0,4,0,0,0.00
+20379,Gcc,Parth Patel,c †Sid Z b Tirth P,0,2,0,0,0.00
+20379,Gcc,Deep Thakkar GCC,c Tirth P b Ankit P,5,6,1,0,83.33
+20379,Gcc,Dipen Patel GCC,c Arya P b Dhruvit P,23,31,1,2,74.19
+20379,Gcc,Mrugesh Patel*,c Smit R b Arya P,4,13,0,0,30.77
+20379,Gcc,Samir Patel,not out,7,7,1,0,100.00
+20379,Gcc,Rut Patel,c Smit R b Tirth P,10,9,2,0,111.11
+20379,Gcc,Sahil Patel,not out,3,2,0,0,150.00
+20376,Juggernaut,Durlove Mohanty,b Sai ritheesh S,34,25,1,4,136.00
+20376,Juggernaut,Dev Patel †,b Raj T,14,15,2,0,93.33
+20376,Juggernaut,Karan P,run out (Rajesh R),36,27,3,3,133.33
+20376,Juggernaut,Devashya Patel,c Nakul L b Rajesh R,1,6,0,0,16.67
+20376,Juggernaut,Manan Patel,b Rajesh R,0,2,0,0,0.00
+20376,Juggernaut,Hemant Patel*,c Raj T b Nanje G,6,8,0,1,75.00
+20376,Juggernaut,Yash V Patel,run out (Rajesh R),2,6,0,0,33.33
+20376,Juggernaut,Jatan Vaidya,c Prashant Kalyan Srinivas C b Rajesh R,0,1,0,0,0.00
+20376,Juggernaut,Sandip Amin,c Sai ritheesh S b Rajesh R,0,1,0,0,0.00
+20376,Juggernaut,Kartik Patel,not out,3,4,0,0,75.00
+20376,Juggernaut,Kailash Naithani,c †Mahindra chowdary Y b Nanje G,0,2,0,0,0.00
+20376,Falcons,Harsha Bobbili,c Dev P b Karan P,1,6,0,0,16.67
+20376,Falcons,Raj Tiguti,run out (Hemant P),2,8,0,0,25.00
+20376,Falcons,Prashant Kalyan Srinivas Casturi,run out (Hemant P/Karan P),0,3,0,0,0.00
+20376,Falcons,Deepak Guthikonda,c&b Karan P,0,4,0,0,0.00
+20376,Falcons,Sunil Gudapati,b Jatan V,3,14,0,0,21.43
+20376,Falcons,Nakul Limbachiya,b Kailash N,0,1,0,0,0.00
+20376,Falcons,Sai Ritheesh Sudham,c Yash V P b Sandip A,3,10,0,0,30.00
+20376,Falcons,Shiva Chetan Reddy K,b Jatan V,5,9,1,0,55.56
+20376,Falcons,Rajesh Rachakonda*,c Hemant P b Kailash N,26,19,2,2,136.84
+20376,Falcons,Mahindra Chowdary Yeddanapalli,c&b Hemant P,8,12,0,0,66.67
+20376,Falcons,Nanje Gowda,not out,0,0,0,0,0.00
+20375,Gryffindors,Bandiss P,c Raj P b kevin s,7,14,1,0,50.00
+20375,Gryffindors,Sanket Kulkarni †,b kevin s,0,1,0,0,0.00
+20375,Gryffindors,Sandeep Reddy Chidipudi,c kevin s b Hiren J,0,4,0,0,0.00
+20375,Gryffindors,Bikash Ghibila,b kevin s,1,4,0,0,25.00
+20375,Gryffindors,Ankit Patel,c Baseer Ahmed M b kevin s,0,2,0,0,0.00
+20375,Gryffindors,Axay Patel,c Bhavin M b Raj P,0,4,0,0,0.00
+20375,Gryffindors,Subodh Singh*,not out,3,23,0,0,13.04
+20375,Gryffindors,Harish Bangera,b kevin s,1,3,0,0,33.33
+20375,Gryffindors,Sunil Satghare,c&b Raj P,1,20,0,0,5.00
+20375,Gryffindors,Siddhartha Nayak,c nuvan t b Chirag B,5,8,0,0,62.50
+20375,Gryffindors,Manoj Menon,c nuvan t b Savan P,1,3,0,0,33.33
+20375,RHG,Anish Gandhi,b Harish B,3,12,0,0,25.00
+20375,RHG,Bhavin Maniar*,c Ankit P b Subodh S,0,1,0,0,0.00
+20375,RHG,PARAS GANDHI,b Harish B,0,1,0,0,0.00
+20375,RHG,Vivian Pereira,c Bikash G b Subodh S,4,3,1,0,133.33
+20375,RHG,Chirag Bhatt,not out,1,4,0,0,25.00
+20375,RHG,Nuvan T,not out,16,7,1,2,228.57
+20368,Desi Warriors,Rigved Nagarkar,b Prabhakar V,0,1,0,0,0.00
+20368,Desi Warriors,Madhav Reddy,c Dheeraj D b Sandip N,20,12,0,2,166.67
+20368,Desi Warriors,Naveen Byrappa* †,run out (Sunny B/Siva S),34,35,2,2,97.14
+20368,Desi Warriors,Sarbjitsingh Sahota,c Rajendra prasad C b Sandip N,0,1,0,0,0.00
+20368,Desi Warriors,Nauman Basit,c Sunny B b Rajendra prasad C,21,20,1,2,105.00
+20368,Desi Warriors,Rakesh Kar,c Amol R b Sandip N,2,4,0,0,50.00
+20368,Desi Warriors,Harshil Patel,c Rajendra prasad C b Amol R,1,5,0,0,20.00
+20368,Desi Warriors,Varun Gurram,c Siva S b Rajendra prasad C,10,8,0,1,125.00
+20368,Desi Warriors,Harinadha Reddy,c Sandip N b Dheeraj D,0,1,0,0,0.00
+20368,Desi Warriors,Chandan Reddy,not out,1,1,0,0,100.00
+20368,Desi Warriors,Sai Kancharla,not out,18,8,1,2,225.00
+20368,Blue Aces CC,Mrudul Ghagor,c †Naveen B b Sai K,19,15,2,1,126.67
+20368,Blue Aces CC,Satya Tarun Reddy,c †Naveen B b Sai K,5,4,1,0,125.00
+20368,Blue Aces CC,Amol Rukmangad,c Madhav R b Rakesh K,26,25,1,1,104.00
+20368,Blue Aces CC,Prabhakar Vudumula,c Madhav R b Sarbjitsingh S,19,23,1,0,82.61
+20368,Blue Aces CC,Lokesh Mekala,c Sarbjitsingh S b Sai K,6,5,1,0,120.00
+20368,Blue Aces CC,Sunny Bhardwaj,not out,18,9,0,2,200.00
+20368,Blue Aces CC,Rajendra Prasad Challa,c Sarbjitsingh S b Sai K,6,3,0,1,200.00
+20368,Blue Aces CC,Sandip Nandurkar,c Nauman B b Harinadha R,2,3,0,0,66.67
+20368,Blue Aces CC,Dheeraj Dubey*,c Madhav R b Sarbjitsingh S,4,4,0,0,100.00
+20368,Blue Aces CC,Siva Sivalenka †,not out,8,3,1,0,266.67
+20366,Sreeshti,Viraj Jasani,c Piyush K b Ishan S,20,17,1,1,117.65
+20366,Sreeshti,Sandeep Shetty,c †Jay M b Kashish S,4,9,0,0,44.44
+20366,Sreeshti,Monang Shah,c Ishan S b Haridut A,0,5,0,0,0.00
+20366,Sreeshti,Anal Patel,c Haridut A b Danish S,46,37,3,3,124.32
+20366,Sreeshti,Amol Manjrekar* †,c&b Kashish S,12,11,2,0,109.09
+20366,Sreeshti,Vikas Peddolla,c Aman S b Danish S,1,2,0,0,50.00
+20366,Sreeshti,Mahesh Nagappa,not out,35,12,2,4,291.67
+20366,Sreeshti,Rishi Patel,run out (Piyush K),0,3,0,0,0.00
+20366,Sreeshti,Santosh Mesta,not out,0,0,0,0,0.00
+20366,Maha CC,Atul Aggarwal,c Anal P b Shuvradeep M,0,1,0,0,0.00
+20366,Maha CC,Jay Mavani,c Sumesh M b Shuvradeep M,0,3,0,0,0.00
+20366,Maha CC,Kashish Shah †,b Mahesh N,4,12,0,0,33.33
+20366,Maha CC,Danish Shaikh*,c †Monang S b Rishi P,31,23,1,3,134.78
+20366,Maha CC,Summit Vaid,c †Amol M b Mahesh N,0,1,0,0,0.00
+20366,Maha CC,Aman Sharma,b Rishi P,26,25,1,3,104.00
+20366,Maha CC,Neal Shah,run out (Sumesh M),2,2,0,0,100.00
+20366,Maha CC,Piyush Kumar,c †Amol M b Sumesh M,0,2,0,0,0.00
+20366,Maha CC,Haridut Athi,not out,28,20,6,0,140.00
+20366,Maha CC,Raza Ahmad,not out,11,7,0,1,157.14
+20351,Team Highlanders,Suresh Ganesan,c Ravi R b Neel P,29,29,1,2,100.00
+20351,Team Highlanders,Hassan Anjum,c Darshan P b Neel P,34,20,2,2,170.00
+20351,Team Highlanders,Pankaj Jhamb,c Vinay P b Ravi R,0,3,0,0,0.00
+20351,Team Highlanders,Vijay Narayanan Nadar,c Vinay P b Soham B,7,8,1,0,87.50
+20351,Team Highlanders,Senthil Prabhu R †,run out (Vinay P/Dilan P),11,17,0,0,64.71
+20351,Team Highlanders,Yokesh Rajaram*,c krunal P b Ravi R,6,6,1,0,100.00
+20351,Team Highlanders,Nithin Ravooru,c Rahul P b krunal P,6,7,0,0,85.71
+20351,Team Highlanders,Sivakumar Sivasubramonian,run out (Dilan P),0,1,0,0,0.00
+20351,Team Highlanders,Raja Kuppan,b Neel P,0,1,0,0,0.00
+20351,Team Highlanders,Ravi Kanth,not out,2,2,0,0,100.00
+20351,Team Highlanders,Syed Abhinash,not out,1,2,0,0,50.00
+20351,11spartans,Rahul Patel,c Suresh G b Vijay Narayanan N,7,8,1,0,87.50
+20351,11spartans,Pratik Chiku Patel,c Yokesh R b Raja K,20,22,2,1,90.91
+20351,11spartans,Vinay P,c Sivakumar S b Yokesh R,20,24,1,1,83.33
+20351,11spartans,Ravi Rathod,c Ravi K b Vijay Narayanan N,2,3,0,0,66.67
+20351,11spartans,Jay Trivedi,run out (Syed A),12,5,0,2,240.00
+20351,11spartans,Darshan Patel,not out,31,8,0,5,387.50
+20351,11spartans,Soham Brahmbhatt,not out,4,1,1,0,400.00
 20344,Samudhra Gladiators,Tejdeep Maddirala,c Ravi R b Soham B,2,6,0,0,33.33
 20344,Samudhra Gladiators,Ashish Shetty,c †Yogesh P b Neel P,7,5,0,1,140.00
-20344,Samudhra Gladiators,Sandeep Shetty*,c Yogesh P b Soham B,5,8,1,0,62.50
+20344,Samudhra Gladiators,Sandeep I Shetty*,c Yogesh P b Soham B,5,8,1,0,62.50
 20344,Samudhra Gladiators,Vinit Bharadwaj,c Rahul P b Soham B,33,16,4,2,206.25
 20344,Samudhra Gladiators,Varaprasad Bhatta,c †Rahul P b Pratik P,1,6,0,0,16.67
 20344,Samudhra Gladiators,Ankur Chaturvedi,c †Rahul P b Rajan P,26,26,1,1,100.00
@@ -10,12 +445,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20344,Samudhra Gladiators,Anilreddy Aleti,not out,10,6,0,1,166.67
 20344,Samudhra Gladiators,Vipul Joshi,run out (Rahul P),1,1,0,0,100.00
 20344,11spartans,Rahul Patel,c Ashish S b Ankur C,17,12,1,1,141.67
-20344,11spartans,Pratik Chiku Patel,c Avteet C b Sandeep S,19,15,1,2,126.67
+20344,11spartans,Pratik Chiku Patel,c Avteet C b Sandeep I S,19,15,1,2,126.67
 20344,11spartans,Pratik Patel (savali),c Ankur C b Vinit B,1,5,0,0,20.00
 20344,11spartans,Ravi Rathod,c Vipul J b Suraj Pai M,0,4,0,0,0.00
 20344,11spartans,Yogesh Patel* †,c Anilreddy A b Suraj Pai M,16,27,2,0,59.26
 20344,11spartans,Soham Brahmbhatt,c Vipul J b Vinit B,2,6,0,0,33.33
-20344,11spartans,Bhargav Patel,c Anilreddy A b Sandeep S,6,6,1,0,100.00
+20344,11spartans,Bhargav Patel,c Anilreddy A b Sandeep I S,6,6,1,0,100.00
 20344,11spartans,Darshan Patel,c Avteet C b Ankur C,28,15,0,4,186.67
 20344,11spartans,Dilan Patel,c Varaprasad B b Ankur C,0,1,0,0,0.00
 20344,11spartans,Rajan Patel,not out,2,2,0,0,100.00
@@ -25,17 +460,17 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20335,Youth For Sewa,Anand Vemuri,b Vimalendu K,1,6,0,0,16.67
 20335,Youth For Sewa,Venkata Voona,c Sandeep G b Vimalendu K,0,2,0,0,0.00
 20335,Youth For Sewa,Satish Kasireddy,b Vimalendu K,0,1,0,0,0.00
-20335,Youth For Sewa,Tauseef Ahmed,c † b Harihara G,22,26,0,2,84.62
+20335,Youth For Sewa,Tauseef Ahmed,c †Vinod K b Harihara G,22,26,0,2,84.62
 20335,Youth For Sewa,Balu Y,c ⁠Thulasi T b Vimalendu K,3,7,0,0,42.86
 20335,Youth For Sewa,Ozzy K,b Vimalendu K,0,2,0,0,0.00
-20335,Youth For Sewa,Ram Jammula,c&b Harihara G,2,4,0,0,50.00
+20335,Youth For Sewa,Ram R,c&b Harihara G,2,4,0,0,50.00
 20335,Youth For Sewa,Aillu N,b Jinal J,9,7,0,1,128.57
 20335,Youth For Sewa,Rajesh Kondru,not out,2,3,0,0,66.67
 20335,F5,Sandeep Goud,c Eswar V b Aillu N,3,10,0,0,30.00
 20335,F5,Nirmal Singh,b Aillu N,1,2,0,0,50.00
-20335,F5,⁠Thulasi Thota,c Aillu N b Ram J,1,6,0,0,16.67
+20335,F5,⁠Thulasi Thota,c Aillu N b Ram R,1,6,0,0,16.67
 20335,F5,Vimalendu Kumar,c Tauseef A b Venkata V,48,34,1,5,141.18
-20335,F5,Jinal Jolly,c Ram J b Venkata V,11,17,1,0,64.71
+20335,F5,Jinal Jolly,c Ram R b Venkata V,11,17,1,0,64.71
 20335,F5,Sujesh Nair,c Satish K b Venkata V,2,11,0,0,18.18
 20335,F5,Subramaniam Sampath,c †Devadathan B b Anand V,3,7,0,0,42.86
 20335,F5,Varun Athi,c Ozzy K b Anand V,0,2,0,0,0.00
@@ -185,7 +620,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20302,Gcc,Parth Patel,c Abdulla S b Bhavik S,6,16,0,0,37.50
 20302,Gcc,Parin Patel (GCC),c †Aditya K b Darshil M,2,6,0,0,33.33
 20302,Gcc,Samir Patel,c Anoop H b Zoheb K,12,7,1,1,171.43
-20302,Gcc,Bhaumik Thakkar GCC,not out,9,5,0,1,180.00
+20302,Gcc,Pragnesh Patel GCC,not out,9,5,0,1,180.00
 20302,Gcc,Parth Desai*,c †Aditya K b Darshil M,0,3,0,0,0.00
 20302,Rowdy Rebels,Zohair Ahmad Siddiui,c Parth P b Parin P,2,5,0,0,40.00
 20302,Rowdy Rebels,Abdulla Shaikh,c Parth P b Karan P,21,9,3,1,233.33
@@ -193,7 +628,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20302,Rowdy Rebels,Zoheb Khalid*,not out,24,13,5,0,184.62
 20302,Rowdy Rebels,Rishab Shirur,not out,18,8,1,2,225.00
 20292,Pway Lions,Dhaivat Patel,c Janakiram S b Gopi S,27,14,1,3,192.86
-20292,Pway Lions,Akshar Patel,c Shabbeer S b Gopi S,11,13,1,1,84.62
+20292,Pway Lions,Akshar Patel,c Shabbir S b Gopi S,11,13,1,1,84.62
 20292,Pway Lions,Vraj Shah,c Kamalraj R b Uma Maheswara Rao P,32,31,1,3,103.23
 20292,Pway Lions,Mohit Patel,b Sundip H,29,25,0,3,116.00
 20292,Pway Lions,Bhavik Patel*,c Aditya R b Kamalraj R,1,2,0,0,50.00
@@ -203,7 +638,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20292,Pway Lions,Harsh Patel,not out,0,0,0,0,0.00
 20292,Veerans,Kannan Thirumoorthy,c Dhaivat P b Vraj S,46,33,2,4,139.39
 20292,Veerans,Aditya Rathor,b Drumil A,13,6,0,2,216.67
-20292,Veerans,Shabbeer Syed,run out (Ronak R),7,8,1,0,87.50
+20292,Veerans,Shabbir Syed,run out (Ronak R),7,8,1,0,87.50
 20292,Veerans,Kamalraj Rajamanickam,not out,50,26,2,5,192.31
 20292,Veerans,Sundip Helchal,not out,23,12,1,2,191.67
 20283,Nj Stars CC,Zain Pervaiz,run out (Satish S),9,8,1,0,112.50
@@ -217,7 +652,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20283,Nj Stars CC,Abdul Wali Siddiqee,c Sabeel S b Shobhit G,0,11,0,0,0.00
 20283,Nj Stars CC,Sunny Desai,c †Prabhjeet S b Sameer K,1,9,0,0,11.11
 20283,Nj Stars CC,Amjad Dutt,not out,1,3,0,0,33.33
-20283,Storm Riders,Prabhjeet Singh,c Muhammad H b Abdul Wali S,9,10,0,1,90.00
+20283,Storm Riders,Prabhjeet S Ricky,c Muhammad H b Abdul Wali S,9,10,0,1,90.00
 20283,Storm Riders,Shobhit Gupta,run out (Zain P),6,15,0,1,40.00
 20283,Storm Riders,Abhishek Varma,run out (Muhammad H),5,5,1,0,100.00
 20283,Storm Riders,Apurv Jain* †,c Amjad D b Zain P,7,11,1,0,63.64
@@ -266,7 +701,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20273,Jetha 11,Priyank Patel,run out (Romil G),12,5,1,1,240.00
 20273,Jetha 11,Jignesh Mukhi Patel,b Vipul P,2,7,0,0,28.57
 20273,Jetha 11,Parth Patel,not out,2,5,0,0,40.00
-20273,Jetha 11,Mayank Patel,not out,5,4,0,0,125.00
+20273,Jetha 11,Mayank Patel Patel,not out,5,4,0,0,125.00
 20273,Nj Braves,Swar Shah,c †Deepan Sunny C b Haren P,0,2,0,0,0.00
 20273,Nj Braves,Romil Gaglani,b Haren P,0,2,0,0,0.00
 20273,Nj Braves,Vinoth Suseendran †,b Dhruvil D,10,25,0,0,40.00
@@ -302,12 +737,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20269,Parsippany Phoenix XI,Vikasreddy Rangapur,b Farukh M,0,5,0,0,0.00
 20269,Parsippany Phoenix XI,Suman K,c&b Farukh M,6,13,0,0,46.15
 20269,Parsippany Phoenix XI,Tej Reddy,c Usman B b Farukh M,30,24,1,3,125.00
-20269,Parsippany Phoenix XI,Satish Kumar Durgam,run out (Arun Prasad G/gokul das m),4,6,0,0,66.67
+20269,Parsippany Phoenix XI,Satish Kumar Durgam,run out (Salam S/Bala K),4,6,0,0,66.67
 20269,Parsippany Phoenix XI,Aman Dudeja,c Hari kiran V b Narender Reddy B,1,5,0,0,20.00
 20269,Parsippany Phoenix XI,Sujan Kumar,c Dheeban J b Arun Prasad G,0,1,0,0,0.00
 20269,Parsippany Phoenix XI,Praveen Vinnakota*,not out,0,0,0,0,0.00
 20269,Parsippany Phoenix XI,Jeyaram Ramadoss,b Narender Reddy B,0,2,0,0,0.00
-20269,Parsippany Phoenix XI,Raghuveer Bethelli,run out (gokul das m/sai C),1,3,0,0,33.33
+20269,Parsippany Phoenix XI,Raghuveer Bethelli,run out (Sateesh N/Bala K),1,3,0,0,33.33
 20269,Newport CC,Sai Charan,c †Vikasreddy R b Satish kumar D,17,16,2,0,106.25
 20269,Newport CC,Arun Prasad G*,c Govind S b Satish kumar D,3,11,0,0,27.27
 20269,Newport CC,Dheeban Jagadeesn,c †Vikasreddy R b Satish kumar D,19,13,1,2,146.15
@@ -374,7 +809,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20233,Aryans,Gajendra Kumar,c †Rohit R b Raghuraman V,1,2,0,0,50.00
 20233,Aryans,Ajay Shankar,not out,0,0,0,0,0.00
 20233,Aryans,Aaditya Kumar,b Chinmaya S,0,1,0,0,0.00
-20233,Aryans,Henil Balsara,run out (Dheepak C/Chinmaya S),0,1,0,0,0.00
+20233,Aryans,Henil Balsara,run out (DHEEPAK C/Chinmaya S),0,1,0,0,0.00
 20233,Aryans,Bhavaz Akula,run out (Chinmaya S),0,1,0,0,0.00
 20232,Parsippany Phoenix XI,Vikasreddy Rangapur,c Sachin K b Apurv J,9,10,2,0,90.00
 20232,Parsippany Phoenix XI,Praveen Vinnakota*,c †Prabhjeet S b Apurv J,0,5,0,0,0.00
@@ -391,7 +826,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20232,Storm Riders,Anikesh Jain,not out,15,26,1,0,57.69
 20232,Storm Riders,Sabeel Shaikh,c †Praveen V b Satish kumar D,7,4,0,1,175.00
 20232,Storm Riders,Satish Sarode,c †Amit J b Naveen R,1,4,0,0,25.00
-20232,Storm Riders,Prabhjeet Singh,b Raghuveer B,10,11,2,0,90.91
+20232,Storm Riders,Prabhjeet S Ricky,b Raghuveer B,10,11,2,0,90.91
 20232,Storm Riders,Sachin Kamtekar,not out,17,6,2,1,283.33
 20225,Nj Stars CC,Jahanzeb Alam,c †Kartik M b Sheshank R,24,19,0,3,126.32
 20225,Nj Stars CC,Akram Abubakar,c Deepesh N b Ankur P,1,4,0,0,25.00
@@ -421,7 +856,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20214,Blasters,Preet Suthar,c&b Dipal P,0,1,0,0,0.00
 20214,Blasters,Harshu Patel,c&b Dhruvil D,18,8,0,3,225.00
 20214,Blasters,Chirag Patel,not out,1,2,0,0,50.00
-20214,Jetha 11,Syam Pandya,c Manthan P b Jay P,67,36,0,9,186.11
+20214,Jetha 11,Shyam Pandya,c Manthan P b Jay P,67,36,0,9,186.11
 20214,Jetha 11,Deepan Sunny Chauhan,c Manthan P b Jay P,11,9,0,1,122.22
 20214,Jetha 11,Nirav Patel*,c Jay P b Manthan P,1,3,0,0,33.33
 20214,Jetha 11,Jalpesh Patel,c Harshu P b Manthan P,0,2,0,0,0.00
@@ -490,7 +925,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20205,Edison Rebelz,Shalin Patel,c †Bala K b gokul das m,5,8,0,0,62.50
 20205,Edison Rebelz,Sandeep Mistry,b Farukh M,18,25,1,1,72.00
 20205,Edison Rebelz,Nirav86 Shah,c †Bala K b Mahendran P,5,8,0,0,62.50
-20205,Edison Rebelz,Vivaan Patra,c&b Narender Reddy B,33,21,0,4,157.14
+20205,Edison Rebelz,Shrikant Patra,c&b Narender Reddy B,33,21,0,4,157.14
 20205,Edison Rebelz,Soumyabrata Paul*,b Emmanuel Samuel N,3,6,0,0,50.00
 20205,Edison Rebelz,Jagadeesh Gandhi Agakrishnamurthy,not out,7,8,0,0,87.50
 20205,Edison Rebelz,Dhaval Shah,c Emmanuel Samuel N b Narender Reddy B,0,2,0,0,0.00
@@ -559,7 +994,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20182,Gcc,Priten Patel (GCC),c&b Pratik P,9,11,2,0,81.82
 20182,Gcc,Priyank Patel(gcc),c Ravi R b Rajan P,2,8,0,0,25.00
 20182,Gcc,Mrugesh Patel,c Meet P b Jay T,1,8,0,0,12.50
-20182,Gcc,Bhaumik Thakkar GCC,c Jay T b Soham B,24,21,3,1,114.29
+20182,Gcc,Pragnesh Patel GCC,c Jay T b Soham B,24,21,3,1,114.29
 20182,Gcc,Hardik(gcc) Rana,c Ravi R b Soham B,22,10,0,3,220.00
 20182,Gcc,Sahil Patel,c Darshan P b Soham B,12,15,1,1,80.00
 20182,Gcc,Parth Patel,c †Meet P b Rajan P,1,4,0,0,25.00
@@ -588,7 +1023,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20163,Fdu Giants,Ravish Parekh,not out,1,2,0,0,50.00
 20158,Samudhra Gladiators,Harshad Patil,c †Subodh S b Ankit P,41,23,2,5,178.26
 20158,Samudhra Gladiators,Vinit Bharadwaj,c Ankit P b Johncy V,7,7,0,1,100.00
-20158,Samudhra Gladiators,Sandeep Shetty*,c Subodh S b Ankit P,11,16,0,1,68.75
+20158,Samudhra Gladiators,Sandeep I Shetty*,c Subodh S b Ankit P,11,16,0,1,68.75
 20158,Samudhra Gladiators,Tejdeep Maddirala,run out (Ankit P),1,2,0,0,50.00
 20158,Samudhra Gladiators,Sanju S †,c Ankit P b Johncy V,0,3,0,0,0.00
 20158,Samudhra Gladiators,Avteet Chayal,b Johncy V,12,19,0,1,63.16
@@ -601,7 +1036,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20158,Gryffindors,Prasant Bijuli,c Suraj Pai M b Harshad P,2,6,0,0,33.33
 20158,Gryffindors,Thiyagarajan Dhakshinamoorthy,c Vipul J b Suraj Pai M,17,16,1,1,106.25
 20158,Gryffindors,Ankit Patel,c Vardaan J b Harshad P,0,2,0,0,0.00
-20158,Gryffindors,Sandeep Reddy Chidipudi,c †Sandeep S b Harshad P,11,14,1,0,78.57
+20158,Gryffindors,Sandeep Reddy Chidipudi,c †Sandeep I S b Harshad P,11,14,1,0,78.57
 20158,Gryffindors,Bandiss P,c Vipul J b Suraj Pai M,1,2,0,0,50.00
 20158,Gryffindors,Harish Bangera,b Vinit B,2,4,0,0,50.00
 20158,Gryffindors,Sohil Kothari,not out,10,12,0,0,83.33
@@ -642,22 +1077,22 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20156,Blue Aces CC,Prabhakar Vudumula,b Aniket D,2,3,0,0,66.67
 20156,Blue Aces CC,Tharak Ram,not out,4,7,0,0,57.14
 20156,Blue Aces CC,Siva Sivalenka †,b Ved A,4,2,1,0,200.00
-20150,Juggernaut,Durlove Mohanty,c †Rohith R b Venkata V,10,13,0,1,76.92
+20150,Juggernaut,Durlove Mohanty,c †Rohit R b Venkata V,10,13,0,1,76.92
 20150,Juggernaut,Karan P,c Tauseef A b Venkata V,6,8,1,0,75.00
-20150,Juggernaut,Devashya Patel,c Balu Y b Rohith R,24,15,1,2,160.00
+20150,Juggernaut,Devashya Patel,c Balu Y b Rohit R,24,15,1,2,160.00
 20150,Juggernaut,Jayan Patel,c Satish K b Anand V,11,9,2,0,122.22
 20150,Juggernaut,Manan Patel,b Anand V,0,2,0,0,0.00
-20150,Juggernaut,Yash V Patel,c †Rohith R b Balu Y,4,11,0,0,36.36
+20150,Juggernaut,Yash V Patel,c †Rohit R b Balu Y,4,11,0,0,36.36
 20150,Juggernaut,Shrenik Patel,c Eswar V b Balu Y,0,1,0,0,0.00
 20150,Juggernaut,Hemant Patel*,b Balu Y,13,15,0,1,86.67
-20150,Juggernaut,Kartik Patel,c Ram J b Anand V,5,9,0,0,55.56
+20150,Juggernaut,Kartik Patel,c Ram R b Anand V,5,9,0,0,55.56
 20150,Juggernaut,Sandip Amin,not out,0,4,0,0,0.00
-20150,Juggernaut,Kailash Naithani,c Ram J b Anand V,0,1,0,0,0.00
+20150,Juggernaut,Kailash Naithani,c Ram R b Anand V,0,1,0,0,0.00
 20150,Youth For Sewa,Eswar Vennapusa*,c Hemant P b Kartik P,14,12,1,1,116.67
-20150,Youth For Sewa,Ram Jammula,c †Devashya P b Shrenik P,4,12,0,0,33.33
+20150,Youth For Sewa,Ram R,c †Devashya P b Shrenik P,4,12,0,0,33.33
 20150,Youth For Sewa,Anand Vemuri,b Karan P,3,7,0,0,42.86
 20150,Youth For Sewa,Tauseef Ahmed,c Sandip A b Kartik P,11,17,0,0,64.71
-20150,Youth For Sewa,Rohith Reddy,c Hemant P b Shrenik P,1,5,0,0,20.00
+20150,Youth For Sewa,Rohit Reddy,c Hemant P b Shrenik P,1,5,0,0,20.00
 20150,Youth For Sewa,Dileep Guthi,c Shrenik P b Karan P,4,6,1,0,66.67
 20150,Youth For Sewa,Satish Kasireddy,b Shrenik P,0,3,0,0,0.00
 20150,Youth For Sewa,Balu Y,not out,41,23,0,6,178.26
@@ -735,12 +1170,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20125,11spartans,Neel Patel-13,c Madhav R b Varun G,1,8,0,0,12.50
 20125,11spartans,Rajan Patel,not out,0,4,0,0,0.00
 20122,Fdu Giants,Ankit Chopra*,c Eswar V b Venkata V,1,2,0,0,50.00
-20122,Fdu Giants,Aman Deshmukh,c Eswar V b Rohith R,7,18,0,0,38.89
+20122,Fdu Giants,Aman Deshmukh,c Eswar V b Rohit R,7,18,0,0,38.89
 20122,Fdu Giants,Charanjot Singh,c Eswar V b Manikanta Raja k,6,10,0,0,60.00
 20122,Fdu Giants,Viral Parekh,c †Devadathan B b Balu Y,4,13,0,0,30.77
 20122,Fdu Giants,Dhruv Patel,b Manikanta Raja k,19,21,1,1,90.48
 20122,Fdu Giants,Ashish Kansal,b Venkata V,1,5,0,0,20.00
-20122,Fdu Giants,Vrajesh Patel,c Balu Y b Rohith R,5,8,0,0,62.50
+20122,Fdu Giants,Vrajesh Patel,c Balu Y b Rohit R,5,8,0,0,62.50
 20122,Fdu Giants,Basheer Shaik,not out,9,12,0,0,75.00
 20122,Fdu Giants,Nishant Sharma,c Balu Y b Manikanta Raja k,0,1,0,0,0.00
 20122,Fdu Giants,Sukhwinder Singh,c Venkata V b Manikanta Raja k,8,6,0,1,133.33
@@ -770,20 +1205,20 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20121,Team Highlanders,Nithin Ravooru,b Vimalendu K,2,5,0,0,40.00
 20121,Team Highlanders,Sivakumar Sivasubramonian,not out,7,8,1,0,87.50
 20121,Team Highlanders,Syed Abhinash,not out,1,2,0,0,50.00
-20115,Piscataway Avengers,Rimal Patel*,c †Sanju S b Sandeep S,1,6,0,0,16.67
+20115,Piscataway Avengers,Rimal Patel*,c †Sanju S b Sandeep I S,1,6,0,0,16.67
 20115,Piscataway Avengers,Vrajesh Patel,b Harshad P,3,5,0,0,60.00
 20115,Piscataway Avengers,Pujan Patel,c Ashish S b Harshad P,1,3,0,0,33.33
 20115,Piscataway Avengers,Niraj Patel,c †Sanju S b Ankur C,36,19,3,3,189.47
 20115,Piscataway Avengers,Ujjaval Patel,c Ashish S b Naveen R S,9,9,2,0,100.00
 20115,Piscataway Avengers,Hemil Patel,c Harshad P b Ankur C,25,19,0,3,131.58
-20115,Piscataway Avengers,Dharmesh Patel,c Sandeep S b Harshad P,16,17,1,1,94.12
+20115,Piscataway Avengers,Dharmesh Patel,c Sandeep I S b Harshad P,16,17,1,1,94.12
 20115,Piscataway Avengers,Sherry Singh,c&b Harshad P,0,1,0,0,0.00
 20115,Piscataway Avengers,Shan Tennakoon,c Ashish S b Harshad P,7,9,0,1,77.78
 20115,Piscataway Avengers,Mit Patel,c Naveen R S b Ankur C,0,2,0,0,0.00
 20115,Piscataway Avengers,Krunal Shah,not out,0,4,0,0,0.00
 20115,Samudhra Gladiators,Tejdeep Maddirala,b Mit P,17,23,2,0,73.91
 20115,Samudhra Gladiators,Ashish Shetty,c Hemil P b Mit P,12,15,2,0,80.00
-20115,Samudhra Gladiators,Sandeep Shetty*,c Vrajesh P b Shan T,17,14,0,2,121.43
+20115,Samudhra Gladiators,Sandeep I Shetty*,c Vrajesh P b Shan T,17,14,0,2,121.43
 20115,Samudhra Gladiators,Naveen R Sripathi,c&b Krunal S,1,2,0,0,50.00
 20115,Samudhra Gladiators,Avteet Chayal,c Vrajesh P b Krunal S,0,3,0,0,0.00
 20115,Samudhra Gladiators,Harshad Patil,c Sherry S b Krunal S,0,1,0,0,0.00
@@ -932,7 +1367,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20071,Jersey Titans,Gaurav Darji,not out,17,22,1,1,77.27
 20071,Jersey Titans,Jay Domadiya*,not out,53,27,7,3,196.30
 20070,Storm Riders,KARAN SAINI,c Kironmoy B b Pushpendra S,0,4,0,0,0.00
-20070,Storm Riders,Prabhjeet Singh,b Imran K,1,3,0,0,33.33
+20070,Storm Riders,Prabhjeet S Ricky,b Imran K,1,3,0,0,33.33
 20070,Storm Riders,Anikesh Jain,c Sandeep M b Pushpendra S,6,11,0,1,54.55
 20070,Storm Riders,Sabeel Shaikh,c&b Pushpendra S,1,3,0,0,33.33
 20070,Storm Riders,Rishabh Tewari,b Pushpendra S,8,11,0,1,72.73
@@ -947,23 +1382,23 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20070,Edison Rebelz,Shalin Patel,c Satish S b Sameer K,3,15,0,0,20.00
 20070,Edison Rebelz,Imran Khan,c&b Apurv J,13,18,0,1,72.22
 20070,Edison Rebelz,Soumyabrata Paul,c Sabeel S b Rishabh T,7,12,1,0,58.33
-20070,Edison Rebelz,Vivaan Patra,c Sameer K b Shobhit G,19,10,0,2,190.00
+20070,Edison Rebelz,Shrikant Patra,c Sameer K b Shobhit G,19,10,0,2,190.00
 20070,Edison Rebelz,Dhaval Shah,run out (Prabhjeet S/Apurv J),6,13,0,0,46.15
 20070,Edison Rebelz,Yash Solanki,c Sabeel S b Apurv J,7,4,0,1,175.00
 20070,Edison Rebelz,Rupak Das* †,not out,1,1,0,0,100.00
 20062,PUNJAB XI,Rizwan Ahmed,c Jignesh Mukhi P b Eijaz M,17,18,2,0,94.44
 20062,PUNJAB XI,Azam Mohammad,c Parth S b Eijaz M,11,17,1,0,64.71
 20062,PUNJAB XI,Lovely Singh,c Kishan P b Eijaz M,37,22,1,5,168.18
-20062,PUNJAB XI,Jasmeet Singh,c Mayank P b Divyesh P,25,19,0,3,131.58
+20062,PUNJAB XI,Jasmeet Singh,c Mayank Patel P b Divyesh P,25,19,0,3,131.58
 20062,PUNJAB XI,Sukhwinder Singh*,not out,12,14,1,0,85.71
 20062,PUNJAB XI,Faizan Januja,c † b Jignesh Mukhi P,9,7,0,1,128.57
 20062,Jetha 11,Parth Surti,c Azam M b Jasmeet S,3,7,0,0,42.86
-20062,Jetha 11,Mayank Patel,c †Faizan J b Nasir K,2,7,0,0,28.57
+20062,Jetha 11,Mayank Patel Patel,c †Faizan J b Nasir K,2,7,0,0,28.57
 20062,Jetha 11,Nirav Patel*,c †Faizan J b Lovely S,34,26,2,2,130.77
 20062,Jetha 11,Nirav Patel NJ,c Lovely S b Nasir K,3,7,0,0,42.86
 20062,Jetha 11,Dipal Patel,c Rizwan A b Sunny S,8,10,0,1,80.00
 20062,Jetha 11,Jignesh Mukhi Patel,c Jasmeet S b Sunny S,12,11,0,1,109.09
-20062,Jetha 11,Syam Pandya,b Lovely S,3,7,0,0,42.86
+20062,Jetha 11,Shyam Pandya,b Lovely S,3,7,0,0,42.86
 20062,Jetha 11,Divyesh Patel,not out,19,12,0,2,158.33
 20062,Jetha 11,Kishan Patel,not out,14,12,0,1,116.67
 20059,WCC,Harikishore Malireddy,c Hardik B b Jenish S,34,23,1,3,147.83
@@ -985,11 +1420,11 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20059,Nj Braves,Jenish Shah,c&b Nahid S,5,4,1,0,125.00
 20057,Newport CC,Saikumar Katepalli,c Murugan S b Kamalraj R,4,4,1,0,100.00
 20057,Newport CC,Farukh Manzoor,c Murugan S b Sundip H,7,6,0,1,116.67
-20057,Newport CC,Salam Shamlan,c Shabbeer S b Kamalraj R,3,6,0,0,50.00
+20057,Newport CC,Salam Shamlan,c Shabbir S b Kamalraj R,3,6,0,0,50.00
 20057,Newport CC,Emmanuel Samuel Nair,b Kamalraj R,0,1,0,0,0.00
 20057,Newport CC,Bala Kandhan †,b Sundip H,10,15,0,0,66.67
 20057,Newport CC,Narender Reddy Bojja,c †Diwakar S b Aditya R,60,39,5,4,153.85
-20057,Newport CC,Usman Bajwa,c Shabbeer S b Kamalraj R,25,14,3,1,178.57
+20057,Newport CC,Usman Bajwa,c Shabbir S b Kamalraj R,25,14,3,1,178.57
 20057,Newport CC,Sai Charan,not out,7,2,0,1,350.00
 20057,Newport CC,Arun Prasad G*,b Aditya R,9,6,0,1,150.00
 20057,Newport CC,Mahendran Prakasam,not out,4,3,1,0,133.33
@@ -1002,7 +1437,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20057,Veerans,Sundip Helchal*,c †Bala K b Emmanuel Samuel N,6,5,0,1,120.00
 20057,Veerans,Navdeep Singh,c †Bala K b Saikumar K,0,1,0,0,0.00
 20057,Veerans,Diwakar Sh,c Emmanuel Samuel N b Saikumar K,0,3,0,0,0.00
-20057,Veerans,Shabbeer Syed,c †Bala K b Emmanuel Samuel N,8,4,0,1,200.00
+20057,Veerans,Shabbir Syed,c †Bala K b Emmanuel Samuel N,8,4,0,1,200.00
 20057,Veerans,Raj Koladiya,not out,1,2,0,0,50.00
 20051,Parsippany Phoenix XI,Karthikeyan Balasubramanian,c Jemin A b sandip b,8,7,0,1,114.29
 20051,Parsippany Phoenix XI,Naveen Rayal,c sandip b b Vishal S,0,5,0,0,0.00
@@ -1084,7 +1519,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20036,Blasters,Gunjan Patel,not out,37,17,3,3,217.65
 20022,Parsippany Phoenix XI,Amit Jadli,c Gowtham A b Siva K,11,17,1,0,64.71
 20022,Parsippany Phoenix XI,Praveen Vinnakota*,c †Rohit R b Shan A,8,4,2,0,200.00
-20022,Parsippany Phoenix XI,Vikasreddy Rangapur,c Dheepak C b Siva K,4,6,1,0,66.67
+20022,Parsippany Phoenix XI,Vikasreddy Rangapur,c DHEEPAK C b Siva K,4,6,1,0,66.67
 20022,Parsippany Phoenix XI,Naveen Rayal,c Kiran Kumar Y b Siva K,6,7,0,1,85.71
 20022,Parsippany Phoenix XI,Aman Dudeja,c †Rohit R b Lokesh P,1,2,0,0,50.00
 20022,Parsippany Phoenix XI,Karthikeyan Balasubramanian,b Lokesh P,11,8,1,1,137.50
@@ -1107,9 +1542,9 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20020,Veerans,Amit Sharma,c Mitul P b Rishabh T,31,14,1,4,221.43
 20020,Veerans,Naresh Ram,c Prabhjeet S b Mitul P,6,4,1,0,150.00
 20020,Veerans,Murugan Shan,not out,1,6,0,0,16.67
-20020,Veerans,Shabbeer Syed,not out,3,2,0,0,150.00
+20020,Veerans,Shabbir Syed,not out,3,2,0,0,150.00
 20020,Storm Riders,Apurv Jain* †,b Sundip H,35,34,6,0,102.94
-20020,Storm Riders,Prabhjeet Singh,c Murugan S b Sundip H,28,32,0,3,87.50
+20020,Storm Riders,Prabhjeet S Ricky,c Murugan S b Sundip H,28,32,0,3,87.50
 20020,Storm Riders,Shreyas Najan,not out,29,12,2,3,241.67
 20020,Storm Riders,Sabeel Shaikh,not out,9,6,2,0,150.00
 20019,Nj Stars CC,Yasir Mohammad,b Mitul P,0,1,0,0,0.00
@@ -1140,15 +1575,15 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 20015,Jetha 11,Dipal Patel,c Prit P b Dhaivat P,1,5,0,0,20.00
 20015,Jetha 11,Kishan Patel,c †Ronak R b Vraj S,10,14,0,1,71.43
 20015,Jetha 11,Divyesh Patel,c Bhavik P b Vraj S,34,19,1,4,178.95
-20015,Jetha 11,Syam Pandya,c Neel P b Bhavik P,0,1,0,0,0.00
+20015,Jetha 11,Shyam Pandya,c Neel P b Bhavik P,0,1,0,0,0.00
 20015,Jetha 11,Gary Patel,c Bhavik P b Drumil A,6,3,0,1,200.00
 20015,Jetha 11,Haren Patel,not out,10,5,0,1,200.00
 20015,Jetha 11,Jigar D Patel,b Dhaivat P,1,3,0,0,33.33
 20015,Pway Lions,Dhaivat Patel,c Parth S b Dipal P,0,2,0,0,0.00
-20015,Pway Lions,Neel Patel*,c †Syam P b Jigar D P,4,4,1,0,100.00
-20015,Pway Lions,Vraj Shah,c †Syam P b Dipal P,0,3,0,0,0.00
+20015,Pway Lions,Neel Patel*,c †Shyam P b Jigar D P,4,4,1,0,100.00
+20015,Pway Lions,Vraj Shah,c †Shyam P b Dipal P,0,3,0,0,0.00
 20015,Pway Lions,Prit Patel(PD),c Nirav P b Divyesh P,14,19,1,1,73.68
-20015,Pway Lions,Bhavik Patel,c †Syam P b Gary P,18,13,1,2,138.46
+20015,Pway Lions,Bhavik Patel,c †Shyam P b Gary P,18,13,1,2,138.46
 20015,Pway Lions,Mohit Patel,c Dipal P b Jigar D P,18,18,1,1,100.00
 20015,Pway Lions,Shri Patel,not out,43,20,5,2,215.00
 20015,Pway Lions,Ronak Rana †,not out,13,11,1,1,118.18
@@ -1213,14 +1648,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19983,Edison Rebelz,Imran Khan,c †Kartik M b Samit K,11,10,0,1,110.00
 19983,Edison Rebelz,Sourav Mazumder,c Jemin A b Sai Deepak D,14,16,1,0,87.50
 19983,Edison Rebelz,Soumyabrata Paul*,c Jemin A b Samit K,3,5,0,0,60.00
-19983,Edison Rebelz,Vivaan Patra,c †Kartik M b Samit K,0,1,0,0,0.00
+19983,Edison Rebelz,Shrikant Patra,c †Kartik M b Samit K,0,1,0,0,0.00
 19983,Edison Rebelz,Shailesh Khadapkar,c Nikhil S b sandip b,0,11,0,0,0.00
 19983,Edison Rebelz,Sandeep Mistry,b Sai Deepak D,5,6,1,0,83.33
 19983,Edison Rebelz,Rupak Das †,c Anup S b Sai Deepak D,3,5,0,0,60.00
 19983,Edison Rebelz,Dhaval Shah,c&b Samit K,0,3,0,0,0.00
 19983,Edison Rebelz,Ankit Somani,not out,2,8,0,0,25.00
 19983,Edison Rebelz,Yash Solanki,c Sheshank R b Samit K,7,13,1,0,53.85
-19983,Mercer Challengers,Jemin Amin,c Sourav M b Vivaan P,33,30,2,2,110.00
+19983,Mercer Challengers,Jemin Amin,c Sourav M b Shrikant P,33,30,2,2,110.00
 19983,Mercer Challengers,Sheshank Reddy,b Ankit S,17,26,0,1,65.38
 19983,Mercer Challengers,Anup Satya,not out,4,1,1,0,400.00
 19983,Mercer Challengers,Samit Kumbhani,not out,4,5,1,0,80.00
@@ -1252,7 +1687,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19979,Blasters,RAJ PATEL,c RamSaran Reddy D b Nisar A,8,13,1,0,61.54
 19979,Blasters,Priyank Patel,c Deepak P b SARWAR ALI S,1,5,0,0,20.00
 19979,Blasters,Manthan Patel*,c Rohit S b Sai S,15,14,1,1,107.14
-19979,Blasters,Dinesh Kumavat,c Harikishore M b Nisar A,0,3,0,0,0.00
+19979,Blasters,Dinesh Kumawat,c Harikishore M b Nisar A,0,3,0,0,0.00
 19979,Blasters,Gunjan Patel,c SARWAR ALI S b Sai S,3,9,0,0,33.33
 19979,Blasters,Harshu Patel,c Harikishore M b Nahid S,4,5,0,0,80.00
 19979,Blasters,Jay Patel (JP),c Rohit S b Harikishore M,13,6,0,2,216.67
@@ -1290,7 +1725,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19956,Gcc,Sapan Parikh,c Nirav V b Ujjaval P,15,15,1,1,100.00
 19956,Gcc,Karan Patel,c Mayank P b Ujjaval P,2,5,0,0,40.00
 19956,Gcc,Urjit Patel (gcc),c Mit P b Sherry S,44,23,4,4,191.30
-19956,Gcc,Nirmal Patel GCC,c Mit P b Rimal P,0,3,0,0,0.00
+19956,Gcc,Dipen Patel GCC,c Mit P b Rimal P,0,3,0,0,0.00
 19956,Gcc,Parth Patel,c&b Rimal P,0,4,0,0,0.00
 19956,Gcc,Mrugesh Patel,b Sherry S,27,15,2,2,180.00
 19956,Gcc,Hardik(gcc) Rana,c Niraj P b Sherry S,0,2,0,0,0.00
@@ -1309,14 +1744,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19948,Falcons,Deepak Guthikonda,c Nisarg P b Tirth P,1,4,0,0,25.00
 19948,Falcons,Ajith Nalluri,not out,0,0,0,0,0.00
 19948,SAMP XI,Tirth Patel,c †Ravindar P b sairam R,6,4,0,1,150.00
-19948,SAMP XI,Hrishi Patel,c †Ravindar P b Manikanta A,0,1,0,0,0.00
-19948,SAMP XI,Arya Patel,b Manikanta A,8,4,2,0,200.00
-19948,SAMP XI,Sid Zala,c Sunil G b Manikanta A,11,9,0,1,122.22
-19948,SAMP XI,Nisarg Patel,c Lakshman R b Manikanta A,7,8,0,1,87.50
+19948,SAMP XI,Hrishi Patel,c †Ravindar P b manikanta a,0,1,0,0,0.00
+19948,SAMP XI,Arya Patel,b manikanta a,8,4,2,0,200.00
+19948,SAMP XI,Sid Zala,c Sunil G b manikanta a,11,9,0,1,122.22
+19948,SAMP XI,Nisarg Patel,c Lakshman R b manikanta a,7,8,0,1,87.50
 19948,SAMP XI,Jaydev Zala,c †Ravindar P b srinath g,4,3,1,0,133.33
 19948,SAMP XI,Prem Patel,run out (sairam R),1,6,0,0,16.67
 19948,SAMP XI,Aayush Patel*,run out (srinath g),0,7,0,0,0.00
-19948,SAMP XI,Ronny Patel,b Manikanta A,2,8,0,0,25.00
+19948,SAMP XI,Ronny Patel,b manikanta a,2,8,0,0,25.00
 19948,SAMP XI,Rishi Patel,c †Ravindar P b,3,6,0,0,50.00
 19948,SAMP XI,Vasu Patel,not out,0,5,0,0,0.00
 19942,RHG,Danesh Patel,c Viral P b Kunal P,14,13,3,0,107.69
@@ -1373,7 +1808,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19937,Youth For Sewa,Dheeraj Reddy,c Aman S b Rizwan B,40,25,3,3,160.00
 19937,Youth For Sewa,Tauseef Ahmed,c Dhrumil S b Danish S,13,15,1,0,86.67
 19937,Youth For Sewa,Satish Kasireddy,c †Kashish S b Jay S,6,6,1,0,100.00
-19937,Youth For Sewa,Rohith Reddy,not out,2,3,0,0,66.67
+19937,Youth For Sewa,Rohit Reddy,not out,2,3,0,0,66.67
 19937,Youth For Sewa,Aillu N,not out,0,0,0,0,0.00
 19933,Sreeshti,Manthan Upadhyay,c †Rahul P b krunal P,4,5,1,0,80.00
 19933,Sreeshti,Amol Manjrekar* †,c Pratik Chiku P b Ravi R,22,19,3,0,115.79
@@ -1395,7 +1830,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19933,11spartans,Pratik Chiku Patel,not out,3,4,0,0,75.00
 19930,Samudhra Gladiators,Sanju S †,c Mukesh R b Subramaniam S,1,10,0,0,10.00
 19930,Samudhra Gladiators,Dileep Reddy*,c †Arjun R b ⁠Thulasi T,0,3,0,0,0.00
-19930,Samudhra Gladiators,Sandeep Shetty,c †Arjun R b Sandeep G,18,8,0,2,225.00
+19930,Samudhra Gladiators,Sandeep I Shetty,c †Arjun R b Sandeep G,18,8,0,2,225.00
 19930,Samudhra Gladiators,Naveen R Sripathi,c †Arjun R b Deniz B,45,34,1,5,132.35
 19930,Samudhra Gladiators,Harshad Patil,c Vinod K b Deniz B,1,4,0,0,25.00
 19930,Samudhra Gladiators,Willish Patel,c Deniz B b ⁠Thulasi T,12,4,0,2,300.00
@@ -1403,7 +1838,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19930,Samudhra Gladiators,Avteet Chayal,c Subramaniam S b Vinod K,20,15,1,2,133.33
 19930,Samudhra Gladiators,Vinit Bharadwaj,not out,1,1,0,0,100.00
 19930,Samudhra Gladiators,Vipul Joshi,run out (Vinod K),6,3,0,1,200.00
-19930,F5,Arjun R †,c †Sanju S b Sandeep S,12,15,0,1,80.00
+19930,F5,Arjun R †,c †Sanju S b Sandeep I S,12,15,0,1,80.00
 19930,F5,Mukesh Ramawat,c Willish P b Naveen R S,7,9,1,0,77.78
 19930,F5,⁠Thulasi Thota,b Vinit B,7,6,0,1,116.67
 19930,F5,Deniz Baby,c Harshad P b Naveen R S,16,12,2,1,133.33
@@ -1411,7 +1846,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19930,F5,Subramaniam Sampath,b Naveen R S,18,20,0,2,90.00
 19930,F5,Sujesh Nair,c Suraj Pai M b Vinit B,11,5,1,1,220.00
 19930,F5,Sandeep Goud,b Naveen R S,0,3,0,0,0.00
-19930,F5,Jayanth Prabhu,c Vipul J b Sandeep S,5,9,0,0,55.56
+19930,F5,Jayanth Prabhu,c Vipul J b Sandeep I S,5,9,0,0,55.56
 19930,F5,Rubesh Selvam,not out,1,1,0,0,100.00
 19921,Team Highlanders,Suresh Ganesan,c †Devashya P b Kailash N,0,5,0,0,0.00
 19921,Team Highlanders,Hassan Anjum,b Jatan V,22,21,3,0,104.76
@@ -1593,16 +2028,16 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19888,SAMP XI,Jatin Patel,not out,5,17,0,0,29.41
 19888,SAMP XI,Deep 09,b Rumit P,0,4,0,0,0.00
 19883,Juggernaut,Karan P,Retired Not Out,43,45,3,2,95.56
-19883,Juggernaut,Dev Patel †,c †Dileep R b Sandeep S,8,7,0,1,114.29
+19883,Juggernaut,Dev Patel †,c †Dileep R b Sandeep I S,8,7,0,1,114.29
 19883,Juggernaut,Devashya Patel,c Avteet C b Naveen R S,9,8,2,0,112.50
-19883,Juggernaut,Jayan Patel,c †Sandeep S b Ankur C,10,12,1,0,83.33
+19883,Juggernaut,Jayan Patel,c †Sandeep I S b Ankur C,10,12,1,0,83.33
 19883,Juggernaut,Manan Patel,not out,12,14,0,1,85.71
 19883,Juggernaut,Jit Patel,c Ashish S b Naveen R S,8,3,0,1,266.67
 19883,Juggernaut,Hemant Patel*,c Naveen R S b Ankur C,7,6,1,0,116.67
 19883,Juggernaut,Sudheer Maddirala,not out,1,1,0,0,100.00
 19883,Samudhra Gladiators,Tejdeep Maddirala,c Manan P b Karan P,3,7,0,0,42.86
 19883,Samudhra Gladiators,Ashish Shetty,b Kailash N,31,24,1,2,129.17
-19883,Samudhra Gladiators,Sandeep Shetty,b Kailash N,2,6,0,0,33.33
+19883,Samudhra Gladiators,Sandeep I Shetty,b Kailash N,2,6,0,0,33.33
 19883,Samudhra Gladiators,Naveen R Sripathi,not out,60,35,1,6,171.43
 19883,Samudhra Gladiators,Sridhara Raju*,not out,2,1,0,0,200.00
 19877,Blue Aces CC,Satya Tarun Reddy,c †Devadathan B b Eswar V,59,34,3,7,173.53
@@ -1618,14 +2053,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19877,Youth For Sewa,Mihira Teja Narvaneni,c Dheeraj D b Tharak R,16,7,1,2,228.57
 19877,Youth For Sewa,Ram V*,b Sandip N,5,9,0,0,55.56
 19877,Youth For Sewa,Tauseef Ahmed,b Rajendra prasad C,9,8,2,0,112.50
-19877,Youth For Sewa,Rohith Reddy,c&b Surya N,38,18,0,5,211.11
+19877,Youth For Sewa,Rohit Reddy,c&b Surya N,38,18,0,5,211.11
 19877,Youth For Sewa,Balu Y,c Prabhakar V b Surya N,16,13,0,2,123.08
 19877,Youth For Sewa,Satish Kasireddy,c Satya T b Rajendra prasad C,2,4,0,0,50.00
 19877,Youth For Sewa,Aillu N,not out,7,4,1,0,175.00
 19877,Youth For Sewa,Venkata Voona,c †Siva S b Dheeraj D,10,10,2,0,100.00
 19877,Youth For Sewa,Manikanta Raja Kottu,c †Siva S b Surya N,1,3,0,0,33.33
 19857,Storm Riders,KARAN SAINI,b Sushil K,3,8,0,0,37.50
-19857,Storm Riders,Prabhjeet Singh,b Madhur K,36,34,2,4,105.88
+19857,Storm Riders,Prabhjeet S Ricky,b Madhur K,36,34,2,4,105.88
 19857,Storm Riders,Apurv Jain* †,b Sushil K,0,1,0,0,0.00
 19857,Storm Riders,Satish Sarode,c †Mitesh D b Sushil K,6,12,0,0,50.00
 19857,Storm Riders,Mitul Patel,b Madhur K,4,5,0,0,80.00
@@ -1693,7 +2128,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19828,Gujarat United XI,Ketul Chaudhari,c Kishan P b Eijaz M,5,17,1,0,29.41
 19828,Gujarat United XI,Sumit Panda,c Dipal P b Eijaz M,0,2,0,0,0.00
 19828,Gujarat United XI,Karan Patel,b Gary P,11,11,2,0,100.00
-19828,Gujarat United XI,Avi Shah,c †Syam P b Eijaz M,2,10,0,0,20.00
+19828,Gujarat United XI,Avi Shah,c †Shyam P b Eijaz M,2,10,0,0,20.00
 19828,Gujarat United XI,Parth Patel,c Dipal P b Gary P,2,5,0,0,40.00
 19828,Gujarat United XI,Ajay Jadav,not out,9,15,1,0,60.00
 19828,Gujarat United XI,Tirth Patel (JR),c Jalpesh P b Divyesh P,0,3,0,0,0.00
@@ -1713,12 +2148,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19824,Edison Rebelz,Yash Solanki,b Raghuraman V,0,3,0,0,0.00
 19824,Edison Rebelz,Imran Khan,c Rohit R b Chinmaya S,12,15,2,0,80.00
 19824,Edison Rebelz,Rupak Das* †,Retired Out,4,13,0,0,30.77
-19824,Edison Rebelz,Vivaan Patra,c Kiran Kumar Y b Chinmaya S,0,1,0,0,0.00
+19824,Edison Rebelz,Shrikant Patra,c Kiran Kumar Y b Chinmaya S,0,1,0,0,0.00
 19824,Edison Rebelz,Shailesh Khadapkar,c Siva K b Ankit P,2,4,0,0,50.00
 19824,Edison Rebelz,Gurmeet Singh,c †Rohit R b Lokesh P,0,4,0,0,0.00
 19824,Edison Rebelz,Shalin Patel,c Siva K b Lokesh P,0,2,0,0,0.00
 19824,Edison Rebelz,Kironmoy Banerjee,b Siva K,4,8,0,0,50.00
-19824,Edison Rebelz,Sandeep Mistry,c Sai p b Siva K,14,18,1,1,77.78
+19824,Edison Rebelz,Sandeep Mistry,c Sai Praneeth K b Siva K,14,18,1,1,77.78
 19824,Edison Rebelz,Ankit Somani,c Raghuraman V b Siva K,2,10,0,0,20.00
 19824,Edison Rebelz,Ashish Rout,not out,1,1,0,0,100.00
 19802,PUNJAB XI,Ali Aftab,c Sourabh G b Arpit P,7,8,1,0,87.50
@@ -1747,7 +2182,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19800,Plainsboro Knights,Siva Kandivalasa,b Sundip H,3,7,0,0,42.86
 19800,Plainsboro Knights,Gowtham Akula,b Kamalraj R,19,14,1,2,135.71
 19800,Plainsboro Knights,Raghuraman Varadharajan,b Kamalraj R,2,4,0,0,50.00
-19800,Plainsboro Knights,Dheepak Chandramouli,not out,3,3,0,0,100.00
+19800,Plainsboro Knights,DHEEPAK CHANDRAMOULI,not out,3,3,0,0,100.00
 19800,Veerans,Diwakar Sh,c †Rohit R b Ankit P,2,9,0,0,22.22
 19800,Veerans,Sundip Helchal,b Lokesh P,5,5,1,0,100.00
 19800,Veerans,Gopi Sendurapandian †,c SUMIT S b Gowtham A,15,9,2,1,166.67
@@ -1796,7 +2231,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19789,Jetha 11,Jalpesh Patel,c sai C b Narender Reddy B,16,17,3,0,94.12
 19789,Jetha 11,Nirav Patel*,c Dheeban J b Arun Prasad G,40,29,5,2,137.93
 19789,Jetha 11,Dipal Patel,c Emmanuel Samuel N b Arun Prasad G,21,15,0,3,140.00
-19789,Jetha 11,Syam Pandya,run out (Emmanuel Samuel N),22,16,0,2,137.50
+19789,Jetha 11,Shyam Pandya,run out (Emmanuel Samuel N),22,16,0,2,137.50
 19789,Jetha 11,Haren Patel,c gokul das m b Arun Prasad G,0,1,0,0,0.00
 19789,Jetha 11,Gary Patel,not out,22,11,1,2,200.00
 19789,Newport CC,Saikumar Katepalli,c Deepan Sunny C b Dipal P,31,17,1,3,182.35
@@ -1824,7 +2259,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19781,Storm Riders,KARAN SAINI,b Haider Naveed A,3,5,0,0,60.00
 19781,Storm Riders,Vamsidhar Raju,c Mubassir M b Waqas C,9,14,0,0,64.29
 19781,Storm Riders,Mitul Patel,not out,8,12,0,0,66.67
-19781,Storm Riders,Prabhjeet Singh,not out,21,10,1,2,210.00
+19781,Storm Riders,Prabhjeet S Ricky,not out,21,10,1,2,210.00
 19775,Gujarat United XI,Mihir Vaghasia,c Praneeth G b Bharath R,7,8,1,0,87.50
 19775,Gujarat United XI,Ketul Chaudhari,c Praveen V b Srinivas reddy C,0,3,0,0,0.00
 19775,Gujarat United XI,Parth Patel,b Srinivas reddy C,0,6,0,0,0.00
@@ -1919,7 +2354,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19751,Gcc,Parin Patel (GCC),not out,1,1,0,0,100.00
 19745,Samudhra Gladiators,Tejdeep Maddirala,c Girish S b Sunit S,19,17,0,1,111.76
 19745,Samudhra Gladiators,Ashish Shetty,c Sukhwinder S b Ankit C,10,13,0,0,76.92
-19745,Samudhra Gladiators,Sandeep Shetty,c Lucky P b Ankit C,18,13,0,2,138.46
+19745,Samudhra Gladiators,Sandeep I Shetty,c Lucky P b Ankit C,18,13,0,2,138.46
 19745,Samudhra Gladiators,Naveen R Sripathi,c&b Sunit S,45,33,0,5,136.36
 19745,Samudhra Gladiators,Sridhara Raju*,c Ankit C b Kartik P,1,2,0,0,50.00
 19745,Samudhra Gladiators,Willish Patel,c †Charanjot S b Kartik P,0,1,0,0,0.00
@@ -1930,14 +2365,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19745,Samudhra Gladiators,Suraj Pai Madhukar,not out,1,1,0,0,100.00
 19745,Fdu Giants,Ankit Chopra,c †Sanju S b Ankur C,16,19,3,0,84.21
 19745,Fdu Giants,Aman Deshmukh,c †Sanju S b Naveen R S,1,2,0,0,50.00
-19745,Fdu Giants,Sukhwinder Singh,b Sandeep S,2,5,0,0,40.00
+19745,Fdu Giants,Sukhwinder Singh,b Sandeep I S,2,5,0,0,40.00
 19745,Fdu Giants,Charanjot Singh,c Willish P b Harshad P,11,14,0,1,78.57
-19745,Fdu Giants,Kartik Patel,c Anilreddy A b Sandeep S,0,1,0,0,0.00
-19745,Fdu Giants,Girish Sharma,c Harshad P b Sandeep S,6,9,1,0,66.67
+19745,Fdu Giants,Kartik Patel,c Anilreddy A b Sandeep I S,0,1,0,0,0.00
+19745,Fdu Giants,Girish Sharma,c Harshad P b Sandeep I S,6,9,1,0,66.67
 19745,Fdu Giants,Dhruv Patel,c Harshad P b Naveen R S,3,5,0,0,60.00
-19745,Fdu Giants,Pushkar Mayur Dhume,c Willish P b Sandeep S,7,10,0,0,70.00
+19745,Fdu Giants,Pushkar Mayur Dhume,c Willish P b Sandeep I S,7,10,0,0,70.00
 19745,Fdu Giants,Gaurav Gupta,b Harshad P,0,3,0,0,0.00
-19745,Fdu Giants,Sunit Shirke,c Sandeep S b Ankur C,12,16,1,0,75.00
+19745,Fdu Giants,Sunit Shirke,c Sandeep I S b Ankur C,12,16,1,0,75.00
 19745,Fdu Giants,Lucky PK,not out,0,2,0,0,0.00
 19738,Gryffindors,Sanket Kulkarni †,c †Pavan P b Aniket D,11,17,0,0,64.71
 19738,Gryffindors,Johncy V,c Aniket D b Sravan N,15,16,2,0,93.75
@@ -2295,7 +2730,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19642,Veerans,Murugan Shan,not out,1,1,0,0,100.00
 19638,Samudhra Gladiators,Tejdeep Maddirala,c Allan D b Sudarshan H,6,12,1,0,50.00
 19638,Samudhra Gladiators,Ashish Shetty,c Joydeep D b Sourabh G,0,1,0,0,0.00
-19638,Samudhra Gladiators,Sandeep Shetty,c Preetam D b Gajendra K,2,4,0,0,50.00
+19638,Samudhra Gladiators,Sandeep I Shetty,c Preetam D b Gajendra K,2,4,0,0,50.00
 19638,Samudhra Gladiators,Naveen R Sripathi,c †Calvin D b Gajendra K,19,8,1,2,237.50
 19638,Samudhra Gladiators,Willish Patel,b Sudarshan H,14,5,0,2,280.00
 19638,Samudhra Gladiators,Dileep Reddy,not out,26,26,1,1,100.00
@@ -2303,22 +2738,22 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19638,Samudhra Gladiators,Harshad Patil,c&b Ajay S,28,12,0,3,233.33
 19638,Samudhra Gladiators,Sanju S †,c Sudarshan H b Gajendra K,10,7,2,0,142.86
 19638,Samudhra Gladiators,Anilreddy Aleti,not out,6,7,0,0,85.71
-19638,Aryans,Allan Dabre,c Sandeep S b Harshad P,35,20,6,1,175.00
+19638,Aryans,Allan Dabre,c Sandeep I S b Harshad P,35,20,6,1,175.00
 19638,Aryans,Gajendra Kumar,b Vinit B,0,3,0,0,0.00
 19638,Aryans,Calvin Dabre †,c Anilreddy A b Naveen R S,5,6,1,0,83.33
-19638,Aryans,Sourabh Guha*,c Anilreddy A b Sandeep S,5,7,1,0,71.43
+19638,Aryans,Sourabh Guha*,c Anilreddy A b Sandeep I S,5,7,1,0,71.43
 19638,Aryans,Joydeep Das,b Vinit B,33,20,5,1,165.00
 19638,Aryans,Preetam Dedu,c Willish P b Harshad P,0,1,0,0,0.00
 19638,Aryans,Austrin Dabre,b Harshad P,0,1,0,0,0.00
 19638,Aryans,Sudarshan Hegde,c Ashish S b Naveen R S,2,7,0,0,28.57
-19638,Aryans,Ajay Shankar,c Dileep R b Sandeep S,9,13,0,1,69.23
+19638,Aryans,Ajay Shankar,c Dileep R b Sandeep I S,9,13,0,1,69.23
 19638,Aryans,Henil Balsara,b Harshad P,5,12,0,0,41.67
 19638,Aryans,Aaditya Kumar,not out,0,2,0,0,0.00
 19636,Jetha 11,Jignesh Mukhi Patel,c Mihira Teja N b Manikanta Raja k,0,1,0,0,0.00
 19636,Jetha 11,Parth Surti,b Anand V,8,12,1,0,66.67
 19636,Jetha 11,Nirav Patel,b Anand V,63,32,5,5,196.88
 19636,Jetha 11,Dipal Patel*,not out,61,26,3,7,234.62
-19636,Jetha 11,Syam Pandya,c Anand V b Ammar A,12,4,0,2,300.00
+19636,Jetha 11,Shyam Pandya,c Anand V b Ammar A,12,4,0,2,300.00
 19636,Jetha 11,Nirav Patel NJ,c †Tauseef A b Ammar A,0,3,0,0,0.00
 19636,Jetha 11,Haren Patel,c Nazareth J b Tauseef A,16,6,2,1,266.67
 19636,Jetha 11,Naran Prajapati,not out,17,14,0,2,121.43
@@ -2349,7 +2784,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19635,Gcc,Hardik(gcc) Rana,c Imran R b Akram A,8,9,0,1,88.89
 19635,Gcc,Mrugesh Patel*,not out,9,9,1,0,100.00
 19635,Gcc,Parth Patel,c †Munazam R b Fahad k,7,11,0,1,63.64
-19635,Gcc,Bhaumik Thakkar GCC,b Fahad k,0,2,0,0,0.00
+19635,Gcc,Pragnesh Patel GCC,b Fahad k,0,2,0,0,0.00
 19635,Gcc,Sahil Patel,c Sunny D b Zain P,1,5,0,0,20.00
 19632,Warriors,Dharmesh Patel,c Saad N b Waqas C,21,12,0,3,175.00
 19632,Warriors,Neel Patel,c †Sajjad Faisal S b Waqas C,51,23,2,6,221.74
@@ -2412,11 +2847,11 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19615,Falcons,Sairam Raavi*,b Vikas C,28,26,4,1,107.69
 19615,Falcons,Manikanta Arumilli,c Vikas C b Madhur K,5,3,1,0,166.67
 19615,Jersey Boys,Ravi Shah,c †Ravindar P b sairam R,48,37,4,3,129.73
-19615,Jersey Boys,Mitesh Dhinoja,c Lakshman R b Manikanta A,0,5,0,0,0.00
+19615,Jersey Boys,Mitesh Dhinoja,c Lakshman R b manikanta a,0,5,0,0,0.00
 19615,Jersey Boys,Kinjal Patel,c †Ravindar P b Sai ritheesh S,9,7,0,1,128.57
 19615,Jersey Boys,Fenil Shah*,not out,39,27,4,2,144.44
-19615,Jersey Boys,Vikas Chaudhary,c †Ravindar P b Manikanta A,1,4,0,0,25.00
-19615,Jersey Boys,Madhur Kaushik,c Rajesh R b Manikanta A,0,1,0,0,0.00
+19615,Jersey Boys,Vikas Chaudhary,c †Ravindar P b manikanta a,1,4,0,0,25.00
+19615,Jersey Boys,Madhur Kaushik,c Rajesh R b manikanta a,0,1,0,0,0.00
 19615,Jersey Boys,Vikul Rajpara,c Rajesh R b Pavan Kalyan B,11,7,2,0,157.14
 19615,Jersey Boys,Shivang Chaurushia,not out,1,2,0,0,50.00
 19602,Team Highlanders,Suresh Ganesan,c Sai S b Nisar A,7,18,1,0,38.89
@@ -2503,7 +2938,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19575,Warriors,Himanshu Patel,not out,1,2,0,0,50.00
 19571,Samudhra Gladiators,Tejdeep Maddirala,c †Nikhil P b Tushar L,6,9,1,0,66.67
 19571,Samudhra Gladiators,Ashish Shetty,c †Nikhil P b Harikishore M,15,25,1,0,60.00
-19571,Samudhra Gladiators,Sandeep Shetty,c †Nikhil P b Nahid S,7,12,0,1,58.33
+19571,Samudhra Gladiators,Sandeep I Shetty,c †Nikhil P b Nahid S,7,12,0,1,58.33
 19571,Samudhra Gladiators,Naveen R Sripathi,c Shehroze N b Sai S,0,5,0,0,0.00
 19571,Samudhra Gladiators,Dileep Reddy,c&b Sai S,9,9,0,1,100.00
 19571,Samudhra Gladiators,Harshad Patil,b Sai S,16,16,1,1,100.00
@@ -2511,15 +2946,15 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19571,Samudhra Gladiators,Anilreddy Aleti,c †Nikhil P b Sai S,0,1,0,0,0.00
 19571,Samudhra Gladiators,Vipul Joshi,not out,5,7,0,0,71.43
 19571,Samudhra Gladiators,Vinit Bharadwaj,run out (Harikishore M),12,6,1,0,200.00
-19571,WCC,Harikishore Malireddy,c †Sandeep S b Naveen R S,11,8,0,1,137.50
+19571,WCC,Harikishore Malireddy,c †Sandeep I S b Naveen R S,11,8,0,1,137.50
 19571,WCC,Vishal Reddy Thanugundla,c †Ashish S b Ankur C,7,11,0,0,63.64
 19571,WCC,Nisar Ahmad,c †Vinit B b Naveen R S,6,8,1,0,75.00
-19571,WCC,Sivaram Chowdary,c †Sandeep S b Ankur C,0,2,0,0,0.00
-19571,WCC,Nahid Sarkar,c Sandeep S b Ankur C,13,24,0,1,54.17
-19571,WCC,Shehroze Naeem,c †Sandeep S b Vinit B,9,8,2,0,112.50
+19571,WCC,Sivaram Chowdary,c †Sandeep I S b Ankur C,0,2,0,0,0.00
+19571,WCC,Nahid Sarkar,c Sandeep I S b Ankur C,13,24,0,1,54.17
+19571,WCC,Shehroze Naeem,c †Sandeep I S b Vinit B,9,8,2,0,112.50
 19571,WCC,Tushar Lenka,c Vinit B b Harshad P,2,4,0,0,50.00
-19571,WCC,Nikhil Patankar,c †Sandeep S b Harshad P,4,9,0,0,44.44
-19571,WCC,Sai Sudhan,c †Sandeep S b Vinit B,3,5,0,0,60.00
+19571,WCC,Nikhil Patankar,c †Sandeep I S b Harshad P,4,9,0,0,44.44
+19571,WCC,Sai Sudhan,c †Sandeep I S b Vinit B,3,5,0,0,60.00
 19571,WCC,Rohit Sawardekar,not out,2,4,0,0,50.00
 19571,WCC,Santosh Thanekar,c Vinit B b Harshad P,1,8,0,0,12.50
 19570,Plainsboro Eagles,Bharath Reddy,c Yokesh R b Syed A,10,18,0,0,55.56
@@ -2538,13 +2973,13 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19562,Veerans,Murugan Shan,c srinath g b Rajesh R,1,6,0,0,16.67
 19562,Veerans,Gopi Sendurapandian †,c Shravan G b Sai ritheesh S,20,15,1,2,133.33
 19562,Veerans,Aditya Rathor,c Sai ritheesh S b sairam R,60,32,3,6,187.50
-19562,Veerans,Kamalraj Rajamanickam,c sairam R b Manikanta A,44,19,2,5,231.58
-19562,Veerans,Sundip Helchal,c&b Manikanta A,14,11,0,1,127.27
-19562,Veerans,Harish Kumar Ananthasayanam,c sairam R b Manikanta A,0,3,0,0,0.00
-19562,Veerans,Amit Sharma,c Manikanta A b Sai ritheesh S,7,5,0,1,140.00
+19562,Veerans,Kamalraj Rajamanickam,c sairam R b manikanta a,44,19,2,5,231.58
+19562,Veerans,Sundip Helchal,c&b manikanta a,14,11,0,1,127.27
+19562,Veerans,Harish Kumar Ananthasayanam,c sairam R b manikanta a,0,3,0,0,0.00
+19562,Veerans,Amit Sharma,c manikanta a b Sai ritheesh S,7,5,0,1,140.00
 19562,Veerans,Uma Maheswara Rao Patibandla,not out,10,3,1,1,333.33
 19562,Veerans,Naveen Elangovan*,c Harsha b b Sai ritheesh S,0,1,0,0,0.00
-19562,Veerans,Shabbeer Syed,not out,6,4,0,0,150.00
+19562,Veerans,Shabbir Syed,not out,6,4,0,0,150.00
 19562,Falcons,Harsha Bobbili,c Kamalraj R b Amit S,27,19,5,0,142.11
 19562,Falcons,Ravindar Perala †,c †Ranjan P b Naveen E,30,19,1,3,157.89
 19562,Falcons,Shravan Manne,b Amit S,0,1,0,0,0.00
@@ -2577,7 +3012,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19554,Youth For Sewa,Dileep Guthi,c Saad N b Faisal M,18,22,3,0,81.82
 19554,Youth For Sewa,Anand Vemuri,c Noman A b Nasir M,0,1,0,0,0.00
 19554,Youth For Sewa,Eswar Vennapusa,b Rajinder (Suraj) S,0,5,0,0,0.00
-19554,Youth For Sewa,Rohith Reddy,c Rajinder (Suraj) S b Mubassir M,4,5,1,0,80.00
+19554,Youth For Sewa,Rohit Reddy,c Rajinder (Suraj) S b Mubassir M,4,5,1,0,80.00
 19554,Youth For Sewa,Rajesh Kondru,c †Sajjad Faisal S b Rajinder (Suraj) S,5,7,1,0,71.43
 19554,Youth For Sewa,Ram V*,c Mubassir M b Faisal M,13,8,2,0,162.50
 19554,Youth For Sewa,Satish Kasireddy,c †Sajjad Faisal S b Rajinder (Suraj) S,12,12,1,1,100.00
@@ -2585,12 +3020,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19554,Youth For Sewa,Venkata Voona,c Abid N b Faisal M,1,3,0,0,33.33
 19554,Youth For Sewa,Aillu N,c †Sajjad Faisal S b Faisal M,0,4,0,0,0.00
 19554,Nj Tigers,Nasir Mehmood,b Aillu N,0,1,0,0,0.00
-19554,Nj Tigers,Tahir Mehmood,c †Rohith R b Eswar V,10,12,2,0,83.33
+19554,Nj Tigers,Tahir Mehmood,c †Rohit R b Eswar V,10,12,2,0,83.33
 19554,Nj Tigers,Sajjad Faisal Syed †,not out,35,30,6,1,116.67
 19554,Nj Tigers,Mubassir Mansuri,not out,1,4,0,0,25.00
 19547,Jetha 11,Deepan Sunny Chauhan,run out (kevin s),0,0,0,0,0.00
 19547,Jetha 11,Jigar D Patel,run out (Zafran H),2,7,0,0,28.57
-19547,Jetha 11,Mayank Patel,c kevin s b Raj P,0,3,0,0,0.00
+19547,Jetha 11,Mayank Patel Patel,c kevin s b Raj P,0,3,0,0,0.00
 19547,Jetha 11,Nirav Patel*,c Baseer Ahmed M b Raj P,36,20,3,3,180.00
 19547,Jetha 11,Nirav Patel NJ,c Nandish P b Hiren J,13,18,0,1,72.22
 19547,Jetha 11,Dipal Patel,c †kevin s b Hiren J,11,12,1,1,91.67
@@ -2777,7 +3212,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19497,Blasters,Manthan Patel,b Vimalendu K,0,1,0,0,0.00
 19497,Blasters,Gunjan Patel,c †Arjun R b Vimalendu K,17,12,3,0,141.67
 19497,Blasters,Hardik Patel,b Vimalendu K,0,1,0,0,0.00
-19497,Blasters,Dinesh Kumavat,c Vimalendu K b Rixon D,0,4,0,0,0.00
+19497,Blasters,Dinesh Kumawat,c Vimalendu K b Rixon D,0,4,0,0,0.00
 19497,Blasters,Harshu Patel,c Rixon D b Sujesh N,15,9,0,2,166.67
 19497,Blasters,Preet Suthar,run out (Rixon D),0,1,0,0,0.00
 19497,Blasters,Neel Patel-24,not out,0,7,0,0,0.00
@@ -2801,7 +3236,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19492,Plainsboro Knights,Sai Praneeth Kalavagunta,c Soham B b Neel P,4,4,1,0,100.00
 19492,Plainsboro Knights,Raghuraman Varadharajan,run out (Neel P),0,1,0,0,0.00
 19492,Plainsboro Knights,Lokesh Prabakaran,not out,19,4,0,3,475.00
-19492,Plainsboro Knights,Dheepak Chandramouli,b Neel P,1,6,0,0,16.67
+19492,Plainsboro Knights,DHEEPAK CHANDRAMOULI,b Neel P,1,6,0,0,16.67
 19492,Plainsboro Knights,Kalyana Krishna Kondapalli,b Neel P,4,3,1,0,133.33
 19486,11spartans,Ravi Rathod,c Jay P b Milan D,9,7,2,0,128.57
 19486,11spartans,Vinay P,c Milan D b Komal(KC) P,14,15,2,0,93.33
@@ -2954,7 +3389,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19453,Plainsboro Knights,Lokesh Prabakaran,c Rishab S b Naresh P,7,16,0,0,43.75
 19453,Plainsboro Knights,Utsav Upadhyay,c Zohair Ahmad S b Zoheb K,1,3,0,0,33.33
 19453,Plainsboro Knights,Raghuraman Varadharajan,not out,7,13,0,0,53.85
-19453,Plainsboro Knights,Dheepak Chandramouli,run out (Darshil M),2,4,0,0,50.00
+19453,Plainsboro Knights,DHEEPAK CHANDRAMOULI,run out (Darshil M),2,4,0,0,50.00
 19453,Rowdy Rebels,Rishab Shirur,run out (Ankit P/Anil P),1,3,0,0,33.33
 19453,Rowdy Rebels,Zohair Ahmad Siddiui,c Anil P b Ankit P,7,11,0,0,63.64
 19453,Rowdy Rebels,Kushal Kumar,c †Rohit R b Anil P,1,11,0,0,9.09
@@ -2963,10 +3398,10 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19453,Rowdy Rebels,Zoheb Khalid*,c †Rohit R b Raghuraman V,2,4,0,0,50.00
 19453,Rowdy Rebels,Darshil Mistry,c †Rohit R b Lokesh P,29,26,2,3,111.54
 19453,Rowdy Rebels,Bhavik Surani,c Raghuraman V b Lokesh P,6,12,0,0,50.00
-19453,Rowdy Rebels,Adwait Wajpe,c Dheepak C b Lokesh P,4,7,1,0,57.14
+19453,Rowdy Rebels,Adwait Wajpe,c DHEEPAK C b Lokesh P,4,7,1,0,57.14
 19453,Rowdy Rebels,Naresh Patel,b Raghuraman V,1,3,0,0,33.33
 19453,Rowdy Rebels,Soham Kapadia,not out,1,2,0,0,50.00
-19443,Storm Riders,Prabhjeet Singh,c Siva S b Tharak R,12,7,1,1,171.43
+19443,Storm Riders,Prabhjeet S Ricky,c Siva S b Tharak R,12,7,1,1,171.43
 19443,Storm Riders,Apurv Jain* †,c Prabhakar V b Dheeraj D,1,2,0,0,50.00
 19443,Storm Riders,Satish Sarode,c Sunny B b Tharak R,4,2,1,0,200.00
 19443,Storm Riders,Mitul Patel,c Dheeraj D b Tharak R,2,4,0,0,50.00
@@ -3033,7 +3468,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19423,Desi Warriors,Varun Gurram,not out,1,1,0,0,100.00
 19422,Plainsboro Eagles,Bharath Reddy,c Ashish S b Naveen R S,9,17,0,1,52.94
 19422,Plainsboro Eagles,Kiran Kumar,c Vipul J b Dileep R,2,7,0,0,28.57
-19422,Plainsboro Eagles,Gopichand Pulabala,run out (Ankur C/Sandeep S),2,20,0,0,10.00
+19422,Plainsboro Eagles,Gopichand Pulabala,run out (Ankur C/Sandeep I S),2,20,0,0,10.00
 19422,Plainsboro Eagles,Vasi M,b Ankur C,21,18,3,0,116.67
 19422,Plainsboro Eagles,Srinivas Reddy Ch,b Harshad P,11,19,0,0,57.89
 19422,Plainsboro Eagles,Rajesh Paruchuri,b Naveen R S,1,4,0,0,25.00
@@ -3041,7 +3476,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19422,Plainsboro Eagles,Varun Mathukumalli,not out,2,3,0,0,66.67
 19422,Samudhra Gladiators,Naveen R Sripathi,c Vasi M b Rajesh P,1,3,0,0,33.33
 19422,Samudhra Gladiators,Ashish Shetty,c Bhargav R b Chandra K,9,9,0,1,100.00
-19422,Samudhra Gladiators,Sandeep Shetty,not out,29,13,0,4,223.08
+19422,Samudhra Gladiators,Sandeep I Shetty,not out,29,13,0,4,223.08
 19422,Samudhra Gladiators,Dileep Reddy,c Vasi M b Ashok G,19,14,1,2,135.71
 19422,Samudhra Gladiators,Anilreddy Aleti,not out,6,3,0,1,200.00
 19421,Sreeshti,Amol Manjrekar* †,b Zain P,23,20,1,2,115.00
@@ -3060,9 +3495,9 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19421,Nj Stars CC,Muhammad Haseeb,not out,8,6,0,1,133.33
 19421,Nj Stars CC,Sajeel Ahmed,not out,6,4,0,1,150.00
 19419,Warriors,Mitul Patel,c †Diwakar S b Kamalraj R,5,8,1,0,62.50
-19419,Warriors,Kirtan Patel,c Shabbeer S b Sundip H,1,3,0,0,33.33
+19419,Warriors,Kirtan Patel,c Shabbir S b Sundip H,1,3,0,0,33.33
 19419,Warriors,Dhaval Patel,c †Diwakar S b Kamalraj R,15,16,1,1,93.75
-19419,Warriors,Prasad Fernando,b Shabbeer S,22,19,2,1,115.79
+19419,Warriors,Prasad Fernando,b Shabbir S,22,19,2,1,115.79
 19419,Warriors,Aakash Patel,c Gopi S b Naveen E,40,19,0,6,210.53
 19419,Warriors,Rafe Shaikh,c Sundip H b Aditya R,1,3,0,0,33.33
 19419,Warriors,Jeet Patel,not out,61,29,6,5,210.34
@@ -3074,7 +3509,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19419,Veerans,Naresh Ram,not out,35,16,1,4,218.75
 19419,Veerans,Harish Kumar Ananthasayanam,run out (Dhaval P),38,21,6,2,180.95
 19419,Veerans,Sundip Helchal,run out (Kirtan P),1,2,0,0,50.00
-19419,Veerans,Shabbeer Syed,not out,1,1,0,0,100.00
+19419,Veerans,Shabbir Syed,not out,1,1,0,0,100.00
 19415,Hudson Hurricanes,Pavan Poojar †,run out (Rakesh P),14,13,1,1,107.69
 19415,Hudson Hurricanes,Shubham Pawar,c Jeyaram R b Raghuveer B,4,8,0,0,50.00
 19415,Hudson Hurricanes,Aniket Dalal*,c Suman K b Tej R,27,22,1,2,122.73
@@ -3100,7 +3535,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19405,Youth For Sewa,Nazareth John,c Vikas C b Vineet L,2,4,0,0,50.00
 19405,Youth For Sewa,Tauseef Ahmed,c Vineet L b Sushil K,5,7,0,0,71.43
 19405,Youth For Sewa,Ram V*,c Ravi S b Vineet L,0,1,0,0,0.00
-19405,Youth For Sewa,Rohith Reddy,not out,16,21,0,1,76.19
+19405,Youth For Sewa,Rohit Reddy,not out,16,21,0,1,76.19
 19405,Youth For Sewa,Satish Kasireddy,c Jitendra S b Madhur K,6,11,1,0,54.55
 19405,Youth For Sewa,Devadathan Biju †,c Madhur K b Vineet L,5,7,1,0,71.43
 19405,Youth For Sewa,Balu Y,b Madhur K,4,2,1,0,200.00
@@ -3135,7 +3570,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19399,Falcons,Srinath Gentyala,c Shailesh K b Ritwik R,0,2,0,0,0.00
 19399,Falcons,Shravan Manne,c&b Gurmeet S,16,13,2,1,123.08
 19399,Falcons,Sai Ritheesh Sudham,c Gurmeet S b Sourav M,8,5,0,1,160.00
-19399,Falcons,Pavan Kalyan Bakkani,c Vivaan P b Sourav M,0,3,0,0,0.00
+19399,Falcons,Pavan Kalyan Bakkani,c Shrikant P b Sourav M,0,3,0,0,0.00
 19399,Falcons,Ravindar Perala †,b Yash S,10,5,1,1,200.00
 19399,Falcons,Nakul Limbachiya,c Zubin S b Yash S,13,18,2,0,72.22
 19399,Falcons,Sairam Raavi*,run out (Yash S),5,5,1,0,100.00
@@ -3192,7 +3627,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19374,Falcons,Sairam Raavi*,not out,20,25,1,1,80.00
 19374,Falcons,Deepak Guthikonda,c Praveen V b Raghuveer B,12,19,1,0,63.16
 19374,Falcons,Prashant Kalyan Srinivas Casturi,not out,7,3,0,1,233.33
-19374,Parsippany Phoenix XI,Praveen Vinnakota*,c †Manikanta A b sairam R,6,14,1,0,42.86
+19374,Parsippany Phoenix XI,Praveen Vinnakota*,c †manikanta a b sairam R,6,14,1,0,42.86
 19374,Parsippany Phoenix XI,Raghuveer Bethelli,c Sai ritheesh S b sairam R,19,25,3,0,76.00
 19374,Parsippany Phoenix XI,Naveen Rayal,c †Ravindar P b srinath g,28,16,3,2,175.00
 19374,Parsippany Phoenix XI,Amit Jadli,not out,17,9,4,0,188.89
@@ -3217,21 +3652,21 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19371,Aryans,Henil Balsara,not out,5,3,1,0,166.67
 19371,Aryans,Zulqarnain Shahzad,not out,2,2,0,0,100.00
 19368,Jetha 11,Haren Patel,c †Sanju S b Vinit B,2,8,0,0,25.00
-19368,Jetha 11,Jalpesh Patel,c Anilreddy A b Sandeep S,1,6,0,0,16.67
+19368,Jetha 11,Jalpesh Patel,c Anilreddy A b Sandeep I S,1,6,0,0,16.67
 19368,Jetha 11,Jigar D Patel,c Sridhara R b Naveen R S,4,13,0,0,30.77
 19368,Jetha 11,Nirav Patel*,c Vinit B b Ankur C,13,11,2,0,118.18
 19368,Jetha 11,Nirav Patel NJ,not out,17,19,1,1,89.47
 19368,Jetha 11,Dipal Patel,c †Sanju S b Naveen R S,21,12,0,3,175.00
-19368,Jetha 11,Syam Pandya,c Sandeep S b Harshad P,1,3,0,0,33.33
+19368,Jetha 11,Shyam Pandya,c Sandeep I S b Harshad P,1,3,0,0,33.33
 19368,Jetha 11,Divyesh Patel,c Ankur C b Harshad P,13,9,1,1,144.44
 19368,Jetha 11,Gary Patel,b Harshad P,0,1,0,0,0.00
 19368,Jetha 11,Deepan Sunny Chauhan,c Dileep R b Naveen R S,11,5,1,1,220.00
 19368,Jetha 11,Parth Surti,c&b Naveen R S,6,4,0,1,150.00
 19368,Samudhra Gladiators,Ashish Shetty,c Jalpesh P b Jigar D P,7,14,1,0,50.00
 19368,Samudhra Gladiators,Tejdeep Maddirala,c Parth S b Jigar D P,0,1,0,0,0.00
-19368,Samudhra Gladiators,Sandeep Shetty,b Dipal P,2,7,0,0,28.57
-19368,Samudhra Gladiators,Naveen R Sripathi,c †Syam P b Jigar D P,39,24,2,3,162.50
-19368,Samudhra Gladiators,Dileep Reddy,c †Syam P b Jigar D P,28,23,1,3,121.74
+19368,Samudhra Gladiators,Sandeep I Shetty,b Dipal P,2,7,0,0,28.57
+19368,Samudhra Gladiators,Naveen R Sripathi,c †Shyam P b Jigar D P,39,24,2,3,162.50
+19368,Samudhra Gladiators,Dileep Reddy,c †Shyam P b Jigar D P,28,23,1,3,121.74
 19368,Samudhra Gladiators,Sridhara Raju*,not out,2,2,0,0,100.00
 19368,Samudhra Gladiators,Harshad Patil,not out,12,8,0,1,150.00
 19363,WCC,Nisar Ahmad,c †Naveen B b Varun G,4,5,0,0,80.00
@@ -3258,19 +3693,19 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19361,Veerans,Kannan Thirumoorthy,c Eswar V b Balu Y,2,6,0,0,33.33
 19361,Veerans,Aditya Rathor,c&b Anand V,71,40,2,9,177.50
 19361,Veerans,Janakiram Shanmugavel,c Eswar V b Aillu N,6,9,1,0,66.67
-19361,Veerans,Kamalraj Rajamanickam,c Rohith R b Anand V,34,26,2,2,130.77
+19361,Veerans,Kamalraj Rajamanickam,c Rohit R b Anand V,34,26,2,2,130.77
 19361,Veerans,Sundip Helchal*,b Anand V,1,4,0,0,25.00
 19361,Veerans,Harish Kumar Ananthasayanam,not out,23,9,1,3,255.56
 19361,Veerans,Gopi Sendurapandian †,c Ram V b Anand V,0,2,0,0,0.00
 19361,Veerans,Murugan Shan,c Balu Y b Anand V,0,1,0,0,0.00
-19361,Veerans,Shabbeer Syed,run out (Satish K/Devadathan B),0,0,0,0,0.00
+19361,Veerans,Shabbir Syed,run out (Satish K/Devadathan B),0,0,0,0,0.00
 19361,Veerans,Naresh Ram,c †Devadathan B b Balu Y,0,1,0,0,0.00
 19361,Youth For Sewa,Eswar Vennapusa,c †Ranjan P b Kamalraj R,9,8,2,0,112.50
-19361,Youth For Sewa,Anand Vemuri,c Sundip H b Shabbeer S,16,6,2,1,266.67
+19361,Youth For Sewa,Anand Vemuri,c Sundip H b Shabbir S,16,6,2,1,266.67
 19361,Youth For Sewa,Devadathan Biju †,c&b Sundip H,1,2,0,0,50.00
-19361,Youth For Sewa,Rohith Reddy,c Kamalraj R b Sundip H,0,3,0,0,0.00
+19361,Youth For Sewa,Rohit Reddy,c Kamalraj R b Sundip H,0,3,0,0,0.00
 19361,Youth For Sewa,Ram V*,c Harish Kumar A b Sundip H,4,2,1,0,200.00
-19361,Youth For Sewa,Mihira Teja Narvaneni,c Sundip H b Shabbeer S,20,13,1,2,153.85
+19361,Youth For Sewa,Mihira Teja Narvaneni,c Sundip H b Shabbir S,20,13,1,2,153.85
 19361,Youth For Sewa,Satish Kasireddy,c Kamalraj R b Aditya R,52,25,4,4,208.00
 19361,Youth For Sewa,Balu Y,c Kamalraj R b Sundip H,24,16,0,3,150.00
 19361,Youth For Sewa,Aillu N,not out,11,10,0,1,110.00
@@ -3342,7 +3777,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19332,Edison Rebelz,Soumyabrata Paul,c&b Kirtan P,0,7,0,0,0.00
 19332,Edison Rebelz,Sandeep Mistry,c Rakesh P b Rumit P,7,4,0,1,175.00
 19332,Edison Rebelz,Sourav Mazumder,c Jeet P b Rumit P,0,1,0,0,0.00
-19332,Edison Rebelz,Vivaan Patra,c Jeet P b Rakesh P,42,28,2,4,150.00
+19332,Edison Rebelz,Shrikant Patra,c Jeet P b Rakesh P,42,28,2,4,150.00
 19332,Edison Rebelz,Nirav86 Shah,c Dhaval P b Kirtan P,0,4,0,0,0.00
 19332,Edison Rebelz,Zubin Shah,c Kirtan P b Himanshu P,2,9,0,0,22.22
 19332,Edison Rebelz,Shailesh Khadapkar,c&b Himanshu P,11,7,0,1,157.14
@@ -3425,7 +3860,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19304,Mercer Challengers,Ankur Parekh,not out,7,3,0,1,233.33
 19304,Mercer Challengers,Sandip Borse,not out,6,7,0,0,85.71
 19302,Storm Riders,Apurv Jain* †,b Sudhanshoo V,10,11,0,1,90.91
-19302,Storm Riders,Prabhjeet Singh,c Rizwan B b Dhrumil S,1,13,0,0,7.69
+19302,Storm Riders,Prabhjeet S Ricky,c Rizwan B b Dhrumil S,1,13,0,0,7.69
 19302,Storm Riders,Ankit Bhardwaj,c Dhrumil S b Ishan S,8,16,0,0,50.00
 19302,Storm Riders,Mitul Patel,c Ishan S b Rizwan B,30,21,0,3,142.86
 19302,Storm Riders,Sabeel Shaikh,c Danish S b Sudhanshoo V,16,14,2,0,114.29
@@ -3522,7 +3957,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19281,Blasters,Harshu Patel,c †Sanket K b Kishan P,1,3,0,0,33.33
 19281,Blasters,Gunjan Patel,c Srini N b Kishan P,0,1,0,0,0.00
 19281,Blasters,Gurudutt Patel*,c Thiyagarajan D b Bikash G,7,19,1,0,36.84
-19281,Blasters,Dinesh Kumavat,c Srini N b Bikash G,1,2,0,0,50.00
+19281,Blasters,Dinesh Kumawat,c Srini N b Bikash G,1,2,0,0,50.00
 19281,Blasters,Preet Suthar,c Kishan P b Sohil K,22,14,0,2,157.14
 19281,Blasters,Priyankk Patel,c Bandiss P b Bikash G,1,3,0,0,33.33
 19281,Blasters,RAJ PATEL,c Sandeep Reddy C b Sohil K,22,15,4,0,146.67
@@ -3558,7 +3993,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19270,Piscataway Avengers,Mit Patel,c&b Bhavik P,10,7,0,1,142.86
 19270,Piscataway Avengers,Harsh Patel,not out,1,1,0,0,100.00
 19268,Storm Riders,Apurv Jain* †,c †Ajit S b Kunal P,1,4,0,0,25.00
-19268,Storm Riders,Prabhjeet Singh,c Ankit C b Sunit S,32,30,3,1,106.67
+19268,Storm Riders,Prabhjeet S Ricky,c Ankit C b Sunit S,32,30,3,1,106.67
 19268,Storm Riders,Ankit Bhardwaj,c Ankit C b Sunit S,4,4,1,0,100.00
 19268,Storm Riders,Sachin Kamtekar,c †Ajit S b Sunit S,0,1,0,0,0.00
 19268,Storm Riders,Mitul Patel,b Viral P,16,22,0,1,72.73
@@ -3675,7 +4110,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19251,Blasters,Manthan Patel,c Ravi R b Rajan P,27,14,4,1,192.86
 19251,Blasters,Priyank Patel,c Ravi R b Jay T,11,9,0,1,122.22
 19251,Blasters,Haroon Ahmadi,c Jay P b Jay T,8,4,2,0,200.00
-19251,Blasters,Dinesh Kumavat,not out,49,24,5,3,204.17
+19251,Blasters,Dinesh Kumawat,not out,49,24,5,3,204.17
 19251,Blasters,Gunjan Patel,c Jeel P b Jay P,31,11,3,3,281.82
 19251,Blasters,RAJ PATEL,c Rahul P b Soham B,0,4,0,0,0.00
 19251,Blasters,Khiamuddin Mohammad,c †Yogesh P b Soham B,0,2,0,0,0.00
@@ -3750,7 +4185,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19216,Jersey Boys,Fenil Shah*,not out,29,14,5,1,207.14
 19216,Jersey Boys,Shivang Chaurushia,c Ravi K b Raja K,5,5,1,0,100.00
 19216,Jersey Boys,Madhur Kaushik,not out,4,6,0,0,66.67
-19213,Jetha 11,Mayank Patel,c Het V b Romil P,12,12,2,0,100.00
+19213,Jetha 11,Mayank Patel Patel,c Het V b Romil P,12,12,2,0,100.00
 19213,Jetha 11,Haren Patel,c †Chintan S b Romil P,7,5,1,0,140.00
 19213,Jetha 11,Nirav Patel*,run out (Parth P/Romil P),11,4,1,1,275.00
 19213,Jetha 11,Nirav Patel NJ,c Mrugesh P b Het V,14,17,0,2,82.35
@@ -3765,7 +4200,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19213,Gcc,Hardik(gcc) Rana,c Parth S b Naran P,1,3,0,0,33.33
 19213,Gcc,Parth Patel,not out,2,4,0,0,50.00
 19213,Gcc,Mrugesh Patel,b Dipal P,0,2,0,0,0.00
-19213,Gcc,Nirmal Patel GCC,c Dipal P b Kishan P,5,3,1,0,166.67
+19213,Gcc,Dipen Patel GCC,c Dipal P b Kishan P,5,3,1,0,166.67
 19213,Gcc,Het Vaidya (GCC),c †Deepan Sunny C b Kishan P,0,2,0,0,0.00
 19213,Gcc,Sahil Patel,not out,1,1,0,0,100.00
 19207,Warriors,Mitul Patel,c Suman K b Govind S,10,14,0,1,71.43
@@ -3792,7 +4227,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19207,Parsippany Phoenix XI,Brahma M,not out,0,0,0,0,0.00
 19205,Samudhra Gladiators,Ashish Shetty,b Waqas C,36,29,2,3,124.14
 19205,Samudhra Gladiators,Tejdeep Maddirala,c Saad T b Waqas C,0,3,0,0,0.00
-19205,Samudhra Gladiators,Sandeep Shetty,c Saad T b Naveed A,10,8,1,0,125.00
+19205,Samudhra Gladiators,Sandeep I Shetty,c Saad T b Naveed A,10,8,1,0,125.00
 19205,Samudhra Gladiators,Naveen R Sripathi,c †Sajjad Faisal S b Naveed A,0,4,0,0,0.00
 19205,Samudhra Gladiators,Dileep Reddy,c †Sajjad Faisal S b Tahir M,6,9,1,0,66.67
 19205,Samudhra Gladiators,Sridhara Raju*,c †Sajjad Faisal S b Waqas C,19,9,1,2,211.11
@@ -3802,12 +4237,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19205,Samudhra Gladiators,Vinit Bharadwaj,run out (Faisal M),8,10,1,0,80.00
 19205,Samudhra Gladiators,Ankur Chaturvedi,not out,1,3,0,0,33.33
 19205,Nj Tigers,Salman Ali,c †Sanju S b Vinit B,0,3,0,0,0.00
-19205,Nj Tigers,Saad Talat Siddiqui,c Ankur C b Sandeep S,2,4,0,0,50.00
-19205,Nj Tigers,Mubassir Mansuri,c Sandeep S b Vinit B,2,4,0,0,50.00
+19205,Nj Tigers,Saad Talat Siddiqui,c Ankur C b Sandeep I S,2,4,0,0,50.00
+19205,Nj Tigers,Mubassir Mansuri,c Sandeep I S b Vinit B,2,4,0,0,50.00
 19205,Nj Tigers,Waqas Choudhary,c †Sanju S b Naveen R S,1,4,0,0,25.00
 19205,Nj Tigers,Sajjad Faisal Syed †,c Vinit B b Naveen R S,16,17,0,2,94.12
 19205,Nj Tigers,Shazain Yusuf,c Anilreddy A b Naveen R S,1,2,0,0,50.00
-19205,Nj Tigers,Noman Ali,c Sandeep S b Vinit B,5,10,0,0,50.00
+19205,Nj Tigers,Noman Ali,c Sandeep I S b Vinit B,5,10,0,0,50.00
 19205,Nj Tigers,Naveed Azam,c †Sanju S b Vinit B,2,8,0,0,25.00
 19205,Nj Tigers,Tahir Mehmood,not out,3,9,0,0,33.33
 19205,Nj Tigers,Faisal Mehmood*,b Vinit B,1,5,0,0,20.00
@@ -3848,7 +4283,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19200,Veerans,Sundip Helchal,c kevin s b nuvan t,9,18,0,0,50.00
 19200,Veerans,Kamalraj Rajamanickam,c Harsh V b Hiren J,1,11,0,0,9.09
 19200,Veerans,Naresh Ram,c Siddharth K b kevin s,0,2,0,0,0.00
-19200,Veerans,Shabbeer Syed,b Raj P,4,9,0,0,44.44
+19200,Veerans,Shabbir Syed,b Raj P,4,9,0,0,44.44
 19200,Veerans,Murugan Shan,St Vivian P b nuvan t,2,5,0,0,40.00
 19200,Veerans,Harish Kumar Ananthasayanam,b nuvan t,1,14,0,0,7.14
 19200,Veerans,Naveen Elangovan*,c Rahil S b Raj P,1,7,0,0,14.29
@@ -3907,7 +4342,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19188,WCC,Sivaram Chowdary,not out,0,1,0,0,0.00
 19186,Youth For Sewa,Eswar Vennapusa,c †Rupak D b Chintan. K,2,3,0,0,66.67
 19186,Youth For Sewa,Dileep Guthi,b Gurmeet S,20,24,0,0,83.33
-19186,Youth For Sewa,Satish Kasireddy,c Vivaan P b Chintan. K,5,4,1,0,125.00
+19186,Youth For Sewa,Satish Kasireddy,c Shrikant P b Chintan. K,5,4,1,0,125.00
 19186,Youth For Sewa,Ram V*,run out (Nirav86 S),54,29,4,4,186.21
 19186,Youth For Sewa,Nazareth John,c Yash S b Ritwik R,6,9,1,0,66.67
 19186,Youth For Sewa,Tauseef Ahmed,c Shalin P b Soumyabrata P,1,8,0,0,12.50
@@ -3918,7 +4353,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19186,Edison Rebelz,Yash Solanki,c Nazareth J b Balu Y,12,8,2,0,150.00
 19186,Edison Rebelz,Shalin Patel,c Ozzy K b Nazareth J,14,13,0,1,107.69
 19186,Edison Rebelz,Chintan. Kamdar,c Nazareth J b Ram V,7,7,1,0,100.00
-19186,Edison Rebelz,Vivaan Patra,b Ram V,28,16,3,2,175.00
+19186,Edison Rebelz,Shrikant Patra,b Ram V,28,16,3,2,175.00
 19186,Edison Rebelz,Soumyabrata Paul,c †Devadathan B b Ram V,0,1,0,0,0.00
 19186,Edison Rebelz,Gurmeet Singh,c Devadathan B b Manikanta Raja k,1,6,0,0,16.67
 19186,Edison Rebelz,Sandeep Mistry,c Satish K b Tauseef A,17,17,1,1,100.00
@@ -3952,7 +4387,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19155,Falcons,Sairam Raavi*,not out,23,31,1,2,74.19
 19155,Falcons,Deepak Guthikonda,Retired Hurt,7,16,0,0,43.75
 19155,Falcons,Manikanta Arumilli,run out (Smith D),6,6,0,1,100.00
-19155,Aryans,Amit Singh,c Manikanta A b sairam R,5,10,1,0,50.00
+19155,Aryans,Amit Singh,c manikanta a b sairam R,5,10,1,0,50.00
 19155,Aryans,Allan Dabre,c Shravan M b Sai ritheesh S,3,12,0,0,25.00
 19155,Aryans,Calvin Dabre †,c †sairam R b Sai ritheesh S,32,22,1,3,145.45
 19155,Aryans,Joydeep Das,c Shravan M b Sunil G,6,9,0,0,66.67
@@ -3965,19 +4400,19 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19155,Aryans,Willison Lopes,not out,1,2,0,0,50.00
 19154,Team Highlanders,Suresh Ganesan,c Sundip H b Aditya R,6,9,1,0,66.67
 19154,Team Highlanders,Senthil Prabhu R †,b Sundip H,11,22,0,0,50.00
-19154,Team Highlanders,Pankaj Jhamb,b Shabbeer S,3,4,0,0,75.00
+19154,Team Highlanders,Pankaj Jhamb,b Shabbir S,3,4,0,0,75.00
 19154,Team Highlanders,Hassan Anjum,run out (Kamalraj R),9,12,1,0,75.00
 19154,Team Highlanders,Suraj Shyam,c Navdeep S b Sundip H,12,9,1,1,133.33
 19154,Team Highlanders,Vijay Narayanan Nadar,not out,62,26,2,8,238.46
-19154,Team Highlanders,Yokesh Rajaram*,c Harish Kumar A b Shabbeer S,6,8,0,1,75.00
+19154,Team Highlanders,Yokesh Rajaram*,c Harish Kumar A b Shabbir S,6,8,0,1,75.00
 19154,Team Highlanders,Syed Abhinash,not out,3,7,0,0,42.86
 19154,Veerans,Kannan Thirumoorthy,c Vijay Narayanan N b Syed A,46,22,1,6,209.09
-19154,Veerans,Shabbeer Syed,c Hassan A b Syed A,24,20,2,1,120.00
+19154,Veerans,Shabbir Syed,c Hassan A b Syed A,24,20,2,1,120.00
 19154,Veerans,Janakiram Shanmugavel,not out,24,13,2,2,184.62
 19154,Veerans,Kamalraj Rajamanickam,not out,24,15,1,3,160.00
 19152,Samudhra Gladiators,Naveen R Sripathi,c Kinjal P b Vineet L,0,3,0,0,0.00
 19152,Samudhra Gladiators,Ashish Shetty,b Vikul R,1,6,0,0,16.67
-19152,Samudhra Gladiators,Sandeep Shetty,c Fenil S b Vineet L,20,24,2,1,83.33
+19152,Samudhra Gladiators,Sandeep I Shetty,c Fenil S b Vineet L,20,24,2,1,83.33
 19152,Samudhra Gladiators,Harshad Patil,c Vikas C b Sushil K,13,22,0,1,59.09
 19152,Samudhra Gladiators,Anilreddy Aleti,run out (Sushil K),0,1,0,0,0.00
 19152,Samudhra Gladiators,Tejdeep Maddirala,c †Akshay P b Vineet L,11,15,0,1,73.33
@@ -4047,7 +4482,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19144,WCC,Delwar Hossian,not out,6,2,0,1,300.00
 19141,Youth For Sewa,Eswar Vennapusa,c&b Satish kumar D,16,16,1,1,100.00
 19141,Youth For Sewa,Dileep Guthi,c Rakesh P b Govind S,6,5,1,0,120.00
-19141,Youth For Sewa,Rohith Reddy,c †Vikasreddy R b Raghuveer B,24,30,2,0,80.00
+19141,Youth For Sewa,Rohit Reddy,c †Vikasreddy R b Raghuveer B,24,30,2,0,80.00
 19141,Youth For Sewa,Nazareth John,run out (Raghuveer B),2,2,0,0,100.00
 19141,Youth For Sewa,Devadathan Biju †,run out (Brahma M),1,1,0,0,100.00
 19141,Youth For Sewa,Tauseef Ahmed,c Naveen R b Raghuveer B,17,22,2,0,77.27
@@ -4055,10 +4490,10 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19141,Youth For Sewa,Satish Kasireddy,c Govind S b Satish kumar D,33,11,5,2,300.00
 19141,Youth For Sewa,Balu Y,not out,0,1,0,0,0.00
 19141,Youth For Sewa,Aillu N,Hit Wicket Naveen R,0,1,0,0,0.00
-19141,Parsippany Phoenix XI,Aman Dudeja,c †Devadathan B b Ram J,5,9,0,0,55.56
+19141,Parsippany Phoenix XI,Aman Dudeja,c †Devadathan B b Ram R,5,9,0,0,55.56
 19141,Parsippany Phoenix XI,Jeyaram Ramadoss,c †Devadathan B b Aillu N,8,11,1,0,72.73
 19141,Parsippany Phoenix XI,Raghuveer Bethelli,b Aillu N,3,10,0,0,30.00
-19141,Parsippany Phoenix XI,Naveen Rayal,c Satish K b Ram J,4,12,0,0,33.33
+19141,Parsippany Phoenix XI,Naveen Rayal,c Satish K b Ram R,4,12,0,0,33.33
 19141,Parsippany Phoenix XI,Vikasreddy Rangapur,c †Devadathan B b Balu Y,30,22,4,1,136.36
 19141,Parsippany Phoenix XI,Suman K,b Nazareth J,15,17,1,1,88.24
 19141,Parsippany Phoenix XI,Satish Kumar Durgam,c †Devadathan B b Aillu N,0,1,0,0,0.00
@@ -4087,14 +4522,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19123,RHG,Nandish Patel,c Shailesh K b Sourav M,6,2,0,1,300.00
 19123,RHG,Harsh Viradiya,c Sourav M b Zubin S,0,4,0,0,0.00
 19123,RHG,Nuvan T,c Sourav M b Soumyabrata P,54,37,7,3,145.95
-19123,RHG,Upjeet Singh,c Vivaan P b Gurmeet S,5,5,1,0,100.00
+19123,RHG,Upjeet Singh,c Shrikant P b Gurmeet S,5,5,1,0,100.00
 19123,RHG,Jatan Patel,c Yash S b Gurmeet S,0,1,0,0,0.00
 19123,RHG,Hiren Joshi,c †Rupak D b Soumyabrata P,0,2,0,0,0.00
 19123,RHG,Vivian Pereira,not out,5,5,0,0,100.00
 19123,Edison Rebelz,Shalin Patel,St Vivian P b nuvan t,10,22,0,0,45.45
 19123,Edison Rebelz,Soumyabrata Paul,b kevin s,21,20,1,1,105.00
 19123,Edison Rebelz,Sourav Mazumder,c&b kevin s,0,1,0,0,0.00
-19123,Edison Rebelz,Vivaan Patra,c Jatan P b Hiren J,2,6,0,0,33.33
+19123,Edison Rebelz,Shrikant Patra,c Jatan P b Hiren J,2,6,0,0,33.33
 19123,Edison Rebelz,Rupak Das* †,c †Vivian P b Hiren J,2,3,0,0,66.67
 19123,Edison Rebelz,Shailesh Khadapkar,c Nandish P b Upjeet S,1,2,0,0,50.00
 19123,Edison Rebelz,Sandeep Mistry,c kevin s b Upjeet S,5,6,1,0,83.33
@@ -4202,7 +4637,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19091,Mercer Challengers,Vasu Elluri,not out,21,12,2,1,175.00
 19091,Mercer Challengers,Vishal Srivastava,c Nishant S b Ravish P,2,4,0,0,50.00
 19091,Mercer Challengers,Deepesh Naidu,not out,8,5,0,1,160.00
-19090,Storm Riders,Prabhjeet Singh,c Jatan V b Jenish P,2,7,0,0,28.57
+19090,Storm Riders,Prabhjeet S Ricky,c Jatan V b Jenish P,2,7,0,0,28.57
 19090,Storm Riders,Apurv Jain* †,c Jit P b Kartik P,40,22,0,6,181.82
 19090,Storm Riders,Noor Randhawa,c Hemant P b Jenish P,0,2,0,0,0.00
 19090,Storm Riders,Anikesh Jain,c †Devashya P b Hemant P,8,12,1,0,66.67
@@ -4232,7 +4667,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19072,Blasters,Vishal Bhavsar,c Zohair Ahmad S b Soham K,8,11,1,0,72.73
 19072,Blasters,Harshu Patel,run out (Anoop H),1,3,0,0,33.33
 19072,Blasters,Gunjan Patel,c Darshil M b Anoop H,12,10,1,1,120.00
-19072,Blasters,Dinesh Kumavat,c Kushal K b Zoheb K,7,8,1,0,87.50
+19072,Blasters,Dinesh Kumawat,c Kushal K b Zoheb K,7,8,1,0,87.50
 19072,Blasters,Jay Patel (JP),c †Abdulla S b Zoheb K,5,8,0,0,62.50
 19072,Blasters,Gurudutt Patel*,c&b Darshil M,9,6,2,0,150.00
 19072,Blasters,Khiamuddin Mohammad,c Surya S b Zoheb K,4,5,1,0,80.00
@@ -4315,7 +4750,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19055,Fdu Giants,Nishant Sharma,run out (Chinmaya S),2,3,0,0,66.67
 19055,Fdu Giants,Viral Parekh,not out,3,9,0,0,33.33
 19055,Fdu Giants,Dhruv Patel*,c †Rohit R b Anil P,1,6,0,0,16.67
-19055,Fdu Giants,Smit Brahmbhatt,c Sai p b Anil P,0,1,0,0,0.00
+19055,Fdu Giants,Smit Brahmbhatt,c Sai Praneeth K b Anil P,0,1,0,0,0.00
 19055,Fdu Giants,Sunit Shirke,run out (Chinmaya S),0,2,0,0,0.00
 19055,Fdu Giants,Kunal Patel,c †Rohit R b Anil P,2,11,0,0,18.18
 19055,Plainsboro Knights,Rohit Ranjan* †,c †Charanjot S b Ankit C,1,7,0,0,14.29
@@ -4372,7 +4807,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19044,F5,Harihara Ganeshan,c Mitul P b Satish S,0,1,0,0,0.00
 19044,F5,Nirmal Singh,not out,14,18,2,0,77.78
 19044,F5,Balaji S,c Anikesh J b Mitul P,3,12,0,0,25.00
-19044,Storm Riders,Prabhjeet Singh,c Jinal J b Sujesh N,12,12,1,0,100.00
+19044,Storm Riders,Prabhjeet S Ricky,c Jinal J b Sujesh N,12,12,1,0,100.00
 19044,Storm Riders,Ankit Bhardwaj,c Sujesh N b Harihara G,6,14,0,0,42.86
 19044,Storm Riders,Sabeel Shaikh,c Vinod K b ⁠Thulasi T,9,9,0,1,100.00
 19044,Storm Riders,Shreyas Najan,c Rohan K b Harihara G,0,1,0,0,0.00
@@ -4505,13 +4940,13 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 19001,Jetha 11,Nirav Patel NJ,c Harshal G b Shuvradeep M,4,10,0,0,40.00
 19001,Jetha 11,Dipal Patel,b Mahesh N,2,4,0,0,50.00
 19001,Jetha 11,Deepan Sunny Chauhan,c Sanjay D b Kamal C,10,16,0,0,62.50
-19001,Jetha 11,Mayank Patel,c †Amol M b Sumesh M,2,6,0,0,33.33
+19001,Jetha 11,Mayank Patel Patel,c †Amol M b Sumesh M,2,6,0,0,33.33
 19001,Jetha 11,Gary Patel,c Sanjay D b Harshal G,1,3,0,0,33.33
 19001,Jetha 11,Kishan Patel,c Santosh M b Sumesh M,5,16,0,0,31.25
 19001,Jetha 11,Parth Surti,not out,4,5,0,0,80.00
 19001,Jetha 11,Vivek Patel,not out,2,5,0,0,40.00
 19001,Sreeshti,Sanjay Dak,b Dipal P,1,5,0,0,20.00
-19001,Sreeshti,Sandeep Shetty,c Mayank P b Dipal P,3,8,0,0,37.50
+19001,Sreeshti,Sandeep Shetty,c Mayank Patel P b Dipal P,3,8,0,0,37.50
 19001,Sreeshti,Harshal Gupta,c Parth S b Jigar D P,1,6,0,0,16.67
 19001,Sreeshti,Viraj Jasani,b Gary P,5,9,0,0,55.56
 19001,Sreeshti,Amol Manjrekar* †,c †Kishan P b Haren P,13,17,0,1,76.47
@@ -4548,14 +4983,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18994,Plainsboro Eagles,Pavan Palle,not out,0,0,0,0,0.00
 18994,Hudson Hurricanes,Pavan Poojar †,not out,40,25,2,3,160.00
 18994,Hudson Hurricanes,Aniket Dalal*,not out,46,17,6,2,270.59
-18990,Nj Stars CC,Raheel Anjum,c Mihira Teja N b Rohith R,20,18,2,1,111.11
+18990,Nj Stars CC,Raheel Anjum,c Mihira Teja N b Rohit R,20,18,2,1,111.11
 18990,Nj Stars CC,Akram Abubakar,c Manikanta Raja k b Shahmir W,29,12,5,1,241.67
 18990,Nj Stars CC,Munazam Raja †,b Rajesh K,20,19,1,1,105.26
-18990,Nj Stars CC,Imran Raja*,c Aillu N b Rohith R,1,3,0,0,33.33
+18990,Nj Stars CC,Imran Raja*,c Aillu N b Rohit R,1,3,0,0,33.33
 18990,Nj Stars CC,Zarak Khan,c Dileep G b Rajesh K,17,11,0,2,154.55
 18990,Nj Stars CC,Muhammad Haseeb,c Dileep G b Rajesh K,25,21,0,3,119.05
-18990,Nj Stars CC,Sajeel Ahmed,c Balu Y b Rohith R,0,2,0,0,0.00
-18990,Nj Stars CC,Zeeshan Raja,b Rohith R,0,3,0,0,0.00
+18990,Nj Stars CC,Sajeel Ahmed,c Balu Y b Rohit R,0,2,0,0,0.00
+18990,Nj Stars CC,Zeeshan Raja,b Rohit R,0,3,0,0,0.00
 18990,Nj Stars CC,Vijay Gore,c Tauseef A b Aillu N,2,4,0,0,50.00
 18990,Nj Stars CC,Abdul Wali Siddiqee,not out,1,1,0,0,100.00
 18990,Nj Stars CC,Zain Pervaiz,not out,2,2,0,0,100.00
@@ -4563,7 +4998,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18990,Youth For Sewa,Ozzy K,c †Munazam R b Vijay G,9,8,1,0,112.50
 18990,Youth For Sewa,Satish Kasireddy,c Akram A b Vijay G,12,12,1,1,100.00
 18990,Youth For Sewa,Balu Y,c †Munazam R b Zain P,5,6,1,0,83.33
-18990,Youth For Sewa,Rohith Reddy,c Sajeel A b Zain P,0,2,0,0,0.00
+18990,Youth For Sewa,Rohit Reddy,c Sajeel A b Zain P,0,2,0,0,0.00
 18990,Youth For Sewa,Tauseef Ahmed,c Vijay G b Muhammad H,14,16,1,1,87.50
 18990,Youth For Sewa,Dileep Guthi*,b Abdul Wali S,16,13,1,1,123.08
 18990,Youth For Sewa,Shahmir Warraich,c Sajeel A b Zain P,3,5,0,0,60.00
@@ -4599,7 +5034,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18983,Veerans,Divakaran Karunakaran,not out,0,2,0,0,0.00
 18983,Samudhra Gladiators,Ashish Shetty,c †Uma Maheswara Rao P b Sundip H,16,11,3,0,145.45
 18983,Samudhra Gladiators,Naveen R Sripathi,c Kamalraj R b Aditya R,44,20,1,6,220.00
-18983,Samudhra Gladiators,Sandeep Shetty,not out,17,10,0,2,170.00
+18983,Samudhra Gladiators,Sandeep I Shetty,not out,17,10,0,2,170.00
 18983,Samudhra Gladiators,Harshad Patil,not out,1,1,0,0,100.00
 18972,Falcons,Ravindar Perala †,c vishal Reddy T b Nahid S,5,7,1,0,71.43
 18972,Falcons,Srinath Gentyala,b Nisar A,4,18,0,0,22.22
@@ -4635,7 +5070,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18955,Edison Rebelz,Soumyabrata Paul,c Yokesh R b Raja K,19,40,1,0,47.50
 18955,Edison Rebelz,Zubin Shah,c Yokesh R b Raja K,0,4,0,0,0.00
 18955,Edison Rebelz,Sourav Mazumder,c Yokesh R b Vijay Narayanan N,2,6,0,0,33.33
-18955,Edison Rebelz,Vivaan Patra,c Nithin R b Vijay Narayanan N,0,1,0,0,0.00
+18955,Edison Rebelz,Shrikant Patra,c Nithin R b Vijay Narayanan N,0,1,0,0,0.00
 18955,Edison Rebelz,Rupak Das* †,c Yokesh R b Vijay Narayanan N,0,2,0,0,0.00
 18955,Edison Rebelz,Sandeep Mistry,c Suraj S b Vijay Narayanan N,9,8,1,0,112.50
 18955,Edison Rebelz,Gurmeet Singh,c Nithin R b Raja K,1,2,0,0,50.00
@@ -4643,7 +5078,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18955,Edison Rebelz,Ritwik Roy,not out,7,8,0,0,87.50
 18955,Edison Rebelz,Kironmoy Banerjee,not out,5,5,0,0,100.00
 18955,Team Highlanders,Nithin Ravooru,b Gurmeet S,16,16,2,0,100.00
-18955,Team Highlanders,Suresh Ganesan,c Vivaan P b Sourav M,30,13,2,3,230.77
+18955,Team Highlanders,Suresh Ganesan,c Shrikant P b Sourav M,30,13,2,3,230.77
 18955,Team Highlanders,Suraj Shyam,not out,15,11,1,1,136.36
 18955,Team Highlanders,Ravi Kanth,c Zubin S b Gurmeet S,0,3,0,0,0.00
 18955,Team Highlanders,Hassan Anjum,not out,10,5,2,0,200.00
@@ -4704,7 +5139,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18937,Aryans,Calvin Dabre †,not out,86,47,2,10,182.98
 18937,Aryans,Joydeep Das,b Aillu N,1,3,0,0,33.33
 18937,Aryans,Arpit Panchal,c Balu Y b Aillu N,7,5,0,1,140.00
-18937,Aryans,Sourabh Guha*,c Rohith R b Tauseef A,15,13,3,0,115.38
+18937,Aryans,Sourabh Guha*,c Rohit R b Tauseef A,15,13,3,0,115.38
 18937,Aryans,Smith Dsouza,c †Devadathan B b Tauseef A,1,5,0,0,20.00
 18937,Aryans,Gajendra Kumar,run out (Rajesh K),19,12,1,2,158.33
 18937,Aryans,Rakeshkumar Desai,run out (Satish K),0,0,0,0,0.00
@@ -4747,7 +5182,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18927,Plainsboro Eagles,Bhargav Reddy Napa*,c&b srinath g,22,29,3,0,75.86
 18927,Plainsboro Eagles,Narender Kumar,c Ravindar P b Sunil G,9,9,0,1,100.00
 18927,Plainsboro Eagles,Sumanth Udupa,c&b Ravindar P,15,10,0,2,150.00
-18927,Plainsboro Eagles,Srinivas Reddy Ch,c Ravindar P b Manikanta A,1,5,0,0,20.00
+18927,Plainsboro Eagles,Srinivas Reddy Ch,c Ravindar P b manikanta a,1,5,0,0,20.00
 18927,Plainsboro Eagles,Suresh Kokatam,not out,4,18,0,0,22.22
 18927,Plainsboro Eagles,Akhilesh Goud Janagam,c †Ravindar P b srinath g,2,4,0,0,50.00
 18927,Plainsboro Eagles,Tushar Choksi,not out,1,1,0,0,100.00
@@ -4773,9 +5208,9 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18925,Nj Tigers,Mobeen Jarral,c †Amol M b Yogen P,0,2,0,0,0.00
 18925,Nj Tigers,Saad Talat Siddiqui,run out (Sumesh M),7,6,1,0,116.67
 18925,Nj Tigers,Asad Mahmood,not out,4,8,0,0,50.00
-18920,Samudhra Gladiators,Tejdeep Maddirala,c Vivaan P b Gurmeet S,24,25,0,1,96.00
-18920,Samudhra Gladiators,Ankur Chaturvedi,c Vivaan P b Soumyabrata P,7,13,0,0,53.85
-18920,Samudhra Gladiators,Sandeep Shetty,c Kironmoy B b Yash S,4,6,0,0,66.67
+18920,Samudhra Gladiators,Tejdeep Maddirala,c Shrikant P b Gurmeet S,24,25,0,1,96.00
+18920,Samudhra Gladiators,Ankur Chaturvedi,c Shrikant P b Soumyabrata P,7,13,0,0,53.85
+18920,Samudhra Gladiators,Sandeep I Shetty,c Kironmoy B b Yash S,4,6,0,0,66.67
 18920,Samudhra Gladiators,Ashish Shetty,b Yash S,0,1,0,0,0.00
 18920,Samudhra Gladiators,Naveen R Sripathi,run out (Rupak D/Gurmeet S),16,14,0,1,114.29
 18920,Samudhra Gladiators,Harshad Patil,b Dhaval S,45,23,1,5,195.65
@@ -4784,10 +5219,10 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18920,Samudhra Gladiators,Sanju S †,run out (Rupak D),0,2,0,0,0.00
 18920,Samudhra Gladiators,Anilreddy Aleti,not out,0,0,0,0,0.00
 18920,Samudhra Gladiators,Vipul Joshi,not out,2,1,0,0,200.00
-18920,Edison Rebelz,Kironmoy Banerjee,c †Sanju S b Sandeep S,2,7,0,0,28.57
+18920,Edison Rebelz,Kironmoy Banerjee,c †Sanju S b Sandeep I S,2,7,0,0,28.57
 18920,Edison Rebelz,Shalin Patel,c Ashish S b Vinit B,6,9,0,0,66.67
-18920,Edison Rebelz,Soumyabrata Paul,c Ankur C b Sandeep S,6,8,1,0,75.00
-18920,Edison Rebelz,Vivaan Patra,b Vinit B,11,11,2,0,100.00
+18920,Edison Rebelz,Soumyabrata Paul,c Ankur C b Sandeep I S,6,8,1,0,75.00
+18920,Edison Rebelz,Shrikant Patra,b Vinit B,11,11,2,0,100.00
 18920,Edison Rebelz,Gurmeet Singh,b Ankur C,3,11,0,0,27.27
 18920,Edison Rebelz,Shailesh Khadapkar,c Anilreddy A b Ankur C,3,12,0,0,25.00
 18920,Edison Rebelz,Ritwik Roy,c Substitute b Harshad P,1,4,0,0,25.00
@@ -4914,7 +5349,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18881,Piscataway Avengers,Mit Patel,not out,1,4,0,0,25.00
 18881,Piscataway Avengers,Harsh Patel,c †Apurv J b Shobhit G,2,5,0,0,40.00
 18881,Storm Riders,Apurv Jain* †,b Ujjaval P,2,3,0,0,66.67
-18881,Storm Riders,Prabhjeet Singh,not out,32,32,1,3,100.00
+18881,Storm Riders,Prabhjeet S Ricky,not out,32,32,1,3,100.00
 18881,Storm Riders,Ankit Bhardwaj,c Vrajesh P b Ujjaval P,0,1,0,0,0.00
 18881,Storm Riders,Rishabh Tewari,b Sherry S,6,15,0,0,40.00
 18881,Storm Riders,Noor Randhawa,not out,2,6,0,0,33.33
@@ -4980,7 +5415,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18857,Juggernaut,Lokesh Kumar,c Sesha Sai V b Raghuraman V,1,5,0,0,20.00
 18857,Juggernaut,Jit Patel,c †Rohit R b Anil P,1,4,0,0,25.00
 18857,Juggernaut,Hemant Patel*,c Gowtham A b Anil P,0,2,0,0,0.00
-18857,Juggernaut,Kartik Patel,c Sai p b Raghuraman V,11,14,0,0,78.57
+18857,Juggernaut,Kartik Patel,c Sai Praneeth K b Raghuraman V,11,14,0,0,78.57
 18857,Juggernaut,Jenish Patel,b Sesha Sai V,1,6,0,0,16.67
 18857,Juggernaut,Kailash Naithani,not out,3,3,0,0,100.00
 18857,Plainsboro Knights,Rohit Ranjan* †,c Karan P b Hemant P,1,3,0,0,33.33
@@ -5062,7 +5497,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18799,Gryffindors,Ganesh R T,c Prabhjeet S b Mitul P,1,3,0,0,33.33
 18799,Gryffindors,Harish Bangera,not out,1,1,0,0,100.00
 18799,Storm Riders,Apurv Jain* †,b Kishan P,20,13,1,2,153.85
-18799,Storm Riders,Prabhjeet Singh,c Srini N b Harish B,0,2,0,0,0.00
+18799,Storm Riders,Prabhjeet S Ricky,c Srini N b Harish B,0,2,0,0,0.00
 18799,Storm Riders,KARAN SAINI,b Kishan P,2,6,0,0,33.33
 18799,Storm Riders,Ankit Bhardwaj,c Sohil K b Ganesh R,4,16,0,0,25.00
 18799,Storm Riders,Noor Randhawa,c †Sanket K b Ankit P,19,21,0,1,90.48
@@ -5072,13 +5507,13 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18799,Storm Riders,Sabeel Shaikh,not out,6,4,1,0,150.00
 18794,Samudhra Gladiators,Tejdeep Maddirala,b Govind S,0,7,0,0,0.00
 18794,Samudhra Gladiators,Ankur Chaturvedi,run out (Raghuveer B),29,27,1,1,107.41
-18794,Samudhra Gladiators,Sandeep Shetty,c †Jeyaram R b Raghuveer B,0,5,0,0,0.00
+18794,Samudhra Gladiators,Sandeep I Shetty,c †Jeyaram R b Raghuveer B,0,5,0,0,0.00
 18794,Samudhra Gladiators,Harshad Patil,c Raghuveer B b Satish kumar D,8,9,0,1,88.89
 18794,Samudhra Gladiators,Vipul Joshi,c Karthikeyan B b Satish kumar D,16,18,0,0,88.89
 18794,Samudhra Gladiators,Sanju S †,not out,31,21,0,3,147.62
 18794,Samudhra Gladiators,Anilreddy Aleti,b Govind S,7,7,1,0,100.00
 18794,Samudhra Gladiators,Vinit Bharadwaj,run out (Naveen R),2,2,0,0,100.00
-18794,Parsippany Phoenix XI,Karthikeyan Balasubramanian,b Sandeep S,8,11,0,1,72.73
+18794,Parsippany Phoenix XI,Karthikeyan Balasubramanian,b Sandeep I S,8,11,0,1,72.73
 18794,Parsippany Phoenix XI,Raghuveer Bethelli,c †Sanju S b Ankur C,5,12,0,0,41.67
 18794,Parsippany Phoenix XI,Prasad Balaji,b Vinit B,0,3,0,0,0.00
 18794,Parsippany Phoenix XI,Naveen Rayal,c †Sanju S b Vinit B,10,7,1,1,142.86
@@ -5108,11 +5543,11 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18793,Sreeshti,Anal Patel,c Madhur K b Pradeep M,0,2,0,0,0.00
 18793,Sreeshti,Sumesh Mathew,not out,2,4,0,0,50.00
 18790,Jetha 11,Jignesh Mukhi Patel,c Lakshman R b Sai ritheesh S,0,1,0,0,0.00
-18790,Jetha 11,Jalpesh Patel,c Sunil G b Manikanta A,6,7,1,0,85.71
+18790,Jetha 11,Jalpesh Patel,c Sunil G b manikanta a,6,7,1,0,85.71
 18790,Jetha 11,Nirav Patel*,b srinath g,98,46,12,6,213.04
-18790,Jetha 11,Nirav Patel NJ,c †Ravindar P b Manikanta A,22,24,3,0,91.67
+18790,Jetha 11,Nirav Patel NJ,c †Ravindar P b manikanta a,22,24,3,0,91.67
 18790,Jetha 11,Dipal Patel,c Sai ritheesh S b srinath g,5,3,1,0,166.67
-18790,Jetha 11,Gary Patel,c Lakshman R b Manikanta A,2,5,0,0,40.00
+18790,Jetha 11,Gary Patel,c Lakshman R b manikanta a,2,5,0,0,40.00
 18790,Jetha 11,Divyesh Patel,not out,2,6,0,0,33.33
 18790,Jetha 11,Kishan Patel,c Ravindar P b Sai ritheesh S,1,2,0,0,50.00
 18790,Jetha 11,Vivek Patel,not out,6,7,1,0,85.71
@@ -5129,30 +5564,30 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18788,Gcc,Urjit Patel (gcc)*,c Zubin S b Yash S,16,9,2,1,177.78
 18788,Gcc,Romil Patel (GCC),c Shailesh K b Gurmeet S,0,1,0,0,0.00
 18788,Gcc,Parin Patel (GCC),c Zubin S b Gurmeet S,0,2,0,0,0.00
-18788,Gcc,Mrugesh Patel,c Vivaan P b Chintan. K,0,3,0,0,0.00
+18788,Gcc,Mrugesh Patel,c Shrikant P b Chintan. K,0,3,0,0,0.00
 18788,Gcc,Sapan Parikh,run out (Yash S),5,9,0,0,55.56
 18788,Gcc,Parth Patel,c Ankit S b Chintan. K,2,12,0,0,16.67
-18788,Gcc,Bhaumik Thakkar GCC,c Chintan. K b Yash S,0,2,0,0,0.00
+18788,Gcc,Pragnesh Patel GCC,c Chintan. K b Yash S,0,2,0,0,0.00
 18788,Gcc,Deep Thakkar GCC,b Yash S,30,23,2,3,130.43
 18788,Gcc,Hardik(gcc) Rana,not out,14,18,2,0,77.78
 18788,Gcc,Sahil Patel,not out,4,11,0,0,36.36
 18788,Edison Rebelz,Nirav86 Shah,run out (Parin P/Chintan S),1,5,0,0,20.00
 18788,Edison Rebelz,Shalin Patel,not out,47,47,6,1,100.00
 18788,Edison Rebelz,Dhaval Shah,run out (Parin P),2,6,0,0,33.33
-18788,Edison Rebelz,Vivaan Patra,b Parin P,0,1,0,0,0.00
+18788,Edison Rebelz,Shrikant Patra,b Parin P,0,1,0,0,0.00
 18788,Edison Rebelz,Shailesh Khadapkar,c Parth P b Sahil P,0,5,0,0,0.00
 18788,Edison Rebelz,Gurmeet Singh,c Parth P b Romil P,2,11,0,0,18.18
 18788,Edison Rebelz,Sandeep Mistry,c Mrugesh P b Romil P,7,7,1,0,100.00
 18788,Edison Rebelz,Zubin Shah*,c †Chintan S b Romil P,0,1,0,0,0.00
 18788,Edison Rebelz,Ankit Somani,run out (Romil P),14,13,1,0,107.69
 18788,Edison Rebelz,Yash Solanki,not out,1,1,0,0,100.00
-18785,WCC,Waqar Ahmed,run out (Rohith R),7,10,1,0,70.00
+18785,WCC,Waqar Ahmed,run out (Rohit R),7,10,1,0,70.00
 18785,WCC,Raghav Sehgal,c Satish K b Aillu N,6,7,1,0,85.71
 18785,WCC,Vishal Reddy Thanugundla,c †Devadathan B b Balu Y,12,7,2,0,171.43
-18785,WCC,SARWAR ALI SHAH,c Devadathan B b Rohith R,0,2,0,0,0.00
-18785,WCC,Nahid Sarkar,c Balu Y b Rohith R,12,15,0,1,80.00
+18785,WCC,SARWAR ALI SHAH,c Devadathan B b Rohit R,0,2,0,0,0.00
+18785,WCC,Nahid Sarkar,c Balu Y b Rohit R,12,15,0,1,80.00
 18785,WCC,Siva Chirumamilla †,c Devadathan B b Aillu N,40,31,3,2,129.03
-18785,WCC,Sai Sudhan,run out (Rohith R),22,19,1,1,115.79
+18785,WCC,Sai Sudhan,run out (Rohit R),22,19,1,1,115.79
 18785,WCC,Tushar Lenka*,not out,3,4,0,0,75.00
 18785,WCC,Faran Mir,not out,2,3,0,0,66.67
 18785,Youth For Sewa,Eswar Vennapusa,b SARWAR ALI S,33,21,4,1,157.14
@@ -5160,7 +5595,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18785,Youth For Sewa,Mihira Teja Narvaneni,c †Siva C b Faran M,3,7,0,0,42.86
 18785,Youth For Sewa,Devadathan Biju †,b Nahid S,4,9,0,0,44.44
 18785,Youth For Sewa,Tauseef Ahmed,not out,42,31,3,2,135.48
-18785,Youth For Sewa,Rohith Reddy,run out (Raghav S/Faran M),14,18,1,1,77.78
+18785,Youth For Sewa,Rohit Reddy,run out (Raghav S/Faran M),14,18,1,1,77.78
 18785,Youth For Sewa,Ram V*,not out,17,9,2,0,188.89
 18782,Nj Tigers,Faisal Mehmood,c Niket D b Pratik M,12,9,2,0,133.33
 18782,Nj Tigers,Saad Naeem,St Pavan P b Niket D,4,12,0,0,33.33
@@ -5179,7 +5614,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18782,Hudson Hurricanes,Aman Singh,c †Saad N b Faisal M,19,18,3,0,105.56
 18782,Hudson Hurricanes,Shubham Pawar,not out,10,4,0,1,250.00
 18770,Desi Warriors,Madhav Reddy,c Harish Kumar A b Kamalraj R,9,12,1,0,75.00
-18770,Desi Warriors,Rigved Nagarkar,b Shabbeer S,10,11,0,1,90.91
+18770,Desi Warriors,Rigved Nagarkar,b Shabbir S,10,11,0,1,90.91
 18770,Desi Warriors,Jai Ganesh Dillibabu,c Uma Maheswara Rao P b Kamalraj R,7,17,0,0,41.18
 18770,Desi Warriors,Naveen Byrappa* †,c Uma Maheswara Rao P b Aditya R,24,21,2,1,114.29
 18770,Desi Warriors,Sarbjitsingh Sahota,c Kamalraj R b Uma Maheswara Rao P,2,5,0,0,40.00
@@ -5272,14 +5707,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18739,Gcc,Sapan Parikh,not out,21,15,2,1,140.00
 18737,Samudhra Gladiators,Tejdeep Maddirala,c Sunny D b Zain P,11,16,0,1,68.75
 18737,Samudhra Gladiators,Ashish Shetty,b Imran R,9,16,1,0,56.25
-18737,Samudhra Gladiators,Sandeep Shetty,b Sajeel A,29,26,0,3,111.54
+18737,Samudhra Gladiators,Sandeep I Shetty,b Sajeel A,29,26,0,3,111.54
 18737,Samudhra Gladiators,Naveen R Sripathi,c †Munazam R b Abdul Wali S,21,20,0,2,105.00
 18737,Samudhra Gladiators,Harshad Patil,b Zain P,1,3,0,0,33.33
 18737,Samudhra Gladiators,Sanju S †,c †Munazam R b Imran R,9,6,0,1,150.00
 18737,Samudhra Gladiators,Anilreddy Aleti,c Abdul Wali S b Mohammed N,3,6,0,0,50.00
 18737,Samudhra Gladiators,Vinit Bharadwaj,not out,5,5,1,0,100.00
 18737,Samudhra Gladiators,Sridhara Raju*,run out (Mohammed N),0,1,0,0,0.00
-18737,Nj Stars CC,Raheel Anjum,c †Sandeep S b Vinit B,0,6,0,0,0.00
+18737,Nj Stars CC,Raheel Anjum,c †Sandeep I S b Vinit B,0,6,0,0,0.00
 18737,Nj Stars CC,Munazam Raja †,b Naveen R S,18,27,1,1,66.67
 18737,Nj Stars CC,Imran Raja*,c Tejdeep M b Vinit B,23,23,1,1,100.00
 18737,Nj Stars CC,Mohammed Naveed,c Harshad P b Ankur C,0,3,0,0,0.00
@@ -5343,14 +5778,14 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18730,Sreeshti,Anal Patel,c Gopi S b Naveen E,1,4,0,0,25.00
 18730,Sreeshti,Sumesh Mathew,c Ranjan P b Naveen E,2,11,0,0,18.18
 18730,Veerans,Aditya Rathor,c Amol M b Abhy M,8,11,0,1,72.73
-18730,Veerans,Shabbeer Syed,run out (Jainam G/Viraj J),2,5,0,0,40.00
+18730,Veerans,Shabbir Syed,run out (Jainam G/Viraj J),2,5,0,0,40.00
 18730,Veerans,Diwakar Sh,c Abhy M b Sumesh M,5,23,0,0,21.74
 18730,Veerans,Kamalraj Rajamanickam,not out,27,13,4,1,207.69
 18730,Veerans,Harish Kumar Ananthasayanam,b Abhy M,12,11,1,1,109.09
 18730,Veerans,Gopi Sendurapandian †,not out,2,5,0,0,40.00
 18729,Youth For Sewa,Eswar Vennapusa,c Ganesh S b Tushar C,40,25,4,2,160.00
 18729,Youth For Sewa,Satish Kasireddy,c Tushar C b Chandra K,5,9,0,0,55.56
-18729,Youth For Sewa,Rohith Reddy,c Bhargav R b Rajesh P,26,16,4,1,162.50
+18729,Youth For Sewa,Rohit Reddy,c Bhargav R b Rajesh P,26,16,4,1,162.50
 18729,Youth For Sewa,Devadathan Biju †,c suresh k b Bharath R,3,4,0,0,75.00
 18729,Youth For Sewa,Ram V*,c Bhargav R b Tushar C,43,27,4,2,159.26
 18729,Youth For Sewa,Tauseef Ahmed,not out,21,15,3,0,140.00
@@ -5371,12 +5806,12 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18719,Edison Rebelz,Sourav Mazumder,b Sarbjitsingh S,0,2,0,0,0.00
 18719,Edison Rebelz,Kironmoy Banerjee,c Subhajit M b Nauman B,1,5,0,0,20.00
 18719,Edison Rebelz,Dhaval Shah,c †Naveen B b Varun G,8,22,1,0,36.36
-18719,Edison Rebelz,Vivaan Patra,c Rakesh K b Narasimha C,13,16,0,0,81.25
+18719,Edison Rebelz,Shrikant Patra,c Rakesh K b Narasimha C,13,16,0,0,81.25
 18719,Edison Rebelz,Yash Solanki,b Varun G,8,8,0,1,100.00
 18719,Edison Rebelz,Rupak Das* †,c Rigved N b Rakesh K,1,3,0,0,33.33
 18719,Edison Rebelz,Gurmeet Singh,c Rigved N b Narasimha C,12,8,2,0,150.00
 18719,Edison Rebelz,Chintan. Kamdar,not out,7,8,0,0,87.50
-18719,Desi Warriors,Narasimha Charan Reddy,c Vivaan P b Soumyabrata P,2,7,0,0,28.57
+18719,Desi Warriors,Narasimha Charan Reddy,c Shrikant P b Soumyabrata P,2,7,0,0,28.57
 18719,Desi Warriors,Rigved Nagarkar,c Dhaval S b Yash S,34,24,5,0,141.67
 18719,Desi Warriors,Naveen Byrappa* †,not out,33,24,5,0,137.50
 18719,Desi Warriors,Sarbjitsingh Sahota,not out,0,0,0,0,0.00
@@ -5391,7 +5826,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18712,Nj Tigers,Salman Hashim,c †Ravindar P b sairam R,2,6,0,0,33.33
 18712,Nj Tigers,Sajjad Faisal Syed †,c Rajesh R b Sai ritheesh S,5,4,1,0,125.00
 18712,Nj Tigers,Mubassir Mansuri,c Deepak G b Rajesh R,28,28,1,2,100.00
-18712,Nj Tigers,Mobeen Jarral,c Rajesh R b Manikanta A,13,16,0,0,81.25
+18712,Nj Tigers,Mobeen Jarral,c Rajesh R b manikanta a,13,16,0,0,81.25
 18712,Nj Tigers,Naveed Azam*,c †Ravindar P b sairam R,2,10,0,0,20.00
 18712,Nj Tigers,Hasan Zafar,not out,6,17,0,0,35.29
 18712,Nj Tigers,Affan Farooq,c Shravan M b Rajesh R,1,5,0,0,20.00
@@ -5433,7 +5868,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18697,Blasters,Harshu Patel,c †Charanjot S b Viral P,36,26,3,3,138.46
 18697,Blasters,Gunjan Patel,c Sunit S b Viral P,0,3,0,0,0.00
 18697,Blasters,Jimmy Patel*,c&b Ankit C,14,12,1,1,116.67
-18697,Blasters,Dinesh Kumavat,c Kartik P b Ankit C,3,7,0,0,42.86
+18697,Blasters,Dinesh Kumawat,c Kartik P b Ankit C,3,7,0,0,42.86
 18697,Blasters,Gurudutt Patel,not out,5,21,0,0,23.81
 18697,Blasters,Khiamuddin Mohammad,not out,14,13,0,0,107.69
 18694,Pway Lions,Dhaivat Patel,c Sandip N b Rajendra prasad C,86,33,7,8,260.61
@@ -5501,7 +5936,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18680,11spartans,Pratik Patel (savali),not out,2,5,0,0,40.00
 18680,11spartans,Darshan Patel,c Rishabh T b Satish S,13,10,2,0,130.00
 18680,11spartans,Anish Patel,not out,1,1,0,0,100.00
-18680,Storm Riders,Prabhjeet Singh,b Neel P,6,10,1,0,60.00
+18680,Storm Riders,Prabhjeet S Ricky,b Neel P,6,10,1,0,60.00
 18680,Storm Riders,Noor Randhawa,c Pratik Chiku P b krunal P,1,5,0,0,20.00
 18680,Storm Riders,KARAN SAINI,b krunal P,0,1,0,0,0.00
 18680,Storm Riders,Satish Sarode,c Neel P b krunal P,0,3,0,0,0.00
@@ -5556,7 +5991,7 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18667,Plainsboro Knights,Lokesh Prabakaran,not out,11,12,2,0,91.67
 18667,Plainsboro Knights,Gowtham Akula,run out (Krunal P),0,7,0,0,0.00
 18667,Piscataway Avengers,Krunal Patel* †,c Chinmaya S b Lokesh P,13,14,3,0,92.86
-18667,Piscataway Avengers,Rimal Patel,c Sai p b Raghuraman V,14,6,2,1,233.33
+18667,Piscataway Avengers,Rimal Patel,c Sai Praneeth K b Raghuraman V,14,6,2,1,233.33
 18667,Piscataway Avengers,Vrajesh Patel,c †Rohit R b Chinmaya S,26,19,3,1,136.84
 18667,Piscataway Avengers,Sherry Singh,c Chinmaya S b Sesha Sai V,4,9,0,0,44.44
 18667,Piscataway Avengers,Jignesh Patel,c Lokesh P b Chinmaya S,9,10,1,0,90.00
@@ -5607,23 +6042,41 @@ matchId,team,player,dismissal,R,B,4s,6s,SR
 18659,Gryffindors,Kishan Patel,not out,45,27,3,3,166.67
 18659,Gryffindors,Srini Narisetty,c Kushal P b Samit K,12,9,1,1,133.33
 18659,Gryffindors,Ankit Patel,not out,14,14,0,1,100.00
-20388,Samudhra Gladiators,Harshad Patil,c Rishab S b Bhavik S,22,13,0,3,169.23
-20388,Samudhra Gladiators,Vinit Bharadwaj,c Anoop H b Zoheb K,18,15,0,2,120.00
-20388,Samudhra Gladiators,Sandeep I Shetty*,c&b Zoheb K,26,23,0,3,113.04
-20388,Samudhra Gladiators,Naveen R Sripathi,c Zoheb K b Darshil M,5,8,0,0,62.50
-20388,Samudhra Gladiators,Anilreddy Aleti,c Darshil M b Bhavik S,21,19,0,1,110.53
-20388,Samudhra Gladiators,Sanju S †,run out (Darshil M/Abdulla S),9,11,0,1,81.82
-20388,Samudhra Gladiators,Avteet Chayal,not out,10,6,0,1,166.67
-20388,Samudhra Gladiators,Tejdeep Maddirala,c †Sanjeev S b Darshil M,0,1,0,0,0.00
-20388,Samudhra Gladiators,Suraj Pai Madhukar,run out (Darshil M),1,1,0,0,100.00
-20388,Rowdy Rebels,Abdulla Shaikh,c Harshad P b Naveen R S,16,18,1,0,88.89
-20388,Rowdy Rebels,Kishan Gangarama,run out (Naveen R S/Suraj Pai M),9,16,0,0,56.25
-20388,Rowdy Rebels,Zoheb Khalid*,c †Sanju S b Vinit B,0,1,0,0,0.00
-20388,Rowdy Rebels,Prerak Dalal,b Naveen R S,12,18,0,0,66.67
-20388,Rowdy Rebels,Rishab Shirur,c †Sandeep I S b Harshad P,9,10,0,1,90.00
-20388,Rowdy Rebels,Darshil Mistry,not out,21,20,0,2,105.00
-20388,Rowdy Rebels,Sanjeev Sharma,c †Sandeep I S b Harshad P,5,7,0,0,71.43
-20388,Rowdy Rebels,Kushal Kumar,c Vinit B b Harshad P,0,1,0,0,0.00
-20388,Rowdy Rebels,Shriraj Amin,c Naveen R S b Harshad P,0,1,0,0,0.00
-20388,Rowdy Rebels,Bhavik Surani,c Harshad P b Suraj Pai M,1,3,0,0,33.33
-20388,Rowdy Rebels,Anoop Hegde,not out,1,1,0,0,100.00
+20505,Pway Lions,Dhaivat Patel,c Raghuveer B b Satish kumar D,4,11,0,0,36.36
+20505,Pway Lions,Neel Patel*,c Govind S b Raghuveer B,33,16,2,3,206.25
+20505,Pway Lions,Ronak Rana †,c Tej R b Raghuveer B,8,5,1,0,160.00
+20505,Pway Lions,Bhavik Patel,c Sujan K b Raghuveer B,10,9,0,1,111.11
+20505,Pway Lions,Vraj Shah,c †Amit J b Naveen R,4,5,0,0,80.00
+20505,Pway Lions,Shri Patel,c †Amit J b Satish kumar D,19,25,1,1,76.00
+20505,Pway Lions,Harsh Desai,b Govind S,17,15,1,2,113.33
+20505,Pway Lions,Akshar Patel,not out,28,8,0,4,350.00
+20505,Pway Lions,Ankush Patel,c †Amit J b Satish kumar D,6,2,0,1,300.00
+20505,Pway Lions,Deep Patel,not out,7,2,0,1,350.00
+20505,Parsippany Phoenix XI,Vikasreddy Rangapur,c Bhavik P b Vraj S,11,24,0,0,45.83
+20505,Parsippany Phoenix XI,Sujan Kumar,c Vraj S b Drumil A,3,3,0,0,100.00
+20505,Parsippany Phoenix XI,Amit Jadli,c Akshar P b Drumil A,7,11,1,0,63.64
+20505,Parsippany Phoenix XI,Naveen Rayal,c Neel P b Dhaivat P,7,5,0,1,140.00
+20505,Parsippany Phoenix XI,Suman K,c Bhavik P b Drumil A,31,18,0,4,172.22
+20505,Parsippany Phoenix XI,Satish Kumar Durgam,b Vraj S,1,3,0,0,33.33
+20505,Parsippany Phoenix XI,Karthikeyan Balasubramanian,c Ankush P b Vraj S,0,1,0,0,0.00
+20505,Parsippany Phoenix XI,Tej Reddy,c Deep P b Vraj S,0,1,0,0,0.00
+20505,Parsippany Phoenix XI,Praveen Vinnakota*,c Ankush P b Akshar P,9,11,0,1,81.82
+20505,Parsippany Phoenix XI,Govind Somvanshi,c Drumil A b Vraj S,7,9,0,1,77.78
+20505,Parsippany Phoenix XI,Raghuveer Bethelli,not out,2,2,0,0,100.00
+20504,Jersey Titans,Jay Domadiya*,c †Sajjad Faisal S b Shazain Y,19,12,2,1,158.33
+20504,Jersey Titans,Gaurav Darji,b Naveed A,22,38,0,2,57.89
+20504,Jersey Titans,Sunny Patel,c †Sajjad Faisal S b Shazain Y,63,29,2,8,217.24
+20504,Jersey Titans,Monil Patel,c †Sajjad Faisal S b Naveed A,0,3,0,0,0.00
+20504,Jersey Titans,Ameya Modak,b Shazain Y,7,9,0,0,77.78
+20504,Jersey Titans,Ravin Patel,not out,5,7,1,0,71.43
+20504,Nj Tigers,Sikendar Arshad,c Ravin P b Mitul P,0,1,0,0,0.00
+20504,Nj Tigers,Tahir Mehmood,b Mitul P,0,6,0,0,0.00
+20504,Nj Tigers,Sajjad Faisal Syed †,c Monil P b Ravin P,23,19,2,2,121.05
+20504,Nj Tigers,Babar Jumani,c Pavan P b Jay D,34,21,1,4,161.90
+20504,Nj Tigers,Naveed Azam*,c Vishal M b Milan D,1,10,0,0,10.00
+20504,Nj Tigers,Shazain Yusuf,c&b Milan D,0,1,0,0,0.00
+20504,Nj Tigers,Salman Ali,b Mitul P,4,8,0,0,50.00
+20504,Nj Tigers,Abid Nawaz,c Monil P b Milan D,0,3,0,0,0.00
+20504,Nj Tigers,Noman Ali,not out,12,15,0,1,80.00
+20504,Nj Tigers,Waqas Choudhary,c Vivek P b Ravin P,1,4,0,0,25.00
+20504,Nj Tigers,Haider Naveed Akram,not out,13,8,3,0,162.50

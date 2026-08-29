@@ -138,8 +138,14 @@ for key, cfg in SERIES.items():
           gap_pct <= 15,
           f"{len(missing_from_totals)} of {len(bat_matches)} scorecard matches missing from true_totals ({gap_pct:.1f}%)")
 
-    bat_teams = set(bat["team"].str.strip())
-    points_teams = set(points["team"].str.strip())
+    # Same normalisation build_data.py applies: cricclubs emits a bare 0xA0 inside some team
+    # names, which decodes to U+FFFD during the scrape, so "Lincoln?XI" here must still match
+    # "Lincoln XI" in the points table (see normalize_text() in build_data.py).
+    def norm_team(s):
+        return re.sub(r"\s+", " ", str(s).replace("�", " ").replace(" ", " ")).strip()
+
+    bat_teams = set(bat["team"].map(norm_team))
+    points_teams = set(points["team"].map(norm_team))
     missing_teams = bat_teams - points_teams
     check("every team in scorecards also appears in the points table", not missing_teams,
           f"missing: {sorted(missing_teams)}")

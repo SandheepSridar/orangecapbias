@@ -52,11 +52,26 @@ MIN_OVERS_FOR_WEAKNESS = 8
 MIN_DEATH_OVERS = 3
 
 
+def normalize_text(s):
+    """Repairs a mojibake space and collapses whitespace.
+
+    cricclubs serves a bare 0xA0 (Latin-1 non-breaking space) inside some names — e.g.
+    "Lincoln\xa0XI" — which is invalid UTF-8, so the browser's text decode during the scrape
+    turns it into U+FFFD before it ever reaches the CSV. Left alone, the scorecards say
+    "Lincoln�XI" while the points table says "Lincoln XI" and the two never join.
+    Caught 2026-08-29 by dq_checks' team-vs-points-table check; source byte verified as 0xA0.
+    Handles a real NBSP too, in case the page is ever served correctly encoded."""
+    if pd.isna(s):
+        return s
+    s = str(s).replace("�", " ").replace(" ", " ")
+    return re.sub(r"\s+", " ", s).strip()
+
+
 def clean_name(n):
     if pd.isna(n):
         return ""
     n = re.sub(r"[*†]", "", str(n)).strip()
-    return re.sub(r"\s+", " ", n)
+    return normalize_text(n)
 
 
 def abbrev(full):
@@ -166,8 +181,8 @@ def build_abbrev_map(bowl):
 def load_series(key, cfg):
     bat = pd.read_csv(DATA_DIR / cfg["bat_csv"])
     bowl = pd.read_csv(DATA_DIR / cfg["bowl_csv"])
-    bat["team"] = bat["team"].str.strip()
-    bowl["team"] = bowl["team"].str.strip()
+    bat["team"] = bat["team"].apply(normalize_text)
+    bowl["team"] = bowl["team"].apply(normalize_text)
     bat["playerClean"] = bat["player"].apply(clean_name)
     bowl["bowlerClean"] = bowl["bowler"].apply(clean_name)
     bowl = aggregate_bowling_spells(bowl)
@@ -1607,7 +1622,7 @@ def load_points_table(cfg):
         # a handful of rows have a trailing "*" (site footnote for a points adjustment,
         # e.g. forfeit penalty) — strip it, the numeric value itself is still correct
         pts_match = re.match(r"-?\d+", str(r["pts"]))
-        out[r["team"].strip()] = {
+        out[normalize_text(r["team"])] = {
             "group": r["group"], "rank": int(r["rank"]), "rankOf": int(group_sizes[r["group"]]),
             "mat": int(r["mat"]), "won": int(r["won"]), "lost": int(r["lost"]), "tie": int(r["tie"]),
             "pts": int(pts_match.group()) if pts_match else None,
@@ -1645,7 +1660,7 @@ def full_standings_table(cfg):
             for_runs, for_balls = parse_runs_overs(r["for"])
             against_runs, against_balls = parse_runs_overs(r["against"])
             rows.append({
-                "rank": int(r["rank"]), "team": r["team"].strip(),
+                "rank": int(r["rank"]), "team": normalize_text(r["team"]),
                 "mat": int(r["mat"]), "won": int(r["won"]), "lost": int(r["lost"]),
                 "tie": int(r["tie"]), "nr": int(r["nr"]),
                 "pts": int(pts_match.group()) if pts_match else None,
