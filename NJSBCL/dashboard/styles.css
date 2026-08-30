@@ -178,6 +178,14 @@ select#opponent-select {
 .star-points { margin-left: auto; text-align: right; }
 .star-points .num { font-family: "Sora", sans-serif; font-weight: 800; font-size: 2rem; color: var(--gold); line-height: 1; }
 .star-points .label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+/* Non-win variant: same information, neutral styling. The gold treatment reads as a
+   celebration, which is wrong directly beneath a "Loss" — see recap.js. */
+.star-card.muted {
+  background: var(--panel);
+  border-color: var(--line);
+}
+.star-card.muted .star-badge { color: var(--muted); }
+.star-card.muted .star-points .num { color: var(--text); }
 .recap-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.2rem; }
 .recap-col h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.8rem; }
 .recap-col.right h3 { color: var(--win); }
@@ -193,6 +201,8 @@ select#opponent-select {
 .points-table th, .points-table td { padding: 0.45rem 0.6rem; text-align: left; border-bottom: 1px solid var(--line); }
 .points-table th { font-size: 0.68rem; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .points-table td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+/* The two component z-scores sit behind the Total, which stays the headline number. */
+.points-table td.num.sub { font-weight: 500; color: var(--muted); }
 
 /* ── Tournament star ticker (season-long, top 2 per series, horizontal
    auto-scrolling strip — like a stock ticker / news-headline crawl) ────── */
@@ -720,13 +730,16 @@ footer { text-align: center; padding: 3rem 1.5rem 1.5rem; color: var(--grey); fo
 }
 
 /* ── Mobile tables ─────────────────────────────────────────────────────
-   .phase-table-wrap already scrolls horizontally (4 phase columns don't
-   fit at phone widths) — add a right-edge fade so the hidden columns read
-   as "swipe for more" instead of looking like the data was cut off. The
-   recap points table has only 4 narrow columns; tightening its padding
-   lets it fit natively instead, which reads better than a scroll hint. ── */
+   These wrappers scroll horizontally at phone widths, with a right-edge
+   fade so the hidden columns read as "swipe for more" rather than looking
+   like the data was cut off.
+
+   The recap points table used to fit natively on 4 narrow columns, needing
+   only tighter padding. It now carries 6 (the batting and bowling z-scores
+   were split out from the total), which no longer fits at 390px — so it
+   joins the scrolling set rather than overflowing the page. ── */
 @media (max-width: 640px) {
-  .phase-table-wrap, .standings-table-wrap {
+  .phase-table-wrap, .standings-table-wrap, .points-table-wrap {
     overflow-x: auto;
     -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.6rem), transparent);
     mask-image: linear-gradient(to right, #000 calc(100% - 1.6rem), transparent);

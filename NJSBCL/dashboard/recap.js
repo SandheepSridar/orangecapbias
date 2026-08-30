@@ -74,9 +74,14 @@ function renderMatchRecap() {
 
   if (recap.starOfMatch) {
     const star = recap.starOfMatch;
-    const card = el("div", "star-card");
+    // On anything other than a win, keep the player and score but drop the celebratory
+    // framing: a gold "Star of the match" banner sitting directly under a red "Loss" reads
+    // as celebrating the defeat. The performance is still worth surfacing — every loss this
+    // season still had a clearly positive standout — so this relabels rather than hides.
+    const won = recap.result === "Win";
+    const card = el("div", "star-card" + (won ? "" : " muted"));
     const body = el("div");
-    body.innerHTML = `<div class="star-badge">Star of the match</div>
+    body.innerHTML = `<div class="star-badge">${won ? "Star of the match" : "Top performer"}</div>
       <div class="star-name">${star.player}</div>
       <div class="star-lines">${[star.battingLine, star.bowlingLine].filter(Boolean).join(" &middot; ")}</div>`;
     const pts = el("div", "star-points");
@@ -125,12 +130,19 @@ function renderMatchRecap() {
     wrap.appendChild(el("p", "doc-note", "Batting and bowling points are each z-scored against "
       + "every batting/bowling performance in the league this season, then summed — so a good "
       + "bowling spell doesn't automatically outrank a good knock just because wickets carry "
-      + "more raw points than runs."));
+      + "more raw points than runs. Each impact column is how many standard deviations above "
+      + "(or below) the league average that discipline was; <b>Total</b> is the two added "
+      + "together. A dash means they didn't bat or bowl at all, which is different from 0.00 "
+      + "(exactly league average)."));
     const table = document.createElement("table");
     table.className = "points-table";
     const thead = el("thead");
     const headRow = el("tr");
-    ["Player", "Batting", "Bowling", "Impact"].forEach((h) => headRow.appendChild(el("th", null, h)));
+    // Show the two z-scores that make up the total, not just the total: the whole point of
+    // z-scoring each discipline separately is that a bowling spell and a knock become
+    // comparable, and you can only see that happening if both halves are on screen.
+    ["Player", "Batting", "Bat impact", "Bowling", "Bowl impact", "Total"]
+      .forEach((h) => headRow.appendChild(el("th", null, h)));
     thead.appendChild(headRow);
     table.appendChild(thead);
     const tbody = el("tbody");
@@ -138,7 +150,11 @@ function renderMatchRecap() {
       const row = el("tr");
       row.appendChild(el("td", null, r.player));
       row.appendChild(el("td", null, r.battingLine || "—"));
+      // A null z-score means they didn't bat/bowl at all — distinct from a genuine 0.00,
+      // which would mean they performed exactly at the league average.
+      row.appendChild(el("td", "num sub", r.battingZ == null ? "—" : fmtScore(r.battingZ)));
       row.appendChild(el("td", null, r.bowlingLine || "—"));
+      row.appendChild(el("td", "num sub", r.bowlingZ == null ? "—" : fmtScore(r.bowlingZ)));
       row.appendChild(el("td", "num", fmtScore(r.impactScore)));
       tbody.appendChild(row);
     });
