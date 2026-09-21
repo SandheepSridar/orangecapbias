@@ -24,13 +24,13 @@ SERIES = {
         "label": "2026 Division 1", "gladiators": "Samudhra Gladiators",
         "bat_csv": "division1_scorecards_batting.csv", "bowl_csv": "division1_scorecards_bowling.csv",
         "totals_csv": "division1_true_totals.csv", "points_csv": "division1_points_table.csv",
-        "overs_csv": "division1_gladiators_overs.csv",
+        "overs_csv": "division1_gladiators_overs.csv", "schedule_xlsx": "division1_schedule.xlsx",
     },
     "weekenders": {
         "label": "2026 Weekenders Cup", "gladiators": "VRK Gladiators",
         "bat_csv": "weekenderscup_scorecards_batting.csv", "bowl_csv": "weekenderscup_scorecards_bowling.csv",
         "totals_csv": "weekenderscup_true_totals.csv", "points_csv": "weekenderscup_points_table.csv",
-        "overs_csv": "weekenderscup_gladiators_overs.csv",
+        "overs_csv": "weekenderscup_gladiators_overs.csv", "schedule_xlsx": "weekenderscup_schedule.xlsx",
     },
 }
 
@@ -202,7 +202,24 @@ else:
             warn(len(gc["aiInsights"]) > 0, f"{key}: aiInsights produced 0 insights",
                  "not necessarily wrong (insights are never padded), but worth a manual glance")
             warn(s["matchRecap"] is not None, f"{key}: matchRecap is None", "no completed matches yet, or a bug")
-            check(f"{key}: upcoming fixtures list is non-empty", len(s["upcoming"]) > 0)
+            # An empty upcoming list is correct once the season's fixtures run out, so this
+            # can't just demand a non-empty list — it did, and went permanently red the day
+            # the last league match was played. Compare against the schedule instead, and
+            # only fail the direction that is unambiguously wrong: fixtures still being
+            # listed when the calendar has none left (the 2026-08-16 stale-fixture bug).
+            # The other direction is a warning because load_upcoming() also drops matches
+            # played earlier today, which legitimately empties the list while a fixture is
+            # still dated today. Goes live again on its own once knockout fixtures publish.
+            ours = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
+            ours = ours[(ours["Team One"] == cfg["gladiators"]) | (ours["Team Two"] == cfg["gladiators"])]
+            future = int((pd.to_datetime(ours["Date"], format="%m/%d/%Y", errors="coerce")
+                          >= pd.Timestamp.now().normalize()).sum())
+            check(f"{key}: no upcoming fixtures listed once the schedule runs out",
+                  future > 0 or len(s["upcoming"]) == 0,
+                  f"{len(s['upcoming'])} listed but 0 future-dated fixtures remain")
+            warn(future == 0 or len(s["upcoming"]) > 0,
+                 f"{key}: {future} future-dated fixture(s) on the schedule but upcoming is empty",
+                 "correct if they were all played earlier today; a load_upcoming() bug otherwise")
 
             ko = s.get("knockouts")
             check(f"{key}: knockouts bracket present", ko is not None)
