@@ -228,6 +228,14 @@ else:
                           for t in ko["preQuarters"]))
                 warn(ko["usQualified"], f"{key}: {cfg['gladiators']} are not in the knockout field",
                      "correct only if they genuinely missed the top 8 of their group")
+                # The dropdown should offer exactly who we can still meet — no league-stage
+                # leftovers, and no qualifier silently missing because it was never scraped.
+                field = {q["team"] for g in ko["groups"] for q in g["qualified"]} - {cfg["gladiators"]}
+                extra = sorted(set(s["opponents"]) - field)
+                missing = sorted(field - set(s["opponents"]))
+                check(f"{key}: opponent list is exactly the knockout field",
+                      not extra and not missing,
+                      f"extra: {extra or 'none'} · missing (unscouted?): {missing or 'none'}")
 
             st = s.get("scenarioTree")
             warn(st is not None, f"{key}: scenarioTree is None",

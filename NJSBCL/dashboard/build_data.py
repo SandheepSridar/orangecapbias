@@ -36,7 +36,6 @@ SERIES = {
         # Knockout field: Group A's top 8 play off among themselves (Samudhra finished 4th,
         # so the pre-quarter is vs 5th). None = the whole group, since a run through the
         # bracket can meet any of them.
-        "knockout_groups": {"A": None},
         # Groups feeding the bracket we play in: 8 from each, 16 teams, four rounds
         # (pre-quarter, quarter, semi, final) exactly as rule 6.2 names them.
         "bracket_groups": ["A", "B"],
@@ -52,7 +51,6 @@ SERIES = {
         "overs_csv": "weekenderscup_gladiators_overs.csv",
         # Knockout field: top 8 of Group A (ours) and top 8 of Group B. Only B's top 8 are
         # scraped, so a deeper B rank has no scorecard data to analyse anyway.
-        "knockout_groups": {"A": None, "B": 8},
         # Weekenders runs four groups; A and B form our half of the draw (per the
         # captain, 2026-09-20). C and D presumably mirror it, but that is not
         # published anywhere we scrape, so this page stays out of their half.
@@ -2013,30 +2011,6 @@ def scenario_tree(cfg, gladiators, standings_table, results):
     }
 
 
-def knockout_opponents(cfg, standings_table, teams_with_data):
-    """Teams we can meet in the knockouts but never play in the league stage.
-
-    Both series run a cross-group league — Samudhra (Group A) only ever plays Group B
-    teams, VRK (Group A) only plays Group D — so a knockout rival drawn from our own
-    group, or from the other qualifying group, appears nowhere in our schedule and would
-    otherwise be missing from the opponent list entirely. cfg["knockout_groups"] names
-    the groups the knockout field comes from: {group: top_n}, where top_n of None means
-    the whole group.
-
-    Filtered against teams_with_data because a team with no scraped scorecards would
-    render as an empty matchup page.
-    """
-    out = set()
-    for group, top_n in cfg.get("knockout_groups", {}).items():
-        rows = next((g["rows"] for g in standings_table if g["group"] == group), [])
-        for r in rows:
-            if top_n is not None and r["rank"] > top_n:
-                continue
-            if r["team"] in teams_with_data:
-                out.add(r["team"])
-    return out
-
-
 def build_knockouts(cfg, standings_table, elo, gladiators):
     """The knockout field and first-round draw, from the final group tables.
 
@@ -2129,19 +2103,6 @@ def build():
         print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
               f"{gladiators} elo: {round(gladiators_elo)}")
 
-        # opponents = everyone Samudhra/VRK Gladiators has played or is scheduled to play,
-        # plus the knockout field, who the league schedule never pairs us with
-        sched = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
-        sched_g = sched[(sched["Team One"] == gladiators) | (sched["Team Two"] == gladiators)]
-        scheduled = {
-            (r["Team Two"] if r["Team One"] == gladiators else r["Team One"])
-            for _, r in sched_g.iterrows()
-        }
-        knockout = knockout_opponents(cfg, standings_table, set(bat["team"].unique()))
-        opponents = sorted((scheduled | knockout) - {gladiators})
-        print(f"  opponents: {len(opponents)} ({len(scheduled)} scheduled, "
-              f"{len(knockout - scheduled - {gladiators})} knockout-only)")
-
         knockouts = build_knockouts(cfg, standings_table, elo, gladiators)
         if knockouts is None:
             print("  knockouts: no bracket groups configured")
@@ -2151,6 +2112,20 @@ def build():
                   f"{len(knockouts['preQuarters'])} pre-quarters, "
                   + (f"we are {u['group']}{u['seed']} vs {u['opponent']} ({u['opponentSeed']})"
                      if u else f"{gladiators} did NOT qualify"))
+
+        # opponents = only the teams we can still actually meet, i.e. the knockout field.
+        # The league stage is over, so everyone we played on the way here is history, and
+        # listing them just buries the 15 that matter. Our own group belongs in the list:
+        # the pre-quarters and quarters are played inside it, and the semi crosses over.
+        knockout_field = ({q["team"] for g in knockouts["groups"] for q in g["qualified"]}
+                          if knockouts else set())
+        teams_with_data = set(bat["team"].unique())
+        unscouted = sorted(knockout_field - teams_with_data - {gladiators})
+        opponents = sorted((knockout_field & teams_with_data) - {gladiators})
+        print(f"  opponents: {len(opponents)} knockout qualifiers")
+        if unscouted:
+            print(f"  WARNING: {len(unscouted)} qualifier(s) have no scorecard data and are "
+                  f"omitted from the dropdown: {', '.join(unscouted)}")
 
         scenarios = scenario_tree(cfg, gladiators, standings_table, results)
         if scenarios is None:

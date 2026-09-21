@@ -49,6 +49,21 @@ const state = {
 };
 
 function currentSeriesData() { return NJSBCL_DATA.series[state.series]; }
+
+// Who to show first: the next scheduled fixture while the league is running, then the
+// confirmed knockout tie once it isn't. Falling back to opponents[0] would just pick
+// whoever is alphabetically first, which is nobody in particular.
+//
+// Both candidates are checked against the list rather than trusted: the dropdown holds
+// only the knockout field now, so a still-scheduled league opponent can legitimately be
+// absent from it, and returning that name would leave the select with nothing chosen.
+function defaultOpponent(s) {
+  const next = s.upcoming && s.upcoming.length ? s.upcoming[0].opponent : null;
+  if (next && s.opponents.includes(next)) return next;
+  const tie = s.knockouts && s.knockouts.us ? s.knockouts.us.opponent : null;
+  if (tie && s.opponents.includes(tie)) return tie;
+  return s.opponents[0];
+}
 function currentUs() { const s = currentSeriesData(); return s.teams[s.gladiators]; }
 function currentThem() { const s = currentSeriesData(); return s.teams[state.opponent]; }
 
@@ -65,8 +80,7 @@ function buildSeriesPills() {
       state.series = key;
       state.showAllFixtures = false;
       const s = currentSeriesData();
-      const nextOpponent = s.upcoming && s.upcoming.length ? s.upcoming[0].opponent : s.opponents[0];
-      state.opponent = s.opponents.includes(state.opponent) ? state.opponent : nextOpponent;
+      state.opponent = s.opponents.includes(state.opponent) ? state.opponent : defaultOpponent(s);
       box.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
       b.classList.add("active");
       populateOpponentSelect();
@@ -82,8 +96,7 @@ function populateOpponentSelect() {
   const prev = state.opponent;
   sel.innerHTML = "";
   s.opponents.forEach((opp) => sel.appendChild(el("option", null, opp)));
-  const nextOpponent = s.upcoming && s.upcoming.length ? s.upcoming[0].opponent : s.opponents[0];
-  state.opponent = s.opponents.includes(prev) ? prev : nextOpponent;
+  state.opponent = s.opponents.includes(prev) ? prev : defaultOpponent(s);
   sel.value = state.opponent;
 }
 
