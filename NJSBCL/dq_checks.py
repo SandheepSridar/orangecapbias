@@ -216,13 +216,11 @@ else:
                 for g in ko["groups"]:
                     check(f"{key}: group {g['group']} seeds are 1..{per_group}",
                           sorted(q["seed"] for q in g["qualified"]) == list(range(1, per_group + 1)))
+                paired = ([t["high"]["team"] for t in ko["preQuarters"]]
+                          + [t["low"]["team"] for t in ko["preQuarters"]])
                 check(f"{key}: pre-quarters pair every qualifier exactly once",
-                      sorted(t["high"]["team"] for t in ko["preQuarters"])
-                      + sorted(t["low"]["team"] for t in ko["preQuarters"])
-                      != [] and
-                      len({t["high"]["team"] for t in ko["preQuarters"]}
-                          | {t["low"]["team"] for t in ko["preQuarters"]})
-                      == per_group * len(ko["groups"]))
+                      len(paired) == len(set(paired)) == per_group * len(ko["groups"]),
+                      f"{len(paired)} slots, {len(set(paired))} distinct teams")
                 check(f"{key}: each pre-quarter's seeds sum to {per_group + 1} (1v8, 2v7, …)",
                       all(t["high"]["seed"] + t["low"]["seed"] == per_group + 1
                           for t in ko["preQuarters"]))

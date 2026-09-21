@@ -116,7 +116,7 @@ function renderOurTie() {
 }
 
 /* ── Draw ──────────────────────────────────────────────────────────── */
-function tieRow(t, gladiators) {
+function tieRow(t) {
   const row = el("div", "ko-tie" + (t.isOurs ? " ours" : ""));
   row.appendChild(el("span", "ko-seed" + (t.high.isUs ? " us" : ""), `${t.group}${t.high.seed}`));
   row.appendChild(el("span", "ko-tie-team" + (t.high.isUs ? " us" : ""), t.high.team));
@@ -149,13 +149,13 @@ function renderDraw() {
     const wrap = el("div", "standings-group-wrap");
     wrap.appendChild(el("h3", null, `Group ${g.group}`));
     ko.preQuarters.filter((t) => t.group === g.group)
-      .forEach((t) => wrap.appendChild(tieRow(t, s.gladiators)));
+      .forEach((t) => wrap.appendChild(tieRow(t)));
     box.appendChild(wrap);
   });
 }
 
 /* ── Qualified ─────────────────────────────────────────────────────── */
-function qualifiedTable(gladiators, g) {
+function qualifiedTable(g) {
   const wrap = el("div", "standings-table-wrap");
   const table = document.createElement("table");
   table.className = "standings-table";
@@ -205,7 +205,7 @@ function renderQualified() {
   ko.groups.forEach((g) => {
     const wrap = el("div", "standings-group-wrap");
     wrap.appendChild(el("h3", null, `Group ${g.group}`));
-    wrap.appendChild(qualifiedTable(s.gladiators, g));
+    wrap.appendChild(qualifiedTable(g));
     if (g.cutLine && g.cutLine.ptsBehind != null) {
       wrap.appendChild(el("div", "doc-note",
         `${g.cutLine.team} finished ${g.cutLine.ptsBehind} point${g.cutLine.ptsBehind === 1 ? "" : "s"} outside the cut.`));

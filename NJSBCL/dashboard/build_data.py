@@ -2024,8 +2024,8 @@ def build_knockouts(cfg, standings_table, elo, gladiators):
     and cricclubs had not published knockout fixtures as of 2026-09-20. The pre-quarters
     here are standard within-group seeding (1v8, 2v7, 3v6, 4v5), which is what the captain
     confirmed for our own tie (Samudhra 4th drew Storm Riders 5th). Everything downstream
-    of the pre-quarters is left alone rather than guessed — `pairingSource` says which of
-    the two a row is, so the page can label a projected draw as projected.
+    of the pre-quarters is left alone rather than guessed, and the page carries one callout
+    saying the draw is unpublished rather than marking each row.
     """
     groups_out = []
     pre_quarters = []
@@ -2058,7 +2058,6 @@ def build_knockouts(cfg, standings_table, elo, gladiators):
                 "group": group_name, "high": high, "low": low, "isOurs": ours,
                 "highWinProb": (win_probability(high["elo"], low["elo"])
                                 if high["elo"] and low["elo"] else None),
-                "pairingSource": "confirmed" if ours else "projected",
             }
             pre_quarters.append(tie)
             if ours:
