@@ -1,4 +1,319 @@
 matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
+20751,Desi Warriors,Varun Gurram,2,0,8,9,0,4.50,2,0
+20751,Desi Warriors,Nauman Basit,4,0,13,16,0,4.00,0,0
+20751,Desi Warriors,Sai Kancharla,3,0,10,25,1,8.33,1,0
+20751,Desi Warriors,Sarbjitsingh Sahota,4,1,17,15,3,3.75,0,0
+20751,Desi Warriors,Rakesh Kar,1,0,3,6,1,6.00,0,0
+20751,Desi Warriors,Rigved Nagarkar,1,0,2,15,0,15.00,1,0
+20751,Desi Warriors,Harshil Patel,1,0,3,8,0,8.00,2,0
+20751,Juggernaut,Karan Patel,3,0,5,24,0,8.00,1,0
+20751,Juggernaut,Hemant Patel*,1,0,1,9,0,9.00,0,0
+20751,Juggernaut,Kailash Naithani,2,0,4,22,0,11.00,2,0
+20751,Juggernaut,Jenish Patel,1,0,2,20,0,20.00,0,0
+20751,Juggernaut,Sandip Amin,1.3,0,3,19,2,12.67,0,0
+20751,Juggernaut,Jatan Vaidya,1,0,3,4,0,4.00,0,0
+20714,Blasters,Manthan Patel*,4,0,11,31,1,7.75,0,1
+20714,Blasters,Gurudutt Patel,2,0,7,15,1,7.50,1,1
+20714,Blasters,Jay Patel (JP),4,0,15,16,3,4.00,3,0
+20714,Blasters,Priyankk Patel,4,0,13,29,3,7.25,2,0
+20714,Blasters,Gunjan Patel,1,0,3,6,0,6.00,0,0
+20714,Blasters,Chirag Patel,1,0,1,14,0,14.00,0,2
+20714,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,15,26,1,6.50,0,2
+20714,Parsippany Phoenix XI,Naveen Rayal,3,0,11,19,0,6.33,6,0
+20714,Parsippany Phoenix XI,Govind Somvanshi,3.3,0,10,27,1,7.71,1,0
+20714,Parsippany Phoenix XI,Raghuveer Bethelli,3,0,4,32,1,10.67,0,2
+20714,Parsippany Phoenix XI,Praveen Vinnakota*,1,0,3,12,1,12.00,3,0
+20713,Aryans,Ajay Shankar,3.5,0,11,36,2,9.39,3,1
+20713,Aryans,Hema Siddartha Reddy Yalluri,1,0,2,19,0,19.00,0,2
+20713,Aryans,Sudarshan Hegde,4,0,12,45,2,11.25,2,0
+20713,Aryans,Aviv Raval,4,0,10,48,4,12.00,5,0
+20713,Aryans,Pranav Barwe,2,0,6,24,1,12.00,0,0
+20713,Aryans,Bhavaz Akula,1,0,0,25,0,25.00,4,0
+20713,Pway Lions,Bhavik Patel,4,0,18,18,1,4.50,1,1
+20713,Pway Lions,Udit Patel - Pway Lions,4,1,17,10,1,2.50,2,0
+20713,Pway Lions,Drumil Amin,3,0,12,20,0,6.67,1,0
+20713,Pway Lions,Dhaivat Patel,1,0,2,20,0,20.00,1,0
+20713,Pway Lions,Ronak Rana †,1,0,3,4,0,4.00,1,0
+20713,Pway Lions,Ankush Patel,0.1,0,1,2,0,12.00,2,0
+20713,Pway Lions,Mohit Patel,0.5,0,3,4,2,4.80,2,0
+20713,Pway Lions,Prit Patel(PD),1,0,3,3,1,3.00,0,0
+20713,Pway Lions,Akshar Patel,1,0,5,1,3,1.00,0,0
+20711,Jersey Titans,Milan Dave,4,0,11,20,0,5.00,2,0
+20711,Jersey Titans,Pavan Patel,2,0,10,12,2,6.00,5,0
+20711,Jersey Titans,Mitul Patel,4,0,14,37,2,9.25,3,1
+20711,Jersey Titans,Jay Domadiya*,4,0,14,23,0,5.75,3,0
+20711,Jersey Titans,Shalin Vasavada,1,0,1,14,0,14.00,1,0
+20711,Jersey Titans,Komal(KC) Patel,1,0,1,8,0,8.00,2,0
+20711,Veerans,Sundip Helchal,3.3,0,18,13,3,3.71,2,0
+20711,Veerans,Aditya Rathor,2,0,8,15,1,7.50,1,1
+20711,Veerans,Naveen Elangovan,4,0,15,27,2,6.75,1,0
+20711,Veerans,Kamalraj Rajamanickam,3,0,10,18,2,6.00,2,0
+20706,Newport CC,Arun Prasad G*,4,0,15,11,2,2.75,1,0
+20706,Newport CC,Farukh Manzoor,3,0,12,10,0,3.33,1,0
+20706,Newport CC,Gokul Das Maharajan,4,1,21,5,2,1.25,2,0
+20706,Newport CC,Emmanuel Samuel Nair,4,0,18,6,1,1.50,0,0
+20706,Plainsboro Eagles,Shiva Ungarala,1,0,2,12,0,12.00,0,0
+20706,Plainsboro Eagles,Tushar Choksi*,1,0,2,12,0,12.00,0,0
+20706,Plainsboro Eagles,Ravishankar Bangalore,0.4,0,1,9,0,13.50,0,1
+20693,Nj Stars CC,Zain Pervaiz,4,0,15,29,1,7.25,1,0
+20693,Nj Stars CC,Abdul Wali Siddiqee,4,0,13,27,1,6.75,0,0
+20693,Nj Stars CC,Muhammad Haseeb,4,0,11,24,1,6.00,1,0
+20693,Nj Stars CC,Fahad Kabir,3,0,10,35,0,11.67,2,2
+20693,Nj Stars CC,Sajeel Ahmed,1,0,3,13,0,13.00,0,0
+20693,PUNJAB XI,Guarav Singh,4,0,16,29,2,7.25,1,0
+20693,PUNJAB XI,Sunny Singh,4,0,13,32,3,8.00,0,0
+20693,PUNJAB XI,Nasir Khan,3,0,4,35,0,11.67,0,0
+20693,PUNJAB XI,Jasmeet Singh,3,0,11,23,2,7.67,1,1
+20693,PUNJAB XI,Lovely Singh,1,0,4,13,1,13.00,1,1
+20688,Jetha 11,Haren Patel,4,1,17,23,1,5.75,2,0
+20688,Jetha 11,Eijaz Mulla,4,1,18,9,3,2.25,2,0
+20688,Jetha 11,Dhruvil Dagli,4,0,12,39,1,9.75,8,0
+20688,Jetha 11,Divyesh Patel,1,0,3,10,1,10.00,0,1
+20688,Jetha 11,Gary Patel*,3,0,7,22,1,7.33,0,1
+20688,Storm Riders,Rishabh Tewari,2,0,7,13,1,6.50,2,0
+20688,Storm Riders,Shobhit Gupta,2,1,11,1,2,0.50,0,0
+20688,Storm Riders,Noor Randhawa,3,0,8,11,1,3.67,0,0
+20688,Storm Riders,Mitul Patel,3,1,14,4,2,1.33,0,0
+20688,Storm Riders,Apurv Jain* †,1,0,3,8,1,8.00,2,0
+20688,Storm Riders,Shreyas Najan,0.4,0,2,7,1,10.50,0,0
+20684,WCC,SARWAR ALI SHAH,4,0,13,14,3,3.50,2,0
+20684,WCC,Santosh Thanekar,2,0,8,10,1,5.00,0,0
+20684,WCC,Nisar Ahmad,3.3,1,17,6,1,1.71,1,0
+20684,WCC,Nahid Sarkar,3,0,14,12,1,4.00,0,1
+20684,WCC,Harikishore Malireddy,3,0,14,5,3,1.67,0,1
+20684,Gujarat United XI,Parth Patel*,3,0,11,18,0,6.00,2,0
+20684,Gujarat United XI,Karan Patel,2.5,0,9,19,3,6.71,0,0
+20684,Gujarat United XI,Avi Shah,1,0,2,9,0,9.00,0,0
+20684,Gujarat United XI,Daksh Patel,1,0,4,2,1,2.00,0,0
+20679,Nj Tigers,Naveed Azam*,4,0,15,11,1,2.75,2,0
+20679,Nj Tigers,Mubassir Mansuri,4,0,15,14,1,3.50,2,0
+20679,Nj Tigers,Haider Naveed Akram,4,0,12,26,1,6.50,3,0
+20679,Nj Tigers,Saad Naeem,4,0,15,11,2,2.75,1,0
+20679,Mercer Challengers,Deepesh Naidu,4,1,23,3,6,0.75,2,0
+20679,Mercer Challengers,Samit Kumbhani,2,0,8,4,0,2.00,0,0
+20679,Mercer Challengers,Saqi Syed,1.2,0,7,1,2,0.75,0,0
+20679,Mercer Challengers,Ankur Parekh,1,0,1,6,0,6.00,1,0
+20679,Mercer Challengers,Sheshank Reddy,1,0,4,12,0,12.00,0,0
+20678,Plainsboro Knights,Raghuraman Varadharajan,4,0,13,31,4,7.75,1,0
+20678,Plainsboro Knights,Gowtham Akula,4,0,12,26,1,6.50,3,0
+20678,Plainsboro Knights,Lokesh Prabakaran,4,0,12,38,1,9.50,2,0
+20678,Plainsboro Knights,Shan A S,4,0,8,34,1,8.50,0,0
+20678,Jersey Boys,Vikul Rajpara,2,0,9,9,0,4.50,1,0
+20678,Jersey Boys,Jitendra Singh,2,0,8,8,1,4.00,0,0
+20678,Jersey Boys,Sushil Kumar,2,0,7,13,0,6.50,0,1
+20678,Jersey Boys,Vineet Luthra,4,0,12,29,0,7.25,1,0
+20678,Jersey Boys,Vikas Chaudhary,2,0,8,10,2,5.00,1,0
+20678,Jersey Boys,Fenil Shah,2,0,6,12,1,6.00,0,1
+20678,Jersey Boys,Parth Shah,2,0,6,14,2,7.00,0,0
+20608,Sreeshti,Shuvradeep Mukherjee,3,0,8,17,1,5.67,3,0
+20608,Sreeshti,Mahesh Nagappa,3,0,7,19,2,6.33,0,0
+20608,Sreeshti,Sumesh Mathew,4,0,16,14,1,3.50,2,0
+20608,Sreeshti,Kamal Choudhury,4,0,16,28,1,7.00,1,0
+20608,Sreeshti,Sanjay Dak,2,0,6,17,0,8.50,1,0
+20608,Juggernaut,Raj Vaghela,1,0,4,7,1,7.00,2,0
+20608,Juggernaut,Hemant Patel*,4,0,13,16,5,4.00,1,0
+20608,Juggernaut,Karan Patel,2,0,7,16,0,8.00,0,0
+20608,Juggernaut,Jatan Vaidya,2,0,6,24,2,12.00,2,0
+20608,Juggernaut,Shrenik Patel,3,0,14,4,1,1.33,0,0
+20599,Maha CC,Sudhanshoo Vashisht,4,0,9,24,0,6.00,0,1
+20599,Maha CC,Kashish Shah †,2,0,6,7,0,3.50,1,0
+20599,Maha CC,Dhrumil Shah,3,0,8,15,1,5.00,0,0
+20599,Maha CC,Ishan Shah,3,1,15,13,2,4.33,2,0
+20599,Maha CC,Danish Shaikh,4,0,12,18,3,4.50,0,0
+20599,Gcc,Parth Patel,2,0,6,22,0,11.00,3,0
+20599,Gcc,Rishi Patel GCC,1.3,0,1,21,0,14.00,0,2
+20599,Gcc,Sahil Patel,3,0,8,21,1,7.00,0,0
+20599,Gcc,Samir Patel,2,0,9,6,0,3.00,0,0
+20599,Gcc,Dhaval Patel*,1,0,2,8,0,8.00,1,0
+20595,RHG,Baseer Ahmed Mohammed,2,0,7,5,0,2.50,0,0
+20595,RHG,Nuvan T,3,0,11,9,3,3.00,2,0
+20595,RHG,Hiren Joshi,4,0,15,31,1,7.75,2,0
+20595,RHG,Parth Thakkar,4,0,17,18,1,4.50,2,1
+20595,RHG,Zafran Hussain,3,0,11,15,3,5.00,3,2
+20595,Rowdy Rebels,Bhavik Surani,3,0,9,27,0,9.00,0,1
+20595,Rowdy Rebels,Soham Kapadia,3,0,8,20,3,6.67,3,0
+20595,Rowdy Rebels,Darshil Mistry,3.4,0,13,20,4,5.45,1,0
+20595,Rowdy Rebels,Zoheb Khalid*,3,0,10,12,1,4.00,1,0
+20589,Gryffindors,Subodh Singh*,4,0,10,53,0,13.25,2,0
+20589,Gryffindors,Harish Bangera,4,0,15,27,3,6.75,3,0
+20589,Gryffindors,Siddhartha Nayak,3,0,10,29,2,9.67,3,0
+20589,Gryffindors,Prashant Mehta,1,0,3,15,0,15.00,0,1
+20589,Gryffindors,Ankit Patel,4,0,13,20,3,5.00,1,0
+20589,Warriors,Rumit Patel,3,0,11,17,1,5.67,2,0
+20589,Warriors,Kirtan Patel,4,2,20,8,4,2.00,1,0
+20589,Warriors,Himanshu Patel,4,0,10,34,1,8.50,1,3
+20589,Warriors,Jeet Patel,3,0,10,15,2,5.00,1,0
+20589,Warriors,Rafe Shaikh,1,0,3,8,1,8.00,2,0
+20589,Warriors,Rakesh Patel,0.1,0,1,0,1,0.00,0,0
+20585,F5,Subramaniam Sampath,1,0,5,1,0,1.00,0,0
+20585,F5,Harihara Ganeshan,2,0,3,21,0,10.50,1,0
+20585,F5,Sujesh Nair,4,0,9,52,0,13.00,1,0
+20585,F5,Vimalendu Kumar,4,0,11,25,0,6.25,3,0
+20585,F5,Deniz Baby,2,0,2,14,1,7.00,1,0
+20585,F5,Rixon Devassy,3,0,10,19,2,6.33,3,0
+20585,Hudson Hurricanes,Shrivats Vyas,4,0,13,19,0,4.75,2,0
+20585,Hudson Hurricanes,Ved Arya,4,0,12,32,2,8.00,3,0
+20585,Hudson Hurricanes,Pratik Mane,4,0,10,22,3,5.50,1,0
+20585,Hudson Hurricanes,Aniket Dalal*,2,0,5,19,0,9.50,1,0
+20585,Hudson Hurricanes,Kamran Khan,2,0,5,20,1,10.00,6,0
+20583,Blue Aces CC,Dheeraj Dubey*,3,0,8,20,0,6.67,0,0
+20583,Blue Aces CC,Sandip Nandurkar,3,0,8,27,1,9.00,3,0
+20583,Blue Aces CC,Rajendra Prasad Challa,3,0,9,35,2,11.67,2,0
+20583,Blue Aces CC,Tharak Ram,4,0,10,23,2,5.75,0,0
+20583,Blue Aces CC,Prabhakar Vudumula,2,0,7,12,1,6.00,1,0
+20583,Blue Aces CC,Surya Nallamilli,1,0,2,16,0,16.00,2,0
+20583,Samudhra Gladiators,Vinit Bharadwaj,4,0,11,28,3,7.00,3,0
+20583,Samudhra Gladiators,Naveen R Sripathi,4,0,15,26,2,6.50,4,0
+20583,Samudhra Gladiators,Suraj Pai Madhukar,2.4,0,9,23,2,8.62,2,1
+20583,Samudhra Gladiators,Harshad Patil,4,0,13,21,2,5.25,2,0
+20583,Samudhra Gladiators,Sandeep A Shetty,1,0,3,3,1,3.00,0,0
+20580,Piscataway Avengers,Jignesh Patel,2,0,5,10,0,5.00,0,0
+20580,Piscataway Avengers,Mit Patel,3,0,11,13,0,4.33,3,0
+20580,Piscataway Avengers,Pujan Patel,4,0,15,22,3,5.50,2,0
+20580,Piscataway Avengers,Krunal Shah,4,0,14,23,1,5.75,3,0
+20580,Piscataway Avengers,Shan Tennakoon,3,0,10,21,0,7.00,3,0
+20580,Falcons,Sairam Raavi*,4,0,13,13,0,3.25,1,0
+20580,Falcons,Ajith Nalluri,2,0,7,11,1,5.50,1,0
+20580,Falcons,Rajesh Rachakonda,3,0,13,15,2,5.00,3,2
+20580,Falcons,Sai Ritheesh Sudham,2.4,0,7,30,1,11.25,1,0
+20580,Falcons,Srinath Gentyala,2,0,4,23,1,11.50,2,0
+20578,Youth For Sewa,Aillu N,4,0,13,30,0,7.50,3,0
+20578,Youth For Sewa,Anand Vemuri,4,0,16,23,2,5.75,3,0
+20578,Youth For Sewa,Venkata Voona,1,0,2,14,0,14.00,2,0
+20578,Youth For Sewa,Tauseef Ahmed,4,0,15,25,2,6.25,0,0
+20578,Youth For Sewa,Balu Y,1,0,1,16,0,16.00,1,1
+20578,Youth For Sewa,Eswar Vennapusa*,1,0,2,14,0,14.00,0,0
+20578,Youth For Sewa,Satish Kasireddy,1,0,2,4,0,4.00,0,0
+20578,11spartans,Soham Brahmbhatt,4,0,11,29,0,7.25,5,0
+20578,11spartans,Ravi Rathod,4,0,13,23,1,5.75,2,1
+20578,11spartans,Yogi Patel,1,0,3,13,1,13.00,0,2
+20578,11spartans,Vishal Amin,1,0,2,14,0,14.00,2,1
+20578,11spartans,Yogesh Patel* †,1.2,0,3,15,1,11.25,1,0
+20578,11spartans,Rajan Patel,4,0,10,33,2,8.25,0,2
+20577,Fdu Giants,Shubh Bhardwaj,2,0,4,15,1,7.50,1,0
+20577,Fdu Giants,Ravish Parekh,2,0,5,12,1,6.00,0,0
+20577,Fdu Giants,Ashish Kansal,4,0,15,19,2,4.75,1,1
+20577,Fdu Giants,Ankit Chopra,4,2,21,5,1,1.25,1,0
+20577,Fdu Giants,Shiven Shelat,1,0,3,4,1,4.00,0,0
+20577,Fdu Giants,Viral Parekh,3,0,13,11,2,3.67,1,0
+20577,Desi Warriors,Sai Kancharla,4,1,17,9,1,2.25,1,0
+20577,Desi Warriors,Varun Gurram,2,0,7,7,1,3.50,2,0
+20577,Desi Warriors,Rigved Nagarkar,4,0,16,9,3,2.25,0,0
+20577,Desi Warriors,Sarbjitsingh Sahota,2,0,3,17,1,8.50,2,1
+20577,Desi Warriors,Rakesh Kar,2,0,6,9,0,4.50,0,0
+20577,Desi Warriors,Harshil Patel,2,0,3,10,0,5.00,1,0
+20572,Team Highlanders,Raja Kuppan,3,0,10,34,1,11.33,0,2
+20572,Team Highlanders,Suresh Ganesan,3,0,12,14,2,4.67,0,0
+20572,Team Highlanders,Nithin Ravooru,1,1,6,0,0,0.00,0,0
+20572,Team Highlanders,Vijay Narayanan Nadar,3.2,1,15,10,2,3.00,0,0
+20572,Team Highlanders,Anish Ananthasamy,1,0,3,13,0,13.00,0,0
+20572,Team Highlanders,Manikandan Swaminathan,4,0,13,18,2,4.50,1,0
+20572,SAMP XI,Aaryan Patel,1,0,3,9,0,9.00,1,0
+20572,SAMP XI,Chaitanya Patel,2,0,2,19,0,9.50,0,0
+20572,SAMP XI,Nisarg Amin*,1,0,3,6,1,6.00,0,0
+20572,SAMP XI,Keyur Patel,2,0,3,21,1,10.50,0,0
+20572,SAMP XI,Smit Patel,2,0,5,21,2,10.50,1,1
+20572,SAMP XI,Abhi Patel,1,0,1,10,0,10.00,0,0
+20572,SAMP XI,Lav Patel,0.2,0,1,6,0,18.00,0,0
+20560,SAMP XI,Ankit Patel*,4,0,15,15,2,3.75,1,0
+20560,SAMP XI,Tirth Patel,3.2,0,10,17,3,5.10,1,0
+20560,SAMP XI,Hiren Patel,4,0,12,18,4,4.50,0,0
+20560,SAMP XI,Nisarg Patel,3,0,10,13,1,4.33,0,1
+20560,Samudhra Gladiators,Vinit Bharadwaj,4,0,16,18,2,4.50,1,0
+20560,Samudhra Gladiators,Sandeep A Shetty,1,0,4,9,0,9.00,1,0
+20560,Samudhra Gladiators,Harshad Patil,4,0,12,19,1,4.75,1,0
+20560,Samudhra Gladiators,Naveen R Sripathi,4,1,19,12,4,3.00,0,1
+20560,Samudhra Gladiators,Sushil Golecha,0.4,0,1,9,0,13.50,0,0
+20558,11spartans,Krunal Patel,3,0,13,17,0,5.67,1,0
+20558,11spartans,Neel Patel-13,3,0,6,36,1,12.00,0,0
+20558,11spartans,Ravi Rathod,4,0,9,23,5,5.75,2,0
+20558,11spartans,Pratik Patel (savali),2,0,4,23,0,11.50,0,0
+20558,11spartans,Rajan Patel,3.1,0,11,21,3,6.63,0,0
+20558,RHG,Hiren Joshi,4,0,12,33,2,8.25,1,0
+20558,RHG,Raj Patel,4,0,19,6,3,1.50,1,0
+20558,RHG,Zafran Hussain,2,0,4,32,0,16.00,1,4
+20558,RHG,Upjeet Singh,4,0,10,15,2,3.75,0,0
+20558,RHG,Baseer Ahmed Mohammed,1,0,2,11,0,11.00,0,1
+20558,RHG,Nuvan T,1,0,1,15,0,15.00,0,0
+20557,Sreeshti,Sumesh Mathew,4,0,10,25,2,6.25,2,0
+20557,Sreeshti,Shuvradeep Mukherjee,1,0,4,3,0,3.00,0,0
+20557,Sreeshti,Mahesh Nagappa,4,0,16,21,4,5.25,0,0
+20557,Sreeshti,Nimish Deshpande,2,0,5,20,1,10.00,2,0
+20557,Sreeshti,Kamal Choudhury,4,0,13,22,2,5.50,3,0
+20557,Sreeshti,Rishi Patel,1,0,1,14,0,14.00,1,0
+20557,Fdu Giants,Shubh Bhardwaj,2,0,5,10,0,5.00,2,0
+20557,Fdu Giants,Ankit Patel,4,1,16,15,1,3.75,4,0
+20557,Fdu Giants,Nishant Sharma,2,0,5,11,2,5.50,4,0
+20557,Fdu Giants,Viral Parekh,4,0,14,18,3,4.50,5,0
+20557,Fdu Giants,Ankit Chopra,4,0,20,16,1,4.00,2,0
+20549,Desi Warriors,Nauman Basit,3,0,10,14,2,4.67,2,0
+20549,Desi Warriors,Sai Kancharla,4,0,16,19,1,4.75,3,0
+20549,Desi Warriors,Harinadha Reddy,4,0,15,24,1,6.00,0,0
+20549,Desi Warriors,Sarbjitsingh Sahota,4,0,12,16,3,4.00,2,1
+20549,Desi Warriors,Rakesh Kar,1,0,3,7,0,7.00,1,0
+20549,Maha CC,Ishan Shah,2.1,0,4,33,0,15.23,3,0
+20549,Maha CC,Rizwan Bajwa,4,0,15,27,2,6.75,0,0
+20549,Maha CC,Dhrumil Shah,1,0,2,17,0,17.00,3,0
+20549,Maha CC,Danish Shaikh*,2,0,8,5,0,2.50,0,0
+20541,Piscataway Avengers,Mit Patel,4,0,11,27,1,6.75,0,0
+20541,Piscataway Avengers,Dharmesh Patel,4,0,13,32,2,8.00,0,0
+20541,Piscataway Avengers,Ujjaval Patel,4,0,11,21,3,5.25,1,0
+20541,Piscataway Avengers,Harsh Patel,2,0,4,30,1,15.00,2,0
+20541,Piscataway Avengers,Sherry Singh,2,0,5,18,1,9.00,3,0
+20541,Warriors,Rumit Patel,4,1,19,6,6,1.50,0,0
+20541,Warriors,Mitul Patel,3.5,0,14,24,4,6.26,1,2
+20541,Warriors,Varnit Dixit,1,0,3,6,0,6.00,0,0
+20541,Warriors,Himanshu Patel,3,0,9,29,0,9.67,0,3
+20541,Warriors,Kirtan Patel,3,0,9,28,0,9.33,1,0
+20537,Youth For Sewa,Aillu N,4,0,13,30,4,7.50,5,0
+20537,Youth For Sewa,Venkata Voona,4,0,12,25,0,6.25,0,1
+20537,Youth For Sewa,Anand Vemuri,4,0,14,13,3,3.25,0,0
+20537,Youth For Sewa,Manikanta Raja Kottu,2,0,7,19,0,9.50,2,0
+20537,Youth For Sewa,Rohit Reddy,2,0,5,8,1,4.00,1,0
+20537,Gryffindors,Subodh Singh*,4,0,13,22,2,5.50,1,0
+20537,Gryffindors,Harish Bangera,4,0,14,20,2,5.00,1,1
+20537,Gryffindors,Kishan Patel,1,0,2,21,0,21.00,3,0
+20537,Gryffindors,Sunil Satghare,3,0,9,13,1,4.33,3,0
+20537,Gryffindors,Sanket Kulkarni †,4,0,15,20,4,5.00,2,0
+20531,Juggernaut,Hemant Patel*,4,0,14,19,2,4.75,1,0
+20531,Juggernaut,Shrenik Patel,3,0,7,18,1,6.00,1,0
+20531,Juggernaut,Sandip Amin,3,0,4,29,0,9.67,2,0
+20531,Juggernaut,Jatan Vaidya,2,0,4,35,0,17.50,1,0
+20531,Juggernaut,Karan Patel,4,0,15,17,3,4.25,0,0
+20531,Hudson Hurricanes,Sravan Nekkanti,4,0,14,15,4,3.75,1,0
+20531,Hudson Hurricanes,Vinyas Ramachandra,3,0,13,12,0,4.00,2,0
+20531,Hudson Hurricanes,Ved Arya,3.1,1,17,8,3,2.53,1,0
+20531,Hudson Hurricanes,Pratik Mane,3,0,11,21,3,7.00,2,1
+20517,Blue Aces CC,Dheeraj Dubey*,3,0,10,10,0,3.33,0,0
+20517,Blue Aces CC,Sandip Nandurkar,3,0,10,16,2,5.33,1,0
+20517,Blue Aces CC,Rajendra Prasad Challa,3,0,14,14,3,4.67,2,0
+20517,Blue Aces CC,Tharak Ram,2,1,7,5,1,2.50,0,0
+20517,Blue Aces CC,Amol Rukmangad,2,0,7,5,1,2.50,0,0
+20517,Blue Aces CC,Krishna Kalakuntla,3,0,12,10,2,3.33,2,1
+20517,Gcc,Sahil Patel,4,0,14,25,3,6.25,0,0
+20517,Gcc,Parin Patel (GCC),3,0,10,21,1,7.00,1,0
+20517,Gcc,Sapan Parikh,1,0,3,7,1,7.00,1,0
+20517,Gcc,Karan Patel,1,0,2,10,0,10.00,0,0
+20516,Falcons,Sairam Raavi*,4,0,12,15,2,3.75,1,0
+20516,Falcons,Mahindra Chowdary Yeddanapalli,1,0,3,13,0,13.00,0,0
+20516,Falcons,Ajith Nalluri,4,0,20,7,4,1.75,3,0
+20516,Falcons,Rajesh Rachakonda,3.5,0,13,21,2,5.48,2,0
+20516,Falcons,Ramreddy Angu,1,0,4,7,1,7.00,0,0
+20516,Falcons,Harsha Bobbili,2,0,9,8,1,4.00,0,0
+20516,F5,Subramaniam Sampath,2.4,0,9,8,1,3.00,1,0
+20516,F5,Harihara Ganeshan,4,0,15,13,3,3.25,0,0
+20516,F5,Vimalendu Kumar,4,0,14,15,2,3.75,4,0
+20516,F5,Sujesh Nair,4,0,8,22,0,5.50,3,0
+20516,F5,Jinal Jolly,1,0,4,12,1,12.00,0,0
+20515,Rowdy Rebels,Bhavik Surani,4,0,15,17,4,4.25,2,0
+20515,Rowdy Rebels,Darshil Mistry,3.1,0,9,10,1,3.16,0,0
+20515,Rowdy Rebels,Anoop Hegde,4,0,17,8,3,2.00,0,0
+20515,Rowdy Rebels,Zoheb Khalid*,4,0,16,8,2,2.00,0,0
+20515,Team Highlanders,Raja Kuppan,2,0,7,11,0,5.50,0,0
+20515,Team Highlanders,Sivakumar Sivasubramonian,1,0,3,20,1,20.00,4,0
+20515,Team Highlanders,Nithin Ravooru,1,0,2,9,1,9.00,1,0
+20515,Team Highlanders,Vijay Narayanan Nadar,1,0,4,2,1,2.00,0,0
+20515,Team Highlanders,Pankaj Jhamb,0.3,0,1,7,1,14.00,0,0
 20507,Newport CC,Gokul Das Maharajan,4,0,14,12,0,3.00,0,0
 20507,Newport CC,Emmanuel Samuel Nair,4,0,12,30,4,7.50,1,0
 20507,Newport CC,Farukh Manzoor,2.4,0,6,22,3,8.25,2,0
@@ -8,6 +323,24 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20507,Aryans,Gajendra Kumar,3,0,10,26,0,8.67,2,0
 20507,Aryans,Sudarshan Hegde,3,0,9,19,1,6.33,2,0
 20507,Aryans,Smith Dsouza,2,0,5,9,0,4.50,1,0
+20505,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,16,36,3,9.00,1,1
+20505,Parsippany Phoenix XI,Naveen Rayal,4,0,9,35,1,8.75,1,1
+20505,Parsippany Phoenix XI,Govind Somvanshi,4,0,12,38,1,9.50,1,0
+20505,Parsippany Phoenix XI,Raghuveer Bethelli,4,0,9,35,3,8.75,3,0
+20505,Pway Lions,Bhavik Patel,4,0,14,11,0,2.75,0,0
+20505,Pway Lions,Drumil Amin,4,1,16,30,3,7.50,2,0
+20505,Pway Lions,Dhaivat Patel,3,0,9,20,1,6.67,1,0
+20505,Pway Lions,Vraj Shah,3,0,10,15,5,5.00,2,0
+20505,Pway Lions,Akshar Patel,0.3,0,2,8,1,16.00,0,1
+20504,Nj Tigers,Naveed Azam*,4,1,20,12,2,3.00,2,0
+20504,Nj Tigers,Waqas Choudhary,4,0,11,39,0,9.75,3,0
+20504,Nj Tigers,Haider Naveed Akram,4,0,15,31,0,7.75,0,1
+20504,Nj Tigers,Shazain Yusuf,3,0,11,24,3,8.00,6,0
+20504,Nj Tigers,Tahir Mehmood,1,0,1,23,0,23.00,0,1
+20504,Jersey Titans,Mitul Patel,4,1,18,20,3,5.00,3,0
+20504,Jersey Titans,Milan Dave,4,0,19,26,3,6.50,5,0
+20504,Jersey Titans,Jay Domadiya*,4,0,13,32,1,8.00,2,0
+20504,Jersey Titans,Ravin Patel,4,0,12,22,2,5.50,2,0
 20503,Jersey Boys,Vikul Rajpara,3,0,10,11,2,3.67,0,0
 20503,Jersey Boys,Jitendra Singh,3,0,10,18,2,6.00,1,0
 20503,Jersey Boys,Vineet Luthra,4,0,13,33,1,8.25,2,0
@@ -25,9 +358,9 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20498,PUNJAB XI,Nasir Khan,4,0,13,19,3,4.75,2,0
 20498,PUNJAB XI,Lovely Singh,2,0,9,4,0,2.00,1,0
 20498,Edison Rebelz,Ashutosh Pandey,2,0,7,13,0,6.50,0,0
-20498,Edison Rebelz,Imran Khan,2.2,0,10,18,2,7.71,0,0
+20498,Edison Rebelz,Imran Khan,2.2,0,10,18,1,7.71,0,0
 20498,Edison Rebelz,Yash Solanki,2,0,6,16,0,8.00,0,0
-20498,Edison Rebelz,Soumyabrata Paul,1,0,1,10,0,10.00,0,0
+20498,Edison Rebelz,Soumyabrata Paul,1,0,1,10,1,10.00,0,0
 20498,Edison Rebelz,Uttam Chandrakar,1,0,2,16,0,16.00,1,1
 20486,WCC,Tushar Lenka,1,0,4,8,0,8.00,0,0
 20486,WCC,Nisar Ahmad,4,0,14,11,2,2.75,0,0
@@ -38,7 +371,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20486,Storm Riders,Rishabh Tewari,2,0,10,3,1,1.50,0,0
 20486,Storm Riders,Mitul Patel,2,0,9,11,0,5.50,0,0
 20486,Storm Riders,Sameer Kulkarni,1,0,2,17,0,17.00,0,0
-20486,Storm Riders,Gourang Patel,0.4,0,3,4,1,6.00,0,0
+20486,Storm Riders,Apurv Jain* †,0.4,0,3,4,1,6.00,0,0
 20480,Nj Stars CC,Abdul Wali Siddiqee,4,0,15,11,1,2.75,1,0
 20480,Nj Stars CC,Vijay Gore,4,0,15,12,2,3.00,1,0
 20480,Nj Stars CC,Muhammad Haseeb,4,0,11,22,1,5.50,2,0
@@ -144,7 +477,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20388,Rowdy Rebels,Zoheb Khalid*,4,0,10,21,2,5.25,2,0
 20388,Rowdy Rebels,Darshil Mistry,4,0,14,15,2,3.75,3,0
 20388,Samudhra Gladiators,Vinit Bharadwaj,4,0,12,24,1,6.00,4,0
-20388,Samudhra Gladiators,Sandeep I Shetty*,1,0,2,4,0,4.00,0,0
+20388,Samudhra Gladiators,Sandeep A Shetty*,1,0,2,4,0,4.00,0,0
 20388,Samudhra Gladiators,Sushil Golecha,1,0,2,7,0,7.00,2,0
 20388,Samudhra Gladiators,Suraj Pai Madhukar,2,0,5,21,1,10.50,2,0
 20388,Samudhra Gladiators,Naveen R Sripathi,4,0,12,16,2,4.00,1,0
@@ -171,7 +504,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20383,F5,Subramaniam Sampath,1,0,5,1,0,1.00,0,0
 20383,F5,Vinod Kannan*,0.5,0,2,17,0,20.40,1,0
 20381,Youth For Sewa,Aillu N,4,0,11,29,1,7.25,3,0
-20381,Youth For Sewa,Ram R,4,1,17,12,4,3.00,0,0
+20381,Youth For Sewa,Ram J,4,1,17,12,4,3.00,0,0
 20381,Youth For Sewa,Venkata Voona,3,0,8,18,0,6.00,2,0
 20381,Youth For Sewa,Anand Vemuri,4,0,15,15,1,3.75,1,0
 20381,Youth For Sewa,Balu Y,1,0,1,16,0,16.00,5,1
@@ -184,7 +517,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20379,Gcc,Sahil Patel,4,0,11,25,1,6.25,1,0
 20379,Gcc,Mrugesh Patel*,4,0,12,47,0,11.75,1,1
 20379,Gcc,Sapan Parikh,1,0,2,11,0,11.00,1,0
-20379,Gcc,Dipen Patel GCC,3,0,10,18,2,6.00,2,0
+20379,Gcc,Kirtan Patel GCC,3,0,10,18,2,6.00,2,0
 20379,SAMP XI,Ankit Patel*,4,2,18,18,4,4.50,1,0
 20379,SAMP XI,Tirth Patel,3,0,10,15,2,5.00,0,0
 20379,SAMP XI,Arya Patel,3,0,11,13,2,4.33,3,0
@@ -199,7 +532,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20376,Falcons,Nakul Limbachiya,1,0,4,9,0,9.00,2,0
 20376,Falcons,Rajesh Rachakonda*,3,1,15,3,4,1.00,0,0
 20376,Juggernaut,Kailash Naithani,3.2,1,17,4,2,1.20,1,0
-20376,Juggernaut,Karan P,4,0,17,13,2,3.25,1,0
+20376,Juggernaut,Karan Patel,4,0,17,13,2,3.25,1,0
 20376,Juggernaut,Jatan Vaidya,2,0,9,5,2,2.50,2,0
 20376,Juggernaut,Sandip Amin,2,0,8,9,1,4.50,2,0
 20376,Juggernaut,Kartik Patel,1,0,0,13,0,13.00,1,0
@@ -248,15 +581,15 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20344,11spartans,Rajan Patel,4,0,9,26,2,6.50,0,0
 20344,Samudhra Gladiators,Vinit Bharadwaj,4,0,17,31,2,7.75,3,0
 20344,Samudhra Gladiators,Ankur Chaturvedi,4,0,12,25,3,6.25,0,0
-20344,Samudhra Gladiators,Sandeep I Shetty*,4,0,13,32,2,8.00,3,0
+20344,Samudhra Gladiators,Sandeep A Shetty*,4,0,13,32,2,8.00,3,0
 20344,Samudhra Gladiators,Suraj Pai Madhukar,3.4,0,13,10,3,2.73,1,0
 20335,F5,Sujesh Nair,4,1,16,19,2,4.75,0,0
 20335,F5,Vimalendu Kumar,4,1,20,8,5,2.00,3,0
 20335,F5,Harihara Ganeshan,4,1,16,18,2,4.50,0,0
 20335,F5,Subramaniam Sampath,2,0,3,18,0,9.00,1,0
-20335,F5,⁠Thulasi Thota,1,0,3,10,0,10.00,2,0
+20335,F5,Thulasi Thota,1,0,3,10,0,10.00,2,0
 20335,F5,Jinal Jolly,1,0,3,9,1,9.00,0,0
-20335,Youth For Sewa,Ram R,4,0,13,20,1,5.00,1,0
+20335,Youth For Sewa,Ram J,4,0,13,20,1,5.00,1,0
 20335,Youth For Sewa,Aillu N,4,0,15,21,2,5.25,5,1
 20335,Youth For Sewa,Anand Vemuri,4,0,15,12,2,3.00,0,0
 20335,Youth For Sewa,Venkata Voona,4,0,14,26,4,6.50,1,0
@@ -301,7 +634,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20322,RHG,Parth Thakkar,2,0,8,16,1,8.00,0,1
 20322,RHG,Upjeet Singh,3,0,11,27,1,9.00,0,0
 20318,Juggernaut,Kartik Patel,3,0,8,42,2,14.00,4,0
-20318,Juggernaut,Karan P,4,0,14,33,1,8.25,4,1
+20318,Juggernaut,Karan Patel,4,0,14,33,1,8.25,4,1
 20318,Juggernaut,Jatan Vaidya,4,1,15,23,3,5.75,3,0
 20318,Juggernaut,Hemant Patel*,4,0,16,26,2,6.50,2,0
 20318,Juggernaut,Sandip Amin,1,0,5,6,1,6.00,0,0
@@ -361,7 +694,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20282,Blasters,Harsh Amin,2,0,7,11,2,5.50,1,1
 20282,Blasters,Tushar Patel,2.2,1,11,8,1,3.43,0,2
 20282,Blasters,Chirag Patel,2,0,4,16,1,8.00,1,1
-20282,Nj Tigers,Saad Talat Siddiqui,1,0,3,8,0,8.00,0,0
+20282,Nj Tigers,Saad Talat,1,0,3,8,0,8.00,0,0
 20282,Nj Tigers,Naveed Azam*,1,0,3,11,0,11.00,0,0
 20282,Nj Tigers,Faisal Mehmood,3,0,7,34,1,11.33,2,0
 20282,Nj Tigers,Haider Naveed Akram,2,0,9,13,0,6.50,1,0
@@ -491,7 +824,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20209,Veerans,Kamalraj Rajamanickam,3,0,5,32,0,10.67,2,0
 20209,Veerans,Sundip Helchal,4,0,13,28,1,7.00,1,0
 20209,Veerans,Uma Maheswara Rao Patibandla,2,0,5,16,2,8.00,0,0
-20207,Nj Tigers,Saad Talat Siddiqui,2,0,4,23,0,11.50,1,0
+20207,Nj Tigers,Saad Talat,2,0,4,23,0,11.50,1,0
 20207,Nj Tigers,Mubassir Mansuri,2,1,9,10,1,5.00,0,0
 20207,Nj Tigers,Faisal Mehmood,4,0,16,14,2,3.50,3,0
 20207,Nj Tigers,Rajinder (Suraj) Singh,4,0,8,39,2,9.75,2,1
@@ -562,7 +895,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20158,Samudhra Gladiators,Sandheep Sridar,1,0,2,9,0,9.00,0,0
 20158,Samudhra Gladiators,Harshad Patil,4,0,18,19,5,4.75,5,0
 20158,Samudhra Gladiators,Suraj Pai Madhukar,4,0,12,23,2,5.75,2,1
-20158,Samudhra Gladiators,Sandeep I Shetty*,3,0,4,27,0,9.00,0,0
+20158,Samudhra Gladiators,Sandeep A Shetty*,3,0,4,27,0,9.00,0,0
 20157,Falcons,Sairam Raavi*,4,0,20,20,5,5.00,3,0
 20157,Falcons,Raj Tiguti,4,1,11,25,1,6.25,4,0
 20157,Falcons,Srinath Gentyala,3,0,13,7,2,2.33,2,0
@@ -591,7 +924,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20150,Juggernaut,Kailash Naithani,3.3,0,13,21,1,6.00,0,0
 20150,Juggernaut,Kartik Patel,4,0,11,28,2,7.00,3,0
 20150,Juggernaut,Shrenik Patel,4,0,16,16,3,4.00,0,0
-20150,Juggernaut,Karan P,4,0,15,19,2,4.75,0,0
+20150,Juggernaut,Karan Patel,4,0,15,19,2,4.75,0,0
 20146,Desi Warriors,Rigved Nagarkar,2,0,10,7,0,3.50,0,0
 20146,Desi Warriors,Sai Kancharla,4,0,10,26,2,6.50,1,0
 20146,Desi Warriors,Harinadha Reddy,4,0,13,17,3,4.25,1,2
@@ -655,10 +988,10 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20121,F5,Subramaniam Sampath*,2,0,8,12,1,6.00,0,0
 20121,F5,Harihara Ganeshan,2,0,8,6,0,3.00,2,0
 20121,F5,Sujesh Nair,4,0,14,19,2,4.75,2,0
-20121,F5,⁠Thulasi Thota,4,0,14,18,1,4.50,2,0
+20121,F5,Thulasi Thota,4,0,14,18,1,4.50,2,0
 20121,F5,Vimalendu Kumar,4,0,16,25,3,6.25,7,0
 20115,Samudhra Gladiators,Vinit Bharadwaj,3,0,10,28,0,9.33,0,1
-20115,Samudhra Gladiators,Sandeep I Shetty*,1,0,4,2,1,2.00,0,0
+20115,Samudhra Gladiators,Sandeep A Shetty*,1,0,4,2,1,2.00,0,0
 20115,Samudhra Gladiators,Harshad Patil,3.2,0,11,30,5,9.00,3,0
 20115,Samudhra Gladiators,Naveen R Sripathi,4,0,10,30,1,7.50,3,0
 20115,Samudhra Gladiators,Ankur Chaturvedi,4,0,19,19,3,4.75,3,1
@@ -707,7 +1040,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20094,Juggernaut,Kailash Naithani,4,0,14,25,3,6.25,0,0
 20094,Juggernaut,Hemant Patel*,1,0,2,13,0,13.00,2,0
 20094,Juggernaut,Jatan Vaidya,2,0,3,20,1,10.00,1,0
-20094,Juggernaut,Karan P,1.5,0,2,19,1,10.36,0,0
+20094,Juggernaut,Karan Patel,1.5,0,2,19,1,10.36,0,0
 20091,Falcons,Sairam Raavi*,4,0,11,43,1,10.75,3,1
 20091,Falcons,Sai Ritheesh Sudham,4,0,12,30,3,7.50,6,0
 20091,Falcons,Srinath Gentyala,4,0,8,31,0,7.75,0,1
@@ -730,7 +1063,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20090,Sreeshti,Monang Shah,1,0,3,11,0,11.00,0,0
 20090,Sreeshti,Amol Manjrekar* †,1,0,1,11,0,11.00,0,0
 20074,Nj Tigers,Haider Naveed Akram,4,0,10,51,0,12.75,1,0
-20074,Nj Tigers,Saad Talat Siddiqui,4,0,10,29,2,7.25,0,1
+20074,Nj Tigers,Saad Talat,4,0,10,29,2,7.25,0,1
 20074,Nj Tigers,Naveed Azam*,3,0,5,49,0,16.33,2,1
 20074,Nj Tigers,Waqas Choudhary,3,0,5,44,0,14.67,0,0
 20074,Nj Tigers,Shazain Yusuf,2,0,6,23,2,11.50,1,0
@@ -861,7 +1194,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20015,Jetha 11,Divyesh Patel,4,0,12,29,1,7.25,1,1
 20015,Jetha 11,Gary Patel,1.3,0,2,17,0,11.33,0,0
 20015,Jetha 11,Haren Patel,1.3,0,4,10,1,6.67,0,0
-20014,Newport CC,Salam Shamlan,1,0,3,8,0,8.00,0,0
+20014,Newport CC,Salam Bin Shamlan,1,0,3,8,0,8.00,0,0
 20014,Newport CC,Farukh Manzoor,4,0,10,25,2,6.25,0,0
 20014,Newport CC,Gokul Das Maharajan,4,0,12,23,1,5.75,0,2
 20014,Newport CC,Emmanuel Samuel Nair,4,1,9,29,2,7.25,0,0
@@ -996,20 +1329,20 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19933,Sreeshti,Mahesh Nagappa,2,0,4,26,0,13.00,1,0
 19933,Sreeshti,Nimish Deshpande,1.1,0,3,16,1,13.71,1,0
 19930,F5,Subramaniam Sampath,4,1,19,13,1,3.25,0,0
-19930,F5,⁠Thulasi Thota,4,0,10,38,3,9.50,2,2
+19930,F5,Thulasi Thota,4,0,10,38,3,9.50,2,2
 19930,F5,Deniz Baby,4,0,12,40,2,10.00,3,1
 19930,F5,Sandeep Goud,1,0,2,25,1,25.00,2,2
 19930,F5,Vinod Kannan*,3,0,11,30,1,10.00,1,1
 19930,Samudhra Gladiators,Vinit Bharadwaj,3,0,11,13,2,4.33,1,0
-19930,Samudhra Gladiators,Sandeep I Shetty,2,0,6,18,1,9.00,3,0
+19930,Samudhra Gladiators,Sandeep A Shetty,2,0,6,18,1,9.00,3,0
 19930,Samudhra Gladiators,Harshad Patil,4,0,16,13,0,3.25,5,0
 19930,Samudhra Gladiators,Naveen R Sripathi,4,0,13,34,5,8.50,2,0
 19930,Samudhra Gladiators,Vinit Bharadwaj,1,0,3,10,0,10.00,2,0
-19930,Samudhra Gladiators,Sandeep I Shetty,1.3,0,4,15,1,10.00,1,0
+19930,Samudhra Gladiators,Sandeep A Shetty,1.3,0,4,15,1,10.00,1,0
 19921,Juggernaut,Hemant Patel*,4,0,11,21,0,5.25,2,0
 19921,Juggernaut,Kailash Naithani,4,0,17,10,3,2.50,0,1
 19921,Juggernaut,Jatan Vaidya,4,0,11,22,4,5.50,0,0
-19921,Juggernaut,Karan P,3.4,0,13,15,2,4.09,2,0
+19921,Juggernaut,Karan Patel,3.4,0,13,15,2,4.09,2,0
 19921,Team Highlanders,Ravi Kanth,2,0,8,11,2,5.50,1,0
 19921,Team Highlanders,Raja Kuppan,3,0,11,26,1,8.67,2,1
 19921,Team Highlanders,Syed Abhinash,3.4,1,16,16,1,4.36,0,0
@@ -1089,7 +1422,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19895,Gcc,Dhaval Patel,1,0,2,9,0,9.00,0,0
 19895,F5,Subramaniam Sampath,4,0,15,15,2,3.75,0,0
 19895,F5,Vimalendu Kumar,4,0,16,9,3,2.25,1,0
-19895,F5,⁠Thulasi Thota,2,0,5,26,0,13.00,6,0
+19895,F5,Thulasi Thota,2,0,5,26,0,13.00,6,0
 19895,F5,Sandeep Goud,4,1,17,26,2,6.50,9,0
 19895,F5,Vinod Kannan*,2,0,7,12,0,6.00,1,0
 19888,SAMP XI,Hardik Patel,3,0,9,40,2,13.33,3,0
@@ -1107,11 +1440,11 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19888,Warriors,Neel Patel,1,0,3,11,0,11.00,0,0
 19883,Samudhra Gladiators,Vinit Bharadwaj,4,0,15,17,0,4.25,1,0
 19883,Samudhra Gladiators,Harshad Patil,2,0,7,15,0,7.50,0,0
-19883,Samudhra Gladiators,Sandeep I Shetty,2,0,6,17,1,8.50,2,0
+19883,Samudhra Gladiators,Sandeep A Shetty,2,0,6,17,1,8.50,2,0
 19883,Samudhra Gladiators,Naveen R Sripathi,4,0,11,28,2,7.00,2,0
 19883,Samudhra Gladiators,Ankur Chaturvedi,4,0,10,28,2,7.00,2,0
 19883,Juggernaut,Kailash Naithani,4,0,11,21,2,5.25,0,0
-19883,Juggernaut,Karan P,3.5,0,9,38,1,9.91,2,0
+19883,Juggernaut,Karan Patel,3.5,0,9,38,1,9.91,2,0
 19883,Juggernaut,Sandip Amin,1,0,2,11,0,11.00,1,0
 19883,Juggernaut,Sudheer Maddirala,1,0,1,16,0,16.00,2,2
 19883,Juggernaut,Hemant Patel*,2,0,4,20,0,10.00,1,0
@@ -1228,7 +1561,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19795,Nj Stars CC,Zain Pervaiz,4,1,16,20,4,5.00,0,0
 19795,Nj Stars CC,Sajeel Ahmed,4,0,8,41,0,10.25,1,0
 19795,Nj Stars CC,Akram Abubakar,3,0,11,28,0,9.33,11,0
-19789,Newport CC,Salam Shamlan,1,0,3,4,0,4.00,1,0
+19789,Newport CC,Salam Bin Shamlan,1,0,3,4,0,4.00,1,0
 19789,Newport CC,Narender Reddy Bojja,4,0,11,30,1,7.50,1,1
 19789,Newport CC,Gokul Das Maharajan,4,0,12,40,1,10.00,5,1
 19789,Newport CC,Emmanuel Samuel Nair,4,0,9,49,0,12.25,0,0
@@ -1296,7 +1629,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19751,Juggernaut,Hemant Patel*,2,0,8,19,0,9.50,0,1
 19751,Juggernaut,Kailash Naithani,3,0,11,26,0,8.67,6,0
 19751,Juggernaut,Jatan Vaidya,2,0,5,26,0,13.00,1,0
-19751,Juggernaut,Karan P,3,0,9,26,0,8.67,1,0
+19751,Juggernaut,Karan Patel,3,0,9,26,0,8.67,1,0
 19751,Juggernaut,Sandip Amin,2.5,0,7,28,4,9.88,2,1
 19745,Fdu Giants,Lucky PK,2,0,3,19,0,9.50,0,0
 19745,Fdu Giants,Sunit Shirke,4,0,11,27,2,6.75,1,0
@@ -1306,7 +1639,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19745,Fdu Giants,Dhruv Patel,1,0,4,9,3,9.00,2,0
 19745,Samudhra Gladiators,Naveen R Sripathi,4,0,16,11,2,2.75,2,0
 19745,Samudhra Gladiators,Ankur Chaturvedi,3.2,0,10,22,2,6.60,0,0
-19745,Samudhra Gladiators,Sandeep I Shetty,3,0,12,20,4,6.67,5,0
+19745,Samudhra Gladiators,Sandeep A Shetty,3,0,12,20,4,6.67,5,0
 19745,Samudhra Gladiators,Suraj Pai Madhukar,2,0,6,6,0,3.00,0,0
 19745,Samudhra Gladiators,Harshad Patil,2,1,8,8,2,4.00,2,0
 19738,Hudson Hurricanes,Rohit Pradhan,2,0,4,13,0,6.50,1,0
@@ -1359,7 +1692,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19725,F5,Rixon Devassy,3.1,0,16,19,3,6.00,9,1
 19725,F5,Sujesh Nair,4,1,17,12,4,3.00,2,0
 19725,F5,Varun Athi,1,0,5,6,0,6.00,2,0
-19725,F5,⁠Thulasi Thota,1,0,2,9,0,9.00,0,0
+19725,F5,Thulasi Thota,1,0,2,9,0,9.00,0,0
 19721,Youth For Sewa,Manikanta Raja Kottu,3,0,10,14,2,4.67,3,0
 19721,Youth For Sewa,Venkata Voona,2.5,0,14,3,4,1.06,0,0
 19721,Youth For Sewa,Aillu N,2,0,11,6,2,3.00,5,0
@@ -1407,7 +1740,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19692,Pway Lions,Sagar Patel,4,0,14,18,2,4.50,0,0
 19692,Pway Lions,Bhavik Patel,3,0,11,9,2,3.00,1,0
 19687,Newport CC,Mahendran Prakasam,4,0,15,14,2,3.50,0,0
-19687,Newport CC,Salam Shamlan,4,0,14,24,3,6.00,3,0
+19687,Newport CC,Salam Bin Shamlan,4,0,14,24,3,6.00,3,0
 19687,Newport CC,Emmanuel Samuel Nair,4,0,17,7,2,1.75,0,0
 19687,Newport CC,Gokul Das Maharajan,4,0,17,9,2,2.25,2,0
 19687,SAMP XI,Ankit Patel*,2,0,5,22,1,11.00,0,0
@@ -1424,7 +1757,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19685,F5,Sujesh Nair,3,0,9,24,0,8.00,1,0
 19685,F5,Vimalendu Kumar,4,0,12,24,1,6.00,3,0
 19685,F5,Harihara Ganeshan,2,0,5,15,1,7.50,0,0
-19685,F5,⁠Thulasi Thota,1,0,1,26,0,26.00,1,0
+19685,F5,Thulasi Thota,1,0,1,26,0,26.00,1,0
 19679,Storm Riders,Rishabh Tewari,2.4,0,14,4,1,1.50,2,0
 19679,Storm Riders,Sameer Kulkarni,1,0,3,11,2,11.00,0,0
 19679,Storm Riders,Shobhit Gupta,2,0,7,11,1,5.50,0,0
@@ -1468,7 +1801,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19661,Juggernaut,Kailash Naithani,4,0,15,23,3,5.75,1,0
 19661,Juggernaut,Jatan Vaidya,4,0,8,33,2,8.25,2,0
 19661,Juggernaut,Jenish Patel,4,0,13,32,3,8.00,3,2
-19661,Juggernaut,Karan P,3,0,4,27,1,9.00,3,0
+19661,Juggernaut,Karan Patel,3,0,4,27,1,9.00,3,0
 19661,Juggernaut,Sandip Amin,1,0,1,11,0,11.00,0,0
 19661,Blasters,Anish Patel,4,0,18,21,3,5.25,0,1
 19661,Blasters,Priyankk Patel,3,0,14,7,2,2.33,0,0
@@ -1500,7 +1833,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19638,Samudhra Gladiators,Vinit Bharadwaj,4,0,10,38,2,9.50,3,0
 19638,Samudhra Gladiators,Naveen R Sripathi,4,1,18,12,2,3.00,0,0
 19638,Samudhra Gladiators,Dileep Reddy,1,0,2,18,0,18.00,0,0
-19638,Samudhra Gladiators,Sandeep I Shetty,3,0,9,21,2,7.00,1,0
+19638,Samudhra Gladiators,Sandeep A Shetty,3,0,9,21,2,7.00,1,0
 19638,Samudhra Gladiators,Harshad Patil,3.2,1,14,11,4,3.30,2,0
 19636,Youth For Sewa,Manikanta Raja Kottu,3,0,12,25,1,8.33,2,2
 19636,Youth For Sewa,Aillu N,4,0,8,51,0,12.75,2,0
@@ -1693,7 +2026,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19538,Juggernaut,Kartik Patel,4,0,15,23,3,5.75,3,0
 19538,Juggernaut,Hemant Patel*,4,0,16,24,1,6.00,6,0
 19538,Juggernaut,Jenish Patel,3,0,6,63,0,21.00,1,1
-19538,Juggernaut,Karan P,4,0,16,39,3,9.75,0,0
+19538,Juggernaut,Karan Patel,4,0,16,39,3,9.75,0,0
 19538,Juggernaut,Sandip Amin,1,0,6,1,1,1.00,1,0
 19538,PUNJAB XI,Nitesh Tomer,2,0,7,24,0,12.00,1,1
 19538,PUNJAB XI,Lovely Singh,2,0,3,27,1,13.50,2,0
@@ -1838,7 +2171,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19455,Juggernaut,Kailash Naithani,4,0,15,27,0,6.75,2,0
 19455,Juggernaut,Jenish Patel,3.5,0,14,37,4,9.65,3,0
 19455,Juggernaut,Hemant Patel*,4,1,13,59,2,14.75,2,1
-19455,Juggernaut,Karan P,4,0,17,17,3,4.25,3,0
+19455,Juggernaut,Karan Patel,4,0,17,17,3,4.25,3,0
 19455,Pway Lions,Nish Patel,4,0,17,20,3,5.00,0,0
 19455,Pway Lions,Bhavik Patel,4,0,16,17,1,4.25,2,0
 19455,Pway Lions,Ronak Rana †,3,0,11,24,1,8.00,2,0
@@ -1868,7 +2201,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19438,F5,Rixon Devassy,4,0,16,11,1,2.75,0,0
 19438,F5,Sujesh Nair,4,0,16,11,1,2.75,2,0
 19438,F5,Vimalendu Kumar,4,0,15,26,2,6.50,4,0
-19438,F5,⁠Thulasi Thota,2,0,8,15,3,7.50,1,0
+19438,F5,Thulasi Thota,2,0,8,15,3,7.50,1,0
 19438,PUNJAB XI,Nitesh Tomer,4,0,17,18,1,4.50,2,0
 19438,PUNJAB XI,Adnan Perviaz,1,0,4,10,0,10.00,3,1
 19438,PUNJAB XI,Jasmeet Singh,4,0,16,18,1,4.50,2,0
@@ -1894,7 +2227,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19423,Aryans,Gajendra Kumar,4,0,14,18,3,4.50,2,0
 19423,Aryans,Ali Raza,1,0,3,17,0,17.00,1,0
 19422,Samudhra Gladiators,Dileep Reddy,3,0,10,13,1,4.33,0,0
-19422,Samudhra Gladiators,Sandeep I Shetty,2,1,10,2,0,1.00,0,0
+19422,Samudhra Gladiators,Sandeep A Shetty,2,1,10,2,0,1.00,0,0
 19422,Samudhra Gladiators,Naveen R Sripathi,4,0,12,18,2,4.50,0,0
 19422,Samudhra Gladiators,Ankur Chaturvedi,4,2,18,12,1,3.00,3,0
 19422,Samudhra Gladiators,Harshad Patil,3,0,8,19,1,6.33,1,0
@@ -2009,7 +2342,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19371,Sreeshti,Monang Shah,4,0,13,18,2,4.50,1,0
 19371,Sreeshti,Mahesh Nagappa,1,0,1,13,0,13.00,0,0
 19368,Samudhra Gladiators,Vinit Bharadwaj,4,0,14,19,1,4.75,3,0
-19368,Samudhra Gladiators,Sandeep I Shetty,1,0,4,4,1,4.00,2,0
+19368,Samudhra Gladiators,Sandeep A Shetty,1,0,4,4,1,4.00,2,0
 19368,Samudhra Gladiators,Harshad Patil,3,0,10,14,3,4.67,1,0
 19368,Samudhra Gladiators,Naveen R Sripathi,4,1,16,26,4,6.50,1,0
 19368,Samudhra Gladiators,Ankur Chaturvedi,3,0,9,34,1,11.33,0,1
@@ -2087,7 +2420,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19324,F5,Rixon Devassy,3,0,8,30,3,10.00,0,0
 19324,F5,Vimalendu Kumar,4,0,12,27,2,6.75,5,0
 19324,F5,Harihara Ganeshan,1,0,2,15,0,15.00,0,0
-19324,F5,⁠Thulasi Thota,1,0,2,22,1,22.00,0,0
+19324,F5,Thulasi Thota,1,0,2,22,1,22.00,0,0
 19324,Pway Lions,Shail Shah,4,0,17,19,3,4.75,0,1
 19324,Pway Lions,Neel Patel*,2,0,8,14,0,7.00,2,0
 19324,Pway Lions,Bhavik Patel,2,0,5,20,1,10.00,1,0
@@ -2145,7 +2478,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19301,Juggernaut,Jatan Vaidya,2,0,4,16,1,8.00,1,1
 19301,Juggernaut,Jenish Patel,4,0,13,27,4,6.75,1,0
 19301,Juggernaut,Hemant Patel*,3,0,7,32,0,10.67,1,0
-19301,Juggernaut,Karan P,4,0,12,29,0,7.25,4,0
+19301,Juggernaut,Karan Patel,4,0,12,29,0,7.25,4,0
 19300,Fdu Giants,Kunal Patel,1,0,3,12,1,12.00,0,0
 19300,Fdu Giants,Ankit Chopra,3,0,10,29,0,9.67,0,2
 19300,Fdu Giants,Ravish Parekh,3,0,10,31,0,10.33,2,0
@@ -2218,7 +2551,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19266,F5,Subramaniam Sampath,1,0,5,1,1,1.00,0,0
 19266,F5,Sujesh Nair,4,2,23,5,2,1.25,1,0
 19266,F5,Vimalendu Kumar,4,0,18,15,1,3.75,4,0
-19266,F5,⁠Thulasi Thota,2.3,0,9,15,1,6.00,1,0
+19266,F5,Thulasi Thota,2.3,0,9,15,1,6.00,1,0
 19266,F5,Harihara Ganeshan,4,0,15,16,2,4.00,2,0
 19260,Gryffindors,Bikash Ghibila,4,0,8,20,1,5.00,0,0
 19260,Gryffindors,Bandiss P,2,0,5,10,0,5.00,0,0
@@ -2246,7 +2579,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19254,Juggernaut,Hemant Patel*,4,0,12,24,3,6.00,1,0
 19254,Juggernaut,Jenish Patel,4,0,15,23,5,5.75,0,0
 19254,Juggernaut,Kartik Patel,3,0,10,23,1,7.67,2,0
-19254,Juggernaut,Karan P,2,0,5,17,0,8.50,1,0
+19254,Juggernaut,Karan Patel,2,0,5,17,0,8.50,1,0
 19254,Newport CC,Emmanuel Samuel Nair,4,0,16,14,2,3.50,1,1
 19254,Newport CC,Farukh Manzoor,3,1,11,13,2,4.33,1,0
 19254,Newport CC,Narender Reddy Bojja,3.1,0,9,27,3,8.53,2,0
@@ -2256,7 +2589,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19251,Blasters,Harsh Bhavsar,4,0,12,24,2,6.00,2,0
 19251,Blasters,Khiamuddin Mohammad,2,0,5,17,0,8.50,1,1
 19251,Blasters,Haroon Ahmadi,2,0,7,13,2,6.50,3,0
-19251,Blasters,Dinesh Kumawat,4,0,10,41,1,10.25,4,0
+19251,Blasters,Dinesh K,4,0,10,41,1,10.25,4,0
 19251,11spartans,Neel Patel-13,2,0,5,17,0,8.50,0,0
 19251,11spartans,Soham Brahmbhatt,4,0,9,34,3,8.50,3,0
 19251,11spartans,Rajan Patel,2,0,4,33,1,16.50,0,0
@@ -2307,7 +2640,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19213,Gcc,Mrugesh Patel,4,0,17,17,1,4.25,5,0
 19213,Gcc,Romil Patel (GCC),4,0,11,37,2,9.25,0,0
 19213,Gcc,Sahil Patel,3,0,6,33,2,11.00,1,0
-19213,Gcc,Het Vaidya (GCC),3,0,10,27,1,9.00,4,0
+19213,Gcc,Het Vaidya GCC,3,0,10,27,1,9.00,4,0
 19213,Gcc,Hardik(gcc) Rana,2,0,7,21,0,10.50,1,0
 19213,Jetha 11,Dipal Patel,4,0,16,16,3,4.00,3,0
 19213,Jetha 11,Haren Patel,4,0,11,32,0,8.00,1,0
@@ -2330,9 +2663,9 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19205,Nj Tigers,Naveed Azam,3,0,12,27,3,9.00,2,0
 19205,Nj Tigers,Tahir Mehmood,3,0,10,16,1,5.33,0,0
 19205,Nj Tigers,Faisal Mehmood*,4,0,13,32,1,8.00,2,0
-19205,Nj Tigers,Saad Talat Siddiqui,1,0,3,9,1,9.00,0,0
+19205,Nj Tigers,Saad Talat,1,0,3,9,1,9.00,0,0
 19205,Samudhra Gladiators,Vinit Bharadwaj,4,0,18,14,5,3.50,8,0
-19205,Samudhra Gladiators,Sandeep I Shetty,2,0,8,15,1,7.50,0,0
+19205,Samudhra Gladiators,Sandeep A Shetty,2,0,8,15,1,7.50,0,0
 19205,Samudhra Gladiators,Naveen R Sripathi,3,0,12,8,3,2.67,1,0
 19205,Samudhra Gladiators,Ankur Chaturvedi,2,0,7,6,0,3.00,1,0
 19204,Hudson Hurricanes,Sravan Nekkanti,4,0,19,16,2,4.00,1,0
@@ -2433,7 +2766,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19152,Jersey Boys,Vikul Rajpara,4,0,9,36,2,9.00,1,0
 19152,Jersey Boys,Sushil Kumar,4,0,17,12,1,3.00,0,0
 19152,Jersey Boys,Madhur Kaushik,4,0,16,10,1,2.50,0,1
-19152,Samudhra Gladiators,Sandeep I Shetty,1,0,4,2,0,2.00,0,0
+19152,Samudhra Gladiators,Sandeep A Shetty,1,0,4,2,0,2.00,0,0
 19152,Samudhra Gladiators,Suraj Pai Madhukar,1,0,3,11,1,11.00,1,0
 19152,Samudhra Gladiators,Naveen R Sripathi,4,0,6,46,1,11.50,3,0
 19152,Samudhra Gladiators,Ankur Chaturvedi,3.1,0,12,18,0,5.68,1,0
@@ -2475,14 +2808,14 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19141,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,11,29,2,7.25,0,0
 19141,Parsippany Phoenix XI,Naveen Rayal,4,0,12,21,2,5.25,1,0
 19141,Youth For Sewa,Aillu N,4,0,14,16,3,4.00,1,0
-19141,Youth For Sewa,Ram R,4,0,16,14,2,3.50,1,1
+19141,Youth For Sewa,Ram J,4,0,16,14,2,3.50,1,1
 19141,Youth For Sewa,Balu Y,2,0,6,16,1,8.00,0,0
 19141,Youth For Sewa,Nazareth John,4,0,12,26,2,6.50,8,1
 19141,Youth For Sewa,Tauseef Ahmed,2,0,6,14,0,7.00,0,0
 19133,Nj Tigers,Naveed Azam*,3,0,9,26,0,8.67,3,0
 19133,Nj Tigers,Noman Ali,1,0,3,8,0,8.00,0,0
 19133,Nj Tigers,Faisal Mehmood,4,0,10,41,1,10.25,3,0
-19133,Nj Tigers,Saad Talat Siddiqui,3,0,10,29,1,9.67,0,1
+19133,Nj Tigers,Saad Talat,3,0,10,29,1,9.67,0,1
 19133,Nj Tigers,Saad Naeem,1,0,4,6,1,6.00,1,0
 19133,Nj Tigers,Haider Naveed Akram,4,0,12,30,3,7.50,1,0
 19133,Gcc,Romil Patel (GCC),4,0,12,24,1,6.00,0,0
@@ -2557,7 +2890,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19090,Juggernaut,Jenish Patel,4,0,17,17,3,4.25,2,0
 19090,Juggernaut,Kartik Patel,3,0,8,39,2,13.00,4,0
 19090,Juggernaut,Hemant Patel*,4,0,15,24,3,6.00,5,0
-19090,Juggernaut,Karan P,1,0,5,1,2,1.00,0,0
+19090,Juggernaut,Karan Patel,1,0,5,1,2,1.00,0,0
 19090,Storm Riders,Shobhit Gupta,3.1,0,8,31,0,9.79,2,0
 19090,Storm Riders,Mitul Patel,3,0,12,11,1,3.67,0,0
 19090,Storm Riders,Rishabh Tewari,4,0,14,31,2,7.75,2,0
@@ -2579,7 +2912,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19071,Newport CC,Narender Reddy Bojja,3,0,12,17,1,5.67,1,0
 19071,Newport CC,Vinit Shah,3,0,10,26,2,8.67,2,0
 19071,F5,Subramaniam Sampath,4,0,11,36,1,9.00,1,0
-19071,F5,⁠Thulasi Thota,4,0,15,19,2,4.75,1,0
+19071,F5,Thulasi Thota,4,0,15,19,2,4.75,1,0
 19071,F5,Sujesh Nair,4,0,15,23,1,5.75,3,0
 19071,F5,Vimalendu Kumar,4,0,16,24,4,6.00,3,0
 19069,Piscataway Avengers,Mit Patel,4,0,17,10,2,2.50,0,0
@@ -2646,7 +2979,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19044,Storm Riders,Noor Randhawa,2,0,5,8,0,4.00,1,0
 19044,F5,Harihara Ganeshan,3,0,8,16,2,5.33,1,0
 19044,F5,Sujesh Nair,4,0,13,23,2,5.75,7,0
-19044,F5,⁠Thulasi Thota,3.3,1,15,13,1,3.71,2,0
+19044,F5,Thulasi Thota,3.3,1,15,13,1,3.71,2,0
 19042,Newport CC,Emmanuel Samuel Nair,4,0,15,18,3,4.50,2,1
 19042,Newport CC,Saikumar Katepalli,1,0,2,12,0,12.00,1,0
 19042,Newport CC,Narender Reddy Bojja,4,0,17,15,1,3.75,2,0
@@ -2694,7 +3027,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19011,Mercer Challengers,Ankur Parekh,3,0,12,6,1,2.00,0,0
 19011,Juggernaut,Jenish Patel,4,0,15,11,1,2.75,0,1
 19011,Juggernaut,Kartik Patel,2,0,3,21,0,10.50,1,1
-19011,Juggernaut,Karan P,4,0,12,24,0,6.00,2,0
+19011,Juggernaut,Karan Patel,4,0,12,24,0,6.00,2,0
 19011,Juggernaut,Kailash Naithani,4,0,15,17,2,4.25,1,0
 19011,Juggernaut,Jatan Vaidya,1.1,0,3,15,1,12.86,1,0
 19002,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,16,27,0,6.75,0,0
@@ -2754,9 +3087,9 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18985,Nj Tigers,Waqas Aslam,3,0,12,20,1,6.67,0,0
 18985,Nj Tigers,Naveed Azam*,2,0,7,12,1,6.00,0,0
 18985,Nj Tigers,Faisal Mehmood,1.5,0,2,17,0,9.27,1,0
-18985,Nj Tigers,Saad Talat Siddiqui,1,0,1,14,1,14.00,0,0
+18985,Nj Tigers,Saad Talat,1,0,1,14,1,14.00,0,0
 18983,Samudhra Gladiators,Vinit Bharadwaj,2,0,6,13,0,6.50,1,0
-18983,Samudhra Gladiators,Sandeep I Shetty,2,0,6,13,0,6.50,2,0
+18983,Samudhra Gladiators,Sandeep A Shetty,2,0,6,13,0,6.50,2,0
 18983,Samudhra Gladiators,Harshad Patil,3,0,12,16,1,5.33,3,0
 18983,Samudhra Gladiators,Naveen R Sripathi,4,1,18,9,4,2.25,0,0
 18983,Samudhra Gladiators,Ankur Chaturvedi,4,1,16,14,2,3.50,3,0
@@ -2861,7 +3194,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18925,Nj Tigers,Mubassir Mansuri,4,1,15,12,4,3.00,2,0
 18925,Nj Tigers,Faisal Mehmood,4,0,16,17,2,4.25,5,0
 18925,Nj Tigers,Akhlaq Zafar,1,0,4,12,0,12.00,0,1
-18925,Nj Tigers,Saad Talat Siddiqui,1,0,2,5,0,5.00,0,1
+18925,Nj Tigers,Saad Talat,1,0,2,5,0,5.00,0,1
 18925,Nj Tigers,Mobeen Jarral,2,0,5,18,1,9.00,2,0
 18925,Sreeshti,Nimish Deshpande,2,0,8,6,1,3.00,2,0
 18925,Sreeshti,Mahesh Nagappa,3,0,10,18,1,6.00,0,0
@@ -2875,7 +3208,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18920,Edison Rebelz,Dhaval Shah,2,0,2,15,1,7.50,0,0
 18920,Edison Rebelz,Soumyabrata Paul,3,0,6,29,1,9.67,1,0
 18920,Samudhra Gladiators,Vinit Bharadwaj,4,0,17,13,4,3.25,0,0
-18920,Samudhra Gladiators,Sandeep I Shetty,2,0,7,6,2,3.00,1,0
+18920,Samudhra Gladiators,Sandeep A Shetty,2,0,7,6,2,3.00,1,0
 18920,Samudhra Gladiators,Harshad Patil,2,0,4,16,1,8.00,4,1
 18920,Samudhra Gladiators,Naveen R Sripathi,4,0,16,14,0,3.50,1,0
 18920,Samudhra Gladiators,Ankur Chaturvedi,4,1,17,14,2,3.50,2,1
@@ -2996,7 +3329,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18857,Juggernaut,Kartik Patel,3.1,0,11,22,3,6.95,0,0
 18857,Juggernaut,Jatan Vaidya,1,0,1,8,0,8.00,0,0
 18857,Juggernaut,Jenish Patel,2,0,6,11,1,5.50,0,1
-18857,Juggernaut,Karan P,3,0,10,20,1,6.67,2,0
+18857,Juggernaut,Karan Patel,3,0,10,20,1,6.67,2,0
 18854,Blue Aces CC,Satya Tarun Reddy,3,0,7,32,0,10.67,5,0
 18854,Blue Aces CC,Surya Nallamilli,2,0,3,26,0,13.00,0,0
 18854,Blue Aces CC,Prabhakar Vudumula,3,0,11,19,1,6.33,0,0
@@ -3012,7 +3345,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18827,Juggernaut,Kailash Naithani,1,0,2,7,0,7.00,0,0
 18827,Juggernaut,Kartik Patel,2,0,7,8,1,4.00,2,0
 18827,Juggernaut,Jenish Patel,4,1,13,23,3,5.75,0,0
-18827,Juggernaut,Karan P,1,0,3,6,0,6.00,0,0
+18827,Juggernaut,Karan Patel,1,0,3,6,0,6.00,0,0
 18827,Jersey Titans,Mitul Patel,4,0,12,25,0,6.25,1,0
 18827,Jersey Titans,Pavan Patel,1,0,2,10,0,10.00,2,0
 18827,Jersey Titans,Jay Domadiya*,3.1,0,13,20,1,6.32,1,0
@@ -3052,7 +3385,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18794,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,10,20,2,5.00,0,0
 18794,Parsippany Phoenix XI,Naveen Rayal,4,0,8,39,0,9.75,7,0
 18794,Samudhra Gladiators,Vinit Bharadwaj,4,0,15,18,2,4.50,1,0
-18794,Samudhra Gladiators,Sandeep I Shetty,1,0,3,8,1,8.00,0,0
+18794,Samudhra Gladiators,Sandeep A Shetty,1,0,3,8,1,8.00,0,0
 18794,Samudhra Gladiators,Ankur Chaturvedi,3,0,12,14,2,4.67,0,0
 18794,Samudhra Gladiators,Naveen R Sripathi,2,0,6,21,1,10.50,4,0
 18794,Samudhra Gladiators,Sushil Golecha,2,0,5,14,2,7.00,1,0
@@ -3089,7 +3422,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18788,Gcc,Sahil Patel,4,0,20,10,1,2.50,3,0
 18788,Gcc,Parin Patel (GCC),4,0,12,16,1,4.00,1,0
 18788,Gcc,Mrugesh Patel,1,0,3,12,0,12.00,0,0
-18788,Gcc,Pragnesh Patel GCC,3,0,7,21,0,7.00,2,1
+18788,Gcc,Nirmal Patel GCC,3,0,7,21,0,7.00,2,1
 18788,Gcc,Romil Patel (GCC),4,0,11,24,3,6.00,2,0
 18785,Youth For Sewa,Aillu N,4,0,13,27,2,6.75,5,1
 18785,Youth For Sewa,Balu Y,4,0,9,37,1,9.25,4,0
@@ -3110,7 +3443,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18782,Nj Tigers,Haider Naveed Akram,1.1,0,2,10,0,8.57,0,0
 18782,Nj Tigers,Mubassir Mansuri,2,0,4,13,1,6.50,0,0
 18782,Nj Tigers,Naveed Azam*,1,0,0,11,0,11.00,0,0
-18782,Nj Tigers,Saad Talat Siddiqui,1,0,1,8,0,8.00,0,0
+18782,Nj Tigers,Saad Talat,1,0,1,8,0,8.00,0,0
 18770,Veerans,Uma Maheswara Rao Patibandla,4,0,13,27,1,6.75,0,1
 18770,Veerans,Shabbir Syed,2,0,5,12,1,6.00,0,0
 18770,Veerans,Kamalraj Rajamanickam,4,1,14,16,2,4.00,1,0
@@ -3187,7 +3520,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18737,Samudhra Gladiators,Vinit Bharadwaj,4,0,17,14,5,3.50,4,0
 18737,Samudhra Gladiators,Naveen R Sripathi,4,0,15,19,1,4.75,0,0
 18737,Samudhra Gladiators,Ankur Chaturvedi,4,0,14,23,1,5.75,6,1
-18737,Samudhra Gladiators,Sandeep I Shetty,1,0,4,8,0,8.00,0,0
+18737,Samudhra Gladiators,Sandeep A Shetty,1,0,4,8,0,8.00,0,0
 18737,Samudhra Gladiators,Harshad Patil,3,0,11,10,1,3.33,4,0
 18733,Jersey Boys,Vikul Rajpara,4,0,16,16,4,4.00,3,0
 18733,Jersey Boys,Sushil Kumar,4,0,13,33,1,8.25,0,0
@@ -3291,7 +3624,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18688,Nj Braves,Jenish Shah,4,1,17,9,1,2.25,2,0
 18688,Juggernaut,Hemant Patel*,3,0,11,8,2,2.67,0,0
 18688,Juggernaut,Kailash Naithani,3.1,0,10,19,1,6.00,1,0
-18688,Juggernaut,Karan P,2,0,6,9,0,4.50,0,0
+18688,Juggernaut,Karan Patel,2,0,6,9,0,4.50,0,0
 18688,Juggernaut,Kartik Patel,2,0,7,13,1,6.50,2,0
 18688,Juggernaut,Jenish Patel,3,0,8,31,2,10.33,2,1
 18686,Maha CC,Sudhanshoo Vashisht,2.2,0,7,17,1,7.29,1,0
@@ -3360,30 +3693,3 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18659,Mercer Challengers,Sheshank Reddy,4,0,13,19,2,4.75,1,0
 18659,Mercer Challengers,Deepesh Naidu,4,0,9,33,1,8.25,3,0
 18659,Mercer Challengers,Vishal Srivastava,3,0,11,22,2,7.33,2,0
-20505,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,16,36,3,9.00,1,1
-20505,Parsippany Phoenix XI,Naveen Rayal,4,0,9,35,1,8.75,1,1
-20505,Parsippany Phoenix XI,Govind Somvanshi,4,0,12,38,1,9.50,1,0
-20505,Parsippany Phoenix XI,Raghuveer Bethelli,4,0,9,35,3,8.75,3,0
-20505,Pway Lions,Bhavik Patel,4,0,14,11,0,2.75,0,0
-20505,Pway Lions,Drumil Amin,4,1,16,30,3,7.50,2,0
-20505,Pway Lions,Dhaivat Patel,3,0,9,20,1,6.67,1,0
-20505,Pway Lions,Vraj Shah,3,0,10,15,5,5.00,2,0
-20505,Pway Lions,Akshar Patel,0.3,0,2,8,1,16.00,0,1
-20504,Nj Tigers,Naveed Azam*,4,1,20,12,2,3.00,2,0
-20504,Nj Tigers,Waqas Choudhary,4,0,11,39,0,9.75,3,0
-20504,Nj Tigers,Haider Naveed Akram,4,0,15,31,0,7.75,0,1
-20504,Nj Tigers,Shazain Yusuf,3,0,11,24,3,8.00,6,0
-20504,Nj Tigers,Tahir Mehmood,1,0,1,23,0,23.00,0,1
-20504,Jersey Titans,Mitul Patel,4,1,18,20,3,5.00,3,0
-20504,Jersey Titans,Milan Dave,4,0,19,26,3,6.50,5,0
-20504,Jersey Titans,Jay Domadiya*,4,0,13,32,1,8.00,2,0
-20504,Jersey Titans,Ravin Patel,4,0,12,22,2,5.50,2,0
-20560,SAMP XI,Ankit Patel*,4,0,15,15,2,3.75,1,0
-20560,SAMP XI,Tirth Patel,3.2,0,10,17,3,5.10,1,0
-20560,SAMP XI,Hiren Patel,4,0,12,18,4,4.50,0,0
-20560,SAMP XI,Nisarg Patel,3,0,10,13,1,4.33,0,1
-20560,Samudhra Gladiators,Vinit Bharadwaj,4,0,16,18,2,4.50,1,0
-20560,Samudhra Gladiators,Sandeep I Shetty,1,0,4,9,0,9.00,1,0
-20560,Samudhra Gladiators,Harshad Patil,4,0,12,19,1,4.75,1,0
-20560,Samudhra Gladiators,Naveen R Sripathi,4,1,19,12,4,3.00,0,1
-20560,Samudhra Gladiators,Sushil Golecha,0.4,0,1,9,0,13.50,0,0

@@ -114,11 +114,13 @@ filter to a bracket here, the scorecard step below will only ever request matchI
 Still on `listMatches.do` for the series, get the matchId list you'll actually need:
 - **Division 1**: every matchId on the page (all ~300 — it's a single A-vs-B cross-play format,
   there's no smaller "our bracket" subset).
-- **Weekenders Cup**: VRK Gladiators only plays Group A vs Group D. Filter blocks to matches
-  containing at least one Group A or Group D team name before extracting matchIds (~285 of the
-  600). Get the current Group A/D team names from the existing
-  `NJSBCL/data/weekenderscup_batting_all_teams.csv` `Group` column if that file's still around,
-  otherwise re-derive from the team list page — group assignments don't change mid-season.
+- **Weekenders Cup**: VRK Gladiators only plays Group A vs Group D in the league stage, but the
+  knockout field is Group A's top 8 plus **Group B's top 8** — so filter blocks to matches
+  containing at least one Group A, Group D, or Group-B-top-8 team name (~580 of the 800).
+  Group B was added 2026-09-20, after the captain confirmed the knockout pairing; before that
+  Group B had zero scorecard coverage and those teams' dashboard pages would have been empty.
+  Derive all three lists from `NJSBCL/data/weekenderscup_points_table.csv` (scrape Step 4b
+  **first**, so the top 8 comes from the current standings rather than a stale file).
 
 ```js
 const links=[...document.querySelectorAll('a[href*="viewScorecard"]')];
@@ -510,6 +512,21 @@ re-run if only one feature looks stale:
 | Last match recap (right/wrong verdicts + Star of the Match), the 3rd AI insight (batting-order mismatch) | reuses scorecards + true totals — no separate scrape | Steps 1-3 |
 
 ## Notes
+
+- **Downloads-name collisions (hit 2026-09-20):** `~/Downloads` accumulates files from past runs,
+  so a plain `points_table.csv` download silently lands as `points_table (1).csv` and the Finder
+  copy grabs the *old* file — producing a rescrape that looks clean but writes last month's data.
+  Bash also can't `rm` from `~/Downloads` (same TCC gap as reading). Give every download a unique
+  name (`njs_d1_b01_<something>.csv`) and verify content after moving, don't just trust the move.
+- **45s CDP timeout (hit 2026-09-20):** a 20-id batch at 1800ms delay exceeds the 45s
+  `Runtime.evaluate` limit and the call errors out — though the page keeps running and the
+  download still lands, so don't re-run the batch blindly, check `window.__buf` first. Better:
+  kick the loop off **without** awaiting it (store progress on `window.__job`) and poll a cheap
+  status call. That decouples chunk size from the timeout entirely — 80 ids per chunk works fine.
+- **Cloudflare tripped at ~420 cumulative fetches (2026-09-20)**, mid-way through the second
+  series at 1200ms. Everything returns 403 at once, so check `blockedCount` every batch and bail
+  early. Recovery per the doc worked (navigate + ~18s wait); 1500ms delay held for the remaining
+  580 fetches with zero blocks.
 
 - `NJSBCL/data/raw_scorecards/` is scratch space for this skill — safe to delete and rebuild
   each run, not meant to be committed as final data.

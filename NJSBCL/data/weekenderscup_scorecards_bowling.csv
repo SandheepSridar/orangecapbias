@@ -1,10 +1,469 @@
 matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
+20755,Incredibulls,Phanikumar Bellamkonda,1,0,4,2,0,2.00,0,0
+20743,Jersey Superstars,Jenish Shah,4,1,19,15,2,3.75,5,0
+20743,Jersey Superstars,Vikas Chaudhary,3,0,11,10,1,3.33,1,0
+20743,Jersey Superstars,Mitul Patel,2,0,1,25,0,12.50,3,0
+20743,Jersey Superstars,Jitendra Singh*,3,0,10,29,0,9.67,3,0
+20743,Jersey Superstars,Vineet Luthra †,4,0,10,30,1,7.50,1,0
+20743,Pway Cubs,Deep Patel*,4,0,18,18,2,4.50,3,2
+20743,Pway Cubs,Dhaivat Patel †,4,0,10,33,0,8.25,1,0
+20743,Pway Cubs,Drumil Amin,2,0,4,26,0,13.00,1,0
+20743,Pway Cubs,Ronak Rana,3.1,0,7,23,1,7.26,3,0
+20743,Pway Cubs,Akshar Patel,2,0,4,13,0,6.50,1,0
+20710,RCW - Weekenders,Ronak Patel,4,0,14,16,2,4.00,0,0
+20710,RCW - Weekenders,Vipul Soni,4,0,15,25,4,6.25,1,0
+20710,RCW - Weekenders,Jitendra Arora,3,0,5,23,0,7.67,1,0
+20710,RCW - Weekenders,Kshitij Palria,4,0,10,32,2,8.00,2,0
+20710,RCW - Weekenders,Parag Jha,1,0,3,13,1,13.00,0,0
+20710,Vikings CC,Ajith Nalluri,1,0,5,4,0,4.00,3,0
+20710,Vikings CC,Harsha Bobbili,1,0,4,8,1,8.00,2,1
+20710,Vikings CC,Srinath Gentyala*,3,0,11,39,1,13.00,4,1
+20710,Vikings CC,Nakul Limbachiya,1,0,4,3,0,3.00,1,0
+20710,Vikings CC,Rajesh Rachakonda,3.1,1,15,16,1,5.05,4,3
+20710,Vikings CC,Raj Tiguti,4,0,13,32,2,8.00,1,0
+20705,Edison Super Kings,CK 12,4,0,17,21,3,5.25,3,0
+20705,Edison Super Kings,Sankar Gopalakrishnan,4,1,18,16,2,4.00,5,2
+20705,Edison Super Kings,Karthik Malaiyappan,4,0,14,25,2,6.25,5,0
+20705,Edison Super Kings,Puneet Mehndiratta,1.1,0,5,4,1,3.43,2,0
+20705,Edison Super Kings,S M SANTHOSH KROVVIDI,2,0,8,5,1,2.50,1,0
+20705,BLOODLINE,Vraj Patel 24,4,0,20,8,2,2.00,1,0
+20705,BLOODLINE,Nikhil Patel,2,0,9,9,1,4.50,0,0
+20705,BLOODLINE,Divya Patel,4,1,19,6,4,1.50,1,0
+20705,BLOODLINE,Meet Patel,3,0,12,13,2,4.33,1,0
+20705,BLOODLINE,Jishnu Patel,2,0,7,8,0,4.00,3,0
+20705,BLOODLINE,Devanshu Patel,0.2,0,2,0,1,0.00,0,0
+20704,Cricket Lovers,Rohan Sharma,3,0,10,20,2,6.67,1,0
+20704,Cricket Lovers,Pavan Rohith Midimilla,3,0,9,27,1,9.00,0,0
+20704,Cricket Lovers,Sheshnath Yadav,2.4,0,7,22,2,8.25,1,0
+20704,Cricket Lovers,Atul Gupta,2,0,5,23,0,11.50,3,1
+20704,Cricket Lovers,Muhammad Ansar,2,0,5,17,1,8.50,1,1
+20704,Cricket Lovers,Jitendra Purohit,3,0,9,18,3,6.00,0,0
+20704,NJ Titans,Sourav Poddar,4,0,11,30,4,7.50,6,0
+20704,NJ Titans,Nirav Pathak,3.3,0,12,31,1,8.86,6,0
+20704,NJ Titans,Darsh Ajmera*,3,0,7,41,0,13.67,3,0
+20704,NJ Titans,Harsh Mehta,4,0,15,26,1,6.50,3,0
+20697,VRK Gladiators,Naveen R Sripathi,2,0,8,16,1,8.00,3,0
+20697,VRK Gladiators,Vinit Bharadwaj,4,0,18,8,2,2.00,1,1
+20697,VRK Gladiators,Sandeep A Shetty,4,0,16,20,4,5.00,2,0
+20697,VRK Gladiators,Ankur Chaturvedi,3,0,14,7,2,2.33,0,0
+20697,VRK Gladiators,Harshad Patil*,3,0,10,13,0,4.33,2,0
+20697,Shreeji XI,Neel Patel-13*,2.4,0,8,17,0,6.38,0,0
+20697,Shreeji XI,Soham Brahmbhatt,2,0,9,10,1,5.00,0,0
+20697,Shreeji XI,Ravi Rathod,1,0,2,9,0,9.00,0,0
+20697,Shreeji XI,Jay Trivedi,3,0,10,16,4,5.33,1,1
+20697,Shreeji XI,Rajan Patel,2,0,7,13,1,6.50,0,0
+20694,GoldFinch Cricket Club,Harjot Singh Saini,4,0,19,7,1,1.75,0,0
+20694,GoldFinch Cricket Club,Srinath Nathan*,3,0,9,19,0,6.33,4,3
+20694,GoldFinch Cricket Club,Adil Hussain,4,0,17,16,6,4.00,4,0
+20694,GoldFinch Cricket Club,Kawaljeet Singh Matta,1.4,0,6,12,1,7.20,6,1
+20694,GoldFinch Cricket Club,Manu Sivakumar,3,1,12,11,0,3.67,4,0
+20694,GoldFinch Cricket Club,Amarjeet Saini,0.2,0,1,6,0,18.00,0,0
+20694,Jc Mavericks,Sankar Gudapati,3,0,15,8,2,2.67,2,1
+20694,Jc Mavericks,Raja Kondi,2,0,6,24,1,12.00,1,2
+20694,Jc Mavericks,Vishal Padhye,1,0,4,6,0,6.00,1,0
+20694,Jc Mavericks,Someswar Rao Manukonda,1,0,2,17,0,17.00,1,1
+20694,Jc Mavericks,Harshal Kane,1.1,0,4,6,2,5.14,1,1
+20694,Jc Mavericks,Jeevan Sai Vadlapudi,1,0,3,11,0,11.00,3,0
+20692,JERSEY TIGERS,Thirupathi Chella,4,0,10,32,3,8.00,2,0
+20692,JERSEY TIGERS,Shyam Upadhyay,4,0,6,48,0,12.00,3,0
+20692,JERSEY TIGERS,Pratik Singh,1,0,3,7,1,7.00,1,0
+20692,JERSEY TIGERS,Nischal Maniar,4,0,12,45,3,11.25,0,0
+20692,JERSEY TIGERS,Deepam Shakya,1,0,2,15,0,15.00,0,0
+20692,JERSEY TIGERS,Amrut Patnaik,1,0,0,29,0,29.00,0,0
+20692,JERSEY TIGERS,Anikesh Jain,1,0,0,24,0,24.00,0,2
+20692,Sreeshti Weekenders,Shuvradeep Mukherjee,4,1,14,10,2,2.50,0,0
+20692,Sreeshti Weekenders,Sanjay Dak,2,0,6,9,1,4.50,3,0
+20692,Sreeshti Weekenders,Sahil Mohammed,3,0,6,25,2,8.33,0,0
+20692,Sreeshti Weekenders,Kamal Choudhury,3,0,9,23,3,7.67,3,0
+20692,Sreeshti Weekenders,Monang Shah,1.1,0,5,2,2,1.71,0,0
+20689,Express Rangers,Mohan Venu,2,0,7,23,0,11.50,4,1
+20689,Express Rangers,Santhana Ramasamy,4,0,18,6,4,1.50,0,0
+20689,Express Rangers,Amandeep Bawa,2,0,7,7,1,3.50,1,0
+20689,Express Rangers,Veeraswamy Veeramreddy,1,0,2,10,0,10.00,1,0
+20689,Express Rangers,Saidu M Shaik*,4,0,15,10,2,2.50,1,0
+20689,Express Rangers,Shivananda Bashetter,1.5,0,7,6,3,3.27,2,0
+20689,Monroe United,Radhakrishna Kondapalli,4,0,13,25,1,6.25,4,0
+20689,Monroe United,Rishi Patel,4,1,16,12,2,3.00,2,1
+20689,Monroe United,Surya Kasara,2,0,7,19,1,9.50,1,0
+20689,Monroe United,Vikas Peddolla,0.5,0,3,7,1,8.40,1,0
+20687,Jersey City Dominators,Sujeeth Reddy,4,0,12,21,0,5.25,0,0
+20687,Jersey City Dominators,Sunit Shirke,4,0,15,16,3,4.00,1,0
+20687,Jersey City Dominators,Shubh Bhardwaj,4,0,12,31,0,7.75,2,0
+20687,Jersey City Dominators,Gautam Ahuja,1,0,3,12,2,12.00,1,0
+20687,Jersey City Dominators,Manoj Musale,3,0,10,24,2,8.00,0,1
+20687,Karma XI,Tanay Talukdar,4,0,16,13,3,3.25,2,0
+20687,Karma XI,Zubin Shah,4,0,12,22,1,5.50,0,1
+20687,Karma XI,Ajim Uddin,2,0,7,7,0,3.50,1,0
+20687,Karma XI,Tharak Ram,4,0,13,12,2,3.00,0,0
+20687,Karma XI,Pran Mukhopadhyay,1,0,3,10,0,10.00,1,0
+20687,Karma XI,Shrikant Patra,1,0,2,7,1,7.00,0,0
+20685,JC Warriors,Darshil Mistry*,4,0,12,21,4,5.25,1,0
+20685,JC Warriors,Pratik Mane,4,0,13,26,1,6.50,4,0
+20685,JC Warriors,Shrivats Vyas,4,0,11,26,0,6.50,7,1
+20685,JC Warriors,Asif Mohammed,4,1,20,8,1,2.00,3,0
+20685,Kranti Warriors,KISHAN PANCHAL*,1,0,2,7,0,7.00,0,0
+20685,Kranti Warriors,Svaraj Patel,3,0,11,12,2,4.00,1,1
+20685,Kranti Warriors,Nagesh S,3,0,13,8,2,2.67,0,0
+20685,Kranti Warriors,Sapan Patel,2,0,4,18,1,9.00,1,0
+20685,Kranti Warriors,Yuvraj Patel,1,0,2,33,0,33.00,0,2
+20685,Kranti Warriors,Prerak Mehta,0.1,0,0,6,0,36.00,0,0
+20682,Monroe Mavericks,Sakthivel Jagadeesan,3,1,15,4,1,1.33,1,0
+20682,Monroe Mavericks,Varun Gurram,2,0,8,5,0,2.50,0,0
+20682,Monroe Mavericks,Shikaib Rizvi,2,0,7,13,0,6.50,0,0
+20682,Monroe Mavericks,Bhanu Singaram*,3,1,14,4,2,1.33,0,0
+20682,Monroe Mavericks,Rakesh Kar,3,0,7,19,2,6.33,0,0
+20682,Monroe Mavericks,Sree Harsha Konduru,1,0,4,4,1,4.00,1,0
+20682,Monroe Mavericks,Rigved Nagarkar,0.5,0,4,1,2,1.20,0,0
+20682,Invincible CC,Sanket Rao,1,0,3,9,0,9.00,3,0
+20682,Invincible CC,Pratik Patel,1,0,3,8,0,8.00,1,0
+20682,Invincible CC,Hitesh Pandya,1,0,3,12,0,12.00,0,0
+20682,Invincible CC,Parthiv Parikh*,1,0,1,8,0,8.00,0,0
+20682,Invincible CC,Saurin Patel,1,0,1,13,0,13.00,0,0
+20682,Invincible CC,Sanket Thakkar,0.1,0,0,6,0,36.00,0,0
+20677,Morris Indians,Phani Yendluri,3,0,7,16,1,5.33,0,0
+20677,Morris Indians,Vyas Bellamkonda,4,0,12,38,0,9.50,2,1
+20677,Morris Indians,Venkat Guttikonda,3,0,6,44,0,14.67,4,0
+20677,Morris Indians,Visu Kondeti*,4,0,14,25,2,6.25,1,1
+20677,Morris Indians,Sumanth Basetty,2,0,4,20,1,10.00,2,0
+20677,Hudson Hurricanes Sultans,Pardeep Kumar,4,0,14,23,1,5.75,3,0
+20677,Hudson Hurricanes Sultans,Rohit Pradhan,4,0,12,24,4,6.00,2,0
+20677,Hudson Hurricanes Sultans,Pavan Poojar †,2,0,4,20,0,10.00,4,0
+20677,Hudson Hurricanes Sultans,Aashish Garg,3,0,8,25,2,8.33,1,0
+20677,Hudson Hurricanes Sultans,Ishan Abhinit,2,0,4,9,1,4.50,1,0
+20677,Hudson Hurricanes Sultans,Karan Nawani,1,0,3,13,0,13.00,0,0
+20675,Edison Warriors,Sharvil Patel,3,1,13,11,2,3.67,1,0
+20675,Edison Warriors,Khush (Khushal) Khamar,4,0,15,9,3,2.25,0,0
+20675,Edison Warriors,Jay Khamar,3,0,7,30,1,10.00,1,0
+20675,Edison Warriors,Varun Shah*,4,0,16,16,3,4.00,1,0
+20675,Edison Warriors,Anuj Patel,2,0,6,16,1,8.00,3,1
+20675,CHAMPIONS,Bipin Umarale,3,0,9,33,2,11.00,0,1
+20675,CHAMPIONS,Mitesh Shah,2,0,8,13,1,6.50,0,0
+20675,CHAMPIONS,Rohit Khatri,1,0,0,17,0,17.00,0,1
+20675,CHAMPIONS,Praveen Vyas,1,0,2,23,0,23.00,0,1
+20674,Em Sports Club,Siddesh Naik,4,0,11,37,1,9.25,1,1
+20674,Em Sports Club,Rahul Gundani*,4,0,14,31,2,7.75,3,1
+20674,Em Sports Club,Jay Tyagi,2,0,4,25,0,12.50,1,0
+20674,Em Sports Club,Nipun Triwadi,3,0,6,30,1,10.00,1,0
+20674,Em Sports Club,Jeevan Mahesh,3,0,6,34,0,11.33,1,0
+20674,Telugu Titans - Weekenders,Akshay Kumar Kemoju*,3,0,12,10,1,3.33,4,0
+20674,Telugu Titans - Weekenders,Sidd Chou,3,0,10,13,0,4.33,3,1
+20674,Telugu Titans - Weekenders,Ramesh Amaraneni,3,0,12,11,0,3.67,2,0
+20674,Telugu Titans - Weekenders,Krishna Kalakuntla,2,0,6,16,2,8.00,2,0
+20674,Telugu Titans - Weekenders,Mahesh Pondugala,3,0,12,12,4,4.00,4,0
+20674,Telugu Titans - Weekenders,Praneeth G,1,0,2,7,1,7.00,0,0
+20672,Woodlot Boyz,Prabhakar Yasaswi(Yash) V,2,0,8,7,2,3.50,3,0
+20672,Woodlot Boyz,Ananth Govind,2,0,4,35,1,17.50,0,2
+20672,Woodlot Boyz,Murali Virudhachalam,2,0,9,13,1,6.50,2,0
+20672,Woodlot Boyz,Viral Badheka,2,0,3,24,1,12.00,1,0
+20672,Woodlot Boyz,Manish Jain,2,0,6,12,1,6.00,1,1
+20672,Woodlot Boyz,Soumya Saha*,2,0,6,25,1,12.50,4,0
+20672,Woodlot Boyz,Karan Bhargav,1,0,2,19,0,19.00,0,0
+20672,Woodlot Boyz,Harshil Patel,3,0,8,37,0,12.33,4,0
+20672,NJ Boxers,Rajeev Mohan*,2,0,9,5,2,2.50,1,0
+20672,NJ Boxers,Rajesh Sahitya,3,0,6,22,0,7.33,4,0
+20672,NJ Boxers,Prasad Fernando,3,0,12,20,1,6.67,1,1
+20672,NJ Boxers,Anand Ajay,2,0,7,5,2,2.50,0,0
+20672,NJ Boxers,Jeet Patel,2,0,6,11,1,5.50,0,0
+20672,NJ Boxers,Jay Patel,1,0,2,15,0,15.00,0,0
+20672,NJ Boxers,Niaz Khan,1,0,4,2,1,2.00,0,0
+20672,NJ Boxers,Sumit Kapur,1,0,3,4,0,4.00,1,0
+20672,NJ Boxers,Mohammed Arif Lathif,1,0,3,4,0,4.00,0,0
+20671,SB Vikings Cricket Club,Vamshidhar Reddy,2,0,4,14,2,7.00,0,0
+20671,SB Vikings Cricket Club,Madesh Swaminaidu*,3,0,12,11,3,3.67,1,0
+20671,SB Vikings Cricket Club,Vijay Narayanan Nadar,2,0,2,17,0,8.50,0,0
+20671,SB Vikings Cricket Club,Balaji Rajagopalan,4,0,15,13,3,3.25,2,0
+20671,SB Vikings Cricket Club,Rupesh Singh,1,0,4,11,0,11.00,1,0
+20671,SB Vikings Cricket Club,Baskar Durai,0.5,0,4,3,1,3.60,1,1
+20671,Power Hitters,Yogesh Sharma,3,0,9,21,2,7.00,1,0
+20671,Power Hitters,Kaushik Dutta,3,0,13,13,0,4.33,2,1
+20671,Power Hitters,Ankit Patel,2,0,7,13,0,6.50,0,0
+20671,Power Hitters,SKumar M,1,0,3,15,1,15.00,2,0
+20671,Power Hitters,Rajesh Bansal,1,0,2,7,1,7.00,0,0
+20671,Power Hitters,Raghvendra Singh*,0.2,0,1,4,0,12.00,0,0
+20610,Incredibulls,Ranganath Thatikonda,3,0,8,34,0,11.33,2,0
+20610,Incredibulls,Phanikumar Bellamkonda,4,0,7,71,1,17.75,1,1
+20610,Incredibulls,Vaibhav Kunar,1,0,2,20,0,20.00,1,0
+20610,Incredibulls,Sathish Kuchi,1,0,1,28,0,28.00,0,1
+20610,Incredibulls,Shehbaz Saiyed,3,0,10,22,1,7.33,1,0
+20610,Incredibulls,Pavan Kumar Reddy Suram,4,0,11,45,1,11.25,2,0
+20610,Pway Cubs,Neel Patel,4,0,19,9,4,2.25,3,0
+20610,Pway Cubs,Vraj Shah,2,0,6,11,1,5.50,0,0
+20610,Pway Cubs,Ronak Rana,2,0,9,6,1,3.00,0,0
+20610,Pway Cubs,Komal(KC) Patel,1,0,5,4,2,4.00,0,0
+20607,Jersey Superstars,Fenil Shah,2.2,0,6,20,3,8.57,0,0
+20607,Jersey Superstars,Parth Shah,1,0,4,7,0,7.00,0,0
+20607,Jersey Superstars,Arun Prasad G,4,0,13,21,2,5.25,2,0
+20607,Jersey Superstars,Vineet Luthra* †,4,0,16,26,2,6.50,1,0
+20607,Jersey Superstars,Vikas Chaudhary,4,1,15,17,3,4.25,0,1
+20607,United Falcons,Alap Shah*,1,0,4,4,0,4.00,2,0
+20607,United Falcons,Dhwanil Patel,3,0,10,17,2,5.67,0,0
+20607,United Falcons,Neel Joshi,1,0,5,2,0,2.00,1,0
+20607,United Falcons,Virendra D,1,0,6,1,1,1.00,1,0
+20607,United Falcons,Sanketh Shetty,4,0,13,26,5,6.50,3,0
+20607,United Falcons,Nikunj Malpani,2,0,5,19,0,9.50,0,0
+20607,United Falcons,Alay Shah,4,0,13,25,0,6.25,1,0
+20604,Nj Warriors,Kalpesh Mehta,3,0,13,19,1,6.33,4,0
+20604,Nj Warriors,Vamsi Reddy,4,1,21,10,3,2.50,2,0
+20604,Nj Warriors,Rohit Sharma*,4,0,10,37,2,9.25,1,0
+20604,Nj Warriors,Amit Kumar,3,0,10,29,1,9.67,1,0
+20604,Nj Warriors,Sanket Singhania,1,0,3,8,1,8.00,0,0
+20604,Nj Warriors,Gyan Singh,1,0,5,1,0,1.00,0,0
+20604,Giant Slayers,Sukhwinder Singh,3,0,10,24,2,8.00,3,0
+20604,Giant Slayers,Gurudutt Patel,2,0,7,12,0,6.00,1,0
+20604,Giant Slayers,Jasmeet Singh,4,0,16,14,5,3.50,2,0
+20604,Giant Slayers,Nasir Khan,4,0,15,23,0,5.75,3,0
+20604,Giant Slayers,Ronak Patel (GS),2.2,0,9,20,2,8.57,0,0
+20601,Pmcc,Rajeev Kumar,2,0,6,8,1,4.00,0,1
+20601,Pmcc,Manik Virmani,3,0,11,22,2,7.33,2,0
+20601,Pmcc,Abhishek Dutta,4,0,14,20,5,5.00,0,1
+20601,Pmcc,Chirag Pandya,2,0,7,13,0,6.50,0,1
+20601,Pmcc,Prashant Desarda,2,0,6,17,1,8.50,0,1
+20601,Pmcc,Manoj Ghuge,3,0,7,24,0,8.00,0,1
+20601,MCC - Weekenders,Tejas Patel,2,0,6,13,0,6.50,1,0
+20601,MCC - Weekenders,Varun Chhabra,4,0,15,13,4,3.25,0,0
+20601,MCC - Weekenders,Shoaib Jafri,4,0,13,16,2,4.00,2,0
+20601,MCC - Weekenders,Akash Rao,4,0,16,9,1,2.25,0,0
+20601,MCC - Weekenders,Mohammed Suhail,1,0,2,14,1,14.00,2,1
+20601,MCC - Weekenders,Hamza Shahid,1,0,4,5,1,5.00,0,0
+20600,Jersey Sloggers,Jeyaram Ramadoss*,1,0,2,9,0,9.00,0,0
+20600,Jersey Sloggers,Raghuveer Bethelli,4,0,15,9,1,2.25,0,0
+20600,Jersey Sloggers,Govind Somvanshi,4,1,19,8,3,2.00,2,0
+20600,Jersey Sloggers,Satish Kumar Durgam,3.4,0,17,10,4,2.73,0,0
+20600,Jersey Sloggers,Naveen Kumar Guntupalli,2,0,8,9,1,4.50,0,0
+20600,Bethak Titans,Daksh Bhakta,2,1,10,13,2,6.50,1,0
+20600,Bethak Titans,Fenil Shah,1,0,1,24,0,24.00,1,0
+20600,Bethak Titans,Sagar Ranot,0.2,0,2,9,0,27.00,2,1
+20597,TRIDENTS XI,Harish (Harry)*,2,0,9,5,2,2.50,2,0
+20597,TRIDENTS XI,Tushar Patel †,4,1,17,8,4,2.00,1,0
+20597,TRIDENTS XI,Varrun Phanda,1,0,2,6,0,6.00,2,0
+20597,TRIDENTS XI,Janak Patel,2,0,7,11,0,5.50,2,0
+20597,TRIDENTS XI,Keyur Patel,2.2,1,12,13,2,5.57,1,0
+20597,TRIDENTS XI,Mirav Patel,3,0,14,8,1,2.67,2,1
+20597,Mag11,Harshal Ghangale,4,0,14,15,2,3.75,1,0
+20597,Mag11,Naveen Natarajan,3,0,9,14,1,4.67,5,0
+20597,Mag11,Harsh Shukla,3,0,12,7,0,2.33,0,0
+20597,Mag11,Ramana Jajula,2,0,5,15,1,7.50,2,0
+20597,Mag11,Sai Desi,0.1,0,0,1,0,6.00,0,0
+20594,Phoenix Flyers,Sai Ch,3.2,0,14,12,1,3.60,1,1
+20594,Phoenix Flyers,Anand Alagappan,3,0,8,15,1,5.00,0,2
+20594,Phoenix Flyers,Rajesh Kumar,2,0,7,7,0,3.50,1,0
+20594,Phoenix Flyers,Sunil Gurujala,3,0,16,4,5,1.33,2,0
+20594,Phoenix Flyers,Abhishek Varma,2,0,8,8,1,4.00,3,1
+20594,Sparta XI,Roop Yekollu*,3,1,13,9,1,3.00,0,0
+20594,Sparta XI,Geethal Withanachchi,4,1,19,11,2,2.75,0,0
+20594,Sparta XI,Niran Perera,2.2,1,9,13,3,5.57,0,1
+20594,Sparta XI,Piyush Parashar,1,0,2,18,0,18.00,0,2
+20592,NJ Marvels,Mani V*,3,0,10,11,1,3.67,0,0
+20592,NJ Marvels,Narendran Suruliappan,4,0,14,17,1,4.25,2,0
+20592,NJ Marvels,Ranga Rao Kosaraju,4,0,13,22,3,5.50,0,0
+20592,NJ Marvels,Surender Kumar,4,1,18,11,3,2.75,1,0
+20592,NJ Marvels,Gowtham Lingampalli,1,0,5,6,0,6.00,0,0
+20592,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,3.5,0,10,26,0,6.78,2,0
+20592,Thunder Strikers Weekenders,Paritosh Fulara,4,1,21,5,1,1.25,1,0
+20592,Thunder Strikers Weekenders,Nishant Pandit,1,0,2,18,0,18.00,1,0
+20592,Thunder Strikers Weekenders,VC Uttez Chitluri,4,1,18,11,4,2.75,0,0
+20592,Thunder Strikers Weekenders,Praveen Barala,2,1,9,9,1,4.50,0,0
+20588,Perryville Panthers,Anil Paduchuri,4,0,13,31,2,7.75,4,1
+20588,Perryville Panthers,Venu Sunkavalli,4,0,8,32,2,8.00,0,0
+20588,Perryville Panthers,Chaitanya Boddu*,4,1,18,8,4,2.00,2,0
+20588,Perryville Panthers,Ishwar Girase,4,0,14,24,0,6.00,2,0
+20588,Plainsboro Panthers,Dileep Linga,4,0,15,13,3,3.25,4,0
+20588,Plainsboro Panthers,Ranga Krishna Tipirneni,4,0,15,20,1,5.00,7,1
+20588,Plainsboro Panthers,VIJAYANAND PONNADA,4,0,17,8,3,2.00,1,0
+20588,Plainsboro Panthers,Karan N*,3,0,11,17,0,5.67,5,1
+20588,Plainsboro Panthers,Suresh Sri,1,0,2,8,0,8.00,1,1
+20587,Parsippany Super Kings,Jeet Pawar,2,0,8,10,0,5.00,3,1
+20587,Parsippany Super Kings,Vamsi Krish Sanneboina,4,0,15,12,2,3.00,2,0
+20587,Parsippany Super Kings,Shiva Charan,3.3,0,16,10,2,2.86,2,0
+20587,Parsippany Super Kings,Pradeep Reddy Patil,2,0,8,5,1,2.50,1,0
+20587,Parsippany Super Kings,Manohar Chembeti,1,0,2,7,0,7.00,0,0
+20587,Parsippany Super Kings,Kannan Shantharam,2,0,6,15,2,7.50,4,0
+20587,SB Vikings Challengers Cricket Club,Srini Yandrapu,2,0,7,13,0,6.50,0,0
+20587,SB Vikings Challengers Cricket Club,Dhanushka Haputhanthri,3,0,10,12,1,4.00,2,0
+20587,SB Vikings Challengers Cricket Club,Tamil R*,2.5,0,8,24,0,8.47,0,0
+20587,SB Vikings Challengers Cricket Club,Chandra Narayanaswamy,1,0,3,13,1,13.00,3,0
+20581,Cricket Warriors,Amit Patel,3,1,13,11,2,3.67,1,0
+20581,Cricket Warriors,Bhadresh Patel,4,0,12,25,4,6.25,7,0
+20581,Cricket Warriors,Sunil Subeydhi,2,0,5,22,1,11.00,0,1
+20581,Cricket Warriors,Miral Parmar*,4,0,12,22,2,5.50,1,0
+20581,Cricket Warriors,Dhaval Patel,2.3,0,6,15,1,6.00,0,0
+20581,Secaucus Fighters,Keyur Barot,4,1,13,16,4,4.00,2,0
+20581,Secaucus Fighters,Shailesh Pandya,2,0,6,17,0,8.50,0,0
+20581,Secaucus Fighters,Varun Bhat*,4,0,13,15,2,3.75,3,0
+20581,Secaucus Fighters,Raghav Arora,3.3,0,11,29,3,8.29,1,0
+20581,Secaucus Fighters,Pathik Patel,1,0,0,9,0,9.00,1,0
+20579,Edison Riders,Chandrasekhar A,2,0,9,3,0,1.50,0,0
+20579,Edison Riders,Gopinadh Rayala,2,0,6,16,2,8.00,1,0
+20579,Edison Riders,Raghava Kalyan Inguva,2,0,9,6,1,3.00,0,0
+20579,Edison Riders,Satyanarayana Manne,4,0,20,9,5,2.25,5,0
+20579,Edison Riders,Shiva Bandla,2,0,6,12,2,6.00,2,0
+20579,Newport Narcos,Kabir Goswami,2,0,4,10,1,5.00,1,0
+20579,Newport Narcos,Shubham Bhutada,1,0,4,11,0,11.00,0,1
+20579,Newport Narcos,Nitish Dabas,2,0,7,9,0,4.50,0,1
+20579,Newport Narcos,Chet Kalra*,1,0,2,13,0,13.00,1,0
+20579,Newport Narcos,Rabmeet Singh,0.3,0,0,4,0,8.00,0,0
+20573,Bayonne CC,Udhaya Kumar Bagavathiappan,3.2,1,17,8,3,2.40,0,0
+20573,Bayonne CC,Karthik Murugesan,3,0,12,15,2,5.00,0,0
+20573,Bayonne CC,Bhargava Reddy Ravuru,4,1,14,20,2,5.00,2,0
+20573,Bayonne CC,Prakash Baskar*,4,0,14,17,3,4.25,1,0
+20573,Staten Island Strikers,Rejo Raju,4,0,12,16,0,4.00,1,0
+20573,Staten Island Strikers,Midhul Jacob,4,0,15,11,1,2.75,2,0
+20573,Staten Island Strikers,Sajin Shaji,4,0,17,13,3,3.25,1,2
+20573,Staten Island Strikers,Sibu Varghese,1,0,2,9,0,9.00,0,0
+20573,Staten Island Strikers,Mathew James,3,0,9,10,0,3.33,0,0
+20559,Mag11,Naren S,4,0,16,17,4,4.25,1,0
+20559,Mag11,Bharat Raj Pittala,2,0,6,7,0,3.50,1,0
+20559,Mag11,Harsh Shukla,2,0,9,7,3,3.50,1,0
+20559,Mag11,Ramana Jajula,1,0,5,1,0,1.00,0,0
+20559,Mag11,Rajesh Kumar Tammishetty,1,0,5,2,1,2.00,1,0
+20559,Mag11,Manoj P,0.2,0,2,0,1,0.00,0,0
+20559,PCA Jr.,Joyal Patel GCC,2,0,5,15,1,7.50,2,0
+20559,PCA Jr.,Chintan Patel*,2,0,6,16,1,8.00,2,0
+20559,PCA Jr.,Kirti Patel,1,0,4,2,0,2.00,0,0
+20559,PCA Jr.,Kirtan Patel,0.1,0,0,6,0,36.00,0,0
+20554,Bayonne CC,Pratheep Manivel,2,0,6,14,0,7.00,0,2
+20554,Bayonne CC,Mohan Kumar Undavalli,4,0,19,14,3,3.50,2,1
+20554,Bayonne CC,Udhaya Kumar Bagavathiappan,4,0,14,35,0,8.75,3,0
+20554,Bayonne CC,Bhargava Reddy Ravuru,4,0,12,15,1,3.75,0,0
+20554,Bayonne CC,Gokul Pt,2,0,5,13,2,6.50,3,0
+20554,Bethak Titans,Fenil Shah,4,0,12,19,2,4.75,4,0
+20554,Bethak Titans,Daksh Bhakta,4,0,16,18,2,4.50,4,0
+20554,Bethak Titans,Sneh Patel (sagar),2,0,7,14,0,7.00,4,0
+20554,Bethak Titans,Aayush Patel,2,0,8,19,2,9.50,3,1
+20554,Bethak Titans,Shubham Patel,4,0,11,18,1,4.50,4,0
+20553,SB Vikings Challengers Cricket Club,Srini Yandrapu,4,0,8,32,2,8.00,4,0
+20553,SB Vikings Challengers Cricket Club,Dhanushka Haputhanthri,4,0,10,18,0,4.50,0,0
+20553,SB Vikings Challengers Cricket Club,Baskar Bala,3.4,0,13,19,5,5.18,2,0
+20553,SB Vikings Challengers Cricket Club,Tamil R*,4,0,9,25,2,6.25,1,0
+20553,Newport Narcos,Shubham Bhutada,4,0,16,12,3,3.00,1,0
+20553,Newport Narcos,Anuj Thaker,1,0,2,7,0,7.00,0,0
+20553,Newport Narcos,Kabir Goswami,4,0,14,21,2,5.25,8,0
+20553,Newport Narcos,Nitish Dabas,3,0,10,23,0,7.67,7,1
+20553,Newport Narcos,Chet Kalra*,4,0,10,31,1,7.75,2,0
+20543,Parsippany Super Kings,Jeet Pawar,4,0,17,15,1,3.75,5,0
+20543,Parsippany Super Kings,Praveen Reddy Nandyala,1,0,3,9,0,9.00,1,0
+20543,Parsippany Super Kings,Shiva Charan,4,0,14,11,1,2.75,1,0
+20543,Parsippany Super Kings,Naveen Rayal,4,0,15,18,3,4.50,3,0
+20543,Parsippany Super Kings,Pradeep Reddy Patil,2,0,9,4,0,2.00,1,0
+20543,Parsippany Super Kings,Srinath Reddy Reddy,1,0,3,4,0,4.00,1,0
+20543,Robbinsville Jaguars,Anoop Athayil*,2,0,7,8,0,4.00,1,1
+20543,Robbinsville Jaguars,Hardik Jani,2,0,7,19,1,9.50,4,0
+20543,Robbinsville Jaguars,Yashkumar Patel,2,0,6,18,0,9.00,0,1
+20543,Robbinsville Jaguars,Parth Patel,2,0,5,7,0,3.50,0,0
+20543,Robbinsville Jaguars,Sandeep Nair,1,0,2,6,0,6.00,2,0
+20543,Robbinsville Jaguars,Chetan Patel,0.2,0,1,4,0,12.00,0,0
+20540,Pmcc,Rajeev Kumar,4,0,15,10,3,2.50,1,0
+20540,Pmcc,Chirag Pandya,2,0,8,9,0,4.50,1,0
+20540,Pmcc,Revanth Pakyala*,3,0,7,15,0,5.00,1,0
+20540,Pmcc,Prashant Desarda,3,0,8,24,3,8.00,0,0
+20540,Pmcc,Abhishek Dutta,3,0,10,11,1,3.67,2,0
+20540,Pmcc,Venkat Chivukula,1,0,1,14,0,14.00,1,1
+20540,Plainsboro Panthers,Dileep Linga,3.4,0,18,8,2,2.18,3,0
+20540,Plainsboro Panthers,Ranga Krishna Tipirneni,3,0,7,11,1,3.67,3,0
+20540,Plainsboro Panthers,VIJAYANAND PONNADA,4,0,13,14,4,3.50,1,0
+20540,Plainsboro Panthers,Karan N*,2,0,7,16,1,8.00,0,1
+20540,Plainsboro Panthers,Anurag Kumar,2,0,7,10,1,5.00,2,0
+20539,Waterfront Warriors,Siddhant Kumar,2,0,5,12,0,6.00,1,0
+20539,Waterfront Warriors,Malav Shah,4,0,19,5,2,1.25,0,0
+20539,Waterfront Warriors,Ajinkya Pradhan,4,0,15,24,1,6.00,0,0
+20539,Waterfront Warriors,Yuvraj Rajpurohit,4,0,11,23,3,5.75,3,0
+20539,Waterfront Warriors,Amanraj Gupta,2,0,4,18,1,9.00,2,0
+20539,NJ Marvels,Gowtham Lingampalli,1,0,3,3,0,3.00,0,0
+20539,NJ Marvels,Kirupa S,2,0,7,6,3,3.00,0,0
+20539,NJ Marvels,Naveen Reddy,1,0,4,3,0,3.00,1,0
+20539,NJ Marvels,Ranga Rao Kosaraju,4,0,10,25,3,6.25,0,0
+20539,NJ Marvels,Mitul Patel,4,0,13,20,1,5.00,0,1
+20539,NJ Marvels,Surender Kumar,4,0,13,12,1,3.00,1,0
+20536,MCC - Weekenders,Mohammed Usman,3,0,9,19,2,6.33,0,2
+20536,MCC - Weekenders,Akash Rao,4,0,11,26,1,6.50,5,1
+20536,MCC - Weekenders,Shoaib Jafri,3,0,10,12,1,4.00,1,0
+20536,MCC - Weekenders,Hamza Shahid,3,0,8,22,2,7.33,2,0
+20536,MCC - Weekenders,Tejas Patel,3,0,9,20,1,6.67,3,1
+20536,Phoenix Flyers,Sai Ch,4,0,11,25,1,6.25,2,0
+20536,Phoenix Flyers,Abhishek Varma,1,0,2,9,0,9.00,2,0
+20536,Phoenix Flyers,Sunil Gurujala,3,0,9,17,2,5.67,2,0
+20536,Phoenix Flyers,Gopi Periyasamy,4,0,16,22,3,5.50,6,2
+20536,Phoenix Flyers,Anup Gondkar,4,0,13,22,0,5.50,1,0
+20534,Nj Warriors,Rohit Sharma*,3,0,7,29,1,9.67,1,0
+20534,Nj Warriors,Praveen Mandya,1,0,1,28,0,28.00,0,1
+20534,Nj Warriors,Vamsi Reddy,2,0,7,20,0,10.00,1,0
+20534,Nj Warriors,Kalpesh Mehta,3,0,11,19,3,6.33,2,0
+20534,Nj Warriors,Gyan Singh,4,0,13,30,4,7.50,6,0
+20534,Nj Warriors,Sanket Singhania,3,0,6,27,0,9.00,3,0
+20534,Pway Cubs,Neel Patel,4,0,15,24,2,6.00,2,0
+20534,Pway Cubs,Vraj Shah,1,0,1,12,0,12.00,0,2
+20534,Pway Cubs,Deep Patel*,2,0,5,23,0,11.50,2,1
+20534,Pway Cubs,Dhaivat Patel †,4,0,14,20,3,5.00,1,2
+20534,Pway Cubs,Ronak Rana,4,0,15,31,3,7.75,3,0
+20534,Pway Cubs,Akshar Patel,1,0,5,10,0,10.00,7,1
+20528,TRIDENTS XI,Anmol Sharma,2,0,5,11,2,5.50,1,0
+20528,TRIDENTS XI,Anil T,1,0,3,6,0,6.00,2,0
+20528,TRIDENTS XI,Tushar Patel* †,1,0,4,3,0,3.00,1,0
+20528,TRIDENTS XI,Janak Patel,4,0,14,14,2,3.50,1,0
+20528,TRIDENTS XI,Keyur Patel,3,1,13,7,1,2.33,0,1
+20528,TRIDENTS XI,Mirav Patel,2,0,6,10,1,5.00,2,0
+20528,TRIDENTS XI,Manav Parikh,2.5,0,9,15,3,5.29,2,0
+20528,Secaucus Fighters,Arun Rajasekaran,3,0,10,20,1,6.67,1,0
+20528,Secaucus Fighters,Varun Bhat*,4,0,16,24,3,6.00,1,0
+20528,Secaucus Fighters,Tirth Lakhani,4,0,13,15,1,3.75,2,0
+20528,Secaucus Fighters,Khush Patel,1,0,1,8,0,8.00,1,1
+20525,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,3.4,0,14,23,2,6.27,4,0
+20525,Thunder Strikers Weekenders,Paritosh Fulara,4,1,20,4,4,1.00,0,0
+20525,Thunder Strikers Weekenders,Nishant Pandit,4,1,13,14,2,3.50,0,0
+20525,Thunder Strikers Weekenders,Subhajit Mitra,3,0,10,12,1,4.00,1,0
+20525,Thunder Strikers Weekenders,Prashant Rajput,1,0,3,3,0,3.00,0,0
+20525,Giant Slayers,Nasir Khan,4,0,14,12,1,3.00,0,0
+20525,Giant Slayers,Ronak Patel,1,0,2,13,0,13.00,0,1
+20525,Giant Slayers,Sukhwinder Singh,1.4,0,3,14,1,8.40,1,1
+20525,Giant Slayers,Priyankk Patel,2,1,7,8,1,4.00,0,0
+20525,Giant Slayers,Lovely Singh,1,0,2,11,1,11.00,2,0
+20523,Perryville Panthers,Anil Paduchuri,4,0,10,26,1,6.50,1,0
+20523,Perryville Panthers,Venu Sunkavalli,4,0,14,26,0,6.50,1,0
+20523,Perryville Panthers,Chaitanya Boddu*,4,0,12,29,3,7.25,6,0
+20523,Perryville Panthers,Ishwar Girase,4,0,13,37,3,9.25,5,1
+20523,Cricket Warriors,Amit Patel,1,0,1,11,0,11.00,0,0
+20523,Cricket Warriors,Miral Parmar*,4,0,10,22,2,5.50,2,0
+20523,Cricket Warriors,Dipen Patel,4,0,12,29,2,7.25,2,0
+20523,Cricket Warriors,Sunil Subeydhi,4,0,16,22,2,5.50,0,0
+20523,Cricket Warriors,Bhadresh Patel,1,0,2,14,0,14.00,1,2
+20523,Cricket Warriors,Dhaval Patel,2,0,5,11,1,5.50,1,0
+20513,United Falcons,Hemish Kapadia,1,0,5,1,0,1.00,0,0
+20513,United Falcons,Alap Shah*,4,0,10,18,0,4.50,0,0
+20513,United Falcons,Dhwanil Patel,4,0,13,27,3,6.75,0,1
+20513,United Falcons,Alay Shah,4,0,10,18,1,4.50,3,0
+20513,United Falcons,Jiteen S,2,0,4,13,0,6.50,0,0
+20513,Incredibulls,Phanikumar Bellamkonda,3.5,0,11,26,2,6.78,0,0
+20513,Incredibulls,Ranganath Thatikonda,1,0,3,11,0,11.00,0,0
+20513,Incredibulls,Sathish Kuchi,1,0,0,19,0,19.00,0,0
+20513,Incredibulls,Gaurav Kumar,1,0,2,19,0,19.00,0,1
+20513,Incredibulls,Ajay Dhanekula*,2,0,5,13,1,6.50,0,0
+20512,Edison Riders,Gopinadh Rayala,4,0,10,25,1,6.25,3,1
+20512,Edison Riders,Raghava Kalyan Inguva,4,0,14,22,2,5.50,0,0
+20512,Edison Riders,Satyanarayana Manne,4,0,12,18,3,4.50,1,0
+20512,Edison Riders,Koti Yadlapalli,4,0,12,30,1,7.50,9,0
+20512,Jersey Sloggers,Raghuveer Bethelli*,3,0,7,16,0,5.33,5,0
+20512,Jersey Sloggers,Kaushal Shah,2,1,10,6,1,3.00,1,0
+20512,Jersey Sloggers,Satish Kumar Durgam,4,1,20,5,3,1.25,1,0
+20512,Jersey Sloggers,Apurva Patel (Ray),2,0,8,18,2,9.00,3,0
+20512,Jersey Sloggers,Govind Somvanshi,2,0,9,4,2,2.00,1,0
+20512,Jersey Sloggers,Naveen Kumar Guntupalli,1,1,6,0,0,0.00,0,0
+20512,Jersey Sloggers,Gagan Reddy,1,0,4,5,1,5.00,0,0
+20511,Sparta XI,Manoj D,3,0,5,26,0,8.67,1,0
+20511,Sparta XI,Niran Perera,4,0,14,17,1,4.25,1,1
+20511,Sparta XI,Roop Yekollu*,4,1,16,16,2,4.00,0,0
+20511,Sparta XI,Geethal Withanachchi,4,0,15,10,2,2.50,0,0
+20511,Sparta XI,Piyush Parashar,1,0,3,3,1,3.00,0,0
+20511,Staten Island Strikers,Subin Moni,3,0,11,12,1,4.00,2,0
+20511,Staten Island Strikers,Sajin Shaji,2.2,0,6,21,1,9.00,2,0
+20511,Staten Island Strikers,Midhul Jacob,3,0,6,21,0,7.00,2,0
+20511,Staten Island Strikers,Rejo Raju,2,0,7,8,0,4.00,2,0
+20511,Staten Island Strikers,Sibu Varghese,1,0,1,11,0,11.00,1,0
 20501,Jc Mavericks,Sankar Gudapati,4,0,14,23,2,5.75,3,0
 20501,Jc Mavericks,Vishal Padhye,2,0,8,16,1,8.00,1,0
 20501,Jc Mavericks,Raja Kondi,3,0,11,25,1,8.33,3,1
 20501,Jc Mavericks,Someswar Rao Manukonda,3,0,12,17,4,5.67,3,0
 20501,Jc Mavericks,Mohan Sai Bandarupalli,3,0,13,8,2,2.67,3,0
-20501,VRK Gladiators,Sandeep I Shetty,2,1,11,1,1,0.50,0,0
+20501,VRK Gladiators,Sandeep A Shetty,2,1,11,1,1,0.50,0,0
 20501,VRK Gladiators,Suraj Pai Madhukar,2,0,6,10,0,5.00,4,0
 20501,VRK Gladiators,Vinit Bharadwaj,4,1,17,13,2,3.25,0,0
 20501,VRK Gladiators,Harshad Patil*,4,0,11,38,3,9.50,5,0
@@ -22,11 +481,11 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20495,Hudson Hurricanes Sultans,Rohit Pradhan,1,0,1,10,0,10.00,0,0
 20492,Karma XI,Tanay Talukdar,3,0,13,10,1,3.33,0,0
 20492,Karma XI,Dheeraj Dubey,3,0,9,16,2,5.33,1,0
-20492,Karma XI,Sourav Mazumder,3,0,12,10,2,3.33,2,0
-20492,Karma XI,Zubin Shah,3.5,0,14,25,3,6.52,1,0
+20492,Karma XI,Sourav Mazumder,3.5,0,14,15,3,3.91,3,0
+20492,Karma XI,Zubin Shah,3,0,12,20,2,6.67,0,0
 20492,Karma XI,Tharak Ram,3,1,15,3,1,1.00,0,0
 20492,BLOODLINE,Divya Patel,3.2,1,16,13,2,3.90,4,0
-20492,BLOODLINE,Vraj Patel*,4,0,15,15,1,3.75,2,0
+20492,BLOODLINE,Vraj Patel 24*,4,0,15,15,1,3.75,2,0
 20492,BLOODLINE,Udayan Patel,2,0,2,11,0,5.50,0,0
 20492,BLOODLINE,Vismay Suthar,2,0,7,10,1,5.00,2,0
 20492,BLOODLINE,Devanshu Patel,2,0,4,16,0,8.00,1,0
@@ -41,6 +500,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20489,Vikings CC,Ajith Nalluri,1,0,3,11,0,11.00,0,0
 20489,Vikings CC,Manikanta Arumilli,4,0,14,19,3,4.75,0,0
 20489,Vikings CC,Nanje Gowda,2.3,0,12,5,2,2.00,0,1
+20487,Sreeshti Weekenders,Mahesh Nagappa,3,0,10,13,0,4.33,0,0
+20487,Sreeshti Weekenders,Amol Manjrekar*,2,0,2,13,0,6.50,1,0
+20487,Sreeshti Weekenders,Vipin Sharma,2,0,4,18,0,9.00,2,0
+20487,Sreeshti Weekenders,Ravish Parekh,4,0,17,25,4,6.25,3,0
+20487,Sreeshti Weekenders,Kamal Choudhury,3.5,0,14,24,5,6.26,2,0
+20487,Sreeshti Weekenders,Anal Patel,1,0,3,9,0,9.00,3,0
+20487,Kranti Warriors,Achal Shah,4,1,18,16,2,4.00,0,0
+20487,Kranti Warriors,Abhik Patel,2,0,5,16,1,8.00,1,0
+20487,Kranti Warriors,Nagesh S,2,0,8,4,3,2.00,0,0
+20487,Kranti Warriors,Axat Patel,3.4,0,13,10,4,2.73,0,0
+20487,Kranti Warriors,Harsh Patel,4,0,12,21,0,5.25,0,0
 20476,Edison Super Kings,Chandrashekaran Marisamy,1,0,2,10,0,10.00,0,0
 20476,Edison Super Kings,Karthik Malaiyappan,4,0,9,24,2,6.00,0,1
 20476,Edison Super Kings,CK 12,3,0,9,16,1,5.33,1,0
@@ -73,7 +543,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20474,Jersey City Dominators,Aman Deshmukh,2,0,8,4,1,2.00,0,0
 20474,Jersey City Dominators,Sunit Shirke,2,0,5,16,0,8.00,3,2
 20474,Jersey City Dominators,Shubh Bhardwaj,4,0,12,24,1,6.00,3,0
-20474,Jersey City Dominators,Ajmeera Pavankumar,2,0,7,8,0,4.00,3,0
+20474,Jersey City Dominators,Pavankumar Ajmeera,2,0,7,8,0,4.00,3,0
 20474,Jersey City Dominators,Manoj Musale,1.2,0,5,7,0,5.25,1,2
 20471,Em Sports Club,Siddesh Naik,2,0,7,10,1,5.00,1,0
 20471,Em Sports Club,Vinay Patel,3,1,11,19,1,6.33,1,1
@@ -109,6 +579,42 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20469,Shreeji XI,Neel Patel-13,4,1,18,14,7,3.50,2,0
 20469,Shreeji XI,Ujjaval Patel*,4,1,18,11,1,2.75,0,0
 20469,Shreeji XI,Hemil Patel,0.4,0,3,1,2,1.50,0,0
+20468,Iselin Warriors,Dhrumil Shah,4,0,15,12,2,3.00,1,0
+20468,Iselin Warriors,Meghan Shah,3,1,11,13,1,4.33,0,0
+20468,Iselin Warriors,Sherry Singh,4,0,15,20,0,5.00,2,0
+20468,Iselin Warriors,Ishan Shah,4,0,13,25,4,6.25,3,1
+20468,Iselin Warriors,Kashish Shah †,1,0,4,14,0,14.00,2,0
+20468,Monroe Mavericks,Sakthivel Jagadeesan,2,0,6,13,0,6.50,0,1
+20468,Monroe Mavericks,Abdul Razak Bellary,3,0,9,17,1,5.67,0,0
+20468,Monroe Mavericks,Sarbjitsingh Sahota,4,2,20,5,1,1.25,1,0
+20468,Monroe Mavericks,Rakesh Kar,2,0,5,24,0,12.00,0,1
+20468,Monroe Mavericks,Shikaib Rizvi,1,0,3,15,0,15.00,1,0
+20468,Monroe Mavericks,Yogesh Utekar,1,0,4,7,0,7.00,0,0
+20468,Monroe Mavericks,Madhav Reddy,0.3,0,1,3,1,6.00,0,0
+20467,NJKnights,Praneeth Kumar,3,0,8,24,1,8.00,0,1
+20467,NJKnights,Sanjay Geepalayam,4,0,12,15,0,3.75,1,1
+20467,NJKnights,Bhuvan Arun,4,0,11,24,2,6.00,1,1
+20467,NJKnights,Tej Singh,3,0,11,9,1,3.00,2,0
+20467,NJKnights,Pradeep Kumar,2,0,7,6,2,3.00,0,0
+20467,Express Rangers,Lovedeep Singh,2,0,7,8,0,4.00,1,1
+20467,Express Rangers,Veeraswamy Veeramreddy,3.4,0,15,13,3,3.55,0,0
+20467,Express Rangers,Amandeep Bawa,1,0,4,11,1,11.00,1,0
+20467,Express Rangers,Mohan Venu,1,0,5,8,0,8.00,2,0
+20467,Express Rangers,Saidu M Shaik*,4,0,17,9,2,2.25,1,0
+20467,Express Rangers,Praveen Rajappan †,1,0,2,5,0,5.00,1,0
+20467,Express Rangers,Shivananda Bashetter,3,0,14,7,3,2.33,3,0
+20462,Monroe United,Radhakrishna Kondapalli,4,0,12,23,2,5.75,0,1
+20462,Monroe United,Hemal Makadia,4,1,15,39,2,9.75,3,1
+20462,Monroe United,Sunil Shetty,4,1,16,18,2,4.50,2,0
+20462,Monroe United,Surya Kasara,2,0,4,36,0,18.00,2,1
+20462,Monroe United,Nirav Patel,1,0,3,10,0,10.00,2,0
+20462,Monroe United,Raju B,1,0,2,18,0,18.00,2,1
+20462,JC Warriors,Shrivats Vyas,4,0,18,10,2,2.50,3,1
+20462,JC Warriors,Darshil Mistry,3,0,13,10,1,3.33,0,0
+20462,JC Warriors,Vishal Choudhary,3,0,9,15,0,5.00,0,1
+20462,JC Warriors,Pratik Mane,2,0,7,13,3,6.50,3,0
+20462,JC Warriors,Neerav Poriya,2.2,0,9,5,2,2.14,0,0
+20462,JC Warriors,Aditya Kadarla,1,0,2,14,1,14.00,2,0
 20459,NJ Boxers,Rajeev Mohan*,2,0,1,16,0,8.00,1,0
 20459,NJ Boxers,Sibendu Dey,3,0,7,22,0,7.33,0,0
 20459,NJ Boxers,Ankit Arora,4,0,13,15,0,3.75,0,0
@@ -125,7 +631,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20440,Em Sports Club,Dinesh Bhuteja,3,0,7,34,2,11.33,3,0
 20440,Em Sports Club,Rahul Gundani*,3,0,8,28,1,9.33,6,0
 20440,Em Sports Club,Suhas Vaidya,2,0,7,5,0,2.50,0,0
-20440,Em Sports Club,Shiva Reddy Salukuti - SSR †,1,1,6,0,0,0.00,0,0
+20440,Em Sports Club,Shiva Reddy Salukuti †,1,1,6,0,0,0.00,0,0
 20440,Em Sports Club,Jeevan Mahesh,3,0,6,25,1,8.33,3,0
 20440,Monroe United,Sunil Shetty,4,0,13,11,1,2.75,0,0
 20440,Monroe United,Rishi Patel,3.3,0,11,19,3,5.43,1,0
@@ -158,6 +664,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20430,SB Vikings Cricket Club,Baskar Durai,1,0,2,10,0,10.00,0,1
 20430,SB Vikings Cricket Club,Ashok Dhanasekaran,1,0,2,14,0,14.00,0,0
 20430,SB Vikings Cricket Club,Udayan ( Uday ) Shukla,0.3,0,0,3,0,6.00,0,0
+20427,Express Rangers,Lovedeep Singh,1,0,4,2,0,2.00,0,0
+20427,Express Rangers,Veeraswamy Veeramreddy,2,0,7,10,1,5.00,0,0
+20427,Express Rangers,Mohan Venu,3,1,10,16,1,5.33,1,0
+20427,Express Rangers,Abhilash Subramanian,4,1,16,19,2,4.75,4,1
+20427,Express Rangers,Praveen Rajappan †,1,0,4,2,0,2.00,0,0
+20427,Express Rangers,Shivananda Bashetter,1,0,1,5,0,5.00,0,0
+20427,Express Rangers,Amandeep Bawa,2,0,5,10,1,5.00,2,0
+20427,Express Rangers,Saidu M Shaik*,1.5,0,4,13,2,7.09,0,0
+20427,Saffron Sapphire,Bhavik Brahmbhatt,4,0,13,22,1,5.50,4,0
+20427,Saffron Sapphire,Pushpraj Rajput*,4,0,17,13,4,3.25,1,0
+20427,Saffron Sapphire,Gaurang Rana,4,0,18,10,3,2.50,1,0
+20427,Saffron Sapphire,Snehal Patel,3.2,0,13,12,2,3.60,2,0
 20421,Morris Indians,Gopinath Arumugam,3,0,1,27,0,9.00,0,0
 20421,Morris Indians,Bhanu Verma,3.4,0,9,19,2,5.18,3,1
 20421,Morris Indians,Vyas Bellamkonda,2,0,5,22,1,11.00,2,0
@@ -172,6 +690,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20421,VRK Gladiators,Ankur Chaturvedi,3,1,12,7,2,2.33,0,0
 20421,VRK Gladiators,Naveen R Sripathi,3,0,8,24,2,8.00,3,0
 20421,VRK Gladiators,Harshad Patil*,1,0,5,12,1,12.00,6,0
+20419,Monroe Mavericks,Sakthivel Jagadeesan,2,1,10,2,1,1.00,0,0
+20419,Monroe Mavericks,Bhanu Singaram,2,0,8,10,0,5.00,0,0
+20419,Monroe Mavericks,Sarbjitsingh Sahota,3,0,9,18,0,6.00,3,0
+20419,Monroe Mavericks,Abdul Razak Bellary,2,1,11,1,2,0.50,0,0
+20419,Monroe Mavericks,Shikaib Rizvi,2,0,8,5,2,2.50,1,0
+20419,Monroe Mavericks,Yogesh Utekar,1,0,5,4,1,4.00,0,0
+20419,Monroe Mavericks,Ayush Bhat,2,0,6,7,2,3.50,1,0
+20419,Monroe Mavericks,Naveen Byrappa †,2,0,8,9,0,4.50,2,0
+20419,NJKnights,Praneeth Kumar,3,0,10,19,1,6.33,0,0
+20419,NJKnights,Vysakh D,2,0,5,10,0,5.00,0,0
+20419,NJKnights,Sanjay Geepalayam,2.3,0,7,17,1,6.80,1,0
+20419,NJKnights,Bhuvan Arun,2,0,9,15,1,7.50,2,1
 20418,Vikings CC,Sairam Raavi*,4,0,15,25,2,6.25,2,1
 20418,Vikings CC,Raj Tiguti,4,0,17,8,4,2.00,1,0
 20418,Vikings CC,Nanje Gowda,3.4,0,11,14,3,3.82,3,0
@@ -181,6 +711,25 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20418,Karma XI,Zubin Shah,4,1,17,16,4,4.00,0,0
 20418,Karma XI,Dheeraj Dubey,4,0,14,14,2,3.50,1,0
 20418,Karma XI,Ajim Uddin,3.4,0,13,25,2,6.82,1,0
+20394,Thunder Strikers Weekenders,Ganesh Vasam,3.5,0,18,17,4,4.43,3,1
+20394,Thunder Strikers Weekenders,Paritosh Fulara,4,0,16,25,1,6.25,1,0
+20394,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,3,0,10,23,4,7.67,5,0
+20394,Thunder Strikers Weekenders,Nishant Pandit,3,0,10,28,1,9.33,7,0
+20394,Pway Cubs,Neel Patel,4,0,10,32,1,8.00,3,0
+20394,Pway Cubs,Deep Patel*,4,0,12,19,0,4.75,2,0
+20394,Pway Cubs,Dhaivat Patel †,4,0,16,20,2,5.00,0,2
+20394,Pway Cubs,Jay Domadiya,3,1,11,25,1,8.33,2,0
+20390,Nj Warriors,Kalpesh Mehta,4,0,10,32,1,8.00,1,0
+20390,Nj Warriors,Praveen Mandya,3,0,7,32,1,10.67,1,2
+20390,Nj Warriors,Vamsi Reddy,2,0,5,27,0,13.50,0,0
+20390,Nj Warriors,Rohit Sharma*,3,0,11,21,1,7.00,1,1
+20390,Nj Warriors,Gyan Singh,4,1,17,13,3,3.25,1,0
+20390,United Falcons,Neel Joshi,3,0,12,12,1,4.00,1,0
+20390,United Falcons,Virendra D,2,0,7,15,0,7.50,2,0
+20390,United Falcons,Dhruv Modi,4,0,14,25,3,6.25,3,0
+20390,United Falcons,Saket Somvanshi,4,0,18,12,1,3.00,0,0
+20390,United Falcons,Alay Shah,2,0,8,11,1,5.50,2,0
+20390,United Falcons,Pritesh (Ronnie) A,1,0,0,20,0,20.00,2,1
 20387,Parsippany Super Kings,Jeet Pawar,4,0,19,15,2,3.75,5,0
 20387,Parsippany Super Kings,Pradeep Reddy Patil*,2,0,8,5,0,2.50,1,0
 20387,Parsippany Super Kings,Naveen Rayal,4,1,19,14,2,3.50,0,0
@@ -206,6 +755,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20380,Sparta XI,Geethal Withanachchi,1,0,5,2,1,2.00,1,0
 20380,Bethak Titans,Patel Shivam,2,0,7,11,1,5.50,1,0
 20380,Bethak Titans,Nain Patel,1,0,4,12,0,12.00,3,2
+20374,Trident CC,Khursand Kelawala,3,0,9,19,1,6.33,0,0
+20374,Trident CC,Pradeep Shanbhag,3,0,5,22,1,7.33,0,0
+20374,Trident CC,Bharath Kittu,4,0,6,42,0,10.50,1,0
+20374,Trident CC,Akash Reddy Karka,4,0,16,11,3,2.75,0,0
+20374,Trident CC,Sudheer Netha Devasani,2,0,8,16,1,8.00,1,0
+20374,NJ Marvels,Anand Gumparthi,2,0,9,8,0,4.00,5,0
+20374,NJ Marvels,Gowtham Lingampalli,3,0,13,17,0,5.67,2,0
+20374,NJ Marvels,Ranga Rao Kosaraju,4,1,20,5,4,1.25,1,0
+20374,NJ Marvels,Narendran Suruliappan,4,0,12,23,2,5.75,2,0
+20374,NJ Marvels,Mani V*,3,0,9,19,2,6.33,1,0
 20372,TRIDENTS XI,Harish (Harry)*,2,0,6,7,1,3.50,1,0
 20372,TRIDENTS XI,Manav Parikh,4,0,19,18,3,4.50,0,2
 20372,TRIDENTS XI,Anmol Sharma,2,0,4,20,1,10.00,4,1
@@ -216,12 +775,21 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20372,Perryville Panthers,Venu Sunkavalli,3.2,0,8,20,0,6.00,0,0
 20372,Perryville Panthers,Chaitanya Boddu*,3,0,7,18,0,6.00,2,0
 20372,Perryville Panthers,Rahul Kovvuri,1,0,1,11,0,11.00,0,0
+20369,Waterfront Warriors,Amanraj Gupta,2,0,4,10,0,5.00,2,0
+20369,Waterfront Warriors,Malav Shah,4,0,14,21,2,5.25,3,0
+20369,Waterfront Warriors,Ajinkya Pradhan,4,0,13,19,3,4.75,0,0
+20369,Waterfront Warriors,Yuvraj Rajpurohit,4,0,13,33,2,8.25,3,1
+20369,Waterfront Warriors,Abhinav Tyagi,2,0,5,9,1,4.50,0,1
+20369,Giant Slayers,Manthan Patel,3,0,6,19,1,6.33,0,0
+20369,Giant Slayers,Preet Suthar,2,0,8,7,0,3.50,3,0
+20369,Giant Slayers,Ronak Patel,4,0,13,16,1,4.00,0,0
+20369,Giant Slayers,Lovely Singh,4,1,20,9,2,2.25,0,0
+20369,Giant Slayers,Shreyas Najan,3,0,12,7,4,2.33,0,0
 20364,Plainsboro Panthers,Dileep Linga,4,0,14,18,3,4.50,2,0
 20364,Plainsboro Panthers,Nitesh C* †,3,0,8,21,0,7.00,2,0
 20364,Plainsboro Panthers,VIJAYANAND PONNADA,4,0,14,18,3,4.50,2,2
 20364,Plainsboro Panthers,Anurag Kumar,2,0,6,11,0,5.50,2,1
-20364,Plainsboro Panthers,Ranga Krishna Tipirneni,2,0,8,7,0,3.50,3,0
-20364,Plainsboro Panthers,Krishna Sai Vattikuti,1,0,1,5,1,5.00,0,0
+20364,Plainsboro Panthers,Ranga Krishna Tipirneni,3,0,8,12,1,4.00,3,0
 20364,Phoenix Flyers,Sai Ch,4,0,17,11,1,2.75,2,0
 20364,Phoenix Flyers,Abhishek Varma,4,0,17,11,3,2.75,3,0
 20364,Phoenix Flyers,Rajesh Kumar,4,0,17,14,2,3.50,1,2
@@ -249,10 +817,21 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20350,Secaucus Fighters,Khush Patel,3.2,1,17,3,1,0.90,0,0
 20350,Secaucus Fighters,Keyur Barot,3,0,12,12,3,4.00,0,0
 20350,Secaucus Fighters,Varun Bhat*,1,0,5,2,1,2.00,1,0
-20350,PCA Jr.,Rishi Patel GCC,4,0,16,14,2,3.50,1,0
+20350,PCA Jr.,Purvik Patel GCC,4,0,16,14,2,3.50,1,0
 20350,PCA Jr.,Chintan Patel,4,0,16,11,2,2.75,0,0
 20350,PCA Jr.,Kirti Patel,1,0,3,5,0,5.00,1,0
 20350,PCA Jr.,Parth Desai*,0.4,0,2,4,0,6.00,0,1
+20345,Waterfront Warriors,Siddhant Kumar,4,0,15,19,1,4.75,2,0
+20345,Waterfront Warriors,Malav Shah,4,1,17,15,2,3.75,2,0
+20345,Waterfront Warriors,Ajinkya Pradhan,4,0,13,22,3,5.50,2,0
+20345,Waterfront Warriors,Yuvraj Rajpurohit,4,0,15,15,3,3.75,0,0
+20345,Pway Cubs,Vraj Shah*,4,0,15,11,2,2.75,1,0
+20345,Pway Cubs,Komal(KC) Patel,2,0,3,13,1,6.50,0,0
+20345,Pway Cubs,Harsh Amin,2,0,5,18,1,9.00,1,0
+20345,Pway Cubs,Akshar Patel,1.5,0,6,8,1,4.36,0,0
+20345,Pway Cubs,Sagar Shah,1,0,3,3,1,3.00,0,0
+20345,Pway Cubs,Jeet Shah,1,0,2,14,1,14.00,1,0
+20345,Pway Cubs,Mohit Patel,2,0,7,7,0,3.50,0,0
 20343,Newport Narcos,Shubham Bhutada,4,0,8,39,1,9.75,1,2
 20343,Newport Narcos,Varshil Shah,4,0,13,34,2,8.50,4,0
 20343,Newport Narcos,Kabir Goswami,3,0,4,41,0,13.67,1,1
@@ -291,10 +870,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20336,Perryville Panthers,Ishwar Girase,3.1,0,11,17,1,5.37,1,0
 20336,Perryville Panthers,Venu Sunkavalli,4,1,19,7,4,1.75,2,0
 20336,Perryville Panthers,Chaitanya Boddu*,3,1,14,15,2,5.00,0,1
-20336,PCA Jr.,Rishi Patel GCC,2,0,6,11,1,5.50,0,0
+20336,PCA Jr.,Purvik Patel GCC,2,0,6,11,1,5.50,0,0
 20336,PCA Jr.,Chintan Patel*,2,0,4,18,1,9.00,1,0
-20336,PCA Jr.,Tanmay Patel GCC,1.1,0,2,22,0,18.86,0,0
+20336,PCA Jr.,Rishi Patel GCC,1.1,0,2,22,0,18.86,0,0
 20336,PCA Jr.,Hardik Vyas (GCC),1,0,2,4,0,4.00,0,0
+20329,Brown Munde,Tatsat Dixit,3,0,13,17,1,5.67,4,0
+20329,Brown Munde,Tanmay More*,2,0,8,5,2,2.50,1,0
+20329,Brown Munde,Siddharth Terde,4,0,15,22,4,5.50,0,0
+20329,Brown Munde,Ananth Pai,3,0,13,10,3,3.33,0,0
+20329,NJ Marvels,Surender Kumar,4,1,19,10,1,2.50,2,0
+20329,NJ Marvels,Ranga Rao Kosaraju,4,0,15,11,2,2.75,2,0
+20329,NJ Marvels,Mani V*,4,0,20,11,3,2.75,4,0
+20329,NJ Marvels,Gowtham Lingampalli,3,0,10,15,1,5.00,4,0
+20329,NJ Marvels,Usman Bajwa,0.5,0,2,4,0,4.80,0,0
 20323,Sparta XI,Roop Yekollu*,4,0,16,16,3,4.00,5,0
 20323,Sparta XI,Arpan Shah,4,1,17,8,2,2.00,1,0
 20323,Sparta XI,Geethal Withanachchi,4,0,13,23,3,5.75,1,0
@@ -315,6 +903,27 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20321,Robbinsville Jaguars,Yashkumar Patel,2.5,0,7,33,1,11.65,4,0
 20321,Robbinsville Jaguars,Harjeewan Singh,2,0,7,10,0,5.00,0,0
 20321,Robbinsville Jaguars,Vikas Singh*,1,0,2,10,1,10.00,0,0
+20316,Trident CC,Arif Khan,1,0,4,12,0,12.00,0,0
+20316,Trident CC,Bharath Kittu,4,0,12,30,4,7.50,0,0
+20316,Trident CC,Akash Reddy Karka,3,0,15,13,3,4.33,5,0
+20316,Trident CC,Sowmith K,2.1,0,6,21,1,9.69,1,0
+20316,Trident CC,Rohan Zia,2,0,6,19,1,9.50,0,0
+20316,Giant Slayers,Sukhwinder Singh,2,0,6,7,0,3.50,0,0
+20316,Giant Slayers,Shreyas Najan,2,0,5,10,2,5.00,0,0
+20316,Giant Slayers,Ronak Patel (GS),3,0,12,7,3,2.33,0,0
+20316,Giant Slayers,Jay Patel (JP),2.3,0,10,17,4,6.80,1,0
+20312,Thunder Strikers Weekenders,Subhajit Mitra,3,0,9,15,0,5.00,1,1
+20312,Thunder Strikers Weekenders,Paritosh Fulara,4,0,12,23,1,5.75,0,0
+20312,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,3,0,7,14,1,4.67,1,0
+20312,Thunder Strikers Weekenders,Ganesh Vasam,2,1,7,16,2,8.00,0,0
+20312,Thunder Strikers Weekenders,Nishant Pandit,2,0,6,13,0,6.50,1,0
+20312,Thunder Strikers Weekenders,Praveen Barala,2,0,7,6,4,3.00,0,0
+20312,United Falcons,Alap Shah*,2,0,8,9,0,4.50,2,0
+20312,United Falcons,Virendra D,2,0,2,19,0,9.50,1,0
+20312,United Falcons,Nikunj Malpani,3,0,7,28,1,9.33,0,0
+20312,United Falcons,Sanketh Shetty,3,0,9,16,2,5.33,3,0
+20312,United Falcons,Jiteen S,1,0,2,15,1,15.00,0,0
+20312,United Falcons,Xitij Shah,0.2,0,1,4,0,12.00,0,0
 20311,Cricket Warriors,Amit Patel,1,0,1,5,0,5.00,0,0
 20311,Cricket Warriors,Miral Parmar*,4,0,13,12,1,3.00,0,0
 20311,Cricket Warriors,Sunil Subeydhi,4,0,15,20,1,5.00,1,0
@@ -352,7 +961,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20297,MCC - Weekenders,Shoaib Jafri,4,1,13,32,0,8.00,0,0
 20297,MCC - Weekenders,Akash Rao,4,0,20,12,2,3.00,0,0
 20297,MCC - Weekenders,Tejas Patel,2,0,10,4,0,2.00,2,0
-20297,MCC - Weekenders,Mohammad Usman,2,1,8,12,1,6.00,1,0
+20297,MCC - Weekenders,Mohammed Usman,2,1,8,12,1,6.00,1,0
 20297,MCC - Weekenders,Akash Kathuri,2,0,5,11,1,5.50,0,0
 20291,Edison Super Kings,Sankar Gopalakrishnan,2,0,6,14,0,7.00,1,0
 20291,Edison Super Kings,CK 12,4,0,15,23,3,5.75,2,0
@@ -363,16 +972,27 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20291,Shreeji XI,Soham Brahmbhatt,4,0,16,14,1,3.50,2,1
 20291,Shreeji XI,Hemil Patel,2,0,8,12,0,6.00,0,0
 20291,Shreeji XI,Ujjaval Patel*,2,0,9,6,1,3.00,1,1
+20290,Edison Kings,Prabhakar Vudumula,3,1,14,7,2,2.33,0,0
+20290,Edison Kings,Ram Prakash Kota*,3.3,0,14,19,3,5.43,7,0
+20290,Edison Kings,Shiv K,3,0,12,9,2,3.00,2,0
+20290,Edison Kings,Amol Rukmangad,3,0,11,11,2,3.67,1,0
+20290,Edison Kings,Ravi Parsi,1,0,2,5,1,5.00,0,0
+20290,Express Rangers,Amandeep Bawa,3,1,13,24,2,8.00,3,0
+20290,Express Rangers,Mohan Venu,1,0,4,6,0,6.00,1,0
+20290,Express Rangers,Veeraswamy Veeramreddy,2,0,9,4,0,2.00,1,0
+20290,Express Rangers,Saidu M Shaik*,3,0,13,10,3,3.33,2,0
+20290,Express Rangers,Shivananda Bashetter,3,2,16,7,0,2.33,0,1
+20290,Express Rangers,Abhilash Subramanian,0.1,0,0,1,0,6.00,0,0
 20288,Jersey City Dominators,Sujeeth Reddy,4,0,15,17,2,4.25,3,0
 20288,Jersey City Dominators,Gautam Ahuja,4,0,15,19,1,4.75,5,1
 20288,Jersey City Dominators,Sunit Shirke*,4,0,14,19,4,4.75,1,0
 20288,Jersey City Dominators,Shubh Bhardwaj,4,0,15,36,2,9.00,2,0
 20288,VRK Gladiators,Vinit Bharadwaj,4,0,17,8,4,2.00,1,0
-20288,VRK Gladiators,Sandeep I Shetty,2,0,9,5,1,2.50,0,1
+20288,VRK Gladiators,Sandeep A Shetty,2,0,9,5,1,2.50,0,1
 20288,VRK Gladiators,Harshad Patil*,3,0,12,8,1,2.67,2,0
 20288,VRK Gladiators,Baseer Ahmed Mohammed,2.2,0,10,5,3,2.14,1,0
-20279,BLOODLINE,Priyam S,3,0,6,20,1,6.67,1,0
-20279,BLOODLINE,Vraj Patel*,3,0,9,17,4,5.67,1,1
+20279,BLOODLINE,Priyam Shah,3,0,6,20,1,6.67,1,0
+20279,BLOODLINE,Vraj Patel 24*,3,0,9,17,4,5.67,1,1
 20279,BLOODLINE,Nikhil Patel,1,0,3,6,1,6.00,3,0
 20279,BLOODLINE,Devanshu Patel,2,0,6,15,0,7.50,1,1
 20279,BLOODLINE,Divya Patel,3,0,8,16,0,5.33,1,1
@@ -412,7 +1032,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20265,NJ Boxers,Jainil Patel,4,0,16,18,2,4.50,8,0
 20265,NJ Boxers,Dharmik Patel,4,0,10,30,1,7.50,1,0
 20265,NJ Boxers,Prasad Fernando,4,0,15,20,2,5.00,2,0
-20265,NJ Boxers,Ali A,4,0,12,34,2,8.50,1,0
+20265,NJ Boxers,Ali Asgher,4,0,12,34,2,8.50,1,0
+20264,Saffron Sapphire,Nisarg Bhavsar,3,0,11,26,0,8.67,2,0
+20264,Saffron Sapphire,Bhavik Brahmbhatt,4,0,15,16,3,4.00,2,0
+20264,Saffron Sapphire,Pushpraj Rajput*,4,0,13,17,2,4.25,0,1
+20264,Saffron Sapphire,Ameya Modak,2,0,7,11,1,5.50,0,0
+20264,Saffron Sapphire,Gaurang Rana,3,0,8,22,0,7.33,2,0
+20264,Monroe Mavericks,Sakthivel Jagadeesan,3,0,13,8,3,2.67,2,0
+20264,Monroe Mavericks,Abdul Razak Bellary,2,0,10,3,2,1.50,1,0
+20264,Monroe Mavericks,Rakesh Kar,2,1,11,2,2,1.00,0,0
+20264,Monroe Mavericks,Sarbjitsingh Sahota,3,0,13,15,1,5.00,1,2
+20264,Monroe Mavericks,Sree Harsha Konduru,2,0,6,11,0,5.50,0,0
 20262,RCW - Weekenders,Vaibhav Kapur,4,0,16,12,3,3.00,1,0
 20262,RCW - Weekenders,Vinay Chauhan,1,0,4,3,0,3.00,1,0
 20262,RCW - Weekenders,Suhrith Kesaraju,3,0,8,17,0,5.67,2,0
@@ -444,6 +1074,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20256,Iselin Warriors,Sherry Singh,4,1,18,11,3,2.75,4,0
 20256,Iselin Warriors,Kashish Shah †,3.5,0,11,26,1,6.78,5,0
 20256,Iselin Warriors,Aman Sharma,2,0,5,21,0,10.50,2,0
+20253,Sreeshti Weekenders,Abbas Zaidi,3,0,8,16,0,5.33,1,1
+20253,Sreeshti Weekenders,Mahesh Nagappa,4,0,8,25,1,6.25,3,0
+20253,Sreeshti Weekenders,Ravish Parekh,4,0,15,24,7,6.00,7,0
+20253,Sreeshti Weekenders,Kamal Choudhury,4,0,14,15,0,3.75,1,0
+20253,Sreeshti Weekenders,Amol Manjrekar,1,0,1,18,0,18.00,0,0
+20253,Monroe United,Hemal Makadia,4,0,14,16,3,4.00,3,0
+20253,Monroe United,Rishikesh Ravuru,3,0,8,33,0,11.00,0,0
+20253,Monroe United,Rishi Patel,1,0,1,18,0,18.00,1,1
+20253,Monroe United,Surya Kasara,1,0,2,22,0,22.00,0,1
+20253,Monroe United,Veera Kakarla,0.3,0,1,12,0,24.00,0,0
 20252,Vikings CC,Sairam Raavi*,4,1,14,21,2,5.25,2,0
 20252,Vikings CC,Nanje Gowda,2,0,7,15,1,7.50,5,0
 20252,Vikings CC,Sai Ritheesh Sudham,4,0,13,15,2,3.75,0,2
@@ -466,6 +1106,44 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20249,Cricket Lovers,Pavan Rohith Midimilla,3.3,0,15,15,2,4.29,1,1
 20249,Cricket Lovers,Atul Gupta,3,0,9,14,1,4.67,1,1
 20249,Cricket Lovers,Jitendra Purohit,1,0,3,15,0,15.00,2,0
+20244,JC Warriors,Santosh Lalan,3,0,11,9,2,3.00,0,1
+20244,JC Warriors,Vishal Choudhary,2,0,10,4,2,2.00,2,0
+20244,JC Warriors,Shrivats Vyas,3,0,13,9,1,3.00,3,1
+20244,JC Warriors,Darshil Mistry,2,0,7,5,0,2.50,0,0
+20244,JC Warriors,Asif Mohammed,4,0,17,7,4,1.75,0,0
+20244,JC Warriors,Rahul Gupta,1,0,4,2,0,2.00,0,0
+20244,JC Warriors,Aditya Kadarla,1,0,3,13,0,13.00,5,0
+20244,NJKnights,Vysakh D,2,0,7,23,0,11.50,3,1
+20244,NJKnights,Sanjay Geepalayam,2.1,0,7,15,1,6.92,1,0
+20244,NJKnights,Bhuvan Arun,2,0,4,16,0,8.00,0,0
+20238,Sreeshti Weekenders,Ravish Parekh,2,0,6,18,0,9.00,3,0
+20238,Sreeshti Weekenders,Sahil Mohammed,3,0,9,12,1,4.00,0,0
+20238,Sreeshti Weekenders,Kamal Choudhury,4,0,14,15,1,3.75,0,0
+20238,Sreeshti Weekenders,Ajeesh Chakkanath,3,0,11,7,2,2.33,0,0
+20238,Sreeshti Weekenders,Abbas Zaidi,3,0,8,13,1,4.33,1,0
+20238,Sreeshti Weekenders,Monang Shah,1,0,2,4,1,4.00,0,0
+20238,Iselin Warriors,Jay Soni,4,0,12,19,0,4.75,1,0
+20238,Iselin Warriors,Sherry Singh,4,1,17,10,2,2.50,3,0
+20238,Iselin Warriors,Ishan Shah,4,1,15,18,1,4.50,1,0
+20238,Iselin Warriors,Kashish Shah †,3,0,13,22,1,7.33,5,0
+20238,Iselin Warriors,Dhrumil Shah,0.2,0,1,1,0,3.00,0,0
+20237,Monroe Mavericks,Sakthivel Jagadeesan,2,0,5,19,0,9.50,2,0
+20237,Monroe Mavericks,Shikaib Rizvi,4,2,18,13,3,3.25,1,0
+20237,Monroe Mavericks,Yogesh Utekar,2,0,7,10,0,5.00,1,0
+20237,Monroe Mavericks,Rakesh Kar,4,0,10,24,2,6.00,0,0
+20237,Monroe Mavericks,Sarbjitsingh Sahota,3.3,0,14,10,5,2.86,2,0
+20237,Edison Kings,Shiv K,3,0,12,9,4,3.00,1,0
+20237,Edison Kings,Ram Prakash Kota*,3,0,14,12,3,4.00,2,0
+20237,Edison Kings,Ravi Parsi,3,0,11,16,1,5.33,1,0
+20237,Edison Kings,Amol Rukmangad,2.2,0,8,7,2,3.00,1,0
+20229,Express Rangers,Mohan Venu,4,0,20,6,4,1.50,2,0
+20229,Express Rangers,Shivananda Bashetter,4,0,8,30,1,7.50,3,1
+20229,Express Rangers,Veeraswamy Veeramreddy,3.4,0,12,15,1,4.09,1,0
+20229,Express Rangers,Amandeep Bawa,4,1,18,11,4,2.75,0,1
+20229,Mystery Squad,Sudhanshoo Vashisht,4,0,15,11,1,2.75,1,0
+20229,Mystery Squad,Dheeraj Lakhani,3,0,11,10,1,3.33,1,1
+20229,Mystery Squad,Danish Shaikh,4,0,13,11,4,2.75,0,0
+20229,Mystery Squad,Haridut Athi*,3,1,12,11,3,3.67,1,0
 20228,Cricket Lovers,Muhammad Ansar,4,0,13,32,1,8.00,7,0
 20228,Cricket Lovers,Pavan Rohith Midimilla,4,0,10,41,2,10.25,2,1
 20228,Cricket Lovers,Sheshnath Yadav,4,0,10,35,0,8.75,4,0
@@ -511,7 +1189,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20210,Edison Warriors,Aditya Shah,2,0,4,30,0,15.00,0,0
 20210,Edison Warriors,Nitin V. Malde,3,0,11,23,5,7.67,1,0
 20210,BLOODLINE,Divya Patel,2,0,7,10,1,5.00,0,0
-20210,BLOODLINE,Priyam S,2,0,8,7,1,3.50,2,0
+20210,BLOODLINE,Priyam Shah,2,0,8,7,1,3.50,2,0
 20210,BLOODLINE,Nikhil Patel,3,0,13,26,3,8.67,1,1
 20210,BLOODLINE,Jishnu Patel,3,0,11,15,1,5.00,2,0
 20210,BLOODLINE,Meet Patel,2,0,6,10,1,5.00,1,0
@@ -519,6 +1197,15 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20210,BLOODLINE,Havan Patel,1,0,0,9,0,9.00,0,2
 20210,BLOODLINE,Mayank Patel,1,0,0,13,0,13.00,1,0
 20210,BLOODLINE,Prem Patel,1,0,2,21,1,21.00,0,1
+20204,JC Warriors,Vishal Choudhary,4,0,15,11,3,2.75,1,0
+20204,JC Warriors,Darshil Mistry,4,0,13,17,0,4.25,3,0
+20204,JC Warriors,Rahul Gupta,2,0,6,12,0,6.00,2,0
+20204,JC Warriors,Asif Mohammed,4,0,15,17,3,4.25,0,0
+20204,JC Warriors,Neerav Poriya,2,0,6,14,1,7.00,0,0
+20204,Saffron Sapphire,Ameya Modak,4,1,18,19,3,4.75,3,0
+20204,Saffron Sapphire,Bhavik Brahmbhatt,4,0,12,27,1,6.75,4,0
+20204,Saffron Sapphire,Pushpraj Rajput*,4,0,15,13,1,3.25,0,0
+20204,Saffron Sapphire,Gaurang Rana,4,0,13,12,1,3.00,1,0
 20203,CHAMPIONS,Rohit Sharma †,4,0,12,20,2,5.00,2,0
 20203,CHAMPIONS,Bipin Umarale,4,0,16,18,1,4.50,3,1
 20203,CHAMPIONS,Mitesh Shah,2,0,6,18,1,9.00,1,0
@@ -570,6 +1257,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20192,Woodlot Boyz,Manish Jain,2,0,8,17,2,8.50,7,0
 20192,Woodlot Boyz,Deepak Mogili,2,0,5,19,0,9.50,0,0
 20192,Woodlot Boyz,Shashikanth K,1,0,2,17,0,17.00,0,0
+20178,Trident CC,Nachiketh Gudipudi,3,0,9,29,1,9.67,1,2
+20178,Trident CC,Sowmith K,4,0,10,41,2,10.25,2,0
+20178,Trident CC,Bharath Kittu,4,0,12,17,0,4.25,1,0
+20178,Trident CC,Ayush Patel,3,0,6,49,2,16.33,3,2
+20178,Trident CC,Khursand Kelawala,1,0,1,32,0,32.00,5,1
+20178,Trident CC,Pradeep Shanbhag,1,0,1,13,0,13.00,0,0
+20178,Pway Cubs,Aaryan Patel,4,0,20,6,3,1.50,1,1
+20178,Pway Cubs,Drumil Amin,3,1,16,2,5,0.67,0,0
+20178,Pway Cubs,Jay Domadiya,2,0,6,8,0,4.00,1,0
+20178,Pway Cubs,Akshar Patel,1.5,0,4,9,0,4.91,2,0
 20176,Cricket Warriors,Miral Parmar*,4,0,14,24,2,6.00,3,1
 20176,Cricket Warriors,Dipen Patel,4,0,15,20,4,5.00,1,0
 20176,Cricket Warriors,Dhaval Patel,4,0,11,26,1,6.50,2,0
@@ -589,6 +1286,25 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20173,Bayonne CC,Bhargava Reddy Ravuru,2,0,6,13,0,6.50,1,0
 20173,Bayonne CC,Ashokan A,2,0,7,7,1,3.50,0,0
 20173,Bayonne CC,Sakthivel Veeramuthu,0.2,0,1,5,0,15.00,1,0
+20172,United Falcons,Alap Shah*,2,0,8,4,2,2.00,0,0
+20172,United Falcons,Sanketh Shetty,4,0,14,19,2,4.75,2,1
+20172,United Falcons,Dhruv Modi,4,0,11,25,3,6.25,1,1
+20172,United Falcons,Neel Joshi,1,0,4,2,0,2.00,0,0
+20172,United Falcons,Arpit Airan,4,0,16,19,1,4.75,5,0
+20172,United Falcons,Virendra D,1,0,1,5,0,5.00,0,0
+20172,Waterfront Warriors,Siddhant Kumar,4,0,16,14,3,3.50,2,0
+20172,Waterfront Warriors,Malav Shah,4,1,20,13,2,3.25,6,0
+20172,Waterfront Warriors,Ajinkya Pradhan,4,0,17,22,1,5.50,0,0
+20172,Waterfront Warriors,Yuvraj Rajpurohit,3,0,12,22,3,7.33,2,0
+20171,Brown Munde,Tatsat Dixit,3,0,9,21,3,7.00,1,0
+20171,Brown Munde,Tanmay More,2.2,0,8,14,1,6.00,0,0
+20171,Brown Munde,Ananth Pai,4,0,15,30,6,7.50,1,0
+20171,Brown Munde,Siddharth Terde,3,1,14,13,0,4.33,0,0
+20171,Giant Slayers,Gunjan Patel*,3,1,14,13,0,4.33,0,0
+20171,Giant Slayers,Sabeel Shaikh,4,0,15,17,4,4.25,2,0
+20171,Giant Slayers,Gurudutt Patel,1,0,5,1,0,1.00,0,0
+20171,Giant Slayers,Nasir Khan,4,0,14,15,2,3.75,0,0
+20171,Giant Slayers,Shreyas Najan,2.3,0,13,4,4,1.60,2,0
 20168,Plainsboro Panthers,Nitesh C* †,1,0,5,1,0,1.00,0,0
 20168,Plainsboro Panthers,Dileep Linga,4,0,18,21,1,5.25,2,0
 20168,Plainsboro Panthers,Vicky K,2,0,10,10,2,5.00,2,1
@@ -642,13 +1358,26 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20143,Edison Riders,Satyanarayana Manne,4,0,17,10,3,2.50,2,0
 20143,Edison Riders,Raghava Kalyan Inguva,4,0,14,22,2,5.50,2,1
 20143,Edison Riders,Gopinadh Rayala,4,0,16,25,0,6.25,2,0
-20143,MCC - Weekenders,Mohammad Usman,2,0,4,11,0,5.50,0,0
+20143,MCC - Weekenders,Mohammed Usman,2,0,4,11,0,5.50,0,0
 20143,MCC - Weekenders,Sundeep Kumar,1,0,1,16,0,16.00,1,1
 20143,MCC - Weekenders,Varun Chhabra,2,0,7,11,0,5.50,3,0
 20143,MCC - Weekenders,Shoaib Jafri,3,0,9,24,3,8.00,0,0
 20143,MCC - Weekenders,Hamza Shahid,2,0,7,16,1,8.00,0,1
 20143,MCC - Weekenders,Akash Kathuri,2,0,6,9,2,4.50,3,0
 20143,MCC - Weekenders,Tejas Patel,0.1,0,0,6,0,36.00,0,0
+20129,Brown Munde,Siddharth Terde,4,1,18,12,3,3.00,1,0
+20129,Brown Munde,Tanmay More,4,0,9,42,2,10.50,3,3
+20129,Brown Munde,Tatsat Dixit,4,0,13,49,1,12.25,3,0
+20129,Brown Munde,Utkarsh Manjrekar*,4,0,9,44,1,11.00,4,2
+20129,Pway Cubs,Neel Patel,4,0,19,15,1,3.75,2,0
+20129,Pway Cubs,Jay Domadiya,3,0,13,9,1,3.00,4,0
+20129,Pway Cubs,Prit Patel(PD),2,0,6,18,0,9.00,3,1
+20129,Pway Cubs,Sagar Shah,1,0,2,14,0,14.00,4,0
+20129,Pway Cubs,Vinit Patel,2,0,6,24,0,12.00,2,0
+20129,Pway Cubs,Komal(KC) Patel,1,0,3,6,2,6.00,3,0
+20129,Pway Cubs,Shri Patel,1,0,1,10,0,10.00,0,0
+20129,Pway Cubs,Akshar Patel,1,0,3,3,1,3.00,0,0
+20129,Pway Cubs,Vraj Shah*,1,0,2,14,1,14.00,2,0
 20128,Newport Narcos,Shubham Bhutada,2,0,4,15,0,7.50,4,0
 20128,Newport Narcos,Anuj Thaker,2,0,5,14,0,7.00,1,0
 20128,Newport Narcos,Chet Kalra*,4,0,11,33,1,8.25,3,0
@@ -679,6 +1408,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20116,Robbinsville Jaguars,Vikas Singh*,2.3,0,6,22,1,8.80,2,0
 20116,Robbinsville Jaguars,Rahul Bhardwaj,1,0,3,9,0,9.00,1,0
 20116,Robbinsville Jaguars,Harjeewan Singh,4,0,15,18,1,4.50,0,0
+20110,Giant Slayers,Sabeel Shaikh,1.5,0,3,25,2,13.64,3,0
+20110,Giant Slayers,Lovely Singh,2,0,5,20,1,10.00,1,0
+20110,Giant Slayers,Nasir Khan,4,0,15,21,0,5.25,2,0
+20110,Giant Slayers,Sukhwinder Singh,4,0,15,15,4,3.75,0,0
+20110,Giant Slayers,Ronak Patel,4,0,15,12,3,3.00,2,0
+20110,Raptors,Mati Ullah,2,0,6,17,1,8.50,0,0
+20110,Raptors,Waqas Aslam,3.3,0,9,29,1,8.29,1,0
+20110,Raptors,Rajinder (Suraj) Singh,4,0,16,17,2,4.25,0,1
+20110,Raptors,Guarav Singh,4,0,14,23,1,5.75,3,0
+20110,Raptors,Majid Butt*,1,0,2,13,0,13.00,0,2
 20109,Bethak Titans,Patel Shivam,4,0,18,10,2,2.50,3,1
 20109,Bethak Titans,Nain Patel,2,0,4,26,0,13.00,7,1
 20109,Bethak Titans,Daksh Bhakta,4,0,13,18,4,4.50,3,0
@@ -714,6 +1453,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20104,Pmcc,Chirag Pandya,1,0,3,12,0,12.00,1,0
 20104,Pmcc,Venkat Chivukula,1,0,5,3,0,3.00,2,0
 20104,Pmcc,Manoj Ghuge,3,1,13,13,3,4.33,2,0
+20103,Trident CC,Nachiketh Gudipudi,2,0,7,13,0,6.50,0,0
+20103,Trident CC,Pradeep Shanbhag,3,0,7,35,3,11.67,2,0
+20103,Trident CC,Akash Reddy Karka,3,0,8,34,0,11.33,0,0
+20103,Trident CC,Bharath Kittu,4,0,7,48,2,12.00,1,0
+20103,Trident CC,Sowmith K,4,0,10,43,1,10.75,3,0
+20103,United Falcons,Alap Shah*,3,0,11,11,2,3.67,1,0
+20103,United Falcons,Dhruv Modi,2,0,9,5,1,2.50,1,0
+20103,United Falcons,Sanketh Shetty,4,1,12,27,4,6.75,3,0
+20103,United Falcons,Pritesh (Ronnie) A,2,0,8,7,1,3.50,0,0
+20103,United Falcons,Tejas Patel,1,0,4,3,0,3.00,1,0
+20103,United Falcons,Nikunj Malpani,1.4,0,9,1,2,0.60,0,0
 20100,SB Vikings Challengers Cricket Club,Srini Yandrapu,4,0,10,25,1,6.25,0,0
 20100,SB Vikings Challengers Cricket Club,Baskar Bala,4,0,8,56,1,14.00,5,1
 20100,SB Vikings Challengers Cricket Club,Tamil R*,4,0,10,37,1,9.25,0,0
@@ -734,6 +1484,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20098,Edison Riders,Koti Yadlapalli,1,0,3,9,0,9.00,3,0
 20098,Edison Riders,Harikumar C,1,0,1,16,0,16.00,1,0
 20098,Edison Riders,Shiva Bandla,1.4,0,4,14,0,8.40,2,0
+20096,NJ Marvels,Mani V*,3,0,11,8,1,2.67,0,0
+20096,NJ Marvels,Narendran Suruliappan,4,0,13,18,2,4.50,2,0
+20096,NJ Marvels,Ranga Rao Kosaraju,4,1,17,7,3,1.75,0,0
+20096,NJ Marvels,Surender Kumar,2,0,5,20,0,10.00,1,0
+20096,NJ Marvels,Gowtham Lingampalli,3,0,8,13,1,4.33,1,0
+20096,Lincoln�XI,Mukesh Pandey,4,0,16,22,5,5.50,4,0
+20096,Lincoln�XI,Utsav Patel,4,0,16,19,1,4.75,4,0
+20096,Lincoln�XI,Abhishek Yadav*,3,0,14,6,2,2.00,1,0
+20096,Lincoln�XI,Krutesh Bhavsar,3,0,13,7,1,2.33,0,1
+20096,Lincoln�XI,Sumit Kumar,1,0,4,7,0,7.00,0,1
+20096,Lincoln�XI,Hareesh S,0.4,0,2,8,0,12.00,3,0
 20085,TRIDENTS XI,Anmol Sharma,4,0,16,15,1,3.75,1,0
 20085,TRIDENTS XI,Dignesh Patel,3,0,9,21,0,7.00,2,0
 20085,TRIDENTS XI,Anil T,4,0,11,18,1,4.50,2,1
@@ -744,9 +1505,9 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20085,Staten Island Strikers,Subin Moni,3.3,1,14,19,2,5.43,1,0
 20085,Staten Island Strikers,Libin Pappachan,1,0,4,10,0,10.00,0,0
 20085,Staten Island Strikers,Sibu Varghese,1,0,4,6,0,6.00,4,0
-20069,BLOODLINE,Priyam S,3,0,9,14,2,4.67,0,0
+20069,BLOODLINE,Priyam Shah,3,0,9,14,2,4.67,0,0
 20069,BLOODLINE,Alpesh Patel,2,1,8,4,1,2.00,0,0
-20069,BLOODLINE,Vraj Patel,4,0,16,12,1,3.00,1,0
+20069,BLOODLINE,Vraj Patel 24,4,0,16,12,1,3.00,1,0
 20069,BLOODLINE,Udayan Patel,3.4,0,15,14,2,3.82,0,0
 20069,BLOODLINE,Vismay Suthar,2,0,4,22,1,11.00,1,0
 20069,BLOODLINE,Krunal(25) Patel,1,0,3,9,0,9.00,1,0
@@ -766,6 +1527,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20068,Jc Mavericks,Someswar Rao Manukonda,2,0,8,12,1,6.00,0,0
 20068,Jc Mavericks,Mohan Sai Bandarupalli,3,0,10,14,1,4.67,3,1
 20068,Jc Mavericks,Sandeep Bikumalla*,2.2,1,9,8,2,3.43,0,0
+20065,Express Rangers,VIRAJ JANI,3,0,12,12,0,4.00,3,0
+20065,Express Rangers,Veeraswamy Veeramreddy,3,0,12,21,1,7.00,2,0
+20065,Express Rangers,Saidu M Shaik*,4,0,20,10,2,2.50,6,0
+20065,Express Rangers,Abhilash Subramanian,3,1,11,12,0,4.00,4,0
+20065,Express Rangers,Praveen Rajappan †,3,1,15,5,3,1.67,2,0
+20065,JERSEY TIGERS,Thirupathi Chella,3,0,13,8,1,2.67,1,2
+20065,JERSEY TIGERS,Vishal Shrivastava,3,0,13,5,3,1.67,0,0
+20065,JERSEY TIGERS,Hemanth Raju Ramamurthy,1,0,4,10,1,10.00,1,1
+20065,JERSEY TIGERS,Urjit Patel,1,0,5,19,0,19.00,12,2
+20065,JERSEY TIGERS,Manjunath Ramamurthy,1.3,0,2,19,0,12.67,4,0
 20064,RCW - Weekenders,Deepak Golecha,2,0,5,17,0,8.50,5,1
 20064,RCW - Weekenders,Nilay Patel,2,0,5,13,0,6.50,1,0
 20064,RCW - Weekenders,Ajay Mishra,1,0,3,3,0,3.00,0,0
@@ -778,6 +1549,14 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20064,Morris Indians,Venkat Guttikonda,2,0,4,14,0,7.00,0,0
 20064,Morris Indians,Phani Yendluri,3,0,9,25,1,8.33,1,0
 20064,Morris Indians,Vinoth Kumar Ganesan,2,0,3,31,0,15.50,0,1
+20055,Edison Kings,Prabhakar Vudumula,4,0,19,11,2,2.75,1,0
+20055,Edison Kings,Ram Prakash Kota*,4,0,9,17,1,4.25,1,0
+20055,Edison Kings,Neeraj Dwivedi,4,0,13,33,2,8.25,3,0
+20055,Edison Kings,Ravi Parsi,4,0,13,24,4,6.00,2,1
+20055,JC Warriors,Santosh Lalan,4,1,17,14,1,3.50,6,1
+20055,JC Warriors,Darshil Mistry,3,0,13,5,3,1.67,0,0
+20055,JC Warriors,Pratik Mane,3.3,0,16,15,2,4.29,5,0
+20055,JC Warriors,Praful Mishra,2,0,9,11,1,5.50,3,0
 20047,Vikings CC,Sairam Raavi*,4,0,15,10,3,2.50,0,0
 20047,Vikings CC,Raj Tiguti,4,0,10,31,2,7.75,1,0
 20047,Vikings CC,Nanje Gowda,3,0,12,12,3,4.00,1,1
@@ -805,6 +1584,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20039,SB Vikings Cricket Club,Vamshidhar Reddy,4,0,7,40,2,10.00,2,0
 20039,SB Vikings Cricket Club,Ashok Dhanasekaran,4,0,13,18,2,4.50,0,0
 20039,SB Vikings Cricket Club,Rupesh Singh,4,0,17,12,1,3.00,4,0
+20037,Monroe Mavericks,Varun Gurram,2,0,4,18,0,9.00,0,0
+20037,Monroe Mavericks,Sakthivel Jagadeesan,4,0,10,20,1,5.00,3,0
+20037,Monroe Mavericks,Sarbjitsingh Sahota,4,0,11,38,0,9.50,3,2
+20037,Monroe Mavericks,Rakesh Kar,4,0,16,8,1,2.00,0,0
+20037,Monroe Mavericks,Yogesh Utekar,2,0,6,9,2,4.50,0,0
+20037,Mystery Squad,Danish Shaikh,2.4,0,7,19,0,7.12,1,0
+20037,Mystery Squad,Utsav Upadhyay,4,0,10,26,3,6.50,0,0
+20037,Mystery Squad,Praj Patel,4,0,13,33,2,8.25,6,0
+20037,Mystery Squad,Haridut Athi*,2,0,6,10,1,5.00,1,0
+20037,Mystery Squad,Deep Parikh,1,0,1,6,0,6.00,0,0
 20035,Karma XI,Dheeraj Dubey,4,0,11,19,2,4.75,0,0
 20035,Karma XI,Zubin Shah,4,0,13,24,3,6.00,0,1
 20035,Karma XI,Ajim Uddin,1,0,3,13,0,13.00,0,0
@@ -845,6 +1634,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20029,Woodlot Boyz,Ramachandra Velam,2,0,8,13,1,6.50,1,1
 20029,Woodlot Boyz,Ashutosh Parulkar,1,0,1,11,0,11.00,2,0
 20029,Woodlot Boyz,Harshil Patel,3,0,11,29,1,9.67,6,0
+20028,NJKnights,Praneeth Kumar,4,0,10,42,0,10.50,2,0
+20028,NJKnights,Vysakh D,4,0,8,26,2,6.50,2,0
+20028,NJKnights,Sanjay Geepalayam,4,0,8,35,2,8.75,0,1
+20028,NJKnights,Sukumar Paturi,1,0,3,9,0,9.00,0,0
+20028,NJKnights,Bhuvan Arun,3,0,9,22,0,7.33,1,0
+20028,Sreeshti Weekenders,Nimish Deshpande,2,0,5,9,0,4.50,1,0
+20028,Sreeshti Weekenders,Mahesh Nagappa,3,0,5,15,2,5.00,0,0
+20028,Sreeshti Weekenders,Sahil Mohammed,4,0,13,22,1,5.50,5,1
+20028,Sreeshti Weekenders,Kamal Choudhury,4,0,12,24,2,6.00,0,0
+20028,Sreeshti Weekenders,Abbas Zaidi,2,0,7,28,1,14.00,2,0
+20028,Sreeshti Weekenders,Amol Manjrekar,1,0,4,8,0,8.00,1,0
 20027,Power Hitters,Pankaj Singh,2,0,7,5,1,2.50,0,0
 20027,Power Hitters,Praveen Kaushal,4,1,17,18,3,4.50,7,0
 20027,Power Hitters,Mayank Jha,4,1,15,12,3,3.00,3,0
@@ -877,6 +1677,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20011,Jersey City Dominators,Sunit Shirke,4,0,17,18,4,4.50,4,1
 20011,Jersey City Dominators,Shubh Bhardwaj,4,0,17,25,1,6.25,3,0
 20011,Jersey City Dominators,Manoj Musale,1,0,0,15,0,15.00,1,0
+20005,Telugu Titans - Weekenders,Akshay Kumar Kemoju,2,0,5,15,0,7.50,3,0
+20005,Telugu Titans - Weekenders,Mithilesh Challakonda*,4,0,13,21,2,5.25,2,2
+20005,Telugu Titans - Weekenders,Surya Nallamilli,4,0,13,17,2,4.25,2,0
+20005,Telugu Titans - Weekenders,Ramesh Amaraneni,4,0,17,14,0,3.50,1,0
+20005,Telugu Titans - Weekenders,Abhishek Shetty,2,0,10,6,2,3.00,0,1
+20005,Express Rangers,Veeraswamy Veeramreddy,3,0,10,15,1,5.00,1,0
+20005,Express Rangers,Amandeep Bawa,3,0,9,23,1,7.67,1,0
+20005,Express Rangers,Shivananda Bashetter,2,0,4,24,1,12.00,1,0
+20005,Express Rangers,Abhilash Subramanian,1,0,4,10,0,10.00,0,1
+20005,Express Rangers,Saidu M Shaik*,0.1,0,0,6,0,36.00,0,0
 20001,CHAMPIONS,Atul Gupta,3.4,1,17,12,4,3.27,1,0
 20001,CHAMPIONS,Bipin Umarale,4,0,16,18,3,4.50,1,0
 20001,CHAMPIONS,Gurjant Riar,1,0,1,12,1,12.00,1,0
@@ -900,6 +1710,15 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19998,NJ Titans,Malav Shah †,1,0,1,10,0,10.00,2,0
 19998,NJ Titans,Jinay Shah,2,0,4,27,0,13.50,0,2
 19998,NJ Titans,Nimesh R,1,0,3,18,0,18.00,0,0
+19997,Saffron Sapphire,Bhavik Brahmbhatt,4,0,13,25,2,6.25,4,0
+19997,Saffron Sapphire,Nisarg Bhavsar,4,0,16,13,2,3.25,1,0
+19997,Saffron Sapphire,Gaurang Rana,3.5,0,12,22,1,5.74,1,0
+19997,Saffron Sapphire,Pushpraj Rajput*,4,1,18,14,4,3.50,0,0
+19997,Sreeshti Weekenders,Ravish Parekh,3,0,11,13,0,4.33,1,0
+19997,Sreeshti Weekenders,Mahesh Nagappa,3,0,14,4,3,1.33,0,0
+19997,Sreeshti Weekenders,Sahil Mohammed,3,0,13,12,5,4.00,2,0
+19997,Sreeshti Weekenders,Kamal Choudhury,1,0,3,6,1,6.00,0,0
+19997,Sreeshti Weekenders,Abbas Zaidi,2,0,8,8,0,4.00,1,0
 19994,Em Sports Club,Dinesh Bhuteja,4,0,10,34,2,8.50,0,2
 19994,Em Sports Club,Pathik Ray,1,0,4,3,0,3.00,0,0
 19994,Em Sports Club,Nipun Triwadi,2.2,0,6,28,3,12.00,0,0
@@ -916,14 +1735,14 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19994,Edison Kings,Naveen Surata,1,0,2,21,0,21.00,2,4
 19993,NJ Boxers,Dharmik Patel,3,0,12,15,1,5.00,3,0
 19993,NJ Boxers,Rajeev Mohan*,2,0,1,23,0,11.50,1,0
-19993,NJ Boxers,Ali A,4,0,13,32,4,8.00,2,0
+19993,NJ Boxers,Ali Asgher,4,0,13,32,4,8.00,2,0
 19993,NJ Boxers,Prasad Fernando,4,0,12,36,1,9.00,1,0
 19993,NJ Boxers,Jeet Patel,1,0,3,8,0,8.00,2,0
 19993,NJ Boxers,Ankit Arora,2,0,2,23,0,11.50,0,0
 19993,BLOODLINE,Divya Patel,2,0,6,23,2,11.50,1,0
-19993,BLOODLINE,Priyam S,2,0,7,19,1,9.50,0,0
+19993,BLOODLINE,Priyam Shah,2,0,7,19,1,9.50,0,0
 19993,BLOODLINE,Krunal(25) Patel,2,0,3,30,0,15.00,0,0
-19993,BLOODLINE,Vraj Patel,3,0,5,50,0,16.67,1,0
+19993,BLOODLINE,Vraj Patel 24,3,0,5,50,0,16.67,1,0
 19993,BLOODLINE,Nikhil Patel,1,0,4,16,0,16.00,0,2
 19992,Vikings CC,Sairam Raavi*,3,0,6,23,0,7.67,2,0
 19992,Vikings CC,Raj Tiguti,3.4,0,17,5,5,1.36,0,0
@@ -932,7 +1751,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19992,VRK Gladiators,Harshad Patil*,3,0,11,19,3,6.33,3,0
 19992,VRK Gladiators,Naveen R Sripathi,4,1,23,4,2,1.00,3,0
 19992,VRK Gladiators,Vinit Bharadwaj,3,1,16,2,3,0.67,0,0
-19992,VRK Gladiators,Sandeep I Shetty,1.3,0,7,3,2,2.00,1,0
+19992,VRK Gladiators,Sandeep A Shetty,1.3,0,7,3,2,2.00,1,0
 19991,Edison Warriors,Sharvil Patel,4,0,12,17,0,4.25,1,1
 19991,Edison Warriors,Jay Khamar,4,1,14,29,1,7.25,0,1
 19991,Edison Warriors,Varun Shah*,4,0,14,13,0,3.25,1,1
@@ -942,6 +1761,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19991,Power Hitters,Yogesh Sharma,4,0,12,21,2,5.25,3,0
 19991,Power Hitters,Kaushik Dutta,4,1,15,20,1,5.00,1,0
 19991,Power Hitters,Rajesh Bansal*,1,0,1,10,1,10.00,2,0
+19987,JC Warriors,Shrivats Vyas,4,0,14,19,1,4.75,0,0
+19987,JC Warriors,Himanshu Dixit,4,0,10,35,1,8.75,0,0
+19987,JC Warriors,Pratik Mane,4,0,14,23,4,5.75,6,0
+19987,JC Warriors,Rahul Gupta,2,0,5,14,1,7.00,1,0
+19987,JC Warriors,Neerav Poriya,1,0,4,6,0,6.00,1,0
+19987,JC Warriors,Shubham Pawar,1,0,2,16,1,16.00,1,0
+19987,Mystery Squad,Praj Patel,4,1,17,15,0,3.75,2,0
+19987,Mystery Squad,Sudhanshoo Vashisht,4,0,15,18,3,4.50,1,1
+19987,Mystery Squad,Haridut Athi*,2,0,6,24,1,12.00,0,0
+19987,Mystery Squad,Danish Shaikh,3.3,0,9,45,0,12.86,0,0
+19987,Mystery Squad,Het Vaidya,1,0,1,13,0,13.00,5,0
 19985,Edison Super Kings,CK 12,4,0,11,20,2,5.00,1,0
 19985,Edison Super Kings,Raja A,1,0,2,9,0,9.00,0,0
 19985,Edison Super Kings,Arockia Prabakar Lazar,4,0,14,29,1,7.25,4,3
@@ -962,6 +1792,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19981,Cricket Lovers,Atul Gupta,4,0,14,27,2,6.75,1,0
 19981,Cricket Lovers,Sheshnath Yadav,4,0,17,16,2,4.00,7,1
 19981,Cricket Lovers,Jitendra Purohit,1,0,3,11,0,11.00,3,1
+19978,JERSEY TIGERS,Thirupathi Chella,4,0,10,39,1,9.75,2,0
+19978,JERSEY TIGERS,Pratik Shah,3,0,4,35,1,11.67,2,1
+19978,JERSEY TIGERS,Shyam Upadhyay,3,0,6,22,2,7.33,1,1
+19978,JERSEY TIGERS,Vishal Shrivastava,3,0,6,38,0,12.67,2,1
+19978,JERSEY TIGERS,Amrut Patnaik,3,0,8,29,0,9.67,1,0
+19978,Monroe Mavericks,Varun Gurram,3,0,11,16,0,5.33,1,0
+19978,Monroe Mavericks,Sakthivel Jagadeesan,3,0,10,12,3,4.00,4,0
+19978,Monroe Mavericks,Sarbjitsingh Sahota,4,0,16,13,0,3.25,5,0
+19978,Monroe Mavericks,Rakesh Kar,2,0,9,8,1,4.00,0,0
+19978,Monroe Mavericks,Narasimha Narra,1.2,0,4,5,3,3.75,1,0
+19978,Monroe Mavericks,Sree Harsha Konduru,1,0,4,5,1,5.00,0,0
 19974,Woodlot Boyz,Ananth Govind,1,0,3,6,0,6.00,0,0
 19974,Woodlot Boyz,Soumya Saha*,4,0,15,29,0,7.25,5,2
 19974,Woodlot Boyz,Shashikanth K,3,0,12,19,3,6.33,7,0
@@ -971,9 +1812,43 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19974,GoldFinch Cricket Club,Ashutosh Thakur,3,0,9,23,2,7.67,3,0
 19974,GoldFinch Cricket Club,Sourabh Choudhary,2,0,5,19,1,9.50,2,0
 19974,GoldFinch Cricket Club,Gurmeet Singh,3.5,0,11,29,0,7.57,1,0
+19967,Raptors,Guarav Singh,4,1,15,35,1,8.75,3,1
+19967,Raptors,Faisal Mehmood,4,0,12,32,2,8.00,2,0
+19967,Raptors,Waqas Choudhary,2,0,3,35,1,17.50,2,0
+19967,Raptors,Majid Butt*,3,0,9,31,3,10.33,10,1
+19967,Raptors,Aamir Hussain,2,0,3,26,1,13.00,1,0
+19967,Raptors,Waqas Aslam,1,0,2,14,0,14.00,0,0
+19967,Pway Cubs,Neel Patel,4,0,13,37,1,9.25,3,0
+19967,Pway Cubs,Nish Patel,4,0,14,38,4,9.50,3,1
+19967,Pway Cubs,Deep Patel*,4,0,14,31,0,7.75,5,1
+19967,Pway Cubs,Kish Smith,1,0,1,15,0,15.00,0,0
+19967,Pway Cubs,Dhaivat Patel †,2,0,7,20,2,10.00,0,0
+19967,Pway Cubs,Ronak Rana,1,0,2,17,0,17.00,2,0
+19966,United Falcons,Sanketh Shetty,1,0,2,5,0,5.00,0,0
+19966,United Falcons,Neel Joshi,2,0,8,4,1,2.00,0,0
+19966,United Falcons,Dhruv Modi,4,0,11,25,4,6.25,2,1
+19966,United Falcons,Virendra D,2,0,5,10,0,5.00,0,0
+19966,United Falcons,Tejas Patel,4,0,16,16,3,4.00,0,1
+19966,United Falcons,Nikunj Malpani,3,0,7,19,0,6.33,0,0
+19966,Brown Munde,Tatsat Dixit,1,0,4,7,0,7.00,0,0
+19966,Brown Munde,Tanmay More*,2,0,6,13,0,6.50,0,1
+19966,Brown Munde,Ananth Pai,3,0,11,29,0,9.67,1,0
+19966,Brown Munde,Siddharth Terde,3.3,1,16,11,3,3.14,0,0
+19966,Brown Munde,Shubham Jadhav,1,0,2,22,0,22.00,0,0
+19958,Giant Slayers,Manthan Patel,2,0,8,7,1,3.50,2,0
+19958,Giant Slayers,Gunjan Patel*,3,0,10,17,3,5.67,1,0
+19958,Giant Slayers,Sabeel Shaikh,3,0,10,14,0,4.67,1,0
+19958,Giant Slayers,Parth Upadhyay,3,0,8,21,0,7.00,6,0
+19958,Giant Slayers,Gurudutt Patel,3,0,12,8,1,2.67,0,0
+19958,Giant Slayers,Hardik Patel,2,0,5,17,2,8.50,1,2
+19958,Lincoln�XI,Mukesh Pandey,3,0,8,36,0,12.00,1,1
+19958,Lincoln�XI,Utsav Patel,2,0,9,12,1,6.00,1,0
+19958,Lincoln�XI,Hareesh S,1.2,0,5,13,1,9.75,2,0
+19958,Lincoln�XI,Abhishek Yadav*,3,0,10,19,2,6.33,0,0
+19958,Lincoln�XI,Krutesh Bhavsar,1,0,2,10,1,10.00,0,0
 19952,PCA Jr.,Samir Patel,4,1,17,17,2,4.25,0,0
 19952,PCA Jr.,Hardik Vyas (GCC),4,0,12,20,1,5.00,2,0
-19952,PCA Jr.,Rishi Patel GCC,4,0,17,17,1,4.25,0,1
+19952,PCA Jr.,Purvik Patel GCC,4,0,17,17,1,4.25,0,1
 19952,PCA Jr.,Chintan Patel*,4,0,10,20,1,5.00,0,0
 19952,Staten Island Strikers,Sajin Shaji,4,0,14,21,2,5.25,4,1
 19952,Staten Island Strikers,Midhul Jacob,4,0,14,10,1,2.50,0,0
@@ -1020,10 +1895,10 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19944,Phoenix Flyers,Abhishek Varma,2.3,0,8,18,0,7.20,3,0
 19944,Phoenix Flyers,Sunil Gurujala,2,0,5,24,0,12.00,0,0
 19944,Phoenix Flyers,Anup Gondkar,1,0,1,13,0,13.00,0,0
-19941,MCC - Weekenders,Mohammad Usman,4,0,11,22,1,5.50,0,0
+19941,MCC - Weekenders,Mohammed Usman,4,0,11,22,1,5.50,0,0
 19941,MCC - Weekenders,Hamza Shahid,4,0,12,23,1,5.75,0,0
 19941,MCC - Weekenders,Tejas Patel,2,0,5,13,1,6.50,2,0
-19941,MCC - Weekenders,Raja Sekhar Sanaka,1,0,2,16,0,16.00,1,0
+19941,MCC - Weekenders,Rajasekhar Sanaka,1,0,2,16,0,16.00,1,0
 19941,MCC - Weekenders,Mohammed Suhail,1,0,0,18,0,18.00,1,0
 19941,MCC - Weekenders,Anil Kumar Chitikireddy,4,0,11,22,3,5.50,0,0
 19941,Robbinsville Jaguars,Anoop Athayil,3,0,8,11,2,3.67,0,0
@@ -1041,6 +1916,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19940,Perryville Panthers,Naveen Elangovan,1.4,0,5,18,0,10.80,2,0
 19940,Perryville Panthers,Anil Paduchuri,1,0,3,15,1,15.00,0,1
 19940,Perryville Panthers,Manikandan Nagarajan,1,0,2,10,1,10.00,1,1
+19935,Windsor Warriors,Keyur Avichal,1,0,2,21,1,21.00,3,0
+19935,Windsor Warriors,Teja Akundi,3.2,0,11,18,1,5.40,0,0
+19935,Windsor Warriors,Naren Srn,4,1,17,21,4,5.25,1,0
+19935,Windsor Warriors,Anand Chaudhary,3,0,10,27,1,9.00,0,1
+19935,Windsor Warriors,Lalit Joshi,4,0,13,26,3,6.50,0,0
+19935,NJ Marvels,Mani V*,1,0,4,3,0,3.00,1,0
+19935,NJ Marvels,Narendran Suruliappan,4,0,13,19,3,4.75,3,0
+19935,NJ Marvels,Ranga Rao Kosaraju,4,0,11,20,1,5.00,1,0
+19935,NJ Marvels,Saikumar Katepalli,4,0,12,23,1,5.75,1,2
+19935,NJ Marvels,Surender Kumar,3,0,9,11,2,3.67,2,0
 19926,Secaucus Fighters,Raghav Arora,4,0,11,21,0,5.25,0,0
 19926,Secaucus Fighters,Keyur Barot,4,0,11,19,2,4.75,1,0
 19926,Secaucus Fighters,Tirth Lakhani,4,0,16,11,3,2.75,1,0
@@ -1067,6 +1952,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19924,Cricket Warriors,Bhadresh Patel,3,0,11,15,1,5.00,2,0
 19924,Cricket Warriors,Dipen Patel,3,0,12,19,4,6.33,0,0
 19924,Cricket Warriors,Vandan Patel,2.1,1,11,7,2,3.23,0,0
+19903,Windsor Warriors,Keyur Avichal,2,0,9,10,1,5.00,2,0
+19903,Windsor Warriors,Anand Chaudhary,4,1,21,11,0,2.75,1,1
+19903,Windsor Warriors,Amar Ghorpade,3,0,8,53,0,17.67,3,0
+19903,Windsor Warriors,Lalit Joshi,4,0,14,41,2,10.25,3,0
+19903,Windsor Warriors,Vijay Selvam,2,0,5,47,1,23.50,3,1
+19903,Windsor Warriors,Taranjeet Singh,1,0,4,10,1,10.00,2,2
+19903,Giant Slayers,Sabeel Shaikh,3,0,8,22,0,7.33,1,0
+19903,Giant Slayers,Nasir Khan,3,0,13,7,2,2.33,2,0
+19903,Giant Slayers,Lovely Singh,2,0,6,11,1,5.50,1,0
+19903,Giant Slayers,Sukhwinder Singh,2,0,6,7,1,3.50,0,0
+19903,Giant Slayers,Jasmeet Singh,2,0,8,7,0,3.50,0,0
+19903,Giant Slayers,KARAN SAINI,2,0,4,17,1,8.50,1,0
+19903,Giant Slayers,Subham Singh,2,0,9,8,0,4.00,2,0
 19901,Newport Narcos,Shubham Bhutada,4,0,14,18,2,4.50,5,1
 19901,Newport Narcos,Anuj Thaker,4,0,15,20,1,5.00,0,0
 19901,Newport Narcos,Nitish Dabas*,4,0,10,24,1,6.00,2,0
@@ -1076,6 +1974,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19901,Phoenix Flyers,Anand Alagappan,3.3,0,13,22,3,6.29,3,0
 19901,Phoenix Flyers,Anup Gondkar,4,1,15,10,4,2.50,1,0
 19901,Phoenix Flyers,Gopi Periyasamy,1,0,5,4,1,4.00,1,1
+19893,Raptors,Mati Ullah,2,0,7,15,0,7.50,0,0
+19893,Raptors,Aamir Hussain,1,0,4,8,0,8.00,0,0
+19893,Raptors,Waqas Aslam,2,1,7,19,0,9.50,1,0
+19893,Raptors,Faisal Mehmood,4,0,16,28,3,7.00,2,1
+19893,Raptors,Guarav Singh,3,0,7,48,2,16.00,3,1
+19893,Raptors,Rajinder (Suraj) Singh,4,0,10,30,1,7.50,1,0
+19893,United Falcons,Arpit Airan,4,0,15,31,1,7.75,1,2
+19893,United Falcons,Nikunj Malpani,4,0,13,43,1,10.75,3,2
+19893,United Falcons,Neel Joshi,4,0,10,41,0,10.25,0,0
+19893,United Falcons,Virendra D,3.5,0,11,37,2,9.65,4,0
 19890,Perryville Panthers,Anil Paduchuri,4,0,13,26,2,6.50,0,1
 19890,Perryville Panthers,Venu Sunkavalli,4,0,8,21,2,5.25,2,0
 19890,Perryville Panthers,Chaitanya Boddu,3.2,0,14,9,2,2.70,3,0
@@ -1145,6 +2053,14 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19876,Secaucus Fighters,Keyur Barot,4,0,16,13,2,3.25,2,0
 19876,Secaucus Fighters,Tirth Lakhani,3.4,1,18,4,6,1.09,0,0
 19876,Secaucus Fighters,Varun Bhat*,3,1,13,7,0,2.33,2,0
+19869,Lincoln�XI,Naresh Patel,4,0,17,18,2,4.50,1,1
+19869,Lincoln�XI,Geetha Anem,4,0,17,13,2,3.25,2,0
+19869,Lincoln�XI,Utsav Patel,4,0,16,13,1,3.25,0,0
+19869,Lincoln�XI,Ravi Teja Manepalli,4,0,10,30,0,7.50,0,1
+19869,Pway Cubs,Neel Patel,4,1,20,4,0,1.00,0,0
+19869,Pway Cubs,Deep Patel*,4,0,17,19,3,4.75,4,0
+19869,Pway Cubs,Vraj Shah,3.5,0,13,12,3,3.13,1,1
+19869,Pway Cubs,Ronak Rana,3,0,11,9,1,3.00,2,0
 19866,TRIDENTS XI,Manav Parikh,1,0,3,4,0,4.00,0,0
 19866,TRIDENTS XI,Harish (Harry)*,1,0,3,4,0,4.00,0,0
 19858,Jersey City Dominators,Sujeeth Reddy,4,1,18,10,3,2.50,1,0
@@ -1153,6 +2069,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19858,Jersey City Dominators,Shubh Bhardwaj,4,0,13,27,2,6.75,0,0
 19858,Edison Super Kings,Sankar Gopalakrishnan,1,0,5,7,1,7.00,6,0
 19858,Edison Super Kings,Jegan Thangaraj,1,0,1,6,0,6.00,1,0
+19846,Sreeshti Weekenders,Shuvradeep Mukherjee,3,0,13,13,1,4.33,0,0
+19846,Sreeshti Weekenders,Amol Manjrekar,3,1,14,7,1,2.33,0,0
+19846,Sreeshti Weekenders,Kamal Choudhury,1.5,0,10,7,3,3.82,1,0
+19846,Sreeshti Weekenders,Mahesh Nagappa,2,1,10,2,2,1.00,0,0
+19846,Sreeshti Weekenders,Sanjay Dak,2,0,9,10,1,5.00,2,0
+19846,Sreeshti Weekenders,Abbas Zaidi,3,0,16,3,1,1.00,1,0
+19846,Edison Kings,Prabhakar Vudumula,2,0,8,4,1,2.00,0,0
+19846,Edison Kings,Ram Prakash Kota*,1,0,2,8,1,8.00,1,0
+19846,Edison Kings,Rajendra Prasad Challa,1.1,0,3,11,0,9.43,4,0
+19846,Edison Kings,Ravi Parsi,1,0,1,20,0,20.00,0,0
 19844,Cricket Lovers,Rohan Sharma,4,0,13,31,2,7.75,7,1
 19844,Cricket Lovers,Pavan Rohith Midimilla,3,0,10,21,1,7.00,2,0
 19844,Cricket Lovers,Atul Gupta,3,0,10,13,0,4.33,1,0
@@ -1173,6 +2099,30 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19840,Shreeji XI,Ravi Rathod,2,0,8,12,1,6.00,3,1
 19840,Shreeji XI,Jay Trivedi,1,1,6,0,1,0.00,0,0
 19840,Shreeji XI,Ujjaval Patel*,1,0,4,2,0,2.00,0,0
+19835,JERSEY TIGERS,Thirupathi Chella,4,0,13,42,2,10.50,2,0
+19835,JERSEY TIGERS,Rudranil Chatterjee,4,0,14,36,2,9.00,2,1
+19835,JERSEY TIGERS,Shyam Upadhyay,4,0,13,28,2,7.00,5,1
+19835,JERSEY TIGERS,Hemanth Raju Ramamurthy,1,0,5,8,0,8.00,2,0
+19835,JERSEY TIGERS,Manjunath Ramamurthy,1,0,3,18,0,18.00,5,3
+19835,JERSEY TIGERS,Rushabh Shah,2,0,4,29,2,14.50,3,1
+19835,JC Warriors,Vishal Choudhary,2.3,0,6,13,1,5.20,3,0
+19835,JC Warriors,Shrivats Vyas*,4,1,19,20,2,5.00,3,3
+19835,JC Warriors,Asif Mohammed,4,0,16,17,1,4.25,1,1
+19835,JC Warriors,Neerav Poriya,3,0,13,18,3,6.00,2,2
+19835,JC Warriors,Pratik Mane,1,0,4,6,2,6.00,4,0
+19835,JC Warriors,Shubham Pawar,1,0,2,11,1,11.00,1,1
+19832,Monroe Mavericks,Varun Gurram,2,0,8,6,1,3.00,2,0
+19832,Monroe Mavericks,Shikaib Rizvi,4,0,13,17,2,4.25,1,0
+19832,Monroe Mavericks,Sarbjitsingh Sahota,2,0,2,24,0,12.00,0,0
+19832,Monroe Mavericks,Rakesh Kar,3,0,10,13,1,4.33,0,0
+19832,Monroe Mavericks,Sakthivel Jagadeesan,3,0,9,26,1,8.67,4,0
+19832,Monroe Mavericks,Abdul Razak Bellary,2,0,8,9,2,4.50,0,0
+19832,Telugu Titans - Weekenders,Akshay Kumar Kemoju,1,0,2,14,1,14.00,5,0
+19832,Telugu Titans - Weekenders,Ramesh Amaraneni,4,0,12,19,0,4.75,1,0
+19832,Telugu Titans - Weekenders,Eswar Vennapusa,3,0,12,14,0,4.67,2,0
+19832,Telugu Titans - Weekenders,Surya Nallamilli,4,0,12,17,1,4.25,0,0
+19832,Telugu Titans - Weekenders,Mahesh Pondugala,1,0,3,6,0,6.00,0,0
+19832,Telugu Titans - Weekenders,Krishna Kalakuntla,3,0,12,18,2,6.00,4,0
 19827,Vikings CC,Raj Tiguti,4,0,16,13,3,3.25,3,0
 19827,Vikings CC,Ajith Nalluri,3.1,0,10,25,3,7.89,2,0
 19827,Vikings CC,Manikanta Arumilli,4,0,16,14,2,3.50,0,0
@@ -1213,6 +2163,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19819,CHAMPIONS,Atul Kaushik,2,0,7,15,0,7.50,2,0
 19819,CHAMPIONS,Rohit Khatri,4,0,13,23,5,5.75,4,2
 19819,CHAMPIONS,Gurjant Riar,2.5,0,8,22,0,7.76,9,0
+19818,Kranti Warriors,Kushal Patel,2,0,4,23,0,11.50,8,0
+19818,Kranti Warriors,Naishal Gandhi,1,0,3,7,1,7.00,1,0
+19818,Kranti Warriors,KISHAN PANCHAL*,3,0,15,6,0,2.00,1,1
+19818,Kranti Warriors,Abhik Patel,3.2,0,17,10,1,3.00,3,0
+19818,Kranti Warriors,Rut Patel,3,0,10,21,3,7.00,2,0
+19818,Kranti Warriors,Mantav Dalal,3,0,13,5,3,1.67,0,0
+19818,Express Rangers,Shivananda Bashetter,3,0,12,12,2,4.00,4,0
+19818,Express Rangers,Veeraswamy Veeramreddy,2,0,4,13,0,6.50,1,0
+19818,Express Rangers,Amandeep Bawa,2,0,4,14,0,7.00,2,0
+19818,Express Rangers,Abhilash Subramanian,1,0,2,12,0,12.00,0,0
+19818,Express Rangers,Saidu M Shaik*,1.2,0,3,14,0,10.50,3,0
+19818,Express Rangers,Praveen Rajappan †,1,0,4,8,1,8.00,0,0
 19815,Edison Warriors,Sharvil Patel,4,0,16,10,4,2.50,1,0
 19815,Edison Warriors,Khush (Khushal) Khamar,4,0,15,13,2,3.25,2,1
 19815,Edison Warriors,Jay Khamar,4,0,11,18,2,4.50,1,0
@@ -1242,10 +2204,10 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19808,Cricket Lovers,Jitendra Purohit,2,0,6,8,1,4.00,1,1
 19808,Cricket Lovers,Prasoon Tiwari,0.2,0,2,0,1,0.00,0,0
 19797,BLOODLINE,Divya Patel,4,0,16,12,4,3.00,0,0
-19797,BLOODLINE,Priyam S,3,0,9,14,0,4.67,0,0
+19797,BLOODLINE,Priyam Shah,3,0,9,14,0,4.67,0,0
 19797,BLOODLINE,Meet Patel,2,0,9,6,0,3.00,0,0
 19797,BLOODLINE,Vismay Suthar,2,0,8,11,0,5.50,1,0
-19797,BLOODLINE,Vraj Patel*,3.4,1,19,3,3,0.82,0,0
+19797,BLOODLINE,Vraj Patel 24*,3.4,1,19,3,3,0.82,0,0
 19797,BLOODLINE,Nikhil Patel,1,0,6,1,1,1.00,1,0
 19797,RCW - Weekenders,Rajiv Kedia,1,0,3,3,0,3.00,0,0
 19797,RCW - Weekenders,Krupal Patel*,1,0,2,8,0,8.00,3,0
@@ -1291,6 +2253,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19778,CHAMPIONS,Piyush Singh*,1,0,2,16,0,16.00,2,0
 19778,CHAMPIONS,Rohit Khatri,1.3,0,5,12,0,8.00,2,0
 19778,CHAMPIONS,Pravin Punamiya,1,0,1,11,0,11.00,1,0
+19777,Kranti Warriors,Kushal Patel,3,0,10,22,0,7.33,2,2
+19777,Kranti Warriors,Jaimin Patel*,3,0,4,35,0,11.67,3,0
+19777,Kranti Warriors,Rut Patel,4,0,11,25,2,6.25,0,1
+19777,Kranti Warriors,Nishant Patel,3,0,7,22,1,7.33,1,1
+19777,Kranti Warriors,Abhik Patel,3,0,5,33,2,11.00,2,1
+19777,Monroe Mavericks,Bhanu Singaram,4,0,16,9,2,2.25,1,0
+19777,Monroe Mavericks,Sakthivel Jagadeesan,3,0,11,13,3,4.33,1,0
+19777,Monroe Mavericks,Sarbjitsingh Sahota,3,0,13,10,2,3.33,3,0
+19777,Monroe Mavericks,Rakesh Kar,2,0,7,8,2,4.00,0,0
+19777,Monroe Mavericks,Varun Gurram,0.1,0,1,0,1,0.00,0,0
 19776,Edison Super Kings,CK 12,4,0,11,16,1,4.00,1,0
 19776,Edison Super Kings,Abhivardhan Reddy,4,0,16,11,3,2.75,2,0
 19776,Edison Super Kings,Arockia Prabakar Lazar,4,1,14,27,2,6.75,8,0
@@ -1309,6 +2281,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19773,Morris Indians,Phani Yendluri,2,0,4,11,1,5.50,2,0
 19773,Morris Indians,Venkat Guttikonda,3.4,0,13,27,2,7.36,3,0
 19773,Morris Indians,Uday Kota,2,0,1,31,0,15.50,1,0
+19772,Invincible CC,Krunal Patel,4,0,14,18,3,4.50,0,0
+19772,Invincible CC,Hitesh Pandya,4,0,10,21,1,5.25,4,0
+19772,Invincible CC,Vishal Bhavsar*,3,0,5,40,1,13.33,3,1
+19772,Invincible CC,Vipal Patel,4,0,12,28,3,7.00,0,0
+19772,Invincible CC,Gunjan Pandya,1,0,3,4,1,4.00,1,0
+19772,Express Rangers,Shivananda Bashetter,4,0,14,13,4,3.25,1,0
+19772,Express Rangers,VIRAJ JANI,2,0,3,21,1,10.50,1,2
+19772,Express Rangers,Amandeep Bawa,4,0,10,25,1,6.25,3,0
+19772,Express Rangers,Abhilash Subramanian,4,0,11,17,1,4.25,2,0
+19772,Express Rangers,Saidu M Shaik*,2,0,8,4,1,2.00,0,0
 19769,Woodlot Boyz,Soumya Saha*,2,0,5,20,0,10.00,3,0
 19769,Woodlot Boyz,Karan Bhargav,4,0,9,28,1,7.00,0,0
 19769,Woodlot Boyz,Sai Reddy,4,0,9,46,2,11.50,4,0
@@ -1320,6 +2302,26 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19769,VRK Gladiators,Vipul Joshi,1,0,5,2,1,2.00,1,0
 19769,VRK Gladiators,Ashish Shetty,2,0,4,12,0,6.00,1,0
 19769,VRK Gladiators,Harshad Patil*,2,0,6,11,0,5.50,0,0
+19768,Telugu Titans - Weekenders,Akshay Kumar Kemoju,2,0,2,12,0,6.00,2,0
+19768,Telugu Titans - Weekenders,Ramesh Amaraneni,2,0,6,17,1,8.50,1,0
+19768,Telugu Titans - Weekenders,Surya Nallamilli,4,0,12,26,2,6.50,0,0
+19768,Telugu Titans - Weekenders,Krishna Kalakuntla,4,0,17,25,0,6.25,2,1
+19768,Telugu Titans - Weekenders,Sidd Chou,4,0,14,12,5,3.00,0,0
+19768,JC Warriors,Vishal Choudhary,3,0,8,13,2,4.33,0,0
+19768,JC Warriors,Santosh Lalan,4,0,15,23,1,5.75,1,0
+19768,JC Warriors,Shubham Pawar,3,0,13,6,2,2.00,1,0
+19768,JC Warriors,Asif Mohammed,4,1,17,12,3,3.00,1,0
+19768,JC Warriors,Neerav Poriya,1,0,5,2,1,2.00,1,0
+19765,Sreeshti Weekenders,Shuvradeep Mukherjee,3.5,0,14,14,3,3.65,4,0
+19765,Sreeshti Weekenders,Sahil Mohammed,3,0,11,13,1,4.33,2,1
+19765,Sreeshti Weekenders,Kamal Choudhury,3,0,12,14,0,4.67,2,0
+19765,Sreeshti Weekenders,Mahesh Nagappa,3,0,10,11,2,3.67,0,0
+19765,Sreeshti Weekenders,Abbas Zaidi,3,0,10,9,1,3.00,0,0
+19765,Mystery Squad,Praj Patel,4,0,16,10,2,2.50,1,0
+19765,Mystery Squad,Sudhanshoo Vashisht,2,0,4,20,0,10.00,1,0
+19765,Mystery Squad,Utsav Upadhyay,3.3,0,13,23,3,6.57,1,0
+19765,Mystery Squad,Danish Shaikh,1,0,3,8,0,8.00,0,0
+19765,Mystery Squad,Haridut Athi*,1,0,5,1,1,1.00,0,0
 19764,Vikings CC,Sairam Raavi*,4,0,13,17,1,4.25,0,0
 19764,Vikings CC,Sunil Gudapati,2,0,5,14,0,7.00,5,0
 19764,Vikings CC,Raj Tiguti,4,0,14,23,5,5.75,0,1
@@ -1343,6 +2345,20 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19762,NJ Boxers,Jeet Patel,2,0,8,5,1,2.50,1,0
 19762,NJ Boxers,Sibendu Dey,2,0,6,14,1,7.00,0,2
 19762,NJ Boxers,Hassan Anjum,1,0,4,2,0,2.00,0,0
+19747,Pway Cubs,Neel Patel,4,0,17,12,2,3.00,0,0
+19747,Pway Cubs,Kish Smith,3,0,11,10,2,3.33,3,0
+19747,Pway Cubs,Sagar Shah,2,0,7,9,1,4.50,0,1
+19747,Pway Cubs,Komal(KC) Patel,2,0,8,5,1,2.50,0,0
+19747,Pway Cubs,Mohit Patel,1,0,5,1,1,1.00,0,0
+19747,Pway Cubs,Prit Patel(PD),1,0,2,10,0,10.00,1,0
+19747,Pway Cubs,Yash Shah,1,0,2,10,0,10.00,0,1
+19747,Pway Cubs,Akshar Patel,1,0,3,5,0,5.00,0,0
+19747,Pway Cubs,Dhaivat Patel †,1,0,1,16,0,16.00,2,0
+19747,Windsor Warriors,Anand Chaudhary,2,0,5,22,0,11.00,0,0
+19747,Windsor Warriors,Manoj Kumar,1,0,3,18,0,18.00,0,0
+19747,Windsor Warriors,Amar Ghorpade,2,0,8,13,1,6.50,1,0
+19747,Windsor Warriors,Vijay Selvam,3,0,11,29,1,9.67,0,0
+19747,Windsor Warriors,Pardeep Kumar,1,0,5,1,2,1.00,0,0
 19746,Cricket Warriors,Dipen Patel,4,0,12,21,4,5.25,1,0
 19746,Cricket Warriors,Bhadresh Patel,4,0,11,23,1,5.75,3,0
 19746,Cricket Warriors,Amit Patel,4,0,12,25,2,6.25,2,0
@@ -1363,12 +2379,29 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19744,Bayonne CC,Chandra Sekhar Mutha,4,1,15,15,2,3.75,1,1
 19744,Bayonne CC,Prakash Baskar*,3,0,10,24,2,8.00,1,0
 19744,Bayonne CC,Ashokan A,2,0,6,7,0,3.50,1,0
+19743,Giant Slayers,Gunjan Patel*,3,0,12,9,3,3.00,2,0
+19743,Giant Slayers,Manthan Patel,1,0,5,8,1,8.00,2,0
+19743,Giant Slayers,Sabeel Shaikh,2.4,0,12,10,2,3.75,0,0
+19743,Giant Slayers,Ronak Patel,2,0,6,14,1,7.00,2,0
+19743,Jersey Superstars,Vikas Chaudhary,4,1,18,10,6,2.50,1,0
+19743,Jersey Superstars,Vineet Luthra †,4,2,21,7,3,1.75,1,0
+19743,Jersey Superstars,Arun Prasad G,1,0,5,1,0,1.00,0,0
+19743,Jersey Superstars,Jitendra Singh*,0.3,0,3,0,1,0.00,0,0
+19741,Lincoln�XI,Mukesh Pandey,4,1,16,24,1,6.00,3,0
+19741,Lincoln�XI,Abhishek Yadav*,4,0,11,38,2,9.50,2,0
+19741,Lincoln�XI,Utsav Patel,3,0,9,35,1,11.67,1,0
+19741,Lincoln�XI,Ravi Teja Manepalli,3,0,7,34,2,11.33,0,1
+19741,Lincoln�XI,Krutesh Bhavsar,2,0,5,20,2,10.00,0,0
+19741,United Falcons,Nikunj Malpani,4,0,15,30,3,7.50,3,2
+19741,United Falcons,Virendra D,3.3,0,11,25,3,7.14,2,0
+19741,United Falcons,Tejas Patel,4,0,18,16,1,4.00,1,0
+19741,United Falcons,Neel Joshi,4,0,16,15,3,3.75,1,0
 19733,Staten Island Strikers,Sajin Shaji,4,2,18,19,3,4.75,0,0
 19733,Staten Island Strikers,Jithu Job,4,0,16,24,2,6.00,4,1
 19733,Staten Island Strikers,Nithin Varughese,4,0,14,25,3,6.25,4,0
 19733,Staten Island Strikers,Sibu Varghese,2,0,4,20,0,10.00,3,0
 19733,Staten Island Strikers,Libin Pappachan,1,0,1,20,0,20.00,0,0
-19733,Staten Island Strikers,Nithin Eapen Andrews,1,0,2,17,0,17.00,3,0
+19733,Staten Island Strikers,Nithin Andrews,1,0,2,17,0,17.00,3,0
 19733,Newport Narcos,Shubham Bhutada,4,1,15,14,3,3.50,1,0
 19733,Newport Narcos,Anuj Thaker,3,0,12,13,1,4.33,4,0
 19733,Newport Narcos,Nitish Dabas,3,0,16,11,2,3.67,4,1
@@ -1378,7 +2411,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19732,Edison Riders,Koti Yadlapalli,3,0,14,8,3,2.67,4,0
 19732,Edison Riders,Gopinadh Rayala,3.3,0,13,28,2,8.00,6,0
 19732,Edison Riders,Satyanarayana Manne,3,1,12,17,3,5.67,0,1
-19732,PCA Jr.,Rishi Patel GCC,2,0,5,19,0,9.50,3,2
+19732,PCA Jr.,Purvik Patel GCC,2,0,5,19,0,9.50,3,2
 19732,PCA Jr.,Chintan Patel,3,0,11,16,1,5.33,1,0
 19732,PCA Jr.,Samir Patel*,3.2,0,9,24,2,7.20,6,0
 19732,PCA Jr.,Hardik Vyas (GCC),3,1,13,10,3,3.33,0,0
@@ -1422,6 +2455,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19718,Bethak Titans,Nain Patel,1,0,4,6,1,6.00,1,0
 19718,Bethak Titans,Sneh Patel (sagar),1,0,2,10,0,10.00,1,0
 19718,Bethak Titans,Shubham Patel,0.5,0,3,12,0,14.40,0,0
+19717,Incredibulls,Ajay Dhanekula*,3,0,10,17,2,5.67,1,0
+19717,Incredibulls,Gaurav Kumar,2,0,8,15,1,7.50,2,1
+19717,Incredibulls,Pavan Kumar Reddy Suram,2,0,5,20,0,10.00,2,0
+19717,Incredibulls,Shehbaz Saiyed,4,0,8,31,1,7.75,3,0
+19717,Incredibulls,Vaibhav Kunar,3,0,6,24,0,8.00,5,1
+19717,Incredibulls,Sireesh Reddy,1,0,5,1,2,1.00,0,0
+19717,Incredibulls,Devarsh Kunala,1,0,0,20,0,20.00,2,2
+19717,NJ Marvels,Gowtham Lingampalli,3,0,9,23,2,7.67,2,0
+19717,NJ Marvels,Raghu Saagamreddy,3,0,13,6,2,2.00,1,0
+19717,NJ Marvels,Ranga Rao Kosaraju*,4,0,14,18,1,4.50,0,0
+19717,NJ Marvels,Mitul Patel,3,1,15,3,3,1.00,0,0
+19717,NJ Marvels,Siddartha Chunchu,1,0,4,13,0,13.00,11,0
 19714,Perryville Panthers,Anil Paduchuri,4,0,6,34,2,8.50,2,0
 19714,Perryville Panthers,Ishwar Girase,2,0,5,20,0,10.00,4,0
 19714,Perryville Panthers,Venu Sunkavalli,2,0,5,14,1,7.00,2,0
@@ -1444,6 +2489,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19708,TRIDENTS XI,Tushar Patel †,4,0,12,12,0,3.00,0,0
 19708,TRIDENTS XI,Anil T,1,0,3,4,1,4.00,0,1
 19708,TRIDENTS XI,Rushabh Raolji,1,0,2,14,1,14.00,0,1
+19696,Express Rangers,Shivananda Bashetter,2,0,6,7,1,3.50,1,0
+19696,Express Rangers,Santhana Ramasamy,2,0,8,4,1,2.00,0,0
+19696,Express Rangers,Amandeep Bawa,3,0,15,3,1,1.00,0,0
+19696,Express Rangers,Veeraswamy Veeramreddy,3,0,6,14,0,4.67,1,0
+19696,Express Rangers,Lovedeep Singh,2,0,10,9,1,4.50,2,0
+19696,Express Rangers,Suman Kumar,1,0,4,4,0,4.00,2,0
+19696,Express Rangers,Saidu M Shaik*,2,0,6,7,2,3.50,0,0
+19696,Express Rangers,Abhilash Subramanian,0.2,0,2,0,1,0.00,0,0
+19696,Windsor Warriors,Anand Chaudhary,3,0,8,22,2,7.33,2,0
+19696,Windsor Warriors,Amar Ghorpade,3,0,11,14,1,4.67,2,0
+19696,Windsor Warriors,Lalit Joshi,1,0,2,7,0,7.00,0,0
+19696,Windsor Warriors,Taranjeet Singh,0.2,0,0,8,0,24.00,0,1
 19694,Newport Narcos,Chet Kalra*,4,0,12,23,2,5.75,3,0
 19694,Newport Narcos,Garvit Dave,2,0,4,22,0,11.00,2,2
 19694,Newport Narcos,Shubham Bhutada,4,0,16,10,1,2.50,1,0
@@ -1452,7 +2509,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19694,VRK Gladiators,Vinit Bharadwaj*,4,0,15,14,0,3.50,0,0
 19694,VRK Gladiators,Suraj Pai Madhukar,2.2,0,7,29,1,12.43,0,1
 19694,VRK Gladiators,Ankur Chaturvedi,4,2,20,13,3,3.25,0,0
-19694,VRK Gladiators,Sandeep I Shetty,4,0,15,23,3,5.75,3,0
+19694,VRK Gladiators,Sandeep A Shetty,4,0,15,23,3,5.75,3,0
 19694,VRK Gladiators,Avteet Chayal,1,1,6,0,1,0.00,0,0
 19693,Edison Super Kings,Jegan Thangaraj,1,0,2,5,0,5.00,0,1
 19693,Edison Super Kings,Raja A,3,0,8,14,1,4.67,0,1
@@ -1521,7 +2578,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19665,Nj Warriors,Kalpesh Mehta,4,2,18,17,4,4.25,1,0
 19665,Nj Warriors,Praveen Mandya,4,0,16,10,2,2.50,2,0
 19665,Nj Warriors,Rohit Sharma*,2,0,9,5,1,2.50,1,0
-19665,Nj Warriors,Vamshi Reddy Police,2,0,10,12,1,6.00,1,1
+19665,Nj Warriors,Vamsi Reddy,2,0,10,12,1,6.00,1,1
 19665,Nj Warriors,Jeyaprakash Jeyapal,1,0,5,1,1,1.00,0,0
 19665,Nj Warriors,Rajesh Thakur,0.5,0,1,7,1,8.40,0,0
 19662,Parsippany Super Kings,Pradeep Reddy Patil,3,0,14,5,0,1.67,0,0
@@ -1536,6 +2593,15 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19662,Edison Warriors,Abhishar M,4,1,21,6,1,1.50,2,0
 19662,Edison Warriors,Varun Shah*,4,0,17,10,4,2.50,0,0
 19662,Edison Warriors,Harsh Shah,2.1,0,10,3,1,1.38,0,0
+19660,Incredibulls,Vaibhav Kunar,2,0,6,14,0,7.00,0,0
+19660,Incredibulls,Gaurav Kumar,3.3,0,11,11,3,3.14,1,0
+19660,Incredibulls,Phanikumar Bellamkonda*,4,0,14,13,1,3.25,0,0
+19660,Incredibulls,Shehbaz Saiyed,3,0,9,20,4,6.67,2,0
+19660,Incredibulls,Pavan Kumar Reddy Suram,2,0,6,12,2,6.00,0,0
+19660,JC Warriors,Santosh Lalan,4,0,13,20,1,5.00,1,0
+19660,JC Warriors,Shrivats Vyas,4,1,17,12,3,3.00,0,0
+19660,JC Warriors,Asif Mohammed,4,0,17,11,3,2.75,1,0
+19660,JC Warriors,Pratik Mane,4,0,16,26,1,6.50,7,0
 19657,RCW - Weekenders,Suhrith Kesaraju,4,0,18,9,3,2.25,3,0
 19657,RCW - Weekenders,Krunal Shah,2,0,4,25,0,12.50,2,0
 19657,RCW - Weekenders,Bharath Ramaswamy,2,0,9,5,2,2.50,2,0
@@ -1547,6 +2613,26 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19657,Sparta XI,Piyush Parashar,2,0,6,14,0,7.00,2,0
 19657,Sparta XI,Niran Perera,3,0,7,20,1,6.67,0,0
 19657,Sparta XI,Prasanth Nair,4,0,11,22,1,5.50,1,0
+19655,Jersey Superstars,Savan Patel,4,0,12,20,2,5.00,2,0
+19655,Jersey Superstars,Sushil Kumar,4,0,15,14,3,3.50,0,1
+19655,Jersey Superstars,Amit Patel,4,0,13,19,1,4.75,2,1
+19655,Jersey Superstars,Yash Patel,4,0,15,15,3,3.75,5,0
+19655,Monroe Mavericks,Bhanu Singaram,2,0,9,6,0,3.00,0,0
+19655,Monroe Mavericks,Sarbjitsingh Sahota,2,0,7,10,1,5.00,1,0
+19655,Monroe Mavericks,Rakesh Kotha,1,0,0,28,0,28.00,2,1
+19655,Monroe Mavericks,Varun Gurram,1.4,0,3,21,1,12.60,0,0
+19655,Monroe Mavericks,Rakesh Kar,1,0,1,8,0,8.00,0,0
+19654,Sreeshti Weekenders,Abbas Zaidi,4,0,14,13,1,3.25,2,0
+19654,Sreeshti Weekenders,Amol Manjrekar,3,0,7,13,2,4.33,0,1
+19654,Sreeshti Weekenders,Sajeel Ahmed,4,0,12,17,3,4.25,0,0
+19654,Sreeshti Weekenders,Mahesh Nagappa,2,0,9,11,0,5.50,2,0
+19654,Sreeshti Weekenders,Sanjay Dak,3,1,10,13,1,4.33,3,0
+19654,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,2,0,6,11,1,5.50,0,0
+19654,Thunder Strikers Weekenders,VC Uttez Chitluri,2,0,5,25,2,12.50,2,0
+19654,Thunder Strikers Weekenders,Ganesh Vasam,3,0,10,13,1,4.33,0,0
+19654,Thunder Strikers Weekenders,Srinivas Kamma,2,1,9,10,2,5.00,2,0
+19654,Thunder Strikers Weekenders,Sachin Gosavi,1,0,3,8,0,8.00,0,0
+19654,Thunder Strikers Weekenders,Subhajit Mitra,1,0,3,6,1,6.00,0,0
 19652,TRIDENTS XI,Rashik Mohamed,4,0,13,27,4,6.75,1,0
 19652,TRIDENTS XI,Keyur Patel,3,0,8,15,0,5.00,1,0
 19652,TRIDENTS XI,Dignesh Patel,1,0,3,9,0,9.00,1,0
@@ -1557,6 +2643,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19652,Hudson Hurricanes Sultans,Sravan Nekkanti,4,0,12,25,2,6.25,3,0
 19652,Hudson Hurricanes Sultans,Ankit Singh,3.4,0,11,19,3,5.18,0,0
 19652,Hudson Hurricanes Sultans,Rohit Pradhan,2,0,10,5,2,2.50,3,0
+19647,Monroe United,Radhakrishna Kondapalli,4,0,12,36,1,9.00,1,0
+19647,Monroe United,Veera Kakarla,2,0,8,14,0,7.00,0,0
+19647,Monroe United,Rishikesh Ravuru,3,0,8,27,0,9.00,2,1
+19647,Monroe United,Surya Kasara,2,0,4,27,2,13.50,0,0
+19647,Monroe United,Vishal Nashine,2,0,5,17,1,8.50,2,0
+19647,Monroe United,Vengala Prashanth,3,0,7,40,0,13.33,0,1
+19647,United Falcons,Dhruv Modi,2,0,8,6,1,3.00,1,0
+19647,United Falcons,Nikunj Malpani,2,0,7,13,0,6.50,0,0
+19647,United Falcons,Virendra D,1,0,3,8,1,8.00,2,0
+19647,United Falcons,Neel Joshi,2,0,9,3,2,1.50,0,0
+19647,United Falcons,Pritesh (Ronnie) A,2,0,10,3,3,1.50,1,0
+19647,United Falcons,Jiteen S,1,0,5,1,2,1.00,0,0
 19634,Pmcc,Jay Mehta,1,0,3,16,0,16.00,0,0
 19634,Pmcc,Chirag Pandya,4,1,14,18,2,4.50,2,0
 19634,Pmcc,Venkat Chivukula,3,0,9,22,2,7.33,0,0
@@ -1567,6 +2665,15 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19634,Vikings CC,Srikanth Kataram,1,0,3,11,1,11.00,0,0
 19634,Vikings CC,Sunil Gudapati,3,0,13,11,1,3.67,2,0
 19634,Vikings CC,Sujith Reddy,1,0,2,20,0,20.00,5,0
+19628,Giant Slayers,Parth Upadhyay,3,0,6,18,0,6.00,1,0
+19628,Giant Slayers,Ronak Patel,4,0,13,32,2,8.00,0,0
+19628,Giant Slayers,Neel Patel-24,4,0,17,23,2,5.75,3,0
+19628,Giant Slayers,Sabeel Shaikh,3,0,11,9,2,3.00,2,0
+19628,Giant Slayers,Gunjan Patel*,2,0,2,26,0,13.00,1,0
+19628,Kranti Warriors,Jay Patel,3.5,1,13,29,0,7.57,3,0
+19628,Kranti Warriors,Yuvraj Patel,4,0,9,34,1,8.50,0,0
+19628,Kranti Warriors,Axat Patel,4,0,15,15,2,3.75,6,0
+19628,Kranti Warriors,Kushal Patel,3,0,7,32,0,10.67,1,0
 19627,Woodlot Boyz,Ananth Govind,2,0,5,16,0,8.00,3,1
 19627,Woodlot Boyz,Manish Jain*,2,0,8,5,1,2.50,1,0
 19627,Woodlot Boyz,Shashikanth K,3,0,7,23,2,7.67,1,0
@@ -1611,15 +2718,26 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19620,Morris Indians,Uday Kota*,3,0,9,22,3,7.33,6,0
 19620,Morris Indians,Gopinath Arumugam,4,0,8,27,3,6.75,1,0
 19617,BLOODLINE,Dip Parikh*,2,0,5,13,2,6.50,1,0
-19617,BLOODLINE,Priyam S,4,0,15,9,0,2.25,0,0
+19617,BLOODLINE,Priyam Shah,4,0,15,9,0,2.25,0,0
 19617,BLOODLINE,Meet Patel,3,0,12,9,0,3.00,2,0
-19617,BLOODLINE,Vraj Patel,4,0,14,19,2,4.75,4,0
+19617,BLOODLINE,Vraj Patel 24,4,0,14,19,2,4.75,4,0
 19617,BLOODLINE,Vismay Suthar,3,0,13,11,2,3.67,1,0
 19617,Perryville Panthers,Anil Paduchuri,1,0,1,14,0,14.00,1,0
 19617,Perryville Panthers,Venu Sunkavalli,2,0,4,15,0,7.50,1,0
 19617,Perryville Panthers,Chaitanya Boddu*,3,0,12,9,1,3.00,3,0
 19617,Perryville Panthers,Rahul Kovvuri,1,0,2,6,0,6.00,0,1
 19617,Perryville Panthers,Elayaraja Muthuswamy,1,0,1,17,0,17.00,1,0
+19614,Telugu Titans - Weekenders,Surya Nallamilli,3,0,9,25,1,8.33,0,0
+19614,Telugu Titans - Weekenders,Krishna Kalakuntla,3,0,13,15,4,5.00,2,1
+19614,Telugu Titans - Weekenders,Sidd Chou,4,0,10,36,2,9.00,3,0
+19614,Telugu Titans - Weekenders,Akshay Kumar Kemoju*,3,0,8,32,1,10.67,3,0
+19614,Telugu Titans - Weekenders,Ramesh Amaraneni,2,0,0,20,1,10.00,0,0
+19614,NJ Marvels,Narendran Suruliappan,2,0,4,9,0,4.50,1,0
+19614,NJ Marvels,Ranga Rao Kosaraju,3,0,7,31,2,10.33,1,1
+19614,NJ Marvels,Mitul Patel,3,0,12,7,3,2.33,0,0
+19614,NJ Marvels,Raghu Saagamreddy,2,0,9,8,1,4.00,1,0
+19614,NJ Marvels,Kirupa S,2,0,9,6,0,3.00,0,0
+19614,NJ Marvels,Surender Kumar,4,0,12,30,1,7.50,3,0
 19610,Jc Mavericks,Sandeep Battina,3,0,14,4,1,1.33,0,0
 19610,Jc Mavericks,Vishal Padhye,3,0,10,13,1,4.33,3,0
 19610,Jc Mavericks,Sandeep Bikumalla*,4,0,14,15,2,3.75,0,0
@@ -1656,6 +2774,31 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19600,Secaucus Fighters,Varun Bhat*,3.1,0,11,15,2,4.74,1,0
 19600,Secaucus Fighters,Raghav Arora,3,0,12,8,0,2.67,1,0
 19600,Secaucus Fighters,Rushi Sheth,1,0,3,13,1,13.00,1,0
+19594,Invincible CC,Parthiv Parikh,3,0,8,47,3,15.67,4,0
+19594,Invincible CC,Pratik Patel,3,0,5,54,2,18.00,0,1
+19594,Invincible CC,Hitesh Pandya,3,0,7,38,1,12.67,2,0
+19594,Invincible CC,Krunal Patel,2,0,6,28,0,14.00,1,1
+19594,Invincible CC,Vishal Bhavsar,2,0,6,42,0,21.00,6,1
+19594,Invincible CC,Vipal Patel,3,0,3,48,0,16.00,1,0
+19594,Pway Cubs,Neel Patel,4,0,14,25,2,6.25,1,0
+19594,Pway Cubs,Nish Patel,3,0,12,11,3,3.67,0,0
+19594,Pway Cubs,Komal(KC) Patel,3,0,15,6,0,2.00,0,0
+19594,Pway Cubs,Akshar Patel,3,0,12,16,2,5.33,5,0
+19594,Pway Cubs,Shri Patel,2,0,8,6,0,3.00,2,0
+19594,Pway Cubs,Harsh Desai,1,0,5,1,0,1.00,0,0
+19588,Telugu Titans - Weekenders,Krishna Kalakuntla,4,0,11,41,0,10.25,5,0
+19588,Telugu Titans - Weekenders,Sidd Chou,4,0,14,24,3,6.00,3,0
+19588,Telugu Titans - Weekenders,Shankar Vangala,2,0,2,33,1,16.50,0,0
+19588,Telugu Titans - Weekenders,Mithilesh Challakonda*,4,0,11,55,3,13.75,5,0
+19588,Telugu Titans - Weekenders,Nikhil Dachapally,1,0,1,15,0,15.00,0,0
+19588,Telugu Titans - Weekenders,Mahesh Pondugala,1,0,1,20,0,20.00,0,0
+19588,Giant Slayers,Nasir Khan,4,0,13,22,2,5.50,5,0
+19588,Giant Slayers,Sabeel Shaikh,3,0,8,24,2,8.00,2,1
+19588,Giant Slayers,Jasmeet Singh,3,0,14,5,1,1.67,0,0
+19588,Giant Slayers,Gurudutt Patel,1,0,2,18,0,18.00,3,0
+19588,Giant Slayers,Gunjan Patel*,2,0,1,18,0,9.00,2,0
+19588,Giant Slayers,Subham Singh,2,0,5,21,2,10.50,3,1
+19588,Giant Slayers,Manthan Patel,1,0,5,12,1,12.00,7,1
 19587,NJ Titans,Yashwant Rao,4,0,8,32,2,8.00,2,0
 19587,NJ Titans,Sourav Poddar,3,0,9,25,2,8.33,2,0
 19587,NJ Titans,Prien Makim,1,0,4,9,1,9.00,4,0
@@ -1689,13 +2832,32 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19577,BLOODLINE,Keyur Nandedkar,2,0,4,16,1,8.00,1,0
 19577,BLOODLINE,Krunal(25) Patel,1,0,4,6,0,6.00,1,0
 19577,BLOODLINE,Tirth Patel,3,0,4,29,0,9.67,1,0
-19577,BLOODLINE,Vraj Patel*,4,1,14,21,4,5.25,0,1
+19577,BLOODLINE,Vraj Patel 24*,4,1,14,21,4,5.25,0,1
 19577,BLOODLINE,Jishnu Patel,3,0,9,19,3,6.33,3,0
 19577,Pmcc,Revanth Pakyala*,4,1,18,18,2,4.50,1,0
 19577,Pmcc,Chirag Pandya,3.3,0,12,41,1,11.71,0,1
 19577,Pmcc,Rajeev Kumar,2,0,6,23,0,11.50,3,0
 19577,Pmcc,Mahesh Salunkhe,1,0,2,19,0,19.00,0,0
 19577,Pmcc,Nagaraj Swaminathan,1,0,4,12,0,12.00,0,0
+19576,Kranti Warriors,Axat Patel,4,0,15,24,1,6.00,3,0
+19576,Kranti Warriors,Harsh Patel,4,0,16,10,3,2.50,2,0
+19576,Kranti Warriors,Shrujal Shah,4,0,13,33,2,8.25,0,0
+19576,Kranti Warriors,Jay Patel,1,0,4,10,0,10.00,5,0
+19576,Kranti Warriors,Kushal Patel,3,0,11,18,3,6.00,3,0
+19576,Pway Cubs,Neel Patel,4,0,12,17,1,4.25,1,0
+19576,Pway Cubs,Deep Patel*,4,1,18,13,0,3.25,3,0
+19576,Pway Cubs,Preet Patel,1,0,3,14,0,14.00,3,0
+19576,Pway Cubs,Ronak Rana,4,0,13,32,2,8.00,0,0
+19576,Pway Cubs,Drumil Amin,3,0,10,15,3,5.00,2,0
+19574,JERSEY TIGERS,Thirupathi Chella,4,0,14,20,1,5.00,3,1
+19574,JERSEY TIGERS,Pratik Shah,4,0,10,42,3,10.50,5,0
+19574,JERSEY TIGERS,Nischal Maniar,4,0,15,19,3,4.75,1,0
+19574,JERSEY TIGERS,Ankit Patel,4,0,13,39,2,9.75,7,1
+19574,NJ Marvels,Mani V*,4,0,14,19,0,4.75,1,0
+19574,NJ Marvels,Gowtham Lingampalli,1,0,2,5,0,5.00,1,0
+19574,NJ Marvels,Ranga Rao Kosaraju,4,0,13,28,3,7.00,3,0
+19574,NJ Marvels,Mitul Patel,4,0,10,35,1,8.75,0,0
+19574,NJ Marvels,Arun Chander,3,0,11,27,2,9.00,2,2
 19573,Shreeji XI,Jatan Vaidya,4,1,15,19,4,4.75,1,0
 19573,Shreeji XI,Anish Patel,2,0,7,12,0,6.00,2,0
 19573,Shreeji XI,Krunal Patel,3,0,10,18,1,6.00,2,0
@@ -1715,6 +2877,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19560,CHAMPIONS,Rohit Khatri,3,0,14,20,3,6.67,2,3
 19560,CHAMPIONS,Gurjant Riar,4,0,11,21,2,5.25,4,1
 19560,CHAMPIONS,Sandeep Jha,1.2,0,4,6,1,4.50,1,1
+19559,United Falcons,Kashyap Shah,1,0,2,9,0,9.00,2,0
+19559,United Falcons,Nikunj Malpani,4,0,14,15,3,3.75,0,0
+19559,United Falcons,Dhruv Modi,4,0,17,23,3,5.75,3,0
+19559,United Falcons,Dhwanil Patel,4,0,19,12,1,3.00,3,1
+19559,United Falcons,Virendra D,3,0,11,13,2,4.33,2,0
+19559,Invincible CC,Vishal Bhavsar*,1,0,4,2,2,2.00,0,0
+19559,Invincible CC,Parthiv Parikh,3,0,11,13,1,4.33,1,0
+19559,Invincible CC,Vishal Bhavsar*,1,0,3,7,0,7.00,0,0
+19559,Invincible CC,Pratik Patel,2,0,6,18,1,9.00,0,0
+19559,Invincible CC,Hitesh Pandya,2,0,4,19,0,9.50,0,0
+19559,Invincible CC,Saurin Patel,1,0,1,13,0,13.00,0,0
 19552,Morris Indians,Visu Kondeti*,4,0,14,27,1,6.75,3,2
 19552,Morris Indians,Vyas Bellamkonda,3,0,9,23,1,7.67,5,0
 19552,Morris Indians,Uday Kota,4,0,13,23,2,5.75,0,0
@@ -1765,6 +2938,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19539,Edison Super Kings,Arockia Prabakar Lazar,4,0,15,24,1,6.00,1,0
 19539,Edison Super Kings,Sankar Gopalakrishnan,3,0,6,16,1,5.33,3,0
 19539,Edison Super Kings,Chandrashekaran Marisamy*,3,0,7,31,1,10.33,4,1
+19536,Express Rangers,Shivananda Bashetter,4,0,15,27,2,6.75,4,0
+19536,Express Rangers,Thinnappan Muthu,4,0,17,12,0,3.00,2,0
+19536,Express Rangers,VIRAJ JANI,3,0,10,12,1,4.00,1,0
+19536,Express Rangers,Veeraswamy Veeramreddy,1,0,3,15,1,15.00,2,1
+19536,Express Rangers,Saidu M Shaik*,4,0,15,15,3,3.75,3,0
+19536,Lincoln�XI,Mukesh Pandey,3.2,0,7,31,0,9.30,1,0
+19536,Lincoln�XI,Naresh Patel,4,0,14,10,2,2.50,0,0
+19536,Lincoln�XI,Ravi Teja Manepalli,2,0,8,16,0,8.00,0,1
+19536,Lincoln�XI,Abhishek Yadav*,2,0,6,15,1,7.50,1,0
+19536,Lincoln�XI,Utsav Patel,1,0,2,13,0,13.00,0,0
 19530,VRK Gladiators,Sushil Golecha,2,1,8,10,1,5.00,0,0
 19530,VRK Gladiators,Vipul Joshi,2,0,8,4,1,2.00,0,0
 19530,VRK Gladiators,Anilreddy Aleti,2,0,7,17,0,8.50,2,0
@@ -1802,7 +2985,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19522,PCA Jr.,Sapan Parikh,1,0,4,5,0,5.00,0,0
 19519,NJ Boxers,Kirtan Bhikadiya,2,0,7,12,1,6.00,3,1
 19519,NJ Boxers,Ankit Arora,3,0,12,12,0,4.00,0,0
-19519,NJ Boxers,Ali A,4,0,14,27,2,6.75,1,0
+19519,NJ Boxers,Ali Asgher,4,0,14,27,2,6.75,1,0
 19519,NJ Boxers,Dharmik Patel,3,0,10,15,1,5.00,0,0
 19519,NJ Boxers,Rajeev Mohan*,2,0,4,20,0,10.00,1,0
 19519,NJ Boxers,Jeet Patel,1,0,4,7,1,7.00,0,0
@@ -1812,6 +2995,20 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19519,Newport Narcos,Nitish Dabas,2,0,6,20,0,10.00,0,0
 19519,Newport Narcos,Kush Singh,1,0,1,17,0,17.00,0,1
 19519,Newport Narcos,Sachin Jain,0.2,0,1,4,0,12.00,0,0
+19517,Nj Warriors,Rajesh Thakur,4,0,10,29,1,7.25,4,0
+19517,Nj Warriors,Amit Kumar,3,0,7,40,0,13.33,0,0
+19517,Nj Warriors,Rohit Sharma*,1,0,1,26,1,26.00,0,1
+19517,Nj Warriors,Praveen Mandya,2,0,3,34,0,17.00,0,1
+19517,Nj Warriors,Gyan Singh,3,0,8,40,2,13.33,1,0
+19517,Nj Warriors,Mihir Parikh,1,0,1,16,0,16.00,2,0
+19517,Nj Warriors,Jeyaprakash Jeyapal,2,0,6,27,1,13.50,3,0
+19517,Sreeshti Weekenders,Shuvradeep Mukherjee,2,0,4,26,0,13.00,2,0
+19517,Sreeshti Weekenders,Sajeel Ahmed,4,0,6,50,2,12.50,1,0
+19517,Sreeshti Weekenders,Monang Shah,3,0,6,30,0,10.00,1,0
+19517,Sreeshti Weekenders,Mahesh Nagappa,1,0,1,14,0,14.00,0,0
+19517,Sreeshti Weekenders,Kamal Choudhury,3,0,13,16,2,5.33,3,0
+19517,Sreeshti Weekenders,Abbas Zaidi,2,0,4,22,0,11.00,3,0
+19517,Sreeshti Weekenders,Nimish Deshpande,1,0,3,15,1,15.00,2,0
 19513,Em Sports Club,Ashutosh Ashish,3,0,9,15,0,5.00,0,0
 19513,Em Sports Club,Rahul Gundani*,4,0,12,27,2,6.75,4,0
 19513,Em Sports Club,Pathik Ray,1,0,1,6,0,6.00,0,1
@@ -1844,6 +3041,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19508,Cricket Lovers,Atul Gupta,4,0,19,12,4,3.00,1,0
 19508,Cricket Lovers,Muhammad Ansar,2,0,6,15,0,7.50,3,0
 19508,Cricket Lovers,Ammar Ahmed,0.4,0,2,13,0,19.50,1,0
+19506,Windsor Warriors,Keyur Avichal,2,1,10,3,1,1.50,0,0
+19506,Windsor Warriors,Pardeep Kumar,2,0,5,10,1,5.00,1,0
+19506,Windsor Warriors,Anand Chaudhary,4,1,16,15,2,3.75,0,0
+19506,Windsor Warriors,Lalit Joshi,4,0,14,19,4,4.75,5,0
+19506,Windsor Warriors,Vijay Selvam,2.5,0,7,11,2,3.88,0,0
+19506,Windsor Warriors,Taranjeet Singh,1,0,1,8,0,8.00,0,0
+19506,Monroe Mavericks,Sarbjitsingh Sahota,4,0,16,13,1,3.25,1,1
+19506,Monroe Mavericks,Bhanu Singaram,3,2,17,1,1,0.33,0,0
+19506,Monroe Mavericks,Rakesh Kar,4,0,20,5,3,1.25,1,0
+19506,Monroe Mavericks,Sakthivel Jagadeesan,3,0,11,10,1,3.33,3,0
+19506,Monroe Mavericks,Abdul Razak Bellary,2,0,8,9,1,4.50,0,0
 19504,TRIDENTS XI,Harish (Harry)*,1,0,3,6,0,6.00,3,0
 19504,TRIDENTS XI,Pruthvi Patel,2,0,4,16,0,8.00,0,0
 19504,TRIDENTS XI,Balamurugan C,1,0,5,1,0,1.00,0,0
@@ -1855,6 +3063,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19504,GoldFinch Cricket Club,Harjot Singh Saini,4,0,16,17,2,4.25,4,0
 19504,GoldFinch Cricket Club,Murali Govindaraj,1,0,3,12,0,12.00,6,1
 19504,GoldFinch Cricket Club,Kawaljeet Singh Matta*,2,0,8,17,1,8.50,3,0
+19503,JC Warriors,Santosh Lalan,4,1,12,38,3,9.50,1,0
+19503,JC Warriors,Shrivats Vyas,4,0,11,41,0,10.25,2,0
+19503,JC Warriors,Asif Mohammed,4,0,9,35,2,8.75,1,0
+19503,JC Warriors,Himanshu Dixit,4,0,15,19,3,4.75,0,0
+19503,Jersey Superstars,Jalal Rahman,2,0,8,25,1,12.50,1,0
+19503,Jersey Superstars,Balu Y,4,0,12,36,1,9.00,0,0
+19503,Jersey Superstars,Muhammad Haseeb*,3,0,9,31,1,10.33,1,1
+19503,Jersey Superstars,Imran Raja,2,0,6,23,0,11.50,1,0
+19503,Jersey Superstars,Tauseef Ahmed,2,0,7,19,1,9.50,8,0
+19503,Jersey Superstars,Satish Kasireddy,0.1,0,0,4,0,24.00,0,0
 19501,Plainsboro Panthers,Nitesh C* †,4,0,11,28,2,7.00,2,0
 19501,Plainsboro Panthers,Vamshi Reddy,3,0,10,21,1,7.00,0,0
 19501,Plainsboro Panthers,VIJAYANAND PONNADA,4,0,8,29,1,7.25,2,0
@@ -1876,6 +3094,31 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19499,Bayonne CC,Ashokan A,3.5,0,16,13,3,3.39,2,0
 19499,Bayonne CC,Anandakumar Raji(Anand),4,0,17,13,4,3.25,2,0
 19499,Bayonne CC,Sakthivel Veeramuthu,1,0,1,17,0,17.00,0,0
+19485,Raptors,Mati Ullah,4,0,14,24,1,6.00,2,1
+19485,Raptors,Ameer Muavia,4,0,12,30,1,7.50,1,1
+19485,Raptors,Asim Ali,4,0,13,26,2,6.50,2,0
+19485,Raptors,Majid Butt*,3,0,11,40,0,13.33,5,2
+19485,Raptors,Muhammad Huzafa,1,0,3,10,1,10.00,2,0
+19485,Express Rangers,Thinnappan Muthu,2,0,5,26,0,13.00,0,0
+19485,Express Rangers,Veeraswamy Veeramreddy,1,0,2,15,1,15.00,0,0
+19485,Express Rangers,Mohan Venu,1,0,3,23,0,23.00,2,2
+19485,Express Rangers,Shivananda Bashetter,4,0,16,20,4,5.00,4,0
+19485,Express Rangers,Praveen Rajappan †,3,0,11,20,0,6.67,4,0
+19485,Express Rangers,Saidu M Shaik*,1,0,3,13,1,13.00,0,0
+19485,Express Rangers,Amandeep Bawa,4,0,16,21,1,5.25,1,1
+19484,Windsor Warriors,Anand Chaudhary,4,0,16,16,2,4.00,0,0
+19484,Windsor Warriors,Amar Ghorpade,4,0,11,25,1,6.25,1,0
+19484,Windsor Warriors,Lalit Joshi*,3,0,2,48,0,16.00,3,0
+19484,Windsor Warriors,Pardeep Kumar,3,0,7,19,2,6.33,2,0
+19484,Windsor Warriors,Keyur Avichal,1,0,2,11,0,11.00,2,0
+19484,Windsor Warriors,Taranjeet Singh,1,0,3,12,2,12.00,3,0
+19484,JC Warriors,Himanshu Dixit,2,0,6,21,2,10.50,0,0
+19484,JC Warriors,Pratik Mane,2,0,8,14,0,7.00,9,0
+19484,JC Warriors,Shrivats Vyas*,4,0,15,13,3,3.25,1,0
+19484,JC Warriors,Asif Mohammed,3,0,14,5,1,1.67,1,0
+19484,JC Warriors,Vishal Choudhary,2,0,9,5,3,2.50,2,0
+19484,JC Warriors,Neerav Poriya,2,0,8,10,0,5.00,0,0
+19484,JC Warriors,Sachin Rathod,1,0,4,7,0,7.00,0,0
 19478,SB Vikings Cricket Club,Vamshidhar Reddy,4,0,12,24,5,6.00,0,0
 19478,SB Vikings Cricket Club,Madesh Swaminaidu*,3,0,7,34,0,11.33,2,0
 19478,SB Vikings Cricket Club,Ashok Dhanasekaran,3,0,8,28,0,9.33,3,0
@@ -1885,7 +3128,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19478,Newport Narcos,Anuj Thaker,4,1,18,20,4,5.00,6,0
 19478,Newport Narcos,Chet Kalra*,4,0,12,34,1,8.50,4,0
 19478,Newport Narcos,Nitish Dabas,4,0,11,50,0,12.50,11,1
-19476,MCC - Weekenders,Mohammad Usman,4,0,11,21,1,5.25,3,0
+19476,MCC - Weekenders,Mohammed Usman,4,0,11,21,1,5.25,3,0
 19476,MCC - Weekenders,Akash Rao,4,0,12,27,1,6.75,7,0
 19476,MCC - Weekenders,Shoaib Jafri,4,0,14,14,4,3.50,1,0
 19476,MCC - Weekenders,Hamza Shahid,4,0,16,19,1,4.75,8,0
@@ -1938,7 +3181,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19467,Sparta XI,Abhisheka Dalal,3.3,0,10,25,0,7.14,2,1
 19467,Sparta XI,Piyush Parashar,1,0,2,10,0,10.00,1,0
 19465,VRK Gladiators,Vipul Joshi,1,0,6,3,0,3.00,0,2
-19465,VRK Gladiators,Sandeep I Shetty,4,0,19,7,3,1.75,1,0
+19465,VRK Gladiators,Sandeep A Shetty,4,0,19,7,3,1.75,1,0
 19465,VRK Gladiators,Harshad Patil*,1,0,3,12,1,12.00,3,0
 19465,VRK Gladiators,Ankur Chaturvedi,2,0,9,14,1,7.00,6,0
 19465,VRK Gladiators,Naveen R Sripathi,2,0,5,16,2,8.00,0,1
@@ -1948,9 +3191,20 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19465,PCA Jr.,Sahil Patel,3,0,10,19,1,6.33,0,0
 19465,PCA Jr.,Samir Patel*,2,0,5,18,3,9.00,2,0
 19465,PCA Jr.,Hardik Vyas (GCC),2,0,7,10,1,5.00,1,0
-19465,PCA Jr.,Rishi Patel GCC,1,0,1,13,1,13.00,0,0
+19465,PCA Jr.,Purvik Patel GCC,1,0,1,13,1,13.00,0,0
 19465,PCA Jr.,Chintan Patel,2,0,5,15,0,7.50,0,1
 19465,PCA Jr.,Priyank Patel(gcc),0.1,0,0,2,0,12.00,1,0
+19463,Sreeshti Weekenders,Shuvradeep Mukherjee,3.3,0,15,15,2,4.29,1,0
+19463,Sreeshti Weekenders,Rishi Singh,3,0,6,17,1,5.67,2,0
+19463,Sreeshti Weekenders,Monang Shah,2,0,10,6,2,3.00,0,0
+19463,Sreeshti Weekenders,Kamal Choudhury,2,0,9,4,2,2.00,0,0
+19463,Sreeshti Weekenders,Amol Manjrekar,2,0,5,8,0,4.00,0,0
+19463,Sreeshti Weekenders,Abbas Zaidi,2,1,11,2,3,1.00,1,0
+19463,Incredibulls,Phanikumar Bellamkonda,2,0,7,15,1,7.50,1,0
+19463,Incredibulls,Vaibhav Kunar,2,0,3,19,1,9.50,0,0
+19463,Incredibulls,Venkat Nagireddy,1,0,5,6,0,6.00,0,0
+19463,Incredibulls,Shehbaz Saiyed,1.5,0,5,8,1,4.36,1,0
+19463,Incredibulls,Pavan Kumar Reddy Suram,1,0,1,5,0,5.00,0,0
 19456,GoldFinch Cricket Club,Harjot Singh Saini,4,0,15,13,2,3.25,3,0
 19456,GoldFinch Cricket Club,Srinath Nathan,4,0,12,29,2,7.25,8,1
 19456,GoldFinch Cricket Club,Bhavik B Chokshi,3,0,5,36,0,12.00,3,1
@@ -1962,7 +3216,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19456,Cricket Warriors,Aditya Rathor,3,0,10,19,1,6.33,1,0
 19456,Cricket Warriors,Dipen Patel,2,0,5,15,1,7.50,1,1
 19454,NJ Boxers,Prasad Fernando,4,2,18,7,3,1.75,0,0
-19454,NJ Boxers,Ali A,4,0,13,25,1,6.25,2,0
+19454,NJ Boxers,Ali Asgher,4,0,13,25,1,6.25,2,0
 19454,NJ Boxers,Navaneetha Krishnan Arunachalam,2,0,6,18,0,9.00,0,0
 19454,NJ Boxers,Ankit Arora,4,0,14,15,2,3.75,2,0
 19454,NJ Boxers,Niaz Khan,2,0,8,7,1,3.50,0,0
@@ -1995,6 +3249,27 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19445,Bayonne CC,Chandra Sekhar Mutha,3,0,13,11,2,3.67,1,0
 19445,Bayonne CC,Udhaya Kumar Bagavathiappan,3,0,5,24,1,8.00,0,0
 19445,Bayonne CC,Govarthanan Kuppusamy,0.1,0,0,4,0,24.00,0,0
+19444,Lincoln�XI,Geetha Anem,4,0,14,20,0,5.00,3,0
+19444,Lincoln�XI,Utsav Patel,2,0,5,29,1,14.50,7,0
+19444,Lincoln�XI,Mukesh Pandey,4,0,9,21,2,5.25,0,0
+19444,Lincoln�XI,Ravi Teja Manepalli,4,0,8,44,1,11.00,0,0
+19444,Lincoln�XI,Krutesh Bhavsar*,2,0,3,17,0,8.50,1,0
+19444,Monroe Mavericks,Rakesh Kotha,2.2,0,11,6,1,2.57,1,1
+19444,Monroe Mavericks,Sakthivel Jagadeesan,2,0,6,9,1,4.50,0,0
+19444,Monroe Mavericks,Bhanu Singaram,3,0,9,26,3,8.67,0,0
+19444,Monroe Mavericks,Rakesh Kar,2,0,7,11,1,5.50,0,0
+19444,Monroe Mavericks,Sarbjitsingh Sahota,3,0,11,15,3,5.00,1,0
+19432,Telugu Titans - Weekenders,Surya Nallamilli,3,0,5,55,1,18.33,2,2
+19432,Telugu Titans - Weekenders,Ankith Nayakoti,3,0,8,48,2,16.00,1,2
+19432,Telugu Titans - Weekenders,Shashi Bhushan,4,0,13,22,4,5.50,3,0
+19432,Telugu Titans - Weekenders,Akshay Kumar Kemoju,3,0,10,39,1,13.00,5,1
+19432,Telugu Titans - Weekenders,Sanjeev Muralidharan,1,0,2,22,0,22.00,0,0
+19432,Telugu Titans - Weekenders,Krishna Kalakuntla,2,1,8,11,1,5.50,2,0
+19432,Pway Cubs,Neel Patel,4,1,17,8,4,2.00,1,0
+19432,Pway Cubs,Nish Patel,2,0,10,3,1,1.50,1,0
+19432,Pway Cubs,Sagar Shah,2,0,6,16,1,8.00,0,0
+19432,Pway Cubs,Drumil Amin,2,0,8,5,2,2.50,1,0
+19432,Pway Cubs,Akshar Patel,1,0,6,6,2,6.00,1,1
 19431,Perryville Panthers,Anil Paduchuri,3,0,9,22,1,7.33,2,0
 19431,Perryville Panthers,Ishwar Girase,4,0,16,24,1,6.00,3,2
 19431,Perryville Panthers,Elayaraja Muthuswamy,4,0,12,26,3,6.50,5,0
@@ -2006,9 +3281,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19431,Jersey City Dominators,Shubh Bhardwaj,3,0,11,15,1,5.00,2,0
 19431,Jersey City Dominators,Dhruv Chamaria,1,0,5,2,0,2.00,1,0
 19431,Jersey City Dominators,Vishal Naik Meghavath,1,0,4,5,0,5.00,3,0
+19428,United Falcons,Sanketh Shetty,4,0,14,26,0,6.50,8,0
+19428,United Falcons,Nikunj Malpani,3,0,9,17,2,5.67,0,1
+19428,United Falcons,Neel Joshi,2,0,7,17,1,8.50,0,1
+19428,United Falcons,Tejas Patel,4,0,18,6,3,1.50,0,0
+19428,United Falcons,Virendra D,3,0,10,15,3,5.00,1,0
+19428,Kranti Warriors,Svaraj Patel,1,0,2,15,1,15.00,0,0
+19428,Kranti Warriors,Smeet Shah,3,0,12,21,0,7.00,2,2
+19428,Kranti Warriors,Jay Patel,3,0,9,21,0,7.00,4,0
+19428,Kranti Warriors,Axat Patel,4,0,17,17,4,4.25,1,0
+19428,Kranti Warriors,Shrujal Shah,4,0,17,8,2,2.00,1,0
 19417,Staten Island Strikers,Jithin Varghese,3,0,11,27,3,9.00,6,0
 19417,Staten Island Strikers,Nithin Varughese,4,0,13,21,1,5.25,3,1
-19417,Staten Island Strikers,Nithin Eapen Andrews,1,0,4,6,0,6.00,1,0
+19417,Staten Island Strikers,Nithin Andrews,1,0,4,6,0,6.00,1,0
 19417,Staten Island Strikers,Jithu Job,3,0,8,21,1,7.00,2,0
 19417,Staten Island Strikers,Mathew James,3,0,16,7,3,2.33,1,0
 19417,Staten Island Strikers,Jithin Varghese,0.4,0,2,7,1,10.50,0,0
@@ -2037,6 +3322,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19413,Mag11,Manoj P,3,0,7,23,1,7.67,0,1
 19413,Mag11,Raj Sakiri,3,0,8,28,0,9.33,8,0
 19413,Mag11,Venkat Chennu †,1,0,4,3,0,3.00,1,0
+19411,JERSEY TIGERS,Thirupathi Chella,4,0,10,31,3,7.75,2,0
+19411,JERSEY TIGERS,Nischal Maniar,4,0,12,32,1,8.00,1,0
+19411,JERSEY TIGERS,Anikesh Jain,4,0,9,50,0,12.50,5,4
+19411,JERSEY TIGERS,Prashanth Mugundhan,3,0,4,42,2,14.00,3,2
+19411,JERSEY TIGERS,Bhavik Patel (Bansi),1,0,2,20,0,20.00,4,1
+19411,Giant Slayers,Gurudutt Patel,2,0,9,6,1,3.00,2,0
+19411,Giant Slayers,Ronak Patel,3,0,10,9,2,3.00,1,0
+19411,Giant Slayers,Sabeel Shaikh,3,0,10,15,3,5.00,0,0
+19411,Giant Slayers,Neel Patel-24,2,0,6,7,0,3.50,1,0
+19411,Giant Slayers,Hardik Patel,2,1,8,5,1,2.50,0,1
+19411,Giant Slayers,Apurv Jain,2,0,10,3,0,1.50,1,0
+19411,Giant Slayers,Gunjan Patel*,2,1,8,9,1,4.50,0,0
 19407,Robbinsville Jaguars,Yashkumar Patel,4,0,13,27,2,6.75,0,0
 19407,Robbinsville Jaguars,Rahul Bhardwaj,4,0,10,23,1,5.75,1,0
 19407,Robbinsville Jaguars,Harjeewan Singh,4,0,8,37,1,9.25,0,1
@@ -2057,6 +3354,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19404,Morris Indians,Vyas Bellamkonda,1,0,0,13,0,13.00,4,0
 19404,Morris Indians,Sumanth Basetty,1,0,2,12,0,12.00,0,0
 19404,Morris Indians,Basid Khan Mohammed,0.1,0,0,6,0,36.00,0,0
+19400,Mystery Squad,Karthick Rajendran,2,0,2,19,0,9.50,0,0
+19400,Mystery Squad,Deep Parikh,4,0,10,35,3,8.75,2,0
+19400,Mystery Squad,Sudhanshoo Vashisht,4,0,8,52,0,13.00,2,1
+19400,Mystery Squad,Danish Shaikh,4,0,9,36,3,9.00,0,2
+19400,Mystery Squad,Haridut Athi*,2,0,5,19,1,9.50,0,0
+19400,NJ Marvels,Mani V*,1,0,6,1,1,1.00,1,0
+19400,NJ Marvels,Narendran Suruliappan,3,0,9,16,2,5.33,0,0
+19400,NJ Marvels,Ranga Rao Kosaraju,3,0,8,27,1,9.00,2,1
+19400,NJ Marvels,Saikumar Katepalli,4,0,17,20,2,5.00,4,0
+19400,NJ Marvels,Siddartha Chunchu,3,0,8,19,0,6.33,6,0
+19400,NJ Marvels,Mitul Patel,2,0,5,19,0,9.50,6,0
 19394,Bethak Titans,Sneh Patel (sagar),3,0,8,38,1,12.67,4,0
 19394,Bethak Titans,Daksh Bhakta,4,0,17,17,4,4.25,1,0
 19394,Bethak Titans,Neel Patel,4,0,7,45,0,11.25,7,0
@@ -2082,9 +3390,9 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19390,Phoenix Flyers,Sandip Kaskar,1,0,2,11,0,11.00,1,1
 19390,Phoenix Flyers,Rajesh Mameda,2,0,9,17,0,8.50,4,3
 19390,Phoenix Flyers,Anup Gondkar,1,0,2,5,1,5.00,1,0
-19390,BLOODLINE,Priyam S,4,1,14,16,2,4.00,0,0
+19390,BLOODLINE,Priyam Shah,4,1,14,16,2,4.00,0,0
 19390,BLOODLINE,Alpesh Patel,3,0,11,11,0,3.67,0,0
-19390,BLOODLINE,Vraj Patel,4,0,13,19,3,4.75,1,0
+19390,BLOODLINE,Vraj Patel 24,4,0,13,19,3,4.75,1,0
 19390,BLOODLINE,Divya Patel,4,0,9,23,0,5.75,1,0
 19390,BLOODLINE,Nirav Shah,1,0,2,8,0,8.00,0,0
 19388,Edison Riders,Chandrasekhar A,4,0,16,16,1,4.00,4,0
@@ -2118,6 +3426,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19369,Jc Mavericks,Sankar Gudapati,4,0,13,22,1,5.50,2,0
 19369,Jc Mavericks,Srinath Katari,1,0,4,4,0,4.00,2,0
 19369,Jc Mavericks,Vishal Padhye,2.5,0,12,15,0,5.29,2,0
+19366,Giant Slayers,Manthan Patel,3,0,8,29,1,9.67,3,0
+19366,Giant Slayers,Gunjan Patel*,4,0,14,20,1,5.00,2,0
+19366,Giant Slayers,Ronak Patel,4,1,16,21,3,5.25,4,0
+19366,Giant Slayers,Sabeel Shaikh,4,0,19,8,3,2.00,1,0
+19366,Giant Slayers,Hitmtullah M,1,0,0,9,0,9.00,0,0
+19366,Mystery Squad,Praj Patel,3.3,1,16,13,3,3.71,2,0
+19366,Mystery Squad,Sudhanshoo Vashisht,3,0,8,21,1,7.00,2,0
+19366,Mystery Squad,Danish Shaikh,1,0,3,10,0,10.00,1,0
+19366,Mystery Squad,Haridut Athi*,2,0,5,21,0,10.50,1,0
+19366,Mystery Squad,Karthick Rajendran,2,0,4,21,0,10.50,0,1
 19360,Robbinsville Jaguars,Anoop Athayil,3,0,8,39,2,13.00,1,0
 19360,Robbinsville Jaguars,Yashkumar Patel,3,0,8,45,1,15.00,1,0
 19360,Robbinsville Jaguars,Rahul Bhardwaj,2,0,3,23,0,11.50,0,0
@@ -2142,6 +3460,27 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19358,Mag11,Ramana Jajula,4,0,13,27,3,6.75,2,1
 19358,Mag11,Naveen Natarajan,4,0,10,31,2,7.75,0,1
 19358,Mag11,Vinothkumar Vasu,4,0,16,23,2,5.75,1,0
+19357,Telugu Titans - Weekenders,Akshay Kumar Kemoju,1,0,5,8,1,8.00,2,0
+19357,Telugu Titans - Weekenders,Sidd Chou,4,0,13,18,0,4.50,2,0
+19357,Telugu Titans - Weekenders,Sanjeev Muralidharan,1,0,2,4,0,4.00,0,0
+19357,Telugu Titans - Weekenders,Surya Nallamilli,4,1,21,6,2,1.50,2,0
+19357,Telugu Titans - Weekenders,Ramesh Amaraneni,1.5,0,4,22,0,12.00,3,0
+19357,Telugu Titans - Weekenders,Krishna Kalakuntla,4,0,19,14,6,3.50,5,1
+19357,United Falcons,Sanketh Shetty,4,0,13,17,4,4.25,1,0
+19357,United Falcons,Neel Joshi,3,0,8,18,1,6.00,3,0
+19357,United Falcons,Tejas Patel,4,0,19,7,1,1.75,1,0
+19357,United Falcons,Nikunj Malpani,2,0,5,24,0,12.00,1,0
+19357,United Falcons,Jiteen S,0.2,0,0,7,0,21.00,0,0
+19352,Edison Kings,Shiv K,4,1,18,11,2,2.75,1,0
+19352,Edison Kings,Neeraj Dwivedi,4,0,16,20,2,5.00,3,0
+19352,Edison Kings,Ram Prakash Kota*,3,0,11,16,3,5.33,3,0
+19352,Edison Kings,Satya Tarun Reddy,2,0,8,20,2,10.00,3,0
+19352,Edison Kings,Ravi Parsi,1,0,5,2,1,2.00,0,0
+19352,NJ Marvels,Mitul Patel,4,0,18,25,3,6.25,1,0
+19352,NJ Marvels,Ranga Rao Kosaraju*,4,0,14,19,1,4.75,0,0
+19352,NJ Marvels,Narender Reddy Bojja †,4,0,16,14,1,3.50,2,0
+19352,NJ Marvels,Surender Kumar,3,1,13,7,2,2.33,1,0
+19352,NJ Marvels,Raghu Saagamreddy,1,0,3,5,0,5.00,2,0
 19350,Perryville Panthers,Naveen Elangovan,4,0,9,30,0,7.50,2,0
 19350,Perryville Panthers,Chaitanya Boddu,4,0,10,24,2,6.00,3,1
 19350,Perryville Panthers,Venu Sunkavalli,1,0,3,14,0,14.00,0,0
@@ -2162,8 +3501,22 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19348,BLOODLINE,Divya Patel,2,0,6,15,1,7.50,0,0
 19348,BLOODLINE,Nikhil Patel,4,0,17,19,4,4.75,3,0
 19348,BLOODLINE,Dip Parikh*,1,0,3,6,0,6.00,1,0
-19348,BLOODLINE,Vraj Patel,4,0,11,29,2,7.25,0,0
+19348,BLOODLINE,Vraj Patel 24,4,0,11,29,2,7.25,0,0
 19348,BLOODLINE,Devanshu Patel,2,0,3,32,0,16.00,2,2
+19343,JERSEY TIGERS,Thirupathi Chella,4,0,15,34,3,8.50,8,0
+19343,JERSEY TIGERS,Anikesh Jain,1,0,2,22,1,22.00,6,0
+19343,JERSEY TIGERS,Nischal Maniar,4,0,9,48,1,12.00,0,0
+19343,JERSEY TIGERS,Anikesh Jain,1,0,2,17,0,17.00,3,0
+19343,JERSEY TIGERS,Mihir Vaghasia,4,0,14,30,3,7.50,0,1
+19343,JERSEY TIGERS,Anikesh Jain,2,0,7,20,1,10.00,0,1
+19343,Pway Cubs,Aaryan Patel,2,0,8,10,2,5.00,0,2
+19343,Pway Cubs,Neel Patel,4,1,17,23,4,5.75,3,1
+19343,Pway Cubs,Deep Patel*,1,0,3,4,0,4.00,0,0
+19343,Pway Cubs,Akshar Patel,2,0,7,11,2,5.50,0,0
+19343,Pway Cubs,Vinit Patel,2,0,9,12,0,6.00,1,0
+19343,Pway Cubs,Sagar Shah,2,0,6,15,1,7.50,2,1
+19343,Pway Cubs,Binit Shah,1,0,3,8,0,8.00,3,2
+19343,Pway Cubs,Vraj Shah,1.1,0,5,8,1,6.86,5,1
 19337,NJ Titans,Yashwant Rao,4,0,10,27,2,6.75,4,2
 19337,NJ Titans,Sourav Poddar,2,0,7,8,0,4.00,0,0
 19337,NJ Titans,Darsh Ajmera*,4,1,17,8,0,2.00,1,0
@@ -2218,6 +3571,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19325,Edison Super Kings,Arockia Prabakar Lazar,2,0,9,20,1,10.00,4,1
 19325,Edison Super Kings,Sameer Abdullah Muthaiyan,1,0,2,11,0,11.00,1,0
 19325,Edison Super Kings,Karthikeyan Rajendiran,2,0,6,17,1,8.50,1,1
+19321,Sreeshti Weekenders,Shuvradeep Mukherjee,2,0,7,6,2,3.00,1,0
+19321,Sreeshti Weekenders,Kamal Choudhury,3,0,11,28,1,9.33,2,0
+19321,Sreeshti Weekenders,Mahesh Nagappa,2,0,7,9,2,4.50,1,0
+19321,Sreeshti Weekenders,Monang Shah,2,0,6,8,0,4.00,1,0
+19321,Sreeshti Weekenders,Harshal Gupta,3,0,7,22,2,7.33,0,0
+19321,Sreeshti Weekenders,Abbas Zaidi,2.4,0,6,17,3,6.38,2,0
+19321,Jersey Superstars,Fenil Shah,2,0,5,8,0,4.00,1,0
+19321,Jersey Superstars,Jitendra Singh*,2,0,8,12,0,6.00,2,0
+19321,Jersey Superstars,Sushil Kumar,2,0,2,24,0,12.00,0,0
+19321,Jersey Superstars,Vikas Chaudhary,2,0,5,23,1,11.50,0,1
+19321,Jersey Superstars,Gary Patel,1,0,2,11,1,11.00,1,0
+19321,Jersey Superstars,Shashank Patel,1,0,2,14,0,14.00,1,0
 19316,TRIDENTS XI,Keyur Patel,3,0,8,33,1,11.00,1,0
 19316,TRIDENTS XI,Tushar Patel †,3,0,4,46,0,15.33,0,1
 19316,TRIDENTS XI,Rashik Mohamed,1,0,4,11,0,11.00,1,0
@@ -2227,11 +3592,21 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19316,TRIDENTS XI,Balamurugan C,1,0,0,17,0,17.00,0,0
 19316,TRIDENTS XI,Pradeep Mishra,1,0,4,7,0,7.00,0,0
 19316,VRK Gladiators,Vinit Bharadwaj,2,0,7,15,0,7.50,1,0
-19316,VRK Gladiators,Sandeep I Shetty,2,0,9,7,1,3.50,3,0
+19316,VRK Gladiators,Sandeep A Shetty,2,0,9,7,1,3.50,3,0
 19316,VRK Gladiators,Avteet Chayal,2,0,7,10,1,5.00,0,0
 19316,VRK Gladiators,Sushil Golecha,2,0,6,7,2,3.50,1,0
 19316,VRK Gladiators,Tejdeep Maddirala,2,0,7,25,2,12.50,8,0
 19316,VRK Gladiators,Harshad Patil*,1.3,0,8,3,4,2.00,2,0
+19314,Brown Munde,Tatsat Dixit,2,0,5,21,1,10.50,5,1
+19314,Brown Munde,Shubham Jadhav,2.4,0,11,14,1,5.25,2,0
+19314,Brown Munde,Ananth Pai,4,2,21,8,3,2.00,2,0
+19314,Brown Munde,Siddharth Terde,4,2,20,9,2,2.25,0,0
+19314,Brown Munde,Utkarsh Manjrekar*,2,0,5,17,2,8.50,4,0
+19314,Express Rangers,Lovedeep Singh,1,0,1,5,0,5.00,0,0
+19314,Express Rangers,Shivananda Bashetter,4,0,15,14,2,3.50,1,0
+19314,Express Rangers,Thinnappan Muthu,4,0,13,15,3,3.75,0,0
+19314,Express Rangers,Mohan Venu,2,0,5,12,1,6.00,1,0
+19314,Express Rangers,Veeraswamy Veeramreddy,4,0,16,17,3,4.25,3,1
 19307,Edison Warriors,Abhishar M,4,0,13,24,2,6.00,0,0
 19307,Edison Warriors,Vishnu Holgir,1,0,1,5,0,5.00,0,0
 19307,Edison Warriors,Ajith Kannan,2,0,7,15,1,7.50,2,0
@@ -2299,6 +3674,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19285,Sparta XI,Suman Maramreddy*,4,0,15,11,4,2.75,0,0
 19285,Sparta XI,Niran Perera,4,0,15,23,2,5.75,3,0
 19285,Sparta XI,Roop Yekollu,2,0,6,14,1,7.00,2,0
+19284,Monroe Mavericks,Bhanu Singaram,4,1,17,23,3,5.75,1,0
+19284,Monroe Mavericks,Sakthivel Jagadeesan,2,0,7,15,0,7.50,0,0
+19284,Monroe Mavericks,Rakesh Kar,4,1,14,29,1,7.25,1,0
+19284,Monroe Mavericks,Sarbjitsingh Sahota,4,0,13,23,4,5.75,2,0
+19284,Monroe Mavericks,Ayush Bhat,1,0,4,20,1,20.00,1,3
+19284,Monroe Mavericks,Varun Gurram,1,0,4,7,1,7.00,0,0
+19284,Raptors,Mati Ullah,2,0,4,14,0,7.00,0,0
+19284,Raptors,Guarav Singh,4,0,16,20,2,5.00,1,0
+19284,Raptors,Amit Singh,3,0,7,25,1,8.33,1,0
+19284,Raptors,Faisal Mehmood,4,0,11,34,3,8.50,8,0
+19284,Raptors,Aamir Hussain,1,0,2,9,0,9.00,0,0
+19284,Raptors,Waqas Aslam,2,0,6,10,2,5.00,3,0
 19283,Hudson Hurricanes Sultans,Ankit Singh,4,0,14,14,1,3.50,1,0
 19283,Hudson Hurricanes Sultans,Kuldeep Shukla*,4,1,18,10,5,2.50,1,0
 19283,Hudson Hurricanes Sultans,Mohit Jain,3,0,13,13,2,4.33,0,0
@@ -2319,16 +3706,37 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19278,PCA Jr.,Karan Patel,1,0,2,21,1,21.00,2,0
 19278,PCA Jr.,Chintan Patel,2,0,5,26,0,13.00,3,0
 19278,PCA Jr.,Dhaval Patel,0.5,0,3,8,1,9.60,1,0
+19276,JC Warriors,Pratik Mane,4,0,14,28,2,7.00,6,1
+19276,JC Warriors,Himanshu Dixit,4,0,15,20,3,5.00,3,0
+19276,JC Warriors,Rahul Gupta,2,0,2,15,0,7.50,2,0
+19276,JC Warriors,Asif Mohammed,4,1,17,12,2,3.00,0,2
+19276,JC Warriors,Neerav Poriya,2,0,4,11,0,5.50,0,0
+19276,Lincoln�XI,Mukesh Pandey,3,0,8,18,1,6.00,2,1
+19276,Lincoln�XI,Utsav Patel,2,0,10,18,2,9.00,8,0
+19276,Lincoln�XI,Ravi Teja Manepalli,3.5,0,13,32,1,8.35,1,0
+19276,Lincoln�XI,Abhishek Yadav*,2,0,6,22,0,11.00,0,0
 19269,SB Vikings Cricket Club,Vamshidhar Reddy,2,0,3,17,2,8.50,1,0
 19269,SB Vikings Cricket Club,Shakil San,4,1,12,31,2,7.75,0,0
 19269,SB Vikings Cricket Club,Madesh Swaminaidu*,4,1,19,14,3,3.50,4,0
 19269,SB Vikings Cricket Club,Ashok Dhanasekaran,2,0,3,24,0,12.00,1,1
 19269,SB Vikings Cricket Club,Balaji Rajagopalan,4,0,8,31,1,7.75,1,1
-19269,PCA Jr.,Rishi Patel GCC,1,0,3,10,0,10.00,0,0
+19269,PCA Jr.,Purvik Patel GCC,1,0,3,10,0,10.00,0,0
 19269,PCA Jr.,Sahil Patel,4,1,16,22,1,5.50,2,0
 19269,PCA Jr.,Karan Patel,4,0,15,24,4,6.00,3,0
 19269,PCA Jr.,Samir Patel,3,0,6,27,1,9.00,1,0
 19269,PCA Jr.,Hardik Vyas (GCC),4,0,9,29,3,7.25,0,1
+19267,Windsor Warriors,Amar Ghorpade,3,0,6,44,0,14.67,0,0
+19267,Windsor Warriors,Anand Chaudhary,4,0,13,28,4,7.00,0,0
+19267,Windsor Warriors,Keyur Avichal,2,0,3,21,0,10.50,1,0
+19267,Windsor Warriors,Taranjeet Singh*,2,0,4,13,0,6.50,0,0
+19267,Windsor Warriors,Lalit Joshi,4,0,6,51,1,12.75,2,0
+19267,Windsor Warriors,Imran Mohammed,1,0,2,13,0,13.00,0,0
+19267,Sreeshti Weekenders,Shuvradeep Mukherjee,3,0,13,11,1,3.67,3,0
+19267,Sreeshti Weekenders,Mahesh Nagappa,3,0,9,19,2,6.33,2,0
+19267,Sreeshti Weekenders,Amol Manjrekar,2.4,0,13,6,5,2.25,2,0
+19267,Sreeshti Weekenders,Abbas Zaidi,3,0,11,11,1,3.67,0,0
+19267,Sreeshti Weekenders,Viraj Jasani*,2,0,4,15,0,7.50,0,0
+19267,Sreeshti Weekenders,Anal Patel,1,0,4,8,0,8.00,6,0
 19265,Plainsboro Panthers,Karan N*,4,0,11,24,0,6.00,1,0
 19265,Plainsboro Panthers,Dileep Linga,3,0,7,14,1,4.67,2,0
 19265,Plainsboro Panthers,Sreehari Mano,4,0,12,33,2,8.25,1,0
@@ -2371,8 +3779,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19257,VRK Gladiators,Suraj Pai Madhukar,2,0,4,15,0,7.50,1,0
 19257,VRK Gladiators,Vinit Bharadwaj,3,0,9,15,2,5.00,0,0
 19257,VRK Gladiators,Ankur Chaturvedi,3,0,15,5,2,1.67,2,0
-19257,VRK Gladiators,Sandeep I Shetty,2,0,10,3,2,1.50,0,0
+19257,VRK Gladiators,Sandeep A Shetty,2,0,10,3,2,1.50,0,0
 19257,VRK Gladiators,Harshad Patil*,2,0,4,24,0,12.00,0,0
+19250,JC Warriors,Santosh Lalan,4,0,15,29,3,7.25,0,0
+19250,JC Warriors,Shrivats Vyas,4,2,19,12,2,3.00,0,1
+19250,JC Warriors,Pratik Mane,4,0,16,22,4,5.50,8,0
+19250,JC Warriors,Shubham Pawar,1,0,3,14,0,14.00,1,0
+19250,JC Warriors,Rahul Gupta,0.1,0,1,0,1,0.00,0,0
+19250,Raptors,Amir Rashid,2,0,6,18,1,9.00,1,0
+19250,Raptors,Faisal Mehmood,3,0,10,22,1,7.33,6,0
+19250,Raptors,Majid Butt*,2,0,9,13,0,6.50,4,0
+19250,Raptors,Nasir Mehmood,1,0,4,10,0,10.00,2,0
+19250,Raptors,Tahir Mehmood,1,0,3,19,0,19.00,1,1
 19247,Em Sports Club,Ashutosh Ashish,2,0,4,11,0,5.50,2,0
 19247,Em Sports Club,Rahul Gundani*,3,0,6,25,0,8.33,0,0
 19247,Em Sports Club,Prasanna Sadanala,1,0,1,15,1,15.00,1,0
@@ -2381,7 +3799,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19247,Em Sports Club,Dhinesh R,2,0,5,14,0,7.00,2,1
 19247,Lincoln�XI,Hareesh S,1,0,3,15,0,15.00,0,1
 19247,Lincoln�XI,Ravi Teja Manepalli,3.5,0,9,34,1,8.87,1,0
-19247,Lincoln�XI,Geetha Krishna Anem,4,0,16,13,2,3.25,1,0
+19247,Lincoln�XI,Geetha Anem,4,0,16,13,2,3.25,1,0
 19247,Lincoln�XI,Abhishek Yadav*,4,0,7,38,1,9.50,5,0
 19247,Lincoln�XI,Utsav Patel,3,0,7,13,0,4.33,1,0
 19241,GoldFinch Cricket Club,Harjot Singh Saini,4,0,15,22,4,5.50,0,0
@@ -2393,6 +3811,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19241,MCC - Weekenders,Amit Bhandare,1,0,2,8,0,8.00,1,0
 19241,MCC - Weekenders,Hamza Shahid,4,0,11,18,3,4.50,2,1
 19241,MCC - Weekenders,Shoaib Jafri,4,0,15,19,3,4.75,1,0
+19233,Brown Munde,Tatsat Dixit,4,0,10,29,2,7.25,3,1
+19233,Brown Munde,Utkarsh Manjrekar*,4,0,9,29,2,7.25,3,0
+19233,Brown Munde,Ananth Pai,4,0,16,20,1,5.00,3,0
+19233,Brown Munde,Tanmay More,4,0,13,28,4,7.00,1,1
+19233,Monroe Mavericks,Varun Gurram,1,0,2,16,0,16.00,1,2
+19233,Monroe Mavericks,Rakesh Kar,4,0,10,23,1,5.75,0,0
+19233,Monroe Mavericks,Bhanu Singaram,4,0,15,18,2,4.50,0,0
+19233,Monroe Mavericks,Vinayak Nair,4,0,10,31,1,7.75,1,0
+19233,Monroe Mavericks,Sarbjitsingh Sahota,1,0,2,12,0,12.00,2,0
+19233,Monroe Mavericks,Ayush Bhat,1.2,0,4,7,0,5.25,0,0
 19232,Cricket Lovers,Aamer Iqbal,2,0,5,16,0,8.00,1,0
 19232,Cricket Lovers,Pavan Rohith Midimilla,4,0,5,52,0,13.00,0,0
 19232,Cricket Lovers,Sheshnath Yadav,2,0,4,37,0,18.50,1,1
@@ -2429,8 +3857,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19229,Bayonne CC,SatishKumar Sathuraveeran Veeranan,1,0,1,19,0,19.00,0,0
 19229,Bayonne CC,Mohan Kumar Undavalli,1,0,2,15,1,15.00,1,0
 19229,Bayonne CC,Gopinath Mohandass,0.2,0,1,6,0,18.00,0,0
+19227,Express Rangers,Shivananda Bashetter,2,0,5,11,1,5.50,2,0
+19227,Express Rangers,Jawaharlal Ganesan,2,0,6,7,0,3.50,0,0
+19227,Express Rangers,Thinnappan Muthu,3.4,0,9,17,6,4.64,0,0
+19227,Express Rangers,Amandeep Bawa,2,0,5,14,0,7.00,0,0
+19227,Express Rangers,Mohan Venu,3,0,12,11,2,3.67,2,0
+19227,Express Rangers,Saidu M Shaik*,1,0,4,10,1,10.00,0,0
+19227,Trident CC,Parth Modi,1,0,1,11,0,11.00,0,0
+19227,Trident CC,Zeeshan Ahmad,2,0,2,25,0,12.50,0,0
+19227,Trident CC,Pavan Kalyan Bakkani,2,0,6,18,0,9.00,0,0
+19227,Trident CC,Sowmith K,1,0,3,9,1,9.00,0,0
+19227,Trident CC,Venkatesh Bommakanti,1,0,2,4,0,4.00,0,0
 19224,NJ Boxers,Navaneetha Krishnan Arunachalam,1,0,3,16,0,16.00,2,1
-19224,NJ Boxers,Ali A,4,0,15,20,3,5.00,0,0
+19224,NJ Boxers,Ali Asgher,4,0,15,20,3,5.00,0,0
 19224,NJ Boxers,Prasad Fernando,4,0,13,22,0,5.50,0,0
 19224,NJ Boxers,Kirtan Bhikadiya,3,0,9,29,1,9.67,3,0
 19224,NJ Boxers,Ankit Arora,2,0,5,17,0,8.50,0,0
@@ -2441,6 +3880,22 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19224,TRIDENTS XI,Pradeep Mishra,2,0,6,24,1,12.00,2,1
 19224,TRIDENTS XI,Rashik Mohamed,1,0,3,4,0,4.00,0,0
 19224,TRIDENTS XI,Janak Patel,3,0,8,17,1,5.67,2,0
+19217,Mystery Squad,Sudhanshoo Vashisht,3.2,0,13,24,2,7.20,4,1
+19217,Mystery Squad,Praj Patel,4,0,14,25,0,6.25,0,3
+19217,Mystery Squad,Danish Shaikh,4,0,14,21,2,5.25,2,0
+19217,Mystery Squad,Karthick Rajendran,3,0,7,30,4,10.00,1,0
+19217,Pway Cubs,Neel Patel,4,0,15,12,1,3.00,2,0
+19217,Pway Cubs,Nish Patel,4,1,20,10,2,2.50,3,0
+19217,Pway Cubs,Dhaivat Patel †,4,0,13,12,3,3.00,1,0
+19217,Pway Cubs,Deep Patel*,4,0,8,31,2,7.75,1,0
+19215,United Falcons,Sanketh Shetty,3,0,12,9,2,3.00,3,0
+19215,United Falcons,Nikunj Malpani,4,0,17,9,2,2.25,1,0
+19215,United Falcons,Tejas Patel,4,0,17,14,4,3.50,1,0
+19215,United Falcons,Neel Joshi,3,0,12,9,1,3.00,1,0
+19215,United Falcons,Alay Shah,0.2,0,1,2,0,6.00,1,0
+19215,JERSEY TIGERS,Thirupathi Chella,3,0,9,24,0,8.00,1,0
+19215,JERSEY TIGERS,Rashprit Singh,2,1,9,12,0,6.00,0,0
+19215,JERSEY TIGERS,Nischal Maniar,2,0,7,11,1,5.50,0,0
 19210,Woodlot Boyz,Karan Bhargav*,4,0,11,20,1,5.00,0,0
 19210,Woodlot Boyz,Gaurav Handa,2,0,6,35,0,17.50,1,3
 19210,Woodlot Boyz,Shashikanth K,4,0,13,30,1,7.50,3,3
@@ -2451,7 +3906,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19210,Robbinsville Jaguars,Hardik Jani,3,0,11,12,1,4.00,4,0
 19210,Robbinsville Jaguars,Rahul Bhardwaj,4,0,20,12,3,3.00,4,0
 19210,Robbinsville Jaguars,Yashkumar Patel,3,0,9,16,2,5.33,0,0
-19210,Robbinsville Jaguars,AJ,1,0,2,5,0,5.00,0,0
+19210,Robbinsville Jaguars,OA J,1,0,2,5,0,5.00,0,0
 19210,Robbinsville Jaguars,Sandeep Nair,1,0,4,2,1,2.00,0,0
 19210,Robbinsville Jaguars,Milin Shah,1,0,5,3,1,3.00,2,0
 19208,Shreeji XI,Neel Patel-13,4,0,12,26,0,6.50,1,0
@@ -2474,7 +3929,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19197,Staten Island Strikers,Rajitha Mahagama Ralalage,2,0,6,21,1,10.50,12,0
 19197,Staten Island Strikers,Sajin Shaji,2.2,0,10,8,1,3.43,1,1
 19197,Staten Island Strikers,Libin Pappachan,1,0,2,4,0,4.00,0,0
-19197,Staten Island Strikers,Nithin Eapen Andrews,1,0,5,7,1,7.00,1,0
+19197,Staten Island Strikers,Nithin Andrews,1,0,5,7,1,7.00,1,0
 19196,Morris Indians,Visu Kondeti*,4,0,11,34,0,8.50,0,2
 19196,Morris Indians,Vyas Bellamkonda,4,0,9,33,1,8.25,5,0
 19196,Morris Indians,Narayanamoorthy Sathappan,3,0,11,11,0,3.67,1,0
@@ -2486,6 +3941,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19196,Pmcc,Jaskirat Sodhi*,2,0,6,20,1,10.00,0,0
 19196,Pmcc,Manoj Ghuge,3,0,6,19,1,6.33,2,0
 19196,Pmcc,Prashant Desarda,1.5,0,2,18,0,9.82,1,0
+19191,Edison Kings,Naveen Surata,4,0,13,36,1,9.00,3,2
+19191,Edison Kings,Ram Prakash Kota*,4,0,9,30,1,7.50,6,0
+19191,Edison Kings,Sivakumar Arumugam,1,0,6,2,1,2.00,2,0
+19191,Edison Kings,Shiv K,4,0,10,30,2,7.50,2,0
+19191,Edison Kings,Satya Tarun Reddy,3,0,8,33,1,11.00,2,2
+19191,Giant Slayers,Jasmeet Singh,2,0,6,11,1,5.50,0,1
+19191,Giant Slayers,Tarang Patel,3,0,10,13,1,4.33,2,0
+19191,Giant Slayers,Harsh Bhavsar,3,0,9,18,0,6.00,1,0
+19191,Giant Slayers,Neel Patel-24,2,0,8,7,1,3.50,2,0
+19191,Giant Slayers,Ronak Patel,2,0,4,12,1,6.00,2,1
+19191,Giant Slayers,Hardik Patel,2,0,6,10,2,5.00,2,0
+19191,Giant Slayers,Preet Suthar,1,0,3,4,1,4.00,1,0
+19191,Giant Slayers,Bhavin Gajera,1,0,1,16,0,16.00,5,0
 19184,Jc Mavericks,Vishal Padhye,3,0,10,13,2,4.33,3,0
 19184,Jc Mavericks,Raja Kondi,4,0,13,17,2,4.25,1,0
 19184,Jc Mavericks,Sandeep Battina,4,0,14,14,4,3.50,1,0
@@ -2495,8 +3963,8 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19184,Perryville Panthers,Ishwar Girase,1,0,2,14,0,14.00,1,1
 19184,Perryville Panthers,Abhijeet Rathaur,2,0,8,8,1,4.00,0,0
 19182,BLOODLINE,Dip Parikh*,1,0,3,12,0,12.00,0,0
-19182,BLOODLINE,Priyam S,2,0,5,21,1,10.50,1,4
-19182,BLOODLINE,Vraj Patel,3,0,11,24,0,8.00,7,0
+19182,BLOODLINE,Priyam Shah,2,0,5,21,1,10.50,1,4
+19182,BLOODLINE,Vraj Patel 24,3,0,11,24,0,8.00,7,0
 19182,BLOODLINE,Devanshu Patel,4,0,12,30,2,7.50,7,1
 19182,BLOODLINE,Krunal(25) Patel,3,1,16,8,3,2.67,1,0
 19182,BLOODLINE,Vismay Suthar,2,0,7,5,1,2.50,0,0
@@ -2506,6 +3974,20 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19182,Bethak Titans,Patel Shivam,1,0,2,21,1,21.00,0,2
 19182,Bethak Titans,Shubham Patel,3,0,12,26,1,8.67,0,2
 19182,Bethak Titans,Aaryan Patel*,2,0,8,14,1,7.00,0,0
+19176,Saffron Sapphire,Nisarg Bhavsar,2,0,6,23,1,11.50,6,0
+19176,Saffron Sapphire,Ravin Patel,4,0,13,39,1,9.75,1,1
+19176,Saffron Sapphire,Pushpraj Rajput*,4,0,11,34,1,8.50,3,2
+19176,Saffron Sapphire,Gaurang Rana,4,1,17,25,2,6.25,4,0
+19176,Saffron Sapphire,Maulik Patel,1,0,2,20,0,20.00,1,0
+19176,Saffron Sapphire,Ameya Modak,1,0,5,2,1,2.00,1,0
+19176,NJ Marvels,Mani V*,2,0,9,4,0,2.00,0,0
+19176,NJ Marvels,Gowtham Lingampalli,3,0,9,18,1,6.00,2,0
+19176,NJ Marvels,Ranga Rao Kosaraju,3,0,10,31,1,10.33,0,1
+19176,NJ Marvels,Narender Reddy Bojja †,2,0,9,10,2,5.00,1,0
+19176,NJ Marvels,Arun Chander,2,0,7,8,1,4.00,0,0
+19176,NJ Marvels,Surender Kumar,2,0,6,12,1,6.00,0,0
+19176,NJ Marvels,Kirupa S,1,0,1,14,1,14.00,1,0
+19176,NJ Marvels,Usman Bajwa,1,0,3,3,2,3.00,0,0
 19174,Phoenix Flyers,Sai Ch,3,0,13,7,3,2.33,1,0
 19174,Phoenix Flyers,Rajesh Kumar,3,0,9,12,2,4.00,2,1
 19174,Phoenix Flyers,Sunil Gurujala,3.4,0,12,13,3,3.55,2,0
@@ -2556,6 +4038,14 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19163,Jersey City Dominators,Shubh Bhardwaj,4,0,12,25,3,6.25,3,0
 19163,Jersey City Dominators,Gautam Ahuja,4,0,15,22,4,5.50,2,0
 19163,Jersey City Dominators,Priyash Nagarkar*,3,0,8,23,2,7.67,0,0
+19160,Pway Cubs,Neel Patel,1,0,1,13,0,13.00,1,0
+19160,Pway Cubs,Deep Patel*,4,0,12,28,2,7.00,1,1
+19160,Pway Cubs,Dhaivat Patel †,4,0,16,16,2,4.00,2,0
+19160,Pway Cubs,Drumil Amin,3,0,11,9,3,3.00,0,0
+19160,Pway Cubs,Kish Smith,3,0,11,9,3,3.00,2,0
+19160,Edison Kings,Shiv K,3,0,9,38,2,12.67,1,1
+19160,Edison Kings,Ravi Parsi,1,0,1,20,0,20.00,0,0
+19160,Edison Kings,Ram Prakash Kota*,1,0,1,24,0,24.00,0,0
 19142,Jc Mavericks,Vishal Padhye,3,0,11,28,0,9.33,4,1
 19142,Jc Mavericks,Raja Kondi,4,1,13,16,1,4.00,3,0
 19142,Jc Mavericks,Sankar Gudapati,4,0,10,39,1,9.75,0,0
@@ -2568,6 +4058,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19142,Pmcc,Chirag Pandya,3,1,13,7,2,2.33,2,0
 19142,Pmcc,Abhishek Dutta,3,0,10,12,0,4.00,0,1
 19142,Pmcc,Venkat Chivukula,1,0,1,16,0,16.00,1,0
+19140,Saffron Sapphire,Pushpraj Rajput*,3.2,0,9,32,1,9.60,0,0
+19140,Saffron Sapphire,Gaurang Rana,4,0,16,25,3,6.25,1,0
+19140,Saffron Sapphire,Bhavik Brahmbhatt,4,0,14,24,3,6.00,5,1
+19140,Saffron Sapphire,Ravin Patel,4,0,14,23,2,5.75,3,0
+19140,Giant Slayers,Sukhwinder Singh,2,0,7,9,0,4.50,0,0
+19140,Giant Slayers,Ronak Patel,2,0,7,9,0,4.50,0,0
+19140,Giant Slayers,Neel Patel-24,4,0,13,15,1,3.75,1,0
+19140,Giant Slayers,Sabeel Shaikh,3,0,12,16,2,5.33,1,0
+19140,Giant Slayers,Lovely Singh,3,0,9,28,3,9.33,0,0
+19140,Giant Slayers,Gunjan Patel*,1,0,4,8,0,8.00,1,0
+19140,Giant Slayers,Ronak Patel (GS),1,0,2,15,0,15.00,1,0
 19138,Secaucus Fighters,Raghav Arora,4,0,13,41,2,10.25,0,0
 19138,Secaucus Fighters,Dhruv Ajudiya,4,0,6,49,1,12.25,4,1
 19138,Secaucus Fighters,Shailesh Pandya,4,0,14,39,4,9.75,0,0
@@ -2582,7 +4083,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19136,BLOODLINE,Tirth Patel,2,0,4,13,0,6.50,1,0
 19136,BLOODLINE,Dip Parikh*,1,0,4,3,0,3.00,1,0
 19136,BLOODLINE,Divya Patel,3,0,9,23,1,7.67,0,0
-19136,BLOODLINE,Vraj Patel,4,0,5,35,2,8.75,3,0
+19136,BLOODLINE,Vraj Patel 24,4,0,5,35,2,8.75,3,0
 19136,BLOODLINE,Krunal(25) Patel,3,0,8,37,2,12.33,1,0
 19136,BLOODLINE,Vismay Suthar,2,0,6,14,0,7.00,2,0
 19136,BLOODLINE,Alpesh Patel,1,0,4,2,0,2.00,0,0
@@ -2591,6 +4092,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19136,Edison Riders,Chandrasekhar A,2,0,4,32,0,16.00,1,0
 19136,Edison Riders,Satyanarayana Manne,1,0,3,13,1,13.00,0,0
 19136,Edison Riders,Harikrishna Yarraguntla,3.2,0,13,22,1,6.60,1,0
+19134,Mystery Squad,Karthick Rajendran,3,0,13,8,1,2.67,2,0
+19134,Mystery Squad,Haridut Athi*,4,0,11,23,2,5.75,0,0
+19134,Mystery Squad,Sudhanshoo Vashisht,4,0,16,29,3,7.25,2,1
+19134,Mystery Squad,Danish Shaikh,4,0,13,28,2,7.00,0,0
+19134,Mystery Squad,Utsav Upadhyay,1,0,2,4,0,4.00,0,0
+19134,United Falcons,Virendra D,2,0,7,9,2,4.50,0,0
+19134,United Falcons,Arpit Airan,3.2,0,11,29,2,8.70,2,0
+19134,United Falcons,Neel Joshi,2,0,6,22,1,11.00,0,1
+19134,United Falcons,Nikunj Malpani,3,0,9,18,1,6.00,1,0
+19134,United Falcons,Karan Patel,1,0,3,14,0,14.00,3,0
 19128,Phoenix Flyers,Sai Ch,3,0,10,18,0,6.00,1,0
 19128,Phoenix Flyers,Rajesh Kumar,4,0,12,24,2,6.00,1,1
 19128,Phoenix Flyers,Dinesh Jakkidi,1,0,3,8,0,8.00,1,0
@@ -2603,6 +4114,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19128,Morris Indians,Venkat Guttikonda,3,0,8,20,1,6.67,1,1
 19128,Morris Indians,Vyas Bellamkonda,3,0,9,18,1,6.00,0,0
 19128,Morris Indians,Basid Khan Mohammed,1.5,0,7,12,2,6.55,5,2
+19124,NJKnights,Sanjay Geepalayam,4,0,13,25,1,6.25,0,1
+19124,NJKnights,Sachin Dhotre,3,0,7,38,0,12.67,8,0
+19124,NJKnights,Sukumar Paturi,4,0,10,30,1,7.50,0,0
+19124,NJKnights,Vivek Sastha,2,0,4,16,0,8.00,1,1
+19124,NJKnights,Sandeep Gudivada,3,0,5,46,2,15.33,0,0
+19124,NJ Marvels,Gowtham Lingampalli,3,0,13,10,2,3.33,2,0
+19124,NJ Marvels,Raghu Saagamreddy,3,0,7,20,0,6.67,2,0
+19124,NJ Marvels,Ranga Rao Kosaraju,4,0,14,22,3,5.50,0,0
+19124,NJ Marvels,Surender Kumar,2,0,7,12,1,6.00,0,0
+19124,NJ Marvels,Sudhakar N,1,0,2,9,1,9.00,0,0
+19124,NJ Marvels,Narendran Suruliappan,1,0,3,4,0,4.00,1,0
+19124,NJ Marvels,Arun Chander,2,0,6,9,1,4.50,0,0
 19122,SB Vikings Challengers Cricket Club,Srini Yandrapu,4,0,13,15,2,3.75,2,0
 19122,SB Vikings Challengers Cricket Club,DEEPAK KATTA,1,0,4,8,0,8.00,1,1
 19122,SB Vikings Challengers Cricket Club,Sivakumar Sivasubramonian,3,0,5,21,0,7.00,3,0
@@ -2668,7 +4191,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19109,Parsippany Super Kings,Srinath Reddy Reddy,1,0,2,14,0,14.00,1,1
 19109,Parsippany Super Kings,Ravinder Singh Negi,3,0,11,13,2,4.33,0,1
 19106,VRK Gladiators,Baseer Ahmed Mohammed,3,0,9,10,1,3.33,1,0
-19106,VRK Gladiators,Sandeep I Shetty,3,0,9,17,0,5.67,3,0
+19106,VRK Gladiators,Sandeep A Shetty,3,0,9,17,0,5.67,3,0
 19106,VRK Gladiators,Suraj Pai Madhukar,4,0,14,11,5,2.75,1,0
 19106,VRK Gladiators,Avteet Chayal,1,0,5,1,0,1.00,0,0
 19106,VRK Gladiators,Sushil Golecha,1,0,4,3,0,3.00,0,0
@@ -2678,6 +4201,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19106,Plainsboro Panthers,Karan N*,1,0,4,3,0,3.00,0,0
 19106,Plainsboro Panthers,VIJAYANAND PONNADA,3,0,9,17,0,5.67,0,0
 19106,Plainsboro Panthers,Sreehari Mano,3,0,14,20,3,6.67,1,0
+19103,Waterfront Warriors,Malav Shah,4,0,15,15,1,3.75,0,0
+19103,Waterfront Warriors,Abhinav Tyagi,2,0,5,19,0,9.50,1,0
+19103,Waterfront Warriors,Ajinkya Pradhan,4,0,12,24,3,6.00,0,1
+19103,Waterfront Warriors,Fnu Shubhankar,4,0,12,25,3,6.25,1,1
+19103,Waterfront Warriors,Vedant Kumar,2,0,4,13,1,6.50,0,0
+19103,Express Rangers,Lovedeep Singh,2,0,7,14,0,7.00,5,0
+19103,Express Rangers,Santhana Ramasamy,3,0,7,13,1,4.33,0,0
+19103,Express Rangers,Veeraswamy Veeramreddy,4,0,11,19,2,4.75,1,0
+19103,Express Rangers,Amandeep Bawa,2.1,0,6,18,0,8.31,1,2
+19103,Express Rangers,Mohan Venu,2,0,5,18,1,9.00,2,0
+19103,Express Rangers,Saidu M Shaik*,2,0,4,15,0,7.50,2,0
 19086,Newport Narcos,Jaimin Khanderia,4,0,14,16,4,4.00,0,0
 19086,Newport Narcos,Chet Kalra*,4,1,15,22,3,5.50,2,0
 19086,Newport Narcos,Nitish Dabas,4,0,15,22,1,5.50,0,2
@@ -2688,6 +4222,29 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19086,Cricket Lovers,Sheshnath Yadav,1.3,0,2,14,0,9.33,0,2
 19086,Cricket Lovers,Jitendra Purohit,4,0,15,19,3,4.75,0,0
 19086,Cricket Lovers,Muhammad Ansar,3,0,8,26,2,8.67,7,0
+19085,Lincoln�XI,Naresh Patel,4,0,13,29,2,7.25,0,0
+19085,Lincoln�XI,Ravi Teja Manepalli,1,0,1,15,0,15.00,0,0
+19085,Lincoln�XI,Geetha Anem,4,0,14,30,3,7.50,2,0
+19085,Lincoln�XI,Utsav Patel,3,0,8,14,1,4.67,2,0
+19085,Lincoln�XI,Mukesh Pandey,4,0,8,33,2,8.25,0,0
+19085,Sreeshti Weekenders,Abbas Zaidi,2,0,6,19,0,9.50,0,1
+19085,Sreeshti Weekenders,Santosh Mesta,2,0,7,15,0,7.50,2,0
+19085,Sreeshti Weekenders,Sanjay Dak,3,0,11,12,3,4.00,0,0
+19085,Sreeshti Weekenders,Monang Shah,3,1,13,9,0,3.00,0,0
+19085,Sreeshti Weekenders,Kamal Choudhury,2.4,0,11,6,4,2.25,1,0
+19085,Sreeshti Weekenders,Mahesh Nagappa,2,0,5,13,0,6.50,0,0
+19082,Trident CC,Khursand Kelawala,3,0,11,23,1,7.67,3,0
+19082,Trident CC,Akash Reddy Karka,2,0,7,10,1,5.00,1,0
+19082,Trident CC,Pavan Kalyan Bakkani,4,0,11,21,0,5.25,3,0
+19082,Trident CC,Tejas Nataraj,4,0,8,21,1,5.25,2,0
+19082,Trident CC,Nachiketh Gudipudi,3,0,9,39,2,13.00,1,1
+19082,Monroe Mavericks,Sakthivel Jagadeesan,4,0,16,12,3,3.00,2,1
+19082,Monroe Mavericks,Rakesh Kar,3,1,13,6,0,2.00,1,0
+19082,Monroe Mavericks,Bhanu Singaram,1,0,2,14,1,14.00,1,0
+19082,Monroe Mavericks,Sarbjitsingh Sahota,1,0,2,14,1,14.00,0,1
+19082,Monroe Mavericks,Jaya Nalajala,1,0,2,18,1,18.00,4,0
+19082,Monroe Mavericks,Madhav Reddy,1,0,2,4,2,4.00,0,0
+19082,Monroe Mavericks,Narasimha Narra,0.4,0,3,2,1,3.00,1,0
 19080,Cricket Warriors,Dipen Patel,2,0,4,13,2,6.50,2,0
 19080,Cricket Warriors,Dhaval Patel,1,0,2,7,0,7.00,0,0
 19080,Cricket Warriors,Aditya Rathor,4,0,10,45,4,11.25,2,0
@@ -2719,7 +4276,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19075,MCC - Weekenders,Akash Rao,4,0,14,15,1,3.75,2,0
 19075,MCC - Weekenders,Shoaib Jafri,4,0,17,10,3,2.50,3,0
 19075,MCC - Weekenders,Hamza Shahid,4,0,16,15,2,3.75,1,0
-19075,MCC - Weekenders,Raja Sekhar Sanaka,1,0,0,12,0,12.00,0,0
+19075,MCC - Weekenders,Rajasekhar Sanaka,1,0,0,12,0,12.00,0,0
 19070,RCW - Weekenders,Krunal Shah,4,0,11,22,1,5.50,0,0
 19070,RCW - Weekenders,Jitendra Arora,1,0,2,12,0,12.00,0,0
 19070,RCW - Weekenders,Bharath Ramaswamy,4,0,17,30,2,7.50,7,1
@@ -2728,10 +4285,10 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19070,RCW - Weekenders,Rajesh Ariga,2,0,5,22,0,11.00,0,0
 19070,RCW - Weekenders,Pradeep Tanwar,2,0,3,33,0,16.50,0,1
 19070,PCA Jr.,Samir Patel,2,0,5,11,0,5.50,1,0
-19070,PCA Jr.,Rishi Patel GCC,3,0,9,12,3,4.00,3,0
+19070,PCA Jr.,Purvik Patel GCC,3,0,9,12,3,4.00,3,0
 19070,PCA Jr.,Sahil Patel,2,0,6,19,3,9.50,2,0
 19070,PCA Jr.,Kevin Prajapati(GCC),2,0,7,12,1,6.00,6,1
-19070,PCA Jr.,Dipen Patel GCC,1,0,3,9,0,9.00,6,0
+19070,PCA Jr.,Kirtan Patel GCC,1,0,3,9,0,9.00,6,0
 19070,PCA Jr.,Chintan Patel,2,0,6,6,1,3.00,0,0
 19070,PCA Jr.,Parth Patel,0.4,0,2,2,1,3.00,0,0
 19068,SB Vikings Cricket Club,Vamshidhar Reddy,4,0,16,15,2,3.75,1,0
@@ -2765,6 +4322,40 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19064,Sparta XI,Suman Maramreddy*,4,0,17,12,1,3.00,0,0
 19064,Sparta XI,Abhisheka Dalal,4,0,14,14,0,3.50,1,0
 19064,Sparta XI,Piyush Parashar,2,0,9,3,0,1.50,0,0
+19063,Brown Munde,Tatsat Dixit,4,0,12,34,1,8.50,3,0
+19063,Brown Munde,Tanmay More,3,0,4,35,0,11.67,1,0
+19063,Brown Munde,Siddharth Terde,4,1,19,10,1,2.50,2,0
+19063,Brown Munde,Vaibhav Patel,4,0,13,36,2,9.00,2,1
+19063,Brown Munde,Saurabh Mehta,1,0,1,25,0,25.00,2,1
+19063,JC Warriors,Santosh Lalan,4,1,16,14,4,3.50,0,0
+19063,JC Warriors,Vishal Choudhary,2,0,7,9,2,4.50,3,1
+19063,JC Warriors,Shrivats Vyas*,3.1,1,15,8,3,2.53,1,0
+19063,JC Warriors,Shubham Pawar,2,0,8,8,0,4.00,1,0
+19063,JC Warriors,Himanshu Dixit,3,0,11,12,1,4.00,1,0
+19056,Waterfront Warriors,Namit Rathi,2,0,7,10,2,5.00,1,0
+19056,Waterfront Warriors,Abhinav Tyagi,3,0,10,15,1,5.00,2,0
+19056,Waterfront Warriors,Ajinkya Pradhan,4,0,13,18,0,4.50,3,0
+19056,Waterfront Warriors,Amanraj Gupta,1,0,2,12,0,12.00,0,1
+19056,Waterfront Warriors,Siddhant Kumar,1,0,2,7,0,7.00,0,0
+19056,Waterfront Warriors,Fnu Shubhankar,4,1,16,10,3,2.50,0,1
+19056,Waterfront Warriors,Shailesh Uchale,1,0,4,10,1,10.00,2,0
+19056,Monroe Mavericks,Sarbjitsingh Sahota,2,1,11,1,1,0.50,0,0
+19056,Monroe Mavericks,Bhanu Singaram*,2,0,5,10,1,5.00,0,0
+19056,Monroe Mavericks,Rakesh Kar,2,0,8,4,2,2.00,0,0
+19056,Monroe Mavericks,Varun Gurram,2,0,11,3,3,1.50,2,0
+19056,Monroe Mavericks,Sakthivel Jagadeesan,1,0,3,3,1,3.00,0,0
+19056,Monroe Mavericks,Abdul Razak Bellary,0.1,0,1,0,1,0.00,0,0
+19050,Sreeshti Weekenders,Amol Manjrekar,2,0,7,6,0,3.00,0,0
+19050,Sreeshti Weekenders,Sandeep Shetty,1,0,2,15,0,15.00,3,0
+19050,Sreeshti Weekenders,Vishwajeet Bhabra,2,0,8,14,0,7.00,2,0
+19050,Sreeshti Weekenders,Mahesh Nagappa,3,0,11,22,3,7.33,1,0
+19050,Sreeshti Weekenders,Kamal Choudhury,3,0,9,23,1,7.67,1,0
+19050,Sreeshti Weekenders,Harshal Gupta,3.5,0,14,17,6,4.43,2,0
+19050,Raptors,Rajinder (Suraj) Singh,4,0,18,20,1,5.00,3,0
+19050,Raptors,Amit Singh,4,0,14,26,2,6.50,5,0
+19050,Raptors,Faisal Mehmood,4,0,20,5,3,1.25,1,0
+19050,Raptors,Tahir Mehmood,2,0,8,4,2,2.00,0,0
+19050,Raptors,Amir Rashid,1.1,0,3,7,1,6.00,0,0
 19048,Karma XI,Ritwik Roy,3,1,12,10,3,3.33,1,0
 19048,Karma XI,Dhaval Shah,3,0,11,17,0,5.67,0,0
 19048,Karma XI,Soumyabrata Paul,4,0,13,25,2,6.25,4,1
@@ -2860,17 +4451,36 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19027,PCA Jr.,Dhaval Patel,4,0,10,24,4,6.00,0,0
 19027,PCA Jr.,Chintan Patel,4,0,10,25,1,6.25,2,0
 19027,PCA Jr.,Karan Patel*,3,0,7,24,0,8.00,0,0
+19020,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,4,0,16,21,3,5.25,4,0
+19020,Thunder Strikers Weekenders,Ganesh Vasam,4,0,9,28,1,7.00,2,1
+19020,Thunder Strikers Weekenders,Paritosh Fulara,4,1,13,16,0,4.00,2,0
+19020,Thunder Strikers Weekenders,Sohil Vakharia,1,0,3,3,0,3.00,0,0
+19020,Thunder Strikers Weekenders,VC Uttez Chitluri,3,0,10,14,2,4.67,0,0
+19020,Express Rangers,VIRAJ JANI,4,1,18,6,4,1.50,0,0
+19020,Express Rangers,Amandeep Bawa,4,0,16,14,3,3.50,2,0
+19020,Express Rangers,Thinnappan Muthu,1,0,2,15,0,15.00,0,0
+19020,Express Rangers,Mohan Venu,4,0,16,30,2,7.50,3,0
+19020,Express Rangers,Saidu M Shaik*,1.2,0,4,7,0,5.25,0,0
+19020,Express Rangers,Praveen Rajappan †,1,0,3,14,0,14.00,1,0
 19017,MCC - Weekenders,Mohammed Suhail,1,0,1,14,0,14.00,2,0
 19017,MCC - Weekenders,Akash Rao,2,0,7,10,1,5.00,0,0
 19017,MCC - Weekenders,Zaigham Baloch,2,0,4,14,0,7.00,1,0
 19017,MCC - Weekenders,Shoaib Jafri,4,0,12,15,2,3.75,0,0
 19017,MCC - Weekenders,Hamza Shahid,4,0,13,29,2,7.25,1,2
 19017,MCC - Weekenders,Jesse Kanga,3,0,11,18,3,6.00,1,0
-19017,VRK Gladiators,Sandeep I Shetty,2,0,5,11,0,5.50,1,0
+19017,VRK Gladiators,Sandeep A Shetty,2,0,5,11,0,5.50,1,0
 19017,VRK Gladiators,Suraj Pai Madhukar,3,0,9,16,2,5.33,1,0
 19017,VRK Gladiators,Ankur Chaturvedi,3,0,10,17,0,5.67,1,1
 19017,VRK Gladiators,Ashish Shetty,2,0,8,25,1,12.50,3,1
 19017,VRK Gladiators,Harshad Patil*,4,0,10,35,2,8.75,1,0
+19016,Trident CC,Zeeshan Ahmad,4,0,15,12,3,3.00,1,1
+19016,Trident CC,Akash Reddy Karka,3,0,10,17,1,5.67,3,0
+19016,Trident CC,Tejas Nataraj,4,0,11,24,0,6.00,0,1
+19016,Trident CC,Nachiketh Gudipudi,4,0,14,27,4,6.75,0,2
+19016,JC Warriors,Santosh Lalan,3.5,1,21,2,5,0.52,0,0
+19016,JC Warriors,Shrivats Vyas,4,0,15,12,2,3.00,0,0
+19016,JC Warriors,Asif Mohammed,2,0,10,2,2,1.00,0,0
+19016,JC Warriors,Pratik Mane,2,0,6,12,0,6.00,2,0
 19009,TRIDENTS XI,Harish (Harry)*,2,0,8,5,1,2.50,1,0
 19009,TRIDENTS XI,Rashik Mohamed,3,0,12,12,3,4.00,0,1
 19009,TRIDENTS XI,Pradeep Mishra,1,0,6,1,0,1.00,1,0
@@ -2883,6 +4493,24 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19009,RCW - Weekenders,Achintya Dwivedi,3,0,7,40,0,13.33,6,0
 19009,RCW - Weekenders,Nikhil Sharma,4,0,12,38,0,9.50,2,1
 19009,RCW - Weekenders,Manoj Jaiswal,1,0,1,15,0,15.00,0,0
+19004,Saffron Sapphire,Jay Parikh †,4,0,16,22,1,5.50,3,0
+19004,Saffron Sapphire,Pushpraj Rajput*,4,0,17,23,5,5.75,1,2
+19004,Saffron Sapphire,Bhavik Brahmbhatt,3,0,8,24,3,8.00,4,0
+19004,Saffron Sapphire,Gaurang Rana,4,0,11,35,1,8.75,2,0
+19004,Pway Cubs,Udit Patel - Pway Lions,4,0,19,7,4,1.75,0,1
+19004,Pway Cubs,Deep Patel*,4,0,12,30,4,7.50,2,2
+19004,Pway Cubs,Vraj Shah,2,0,6,6,0,3.00,0,0
+19004,Pway Cubs,Jay Domadiya,3,0,13,7,2,2.33,2,0
+19000,United Falcons,Virendra D,3,0,8,10,2,3.33,0,0
+19000,United Falcons,Arpit Airan,4,1,19,10,1,2.50,2,0
+19000,United Falcons,Neel Joshi,4,2,20,7,4,1.75,0,0
+19000,United Falcons,Sarthak Zaveri,1,0,3,10,0,10.00,7,0
+19000,United Falcons,Jiteen S,4,0,15,19,2,4.75,0,0
+19000,Edison Kings,Sivakumar Arumugam,2,0,5,12,0,6.00,0,0
+19000,Edison Kings,Ram Prakash Kota*,3.3,0,13,17,2,4.86,2,0
+19000,Edison Kings,Vijaykumar Bandaru,1,0,4,2,0,2.00,0,0
+19000,Edison Kings,Naveen Surata,1,0,4,5,0,5.00,0,0
+19000,Edison Kings,Ravi Parsi,2,0,5,22,0,11.00,1,0
 18992,Morris Indians,Visu Kondeti*,4,1,17,16,3,4.00,3,0
 18992,Morris Indians,Vyas Bellamkonda,3,0,14,5,3,1.67,1,0
 18992,Morris Indians,Narayanamoorthy Sathappan,3,0,10,14,1,4.67,0,0
@@ -2890,7 +4518,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18992,Morris Indians,Phani Yendluri,2,0,3,20,0,10.00,2,0
 18992,Staten Island Strikers,Libin Pappachan,2,0,4,18,0,9.00,3,0
 18992,Staten Island Strikers,Linu Alex,2,0,8,24,1,12.00,2,1
-18992,Staten Island Strikers,Nithin Eapen Andrews,1,0,4,8,0,8.00,1,0
+18992,Staten Island Strikers,Nithin Andrews,1,0,4,8,0,8.00,1,0
 18992,Staten Island Strikers,Anand Varghese,2,0,6,16,0,8.00,1,1
 18992,Staten Island Strikers,Georgy Parayamparampil Varghese,0.5,0,3,7,1,8.40,0,0
 18991,NJ Titans,Kunal Chhatwani,4,0,17,9,2,2.25,2,0
@@ -2924,6 +4552,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18980,Bethak Titans,Patel Shivam,4,0,10,24,3,6.00,2,1
 18980,Bethak Titans,Sneh Patel (sagar),2.3,0,2,35,0,14.00,1,0
 18980,Bethak Titans,Aaryan Patel*,2,0,7,18,2,9.00,6,1
+18978,Iselin Warriors,Priyanshu Pandya,3,0,11,28,0,9.33,4,0
+18978,Iselin Warriors,Avineet Sharma,1,0,2,4,0,4.00,0,0
+18978,Iselin Warriors,Ishan Shah,4,0,18,18,1,4.50,1,0
+18978,Iselin Warriors,Waqas Choudhary,3,0,6,38,1,12.67,2,0
+18978,Iselin Warriors,Kashish Shah †,2,0,5,22,1,11.00,2,0
+18978,Iselin Warriors,Sherry Singh,3,0,11,14,3,4.67,1,0
+18978,NJ Marvels,Mani V*,3,0,12,12,1,4.00,1,0
+18978,NJ Marvels,Gowtham Lingampalli,1,0,2,24,0,24.00,2,0
+18978,NJ Marvels,Ranga Rao Kosaraju,4,0,19,14,6,3.50,0,0
+18978,NJ Marvels,Arun Chander,4,0,14,21,1,5.25,1,0
+18978,NJ Marvels,Narendran Suruliappan,2,0,3,21,0,10.50,0,0
+18978,NJ Marvels,Surender Kumar,1,0,5,1,1,1.00,0,0
+18978,NJ Marvels,Kirupa S,0.1,0,1,0,1,0.00,0,0
 18977,Vikings CC,Ajith Nalluri,2,0,3,27,0,13.50,1,1
 18977,Vikings CC,Nakul Limbachiya,4,0,11,39,1,9.75,4,1
 18977,Vikings CC,Raj Tiguti,4,0,14,23,3,5.75,2,0
@@ -2981,16 +4622,44 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18962,Pmcc,Abhishek Dutta,2,0,6,11,1,5.50,1,0
 18962,Pmcc,Jay Mehta,1,0,4,2,1,2.00,0,0
 18962,Pmcc,Chirag Pandya,0.1,0,0,1,0,6.00,0,0
+18958,NJKnights,Vysakh D,4,0,10,36,2,9.00,4,0
+18958,NJKnights,Sanjay Geepalayam,4,0,8,42,1,10.50,0,1
+18958,NJKnights,Sukumar Paturi,4,0,10,38,0,9.50,2,0
+18958,NJKnights,Bhuvan Arun,4,0,11,37,1,9.25,6,1
+18958,Giant Slayers,Ridham Shah,2,0,9,5,3,2.50,2,0
+18958,Giant Slayers,Ronak Patel,1,0,6,1,0,1.00,1,0
+18958,Giant Slayers,Apurv Jain,2,0,10,4,1,2.00,1,0
+18958,Giant Slayers,Neel Patel-24,2,0,9,3,1,1.50,0,0
+18958,Giant Slayers,Gunjan Patel*,2,0,6,10,0,5.00,1,0
+18958,Giant Slayers,Bhaumil Patel,2,0,8,9,1,4.50,0,0
+18958,Giant Slayers,Shreyas Najan,1,0,5,6,1,6.00,0,0
+18958,Giant Slayers,Sabeel Shaikh,1,0,5,2,1,2.00,0,0
+18958,Giant Slayers,Jimmy Patel,0.3,0,2,1,1,2.00,0,0
 18956,BLOODLINE,Divya Patel,3,0,13,9,1,3.00,1,0
 18956,BLOODLINE,Tirth Patel,1,0,5,2,1,2.00,1,0
-18956,BLOODLINE,Priyam S,3,0,8,17,0,5.67,0,0
-18956,BLOODLINE,Vraj Patel,4,0,12,24,0,6.00,2,0
+18956,BLOODLINE,Priyam Shah,3,0,8,17,0,5.67,0,0
+18956,BLOODLINE,Vraj Patel 24,4,0,12,24,0,6.00,2,0
 18956,BLOODLINE,Alpesh Patel,1,0,1,5,0,5.00,0,0
 18956,BLOODLINE,Krunal(25) Patel,4,0,15,11,1,2.75,2,0
 18956,SB Vikings Challengers Cricket Club,Srini Yandrapu,2,0,6,12,0,6.00,2,0
 18956,SB Vikings Challengers Cricket Club,Siva Sivalenka,2,0,5,15,0,7.50,2,0
 18956,SB Vikings Challengers Cricket Club,Tamil R*,4,0,15,23,3,5.75,0,2
 18956,SB Vikings Challengers Cricket Club,Chandra Narayanaswamy,3.3,0,11,21,0,6.00,0,0
+18948,Iselin Warriors,Karan Patel,3,0,10,31,1,10.33,0,0
+18948,Iselin Warriors,Ishan Shah,4,0,17,19,2,4.75,4,0
+18948,Iselin Warriors,Dhrumil Shah,4,0,12,32,2,8.00,0,0
+18948,Iselin Warriors,Jay Soni,3,0,4,39,0,13.00,1,0
+18948,Iselin Warriors,Avineet Sharma,2,0,2,18,0,9.00,1,0
+18948,Giant Slayers,Ronak Patel,2,0,7,11,2,5.50,1,0
+18948,Giant Slayers,Sabeel Shaikh,2,0,6,10,1,5.00,1,0
+18948,Giant Slayers,Lovely Singh,3,0,12,11,4,3.67,0,0
+18948,Giant Slayers,Harsh Savani,1,0,2,7,0,7.00,0,0
+18948,Giant Slayers,Ronak Patel (GS),1,0,1,9,0,9.00,0,0
+18948,Giant Slayers,Apurv Jain,1,0,4,14,0,14.00,2,0
+18948,Giant Slayers,Subham Singh,1,0,3,13,0,13.00,0,0
+18948,Giant Slayers,Jimmy Patel,2,0,6,6,0,3.00,0,0
+18948,Giant Slayers,Jasmeet Singh,1,0,4,3,1,3.00,1,0
+18948,Giant Slayers,Gunjan Patel*,0.5,0,3,7,1,8.40,1,0
 18940,Edison Riders,Chandrasekhar A,4,0,14,23,2,5.75,7,0
 18940,Edison Riders,Satyanarayana Manne,4,0,16,12,2,3.00,0,1
 18940,Edison Riders,Gopinadh Rayala,4,0,14,27,1,6.75,4,0
@@ -3010,11 +4679,11 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18926,BLOODLINE,Tirth Patel,2,0,3,22,0,11.00,1,0
 18926,BLOODLINE,Meet Patel,2,0,7,11,2,5.50,1,0
 18926,BLOODLINE,Vismay Suthar,3,0,9,30,1,10.00,0,0
-18926,BLOODLINE,Vraj Patel,3.1,0,14,7,6,2.21,2,0
+18926,BLOODLINE,Vraj Patel 24,3.1,0,14,7,6,2.21,2,0
 18926,BLOODLINE,Divya Patel,2,0,6,13,1,6.50,0,0
 18923,Staten Island Strikers,Linu Alex,4,0,9,27,1,6.75,3,0
 18923,Staten Island Strikers,Sajin Shaji,4,0,16,16,2,4.00,3,0
-18923,Staten Island Strikers,Nithin Eapen Andrews,3,0,7,35,1,11.67,4,0
+18923,Staten Island Strikers,Nithin Andrews,3,0,7,35,1,11.67,4,0
 18923,Staten Island Strikers,Leo Simon,2,0,8,18,0,9.00,2,2
 18923,Staten Island Strikers,Jojo Kottarakara,2,0,7,14,1,7.00,4,0
 18923,Staten Island Strikers,Basil Jose*,1,0,2,19,1,19.00,4,1
@@ -3024,6 +4693,27 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18923,Jc Mavericks,Sandeep Bikumalla*,2,0,4,16,0,8.00,0,0
 18923,Jc Mavericks,Srinath Katari,1,0,2,9,0,9.00,0,0
 18923,Jc Mavericks,Harshal Kane,1,0,0,14,0,14.00,1,0
+18916,Monroe United,Hemal Makadia,4,0,16,23,2,5.75,2,1
+18916,Monroe United,Vamshikrishna Kallem,2,0,7,10,1,5.00,3,1
+18916,Monroe United,Veera Kakarla,2.3,0,10,19,4,7.60,1,1
+18916,Monroe United,Sunil Shetty,4,0,12,19,2,4.75,1,0
+18916,Monroe United,Surya Kasara,3,0,11,14,1,4.67,1,0
+18916,NJ Marvels,Mani V*,2,0,7,7,0,3.50,1,1
+18916,NJ Marvels,Gowtham Lingampalli,2,0,9,4,1,2.00,1,0
+18916,NJ Marvels,Ranga Rao Kosaraju,4,0,13,22,1,5.50,0,1
+18916,NJ Marvels,Surender Kumar,1,0,1,9,1,9.00,0,0
+18916,NJ Marvels,Narender Reddy Bojja †,3.2,0,16,13,5,3.90,4,0
+18916,NJ Marvels,Arun Chander,2,0,5,8,0,4.00,1,0
+18916,NJ Marvels,Raghu Saagamreddy,1,0,2,10,0,10.00,1,0
+18913,United Falcons,Virendra D,4,0,10,17,2,4.25,0,0
+18913,United Falcons,Alay Shah,4,0,13,17,0,4.25,1,0
+18913,United Falcons,Arpit Airan,4,0,14,30,5,7.50,6,0
+18913,United Falcons,Nikunj Malpani,4,0,14,19,1,4.75,0,0
+18913,Saffron Sapphire,Jay Patel,4,0,15,16,3,4.00,2,0
+18913,Saffron Sapphire,Pushpraj Rajput*,4,0,16,21,1,5.25,2,0
+18913,Saffron Sapphire,Gaurang Rana,4,0,15,16,1,4.00,2,0
+18913,Saffron Sapphire,Ravin Patel,1,0,2,13,1,13.00,0,0
+18913,Saffron Sapphire,Nisarg Bhavsar,1.3,0,5,18,0,12.00,4,0
 18912,Secaucus Fighters,Raghav Arora,4,1,13,21,4,5.25,0,0
 18912,Secaucus Fighters,Ankit Purohit,3,0,5,27,0,9.00,3,0
 18912,Secaucus Fighters,Varun Bhat*,4,0,17,12,1,3.00,3,0
@@ -3068,6 +4758,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18906,Pmcc,Revanth Pakyala,3,0,13,22,2,7.33,1,0
 18906,Pmcc,Nagaraj Swaminathan,1,0,4,13,1,13.00,1,0
 18906,Pmcc,Jaskirat Sodhi*,0.2,0,1,4,0,12.00,0,0
+18905,NJKnights,Vysakh D,4,0,7,88,0,22.00,1,1
+18905,NJKnights,Sanjay Geepalayam,4,0,7,65,1,16.25,4,0
+18905,NJKnights,Bhuvan Arun,4,0,12,63,2,15.75,1,1
+18905,NJKnights,Sachin Dhotre,1,0,2,29,1,29.00,11,1
+18905,NJKnights,Parag Sid,3,0,6,57,0,19.00,6,2
+18905,Pway Cubs,Neel Patel,1,0,4,7,0,7.00,2,0
+18905,Pway Cubs,Nish Patel,1,0,4,7,0,7.00,1,1
+18905,Pway Cubs,Akshar Patel,4,0,12,36,2,9.00,10,1
+18905,Pway Cubs,Jay Domadiya,4,0,10,43,0,10.75,6,0
+18905,Pway Cubs,Shri Patel,2,0,5,19,1,9.50,0,1
+18905,Pway Cubs,Binit Shah,2,0,3,17,1,8.50,3,2
+18905,Pway Cubs,Vinit Patel,1,0,3,7,1,7.00,1,0
+18905,Pway Cubs,Ameya Patel,1,0,4,11,0,11.00,1,1
 18903,CHAMPIONS,Vikas Mane,3,0,6,17,1,5.67,1,0
 18903,CHAMPIONS,Atul Mishra,3,0,7,23,1,7.67,1,0
 18903,CHAMPIONS,Rohit Khatri,2,0,3,27,0,13.50,0,0
@@ -3109,7 +4812,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18893,Sparta XI,Ajay Vangala,4,0,12,20,1,5.00,0,0
 18893,Sparta XI,Niran Perera,4,0,8,23,0,5.75,0,1
 18893,VRK Gladiators,Vinit Bharadwaj,2,0,8,5,1,2.50,0,0
-18893,VRK Gladiators,Sandeep I Shetty,2,0,9,4,1,2.00,1,0
+18893,VRK Gladiators,Sandeep A Shetty,2,0,9,4,1,2.00,1,0
 18893,VRK Gladiators,Sushil Golecha,2,0,6,18,0,9.00,0,0
 18893,VRK Gladiators,Suraj Pai Madhukar,2,1,10,9,1,4.50,1,0
 18893,VRK Gladiators,Willish Patel,2,0,9,8,2,4.00,0,0
@@ -3126,6 +4829,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18891,Edison Warriors,Sharvil Patel,2,0,6,18,0,9.00,4,0
 18891,Edison Warriors,Abhishar M,2,0,9,9,2,4.50,2,1
 18891,Edison Warriors,Varun Shah*,3,0,12,12,3,4.00,5,1
+18887,Brown Munde,Siddharth Terde,4,0,15,11,4,2.75,0,0
+18887,Brown Munde,Ananth Pai,4,0,13,28,2,7.00,3,0
+18887,Brown Munde,Tatsat Dixit,4,0,7,44,0,11.00,2,1
+18887,Brown Munde,Vaibhav Patel,2,0,5,22,2,11.00,1,0
+18887,Brown Munde,Utkarsh Manjrekar*,2,0,7,14,0,7.00,1,0
+18887,Sreeshti Weekenders,Santosh Mesta,1,0,2,11,0,11.00,1,0
+18887,Sreeshti Weekenders,Mahesh Nagappa,2,0,7,10,0,5.00,0,0
+18887,Sreeshti Weekenders,Kamal Choudhury,4,0,11,32,1,8.00,9,0
+18887,Sreeshti Weekenders,Abbas Zaidi,2,0,3,27,0,13.50,1,0
+18887,Sreeshti Weekenders,Harshal Gupta,3,0,8,21,1,7.00,4,0
+18887,Sreeshti Weekenders,Ninad Mehta,1,0,1,12,0,12.00,1,0
+18887,Sreeshti Weekenders,Amol Manjrekar,1.1,0,2,8,0,6.86,0,0
 18885,Em Sports Club,Ashutosh Ashish,4,0,18,14,1,3.50,3,3
 18885,Em Sports Club,Lallan Babu,1,0,3,6,0,6.00,3,0
 18885,Em Sports Club,Rahul Gundani*,4,0,17,13,3,3.25,1,0
@@ -3159,6 +4874,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18882,TRIDENTS XI,Keyur Patel*,3,0,13,7,2,2.33,0,0
 18882,TRIDENTS XI,Tushar Patel †,2.4,0,14,4,3,1.50,2,0
 18882,TRIDENTS XI,Varrun Phanda,1,0,3,4,0,4.00,0,0
+18880,Nj Warriors,Abhiram Mv,2,0,6,13,0,6.50,2,0
+18880,Nj Warriors,Jeyaprakash Jeyapal,2,0,5,16,1,8.00,3,1
+18880,Nj Warriors,Rohit Sharma*,4,1,18,7,1,1.75,1,0
+18880,Nj Warriors,Praveen Mandya,4,0,9,29,1,7.25,4,0
+18880,Nj Warriors,Harish Gowda,2,0,9,9,3,4.50,3,0
+18880,Nj Warriors,Anand Gupta,2,0,6,16,1,8.00,8,2
+18880,Express Rangers,Lovedeep Singh,3,0,9,13,1,4.33,1,0
+18880,Express Rangers,Veeraswamy Veeramreddy,4,1,18,14,4,3.50,0,0
+18880,Express Rangers,Mohan Venu,3,0,11,20,0,6.67,1,0
+18880,Express Rangers,Saidu M Shaik*,2,0,6,7,1,3.50,1,0
+18880,Express Rangers,Amandeep Bawa,4,0,12,28,1,7.00,2,0
 18875,SB Vikings Cricket Club,Vamshidhar Reddy,4,0,13,13,1,3.25,2,0
 18875,SB Vikings Cricket Club,Ashok Dhanasekaran,3,0,11,8,2,2.67,1,0
 18875,SB Vikings Cricket Club,Shakil San,4,0,9,24,1,6.00,1,0
@@ -3168,6 +4894,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18875,Plainsboro Panthers,Karan N,3.5,1,18,14,1,3.65,0,2
 18875,Plainsboro Panthers,Kannan Thirumoorthy,4,0,11,26,3,6.50,0,1
 18875,Plainsboro Panthers,VIJAYANAND PONNADA,4,0,13,20,2,5.00,0,0
+18873,Waterfront Warriors,Ajinkya Pradhan,4,0,11,18,2,4.50,1,0
+18873,Waterfront Warriors,Abhinav Tyagi,3,0,11,16,0,5.33,1,0
+18873,Waterfront Warriors,Siddhant Kumar,1,0,4,17,0,17.00,2,1
+18873,Waterfront Warriors,Malav Shah,1,0,2,7,0,7.00,0,0
+18873,Waterfront Warriors,Namit Rathi,1,0,2,4,0,4.00,0,0
+18873,Waterfront Warriors,Yogen Phanse,3,0,10,26,5,8.67,8,3
+18873,Waterfront Warriors,Amanraj Gupta,2,0,7,7,1,3.50,0,0
+18873,Waterfront Warriors,Shailesh Uchale,1,0,1,10,0,10.00,1,0
+18873,JC Warriors,Dewanshu Awasthi,3,0,12,26,0,8.67,4,0
+18873,JC Warriors,Vishal Choudhary,3,0,9,14,4,4.67,4,0
+18873,JC Warriors,Shubham Pawar,4,0,16,10,2,2.50,1,1
+18873,JC Warriors,Pratik Mane,4,0,15,22,3,5.50,8,0
+18873,JC Warriors,Neelesh Deshmukh,1,0,1,27,0,27.00,2,0
 18868,Parsippany Super Kings,Vamsi Krish Sanneboina,4,0,12,32,2,8.00,2,0
 18868,Parsippany Super Kings,Sai Keerthan Reddy,1,0,3,7,1,7.00,2,1
 18868,Parsippany Super Kings,Pradeep Reddy Patil,4,0,11,22,0,5.50,0,0
@@ -3190,7 +4929,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18864,PCA Jr.,Samir Patel,3,0,11,19,1,6.33,4,0
 18864,PCA Jr.,Priten Patel (GCC),3,0,13,11,2,3.67,1,0
 18864,PCA Jr.,Hardik Vyas (GCC),2,0,5,15,0,7.50,0,0
-18864,PCA Jr.,Rishi Patel GCC,2,0,8,6,0,3.00,1,1
+18864,PCA Jr.,Purvik Patel GCC,2,0,8,6,0,3.00,1,1
 18861,Hudson Hurricanes Sultans,Rohit Pradhan,2,0,6,7,1,3.50,1,0
 18861,Hudson Hurricanes Sultans,Kuldeep Shukla*,2,0,7,6,1,3.00,1,0
 18861,Hudson Hurricanes Sultans,Sravan Nekkanti,2,0,7,11,1,5.50,2,0
@@ -3209,6 +4948,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18852,NJ Boxers,Prasad Fernando,2.5,0,7,17,0,6.00,1,0
 18852,NJ Boxers,Dharmik Patel,4,0,15,16,4,4.00,2,0
 18852,NJ Boxers,Jeet Patel,1,0,1,12,0,12.00,0,0
+18851,Monroe Mavericks,Varun Gurram,1,0,0,7,0,7.00,0,0
+18851,Monroe Mavericks,Shikaib Rizvi,4,0,14,21,1,5.25,1,0
+18851,Monroe Mavericks,Sakthivel Jagadeesan,3,0,7,19,2,6.33,2,0
+18851,Monroe Mavericks,Rakesh Kar,3,0,12,9,1,3.00,3,0
+18851,Monroe Mavericks,Bhanu Singaram,4,0,11,18,1,4.50,0,0
+18851,Monroe Mavericks,Rigved Nagarkar,1,0,2,21,0,21.00,0,1
+18851,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,3.1,0,10,17,3,5.37,1,0
+18851,Thunder Strikers Weekenders,Nishant Pandit,3,0,9,10,2,3.33,0,0
+18851,Thunder Strikers Weekenders,Sarbjitsingh Sahota,4,0,14,18,3,4.50,5,0
+18851,Thunder Strikers Weekenders,Ganesh Vasam,3,1,14,15,2,5.00,2,0
 18849,Cricket Warriors,Miral Parmar*,3,0,6,29,1,9.67,2,1
 18849,Cricket Warriors,Amit Patel,2,0,3,18,1,9.00,1,0
 18849,Cricket Warriors,Bhadresh Patel,4,0,9,33,1,8.25,2,0
@@ -3219,7 +4968,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18849,RCW - Weekenders,Rakesh Patel,4,0,14,17,2,4.25,2,3
 18849,RCW - Weekenders,Nilay Patel,4,0,12,24,1,6.00,2,1
 18849,RCW - Weekenders,Amol J,4,0,16,13,2,3.25,1,0
-18831,Em Sports Club,Shiva Reddy Salukuti - SSR †,2,0,9,7,0,3.50,0,1
+18831,Em Sports Club,Shiva Reddy Salukuti †,2,0,9,7,0,3.50,0,1
 18831,Em Sports Club,Rahul Gundani*,4,0,18,11,2,2.75,1,0
 18831,Em Sports Club,Dinesh Bhuteja,4,0,14,12,0,3.00,1,0
 18831,Em Sports Club,Anindya A,3,0,9,17,3,5.67,4,0
@@ -3230,6 +4979,16 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18831,Waterfront Warriors,Siddhant Kumar,4,0,14,21,2,5.25,4,0
 18831,Waterfront Warriors,Abhinav Tyagi,2,0,9,9,2,4.50,1,1
 18831,Waterfront Warriors,Shailesh Uchale,0.5,0,5,1,2,1.20,1,0
+18821,JC Warriors,Pratik Mane,4,0,13,16,1,4.00,2,1
+18821,JC Warriors,Santosh Lalan,4,0,13,16,0,4.00,2,2
+18821,JC Warriors,Shubham Pawar,2,0,3,14,0,7.00,2,0
+18821,JC Warriors,Shrivats Vyas,4,0,13,18,3,4.50,5,0
+18821,JC Warriors,Rahul Gupta,2,0,5,12,0,6.00,1,0
+18821,Thunder Strikers Weekenders,Venkata Brahmaiah Naidu Gadireddy*,3,0,14,7,3,2.33,3,0
+18821,Thunder Strikers Weekenders,Sarbjitsingh Sahota,3,0,12,11,2,3.67,5,0
+18821,Thunder Strikers Weekenders,Manish Semwal,1,0,2,9,0,9.00,2,3
+18821,Thunder Strikers Weekenders,VC Uttez Chitluri,2,0,7,7,1,3.50,1,0
+18821,Thunder Strikers Weekenders,Ganesh Vasam,2.3,0,9,17,3,6.80,1,1
 18817,TRIDENTS XI,Anil T,1.1,0,4,4,0,3.43,0,0
 18817,TRIDENTS XI,Balamurugan C,1,0,3,3,0,3.00,0,0
 18816,Parsippany Super Kings,Pradeep Reddy Patil,4,0,11,14,0,3.50,1,0
@@ -3266,6 +5025,17 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18810,NJ Boxers,Jay Patel,2,0,5,22,0,11.00,5,1
 18810,NJ Boxers,Jeet Patel,1,0,3,9,1,9.00,1,0
 18810,NJ Boxers,Sibendu Dey,2,0,6,11,0,5.50,0,0
+18802,Monroe Mavericks,Lakshit Kurasala,4,0,17,23,0,5.75,2,0
+18802,Monroe Mavericks,Rigved Nagarkar,2,0,7,12,0,6.00,1,0
+18802,Monroe Mavericks,Bhanu Singaram,4,0,13,24,4,6.00,1,0
+18802,Monroe Mavericks,Rakesh Kar,2,0,5,21,1,10.50,1,1
+18802,Monroe Mavericks,Abdul Razak Bellary,2,0,6,18,1,9.00,1,0
+18802,Monroe Mavericks,Sakthivel Jagadeesan,2,0,7,12,0,6.00,1,0
+18802,Nj Warriors,Rohit Sharma*,4,0,12,22,1,5.50,1,0
+18802,Nj Warriors,Praveen Mandya,4,0,15,21,2,5.25,2,0
+18802,Nj Warriors,Sanket Singhania,3,0,5,28,1,9.33,1,0
+18802,Nj Warriors,Harish Gowda,3,0,9,23,2,7.67,1,0
+18802,Nj Warriors,Jeyaprakash Jeyapal,2,0,6,21,1,10.50,2,0
 18801,Edison Super Kings,CK 12,3,0,9,24,2,8.00,9,0
 18801,Edison Super Kings,Jegan Thangaraj,2,0,1,18,0,9.00,0,0
 18801,Edison Super Kings,Arun Ganesan*,1,0,4,2,0,2.00,0,0
@@ -3278,6 +5048,19 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18801,Cricket Warriors,Bhadresh Patel,4,1,14,13,2,3.25,0,0
 18801,Cricket Warriors,Manish Makhija*,2,0,3,16,0,8.00,0,0
 18801,Cricket Warriors,Miral Parmar,1.3,0,2,18,1,12.00,2,0
+18792,Iselin Warriors,Karan Patel,2,0,3,37,0,18.50,1,0
+18792,Iselin Warriors,Waqas Choudhary,4,0,13,30,1,7.50,0,0
+18792,Iselin Warriors,Ishan Shah,3,0,7,33,1,11.00,2,0
+18792,Iselin Warriors,Dhrumil Shah,4,1,20,8,4,2.00,1,0
+18792,Iselin Warriors,Jay Soni,3,0,12,16,1,5.33,0,0
+18792,Pway Cubs,Neel Patel,1,0,4,10,0,10.00,0,0
+18792,Pway Cubs,Nish Patel,4,0,12,13,2,3.25,0,0
+18792,Pway Cubs,Dhaivat Patel †,4,0,14,23,2,5.75,2,0
+18792,Pway Cubs,Drumil Amin,2,0,6,7,0,3.50,0,0
+18792,Pway Cubs,Vraj Shah,1,0,4,5,1,5.00,1,0
+18792,Pway Cubs,Akshar Patel,2,0,7,13,0,6.50,2,0
+18792,Pway Cubs,Sagar Shah,1,0,2,9,0,9.00,0,0
+18792,Pway Cubs,Shri Patel,1,0,3,3,1,3.00,0,0
 18781,Power Hitters,Pankaj Singh,2,0,8,5,0,2.50,0,0
 18781,Power Hitters,SKumar M,2,1,10,2,2,1.00,0,0
 18781,Power Hitters,Praveen Kaushal,2,0,7,7,2,3.50,2,0
@@ -3289,6 +5072,27 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18781,Perryville Panthers,Ranjeevan Gurumoorthy,2.5,0,6,21,0,7.41,3,0
 18781,Perryville Panthers,Chaitanya Boddu,2,0,7,9,1,4.50,1,0
 18781,Perryville Panthers,Venu Sunkavalli,1,0,2,8,1,8.00,1,0
+18779,Monroe United,Radhakrishna Kondapalli,4,0,19,20,2,5.00,4,0
+18779,Monroe United,Rishi Patel,5,0,18,28,1,5.60,2,1
+18779,Monroe United,Surya Kasara*,3,0,7,44,0,14.67,1,0
+18779,Monroe United,Vikas Peddolla,4,0,12,37,3,9.25,7,1
+18779,Giant Slayers,Sukhwinder Singh,2,0,6,8,0,4.00,0,0
+18779,Giant Slayers,Gurudutt Patel,2,0,7,18,1,9.00,7,0
+18779,Giant Slayers,Sabeel Shaikh,2,0,8,8,1,4.00,1,0
+18779,Giant Slayers,Hardik Patel,2,0,6,14,1,7.00,2,0
+18779,Giant Slayers,Jimmy Patel,2,0,9,3,2,1.50,0,0
+18779,Giant Slayers,Harshil Patel,2,0,6,12,0,6.00,2,0
+18779,Giant Slayers,Ronak Patel (GS),2,0,4,10,1,5.00,2,0
+18779,Giant Slayers,Gunjan Patel*,1,0,2,9,0,9.00,0,0
+18779,Giant Slayers,Subham Singh,1,0,3,12,0,12.00,1,0
+18774,Invincible CC,Sanket Thakkar,1,0,3,12,0,12.00,2,1
+18774,Invincible CC,Hemanth Brahmendra Mallela,4,0,16,29,0,7.25,5,0
+18774,Invincible CC,Pratik Patel,4,0,12,19,2,4.75,1,0
+18774,Invincible CC,Parthiv Parikh,4,0,13,30,2,7.50,4,2
+18774,Invincible CC,Saurin Patel,2,0,6,10,1,5.00,1,0
+18774,Invincible CC,Vishal Bhavsar*,1,0,4,2,2,2.00,0,0
+18774,NJ Marvels,Mani V*,1.4,0,9,6,0,3.60,2,0
+18774,NJ Marvels,Gowtham Lingampalli,1,0,2,4,1,4.00,0,0
 18772,Robbinsville Jaguars,Yashkumar Patel,4,0,14,15,4,3.75,2,0
 18772,Robbinsville Jaguars,Rahul Bhardwaj,4,1,15,14,0,3.50,1,0
 18772,Robbinsville Jaguars,Hardik Jani,3,0,11,15,2,5.00,0,0
@@ -3303,9 +5107,9 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18771,Mag11,Harshal Ghangale,3,0,11,22,2,7.33,5,1
 18771,Mag11,Satish Paineni,4,0,18,16,1,4.00,5,0
 18771,Mag11,Ramana Jajula,4,1,15,14,2,3.50,0,0
-18771,BLOODLINE,Priyam S,4,0,18,10,2,2.50,1,0
+18771,BLOODLINE,Priyam Shah,4,0,18,10,2,2.50,1,0
 18771,BLOODLINE,Meet Patel,2,0,7,6,1,3.00,1,0
-18771,BLOODLINE,Vraj Patel,3.2,0,10,20,0,6.00,2,0
+18771,BLOODLINE,Vraj Patel 24,3.2,0,10,20,0,6.00,2,0
 18771,BLOODLINE,Alpesh Patel,1,0,1,13,0,13.00,0,0
 18771,BLOODLINE,Divya Patel,1,0,4,10,1,10.00,3,0
 18771,BLOODLINE,Nirav Shah,2,0,8,4,2,2.00,0,0
@@ -3356,6 +5160,15 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18754,Woodlot Boyz,Pradeep Jeyapaul,4,0,19,7,3,1.75,2,0
 18754,Woodlot Boyz,Shashikanth K,2,0,8,8,2,4.00,3,1
 18754,Woodlot Boyz,Ashish Aras,1,0,6,1,0,1.00,1,0
+18752,NJKnights,Sanjay Geepalayam,4,0,12,32,1,8.00,1,0
+18752,NJKnights,Sukumar Paturi,4,0,15,16,3,4.00,0,0
+18752,NJKnights,Bhuvan Arun,4,0,17,21,2,5.25,1,0
+18752,NJKnights,Vineesh Veliyil Vijayappan,1,0,3,6,0,6.00,0,0
+18752,NJKnights,Sachin Dhotre,3,0,12,12,1,4.00,6,0
+18752,United Falcons,Alap Shah*,3.1,0,12,12,2,3.79,1,0
+18752,United Falcons,Virendra D,4,0,11,19,3,4.75,1,0
+18752,United Falcons,Sanketh Shetty,4,0,15,19,2,4.75,5,0
+18752,United Falcons,Neel Joshi,4,1,19,6,2,1.50,1,0
 18749,Vikings CC,Sujith Reddy,2,0,7,22,0,11.00,11,1
 18749,Vikings CC,Nakul Limbachiya,4,0,14,23,3,5.75,4,0
 18749,Vikings CC,Ajith Nalluri,4,0,14,18,4,4.50,2,0
@@ -3385,6 +5198,38 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18742,Robbinsville Jaguars,Yashkumar Patel,4,0,21,12,1,3.00,6,0
 18742,Jersey City Dominators,Sunit Shirke,2.2,0,7,27,1,11.57,3,0
 18742,Jersey City Dominators,Shubh Bhardwaj,2,0,7,15,1,7.50,1,0
+18736,Giant Slayers,Sukhwinder Singh,3,0,8,22,2,7.33,1,0
+18736,Giant Slayers,Neel Patel-24,1,0,3,4,0,4.00,1,0
+18736,Giant Slayers,Hardik Patel,3.5,0,11,28,4,7.30,2,0
+18736,Giant Slayers,Ronak Patel,1,0,1,17,0,17.00,4,0
+18736,Giant Slayers,Jimmy Patel,2,0,4,19,0,9.50,4,0
+18736,Giant Slayers,Gunjan Patel*,2,0,4,17,1,8.50,3,0
+18736,Giant Slayers,Parth Upadhyay,3,0,9,17,0,5.67,2,0
+18736,Invincible CC,Sanket Thakkar,1,0,2,9,0,9.00,0,1
+18736,Invincible CC,Hitesh Pandya,4,0,13,31,4,7.75,1,1
+18736,Invincible CC,Pratik Patel,3.1,0,8,20,1,6.32,1,0
+18736,Invincible CC,Parthiv Parikh,4,0,11,31,3,7.75,4,0
+18736,Invincible CC,Saurin Patel,1,0,3,11,1,11.00,0,0
+18727,Kranti Warriors,KISHAN PANCHAL,4,0,12,16,1,4.00,1,0
+18727,Kranti Warriors,Sapan Patel,3.4,0,16,9,4,2.45,3,0
+18727,Kranti Warriors,Kushal Patel,4,1,18,14,0,3.50,2,0
+18727,Kranti Warriors,Smeet Shah,1,0,4,6,1,6.00,4,0
+18727,Kranti Warriors,Avee Patel*,3,0,8,29,3,9.67,6,0
+18727,NJ Marvels,Mani V,2,0,9,6,0,3.00,3,0
+18727,NJ Marvels,Ranga Rao Kosaraju,4,0,14,16,3,4.00,0,0
+18727,NJ Marvels,Sudhakar N,4,1,18,12,1,3.00,1,0
+18727,NJ Marvels,Narender Reddy Bojja †,3.1,0,10,22,4,6.95,1,0
+18727,NJ Marvels,Raghu Saagamreddy,2,0,9,6,2,3.00,2,0
+18726,Pway Cubs,Neel Patel,4,0,16,13,0,3.25,0,0
+18726,Pway Cubs,Nish Patel,4,2,20,5,3,1.25,0,0
+18726,Pway Cubs,Akshar Patel,2,0,8,12,1,6.00,1,1
+18726,Pway Cubs,Drumil Amin,2,0,8,5,0,2.50,1,0
+18726,Pway Cubs,Jay Domadiya,2,0,6,6,0,3.00,0,0
+18726,Pway Cubs,Vraj Shah,2,0,8,5,2,2.50,0,0
+18726,Monroe United,Radhakrishna Kondapalli,2,0,5,20,1,10.00,0,0
+18726,Monroe United,Surya Kasara,1,0,3,8,1,8.00,0,0
+18726,Monroe United,Hemal Makadia,1,0,2,15,0,15.00,0,0
+18726,Monroe United,Rishi Patel,0.2,0,0,4,0,12.00,0,1
 18725,SB Vikings Challengers Cricket Club,Srini Yandrapu,4,0,11,28,1,7.00,0,1
 18725,SB Vikings Challengers Cricket Club,Srikant Pradhan,3,1,12,22,0,7.33,2,0
 18725,SB Vikings Challengers Cricket Club,Tamil R*,2,0,4,24,0,12.00,4,1
@@ -3400,12 +5245,22 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18724,Staten Island Strikers,Subin Moni,4,0,14,16,3,4.00,3,0
 18724,Staten Island Strikers,Linu Alex,4,0,12,21,2,5.25,0,0
 18724,Staten Island Strikers,Nithin Varughese,4,0,13,29,2,7.25,3,0
-18724,Staten Island Strikers,Nithin Eapen Andrews,4,0,8,26,1,6.50,2,0
+18724,Staten Island Strikers,Nithin Andrews,4,0,8,26,1,6.50,2,0
 18724,Shreeji XI,Neel Patel-13,2,0,8,8,2,4.00,1,0
 18724,Shreeji XI,Soham Brahmbhatt,4,0,14,19,0,4.75,2,0
 18724,Shreeji XI,Jay Trivedi,3,0,10,28,1,9.33,3,1
 18724,Shreeji XI,Hemil Patel,3,0,12,8,1,2.67,2,0
 18724,Shreeji XI,Ravi Rathod,4,0,13,18,1,4.50,0,0
+18722,Iselin Warriors,Priyanshu Pandya,3,0,13,8,3,2.67,2,0
+18722,Iselin Warriors,Jay Soni,2.2,1,12,3,1,1.29,0,0
+18722,Iselin Warriors,Ishan Shah,4,0,16,11,3,2.75,0,1
+18722,Iselin Warriors,Karan Patel,3,0,14,5,1,1.67,0,0
+18722,Iselin Warriors,Kashish Shah †,2,0,9,5,1,2.50,2,0
+18722,United Falcons,Nikunj Malpani,2,0,7,19,0,9.50,1,1
+18722,United Falcons,Arpit Airan,1,0,5,2,0,2.00,0,1
+18722,United Falcons,Sanketh Shetty,1,0,3,6,1,6.00,0,0
+18722,United Falcons,Neel Joshi,1,0,3,4,1,4.00,0,0
+18722,United Falcons,Sarthak Zaveri,0.1,0,0,4,0,24.00,0,0
 18720,Jc Mavericks,Vishal Padhye,2,0,4,15,0,7.50,3,0
 18720,Jc Mavericks,Raja Kondi,2,0,6,15,1,7.50,2,0
 18720,Jc Mavericks,Sankar Gudapati,4,0,16,14,2,3.50,1,1
@@ -3482,6 +5337,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18695,Parsippany Super Kings,Vamsi Krish Sanneboina,3,0,11,16,1,5.33,4,0
 18695,Parsippany Super Kings,Srinath Reddy Reddy,3.3,0,11,19,1,5.43,1,3
 18695,Parsippany Super Kings,Yokesh Rajaram,1,0,3,7,0,7.00,4,0
+18693,Sreeshti Weekenders,Santosh Mesta,3,0,8,14,2,4.67,1,0
+18693,Sreeshti Weekenders,Amol Manjrekar,1,0,3,12,0,12.00,1,0
+18693,Sreeshti Weekenders,Mahesh Nagappa,2,0,5,16,2,8.00,1,0
+18693,Sreeshti Weekenders,Abbas Zaidi,4,0,10,23,2,5.75,0,0
+18693,Sreeshti Weekenders,Kamal Choudhury,2,0,4,15,0,7.50,2,0
+18693,Sreeshti Weekenders,Harshal Gupta,3,0,10,14,0,4.67,0,0
+18693,Sreeshti Weekenders,Ninad Mehta,1,0,4,10,1,10.00,0,0
+18693,Waterfront Warriors,Siddhant Kumar,2,0,4,23,0,11.50,1,0
+18693,Waterfront Warriors,Ajinkya Pradhan,3.1,0,11,17,1,5.37,0,0
+18693,Waterfront Warriors,Yogen Phanse,2,0,4,23,0,11.50,1,0
+18693,Waterfront Warriors,Amanraj Gupta,2,0,4,17,0,8.50,1,1
+18693,Waterfront Warriors,Abhinav Tyagi,3,0,7,25,3,8.33,2,1
 18691,Cricket Lovers,Aamer Iqbal,4,0,13,39,3,9.75,2,1
 18691,Cricket Lovers,Muhammad Ansar,3,0,6,27,1,9.00,3,0
 18691,Cricket Lovers,Pavan Rohith Midimilla,4,0,13,39,1,9.75,7,1
@@ -3516,7 +5383,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18687,VRK Gladiators,Sanju S †,1,0,4,7,0,7.00,2,0
 18687,VRK Gladiators,Willish Patel,2,0,6,9,0,4.50,3,0
 18687,VRK Gladiators,Ankur Chaturvedi,3,0,13,9,1,3.00,1,0
-18687,VRK Gladiators,Sandeep I Shetty,2,0,6,16,2,8.00,4,0
+18687,VRK Gladiators,Sandeep A Shetty,2,0,6,16,2,8.00,4,0
 18687,VRK Gladiators,Harshad Patil*,2,0,8,11,2,5.50,4,0
 18687,VRK Gladiators,Vipul Joshi,2,0,8,10,1,5.00,2,1
 18687,VRK Gladiators,Ashish Shetty,1,0,4,4,0,4.00,2,0
@@ -3531,6 +5398,30 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18679,Plainsboro Panthers,Sreehari Mano,4,0,18,17,2,4.25,7,0
 18679,Plainsboro Panthers,Karan N,4,0,16,13,1,3.25,4,0
 18679,Plainsboro Panthers,Lakshman Gummadi,1,0,2,11,2,11.00,0,1
+18675,Express Rangers,Ankit Pandey,3,0,12,11,1,3.67,2,0
+18675,Express Rangers,Saidu M Shaik*,2,0,7,11,0,5.50,5,0
+18675,Express Rangers,Amandeep Bawa,4,0,12,28,2,7.00,3,0
+18675,Express Rangers,Mohan Venu,3,0,8,23,1,7.67,2,0
+18675,Express Rangers,Veeraswamy Veeramreddy,1,0,5,5,2,5.00,1,0
+18675,Express Rangers,Shivananda Bashetter,1.4,0,7,4,2,2.40,1,0
+18675,Jersey Superstars,Vikul Rajpara,2,0,8,8,1,4.00,1,0
+18675,Jersey Superstars,Savan Patel,2,0,10,5,1,2.50,3,0
+18675,Jersey Superstars,Vineet Luthra †,2.2,0,6,17,0,7.29,1,0
+18675,Jersey Superstars,Nasir Khan,3,0,8,27,0,9.00,0,1
+18675,Jersey Superstars,Yash Patel,1,0,2,13,0,13.00,1,2
+18675,Jersey Superstars,Gary Patel,1,0,2,13,0,13.00,1,0
+18670,JC Warriors,Pratik Mane,4,0,20,24,1,6.00,20,0
+18670,JC Warriors,Shubham Pawar,4,0,13,19,1,4.75,3,0
+18670,JC Warriors,Praful Mishra,1,0,3,5,0,5.00,2,0
+18670,JC Warriors,Shrivats Vyas,4,1,15,16,3,4.00,0,1
+18670,JC Warriors,Rahul Gupta,2,0,9,9,0,4.50,1,1
+18670,JC Warriors,Neerav Poriya,1,0,3,6,1,6.00,0,0
+18670,Nj Warriors,Sanket Singhania,1,0,3,16,0,16.00,0,0
+18670,Nj Warriors,Rohit Sharma*,3,0,9,18,1,6.00,1,0
+18670,Nj Warriors,Praveen Mandya,2,0,4,28,0,14.00,0,2
+18670,Nj Warriors,Praneeth Reddy,1,0,3,12,0,12.00,2,1
+18670,Nj Warriors,Jeyaprakash Jeyapal,1,0,4,3,1,3.00,1,0
+18670,Nj Warriors,Gyan Singh,0.2,0,1,1,0,3.00,0,0
 18668,Newport Narcos,Jaimin Khanderia,4,0,15,17,2,4.25,1,2
 18668,Newport Narcos,Shubham Bhutada,4,0,12,36,2,9.00,1,1
 18668,Newport Narcos,Chet Kalra*,4,0,15,28,1,7.00,4,1
@@ -3554,7 +5445,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18665,PCA Jr.,Chintan Patel,1,0,3,14,0,14.00,1,0
 18665,PCA Jr.,Sahil Patel,2,0,4,15,0,7.50,0,0
 18665,PCA Jr.,Shreyank Patel,1,0,0,26,0,26.00,0,0
-18665,PCA Jr.,Rishi Patel GCC,1.4,0,6,7,1,4.20,0,0
+18665,PCA Jr.,Purvik Patel GCC,1.4,0,6,7,1,4.20,0,0
 18665,PCA Jr.,Parth Patel,1,0,3,6,1,6.00,3,0
 18664,Sparta XI,Arpan Shah,4,0,12,33,2,8.25,2,0
 18664,Sparta XI,Suman Maramreddy*,4,0,10,27,0,6.75,0,0
@@ -3567,6 +5458,18 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18664,SB Vikings Cricket Club,Madesh Swaminaidu*,3,0,12,35,2,11.67,1,1
 18664,SB Vikings Cricket Club,Shakil San,3.1,0,11,18,3,5.68,0,1
 18664,SB Vikings Cricket Club,Ashok Dhanasekaran,3,0,7,24,1,8.00,4,0
+18653,Incredibulls,Ajay Dhanekula*,4,0,9,16,1,4.00,0,0
+18653,Incredibulls,Prasadreddy Nallam,1,0,2,14,0,14.00,2,0
+18653,Incredibulls,Venkataramireddy Nallappagari,3,0,6,31,0,10.33,1,0
+18653,Incredibulls,Pavan Kumar Reddy Suram,4,0,14,24,3,6.00,3,1
+18653,Incredibulls,Vaibhav Kunar,3,0,6,26,1,8.67,7,0
+18653,Incredibulls,Vinay Nooguru,1,0,2,19,1,19.00,0,1
+18653,Monroe Mavericks,Sakthivel Jagadeesan,4,1,16,17,0,4.25,0,0
+18653,Monroe Mavericks,Ayush Bhat,2,0,7,9,2,4.50,4,0
+18653,Monroe Mavericks,Bhanu Singaram,4,0,11,23,1,5.75,0,0
+18653,Monroe Mavericks,Rakesh Kar,4,0,15,24,5,6.00,0,1
+18653,Monroe Mavericks,Vaibhav Talati,1,0,1,25,1,25.00,1,0
+18653,Monroe Mavericks,Lakshit Kurasala,1,0,2,7,0,7.00,1,0
 18652,Bayonne CC,Udhaya Kumar Bagavathiappan,3,0,6,22,1,7.33,2,0
 18652,Bayonne CC,Ashokan A,2,0,7,11,1,5.50,3,0
 18652,Bayonne CC,SatishKumar Sathuraveeran Veeranan,3,0,7,30,0,10.00,2,3
