@@ -39,9 +39,12 @@ function bindTooltip(target, html) {
 }
 
 const SERIES_KEYS = Object.keys(NJSBCL_DATA.series);
+// knockouts.html links straight to a matchup (?series=…&opponent=…); an unknown value just
+// falls through to the normal default in populateOpponentSelect().
+const LINKED = new URLSearchParams(location.search);
 const state = {
-  series: SERIES_KEYS[0],
-  opponent: null,
+  series: SERIES_KEYS.includes(LINKED.get("series")) ? LINKED.get("series") : SERIES_KEYS[0],
+  opponent: LINKED.get("opponent"),
   showAllFixtures: false,
 };
 

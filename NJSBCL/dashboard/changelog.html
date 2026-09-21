@@ -18,6 +18,7 @@
     <span class="nav-sub">What's changed</span>
     <a class="nav-link" href="index.html">← Matchup analysis</a>
     <a class="nav-link" href="recap.html">Last match recap</a>
+    <a class="nav-link" href="knockouts.html">Knockouts</a>
     <a class="nav-link" href="standings.html">Standings</a>
     <a class="nav-link" href="methodology.html">Methodology</a>
     <a class="nav-link" href="charts.html">Gladiators charts →</a>
@@ -32,12 +33,54 @@
     <p>What's been added to the Scout dashboard, most recent first.</p>
   </header>
 
-  <!-- last-recorded-commit: a408c0d79 -->
+  <!-- last-recorded-commit: 46fb6b4d2 -->
   <section id="sec-changelog">
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Sun, Sep 20 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Knockouts page</b> — a new page for the bracket now the group stage is done: our pre-quarter tie with an Elo win probability and a quick scouting read, the full eight-tie draw with our match highlighted, who qualified from each group (and who just missed the cut), and what the rule book actually says — qualification under rule 7, the four rounds, the seeding tiebreaks, and the full Super Over chain that decides a level knockout match.</li>
+        <li><b>Direct links into a matchup</b> — the Knockouts page links straight to the full scouting page for our opponent, with the right series and team already selected.</li>
+        <li><b>Knockout opponents in the dropdown</b> — you can now scout teams we never meet in the league stage. Both series run a cross-group league (we only ever play the other group), so a knockout rival used to be unpickable: Division 1 now lists every Group A team, and the Weekenders Cup lists every Group A team plus Group B's top 8 — the full field either of us can draw in the playoffs.</li>
+        <li><b>Weekenders Group B now scouted</b> — Group B's top 8 had no match data on the site at all, so their pages would have come up empty. Every one of their matches this season is now scraped, with full batting, bowling and over-by-over detail behind the usual sections.</li>
+      </ul>
+    </div>
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Sun, Aug 30 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Fairer recap after a loss</b> — the Last match recap no longer reads as a post-mortem when we lose: verdicts are framed neutrally, and each one now shows the impact breakdown behind it so you can see why it was scored right or wrong.</li>
+      </ul>
+    </div>
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Wed, Aug 26 2026</h2>
+      <ul class="changelog-list">
+        <li><b>NRR scenario tree</b> — on the Standings page, every combination of results in our remaining fixtures, showing the best and worst league position each one leaves us in, with net run rate projected forward rather than guessed.</li>
+        <li><b>Standings page</b> — the full group tables, both groups, in one place, instead of only the single opponent's line shown on the matchup page.</li>
+      </ul>
+    </div>
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Sat, Aug 22 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Recap verdict fixes</b> — key-batsman verdicts were firing off an inverted win-rate split (calling a read right when it had actually gone the other way), bowling verdicts mis-scored an exact boundary tie, and a bowler's figures across two separate spells weren't being combined. All three now score the way the Methodology page describes.</li>
+      </ul>
+    </div>
+
+    <div class="changelog-day">
+      <h2 class="changelog-date">Tue, Aug 18 2026</h2>
+      <ul class="changelog-list">
+        <li><b>Page-view counter</b> — the nav now shows how many times the dashboard has been viewed over the last 2 weeks, replacing the feedback email banner and staying visible on mobile.</li>
+      </ul>
+    </div>
 
     <div class="changelog-day">
       <h2 class="changelog-date">Sun, Aug 16 2026</h2>
       <ul class="changelog-list">
+        <li><b>Collapsible sections on mobile</b> — sections start collapsed on a phone so you can see what's on the page at a glance and open just the one you want.</li>
+        <li><b>Mobile layout fixes</b> — the nav no longer overflows the screen, the sticky filter bar sits at the right offset, and wide tables scroll sideways instead of stretching the page.</li>
+        <li><b>Top Gladiators ticker shows 3</b> — the ticker now lists the top 3 by season impact score in each series, up from 2.</li>
         <li><b>Top Gladiators ticker</b> — a horizontal auto-scrolling strip below the feedback banner (every page except Methodology/Changelog) showing the top 2 Gladiators by season-total impact score in each series — the same z-scored Star of the Match formula, totalled across every completed match so far.</li>
         <li><b>Pinned filter bar</b> — the Series/Opponent/Matchup controls now stay visible at the top of the page while scrolling instead of scrolling out of view.</li>
       </ul>

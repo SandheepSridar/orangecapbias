@@ -483,6 +483,84 @@ section h2 .q {
 .standings-table tr.gladiators-row td { background: rgba(255,195,0,0.08); }
 .standings-table tr.gladiators-row td.team-name { color: var(--gold); font-weight: 800; }
 
+/* ── Knockouts ─────────────────────────────────────────────────────── */
+.ko-callout {
+  background: rgba(255,195,0,0.07); border: 1px solid rgba(255,195,0,0.28);
+  border-radius: var(--radius); padding: 0.9rem 1.1rem; font-size: 0.85rem;
+  line-height: 1.55; margin-bottom: 1.1rem;
+}
+.ko-legend { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.2rem; }
+
+.ko-seed {
+  flex: none; min-width: 2.4rem; text-align: center;
+  font-family: "Sora", sans-serif; font-weight: 700; font-size: 0.72rem;
+  background: rgba(147,155,173,0.15); color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 0.2rem 0.5rem;
+}
+.ko-seed.us { background: rgba(255,195,0,0.16); color: var(--gold); border-color: rgba(255,195,0,0.4); }
+
+/* Our tie — the hero card at the top of the page */
+.ko-hero {
+  background: var(--panel); border: 1px solid rgba(255,195,0,0.3);
+  border-radius: var(--radius); padding: 1.3rem 1.4rem;
+}
+.ko-hero-head { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.ko-hero-side { display: flex; align-items: center; gap: 0.6rem; flex: 1 1 12rem; min-width: 0; }
+.ko-hero-side.right { justify-content: flex-end; }
+.ko-hero-team { font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.15rem; }
+.ko-hero-team.us { color: var(--gold); }
+.ko-hero-vs { flex: none; font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.ko-hero-sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
+
+.ko-prob { margin-top: 1rem; }
+.ko-prob-bar { height: 0.5rem; background: rgba(147,155,173,0.18); border-radius: 999px; overflow: hidden; }
+.ko-prob-fill { display: block; height: 100%; background: var(--gold); border-radius: 999px; }
+.ko-prob-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.4rem; }
+.ko-prob-label b { color: var(--text); font-family: "Sora", sans-serif; font-size: 0.95rem; }
+
+.ko-scout { margin: 1rem 0 0; padding-left: 1.1rem; font-size: 0.85rem; line-height: 1.6; color: var(--muted); }
+.ko-scout b { color: var(--text); }
+.ko-cta {
+  display: inline-block; margin-top: 1rem; font-size: 0.78rem; font-weight: 600;
+  color: var(--gold); border: 1px solid rgba(255,195,0,0.4); border-radius: 999px;
+  padding: 0.35rem 0.85rem; transition: background .15s ease;
+}
+.ko-cta:hover { background: rgba(255,195,0,0.1); }
+
+/* Draw — one row per tie */
+.ko-tie {
+  display: flex; align-items: center; gap: 0.7rem;
+  background: #0f1420; border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.55rem 0.9rem; margin-bottom: 0.4rem; font-size: 0.85rem;
+}
+.ko-tie.ours { border-color: rgba(255,195,0,0.45); background: rgba(255,195,0,0.06); }
+.ko-tie-team { flex: 1 1 0; min-width: 0; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ko-tie-team.right { text-align: right; }
+.ko-tie-team.us { color: var(--gold); font-weight: 800; }
+.ko-tie-vs { flex: none; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; }
+.ko-tie-prob {
+  flex: none; min-width: 3rem; text-align: right; font-variant-numeric: tabular-nums;
+  font-size: 0.78rem; color: var(--muted);
+}
+
+.ko-cut-row td { opacity: 0.6; }
+.ko-cut-tag {
+  font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--loss); border: 1px solid rgba(255,107,107,0.35); border-radius: 999px;
+  padding: 0.1rem 0.45rem; margin-left: 0.4rem; font-weight: 600;
+}
+
+.ko-rule-list { margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.ko-rule-list b { color: var(--text); }
+
+@media (max-width: 560px) {
+  .ko-hero-head { gap: 0.5rem; }
+  .ko-hero-side { flex: 1 1 100%; justify-content: flex-start; }
+  .ko-hero-side.right { justify-content: flex-start; }
+  .ko-hero-vs { flex: 1 1 100%; }
+  .ko-tie-team, .ko-tie-team.right { text-align: left; }
+}
+
 /* ── Head-to-head ──────────────────────────────────────────────────── */
 .h2h-record { display: flex; gap: 1.6rem; align-items: baseline; margin-bottom: 0.9rem; flex-wrap: wrap; }
 .h2h-record .big { font-family: "Sora", sans-serif; font-size: 1.8rem; font-weight: 800; }

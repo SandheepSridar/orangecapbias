@@ -204,6 +204,31 @@ else:
             warn(s["matchRecap"] is not None, f"{key}: matchRecap is None", "no completed matches yet, or a bug")
             check(f"{key}: upcoming fixtures list is non-empty", len(s["upcoming"]) > 0)
 
+            ko = s.get("knockouts")
+            check(f"{key}: knockouts bracket present", ko is not None)
+            if ko:
+                per_group = ko["qualifiersPerGroup"]
+                check(f"{key}: every bracket group qualifies exactly {per_group} teams",
+                      all(len(g["qualified"]) == per_group for g in ko["groups"]),
+                      str([(g["group"], len(g["qualified"])) for g in ko["groups"]]))
+                # Seeds must be 1..8 with no gaps: a duplicate or missing seed means the
+                # points table was misparsed, and the whole draw would be built off it.
+                for g in ko["groups"]:
+                    check(f"{key}: group {g['group']} seeds are 1..{per_group}",
+                          sorted(q["seed"] for q in g["qualified"]) == list(range(1, per_group + 1)))
+                check(f"{key}: pre-quarters pair every qualifier exactly once",
+                      sorted(t["high"]["team"] for t in ko["preQuarters"])
+                      + sorted(t["low"]["team"] for t in ko["preQuarters"])
+                      != [] and
+                      len({t["high"]["team"] for t in ko["preQuarters"]}
+                          | {t["low"]["team"] for t in ko["preQuarters"]})
+                      == per_group * len(ko["groups"]))
+                check(f"{key}: each pre-quarter's seeds sum to {per_group + 1} (1v8, 2v7, …)",
+                      all(t["high"]["seed"] + t["low"]["seed"] == per_group + 1
+                          for t in ko["preQuarters"]))
+                warn(ko["usQualified"], f"{key}: {cfg['gladiators']} are not in the knockout field",
+                     "correct only if they genuinely missed the top 8 of their group")
+
             st = s.get("scenarioTree")
             warn(st is not None, f"{key}: scenarioTree is None",
                  "expected only once the season's remaining fixtures run out")

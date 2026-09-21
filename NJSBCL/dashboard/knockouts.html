@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Knockouts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">Knockouts</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link" href="standings.html">Standings</a>
+    <a class="nav-link" href="recap.html">Last match recap</a>
+    <a class="nav-link" href="charts.html">Gladiators charts →</a>
+    <a class="nav-link" href="methodology.html">Methodology</a>
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </span>
+</nav>
+
+<div class="view-banner" id="view-count"></div>
+
+<div class="ticker-bar" id="tournament-ticker">
+  <span class="ticker-label">🏏 Top Gladiators</span>
+  <div class="ticker-viewport"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<main>
+  <header class="page-header">
+    <h1>Knockouts</h1>
+    <p>The group stage is done. This page is the bracket: who qualified, who we drew, and what
+      the rule book says happens from here — including the tiebreaks that only apply once
+      matches stop being allowed to end level.</p>
+    <div class="data-updated-badge" id="data-updated-badge"></div>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>Series</label>
+      <div class="pills" id="series-pills"></div>
+    </div>
+  </div>
+
+  <section id="sec-our-tie">
+    <h2>Our tie <span class="q">— the one that matters</span></h2>
+    <div id="our-tie-content"></div>
+  </section>
+
+  <section id="sec-draw">
+    <h2>Pre-quarter final draw</h2>
+    <p class="subhead">Eight ties, four from each group. Highest seed against lowest, pairing
+      inward — 1v8, 2v7, 3v6, 4v5.</p>
+    <div id="draw-content"></div>
+  </section>
+
+  <section id="sec-qualified">
+    <h2>Who qualified <span class="q">— top 8 from each group</span></h2>
+    <p class="subhead">Rule 7 qualifies the top 8 of each group separately, so a 9th-placed team
+      can miss out on more points than a qualifier from the other group. The team that just
+      missed is shown under each table.</p>
+    <div id="qualified-content"></div>
+  </section>
+
+  <section id="sec-rules">
+    <h2>How the knockouts work <span class="q">— straight from the rule book</span></h2>
+    <p class="subhead">Summarised from the NJSBCL Rules and Playing Conditions (2026), sections
+      6.2 and 7. Worth a read before a knockout game — the tie rules are not the league ones.</p>
+
+    <div class="metric-grid">
+      <div class="metric-tile">
+        <h3>Qualification (rule 7)</h3>
+        <p class="mt-note">The top 8 teams from each group qualify — <i>"even if the 9th and lower
+          ranked teams in each group have higher points than the 8th team in the other
+          group."</i> Ranking is on total points, with penalty and bonus points already folded in.</p>
+      </div>
+      <div class="metric-tile">
+        <h3>Seeding ties (rule 7.1)</h3>
+        <p class="mt-note">Teams level on points are separated in this order:</p>
+        <ol class="ko-rule-list">
+          <li><b>Head-to-head</b> — but only if one team beat <i>every</i> other team tied with it.
+            If the results between them form a loop, head-to-head is skipped entirely.</li>
+          <li><b>Net run rate</b>, to five decimal places (the site displays three).</li>
+          <li><b>NRR against common opponents</b>, ignoring any opponent a tied team was washed
+            out against.</li>
+        </ol>
+      </div>
+      <div class="metric-tile">
+        <h3>The four rounds (rule 6.2)</h3>
+        <p class="mt-note">Pre-quarter finals → Quarter finals → Semifinals → Final. A knockout
+          match cannot be drawn: level scores go to a Super Over, unlike the group stage where a
+          tie is simply 2 points each.</p>
+      </div>
+      <div class="metric-tile">
+        <h3>Super Over (rule 6.2)</h3>
+        <p class="mt-note">Each side nominates <b>three batsmen and one bowler</b> and bats one
+          over; the innings ends early on two wickets. Still level after that:</p>
+        <ol class="ko-rule-list">
+          <li>Most <b>sixes</b> across the main innings plus the super over</li>
+          <li>Then most <b>fours</b> (a five from an overthrow counts as a boundary)</li>
+          <li>Then most <b>twos</b> — threes count here too</li>
+          <li>Then another super over, under the same rules</li>
+        </ol>
+        <p class="mt-note">Umpires run it, and their decisions are final — no escalation to the EC.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>Bracket built from the final group tables scraped from cricclubs.com/NJSBCL · rules
+    quoted from the NJSBCL Rules and Playing Conditions (2026), sections 6.2 and 7.</footer>
+</main>
+
+<script src="data.js"></script>
+<script src="tournament_star.js"></script>
+<script src="knockouts.js"></script>
+<script src="mobile-sections.js"></script>
+<script src="view-counter.js"></script>
+<script>
+(function () {
+  if (new URLSearchParams(location.search).has('notrack')) {
+    localStorage.setItem('cf_notrack', '1');
+  }
+  if (!localStorage.getItem('cf_notrack')) {
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', '{"token": "923ae2140c224a73a0d1a4c30b38c433"}');
+    document.body.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>

@@ -33,6 +33,13 @@ SERIES = {
         "totals_csv": "division1_true_totals.csv",
         "points_csv": "division1_points_table.csv",
         "overs_csv": "division1_gladiators_overs.csv",
+        # Knockout field: Group A's top 8 play off among themselves (Samudhra finished 4th,
+        # so the pre-quarter is vs 5th). None = the whole group, since a run through the
+        # bracket can meet any of them.
+        "knockout_groups": {"A": None},
+        # Groups feeding the bracket we play in: 8 from each, 16 teams, four rounds
+        # (pre-quarter, quarter, semi, final) exactly as rule 6.2 names them.
+        "bracket_groups": ["A", "B"],
     },
     "weekenders": {
         "label": "2026 Weekenders Cup",
@@ -43,12 +50,21 @@ SERIES = {
         "totals_csv": "weekenderscup_true_totals.csv",
         "points_csv": "weekenderscup_points_table.csv",
         "overs_csv": "weekenderscup_gladiators_overs.csv",
+        # Knockout field: top 8 of Group A (ours) and top 8 of Group B. Only B's top 8 are
+        # scraped, so a deeper B rank has no scorecard data to analyse anyway.
+        "knockout_groups": {"A": None, "B": 8},
+        # Weekenders runs four groups; A and B form our half of the draw (per the
+        # captain, 2026-09-20). C and D presumably mirror it, but that is not
+        # published anywhere we scrape, so this page stays out of their half.
+        "bracket_groups": ["A", "B"],
     },
 }
 
 ELO_START = 1500
 ELO_K = 32
 MIN_OVERS_FOR_WEAKNESS = 8
+# Rule 7: "the top 8 teams from each group will qualify for the knockouts".
+QUALIFIERS_PER_GROUP = 8
 MIN_DEATH_OVERS = 3
 
 
@@ -1997,6 +2013,102 @@ def scenario_tree(cfg, gladiators, standings_table, results):
     }
 
 
+def knockout_opponents(cfg, standings_table, teams_with_data):
+    """Teams we can meet in the knockouts but never play in the league stage.
+
+    Both series run a cross-group league — Samudhra (Group A) only ever plays Group B
+    teams, VRK (Group A) only plays Group D — so a knockout rival drawn from our own
+    group, or from the other qualifying group, appears nowhere in our schedule and would
+    otherwise be missing from the opponent list entirely. cfg["knockout_groups"] names
+    the groups the knockout field comes from: {group: top_n}, where top_n of None means
+    the whole group.
+
+    Filtered against teams_with_data because a team with no scraped scorecards would
+    render as an empty matchup page.
+    """
+    out = set()
+    for group, top_n in cfg.get("knockout_groups", {}).items():
+        rows = next((g["rows"] for g in standings_table if g["group"] == group), [])
+        for r in rows:
+            if top_n is not None and r["rank"] > top_n:
+                continue
+            if r["team"] in teams_with_data:
+                out.add(r["team"])
+    return out
+
+
+def build_knockouts(cfg, standings_table, elo, gladiators):
+    """The knockout field and first-round draw, from the final group tables.
+
+    Rule 7: "the top 8 teams from each group will qualify for the knockouts (Even if the
+    9th and lower ranked teams in each group have higher points than the 8th team in the
+    other group)" — so qualification is strictly per-group, never league-wide, and the
+    cut line is worth showing because a team can miss out on more points than a qualifier
+    in the other group.
+
+    The draw itself is NOT in the rule book — rule 7 defers to "the schedule published",
+    and cricclubs had not published knockout fixtures as of 2026-09-20. The pre-quarters
+    here are standard within-group seeding (1v8, 2v7, 3v6, 4v5), which is what the captain
+    confirmed for our own tie (Samudhra 4th drew Storm Riders 5th). Everything downstream
+    of the pre-quarters is left alone rather than guessed — `pairingSource` says which of
+    the two a row is, so the page can label a projected draw as projected.
+    """
+    groups_out = []
+    pre_quarters = []
+    us = None
+    for group_name in cfg.get("bracket_groups", []):
+        rows = next((g["rows"] for g in standings_table if g["group"] == group_name), [])
+        if not rows:
+            continue
+        qualified = [
+            {"seed": r["rank"], "team": r["team"], "pts": r["pts"], "netRR": r["netRR"],
+             "won": r["won"], "lost": r["lost"], "elo": elo.get(r["team"]),
+             "isUs": r["team"] == gladiators}
+            for r in rows[:QUALIFIERS_PER_GROUP]
+        ]
+        missed = rows[QUALIFIERS_PER_GROUP:QUALIFIERS_PER_GROUP + 1]
+        cut_line = None
+        if missed and qualified:
+            last_in, first_out = qualified[-1], missed[0]
+            cut_line = {
+                "team": first_out["team"], "pts": first_out["pts"], "netRR": first_out["netRR"],
+                "ptsBehind": (last_in["pts"] - first_out["pts"]) if None not in (last_in["pts"], first_out["pts"]) else None,
+            }
+        groups_out.append({"group": group_name, "qualified": qualified, "cutLine": cut_line})
+
+        # 1v8, 2v7, 3v6, 4v5 — highest seed against lowest, pairing inward.
+        for i in range(QUALIFIERS_PER_GROUP // 2):
+            high, low = qualified[i], qualified[QUALIFIERS_PER_GROUP - 1 - i]
+            ours = high["isUs"] or low["isUs"]
+            tie = {
+                "group": group_name, "high": high, "low": low, "isOurs": ours,
+                "highWinProb": (win_probability(high["elo"], low["elo"])
+                                if high["elo"] and low["elo"] else None),
+                "pairingSource": "confirmed" if ours else "projected",
+            }
+            pre_quarters.append(tie)
+            if ours:
+                them = low if high["isUs"] else high
+                mine = high if high["isUs"] else low
+                us = {
+                    "group": group_name, "seed": mine["seed"], "opponent": them["team"],
+                    "opponentSeed": them["seed"],
+                    "winProb": (win_probability(mine["elo"], them["elo"])
+                                if mine["elo"] and them["elo"] else None),
+                    "ourElo": mine["elo"], "theirElo": them["elo"],
+                }
+
+    if not groups_out:
+        return None
+    return {
+        "qualifiersPerGroup": QUALIFIERS_PER_GROUP,
+        "groups": groups_out,
+        "preQuarters": pre_quarters,
+        "us": us,
+        "usQualified": us is not None,
+    }
+
+
 def build():
     out = {"generated": TODAY.strftime("%Y-%m-%d"), "series": {}}
 
@@ -2017,14 +2129,28 @@ def build():
         print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
               f"{gladiators} elo: {round(gladiators_elo)}")
 
-        # opponents = everyone Samudhra/VRK Gladiators has played or is scheduled to play
+        # opponents = everyone Samudhra/VRK Gladiators has played or is scheduled to play,
+        # plus the knockout field, who the league schedule never pairs us with
         sched = pd.read_excel(DATA_DIR / cfg["schedule_xlsx"], header=1)
         sched_g = sched[(sched["Team One"] == gladiators) | (sched["Team Two"] == gladiators)]
-        opponents = sorted({
+        scheduled = {
             (r["Team Two"] if r["Team One"] == gladiators else r["Team One"])
             for _, r in sched_g.iterrows()
-        })
-        print(f"  opponents: {len(opponents)}")
+        }
+        knockout = knockout_opponents(cfg, standings_table, set(bat["team"].unique()))
+        opponents = sorted((scheduled | knockout) - {gladiators})
+        print(f"  opponents: {len(opponents)} ({len(scheduled)} scheduled, "
+              f"{len(knockout - scheduled - {gladiators})} knockout-only)")
+
+        knockouts = build_knockouts(cfg, standings_table, elo, gladiators)
+        if knockouts is None:
+            print("  knockouts: no bracket groups configured")
+        else:
+            u = knockouts["us"]
+            print(f"  knockouts: {sum(len(g['qualified']) for g in knockouts['groups'])} qualifiers, "
+                  f"{len(knockouts['preQuarters'])} pre-quarters, "
+                  + (f"we are {u['group']}{u['seed']} vs {u['opponent']} ({u['opponentSeed']})"
+                     if u else f"{gladiators} did NOT qualify"))
 
         scenarios = scenario_tree(cfg, gladiators, standings_table, results)
         if scenarios is None:
@@ -2133,7 +2259,7 @@ def build():
             "opponents": opponents, "upcoming": upcoming, "teams": teams_data,
             "deathOversLeaders": death_leaders, "gladiatorsCharts": gladiators_charts,
             "matchRecap": match_recap, "standingsTable": standings_table,
-            "scenarioTree": scenarios,
+            "scenarioTree": scenarios, "knockouts": knockouts,
         }
 
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"
