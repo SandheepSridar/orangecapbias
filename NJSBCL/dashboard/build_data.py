@@ -9,6 +9,7 @@ Usage: source ../.venv/bin/activate && python3 build_data.py
 """
 import itertools
 import json
+import math
 import re
 from difflib import SequenceMatcher
 from datetime import datetime
@@ -310,6 +311,11 @@ def load_series(key, cfg):
         if len(teams_seen) == 2:
             team_order_2[match_id] = teams_seen
 
+    # Balls faced per side, so the Elo margin can tell a chase won with overs to spare
+    # from one that went to the last ball. Extras aren't deliveries, so this is the
+    # legal-ball count the scorecard records against the batters.
+    balls_by = bat.groupby(["matchId", "team"]).B.sum().to_dict()
+
     match_rows = []
     skipped = 0
     for match_id, teams in team_order_2.items():
@@ -324,14 +330,18 @@ def load_series(key, cfg):
             res1, res2 = "Win", "Loss"
         else:
             res1, res2 = "Loss", "Win"
+        balls1 = int(balls_by.get((match_id, team1), 0))
+        balls2 = int(balls_by.get((match_id, team2), 0))
         match_rows.append({
             "matchId": match_id, "team": team1, "opponent": team2,
             "teamScore": score1, "oppScore": score2,
+            "teamBalls": balls1, "oppBalls": balls2,
             "battedFirst": True, "result": res1,
         })
         match_rows.append({
             "matchId": match_id, "team": team2, "opponent": team1,
             "teamScore": score2, "oppScore": score1,
+            "teamBalls": balls2, "oppBalls": balls1,
             "battedFirst": False, "result": res2,
         })
     if skipped:
@@ -1761,11 +1771,42 @@ def full_standings_table(cfg):
     return groups
 
 
+def elo_margin_multiplier(row):
+    """How emphatic a win was, on the two scales cricket actually reports.
+
+    `row` is the innings-order row for a match — the side that batted first — so "Win"
+    here means that side defended its total and "Loss" means it was chased down.
+
+    A side batting first wins by runs. A side chasing wins by what it had left, which the
+    run difference simply cannot express: a nine-wicket win with four overs to spare shows
+    up as +3 runs. So a defended win scales with the run margin and a chased win with the
+    balls remaining, taking the first innings as the allotment so that rain-reduced games
+    need no assumption about a 16-over game.
+
+    log1p stops a thrashing from dominating — the multiplier roughly doubles between a
+    10-run win and a 60-run win rather than rising sixfold.
+
+    Chosen by backtest, not by taste (../backtest_ratings.py). Against plain Elo this cut
+    the Brier score from 0.2142 to 0.2039 in Division 1 and from 0.2153 to 0.2071 in the
+    Weekenders Cup, and beat it in 100% of paired bootstrap resamples on both. A margin
+    measured only in runs — the obvious first attempt — was not significant on either.
+    """
+    if row["result"] == "Tie":
+        return 1.0
+    if row["result"] == "Win":
+        return math.log1p(abs(row["teamScore"] - row["oppScore"]) / 10.0)
+    balls_left = max(int(row["teamBalls"]) - int(row["oppBalls"]), 0)
+    return math.log1p(balls_left / 10.0 + 1.0)
+
+
 def compute_elo(results, track_team=None):
-    """Standard Elo, processed in matchId order (a solid chronological proxy — matchIds
+    """Margin-aware Elo, processed in matchId order (a solid chronological proxy — matchIds
     increase monotonically with match date on this site). Returns team -> rating, plus
     (if track_team is given) that team's rating after each of its own matches, for
-    charting its form trajectory across the season."""
+    charting its form trajectory across the season.
+
+    Each result is weighted by elo_margin_multiplier(), so a one-run thriller moves the
+    ratings far less than a thrashing — plain Elo scores both identically."""
     rating = {}
     history = []
     one_row_per_match = results.drop_duplicates("matchId", keep="first").sort_values("matchId")
@@ -1780,8 +1821,9 @@ def compute_elo(results, track_team=None):
             actual_a = 0.0
         else:
             actual_a = 0.5
-        rating[a] = ra + ELO_K * (actual_a - exp_a)
-        rating[b] = rb + ELO_K * ((1 - actual_a) - (1 - exp_a))
+        mult = elo_margin_multiplier(r)
+        rating[a] = ra + ELO_K * mult * (actual_a - exp_a)
+        rating[b] = rb + ELO_K * mult * ((1 - actual_a) - (1 - exp_a))
         if track_team is not None and track_team in (a, b):
             opponent = b if track_team == a else a
             team_result = r["result"] if track_team == a else (
@@ -1792,6 +1834,59 @@ def compute_elo(results, track_team=None):
                 "opponent": opponent, "result": team_result,
             })
     return {team: round(r) for team, r in rating.items()}, history
+
+
+
+ELO_WEEKLY_FILE = DATA_DIR / "elo_weekly.csv"
+
+
+def weekly_elo_snapshots(results, series_key):
+    """Every team's rating as of each Friday of the season.
+
+    Matches are played at weekends, so a Friday snapshot is the state going into that
+    weekend's fixtures: last week's results are in, this week's are not. That makes a row
+    here answer "what did we know before those games", which is the only version worth
+    keeping a history of.
+
+    Recomputed from scratch on every build rather than appended to. A rescrape that
+    corrects an old result then corrects the whole history behind it, instead of leaving a
+    stale row that nothing will ever revisit.
+
+    Replayed in date order, where the ratings elsewhere in this file use matchId order.
+    The two agree except where a match was rescheduled, and a dated snapshot only means
+    anything if it is built from dates.
+    """
+    rows = results.drop_duplicates("matchId", keep="first").copy()
+    rows["parsed"] = pd.to_datetime(rows["date"], format="%b %d, %Y", errors="coerce")
+    rows = rows.dropna(subset=["parsed"]).sort_values(["parsed", "matchId"])
+    if rows.empty:
+        return []
+
+    fridays = pd.date_range(rows["parsed"].min(), rows["parsed"].max() + pd.Timedelta(days=7),
+                            freq="W-FRI")
+    played = list(rows.iterrows())
+    rating, counts, cursor, out = {}, {}, 0, []
+    for friday in fridays:
+        while cursor < len(played) and played[cursor][1]["parsed"] <= friday:
+            r = played[cursor][1]
+            a, b = r["team"], r["opponent"]
+            ra = rating.setdefault(a, ELO_START)
+            rb = rating.setdefault(b, ELO_START)
+            exp_a = 1 / (1 + 10 ** ((rb - ra) / 400))
+            actual_a = 1.0 if r["result"] == "Win" else 0.0 if r["result"] == "Loss" else 0.5
+            mult = elo_margin_multiplier(r)
+            rating[a] = ra + ELO_K * mult * (actual_a - exp_a)
+            rating[b] = rb + ELO_K * mult * ((1 - actual_a) - (1 - exp_a))
+            counts[a] = counts.get(a, 0) + 1
+            counts[b] = counts.get(b, 0) + 1
+            cursor += 1
+        for rank, (team, value) in enumerate(sorted(rating.items(), key=lambda kv: -kv[1]), 1):
+            out.append({
+                "series": series_key, "friday": friday.strftime("%Y-%m-%d"),
+                "rank": rank, "team": team, "elo": round(value),
+                "matchesPlayed": counts.get(team, 0),
+            })
+    return out
 
 
 def win_probability(elo_a, elo_b):
@@ -2187,6 +2282,7 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
 
 def build():
     out = {"generated": TODAY.strftime("%Y-%m-%d"), "series": {}}
+    elo_weekly = []
 
     for key, cfg in SERIES.items():
         print(f"=== {key} ===")
@@ -2201,6 +2297,10 @@ def build():
         standings = load_points_table(cfg)
         standings_table = full_standings_table(cfg)
         elo, gladiators_elo_history = compute_elo(results, track_team=gladiators)
+        snapshots = weekly_elo_snapshots(results, key)
+        elo_weekly.extend(snapshots)
+        weeks = len({s["friday"] for s in snapshots})
+        print(f"  weekly elo: {len(snapshots)} rows over {weeks} Fridays")
         gladiators_elo = elo.get(gladiators, ELO_START)
         print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
               f"{gladiators} elo: {round(gladiators_elo)}")
@@ -2345,6 +2445,9 @@ def build():
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"
     OUT_FILE.write_text(js)
     print(f"Wrote {OUT_FILE} ({OUT_FILE.stat().st_size / 1024:.0f} KB)")
+
+    pd.DataFrame(elo_weekly).to_csv(ELO_WEEKLY_FILE, index=False)
+    print(f"Wrote {ELO_WEEKLY_FILE} ({len(elo_weekly)} rows)")
 
 
 if __name__ == "__main__":
