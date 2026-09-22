@@ -88,11 +88,13 @@ function renderOurTie() {
   head.appendChild(el("div", "ko-hero-vs", "vs"));
   head.appendChild(el("div", "ko-hero-side right",
     `<span class="ko-hero-team">${u.opponent}</span>
-     <span class="ko-seed">${u.group}${u.opponentSeed}</span>`));
+     <span class="ko-seed">${u.opponentGroup}${u.opponentSeed}</span>`));
   card.appendChild(head);
 
+  const roundLabel = (ko.bracket.rounds.find((r) => r.key === u.round) || {}).label || "Knockout";
   card.appendChild(el("div", "ko-hero-sub",
-    `Pre-quarter final &middot; ${ord(u.seed)} vs ${ord(u.opponentSeed)} in Group ${u.group}`));
+    `${roundLabel} &middot; ${u.matchId} &middot; ${fmtMatchDate(u.date)} &middot; ` +
+    `${ord(u.seed)} in Group ${u.group} vs ${ord(u.opponentSeed)} in Group ${u.opponentGroup}`));
 
   if (u.winProb != null) {
     const pct = Math.round(u.winProb);
@@ -115,43 +117,264 @@ function renderOurTie() {
   box.appendChild(card);
 }
 
-/* ── Draw ──────────────────────────────────────────────────────────── */
-function tieRow(t) {
-  const row = el("div", "ko-tie" + (t.isOurs ? " ours" : ""));
-  row.appendChild(el("span", "ko-seed" + (t.high.isUs ? " us" : ""), `${t.group}${t.high.seed}`));
-  row.appendChild(el("span", "ko-tie-team" + (t.high.isUs ? " us" : ""), t.high.team));
-  row.appendChild(el("span", "ko-tie-vs", "v"));
-  row.appendChild(el("span", "ko-tie-team right" + (t.low.isUs ? " us" : ""), t.low.team));
-  row.appendChild(el("span", "ko-seed" + (t.low.isUs ? " us" : ""), `${t.group}${t.low.seed}`));
-  row.appendChild(el("span", "ko-tie-prob",
-    t.highWinProb != null ? `${Math.round(t.highWinProb)}%` : "—"));
-  return row;
+/* ── Bracket ───────────────────────────────────────────────────────── */
+/* The published bracket, played forward. Clicking a team sends it into the next round's
+   slot; anything downstream that depended on the old result is cleared rather than left
+   stale. Nothing is pre-filled — an Elo projection sitting there on load reads as a
+   prediction, and what this page is for is the real draw. */
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+const bracket = { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {} };
+
+function bracketData() {
+  const ko = currentSeriesData().knockouts;
+  return ko && ko.bracket ? ko.bracket : null;
 }
 
-function renderDraw() {
-  const s = currentSeriesData();
-  const box = $("draw-content");
-  box.innerHTML = "";
-  const ko = s.knockouts;
-  if (!ko) { box.appendChild(el("div", "empty-note", "No bracket for this series.")); return; }
-
-  box.appendChild(el("div", "ko-callout",
-    `<b>The league hasn't published the knockout schedule yet.</b> Our own tie is confirmed
-     ${ko.us ? `(${s.gladiators} drew ${ko.us.opponent})` : ""}; the other seven follow the standard
-     1v8 seeding and will be corrected here once cricclubs posts the fixtures. Rule 7 defers the
-     format to "the schedule published", so nothing below the pre-quarters is guessed at.`));
-
-  const legend = el("div", "ko-legend");
-  legend.innerHTML = `<span>Percentage is the higher seed's Elo win probability.</span>`;
-  box.appendChild(legend);
-
-  ko.groups.forEach((g) => {
-    const wrap = el("div", "standings-group-wrap");
-    wrap.appendChild(el("h3", null, `Group ${g.group}`));
-    ko.preQuarters.filter((t) => t.group === g.group)
-      .forEach((t) => wrap.appendChild(tieRow(t)));
-    box.appendChild(wrap);
+function indexBracket() {
+  Object.assign(bracket, { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {} });
+  const b = bracketData();
+  if (!b) return;
+  b.matches.forEach((m) => {
+    bracket.byId[m.id] = m;
+    ["a", "b"].forEach((side) => {
+      const s = m[side];
+      if (s.team) {
+        bracket.seed[s.team] = `${s.group}${s.seed}`;
+        if (s.elo != null) bracket.elo[s.team] = s.elo;
+      }
+      if (s.from) bracket.consumer[s.from] = { id: m.id, side };
+    });
   });
+}
+
+function occupant(slot) { return slot.team || bracket.winners[slot.from] || null; }
+
+function winProb(a, b) {
+  const ea = bracket.elo[a], eb = bracket.elo[b];
+  if (ea == null || eb == null) return null;
+  return 100 / (1 + Math.pow(10, (eb - ea) / 400));
+}
+
+function fmtMatchDate(iso) {
+  if (!iso) return "date TBD";
+  return new Date(iso + "T00:00:00")
+    .toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+}
+
+/* A result only invalidates the ties its winner went on to play in — flipping a
+   pre-quarter shouldn't wipe picks in the other half of the draw. */
+function invalidate(matchId, staleTeam) {
+  const c = bracket.consumer[matchId];
+  if (!c) return;
+  if (bracket.winners[c.id] === staleTeam) {
+    delete bracket.winners[c.id];
+    invalidate(c.id, staleTeam);
+  }
+}
+
+function slotEl(m, side) {
+  const s = m[side];
+  const team = occupant(s);
+  const btn = el("button", "bk-slot");
+  btn.dataset.match = m.id;
+  btn.dataset.side = side;
+  if (!team) {
+    btn.className = "bk-slot tbd";
+    btn.disabled = true;
+    btn.innerHTML = `<span class="bk-seed">·</span><span class="bk-team">Winner of ${s.from}</span>`;
+    return btn;
+  }
+  const other = occupant(m[side === "a" ? "b" : "a"]);
+  const decided = bracket.winners[m.id];
+  if (decided === team) btn.classList.add("won");
+  else if (decided) btn.classList.add("out");
+  if (team === currentSeriesData().gladiators) btn.classList.add("us");
+  btn.dataset.team = team;
+  const p = other ? winProb(team, other) : null;
+  btn.innerHTML =
+    `<span class="bk-seed">${bracket.seed[team] || "·"}</span>
+     <span class="bk-team">${team}</span>
+     <span class="bk-prob">${p == null ? "" : Math.round(p) + "%"}</span>`;
+  return btn;
+}
+
+function matchEl(m) {
+  const card = el("div", "bk-match");
+  card.dataset.id = m.id;
+  const us = currentSeriesData().gladiators;
+  if (occupant(m.a) === us || occupant(m.b) === us) card.classList.add("ours");
+  if (bracket.winners[m.id]) card.classList.add("decided");
+  card.appendChild(el("div", "bk-meta", `${m.id} <span>${fmtMatchDate(m.date)}</span>`));
+  card.appendChild(slotEl(m, "a"));
+  card.appendChild(slotEl(m, "b"));
+  return card;
+}
+
+function drawWires(board, svg) {
+  const br = board.getBoundingClientRect();
+  svg.setAttribute("width", board.scrollWidth);
+  svg.setAttribute("height", board.scrollHeight);
+  svg.innerHTML = "";
+  Object.keys(bracket.consumer).forEach((fromId) => {
+    const c = bracket.consumer[fromId];
+    const src = board.querySelector(`.bk-match[data-id="${fromId}"]`);
+    const dst = board.querySelector(`.bk-match[data-id="${c.id}"]`);
+    if (!src || !dst) return;
+    const s = src.getBoundingClientRect(), d = dst.getBoundingClientRect();
+    const x1 = s.right - br.left, y1 = s.top - br.top + s.height / 2;
+    const x2 = d.left - br.left, y2 = d.top - br.top + d.height / 2;
+    const xm = x1 + (x2 - x1) / 2;
+    const path = document.createElementNS(SVG_NS, "path");
+    path.setAttribute("d", `M${x1},${y1} H${xm} V${y2} H${x2}`);
+    path.setAttribute("class", "bk-wire" + (bracket.winners[fromId] ? " live" : ""));
+    svg.appendChild(path);
+  });
+}
+
+/* The advancing team physically travels to its new slot — a fixed-position ghost tweened
+   from the clicked chip to where that chip now lives a round later. */
+function fly(fromRect, toEl, label) {
+  const to = toEl.getBoundingClientRect();
+  const ghost = el("div", "bk-ghost", label);
+  ghost.style.cssText =
+    `left:${fromRect.left}px; top:${fromRect.top}px; width:${fromRect.width}px; height:${fromRect.height}px;`;
+  document.body.appendChild(ghost);
+  requestAnimationFrame(() => {
+    ghost.style.transform = `translate(${to.left - fromRect.left}px, ${to.top - fromRect.top}px)`;
+    ghost.style.opacity = "0";
+  });
+  setTimeout(() => ghost.remove(), 620);
+}
+
+function advance(matchId, side, srcEl) {
+  const m = bracket.byId[matchId];
+  const team = occupant(m[side]);
+  if (!team) return;
+  const prev = bracket.winners[matchId];
+  if (prev === team) {           // clicking the winner again undoes the result
+    delete bracket.winners[matchId];
+    invalidate(matchId, team);
+    renderBracket();
+    return;
+  }
+  const srcRect = srcEl.getBoundingClientRect();
+  bracket.winners[matchId] = team;
+  if (prev) invalidate(matchId, prev);
+  renderBracket();
+  const c = bracket.consumer[matchId];
+  const target = c && document.querySelector(`.bk-slot[data-match="${c.id}"][data-side="${c.side}"]`);
+  if (target) fly(srcRect, target, team);
+}
+
+/* Fills the whole bracket a round at a time so the result rolls forward as a wave
+   rather than appearing all at once. */
+let autoTimers = [];
+function autoPick() {
+  autoTimers.forEach(clearTimeout);
+  autoTimers = [];
+  bracket.winners = {};
+  renderBracket();
+  bracketData().rounds.forEach((r, i) => {
+    autoTimers.push(setTimeout(() => {
+      bracketData().matches.filter((m) => m.round === r.key).forEach((m) => {
+        const a = occupant(m.a), b = occupant(m.b);
+        if (!a || !b) return;
+        bracket.winners[m.id] = (bracket.elo[a] || 0) >= (bracket.elo[b] || 0) ? a : b;
+      });
+      renderBracket();
+    }, i * 500));
+  });
+}
+
+function championEl() {
+  const b = bracketData();
+  const finalMatch = b.matches[b.matches.length - 1];
+  const champ = bracket.winners[finalMatch.id];
+  const col = el("div", "bk-col bk-col-champ");
+  col.appendChild(el("div", "bk-col-head", "Champion"));
+  const tile = el("div", "bk-champ" + (champ ? " crowned" : ""));
+  tile.innerHTML = champ
+    ? `<div class="bk-trophy">🏆</div><div class="bk-champ-team">${champ}</div>
+       <div class="bk-champ-sub">${bracket.seed[champ] || ""} · ${fmtMatchDate(finalMatch.date)}</div>`
+    : `<div class="bk-trophy dim">🏆</div><div class="bk-champ-sub">Play the bracket out</div>`;
+  col.appendChild(tile);
+  return col;
+}
+
+function renderBracket() {
+  const box = $("bracket-content");
+  box.innerHTML = "";
+  const b = bracketData();
+  if (!b) { box.appendChild(el("div", "empty-note", "No bracket for this series.")); return; }
+
+  const bar = el("div", "bk-toolbar");
+  const auto = el("button", "bk-btn", "⚡ Auto-pick by Elo");
+  const reset = el("button", "bk-btn ghost", "Reset");
+  auto.addEventListener("click", autoPick);
+  reset.addEventListener("click", () => {
+    autoTimers.forEach(clearTimeout); autoTimers = [];
+    bracket.winners = {};
+    renderBracket();
+  });
+  bar.appendChild(auto);
+  bar.appendChild(reset);
+  bar.appendChild(el("span", "bk-hint",
+    "Click a team to send it through · click it again to undo · % is the Elo favourite"));
+  box.appendChild(bar);
+
+  const scroll = el("div", "bk-scroll");
+  const board = el("div", "bk-board");
+  const svg = document.createElementNS(SVG_NS, "svg");
+  svg.setAttribute("class", "bk-wires");
+  board.appendChild(svg);
+
+  b.rounds.forEach((r) => {
+    const col = el("div", "bk-col");
+    col.appendChild(el("div", "bk-col-head", r.label));
+    const stack = el("div", "bk-stack");
+    b.matches.filter((m) => m.round === r.key).forEach((m) => stack.appendChild(matchEl(m)));
+    col.appendChild(stack);
+    board.appendChild(col);
+  });
+  board.appendChild(championEl());
+  scroll.appendChild(board);
+  box.appendChild(scroll);
+  /* Measured synchronously, not in requestAnimationFrame: rAF never fires while the tab
+     is in the background, so a page opened in a new tab rendered its bracket with no
+     connectors and never repaired itself once you switched to it. getBoundingClientRect
+     forces layout anyway, so the measurements here are just as good. */
+  drawWires(board, svg);
+}
+
+/* Delegated: the board is rebuilt on every pick, so per-node listeners would be churn. */
+function wireBracket() {
+  const box = $("bracket-content");
+  box.addEventListener("click", (e) => {
+    const slot = e.target.closest(".bk-slot");
+    if (slot && !slot.disabled) advance(slot.dataset.match, slot.dataset.side, slot);
+  });
+  box.addEventListener("mouseover", (e) => {
+    const slot = e.target.closest(".bk-slot[data-team]");
+    if (slot) traceTeam(slot.dataset.team);
+  });
+  box.addEventListener("mouseout", (e) => {
+    if (e.target.closest(".bk-slot[data-team]")) traceTeam(null);
+  });
+  const redraw = () => {
+    const board = document.querySelector(".bk-board");
+    if (board) drawWires(board, board.querySelector(".bk-wires"));
+  };
+  window.addEventListener("resize", redraw);
+  /* A tab that was hidden when it loaded may have laid out at a different width. */
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) redraw(); });
+}
+
+function traceTeam(team) {
+  document.querySelectorAll(".bk-slot.trace").forEach((s) => s.classList.remove("trace"));
+  if (!team) return;
+  document.querySelectorAll(`.bk-slot[data-team="${CSS.escape(team)}"]`)
+    .forEach((s) => s.classList.add("trace"));
 }
 
 /* ── Qualified ─────────────────────────────────────────────────────── */
@@ -216,11 +439,13 @@ function renderQualified() {
 
 /* ── Wiring ────────────────────────────────────────────────────────── */
 function renderAll() {
+  indexBracket();
   renderOurTie();
-  renderDraw();
+  renderBracket();
   renderQualified();
 }
 
 renderDataUpdated();
 buildSeriesPills();
+wireBracket();
 renderAll();

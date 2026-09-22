@@ -233,14 +233,36 @@ else:
                 for g in ko["groups"]:
                     check(f"{key}: group {g['group']} seeds are 1..{per_group}",
                           sorted(q["seed"] for q in g["qualified"]) == list(range(1, per_group + 1)))
-                paired = ([t["high"]["team"] for t in ko["preQuarters"]]
-                          + [t["low"]["team"] for t in ko["preQuarters"]])
-                check(f"{key}: pre-quarters pair every qualifier exactly once",
+                matches = ko["bracket"]["matches"]
+                openers = [m for m in matches if m["round"] == ko["bracket"]["rounds"][0]["key"]]
+                paired = [m[side]["team"] for m in openers for side in ("a", "b")]
+                check(f"{key}: the opening round pairs every qualifier exactly once",
                       len(paired) == len(set(paired)) == per_group * len(ko["groups"]),
                       f"{len(paired)} slots, {len(set(paired))} distinct teams")
-                check(f"{key}: each pre-quarter's seeds sum to {per_group + 1} (1v8, 2v7, …)",
-                      all(t["high"]["seed"] + t["low"]["seed"] == per_group + 1
-                          for t in ko["preQuarters"]))
+                # Both series pair 1v8, 2v7, … even though only Division 1 keeps the tie
+                # inside one group. A pairing that doesn't sum to 9 means a fixture was
+                # mistranscribed from the EC's schedule, which is exactly the kind of
+                # silent error that would send the wrong team through the whole bracket.
+                off = [(m["id"], m["a"]["ref"], m["b"]["ref"]) for m in openers
+                       if m["a"]["seed"] + m["b"]["seed"] != per_group + 1]
+                check(f"{key}: each opening tie's seeds sum to {per_group + 1} (1v8, 2v7, …)",
+                      not off, str(off))
+                # The bracket has to be a tree: every "winner of X" resolves to a real tie,
+                # and every tie but the final feeds exactly one slot further on.
+                ids = {m["id"] for m in matches}
+                feeds = {}
+                for m in matches:
+                    for side in ("a", "b"):
+                        src_id = m[side].get("from")
+                        if src_id:
+                            feeds[src_id] = feeds.get(src_id, 0) + 1
+                check(f"{key}: every 'winner of' slot names a real tie",
+                      set(feeds) <= ids, f"dangling: {sorted(set(feeds) - ids)}")
+                orphans = sorted(ids - set(feeds))
+                check(f"{key}: every tie but the final feeds exactly one later tie",
+                      len(orphans) == 1 and all(n == 1 for n in feeds.values()),
+                      f"not feeding forward: {orphans} · "
+                      f"feeding twice: {[i for i, n in feeds.items() if n > 1]}")
                 warn(ko["usQualified"], f"{key}: {cfg['gladiators']} are not in the knockout field",
                      "correct only if they genuinely missed the top 8 of their group")
                 # The dropdown should offer exactly who we can still meet — no league-stage

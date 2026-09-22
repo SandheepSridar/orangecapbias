@@ -10,6 +10,7 @@ Usage: source ../.venv/bin/activate && python3 build_data.py
 import itertools
 import json
 import re
+from difflib import SequenceMatcher
 from datetime import datetime
 from pathlib import Path
 
@@ -49,12 +50,10 @@ SERIES = {
         "totals_csv": "weekenderscup_true_totals.csv",
         "points_csv": "weekenderscup_points_table.csv",
         "overs_csv": "weekenderscup_gladiators_overs.csv",
-        # Knockout field: top 8 of Group A (ours) and top 8 of Group B. Only B's top 8 are
-        # scraped, so a deeper B rank has no scorecard data to analyse anyway.
-        # Weekenders runs four groups; A and B form our half of the draw (per the
-        # captain, 2026-09-20). C and D presumably mirror it, but that is not
-        # published anywhere we scrape, so this page stays out of their half.
-        "bracket_groups": ["A", "B"],
+        # Knockout field: top 8 of all four groups. The EC's published bracket crosses
+        # groups from the first round (A1 v B8, D1 v C8), so C and D are in our half of
+        # the draw after all — we can meet them from the quarter-finals on.
+        "bracket_groups": ["A", "B", "C", "D"],
     },
 }
 
@@ -64,6 +63,81 @@ MIN_OVERS_FOR_WEAKNESS = 8
 # Rule 7: "the top 8 teams from each group will qualify for the knockouts".
 QUALIFIERS_PER_GROUP = 8
 MIN_DEATH_OVERS = 3
+
+
+# ── Published knockout bracket ───────────────────────────────────────
+# Transcribed from the EC's playoff schedule (2026-09-21). Rule 7 defers the draw to "the
+# schedule published", so these pairings ARE the schedule rather than an inference — which
+# matters because the two series do not pair the same way. Division 1 keeps first-round ties
+# inside a group (A1 v A8); the Weekenders Cup crosses groups (A1 v B8), so the old
+# within-group guess put VRK Gladiators against Edison Riders instead of Express Rangers.
+#
+# Each entry is (match id, round, slot A, slot B, date, names as printed). A slot is either
+# a seed ("A1" = Group A's 1st) or another match's id, meaning that match's winner. The
+# printed names are kept only to verify the seed lookup still lands on the same team if a
+# rescrape ever reorders a group — they are not used for display.
+KNOCKOUT_ROUNDS = [
+    ("r32", "Pre pre-quarter finals", "R32"),
+    ("r16", "Pre-quarter finals", "R16"),
+    ("qf", "Quarter finals", "QF"),
+    ("sf", "Semi finals", "SF"),
+    ("final", "Final", "F"),
+]
+
+KNOCKOUT_FIXTURES = {
+    "division1": [
+        ("PQF1", "r16", "A1", "A8", "2026-09-26", ("Pway Lions", "Desi Warriors")),
+        ("PQF2", "r16", "A2", "A7", "2026-09-26", ("RHG", "Youth for Sewa")),
+        ("PQF3", "r16", "B1", "B8", "2026-09-26", ("WCC", "Veerans")),
+        ("PQF4", "r16", "A3", "A6", "2026-09-26", ("Wariors", "Newport CC")),
+        ("PQF5", "r16", "B4", "B5", "2026-09-27", ("Jetha", "NJ Stars")),
+        ("PQF6", "r16", "B3", "B6", "2026-09-27", ("Blue Aces", "Jersey Boys")),
+        ("PQF7", "r16", "B2", "B7", "2026-09-27", ("Piscataway Avengers", "11 Spartans")),
+        ("PQF8", "r16", "A4", "A5", "2026-09-27", ("Samudhra Gladiators", "Storm Riders")),
+        ("QF1", "qf", "PQF1", "PQF8", None, None),
+        ("QF2", "qf", "PQF2", "PQF4", None, None),
+        ("QF3", "qf", "PQF3", "PQF5", None, None),
+        ("QF4", "qf", "PQF7", "PQF6", None, None),
+        ("SF1", "sf", "QF1", "QF2", None, None),
+        ("SF2", "sf", "QF3", "QF4", None, None),
+        ("F", "final", "SF1", "SF2", "2026-10-17", None),
+    ],
+    "weekenders": [
+        ("PPQF1", "r32", "A1", "B8", "2026-09-26", ("VRK Gladiators", "Express Rangers")),
+        ("PPQF2", "r32", "A2", "B7", "2026-09-26", ("Mag11", "Monroe Mavericks")),
+        ("PPQF3", "r32", "D1", "C8", "2026-09-26", ("Shreeji XI", "Saffron Sapphire")),
+        ("PPQF4", "r32", "A4", "B5", "2026-09-26", ("Hudson Hurricanes Sultans", "Sreeshti Weekenders")),
+        ("PPQF5", "r32", "D2", "C7", "2026-09-26", ("Bloodline", "Iselin Warriors")),
+        ("PPQF6", "r32", "C2", "D7", "2026-09-26", ("Jersey Superstars", "Jersey Sloggers")),
+        ("PPQF7", "r32", "B2", "A7", "2026-09-26", ("JC Warriors", "SB vikings Cricket Club")),
+        ("PPQF8", "r32", "B4", "A5", "2026-09-26", ("NJ Marvels", "Karma X1")),
+        ("PPQF9", "r32", "B1", "A8", "2026-09-27", ("Pway Cubs", "Edison Riders")),
+        ("PPQF10", "r32", "A3", "B6", "2026-09-27", ("NJ Boxers", "United Falcons")),
+        ("PPQF11", "r32", "C1", "D8", "2026-09-27", ("Thunder Strikers Weekenders", "Parsippany Super Kings")),
+        ("PPQF12", "r32", "C4", "D5", "2026-09-27", ("Raptors", "Plainsboro Panthers")),
+        ("PPQF13", "r32", "C3", "D6", "2026-09-27", ("Mystery Squad", "MCC-Weekenders")),
+        ("PPQF14", "r32", "D4", "C5", "2026-09-27", ("NJ Titans", "Waterfront Warriors")),
+        ("PPQF15", "r32", "B3", "A6", "2026-09-27", ("Giant Slayers", "Secaucus Fighters")),
+        ("PPQF16", "r32", "D3", "C6", "2026-09-27", ("Tridents XI", "Telugu Titans- Weekenders")),
+        ("PQF1", "r16", "PPQF1", "PPQF8", None, None),
+        ("PQF2", "r16", "PPQF2", "PPQF15", None, None),
+        ("PQF3", "r16", "PPQF9", "PPQF4", None, None),
+        ("PQF4", "r16", "PPQF7", "PPQF10", None, None),
+        ("PQF5", "r16", "PPQF11", "PPQF14", None, None),
+        ("PQF6", "r16", "PPQF6", "PPQF16", None, None),
+        ("PQF7", "r16", "PPQF3", "PPQF12", None, None),
+        ("PQF8", "r16", "PPQF5", "PPQF13", None, None),
+        ("QF1", "qf", "PQF1", "PQF4", None, None),
+        ("QF2", "qf", "PQF3", "PQF2", None, None),
+        ("QF3", "qf", "PQF5", "PQF8", None, None),
+        ("QF4", "qf", "PQF7", "PQF6", None, None),
+        ("SF1", "sf", "QF1", "QF2", None, None),
+        ("SF2", "sf", "QF3", "QF4", None, None),
+        ("F", "final", "SF1", "SF2", "2026-10-18", None),
+    ],
+}
+
+_SEED_REF = re.compile(r"^([A-D])(\d+)$")
 
 
 def normalize_text(s):
@@ -2011,8 +2085,8 @@ def scenario_tree(cfg, gladiators, standings_table, results):
     }
 
 
-def build_knockouts(cfg, standings_table, elo, gladiators):
-    """The knockout field and first-round draw, from the final group tables.
+def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
+    """The knockout field and the published bracket, from the final group tables.
 
     Rule 7: "the top 8 teams from each group will qualify for the knockouts (Even if the
     9th and lower ranked teams in each group have higher points than the 8th team in the
@@ -2020,16 +2094,13 @@ def build_knockouts(cfg, standings_table, elo, gladiators):
     cut line is worth showing because a team can miss out on more points than a qualifier
     in the other group.
 
-    The draw itself is NOT in the rule book — rule 7 defers to "the schedule published",
-    and cricclubs had not published knockout fixtures as of 2026-09-20. The pre-quarters
-    here are standard within-group seeding (1v8, 2v7, 3v6, 4v5), which is what the captain
-    confirmed for our own tie (Samudhra 4th drew Storm Riders 5th). Everything downstream
-    of the pre-quarters is left alone rather than guessed, and the page carries one callout
-    saying the draw is unpublished rather than marking each row.
+    The draw is no longer inferred. KNOCKOUT_FIXTURES holds the bracket the EC published,
+    resolved here by seed rather than by name so the scraped spellings stay authoritative.
+    Seeds that the published sheet disagrees with are reported loudly: that means a
+    rescrape moved a team, and a silently wrong bracket is worse than none.
     """
     groups_out = []
-    pre_quarters = []
-    us = None
+    seeds = {}
     for group_name in cfg.get("bracket_groups", []):
         rows = next((g["rows"] for g in standings_table if g["group"] == group_name), [])
         if not rows:
@@ -2040,6 +2111,8 @@ def build_knockouts(cfg, standings_table, elo, gladiators):
              "isUs": r["team"] == gladiators}
             for r in rows[:QUALIFIERS_PER_GROUP]
         ]
+        for q in qualified:
+            seeds[f"{group_name}{q['seed']}"] = dict(q, group=group_name)
         missed = rows[QUALIFIERS_PER_GROUP:QUALIFIERS_PER_GROUP + 1]
         cut_line = None
         if missed and qualified:
@@ -2050,37 +2123,67 @@ def build_knockouts(cfg, standings_table, elo, gladiators):
             }
         groups_out.append({"group": group_name, "qualified": qualified, "cutLine": cut_line})
 
-        # 1v8, 2v7, 3v6, 4v5 — highest seed against lowest, pairing inward.
-        for i in range(QUALIFIERS_PER_GROUP // 2):
-            high, low = qualified[i], qualified[QUALIFIERS_PER_GROUP - 1 - i]
-            ours = high["isUs"] or low["isUs"]
-            tie = {
-                "group": group_name, "high": high, "low": low, "isOurs": ours,
-                "highWinProb": (win_probability(high["elo"], low["elo"])
-                                if high["elo"] and low["elo"] else None),
-            }
-            pre_quarters.append(tie)
-            if ours:
-                them = low if high["isUs"] else high
-                mine = high if high["isUs"] else low
-                us = {
-                    "group": group_name, "seed": mine["seed"], "opponent": them["team"],
-                    "opponentSeed": them["seed"],
-                    "winProb": (win_probability(mine["elo"], them["elo"])
-                                if mine["elo"] and them["elo"] else None),
-                    "ourElo": mine["elo"], "theirElo": them["elo"],
-                }
-
     if not groups_out:
         return None
+
+    fixtures = KNOCKOUT_FIXTURES.get(series_key, [])
+    matches, us, mismatches = [], None, []
+
+    def same_team(printed, scraped):
+        """The EC sheet's spellings differ cosmetically from cricclubs' ("Jetha" v
+        "Jetha 11", "Karma X1" v "Karma XI"), so this only has to be tight enough to
+        catch a seed pointing at a genuinely different club."""
+        a, b = (re.sub(r"[^a-z0-9]", "", s.lower()) for s in (printed, scraped))
+        return a.startswith(b) or b.startswith(a) or SequenceMatcher(None, a, b).ratio() >= 0.85
+
+    def slot(ref, printed):
+        m = _SEED_REF.match(ref)
+        if not m:
+            return {"ref": ref, "from": ref, "team": None}
+        q = seeds.get(ref)
+        if q is None:
+            mismatches.append(f"{ref} has no qualifier in the scraped tables")
+            return {"ref": ref, "team": None}
+        if printed and not same_team(printed, q["team"]):
+            mismatches.append(f"{ref} is {q['team']} in the tables but {printed!r} on the sheet")
+        return {"ref": ref, "group": q["group"], "seed": q["seed"], "team": q["team"],
+                "elo": q["elo"], "isUs": q["isUs"], "pts": q["pts"], "netRR": q["netRR"]}
+
+    for mid, rnd, a_ref, b_ref, date, printed in fixtures:
+        a = slot(a_ref, printed[0] if printed else None)
+        b = slot(b_ref, printed[1] if printed else None)
+        ours = bool(a.get("isUs") or b.get("isUs"))
+        match = {"id": mid, "round": rnd, "date": date, "a": a, "b": b, "isOurs": ours}
+        if a.get("elo") and b.get("elo"):
+            match["winProb"] = win_probability(a["elo"], b["elo"])
+        matches.append(match)
+        if ours:
+            mine, them = (a, b) if a.get("isUs") else (b, a)
+            us = {
+                "matchId": mid, "round": rnd, "date": date,
+                "group": mine["group"], "seed": mine["seed"],
+                "opponent": them["team"], "opponentGroup": them.get("group"),
+                "opponentSeed": them.get("seed"),
+                "winProb": (win_probability(mine["elo"], them["elo"])
+                            if mine["elo"] and them["elo"] else None),
+                "ourElo": mine["elo"], "theirElo": them.get("elo"),
+            }
+
+    if mismatches:
+        for msg in mismatches:
+            print(f"  WARNING: bracket seed mismatch — {msg}")
+
+    used = {m["round"] for m in matches}
+    rounds_out = [{"key": k, "label": label, "short": short}
+                  for k, label, short in KNOCKOUT_ROUNDS if k in used]
+
     return {
         "qualifiersPerGroup": QUALIFIERS_PER_GROUP,
         "groups": groups_out,
-        "preQuarters": pre_quarters,
+        "bracket": {"rounds": rounds_out, "matches": matches},
         "us": us,
         "usQualified": us is not None,
     }
-
 
 def build():
     out = {"generated": TODAY.strftime("%Y-%m-%d"), "series": {}}
@@ -2102,20 +2205,23 @@ def build():
         print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
               f"{gladiators} elo: {round(gladiators_elo)}")
 
-        knockouts = build_knockouts(cfg, standings_table, elo, gladiators)
+        knockouts = build_knockouts(cfg, standings_table, elo, gladiators, key)
         if knockouts is None:
             print("  knockouts: no bracket groups configured")
         else:
             u = knockouts["us"]
             print(f"  knockouts: {sum(len(g['qualified']) for g in knockouts['groups'])} qualifiers, "
-                  f"{len(knockouts['preQuarters'])} pre-quarters, "
-                  + (f"we are {u['group']}{u['seed']} vs {u['opponent']} ({u['opponentSeed']})"
+                  f"{len(knockouts['bracket']['matches'])} bracket matches over "
+                  f"{len(knockouts['bracket']['rounds'])} rounds, "
+                  + (f"we are {u['group']}{u['seed']} vs {u['opponent']} "
+                     f"({u['opponentGroup']}{u['opponentSeed']}) in {u['matchId']}"
                      if u else f"{gladiators} did NOT qualify"))
 
         # opponents = only the teams we can still actually meet, i.e. the knockout field.
         # The league stage is over, so everyone we played on the way here is history, and
-        # listing them just buries the 15 that matter. Our own group belongs in the list:
-        # the pre-quarters and quarters are played inside it, and the semi crosses over.
+        # listing them just buries the ones that matter. Our own group belongs in the list:
+        # Division 1 plays its pre-quarters and quarters inside a group and only crosses
+        # over in the final, while the Weekenders draw crosses groups from the first round.
         knockout_field = ({q["team"] for g in knockouts["groups"] for q in g["qualified"]}
                           if knockouts else set())
         teams_with_data = set(bat["team"].unique())
