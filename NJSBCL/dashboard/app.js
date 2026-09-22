@@ -142,8 +142,15 @@ function renderFixtures() {
   const toggle = $("fixtures-toggle");
   grid.innerHTML = "";
   const s = currentSeriesData();
-  if (!s.upcoming.length) {
-    grid.appendChild(el("div", "empty-note", "No upcoming fixtures scheduled."));
+  /* With the league stage over there is nothing left to schedule, and the section then
+     reads as broken rather than empty: a subhead promising the next three matches, and a
+     pointer to a button that isn't there. Hide the whole thing, its jump link included —
+     knockout ties carry their own dates on the Knockouts page. */
+  const nothingScheduled = !s.upcoming.length;
+  $("sec-upcoming").hidden = nothingScheduled;
+  const tocLink = document.querySelector('.side-toc-link[href="#sec-upcoming"]');
+  if (tocLink) tocLink.hidden = nothingScheduled;
+  if (nothingScheduled) {
     toggle.hidden = true;
     return;
   }

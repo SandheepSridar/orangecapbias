@@ -21,6 +21,10 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+/* An author `display` rule outranks the UA stylesheet's [hidden] { display: none },
+   so anything hidden via el.hidden stayed visible if its class set a display — the
+   fixtures "show all" toggle rendered as an empty pill that way. */
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -801,6 +805,35 @@ footer { text-align: center; padding: 3rem 1.5rem 1.5rem; color: var(--grey); fo
   .points-table th, .points-table td { padding: 0.4rem 0.35rem; font-size: 0.76rem; }
   .standings-table th, .standings-table td { padding: 0.4rem 0.5rem; font-size: 0.78rem; }
 }
+
+/* ── "Finals night" palette (Knockouts page only) ──────────────────────
+   The Knockouts page is the one page that reruns the whole palette. Every
+   component on the site already paints from these tokens, so redefining them
+   on this page's body recolours the nav, ticker, panels, tables and bracket
+   in one place — no parallel set of component rules, and no other page
+   touched. Gold stays gold (it means "us" and "trophy" everywhere on the
+   site) and teal still means "advanced", so the two colours that carry
+   meaning survive the change.
+
+   The handful of overrides below the tokens are the literals that predate
+   them: colours hardcoded before there was a second palette to support. ── */
+body.finals {
+  --bg: #0a0a14;
+  --bg2: #15103070;
+  --panel: #16122e;
+  --line: #2e2660;
+  --text: #ece9f7;
+  --muted: #9a93b8;
+  --grey: #6f6790;
+  /* --blue is the site's "interactive" role (links, hovers), not literally blue */
+  --blue: #b98bff;
+}
+body.finals .topnav { background: rgba(10, 10, 20, 0.85); }
+body.finals .view-banner { background: rgba(185, 139, 255, 0.07); }
+/* :not(.active) matters — `body.finals .pill` outranks `.pill.active`, so without it
+   the selected pill kept this dark background under its near-black active text. */
+body.finals .pill:not(.active) { background: #120f2a; }
+body.finals .bk-slot:hover:not(:disabled) { background: rgba(185, 139, 255, 0.18); }
 
 /* ── Knockout bracket ──────────────────────────────────────────────────
    Columns are one round each, and every column's ties are spread evenly
