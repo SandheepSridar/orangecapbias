@@ -59,6 +59,36 @@ a { color: var(--blue); text-decoration: none; }
 }
 .nav-link:hover { background: rgba(255,195,0,0.1); }
 
+/* The playoffs are the live event, so this one nav link is inverted against its
+   outline-only siblings: solid gold, a trophy, and a shimmer that sweeps across on a
+   long loop. Everything animated here is a transform or a shadow, so it draws the eye
+   without ever moving the nav around. */
+.nav-link-ko {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #ffd85e, var(--gold) 55%, #f0a500);
+  color: #1a1500; border-color: transparent; font-weight: 800;
+  animation: ko-glow 2.8s ease-in-out infinite;
+}
+.nav-link-ko::before { content: "🏆"; margin-right: 0.35rem; }
+.nav-link-ko::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 45%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.7), transparent);
+  transform: translateX(-170%) skewX(-18deg);
+  animation: ko-shimmer 3.6s ease-in-out infinite;
+}
+.nav-link-ko:hover {
+  background: linear-gradient(135deg, #ffe484, #ffce2e 55%, #ffb400);
+  transform: translateY(-1px);
+}
+@keyframes ko-glow {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(255,195,0,0.45), 0 0 9px rgba(255,195,0,0.25); }
+  50%      { box-shadow: 0 0 0 1px rgba(255,195,0,0.85), 0 0 20px rgba(255,195,0,0.55); }
+}
+@keyframes ko-shimmer {
+  0%, 62%  { transform: translateX(-170%) skewX(-18deg); }
+  100%     { transform: translateX(330%) skewX(-18deg); }
+}
+
 /* ── View counter banner ──────────────────────────────────────────── */
 .view-banner {
   text-align: center; font-size: 0.8rem; color: var(--muted);
@@ -925,6 +955,10 @@ body.finals .bk-slot:hover:not(:disabled) { background: rgba(185, 139, 255, 0.18
 
 @media (prefers-reduced-motion: reduce) {
   .bk-ghost, .bk-wire.live, .bk-champ.crowned { transition: none; animation: none; }
+  /* the solid gold fill already does the standing-out; drop only the motion */
+  .nav-link-ko, .nav-link-ko::after { animation: none; }
+  .nav-link-ko { box-shadow: 0 0 0 1px rgba(255,195,0,0.7), 0 0 14px rgba(255,195,0,0.4); }
+  .nav-link-ko::after { display: none; }
 }
 @media (max-width: 780px) {
   .bk-board { gap: 1.5rem; }

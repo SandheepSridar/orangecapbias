@@ -1,4 +1,4 @@
-/* NJSBCL Scout — knockout bracket (reads the same NJSBCL_DATA as app.js/standings.js). */
+/* NJSBCL Scout — knockout bracket (reads the same NJSBCL_DATA as app.js). */
 "use strict";
 
 const $ = (id) => document.getElementById(id);
