@@ -124,7 +124,7 @@ function renderOurTie() {
    prediction, and what this page is for is the real draw. */
 
 const SVG_NS = "http://www.w3.org/2000/svg";
-const bracket = { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {} };
+const bracket = { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {}, pathOdds: null };
 
 function bracketData() {
   const ko = currentSeriesData().knockouts;
@@ -132,7 +132,7 @@ function bracketData() {
 }
 
 function indexBracket() {
-  Object.assign(bracket, { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {} });
+  Object.assign(bracket, { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {}, pathOdds: null });
   const b = bracketData();
   if (!b) return;
   b.matches.forEach((m) => {
@@ -227,7 +227,10 @@ function drawWires(board, svg) {
     const xm = x1 + (x2 - x1) / 2;
     const path = document.createElementNS(SVG_NS, "path");
     path.setAttribute("d", `M${x1},${y1} H${xm} V${y2} H${x2}`);
-    path.setAttribute("class", "bk-wire" + (bracket.winners[fromId] ? " live" : ""));
+    const us = currentSeriesData().gladiators;
+    path.setAttribute("class", "bk-wire"
+      + (bracket.winners[fromId] ? " live" : "")
+      + (bracket.winners[fromId] === us ? " path" : ""));
     svg.appendChild(path);
   });
 }
@@ -274,6 +277,7 @@ function autoPick() {
   autoTimers.forEach(clearTimeout);
   autoTimers = [];
   bracket.winners = {};
+  bracket.pathOdds = null;
   renderBracket();
   bracketData().rounds.forEach((r, i) => {
     autoTimers.push(setTimeout(() => {
@@ -285,6 +289,70 @@ function autoPick() {
       renderBracket();
     }, i * 500));
   });
+}
+
+/* ── Path to the title ─────────────────────────────────────────────── */
+/* Forces our own result in every tie we are in and lets Elo settle the rest, then prices
+   the run: each leg on its own, and the compounding chance of going all the way. Clicking
+   any team afterwards still overrides it — this is a starting point, not a lock. */
+function pricePath(us) {
+  const legs = [];
+  let cum = 1;
+  bracketData().matches.forEach((m) => {
+    if (bracket.winners[m.id] !== us) return;
+    const a = occupant(m.a), b = occupant(m.b);
+    const them = a === us ? b : a;
+    const p = winProb(us, them);
+    if (p == null || !them) return;
+    cum *= p / 100;
+    legs.push({ id: m.id, them, p, cum: cum * 100 });
+  });
+  return legs.length ? { team: us, legs, overall: cum * 100 } : null;
+}
+
+function ourPath() {
+  const b = bracketData();
+  const us = currentSeriesData().gladiators;
+  autoTimers.forEach(clearTimeout);
+  autoTimers = [];
+  bracket.winners = {};
+  bracket.pathOdds = null;
+  renderBracket();
+  b.rounds.forEach((r, i) => {
+    autoTimers.push(setTimeout(() => {
+      b.matches.filter((m) => m.round === r.key).forEach((m) => {
+        const a = occupant(m.a), c = occupant(m.b);
+        if (!a || !c) return;
+        bracket.winners[m.id] = (a === us || c === us)
+          ? us
+          : ((bracket.elo[a] || 0) >= (bracket.elo[c] || 0) ? a : c);
+      });
+      if (i === b.rounds.length - 1) bracket.pathOdds = pricePath(us);
+      renderBracket();
+    }, i * 500));
+  });
+}
+
+function pathPanel(o) {
+  const wrap = el("div", "bk-odds");
+  wrap.appendChild(el("div", "bk-odds-head", `Path to the title — <b>${o.team}</b>`));
+  const list = el("div", "bk-odds-legs");
+  list.appendChild(el("div", "bk-odds-leg head",
+    `<span>tie</span><span>opponent</span><span>win</span><span>still alive</span>`));
+  o.legs.forEach((l) => {
+    list.appendChild(el("div", "bk-odds-leg" + (l.p < 50 ? " under" : ""),
+      `<span class="bk-odds-id">${l.id}</span>
+       <span class="bk-odds-opp">${l.them}</span>
+       <span class="bk-odds-p">${l.p.toFixed(1)}%</span>
+       <span class="bk-odds-cum">${l.cum.toFixed(1)}%</span>`));
+  });
+  wrap.appendChild(list);
+  wrap.appendChild(el("div", "bk-odds-total",
+    `Winning the whole thing: <b>${o.overall.toFixed(1)}%</b>` +
+    (o.legs.some((l) => l.p < 50)
+      ? ` &middot; underdog in ${o.legs.filter((l) => l.p < 50).length} of ${o.legs.length} ties`
+      : "")));
+  return wrap;
 }
 
 function championEl() {
@@ -309,19 +377,24 @@ function renderBracket() {
   if (!b) { box.appendChild(el("div", "empty-note", "No bracket for this series.")); return; }
 
   const bar = el("div", "bk-toolbar");
-  const auto = el("button", "bk-btn", "⚡ Auto-pick by Elo");
+  const path = el("button", "bk-btn bk-btn-path", "🏆 Our path to the title");
+  const auto = el("button", "bk-btn ghost", "⚡ Auto-pick by Elo");
   const reset = el("button", "bk-btn ghost", "Reset");
+  path.addEventListener("click", ourPath);
   auto.addEventListener("click", autoPick);
   reset.addEventListener("click", () => {
     autoTimers.forEach(clearTimeout); autoTimers = [];
     bracket.winners = {};
+    bracket.pathOdds = null;
     renderBracket();
   });
+  if (currentSeriesData().knockouts.us) bar.appendChild(path);
   bar.appendChild(auto);
   bar.appendChild(reset);
   bar.appendChild(el("span", "bk-hint",
     "Click a team to send it through · click it again to undo · % is the Elo favourite"));
   box.appendChild(bar);
+  if (bracket.pathOdds) box.appendChild(pathPanel(bracket.pathOdds));
 
   const scroll = el("div", "bk-scroll");
   const board = el("div", "bk-board");
