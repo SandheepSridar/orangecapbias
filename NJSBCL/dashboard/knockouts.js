@@ -71,6 +71,13 @@ function renderOurTie() {
     box.appendChild(el("div", "empty-note", "No knockout bracket configured for this series."));
     return;
   }
+  if (!ko.us && ko.eliminated) {
+    const e = ko.eliminated;
+    const label = (ko.bracket.rounds.find((r) => r.key === e.round) || {}).label || "the knockouts";
+    box.appendChild(el("div", "empty-note",
+      `${s.gladiators} were knocked out by ${e.by} in the ${label.toLowerCase()} (${e.matchId}).`));
+    return;
+  }
   if (!ko.us) {
     box.appendChild(el("div", "empty-note",
       `${s.gladiators} did not finish in the top ${ko.qualifiersPerGroup} of their group, so there's no knockout tie to scout.`));
@@ -78,7 +85,8 @@ function renderOurTie() {
   }
 
   const u = ko.us;
-  const them = s.teams[u.opponent];
+  const them = u.opponent ? s.teams[u.opponent] : null;
+  const oppName = u.opponent || `Winner of ${u.opponentFrom}`;
   const card = el("div", "ko-hero");
 
   const head = el("div", "ko-hero-head");
@@ -87,14 +95,18 @@ function renderOurTie() {
      <span class="ko-hero-team us">${s.gladiators}</span>`));
   head.appendChild(el("div", "ko-hero-vs", "vs"));
   head.appendChild(el("div", "ko-hero-side right",
-    `<span class="ko-hero-team">${u.opponent}</span>
-     <span class="ko-seed">${u.opponentGroup}${u.opponentSeed}</span>`));
+    `<span class="ko-hero-team">${oppName}</span>
+     <span class="ko-seed">${u.opponent ? u.opponentGroup + u.opponentSeed : "?"}</span>`));
   card.appendChild(head);
 
   const roundLabel = (ko.bracket.rounds.find((r) => r.key === u.round) || {}).label || "Knockout";
   card.appendChild(el("div", "ko-hero-sub",
-    `${roundLabel} &middot; ${u.matchId} &middot; ${fmtMatchDate(u.date)} &middot; ` +
-    `${ord(u.seed)} in Group ${u.group} vs ${ord(u.opponentSeed)} in Group ${u.opponentGroup}`));
+    `${roundLabel} &middot; ${u.matchId} &middot; ${fmtMatchDate(u.date)}` +
+    (u.opponent ? ` &middot; ${ord(u.seed)} in Group ${u.group} vs ${ord(u.opponentSeed)} in Group ${u.opponentGroup}` : "")));
+  (ko.ourResults || []).filter((r) => r.won).forEach((r) => {
+    card.appendChild(el("div", "ko-hero-sub ko-through",
+      `✓ Through ${r.matchId}: beat ${r.opponent}, ${r.ourScore} v ${r.theirScore}`));
+  });
 
   if (u.winProb != null) {
     const pct = Math.round(u.winProb);
@@ -124,7 +136,7 @@ function renderOurTie() {
    prediction, and what this page is for is the real draw. */
 
 const SVG_NS = "http://www.w3.org/2000/svg";
-const bracket = { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {}, pathOdds: null };
+const bracket = { winners: {}, real: {}, elo: {}, seed: {}, consumer: {}, byId: {}, pathOdds: null };
 
 function bracketData() {
   const ko = currentSeriesData().knockouts;
@@ -132,11 +144,12 @@ function bracketData() {
 }
 
 function indexBracket() {
-  Object.assign(bracket, { winners: {}, elo: {}, seed: {}, consumer: {}, byId: {}, pathOdds: null });
+  Object.assign(bracket, { winners: {}, real: {}, elo: {}, seed: {}, consumer: {}, byId: {}, pathOdds: null });
   const b = bracketData();
   if (!b) return;
   b.matches.forEach((m) => {
     bracket.byId[m.id] = m;
+    if (m.result && m.result.winner) bracket.real[m.id] = m.result.winner;
     ["a", "b"].forEach((side) => {
       const s = m[side];
       if (s.team) {
@@ -146,6 +159,7 @@ function indexBracket() {
       if (s.from) bracket.consumer[s.from] = { id: m.id, side };
     });
   });
+  bracket.winners = { ...bracket.real };
 }
 
 function occupant(slot) { return slot.team || bracket.winners[slot.from] || null; }
@@ -191,6 +205,15 @@ function slotEl(m, side) {
   else if (decided) btn.classList.add("out");
   if (team === currentSeriesData().gladiators) btn.classList.add("us");
   btn.dataset.team = team;
+  if (m.result) {
+    btn.classList.add("played");
+    btn.disabled = true;
+    btn.innerHTML =
+      `<span class="bk-seed">${bracket.seed[team] || "·"}</span>
+       <span class="bk-team">${team}</span>
+       <span class="bk-score">${m.result.scores[team] || ""}</span>`;
+    return btn;
+  }
   const p = other ? winProb(team, other) : null;
   btn.innerHTML =
     `<span class="bk-seed">${bracket.seed[team] || "·"}</span>
@@ -205,7 +228,9 @@ function matchEl(m) {
   const us = currentSeriesData().gladiators;
   if (occupant(m.a) === us || occupant(m.b) === us) card.classList.add("ours");
   if (bracket.winners[m.id]) card.classList.add("decided");
-  card.appendChild(el("div", "bk-meta", `${m.id} <span>${fmtMatchDate(m.date)}</span>`));
+  card.appendChild(el("div", "bk-meta", m.result
+    ? `${m.id} <span>${m.result.tied ? "Tied · won super over" : "Result"}</span>`
+    : `${m.id} <span>${fmtMatchDate(m.date)}</span>`));
   card.appendChild(slotEl(m, "a"));
   card.appendChild(slotEl(m, "b"));
   return card;
@@ -253,7 +278,7 @@ function fly(fromRect, toEl, label) {
 function advance(matchId, side, srcEl) {
   const m = bracket.byId[matchId];
   const team = occupant(m[side]);
-  if (!team) return;
+  if (!team || bracket.real[matchId]) return;
   const prev = bracket.winners[matchId];
   if (prev === team) {           // clicking the winner again undoes the result
     delete bracket.winners[matchId];
@@ -276,12 +301,13 @@ let autoTimers = [];
 function autoPick() {
   autoTimers.forEach(clearTimeout);
   autoTimers = [];
-  bracket.winners = {};
+  bracket.winners = { ...bracket.real };
   bracket.pathOdds = null;
   renderBracket();
   bracketData().rounds.forEach((r, i) => {
     autoTimers.push(setTimeout(() => {
       bracketData().matches.filter((m) => m.round === r.key).forEach((m) => {
+        if (bracket.real[m.id]) return;
         const a = occupant(m.a), b = occupant(m.b);
         if (!a || !b) return;
         bracket.winners[m.id] = (bracket.elo[a] || 0) >= (bracket.elo[b] || 0) ? a : b;
@@ -299,7 +325,7 @@ function pricePath(us) {
   const legs = [];
   let cum = 1;
   bracketData().matches.forEach((m) => {
-    if (bracket.winners[m.id] !== us) return;
+    if (bracket.winners[m.id] !== us || bracket.real[m.id]) return;
     const a = occupant(m.a), b = occupant(m.b);
     const them = a === us ? b : a;
     const p = winProb(us, them);
@@ -315,12 +341,13 @@ function ourPath() {
   const us = currentSeriesData().gladiators;
   autoTimers.forEach(clearTimeout);
   autoTimers = [];
-  bracket.winners = {};
+  bracket.winners = { ...bracket.real };
   bracket.pathOdds = null;
   renderBracket();
   b.rounds.forEach((r, i) => {
     autoTimers.push(setTimeout(() => {
       b.matches.filter((m) => m.round === r.key).forEach((m) => {
+        if (bracket.real[m.id]) return;
         const a = occupant(m.a), c = occupant(m.b);
         if (!a || !c) return;
         bracket.winners[m.id] = (a === us || c === us)
@@ -384,7 +411,7 @@ function renderBracket() {
   auto.addEventListener("click", autoPick);
   reset.addEventListener("click", () => {
     autoTimers.forEach(clearTimeout); autoTimers = [];
-    bracket.winners = {};
+    bracket.winners = { ...bracket.real };
     bracket.pathOdds = null;
     renderBracket();
   });
@@ -392,7 +419,7 @@ function renderBracket() {
   bar.appendChild(auto);
   bar.appendChild(reset);
   bar.appendChild(el("span", "bk-hint",
-    "Click a team to send it through · click it again to undo · % is the Elo favourite"));
+    "Played ties show the real score and are locked · click a team to send it through · click again to undo · % is the Elo favourite"));
   box.appendChild(bar);
   if (bracket.pathOdds) box.appendChild(pathPanel(bracket.pathOdds));
 

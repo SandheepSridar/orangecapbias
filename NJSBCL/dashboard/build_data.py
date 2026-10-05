@@ -138,6 +138,19 @@ KNOCKOUT_FIXTURES = {
     ],
 }
 
+# Knockout ties that finished level on runs. The totals can't say who went through (a
+# super over decided it), so the winner is recorded here by hand, keyed by matchId.
+KNOCKOUT_TIE_WINNERS = {
+    "weekenders": {20778: "Hudson Hurricanes Sultans"},  # PPQF4, 80 v 80 — confirmed by Sandheep 2026-10-04
+}
+
+# Seeds the tie was actually played without. The slot keeps its seed ref (so the draw's
+# shape is unchanged) but carries the team that took the field instead.
+KNOCKOUT_SUBSTITUTES = {
+    # PPQF15 was played by Sinclair Lions (B9), not Giant Slayers (B3) — scorecard 20800.
+    "weekenders": {"B3": "Sinclair Lions"},
+}
+
 _SEED_REF = re.compile(r"^([A-D])(\d+)$")
 
 
@@ -2180,7 +2193,7 @@ def scenario_tree(cfg, gladiators, standings_table, results):
     }
 
 
-def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
+def build_knockouts(cfg, standings_table, elo, gladiators, series_key, results):
     """The knockout field and the published bracket, from the final group tables.
 
     Rule 7: "the top 8 teams from each group will qualify for the knockouts (Even if the
@@ -2223,6 +2236,24 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
 
     fixtures = KNOCKOUT_FIXTURES.get(series_key, [])
     matches, us, mismatches = [], None, []
+    subs = KNOCKOUT_SUBSTITUTES.get(series_key, {})
+    tie_winners = KNOCKOUT_TIE_WINNERS.get(series_key, {})
+
+    # Knockout results are any meeting after the last league-dated match. Matching on the
+    # date alone isn't enough — a handful of matches have no schedule date — and Division 1
+    # pairs inside a group also met in the league, so "latest meeting" would hand an
+    # unplayed quarter-final the league result.
+    first_ko = min(f[4] for f in fixtures if f[4]) if fixtures else None
+    played_by_pair = {}
+    if first_ko is not None and len(results):
+        dated = pd.to_datetime(results["date"], format="%b %d, %Y", errors="coerce")
+        cutoff = results.loc[dated < pd.Timestamp(first_ko), "matchId"].max()
+        played = results[(results["matchId"] > cutoff) & results["battedFirst"]].sort_values("matchId")
+        for r in played.itertuples():
+            played_by_pair[frozenset((r.team, r.opponent))] = r
+    totals = pd.read_csv(DATA_DIR / cfg["totals_csv"])
+    wkts = {int(r["matchId"]): (int(r["wkts1"]), int(r["wkts2"])) for _, r in totals.iterrows()}
+    winners = {}  # tie id -> the winning slot, so later rounds resolve "winner of X"
 
     def same_team(printed, scraped):
         """The EC sheet's spellings differ cosmetically from cricclubs' ("Jetha" v
@@ -2234,6 +2265,8 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
     def slot(ref, printed):
         m = _SEED_REF.match(ref)
         if not m:
+            if ref in winners:
+                return dict(winners[ref], ref=ref, **{"from": ref})
             return {"ref": ref, "from": ref, "team": None}
         q = seeds.get(ref)
         if q is None:
@@ -2241,9 +2274,15 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
             return {"ref": ref, "team": None}
         if printed and not same_team(printed, q["team"]):
             mismatches.append(f"{ref} is {q['team']} in the tables but {printed!r} on the sheet")
+        if ref in subs:
+            team = subs[ref]
+            return {"ref": ref, "group": q["group"], "seed": q["seed"], "team": team,
+                    "elo": elo.get(team), "isUs": team == gladiators, "pts": None, "netRR": None,
+                    "replaces": q["team"]}
         return {"ref": ref, "group": q["group"], "seed": q["seed"], "team": q["team"],
                 "elo": q["elo"], "isUs": q["isUs"], "pts": q["pts"], "netRR": q["netRR"]}
 
+    our_results, eliminated = [], None
     for mid, rnd, a_ref, b_ref, date, printed in fixtures:
         a = slot(a_ref, printed[0] if printed else None)
         b = slot(b_ref, printed[1] if printed else None)
@@ -2251,16 +2290,45 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
         match = {"id": mid, "round": rnd, "date": date, "a": a, "b": b, "isOurs": ours}
         if a.get("elo") and b.get("elo"):
             match["winProb"] = win_probability(a["elo"], b["elo"])
+        r = played_by_pair.get(frozenset((a["team"], b["team"]))) if a["team"] and b["team"] else None
+        if r is not None:
+            mid_played = int(r.matchId)
+            if r.result == "Win":
+                winner = r.team
+            elif r.result == "Loss":
+                winner = r.opponent
+            else:
+                winner = tie_winners.get(mid_played)
+                if winner is None:
+                    print(f"  WARNING: {mid} (match {mid_played}) is a tie with no KNOCKOUT_TIE_WINNERS entry")
+            w1, w2 = wkts.get(mid_played, (None, None))
+            match["result"] = {
+                "matchId": mid_played, "winner": winner, "tied": r.result == "Tie",
+                "scores": {r.team: f"{r.teamScore}/{w1}", r.opponent: f"{r.oppScore}/{w2}"},
+            }
+            if winner:
+                winners[mid] = a if a["team"] == winner else b
         matches.append(match)
-        if ours:
-            mine, them = (a, b) if a.get("isUs") else (b, a)
+        if not ours:
+            continue
+        mine, them = (a, b) if a.get("isUs") else (b, a)
+        res = match.get("result")
+        if res and res["winner"]:
+            our_results.append({"matchId": mid, "round": rnd, "opponent": them["team"],
+                                "won": res["winner"] == gladiators,
+                                "ourScore": res["scores"][gladiators],
+                                "theirScore": res["scores"][them["team"]]})
+            if res["winner"] != gladiators:
+                eliminated = {"matchId": mid, "round": rnd, "by": them["team"]}
+            continue
+        if us is None:  # our next unplayed tie
             us = {
                 "matchId": mid, "round": rnd, "date": date,
                 "group": mine["group"], "seed": mine["seed"],
-                "opponent": them["team"], "opponentGroup": them.get("group"),
-                "opponentSeed": them.get("seed"),
+                "opponent": them["team"], "opponentFrom": them.get("from"),
+                "opponentGroup": them.get("group"), "opponentSeed": them.get("seed"),
                 "winProb": (win_probability(mine["elo"], them["elo"])
-                            if mine["elo"] and them["elo"] else None),
+                            if mine["elo"] and them.get("elo") else None),
                 "ourElo": mine["elo"], "theirElo": them.get("elo"),
             }
 
@@ -2276,8 +2344,10 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key):
         "qualifiersPerGroup": QUALIFIERS_PER_GROUP,
         "groups": groups_out,
         "bracket": {"rounds": rounds_out, "matches": matches},
-        "us": us,
-        "usQualified": us is not None,
+        "us": None if eliminated else us,
+        "usQualified": any(q["isUs"] for g in groups_out for q in g["qualified"]),
+        "ourResults": our_results,
+        "eliminated": eliminated,
     }
 
 def build():
@@ -2305,17 +2375,19 @@ def build():
         print(f"  standings loaded: {len(standings)} · elo computed: {len(elo)} · "
               f"{gladiators} elo: {round(gladiators_elo)}")
 
-        knockouts = build_knockouts(cfg, standings_table, elo, gladiators, key)
+        knockouts = build_knockouts(cfg, standings_table, elo, gladiators, key, results)
         if knockouts is None:
             print("  knockouts: no bracket groups configured")
         else:
             u = knockouts["us"]
             print(f"  knockouts: {sum(len(g['qualified']) for g in knockouts['groups'])} qualifiers, "
                   f"{len(knockouts['bracket']['matches'])} bracket matches over "
-                  f"{len(knockouts['bracket']['rounds'])} rounds, "
-                  + (f"we are {u['group']}{u['seed']} vs {u['opponent']} "
-                     f"({u['opponentGroup']}{u['opponentSeed']}) in {u['matchId']}"
-                     if u else f"{gladiators} did NOT qualify"))
+                  f"{len(knockouts['bracket']['rounds'])} rounds "
+                  f"({sum(1 for m in knockouts['bracket']['matches'] if m.get('result'))} played), "
+                  + (f"we are {u['group']}{u['seed']} vs {u['opponent'] or 'winner of ' + str(u['opponentFrom'])} "
+                     f"in {u['matchId']}"
+                     if u else f"{gladiators} knocked out in {knockouts['eliminated']['matchId']}"
+                     if knockouts["eliminated"] else f"{gladiators} did NOT qualify"))
 
         # opponents = only the teams we can still actually meet, i.e. the knockout field.
         # The league stage is over, so everyone we played on the way here is history, and

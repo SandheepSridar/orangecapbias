@@ -1007,3 +1007,9 @@ body.finals .bk-slot:hover:not(:disabled) { background: rgba(185, 139, 255, 0.18
 @media (max-width: 560px) {
   .bk-odds-leg { grid-template-columns: 3.6rem 1fr 3.4rem 4.2rem; font-size: 0.74rem; }
 }
+
+/* Knockout ties already played: real score in place of the Elo odds, not clickable. */
+.bk-slot.played { cursor: default; }
+.bk-score { flex: none; font-size: 0.68rem; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+.bk-slot.out .bk-score { font-weight: 500; }
+.ko-through { color: var(--teal); margin-top: 0.3rem; }
