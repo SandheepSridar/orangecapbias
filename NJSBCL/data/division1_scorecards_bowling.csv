@@ -1,4 +1,44 @@
 matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
+20842,Pway Lions,Udit Patel - Pway Lions,4,0,14,14,2,3.50,0,0
+20842,Pway Lions,Nish Patel,4,0,13,19,2,4.75,1,0
+20842,Pway Lions,Bhavik Patel,3.2,0,10,19,2,5.70,3,0
+20842,Pway Lions,Ronak Rana †,2,0,8,6,3,3.00,2,0
+20842,Pway Lions,Dhaivat Patel,1,0,3,13,1,13.00,2,0
+20842,Samudhra Gladiators,Ankur Chaturvedi,4,1,17,12,1,3.00,2,0
+20842,Samudhra Gladiators,Naveen R Sripathi,4,1,21,6,5,1.50,3,0
+20842,Samudhra Gladiators,Vinit Bharadwaj,4,1,17,18,2,4.50,1,0
+20842,Samudhra Gladiators,Harshad Patil,4,0,13,33,1,8.25,0,0
+20833,Jersey Boys,Vikul Rajpara,3,0,7,26,1,8.67,0,0
+20833,Jersey Boys,Amit Patel,1,0,0,9,0,9.00,0,0
+20833,Jersey Boys,Sushil Kumar,4,0,10,42,1,10.50,1,1
+20833,Jersey Boys,Vineet Luthra,4,0,14,39,1,9.75,3,0
+20833,Jersey Boys,Vikas Chaudhary,4,0,13,35,4,8.75,2,0
+20833,Piscataway Avengers,Mit Patel,2,0,9,3,2,1.50,0,0
+20833,Piscataway Avengers,Dharmesh Patel,3,0,11,9,3,3.00,1,0
+20833,Piscataway Avengers,Ujjaval Patel,3,0,11,13,0,4.33,0,0
+20833,Piscataway Avengers,Krunal Shah,2,0,5,18,1,9.00,1,0
+20833,Piscataway Avengers,Pujan Patel,2,0,5,20,2,10.00,0,0
+20833,Piscataway Avengers,Harsh Patel,0.4,0,2,3,2,4.50,1,0
+20830,RHG,Kevin Shah*,3,1,12,11,2,3.67,0,1
+20830,RHG,Hiren Joshi,2,0,8,11,0,5.50,1,0
+20830,RHG,Raj Patel,2,0,8,10,1,5.00,1,0
+20830,RHG,Zafran Hussain,4,0,15,22,2,5.50,1,1
+20830,RHG,Upjeet Singh,4,0,15,21,3,5.25,2,0
+20830,RHG,Parth Thakkar,1,0,3,9,0,9.00,1,0
+20830,Newport CC,Gokul Das Maharajan,4,0,22,4,1,1.00,1,1
+20830,Newport CC,Emmanuel Samuel Nair,4,0,12,26,3,6.50,2,0
+20830,Newport CC,Narender Reddy Bojja,3.2,0,8,26,2,7.80,3,0
+20830,Newport CC,Salam Bin Shamlan,4,0,11,18,3,4.50,5,0
+20829,WCC,Tushar Lenka,2,1,10,12,1,6.00,0,0
+20829,WCC,Nisar Ahmad,4,0,7,26,0,6.50,1,0
+20829,WCC,Sarwar Shah,3,0,8,18,1,6.00,0,0
+20829,WCC,Nahid Sarkar,1,0,2,19,0,19.00,0,2
+20829,WCC,Faran Mir,2,0,6,19,0,9.50,0,2
+20829,WCC,Harikishore Malireddy,4,0,14,22,6,5.50,0,0
+20829,Nj Stars CC,Muhammad Haseeb,2,0,6,9,1,4.50,0,0
+20829,Nj Stars CC,Fahad Kabir,3,0,12,16,1,5.33,2,0
+20829,Nj Stars CC,Zain Pervaiz,3,0,11,24,2,8.00,2,0
+20829,Nj Stars CC,Abdul Wali Siddiqee,4,0,14,14,6,3.50,0,0
 20818,Piscataway Avengers,Ujjaval Patel,4,0,14,21,2,5.25,0,0
 20818,Piscataway Avengers,Dharmesh Patel,4,1,16,8,3,2.00,0,0
 20818,Piscataway Avengers,Mit Patel,4,0,15,12,2,3.00,0,0
@@ -943,7 +983,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 20182,Gcc,Parin Patel (GCC),3,0,10,34,1,11.33,2,0
 20182,Gcc,Mrugesh Patel,4,0,12,30,1,7.50,6,0
 20182,Gcc,Hardik(gcc) Rana,2,0,7,20,2,10.00,0,0
-20182,Gcc,Priten Patel (GCC),3,0,8,32,1,10.67,4,0
+20182,Gcc,Deept Patel (GCC),3,0,8,32,1,10.67,4,0
 20182,11spartans,Soham Brahmbhatt,4,0,16,26,4,6.50,4,0
 20182,11spartans,Pratik Patel (savali),4,0,16,19,2,4.75,3,0
 20182,11spartans,Jay Trivedi,2,0,7,10,1,5.00,0,0
@@ -1509,7 +1549,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19888,Warriors,Rumit Patel,2.5,2,16,4,2,1.41,3,0
 19888,Warriors,Prasad Fernando,3,0,13,17,2,5.67,5,1
 19888,Warriors,Jeet Patel,3,0,14,11,3,3.67,1,0
-19888,Warriors,Krupsy Patel,1,0,4,2,0,2.00,0,0
+19888,Warriors,Krupal Patel,1,0,4,2,0,2.00,0,0
 19888,Warriors,Dharmik Patel,1,0,5,1,0,1.00,0,0
 19888,Warriors,Neel Patel,1,0,3,11,0,11.00,0,0
 19883,Samudhra Gladiators,Vinit Bharadwaj,4,0,15,17,0,4.25,1,0
@@ -1528,7 +1568,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19877,Youth For Sewa,Tauseef Ahmed,2,0,9,15,0,7.50,2,0
 19877,Youth For Sewa,Ram V*,2,0,5,22,0,11.00,0,0
 19877,Youth For Sewa,Eswar Vennapusa,3,0,12,23,2,7.67,9,0
-19877,Youth For Sewa,Mihira Teja Narvaneni,3,0,8,37,1,12.33,5,2
+19877,Youth For Sewa,Mihir Narvaneni,3,0,8,37,1,12.33,5,2
 19877,Blue Aces CC,Dheeraj Dubey*,4,0,13,33,2,8.25,2,0
 19877,Blue Aces CC,Tharak Ram,2,0,4,30,1,15.00,2,1
 19877,Blue Aces CC,Rajendra Prasad Challa,4,1,17,12,2,3.00,1,0
@@ -1697,7 +1737,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19760,Pway Lions,Dhaivat Patel,3,1,12,26,1,8.67,0,0
 19751,Gcc,Sahil Patel,4,0,13,33,0,8.25,5,0
 19751,Gcc,Parin Patel (GCC),4,0,14,19,2,4.75,0,0
-19751,Gcc,Priten Patel (GCC),2,0,4,29,1,14.50,6,0
+19751,Gcc,Deept Patel (GCC),2,0,4,29,1,14.50,6,0
 19751,Gcc,Mrugesh Patel*,4,0,14,22,3,5.50,3,0
 19751,Gcc,Karan Patel,2,0,7,18,2,9.00,2,0
 19751,Juggernaut,Hemant Patel*,2,0,8,19,0,9.50,0,1
@@ -2628,7 +2668,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 19266,F5,Thulasi Thota,2.3,0,9,15,1,6.00,1,0
 19266,F5,Harihara Ganeshan,4,0,15,16,2,4.00,2,0
 19260,Gryffindors,Bikash Ghibila,4,0,8,20,1,5.00,0,0
-19260,Gryffindors,Bandiss P,2,0,5,10,0,5.00,0,0
+19260,Gryffindors,Bandish Patel,2,0,5,10,0,5.00,0,0
 19260,Gryffindors,Kishan Patel,2,0,7,13,1,6.50,1,0
 19260,Gryffindors,Subodh Singh*,2,0,7,25,2,12.50,2,0
 19260,Gryffindors,Harish Bangera,3,1,13,15,2,5.00,0,0
@@ -3453,7 +3493,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18799,Gryffindors,Ganesh R T,4,1,15,21,1,5.25,1,2
 18799,Gryffindors,Bikash Ghibila,2,0,2,12,0,6.00,1,0
 18799,Gryffindors,Ankit Patel,2,0,6,6,2,3.00,0,0
-18799,Gryffindors,Bandiss P,0.1,0,0,5,0,30.00,1,0
+18799,Gryffindors,Bandish Patel,0.1,0,0,5,0,30.00,1,0
 18794,Parsippany Phoenix XI,Raghuveer Bethelli,4,0,15,25,1,6.25,2,0
 18794,Parsippany Phoenix XI,Govind Somvanshi,4,0,15,19,2,4.75,1,0
 18794,Parsippany Phoenix XI,Satish Kumar Durgam,4,0,10,20,2,5.00,0,0
@@ -3579,7 +3619,7 @@ matchId,team,bowler,O,M,Dot,R,W,Econ,wides,noballs
 18739,Gcc,Mrugesh Patel,4,0,14,18,2,4.50,2,0
 18739,Gcc,Sapan Parikh,1,0,3,14,1,14.00,0,0
 18739,Gcc,Nirav Rana(gcc),4,0,15,22,3,5.50,0,0
-18739,Gcc,Deep Thakkar GCC,1,0,1,18,0,18.00,0,0
+18739,Gcc,Priten Patel GCC,1,0,1,18,0,18.00,0,0
 18739,Parsippany Phoenix XI,Satish Kumar Durgam,2.1,0,5,24,0,11.08,0,0
 18739,Parsippany Phoenix XI,Naveen Rayal,2,0,5,30,0,15.00,0,1
 18739,Parsippany Phoenix XI,Raghuveer Bethelli,2,0,8,18,0,9.00,3,0

@@ -6,10 +6,52 @@ user-invocable: true
 
 # Rescrape NJSBCL data
 
-Full re-scrape of both series (2026 Division 1, 2026 Weekenders Cup) from
-cricclubs.com/NJSBCL and rebuild `NJSBCL/dashboard/data.js`. Takes ~20-30
-minutes of tool calls. Re-run in full each time — don't try to scrape
-incrementally, it's not worth the complexity at this data volume.
+Update both series (2026 Division 1, 2026 Weekenders Cup) from cricclubs.com/NJSBCL and
+rebuild `NJSBCL/dashboard/data.js`.
+
+**Default: incremental — fetch only new matches.** Sandheep asked for this on 2026-10-10,
+after a full rescrape to add 12 knockout results took ~50 minutes (~960 scorecard fetches,
+one Cloudflare block) and changed nothing in the existing ~900 matches except a few
+player-profile renames. Follow "Incremental update" directly below. Only do the **full
+rescrape** (Steps 1-6 further down) when Sandheep asks for it explicitly, e.g. to pick up
+scorer corrections to old matches or name changes.
+
+## Incremental update (default, ~5-10 min)
+
+Read Prerequisites and "The core technique" below first. Then:
+
+1. **True totals, both series (Step 1 as written).** One page per series, so it's cheap.
+   Download under a unique name (`njs_<MMDD>_d1_totals.csv`, see the Downloads-name-collision
+   note), then diff it against the current file:
+   `diff <(sort ~/Downloads/njs_..._totals.csv) <(sort data/<series>_true_totals.csv)`.
+   Lines only in the new file are the **new matchIds**, or a score corrected on an old match;
+   treat both as "to fetch". If the diff is empty there's nothing to do; say so and stop.
+   Otherwise copy the new file over `data/<series>_true_totals.csv`.
+2. **Scorecards for just those matchIds.** Install the Step 2 `fetchScorecard` function, set
+   `window.__ids` to the new matchIds, and run one `runBatch(ids, 1500)` with the blob
+   download named `d1_new_<MMDD>.csv` / `wk_new_<MMDD>.csv`. A handful of ids fits well
+   inside the 45s CDP limit. Ignore the Weekenders team filter here: knockout matches always
+   need scorecards, whatever the group, because `build_knockouts` reads the playing teams'
+   names from them. A new *league* match between two out-of-scope teams (e.g. Group C v C)
+   can be skipped, but in practice only knockouts are left. Clear `data/raw_scorecards/` first,
+   move the files in, then:
+   ```
+   cd NJSBCL && source .venv/bin/activate
+   python3 merge_new_scorecards.py d1 division1
+   python3 merge_new_scorecards.py wk weekenderscup
+   ```
+   This replaces any existing rows for those matchIds and keeps every other line untouched.
+3. **Points table (Step 4b)** only while league games remain. Once the league stage is over
+   the standings are frozen, and the knockouts don't touch them.
+4. **Schedules (Step 4)**: always re-export, two clicks. Clicking
+   `button.buttons-excel` from `javascript_tool` works, so no screenshot is needed.
+5. **Over-by-over (Step 4c)** only for new matchIds that involve Samudhra Gladiators /
+   VRK Gladiators. Fetch those with `fetchOverByOver` and **append** the rows to
+   `data/<series>_gladiators_overs.csv`. Check the file ends in `\n` first (see the
+   2026-08-15 note).
+6. **Step 5 (build) and Step 6 (dq_checks)** exactly as written.
+
+## Full rescrape (only on request, ~20-50 min)
 
 ## Why this can't be automated / run unattended
 
@@ -347,6 +389,12 @@ no-ball worth N total runs, **not** a legal delivery (doesn't count toward the o
 runs; `"NW"` is a wicket on a legal ball where N runs were already completed (e.g. a run-out
 after a run or two). Only `wd`/`nb` tokens are extra (non-legal) balls — everything else,
 including byes and wickets, counts as one of the over's 6 legal deliveries.
+
+Seen once (2026-10-10, matchId 20834, over 16: `1 1 0 R W 1`): a bare `"R"` that appears to
+be a batter retiring. `classify()` ignores it, so it counts as neither a run nor a legal ball,
+and that over records 5 legal balls. The over's run total is unaffected. It's still unclear
+whether cricclubs puts "R" in a delivery slot. If it shows up mid-innings and trips the dq
+legal-balls check, look at that scorecard before you change `classify()`.
 
 **Bowler-name-vs-first-token split gotcha:** an earlier version of this scraper's split regex
 only recognized plain digits, `Nwd`/`Nnb`, and bare `W` as "this is where the ball sequence
