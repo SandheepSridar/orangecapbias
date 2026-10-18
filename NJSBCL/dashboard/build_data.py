@@ -35,6 +35,7 @@ SERIES = {
         "totals_csv": "division1_true_totals.csv",
         "points_csv": "division1_points_table.csv",
         "overs_csv": "division1_gladiators_overs.csv",
+        "toss_csv": "division1_toss.csv",
         # Knockout field: Group A's top 8 play off among themselves (Samudhra finished 4th,
         # so the pre-quarter is vs 5th). None = the whole group, since a run through the
         # bracket can meet any of them.
@@ -51,6 +52,7 @@ SERIES = {
         "totals_csv": "weekenderscup_true_totals.csv",
         "points_csv": "weekenderscup_points_table.csv",
         "overs_csv": "weekenderscup_gladiators_overs.csv",
+        "toss_csv": "weekenderscup_toss.csv",
         # Knockout field: top 8 of all four groups. The EC's published bracket crosses
         # groups from the first round (A1 v B8, D1 v C8), so C and D are in our half of
         # the draw after all — we can meet them from the quarter-finals on.
@@ -1686,6 +1688,34 @@ def toss_advice(results, team):
     }
 
 
+def load_toss(cfg, results):
+    """matchId -> (toss winner, "bat"/"bowl"), from the scorecard's "X won the toss and
+    elected to ..." line. The winner is read off the batting order, not the printed name:
+    electing to bat means the team that batted first won it. cricclubs' toss name can be
+    spelled differently from the scorecard team ("NJKnights"), so this avoids name matching.
+    Returns {} if the file hasn't been scraped."""
+    path = DATA_DIR / cfg["toss_csv"]
+    if not path.exists():
+        return {}
+    toss = pd.read_csv(path, dtype={"tossName": str, "tossDecision": str}).dropna(subset=["tossDecision"])
+    first = results[results["battedFirst"]].drop_duplicates("matchId").set_index("matchId")
+    out = {}
+    for r in toss.itertuples():
+        if r.matchId not in first.index:
+            continue  # abandoned, no result
+        bat_first = first.loc[r.matchId]
+        decision = "bat" if r.tossDecision == "bat" else "bowl"  # "field" == "bowl"
+        out[r.matchId] = (bat_first["team"] if decision == "bat" else bat_first["opponent"], decision)
+    return out
+
+
+def toss_choice(toss, team):
+    """What `team` chose on the tosses it won this season."""
+    picks = [d for winner, d in toss.values() if winner == team]
+    bat = picks.count("bat")
+    return {"won": len(picks), "bat": bat, "bowl": len(picks) - bat}
+
+
 def par_score_and_target(results, team, min_sample=3):
     """Two matchup-specific numbers for facing `team`:
     - parScoreToSet: the average total that has beaten them this season (across all their
@@ -2443,6 +2473,9 @@ def build():
         bowler_phases = bowler_phase_breakdown(gladiators_overs)
         print(f"  bowler-by-phase: {sum(len(p['bowlers']) for p in bowler_phases)} qualifying bowler-phase entries across {len(bowler_phases)} phases")
 
+        toss = load_toss(cfg, results)
+        print(f"  toss: {len(toss)} matches with a recorded toss decision")
+
         teams_data = {}
         all_teams_in_data = sorted(set(bat["team"].unique()) | set([gladiators]))
         for team in all_teams_in_data:
@@ -2466,6 +2499,7 @@ def build():
                 "matches": len(sub_res), "wins": wins, "losses": losses, "ties": ties,
                 "topBatsmen": top_bat, "topBowlers": top_bowl,
                 "toss": toss_advice(results, team),
+                "tossChoice": toss_choice(toss, team),
                 "parTarget": par_score_and_target(results, team),
                 "boundaryDependencyPct": boundary_dependency(bat, team),
                 "weakBowlers": weak_bowlers(weakness_pool, team),

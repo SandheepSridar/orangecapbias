@@ -221,6 +221,18 @@ function renderToss() {
     `),
   );
 
+  // What each side actually picks when it wins the toss (from the scorecard's toss line).
+  const s = currentSeriesData();
+  const ours = s.teams[s.gladiators];
+  const choiceLine = (name, c) => {
+    if (!c || !c.won) return `<span><b>${name}</b> won the toss: no recorded tosses yet</span>`;
+    const lean = c.bat > c.bowl ? "usually bat" : c.bowl > c.bat ? "usually bowl" : "no clear preference";
+    return `<span><b>${name}</b> won the toss ${c.won}×: chose to bat ${c.bat}, bowl ${c.bowl}
+      — <b>${lean}</b></span>`;
+  };
+  card.append(el("div", "toss-split", choiceLine(state.opponent, them.tossChoice)
+    + choiceLine(s.gladiators, ours && ours.tossChoice)));
+
   const parTargetRow = el("div", "par-target-row");
   const parStat = el("div", "par-target-stat");
   parStat.append(

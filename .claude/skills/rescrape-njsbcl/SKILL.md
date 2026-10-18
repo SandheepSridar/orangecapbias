@@ -49,6 +49,8 @@ Read Prerequisites and "The core technique" below first. Then:
    the standings are frozen, and the knockouts don't touch them.
 4. **Schedules (Step 4)**: always re-export, two clicks. Clicking
    `button.buttons-excel` from `javascript_tool` works, so no screenshot is needed.
+4b. **Toss** for every new matchId: see "Toss decisions" below. Append the rows to
+   `data/<series>_toss.csv` (check for a trailing `\n` first).
 5. **Over-by-over (Step 4c)** only for new matchIds that involve Samudhra Gladiators /
    VRK Gladiators. Fetch those with `fetchOverByOver` and **append** the rows to
    `data/<series>_gladiators_overs.csv`. Check the file ends in `\n` first (see the
@@ -688,25 +690,32 @@ re-run if only one feature looks stale:
   resets only when the matchup actually changes (tracked via a `dataset.opponent` marker on the
   input) — typing a custom number is preserved across re-renders of the same matchup.
 
-## TODO for a future rescrape — toss data (not yet implemented)
+## Toss decisions (added 2026-10-17)
 
-Sandheep wants a toss-advice upgrade: right now the dashboard's toss recommendation is *inferred*
-from each team's bat-first-vs-chasing win-rate split (a proxy). The better version uses the
-**actual** toss result — who won the toss and what they chose — so the dashboard can check
-whether teams that won the toss and picked bat/bowl actually converted that into wins, a more
-direct signal than the current proxy. This was explicitly deferred (2026-08-11) — do NOT
-implement the analysis/UI for it without Sandheep asking, but DO capture the raw data next time
-this skill runs, so it's ready when he does:
+Powers the "won the toss: chose to bat X, bowl Y" line in the matchup page's toss section
+(`tossChoice` per team in `data.js`). The toss isn't in the scorecard tables. It's in the
+ball-by-ball JSON embedded in the same `viewScorecard.do` HTML, as an "Auto Comment Ball":
+`<strong>Newport CC won the toss and elected to bowl</strong>`. The whitespace in the raw HTML
+isn't always a plain space, so match with `\s+`:
 
-- Check `viewScorecard.do?matchId=...` (Step 2) and/or the `Info` tab on that same page for toss
-  wording — it wasn't found in the main scorecard tables during the 2026-08-11 rescrape (no
-  "toss" text on the page body), so the "Info" tab (a separate in-page or linked tab, similar to
-  "Over by Over Score") is the next place to check. If it's genuinely not exposed anywhere on
-  cricclubs for this league, tell Sandheep rather than guessing/fabricating toss outcomes.
-- If found, capture per match: which team won the toss, and whether they chose to bat or bowl.
-  Store as e.g. `data/division1_toss.csv` / `data/weekenderscup_toss.csv` with columns
-  `matchId,tossWinner,tossDecision`, following the same blob-download pattern as everything else
-  in this doc.
+```js
+const TOSS_RE = /<strong>\s*([^<]+?)\s+won\s+the\s+toss\s+and\s+elected\s+to\s+(bat|bowl|field)/i;
+// per matchId: fetch viewScorecard.do as in Step 2, then
+// row = [matchId, m ? m[1].trim() : '', m ? m[2].toLowerCase() : '']
+```
+
+Store as `data/division1_toss.csv` / `data/weekenderscup_toss.csv` with header
+`matchId,tossName,tossDecision`. Keep a row with an empty name and decision when no toss line
+exists. `tossName` is kept only for spot checks. `build_data.py`'s `load_toss()` takes the
+winner from the batting order: electing to bat means the team that batted first won the toss.
+That's because the toss name can be spelled differently from the scorecard's team name
+("NJKnights"). The first scrape (2026-10-17) covered only matches involving our team or a
+current matchup opponent (248 D1 + 410 Weekenders).
+
+Pages are heavy, so expect ~3s per fetch, including the 1500ms delay. Run the loop un-awaited on
+`window.__toss` and wait on the download file. The decision is available, but nothing here yet
+checks whether a toss choice *converted* into wins. Don't add that analysis without Sandheep
+asking.
 
 ## TODO for a future rescrape — real match venue / ground (not yet implemented)
 
