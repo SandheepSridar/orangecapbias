@@ -101,7 +101,9 @@ KNOCKOUT_FIXTURES = {
         ("QF4", "qf", "PQF7", "PQF6", None, None),
         ("SF1", "sf", "QF1", "QF2", None, None),
         ("SF2", "sf", "QF3", "QF4", None, None),
-        ("F", "final", "SF1", "SF2", "2026-10-17", None),
+        # The sheet dated the final 2026-10-17, but the semis were played that day; the
+        # real date comes from the schedule export once cricclubs lists it.
+        ("F", "final", "SF1", "SF2", None, None),
     ],
     "weekenders": [
         ("PPQF1", "r32", "A1", "B8", "2026-09-26", ("VRK Gladiators", "Express Rangers")),
@@ -134,7 +136,8 @@ KNOCKOUT_FIXTURES = {
         ("QF4", "qf", "PQF7", "PQF6", None, None),
         ("SF1", "sf", "QF1", "QF2", None, None),
         ("SF2", "sf", "QF3", "QF4", None, None),
-        ("F", "final", "SF1", "SF2", "2026-10-18", None),
+        # Sheet said 2026-10-18, the day QF1 is now scheduled; same fallback as Division 1.
+        ("F", "final", "SF1", "SF2", None, None),
     ],
 }
 
@@ -2251,6 +2254,18 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key, results):
         played = results[(results["matchId"] > cutoff) & results["battedFirst"]].sort_values("matchId")
         for r in played.itertuples():
             played_by_pair[frozenset((r.team, r.opponent))] = r
+    # Ties are dated from the schedule export: the latest knockout-period row for the pair,
+    # since a rescheduled tie keeps its original row too (Weekenders QFs: Oct 11, then Oct
+    # 17/18). The sheet's own dates are only a fallback — Division 1's first round moved
+    # from Sep 26-27 to Oct 3-4. attach_venue()'s results date takes the first row, so not that.
+    sched_dates = {}
+    if first_ko is not None:
+        sched = _schedule_df(cfg)
+        sched_dt = pd.to_datetime(sched["Date"], format="%m/%d/%Y", errors="coerce")
+        for t1, t2, d in zip(sched["Team One"], sched["Team Two"], sched_dt):
+            if pd.notna(d) and d >= pd.Timestamp(first_ko) and isinstance(t1, str) and isinstance(t2, str):
+                pair = frozenset((t1.strip(), t2.strip()))
+                sched_dates[pair] = max(sched_dates.get(pair, d), d)
     totals = pd.read_csv(DATA_DIR / cfg["totals_csv"])
     wkts = {int(r["matchId"]): (int(r["wkts1"]), int(r["wkts2"])) for _, r in totals.iterrows()}
     winners = {}  # tie id -> the winning slot, so later rounds resolve "winner of X"
@@ -2287,10 +2302,12 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key, results):
         a = slot(a_ref, printed[0] if printed else None)
         b = slot(b_ref, printed[1] if printed else None)
         ours = bool(a.get("isUs") or b.get("isUs"))
+        r = played_by_pair.get(frozenset((a["team"], b["team"]))) if a["team"] and b["team"] else None
+        if a["team"] and b["team"] and frozenset((a["team"], b["team"])) in sched_dates:
+            date = sched_dates[frozenset((a["team"], b["team"]))].strftime("%Y-%m-%d")
         match = {"id": mid, "round": rnd, "date": date, "a": a, "b": b, "isOurs": ours}
         if a.get("elo") and b.get("elo"):
             match["winProb"] = win_probability(a["elo"], b["elo"])
-        r = played_by_pair.get(frozenset((a["team"], b["team"]))) if a["team"] and b["team"] else None
         if r is not None:
             mid_played = int(r.matchId)
             if r.result == "Win":

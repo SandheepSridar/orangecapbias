@@ -26,6 +26,10 @@ Read Prerequisites and "The core technique" below first. Then:
    `diff <(sort ~/Downloads/njs_..._totals.csv) <(sort data/<series>_true_totals.csv)`.
    Lines only in the new file are the **new matchIds**, or a score corrected on an old match;
    treat both as "to fetch". If the diff is empty there's nothing to do; say so and stop.
+   A new row ending `,0,0` (second innings 0/0) is usually a match **still in progress**,
+   not an abandoned one: seen 2026-10-17 with SF 20856, whose result block had no "won by"
+   text and whose scorecard had no innings tables yet. Drop that row from the new totals file
+   before copying it over (`grep -v '^<id>,'`), so the next run picks it up as new.
    Otherwise copy the new file over `data/<series>_true_totals.csv`.
 2. **Scorecards for just those matchIds.** Install the Step 2 `fetchScorecard` function, set
    `window.__ids` to the new matchIds, and run one `runBatch(ids, 1500)` with the blob
