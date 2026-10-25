@@ -2395,6 +2395,7 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key, results):
         "usQualified": any(q["isUs"] for g in groups_out for q in g["qualified"]),
         "ourResults": our_results,
         "eliminated": eliminated,
+        "champion": bool(our_results and our_results[-1]["round"] == "final" and our_results[-1]["won"]),
     }
 
 def build():
@@ -2434,7 +2435,8 @@ def build():
                   + (f"we are {u['group']}{u['seed']} vs {u['opponent'] or 'winner of ' + str(u['opponentFrom'])} "
                      f"in {u['matchId']}"
                      if u else f"{gladiators} knocked out in {knockouts['eliminated']['matchId']}"
-                     if knockouts["eliminated"] else f"{gladiators} did NOT qualify"))
+                     if knockouts["eliminated"] else f"{gladiators} won the final"
+                     if knockouts["champion"] else f"{gladiators} did NOT qualify"))
 
         # opponents = only the teams we can still actually meet, i.e. the knockout field.
         # The league stage is over, so everyone we played on the way here is history, and

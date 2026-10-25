@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — Samudhra Gladiators 2026 Season Recap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Season recap page. Layout: one 880px reading column; awards first, then the season story,
+   squad leaders and record book. Colours come from styles.css; these are the extra tints it needs. */
+:root { --gold-soft: #2a2410; --win-soft: #0f2a24; --loss-soft: #2e1619;
+  --display: "Sora", "Inter", system-ui, sans-serif; --body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; }
+* { box-sizing: border-box; }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 48px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.2; }
+h2 { font-size: 1.35rem; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+section { display: flex; flex-direction: column; gap: 16px; }
+
+/* Header */
+header { display: flex; flex-direction: column; gap: 14px; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); font-weight: 800; }
+h1 .gold { color: var(--gold); }
+.lede { color: var(--muted); font-size: 1.02rem; }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.fact { padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fact + .fact { border-left: 1px solid var(--line); }
+.fact b { font-family: var(--display); font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.fact span { font-size: .8rem; color: var(--muted); }
+@media (max-width: 620px) { .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fact:nth-child(3) { border-left: 0; } .fact:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+/* Results strip */
+.strip { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; }
+@media (max-width: 620px) { .strip { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.m { border-radius: 8px; padding: 7px 6px; font-size: .7rem; line-height: 1.3; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.m.w { background: var(--win-soft); } .m.l { background: var(--loss-soft); }
+.m .r { font-family: var(--display); font-weight: 700; font-size: .85rem; }
+.m.w .r { color: var(--win); } .m.l .r { color: var(--loss); }
+.m .o { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.m .s { color: var(--muted); font-variant-numeric: tabular-nums; }
+.m.ko { outline: 1.5px solid var(--gold); outline-offset: -1.5px; }
+.legend { font-size: .78rem; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; outline: 1.5px solid var(--gold); vertical-align: -1px; margin-right: 4px; }
+
+/* Story */
+.story { display: flex; flex-direction: column; gap: 12px; }
+
+/* Awards */
+.awards { display: flex; flex-direction: column; gap: 14px; }
+.award { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 24px; }
+@media (max-width: 620px) { .award { grid-template-columns: minmax(0, 1fr); padding: 18px; } }
+.award .who { display: flex; flex-direction: column; gap: 4px; }
+.award .tag { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.award h3 { font-size: 1.25rem; }
+.award .line { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.award .why { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.stats { display: flex; flex-wrap: wrap; gap: 6px 18px; font-variant-numeric: tabular-nums; }
+.stats div { display: flex; flex-direction: column; }
+.stats b { font-family: var(--display); font-size: 1.15rem; }
+.stats span { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.ru { font-size: .85rem; color: var(--muted); }
+.ru strong { color: var(--text); font-weight: 600; }
+.how { font-size: .8rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; }
+
+/* Tables */
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: .85rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+td.hl { color: var(--gold); font-weight: 600; }
+
+/* Record book */
+.records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+@media (max-width: 620px) { .records { grid-template-columns: minmax(0, 1fr); } }
+.rec { padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.rec .k { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.rec .v { font-family: var(--display); font-weight: 700; font-variant-numeric: tabular-nums; }
+.rec .d { font-size: .85rem; color: var(--muted); }
+
+.fin { background: var(--gold-soft); border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+.notes { font-size: .82rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+.notes p { max-width: none; }
+.series-switch .pill { text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">Division 1 2026, season in review</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link nav-link-ko" href="knockouts.html">Knockouts</a>
+    <a class="nav-link" href="recap.html">Last match recap</a>
+    <a class="nav-link" href="charts.html">Gladiators charts →</a>
+    <a class="nav-link" href="methodology.html">Methodology</a>
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </span>
+</nav>
+
+<div class="view-banner" id="view-count"></div>
+
+<div class="wrap">
+
+<header>
+  <div class="pills series-switch"><a class="pill active" href="season-recap-d1.html">2026 Division 1</a><a class="pill" href="season-recap.html">2026 Weekenders Cup</a></div>
+  <div class="eyebrow">NJSBCL · 2026 Division 1 · Season recap</div>
+  <h1>Samudhra Gladiators: <span class="gold">Division 1 champions</span></h1>
+  <p class="lede">Twenty wins from twenty-three completed matches, fourth place in Group A on 78 points, then four knockout wins in a row. The last came on 24 October, when Piscataway Avengers were bowled out for 52 in the final.</p>
+  <div class="facts">
+    <div class="fact"><b>20–3</b><span>Won–lost in completed matches</span></div>
+    <div class="fact"><b>#4</b><span>Group A: 16 won, 3 lost, 1 no result</span></div>
+    <div class="fact"><b>+1.609</b><span>League net run rate</span></div>
+    <div class="fact"><b>🏆</b><span>Won the final, beat Piscataway Avengers by 7 wickets</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Gladiators awards</h2>
+  <div class="awards">
+
+    <article class="award">
+      <div class="who">
+        <span class="tag">MOVI award</span>
+        <h3>Harshad Patil</h3>
+        <span class="line">average batting position 4.9 · 19 innings</span>
+      </div>
+      <div class="why">
+        <p>MOVI (Middle-Order Value Index) rewards the batters the run-tally award overlooks: the ones who bat at No. 4 to 7 and get fewer balls to face. Harshad scored 284 runs at a strike rate of 133 (133 runs per 100 balls), with an average batting position of 4.9. In the semi-final he batted at No. 6 and made 46 off 26 balls, the top score, to take the Gladiators to 130.</p>
+        <div class="stats">
+          <div><b>1.36</b><span>MOVI score</span></div>
+          <div><b>133.3</b><span>Strike rate</span></div>
+          <div><b>14.9</b><span>Runs per innings</span></div>
+          <div><b>30</b><span>Sixes</span></div>
+        </div>
+        <p class="ru">Runner-up: <strong>Sridhara Raju</strong>, MOVI score 0.16 (strike rate 116.1, batting at No. 5 to 7 in all but two innings). Harshad's 1.36 ranks 21st of the 231 middle-order batters in Division 1.</p>
+        <p class="how">Middle-order pool: every Division 1 batter with an average batting position of 4 to 7 and at least 7 innings (231 players, 40 teams). Score = mean of three z-scores against that pool: runs per innings, strike rate, median runs per innings. The IPL version's death-over strike rate is left out because the cricclubs over-by-over feed doesn't record which batter faced each ball.</p>
+      </div>
+    </article>
+
+    <article class="award">
+      <div class="who">
+        <span class="tag">Best batsman</span>
+        <h3>Naveen R Sripathi</h3>
+        <span class="line">20 innings · highest score 60 not out</span>
+      </div>
+      <div class="why">
+        <p>Top run-scorer, top six-hitter and the most 30-plus scores, with the best average and strike rate of the regular batters. His best was 60 not out off 35 balls to win the chase of 106 against Juggernaut, and his 44 off 20 balls against Veerans was the fastest big innings of the season.</p>
+        <div class="stats">
+          <div><b>370</b><span>Runs</span></div>
+          <div><b>20.6</b><span>Average</span></div>
+          <div><b>135.5</b><span>Strike rate</span></div>
+          <div><b>38</b><span>Sixes</span></div>
+          <div><b>5</b><span>30+ scores</span></div>
+        </div>
+        <p class="ru">Next: <strong>Harshad Patil</strong>, 284 runs; <strong>Sandeep A Shetty</strong>, 270 runs, the only player to bat in all 23 matches; <strong>Ashish Shetty</strong>, 229 runs, with a team-high 19 fours.</p>
+      </div>
+    </article>
+
+    <article class="award">
+      <div class="who">
+        <span class="tag">Best bowler</span>
+        <h3>Naveen R Sripathi</h3>
+        <span class="line">81 overs · best figures 5 for 6</span>
+      </div>
+      <div class="why">
+        <p>Fifty wickets, a wicket every 10 balls, and a run rate of about 5 an over across a team-high 81 overs. His 5 for 6 in the quarter-final, with 21 dot balls from 24, beat Group A's top seed Pway Lions while defending 71. In the final he bowled four overs for 5 runs. With best batsman, that makes it a batting and bowling double.</p>
+        <div class="stats">
+          <div><b>50</b><span>Wickets</span></div>
+          <div><b>9.7</b><span>Balls per wicket</span></div>
+          <div><b>5.01</b><span>Economy</span></div>
+          <div><b>61.7%</b><span>Dot balls</span></div>
+        </div>
+        <p class="ru">Runner-up: <strong>Harshad Patil</strong>, 41 wickets (one every 9.4 balls, including two 5-wicket hauls) at an economy of 5.28. Third: <strong>Vinit Bharadwaj</strong>, also 41 wickets, with 5 for 14 twice.</p>
+        <p class="how">Bowlers with at least 10 overs, scored on the mean of three equally weighted z-scores within the squad: wickets (higher is better), balls per wicket and economy (both lower is better). Naveen 0.83, Harshad 0.57, Vinit 0.18.</p>
+      </div>
+    </article>
+
+    <article class="award">
+      <div class="who">
+        <span class="tag">Best fielder</span>
+        <h3>Sanju S</h3>
+        <span class="line">26 dismissals · 23 as keeper</span>
+      </div>
+      <div class="why">
+        <p>The most dismissals in the squad, almost all of them behind the stumps: 23 catches as keeper, plus two in the field and a direct-hit run-out.</p>
+        <div class="stats">
+          <div><b>2</b><span>Catches</span></div>
+          <div><b>23</b><span>Catches as keeper</span></div>
+          <div><b>1</b><span>Run-outs</span></div>
+          <div><b>1</b><span>Direct hits</span></div>
+        </div>
+        <p class="ru">Runner-up: <strong>Sandeep A Shetty</strong>, 25 (10 catches, 14 as keeper, 1 run-out), the other keeper. The best outfielder was <strong>Naveen R Sripathi</strong>, with 15 (13 catches, 2 run-outs).</p>
+        <p class="how">Counted from the opposition's dismissal text in every scorecard: catches, keeper catches, stumpings and run-outs, with a shared run-out credited to each fielder named.</p>
+      </div>
+    </article>
+
+    <article class="award">
+      <div class="who">
+        <span class="tag">Clutch player of the season</span>
+        <h3>Naveen R Sripathi</h3>
+        <span class="line">top performer in 2 of 7 pressure wins</span>
+      </div>
+      <div class="why">
+        <p>He batted or bowled in six of the seven tight wins and took 16 wickets in them. Against Jetha 11 he took 4 wickets for 26 runs, then made 39 off 24 balls in a chase of 99 that was won with five wickets down. In the quarter-final, his 5 for 6 defended 71 against Pway Lions, who finished 2 runs short. In the pre-quarter-final he took 3 for 21 defending 79 against Storm Riders.</p>
+        <div class="stats">
+          <div><b>8.3</b><span>Clutch impact</span></div>
+          <div><b>2</b><span>Times top performer</span></div>
+          <div><b>69</b><span>Runs in pressure wins</span></div>
+          <div><b>16</b><span>Wickets in pressure wins</span></div>
+        </div>
+        <p class="ru">Runner-up: <strong>Harshad Patil</strong> (clutch impact 7.9), top performer three times, the most of anyone. Against Gryffindors he made 41 off 23 balls and took 5 for 19 in a 4-run win, the biggest single-match impact score of the season.</p>
+        <p class="how">Pressure wins: chases won after losing 5 or more wickets, and wins batting first by 20 runs or fewer or with a total under 80 (Nj Stars CC, Parsippany Phoenix XI, Jetha 11, WCC, Gryffindors, Storm Riders, Pway Lions). Clutch impact sums each player's Star of the Match impact score from the dashboard across those seven matches.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2>The season, match by match</h2>
+  <div class="strip">
+    <div class="m w"><span class="r">W</span><span class="o">Nj Stars CC</span><span class="s">by 20 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Parsippany Phoenix XI</span><span class="s">by 8 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Edison Rebelz</span><span class="s">by 47 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Veerans</span><span class="s">by 8 wkts</span></div>
+    <div class="m l"><span class="r">L</span><span class="o">Jersey Boys</span><span class="s">by 8 wkts</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Nj Tigers</span><span class="s">by 72 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Jetha 11</span><span class="s">by 5 wkts</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Plainsboro Eagles</span><span class="s">by 7 wkts</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">WCC</span><span class="s">by 8 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Aryans</span><span class="s">by 41 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Fdu Giants</span><span class="s">by 49 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Juggernaut</span><span class="s">by 7 wkts</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">F5</span><span class="s">by 43 runs</span></div>
+    <div class="m l"><span class="r">L</span><span class="o">Piscataway Avengers</span><span class="s">by 29 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Gryffindors</span><span class="s">by 4 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">11spartans</span><span class="s">by 28 runs</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Rowdy Rebels</span><span class="s">by 33 runs</span></div>
+    <div class="m l"><span class="r">L</span><span class="o">SAMP XI</span><span class="s">by 3 wkts</span></div>
+    <div class="m w"><span class="r">W</span><span class="o">Blue Aces CC</span><span class="s">by 32 runs</span></div>
+    <div class="m w ko"><span class="r">W · PQF</span><span class="o">Storm Riders</span><span class="s">by 8 runs</span></div>
+    <div class="m w ko"><span class="r">W · QF</span><span class="o">Pway Lions</span><span class="s">by 2 runs</span></div>
+    <div class="m w ko"><span class="r">W · SF</span><span class="o">Newport CC</span><span class="s">by 54 runs</span></div>
+    <div class="m w ko"><span class="r">W · Final</span><span class="o">Piscataway Avengers</span><span class="s">by 7 wkts</span></div>
+  </div>
+  <div class="legend"><i></i>Knockout match. One league fixture was a no-result and is not shown.</div>
+  <div class="story">
+    <p>The Gladiators won their first four matches, lost to Jersey Boys on 17 May after making 74 for 8, and then won eight in a row from 30 May to 25 July. That run included a 72-run win over Nj Tigers, held to 43 for 9 while Vinit Bharadwaj took 5 for 14, and the season's highest total, 146 for 9 against F5.</p>
+    <p>August brought two of the three league defeats. Piscataway Avengers bowled the Gladiators out for 80 chasing 110, and SAMP XI won by 3 wickets after the Gladiators were bowled out for 63. In between came a 4-run defence against Gryffindors, and a 32-run win over Blue Aces CC closed the league stage. The Gladiators finished fourth in Group A, level on 78 points with third-placed Warriors and behind them on net run rate.</p>
+    <p>In the knockouts the bowlers carried a batting order that made 79 all out and 71 all out in the first two rounds. Storm Riders were held to 71, with Ankur Chaturvedi bowling four overs for 9 runs and 20 dot balls. Then came Pway Lions, the Group A top seed, who had lost one league match all season. Naveen R Sripathi's 5 for 6 left them 69 for 9, 2 runs short. In the semi-final Harshad Patil's 46 off 26 balls took the Gladiators to 130 for 7, and Newport CC were bowled out for 76.</p>
+  </div>
+</section>
+
+<section>
+  <div class="fin">
+    <div class="eyebrow">Final · 24 Oct 2026</div>
+    <h2>52 all out, and the title</h2>
+    <p>Piscataway Avengers, who had beaten the Gladiators by 29 runs on 2 August, won the toss and batted. They were bowled out in 15.2 overs, and only Niraj Patel (23 off 15 balls) reached double figures. Naveen R Sripathi bowled four overs for 5 runs with 21 dot balls, and Ankur Chaturvedi four overs for 9. Harshad Patil and Vinit Bharadwaj took three wickets each, and Vinit finished it with wickets off consecutive balls. The chase took 8.3 overs: Dileep Reddy made 27 off 25 balls, and the Gladiators reached 58 for 3 to win by 7 wickets.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Squad leaders</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Batting</th><th>Innings</th><th>Runs</th><th>Average</th><th>Strike rate</th><th>Highest</th><th>Sixes</th><th>Avg position</th></tr></thead>
+      <tbody>
+        <tr><td>Naveen R Sripathi</td><td>20</td><td class="hl">370</td><td class="hl">20.6</td><td class="hl">135.5</td><td class="hl">60*</td><td class="hl">38</td><td>3.7</td></tr>
+        <tr><td>Harshad Patil</td><td>19</td><td>284</td><td>16.7</td><td>133.3</td><td>46</td><td>30</td><td>4.9</td></tr>
+        <tr><td>Sandeep A Shetty</td><td>23</td><td>270</td><td>12.9</td><td>103.1</td><td>38</td><td>26</td><td>3.0</td></tr>
+        <tr><td>Ashish Shetty</td><td>17</td><td>229</td><td>13.5</td><td>95.8</td><td>40</td><td>10</td><td>1.9</td></tr>
+        <tr><td>Dileep Reddy</td><td>10</td><td>139</td><td>15.4</td><td>98.6</td><td>28</td><td>12</td><td>3.3</td></tr>
+        <tr><td>Sanju S</td><td>16</td><td>136</td><td>10.5</td><td>100.7</td><td>31*</td><td>10</td><td>6.9</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Bowling</th><th>Overs</th><th>Wickets</th><th>Economy</th><th>Balls per wicket</th><th>Dot balls %</th><th>Best figures</th></tr></thead>
+      <tbody>
+        <tr><td>Naveen R Sripathi</td><td>81.0</td><td class="hl">50</td><td>5.01</td><td>9.7</td><td>61.7</td><td class="hl">5/6</td></tr>
+        <tr><td>Harshad Patil</td><td>64.1</td><td>41</td><td>5.28</td><td>9.4</td><td>59.2</td><td>5/19</td></tr>
+        <tr><td>Vinit Bharadwaj</td><td>75.1</td><td>41</td><td>5.43</td><td>11.0</td><td>59.6</td><td>5/14</td></tr>
+        <tr><td>Ankur Chaturvedi</td><td>62.3</td><td>28</td><td class="hl">4.69</td><td>13.4</td><td class="hl">64.3</td><td>3/10</td></tr>
+        <tr><td>Sandeep A Shetty</td><td>35.3</td><td>18</td><td>6.65</td><td>11.8</td><td>54.9</td><td>4/20</td></tr>
+        <tr><td>Suraj Pai Madhukar</td><td>16.2</td><td>11</td><td>5.88</td><td class="hl">8.9</td><td>54.1</td><td>3/10</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>The record book</h2>
+  <div class="records">
+    <div class="rec"><span class="k">Highest total</span><span class="v">146 for 9 v F5</span><span class="d">Won by 43 runs</span></div>
+    <div class="rec"><span class="k">Best bowling</span><span class="v">5 for 6 · Naveen R Sripathi</span><span class="d">5 wickets for 6 runs in 4 overs, with 21 dot balls, v Pway Lions in the quarter-final</span></div>
+    <div class="rec"><span class="k">Fastest big innings</span><span class="v">44 off 20 balls · Naveen R Sripathi</span><span class="d">6 sixes and one four, batting at No. 2, v Veerans</span></div>
+    <div class="rec"><span class="k">Lowest opposition total</span><span class="v">43 for 9 · Nj Tigers</span><span class="d">Vinit Bharadwaj took 5 wickets for 14 runs. The lowest all-out total was 52, by Piscataway Avengers in the final.</span></div>
+    <div class="rec"><span class="k">Sixes over fours</span><span class="v">165 sixes, 78 fours</span><span class="d">The squad hit more than twice as many sixes as fours</span></div>
+    <div class="rec"><span class="k">Five-wicket hauls</span><span class="v">6</span><span class="d">Two each for Naveen R Sripathi, Harshad Patil and Vinit Bharadwaj</span></div>
+    <div class="rec"><span class="k">Bowled them out</span><span class="v">11 of 23</span><span class="d">Opponents were bowled out in 11 of the 23 matches, including three of the four knockout opponents</span></div>
+    <div class="rec"><span class="k">Batting first v chasing</span><span class="v">Won 15, lost 2 batting first; won 5, lost 1 chasing</span><span class="d">Three totals under 80 were defended: 76 v WCC, 79 v Storm Riders, 71 v Pway Lions</span></div>
+    <div class="rec"><span class="k">Runs scored v conceded</span><span class="v">2,290 scored, 1,859 conceded</span><span class="d">19 players used across 23 completed matches</span></div>
+    <div class="rec"><span class="k">Most Star of the Match awards</span><span class="v">9 · Harshad Patil</span><span class="d">Naveen R Sripathi 7, Vinit Bharadwaj 3</span></div>
+    <div class="rec"><span class="k">Tightest finish</span><span class="v">Won by 2 runs v Pway Lions</span><span class="d">Defended 71 all out in the quarter-final; Pway Lions finished on 69 for 9</span></div>
+    <div class="rec"><span class="k">Lowest total defended</span><span class="v">71 all out v Pway Lions</span><span class="d">Nobody passed 19; Ashish Shetty top-scored with 19 off 19 balls</span></div>
+  </div>
+</section>
+
+<section class="notes">
+  <p>Source: cricclubs.com/NJSBCL scorecards for all 23 completed Samudhra Gladiators matches (19 league, 4 knockout), scraped 24 Oct 2026 into the NJSBCL Scout dashboard. Team totals come from the official result lines, so they include extras. Player stats exclude extras.</p>
+  <p>Squad leaders tables show players with the most runs and wickets. Batting strike rate is runs per 100 balls, and * after a score means not out. cricclubs renamed Sandeep A Shetty's profile to "Sandeep Shetty" before the final (same player ID), so his final appearance is counted under his season name.</p>
+</section>
+
+</div>
+<script src="view-counter.js"></script>
+<script>
+(function () {
+  if (new URLSearchParams(location.search).has('notrack')) {
+    localStorage.setItem('cf_notrack', '1');
+  }
+  if (!localStorage.getItem('cf_notrack')) {
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', '{"token": "923ae2140c224a73a0d1a4c30b38c433"}');
+    document.body.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>

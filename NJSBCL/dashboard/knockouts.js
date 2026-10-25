@@ -78,6 +78,18 @@ function renderOurTie() {
       `${s.gladiators} were knocked out by ${e.by} in the ${label.toLowerCase()} (${e.matchId}).`));
     return;
   }
+  if (!ko.us && ko.champion) {
+    const card = el("div", "ko-hero");
+    card.appendChild(el("div", "ko-hero-head",
+      `<div class="ko-hero-side"><span class="ko-hero-team us">🏆 ${s.gladiators} are ${s.label} champions</span></div>`));
+    ko.ourResults.forEach((r) => {
+      const label = (ko.bracket.rounds.find((x) => x.key === r.round) || {}).label || r.matchId;
+      card.appendChild(el("div", "ko-hero-sub ko-through",
+        `✓ ${label}: beat ${r.opponent}, ${r.ourScore} v ${r.theirScore}`));
+    });
+    box.appendChild(card);
+    return;
+  }
   if (!ko.us) {
     box.appendChild(el("div", "empty-note",
       `${s.gladiators} did not finish in the top ${ko.qualifiersPerGroup} of their group, so there's no knockout tie to scout.`));
