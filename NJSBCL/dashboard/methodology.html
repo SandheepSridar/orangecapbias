@@ -21,6 +21,7 @@
     <a class="nav-link" href="season-recap.html">Season recap</a>
     <a class="nav-link nav-link-ko" href="knockouts.html">Knockouts</a>
     <a class="nav-link" href="charts.html">Gladiators charts →</a>
+    <a class="nav-link" href="all-stats.html">All stats</a>
     <a class="nav-link" href="changelog.html">Changelog</a>
   </span>
 </nav>
@@ -54,6 +55,7 @@
   <a href="#sec-recap-verdicts" class="side-toc-link">Match recap verdicts</a>
   <a href="#sec-followthrough" class="side-toc-link">AI insight follow-through</a>
   <a href="#sec-star" class="side-toc-link">Star of the Match</a>
+  <a href="#sec-allstats" class="side-toc-link">Crucial catches &amp; quality wickets</a>
 </nav>
 
 <main>
@@ -569,6 +571,29 @@ impact score = battingZ + bowlingZ   (whichever apply — 0 contribution from a 
         off 30 balls with big boundary hitting (67 raw batting points) would score battingZ =
         (67 &minus; 10) &divide; 16 &asymp; <b>+3.59</b> — now correctly ranking above the bowling
         performance, which the old raw-points version would have gotten backwards.</p>
+    </div>
+  </section>
+
+  <section id="sec-allstats">
+    <h2>Crucial catches &amp; quality wickets <span class="q">— All stats page</span></h2>
+    <p class="subhead">The All stats page lists every Samudhra and VRK Gladiators player, per series or both squads added
+      together (matched by name). Two of its columns give
+      extra credit for dismissing a <em>good batter</em>. A good batter has played 5+ innings and has
+      a season batting average in the top 25% of that group, across the whole league in that series. Averages are runs ÷ dismissals, or plain
+      runs if the batter was never out. The cutoff is worked out separately for each series and shown
+      under the tables.</p>
+    <div class="formula">good batter     = innings ≥ 5 and season average ≥ 75th percentile of those batters
+crucial catch   = a catch (outfield, keeper or caught &amp; bowled) of a good batter
+quality wicket  = a wicket credited to the bowler (not a run-out) of a good batter</div>
+    <p class="subhead">Fielders come from scorecard dismissal text, which shortens names ("c Mohit P b
+      Ronak R"). Each short name is matched to the full name of a player on the fielding side. If two
+      teammates share the short form, the players in that match break the tie. A fielder who never
+      batted or bowled for the team keeps the short name. Keeper catches are the ones marked † on the
+      scorecard. A run-out credits every fielder named.</p>
+    <div class="doc-example">
+      <p><b>Example:</b> say the cutoff is an average of 14.0. A catch to dismiss a batter averaging
+        30 is a crucial catch, and the bowler gets a quality wicket. A catch off a batter averaging 8,
+        or one with only 3 innings, counts as a normal catch and a normal wicket.</p>
     </div>
   </section>
 

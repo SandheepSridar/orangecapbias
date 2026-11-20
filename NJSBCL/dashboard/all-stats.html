@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NJSBCL Scout — All Stats</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* All stats page: the Gladiators squads (one series or both), one table per discipline. Table look copied from
+   season-recap.html's squad leaders; colours come from styles.css. */
+:root { --display: "Sora", "Inter", system-ui, sans-serif; --body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; }
+* { box-sizing: border-box; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 20px; }
+h1 { font-family: var(--display); font-size: clamp(1.9rem, 5vw, 2.5rem); font-weight: 800; margin: 0; line-height: 1.2; }
+h1 .gold { color: var(--gold); }
+.lede { color: var(--muted); margin: 0; max-width: 72ch; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--panel); }
+.seg button { font: inherit; font-size: .85rem; color: var(--muted); background: none; border: 0; padding: 8px 14px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { color: var(--bg); background: var(--gold); font-weight: 600; }
+.search { flex: 1 1 220px; min-width: 0; font: inherit; font-size: .9rem; color: var(--text); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+.search:focus { outline: 2px solid var(--gold); outline-offset: -1px; }
+.qual { font-size: .82rem; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.count { font-size: .8rem; color: var(--muted); }
+
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: .85rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; position: sticky; left: 0; background: var(--panel); }
+th:nth-child(2), td:nth-child(2) { text-align: left; color: var(--muted); }
+tbody tr:last-child td { border-bottom: 0; }
+th { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; cursor: pointer; user-select: none; }
+th[aria-sort] { color: var(--text); }
+th[aria-sort="descending"]::after { content: " ↓"; }
+th[aria-sort="ascending"]::after { content: " ↑"; }
+td.hl { color: var(--gold); font-weight: 600; }
+td.dim { color: var(--grey); }
+button.crucial { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
+tr.detail td { text-align: left; white-space: normal; color: var(--muted); font-size: .8rem; position: static; }
+.more { align-self: center; font: inherit; font-size: .85rem; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 16px; cursor: pointer; }
+.notes { font-size: .82rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+.notes p { margin: 0; max-width: 90ch; }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><span class="gold">🏏</span>NJSBCL Scout</span>
+  <span class="nav-right">
+    <span class="nav-sub">Gladiators, both squads</span>
+    <a class="nav-link" href="index.html">← Matchup analysis</a>
+    <a class="nav-link nav-link-ko" href="knockouts.html">Knockouts</a>
+    <a class="nav-link" href="recap.html">Last match recap</a>
+    <a class="nav-link" href="season-recap.html">Season recap</a>
+    <a class="nav-link" href="charts.html">Gladiators charts →</a>
+    <a class="nav-link" href="methodology.html">Methodology</a>
+    <a class="nav-link" href="changelog.html">Changelog</a>
+  </span>
+</nav>
+
+<div class="view-banner" id="view-count"></div>
+
+<div class="wrap">
+  <header>
+    <h1>All stats <span class="gold">2026</span></h1>
+  </header>
+  <p class="lede">Batting, bowling and fielding for every Gladiators player this season: Samudhra Gladiators in Division 1, VRK Gladiators in the Weekenders Cup, or both squads added together under All. Search by player, and click a column heading to sort.</p>
+
+  <div class="filters">
+    <div class="seg" id="series" role="group" aria-label="Series"></div>
+    <div class="seg" id="tabs" role="group" aria-label="Discipline"></div>
+  </div>
+  <div class="filters">
+    <input class="search" id="q" type="search" placeholder="Search player" aria-label="Search player">
+    <label class="qual"><input type="checkbox" id="qual"> <span id="qual-label"></span></label>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="tbl"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+  <button class="more" id="more" hidden></button>
+
+  <div class="notes" id="notes"></div>
+</div>
+
+<script src="allstats.js"></script>
+<script>
+(function () {
+  var PAGE = 100;
+  var SERIES = [["all", "All"], ["division1", "Division 1"], ["weekenders", "Weekenders Cup"]];
+  var TABS = [["batting", "Batting"], ["bowling", "Bowling"], ["fielding", "Fielding"]];
+  // [key, heading, format, first-click direction, leader highlight]
+  var COLS = {
+    batting: [["player", "Player"], ["team", "Team"], ["innings", "Inns"], ["runs", "Runs", 0, -1, 1],
+      ["avg", "Average", 1], ["sr", "Strike rate", 1], ["hs", "Highest", "hs", -1, 1], ["fours", "Fours"],
+      ["sixes", "Sixes", 0, -1, 1], ["avgPos", "Avg position", 1, 1]],
+    bowling: [["player", "Player"], ["team", "Team"], ["overs", "Overs", "overs"], ["wickets", "Wickets", 0, -1, 1],
+      ["qualityWickets", "Quality wkts", 0, -1, 1], ["econ", "Economy", 2, 1], ["ballsPerWkt", "Balls per wkt", 1, 1],
+      ["dotPct", "Dot balls %", 1], ["best", "Best", "best", -1, 1]],
+    fielding: [["player", "Player"], ["team", "Team"], ["matches", "Matches"], ["catches", "Catches", 0, -1, 1],
+      ["wkCatches", "WK catches", 0, -1, 1], ["crucialCatches", "Crucial catches", "crucial", -1, 1],
+      ["stumpings", "Stumpings", 0, -1, 1], ["runOuts", "Run outs", 0, -1, 1], ["total", "Total", 0, -1, 1]]
+  };
+  var DEFAULT_SORT = { batting: "runs", bowling: "wickets", fielding: "total" };
+  // "Regulars only" thresholds, so rate columns aren't topped by one-innings cameos.
+  var QUAL = {
+    batting: [function (r) { return r.innings >= 5; }, "5+ innings only"],
+    bowling: [function (r) { return r.balls >= 60; }, "10+ overs only"],
+    fielding: [function (r) { return (r.matches || 0) >= 5; }, "5+ matches only"]
+  };
+
+  var state = { series: "all", tab: "batting", sort: "runs", dir: -1, q: "", qual: false, shown: PAGE, open: {} };
+  try { var saved = JSON.parse(localStorage.getItem("allstats-view") || "{}");
+    if (NJSBCL_ALLSTATS.series[saved.series]) state.series = saved.series; if (saved.tab) { state.tab = saved.tab; state.sort = DEFAULT_SORT[saved.tab]; } } catch (e) {}
+
+  function data() { return NJSBCL_ALLSTATS.series[state.series][state.tab]; }
+
+  function sortVal(r, key) {
+    if (key === "best") return r.bestW * 1000 - r.bestR;
+    if (key === "overs") return r.balls;
+    return r[key];
+  }
+  function fmt(r, col) {
+    var v = r[col[0]], f = col[2];
+    if (f === "hs") return v + (r.hsNotOut ? "*" : "");
+    if (f === "overs" || f === "best") return v;
+    if (v === null || v === undefined) return "–";
+    if (typeof f === "number" && f > 0) return v.toFixed(f);
+    return v;
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  function seg(el, items, cur, onPick) {
+    el.innerHTML = items.map(function (it) {
+      return '<button type="button" data-k="' + it[0] + '" aria-pressed="' + (it[0] === cur) + '">' + it[1] + "</button>";
+    }).join("");
+    el.onclick = function (e) { var b = e.target.closest("button"); if (b) onPick(b.dataset.k); };
+  }
+
+  function render() {
+    try { localStorage.setItem("allstats-view", JSON.stringify({ series: state.series, tab: state.tab })); } catch (e) {}
+    seg(document.getElementById("series"), SERIES, state.series, function (k) { state.series = k; state.shown = PAGE; state.open = {}; render(); });
+    seg(document.getElementById("tabs"), TABS, state.tab, function (k) {
+      state.tab = k; state.sort = DEFAULT_SORT[k]; state.dir = -1; state.shown = PAGE; state.open = {}; render(); });
+    document.getElementById("qual-label").textContent = QUAL[state.tab][1];
+
+    var cols = COLS[state.tab], q = state.q.trim().toLowerCase();
+    var list = data().filter(function (r) {
+      return (!q || r.player.toLowerCase().indexOf(q) >= 0 || r.team.toLowerCase().indexOf(q) >= 0)
+        && (!state.qual || QUAL[state.tab][0](r));
+    });
+    list.sort(function (a, b) {
+      var x = sortVal(a, state.sort), y = sortVal(b, state.sort);
+      if (x === null || x === undefined) return (y === null || y === undefined) ? 0 : 1; // blanks always last
+      if (y === null || y === undefined) return -1;
+      if (typeof x === "string") return state.dir * x.localeCompare(y);
+      return state.dir * (x - y);
+    });
+
+    // Leader per highlighted column, across everything the current filter shows
+    var lead = {};
+    cols.forEach(function (c) { if (c[4]) list.forEach(function (r) {
+      var v = sortVal(r, c[0]); if (v !== null && v !== undefined && (lead[c[0]] === undefined || v > lead[c[0]])) lead[c[0]] = v; }); });
+
+    var thead = document.querySelector("#tbl thead");
+    thead.innerHTML = "<tr>" + cols.map(function (c) {
+      var s = c[0] === state.sort ? ' aria-sort="' + (state.dir < 0 ? "descending" : "ascending") + '"' : "";
+      return '<th data-k="' + c[0] + '"' + s + ">" + c[1] + "</th>";
+    }).join("") + "</tr>";
+
+    var html = list.slice(0, state.shown).map(function (r) {
+      var id = r.team + "|" + r.player;
+      var tr = "<tr>" + cols.map(function (c) {
+        var cls = lead[c[0]] !== undefined && lead[c[0]] > 0 && sortVal(r, c[0]) === lead[c[0]] ? ' class="hl"' : "";
+        if (c[2] === "crucial" && r.crucialCatches) {
+          return "<td" + cls + '><button class="crucial" type="button" data-id="' + esc(id) + '" title="'
+            + esc(r.crucialList.join(", ")) + '">' + r.crucialCatches + "</button></td>";
+        }
+        return "<td" + cls + ">" + esc(fmt(r, c)) + "</td>";
+      }).join("") + "</tr>";
+      if (state.open[id]) tr += '<tr class="detail"><td colspan="' + cols.length + '">Caught: ' + esc(r.crucialList.join(", "))
+        + " (runs scored before the catch in brackets)</td></tr>";
+      return tr;
+    }).join("");
+    document.querySelector("#tbl tbody").innerHTML = html || '<tr><td colspan="' + cols.length + '">No players match.</td></tr>';
+
+    document.getElementById("count").textContent = list.length + " player" + (list.length === 1 ? "" : "s");
+    var more = document.getElementById("more");
+    more.hidden = list.length <= state.shown;
+    more.textContent = "Show all " + list.length;
+
+    // Good-batter cutoffs come from each whole series; All shows both.
+    var keys = state.series === "all" ? ["division1", "weekenders"] : [state.series];
+    var r0 = NJSBCL_ALLSTATS.series[keys[0]].goodBatterRule;
+    var cut = keys.map(function (k) {
+      var r = NJSBCL_ALLSTATS.series[k].goodBatterRule, name = k === "division1" ? "Division 1" : "the Weekenders Cup";
+      return "an average of " + r.cutoffAvg.toFixed(1) + " or better in " + name + " (" + r.count + " of " + r.pool + " batters)";
+    }).join(", and ");
+    document.getElementById("notes").innerHTML =
+      "<p><b>Good batter</b>: in the top " + (100 - r0.percentile) + "% of the whole league in that series by season batting average, among batters with "
+      + r0.minInnings + "+ innings. That means " + cut + ". A <b>crucial catch</b> is a catch, including by the keeper, of a good batter. A <b>quality wicket</b> is a bowler's wicket of a good batter. Run-outs don't count, because the bowler isn't credited.</p>"
+      + (state.series === "all" ? "<p>All adds each player's Samudhra and VRK numbers together, matched by name, and recalculates the averages and rates from the totals. Sandeep Shetty's Division 1 final is counted under Sandeep A Shetty, because cricclubs renamed the same profile.</p>" : "")
+      + "<p>Fielders come from the scorecard dismissal text, which abbreviates names (\"c Mohit P b …\"). They're matched to the full name of the fielding team's player. A fielder who never batted or bowled for that team keeps the short name. Run-outs credit every fielder named. * after a score means not out. Strike rate is runs per 100 balls, and average position is where the player came in, by scorecard order.</p>"
+      + "<p>Data as of " + NJSBCL_ALLSTATS.generated + ".</p>";
+  }
+
+  document.querySelector("#tbl thead").addEventListener("click", function (e) {
+    var th = e.target.closest("th"); if (!th) return;
+    var k = th.dataset.k, col = COLS[state.tab].filter(function (c) { return c[0] === k; })[0];
+    if (state.sort === k) state.dir = -state.dir;
+    else { state.sort = k; state.dir = (k === "player" || k === "team") ? 1 : (col[3] || -1); }
+    render();
+  });
+  document.querySelector("#tbl tbody").addEventListener("click", function (e) {
+    var b = e.target.closest("button.crucial"); if (!b) return;
+    state.open[b.dataset.id] = !state.open[b.dataset.id]; render();
+  });
+  document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value; state.shown = PAGE; render(); });
+  document.getElementById("qual").addEventListener("change", function (e) { state.qual = e.target.checked; render(); });
+  document.getElementById("more").addEventListener("click", function () { state.shown = Infinity; render(); });
+  render();
+})();
+</script>
+<script src="view-counter.js"></script>
+<script>
+(function () {
+  if (new URLSearchParams(location.search).has('notrack')) {
+    localStorage.setItem('cf_notrack', '1');
+  }
+  if (!localStorage.getItem('cf_notrack')) {
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', '{"token": "923ae2140c224a73a0d1a4c30b38c433"}');
+    document.body.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>

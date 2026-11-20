@@ -19,6 +19,7 @@ import pandas as pd
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 OUT_FILE = Path(__file__).parent / "data.js"
+ALLSTATS_FILE = Path(__file__).parent / "allstats.js"
 # Real current date, not a fixed snapshot — load_upcoming() filters the schedule against this,
 # so a hardcoded date here would silently stop dropping played matches from "upcoming fixtures"
 # once that date passed (caught 2026-08-16: a match played the day before was still showing as
@@ -66,6 +67,13 @@ MIN_OVERS_FOR_WEAKNESS = 8
 # Rule 7: "the top 8 teams from each group will qualify for the knockouts".
 QUALIFIERS_PER_GROUP = 8
 MIN_DEATH_OVERS = 3
+# All-stats "good batter": top quartile of the series by season batting average, among
+# batters with at least this many innings. Drives crucial catches and quality wickets.
+CRUCIAL_MIN_INNINGS = 5
+CRUCIAL_PERCENTILE = 0.75
+# All-stats only: one person under two cricclubs names. Sandeep A Shetty's profile was renamed
+# "Sandeep Shetty" before the Division 1 final (same player ID — see season-recap-d1.html).
+ALLSTATS_ALIASES = {("Samudhra Gladiators", "Sandeep Shetty"): "Sandeep A Shetty"}
 
 
 # ── Published knockout bracket ───────────────────────────────────────
@@ -1048,6 +1056,225 @@ def batting_position_avg(bat, team):
     return sub.groupby("playerClean")["position"].mean().round(1).to_dict()
 
 
+# ── All stats page (every player in the series) ─────────────────────────
+BOWLER_CREDITED = {"Caught", "Caught & Bowled", "LBW", "Stumped", "Bowled", "Hit Wicket"}
+
+
+def parse_fielders(raw):
+    """Fielders credited in a dismissal string, as [(kind, abbreviated name)].
+    kind is catch | wk_catch | stumping | run_out. c&b is a catch by the bowler; a
+    "run out (A/B)" credits both. Substitutes aren't on any roster, so they're dropped."""
+    if pd.isna(raw):
+        return []
+    s = str(raw).strip()
+    out = []
+    m = re.match(r"(?i)^c\s*&\s*b\s+(.+)$", s)
+    if m:
+        out = [("catch", m.group(1))]
+    elif (m := re.match(r"^c\s*(†)?\s*(.+?)\s+b\s+.+$", s)):
+        out = [("wk_catch" if m.group(1) else "catch", m.group(2))]
+    elif (m := re.match(r"(?i)^st\s*(†)?\s*(.+?)\s+b\s+.+$", s)):
+        out = [("stumping", m.group(2))]
+    elif (m := re.match(r"(?i)^run out\s*\((.*)\)", s)):
+        out = [("run_out", n) for n in m.group(1).split("/")]
+    out = [(k, n.replace("†", "").strip()) for k, n in out]
+    return [(k, n) for k, n in out if n and not n.lower().startswith("sub")]
+
+
+def build_roster_map(bat, bowl):
+    """(team, name-or-abbreviation lowercased) -> set of full names, from everyone who batted
+    or bowled for that team. Unlike build_abbrev_map (bowlers only), this also covers keepers
+    and fielders who never bowl. A cricclubs name carrying a " - Team" disambiguation suffix
+    is also keyed without it, since dismissal text abbreviates the bare name."""
+    roster = {}
+    people = pd.concat([bat[["team", "playerClean"]].rename(columns={"playerClean": "name"}),
+                        bowl[["team", "bowlerClean"]].rename(columns={"bowlerClean": "name"})])
+    for team, full in people.drop_duplicates().itertuples(index=False):
+        if not full:
+            continue
+        base = full.split(" - ")[0]
+        for key in {full, abbrev(full), base, abbrev(base)}:
+            roster.setdefault((team, key.lower()), set()).add(full)
+    return roster
+
+
+def top_quartile_batters(bat):
+    """The series' "good batters": (team, player) with >= CRUCIAL_MIN_INNINGS innings and a
+    season average at or above the CRUCIAL_PERCENTILE cutoff of that group. Average uses
+    team_batting_agg's formula (runs / outs, or runs if never out)."""
+    g = bat.groupby(["team", "playerClean"])
+    df = pd.DataFrame({"inns": g.size(), "runs": g["R"].sum(), "outs": g["dtype"].count()})
+    df["avg"] = df.apply(lambda r: r["runs"] / r["outs"] if r["outs"] else r["runs"], axis=1)
+    pool = df[df["inns"] >= CRUCIAL_MIN_INNINGS]
+    cutoff = float(pool["avg"].quantile(CRUCIAL_PERCENTILE))
+    top = set(pool[pool["avg"] >= cutoff].index)
+    rule = {"minInnings": CRUCIAL_MIN_INNINGS, "percentile": int(CRUCIAL_PERCENTILE * 100),
+            "cutoffAvg": round(cutoff, 1), "count": len(top), "pool": len(pool)}
+    return top, rule
+
+
+def all_player_stats(bat, bowl):
+    """One row per (team, player) for batting, bowling and fielding across the whole series
+    (build() keeps only the Gladiators' rows for all-stats.html; the good-batter cutoff and
+    fielder resolution still need the whole league). Fielders come from dismissal text (abbreviated, e.g. "c Mohit P b
+    Ronak R"), resolved against the fielding side's roster; when an abbreviation fits two
+    teammates, the players in that match break the tie, and anything still unresolved is
+    kept under its raw abbreviation and counted in the build output."""
+    def alias(team, name):
+        return ALLSTATS_ALIASES.get((team, name), name)
+
+    # Fielder abbreviations are resolved against the names as scraped (dismissal text
+    # abbreviates whatever cricclubs called the player that day); aliases apply after.
+    roster = build_roster_map(bat, bowl)
+    in_match = {}
+    for mid, team, name in itertools.chain(bat[["matchId", "team", "playerClean"]].itertuples(index=False),
+                                           bowl[["matchId", "team", "bowlerClean"]].itertuples(index=False)):
+        in_match.setdefault((mid, team), set()).add(name)
+    matches_played = {}
+    for (mid, team), names in in_match.items():
+        for n in {alias(team, n) for n in names}:
+            matches_played[(team, n)] = matches_played.get((team, n), 0) + 1
+
+    bat, bowl = bat.copy(), bowl.copy()
+    bat["playerClean"] = [alias(t, n) for t, n in zip(bat["team"], bat["playerClean"])]
+    bowl["bowlerClean"] = [alias(t, n) for t, n in zip(bowl["team"], bowl["bowlerClean"])]
+    top, rule = top_quartile_batters(bat)
+    teams_per_match = bat.groupby("matchId")["team"].unique().to_dict()
+
+    def fielding_team(row):
+        others = [t for t in teams_per_match[row["matchId"]] if t != row["team"]]
+        return others[0] if others else None
+
+    bat["position"] = bat.groupby(["matchId", "team"]).cumcount() + 1
+    bat["fieldTeam"] = bat.apply(fielding_team, axis=1)
+    bat["bowlerResolved"] = [n if pd.isna(n) else alias(t, n)
+                             for t, n in zip(bat["fieldTeam"], bat["bowlerResolved"])]
+    bat["goodBatter"] = [(t, p) in top for t, p in zip(bat["team"], bat["playerClean"])]
+
+    # Batting
+    batting = []
+    for (team, player), g in bat.groupby(["team", "playerClean"]):
+        runs, balls, outs = int(g["R"].sum()), int(g["B"].sum()), int(g["dtype"].count())
+        hs = int(g["R"].max())
+        batting.append({
+            "player": player, "team": team, "innings": len(g), "runs": runs, "balls": balls,
+            "outs": outs, "avg": round(runs / outs, 1) if outs else None,
+            "sr": round(100 * runs / balls, 1) if balls else None,
+            "hs": hs, "hsNotOut": bool(g[g["R"] == hs]["dtype"].isna().any()),
+            "fours": int(g["4s"].sum()), "sixes": int(g["6s"].sum()),
+            "avgPos": round(float(g["position"].mean()), 1),
+        })
+
+    # Bowling — quality wickets are bowler-credited dismissals of a good batter
+    qual = bat[bat["dtype"].isin(BOWLER_CREDITED) & bat["bowlerResolved"].notna() & bat["goodBatter"]]
+    quality = qual.groupby(["fieldTeam", "bowlerResolved"]).size().to_dict()
+    bowl["balls"] = bowl["O"].apply(overs_to_balls)
+    bowling = []
+    for (team, player), g in bowl.groupby(["team", "bowlerClean"]):
+        balls, runs, wkts, dots = int(g["balls"].sum()), int(g["R"].sum()), int(g["W"].sum()), int(g["Dot"].sum())
+        best = g.sort_values(["W", "R"], ascending=[False, True]).iloc[0]
+        bowling.append({
+            "player": player, "team": team, "innings": len(g), "overs": balls_to_overs_str(balls),
+            "balls": balls, "runs": runs, "dots": dots, "wickets": wkts, "qualityWickets": int(quality.get((team, player), 0)),
+            "econ": round(runs / (balls / 6), 2) if balls else None,
+            "ballsPerWkt": round(balls / wkts, 1) if wkts else None,
+            "dotPct": round(100 * dots / balls, 1) if balls else None,
+            "best": f"{int(best['W'])}/{int(best['R'])}", "bestW": int(best["W"]), "bestR": int(best["R"]),
+        })
+
+    # Fielding
+    field, unresolved, ambiguous = {}, 0, 0
+    for r in bat[bat["dismissal"].notna()].itertuples(index=False):
+        for kind, short in parse_fielders(r.dismissal):
+            cands = roster.get((r.fieldTeam, short.lower()), set())
+            if len(cands) > 1:
+                cands = cands & in_match.get((r.matchId, r.fieldTeam), set())
+            if len(cands) == 1:
+                name = alias(r.fieldTeam, next(iter(cands)))
+            else:
+                name = short
+                ambiguous += len(cands) > 1
+                unresolved += not cands
+            f = field.setdefault((r.fieldTeam, name), {
+                "player": name, "team": r.fieldTeam, "catches": 0, "wkCatches": 0,
+                "stumpings": 0, "runOuts": 0, "crucialCatches": 0, "crucialList": []})
+            f[{"catch": "catches", "wk_catch": "wkCatches", "stumping": "stumpings",
+               "run_out": "runOuts"}[kind]] += 1
+            if kind in ("catch", "wk_catch") and r.goodBatter:
+                f["crucialCatches"] += 1
+                f["crucialList"].append(f"{r.playerClean} ({int(r.R)})")
+    fielding = []
+    for (team, name), f in field.items():
+        f["matches"] = matches_played.get((team, name))
+        f["total"] = f["catches"] + f["wkCatches"] + f["stumpings"] + f["runOuts"]
+        fielding.append(f)
+
+    stats = {"batting": batting, "bowling": bowling, "fielding": fielding, "goodBatterRule": rule}
+    return stats, {"unresolved": unresolved, "ambiguous": ambiguous}
+
+
+def combine_gladiators(per_series):
+    """The all-stats "All" view: both Gladiators squads (Samudhra in Division 1, VRK in the
+    Weekenders Cup) added together, one row per player name. Only these two teams, because
+    without a player ID a name can't be trusted across other clubs (many common names belong
+    to different people); inside one club across its two squads it can. Sums are re-derived
+    into rates; crucial catches / quality wickets keep each series' own good-batter rule.
+    `per_series` is [(gladiators team, that series' Gladiators-only stats)]."""
+    def rows(kind):
+        return [r for _, st in per_series for r in st[kind]]
+
+    def team_label(group):
+        teams = sorted({r["team"] for r in group})
+        # "Samudhra + VRK" rather than both full names, which would push the table off-screen
+        return teams[0] if len(teams) == 1 else " + ".join(t.replace(" Gladiators", "") for t in teams)
+
+    def group(kind):
+        out = {}
+        for r in rows(kind):
+            out.setdefault(r["player"], []).append(r)
+        return out.items()
+
+    batting = []
+    for player, g in group("batting"):
+        runs, balls, outs, inns = (sum(r[k] for r in g) for k in ("runs", "balls", "outs", "innings"))
+        hs = max(r["hs"] for r in g)
+        batting.append({
+            "player": player, "team": team_label(g), "innings": inns, "runs": runs, "balls": balls,
+            "outs": outs, "avg": round(runs / outs, 1) if outs else None,
+            "sr": round(100 * runs / balls, 1) if balls else None,
+            "hs": hs, "hsNotOut": any(r["hsNotOut"] for r in g if r["hs"] == hs),
+            "fours": sum(r["fours"] for r in g), "sixes": sum(r["sixes"] for r in g),
+            "avgPos": round(sum(r["avgPos"] * r["innings"] for r in g) / inns, 1),
+        })
+
+    bowling = []
+    for player, g in group("bowling"):
+        balls, runs, dots, wkts = (sum(r[k] for r in g) for k in ("balls", "runs", "dots", "wickets"))
+        best = max(g, key=lambda r: (r["bestW"], -r["bestR"]))
+        bowling.append({
+            "player": player, "team": team_label(g), "innings": sum(r["innings"] for r in g),
+            "overs": balls_to_overs_str(balls), "balls": balls, "runs": runs, "dots": dots,
+            "wickets": wkts, "qualityWickets": sum(r["qualityWickets"] for r in g),
+            "econ": round(runs / (balls / 6), 2) if balls else None,
+            "ballsPerWkt": round(balls / wkts, 1) if wkts else None,
+            "dotPct": round(100 * dots / balls, 1) if balls else None,
+            "best": best["best"], "bestW": best["bestW"], "bestR": best["bestR"],
+        })
+
+    fielding = []
+    for player, g in group("fielding"):
+        f = {"player": player, "team": team_label(g)}
+        for k in ("catches", "wkCatches", "stumpings", "runOuts", "crucialCatches"):
+            f[k] = sum(r[k] for r in g)
+        f["crucialList"] = [c for r in g for c in r["crucialList"]]
+        f["matches"] = sum(r["matches"] or 0 for r in g) or None
+        f["total"] = sum(r["total"] for r in g)
+        fielding.append(f)
+
+    return {"batting": batting, "bowling": bowling, "fielding": fielding,
+            "goodBatterRule": [st["goodBatterRule"] for _, st in per_series]}
+
+
 def insight_phase_bowling(bowler_phases):
     """AI-insight candidate: the phase with the biggest gap between its top-ranked bowler
     (by phaseScore) and whoever actually bowled the most overs there, when they differ —
@@ -1164,8 +1391,8 @@ def latest_completed_match(results, team):
 
 
 # ── Match points table (Star of the Match) ──────────────────────────────
-# A transparent, fixed-formula points system (batting + bowling only — no fielding credit,
-# since fielder names aren't extracted from dismissal text anywhere in this pipeline) so
+# A transparent, fixed-formula points system (batting + bowling only — no fielding credit;
+# fielders are only extracted for the all-stats page, see all_player_stats()) so
 # "who had the biggest impact" is a disclosed calculation, not a judgment call. Modeled on the
 # common fantasy-cricket points pattern: base value for the raw output (runs / wickets + dots),
 # plus a strike-rate/economy modifier once a player has faced/bowled enough to make the rate
@@ -2400,6 +2627,8 @@ def build_knockouts(cfg, standings_table, elo, gladiators, series_key, results):
 
 def build():
     out = {"generated": TODAY.strftime("%Y-%m-%d"), "series": {}}
+    allstats = {"generated": out["generated"], "series": {}}
+    gladiators_stats = []
     elo_weekly = []
 
     for key, cfg in SERIES.items():
@@ -2408,6 +2637,18 @@ def build():
         gladiators = cfg["gladiators"]
         print(f"  venue matching: {venue_stats['matched']}/{venue_stats['totalMatches']} matches "
               f"({venue_stats['noScheduleRow']} no schedule row, {venue_stats['groundMismatch']} ground mismatch)")
+
+        stats, misses = all_player_stats(bat, bowl)
+        for kind in ("batting", "bowling", "fielding"):
+            stats[kind] = [r for r in stats[kind] if r["team"] == gladiators]
+        allstats["series"][key] = {"label": f"{gladiators}, {cfg['label']}", **stats}
+        gladiators_stats.append((gladiators, stats))
+        print(f"  all stats ({gladiators}): {len(stats['batting'])} batters, {len(stats['bowling'])} bowlers, "
+              f"{len(stats['fielding'])} fielders; good-batter cutoff avg "
+              f"{stats['goodBatterRule']['cutoffAvg']} ({stats['goodBatterRule']['count']} batters)")
+        if misses["unresolved"] or misses["ambiguous"]:
+            print(f"  WARNING: fielder names kept abbreviated: {misses['unresolved']} not on the "
+                  f"fielding side's roster, {misses['ambiguous']} ambiguous")
 
         upcoming = load_upcoming(cfg, gladiators, results)
         print(f"  upcoming: {len(upcoming)}")
@@ -2570,6 +2811,11 @@ def build():
     js = "// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_DATA = " + json.dumps(out, indent=None) + ";\n"
     OUT_FILE.write_text(js)
     print(f"Wrote {OUT_FILE} ({OUT_FILE.stat().st_size / 1024:.0f} KB)")
+
+    allstats["series"]["all"] = {"label": "Gladiators, both series", **combine_gladiators(gladiators_stats)}
+    ALLSTATS_FILE.write_text("// Auto-generated by build_data.py — do not edit by hand.\nconst NJSBCL_ALLSTATS = "
+                             + json.dumps(allstats, indent=None) + ";\n")
+    print(f"Wrote {ALLSTATS_FILE} ({ALLSTATS_FILE.stat().st_size / 1024:.0f} KB)")
 
     pd.DataFrame(elo_weekly).to_csv(ELO_WEEKLY_FILE, index=False)
     print(f"Wrote {ELO_WEEKLY_FILE} ({len(elo_weekly)} rows)")

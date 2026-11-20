@@ -28,7 +28,9 @@ python3 build_data.py
 
 `build_data.py` reads the scraped CSVs/schedule exports in `../data/` and
 precomputes everything into `data.js` — nothing is computed from raw data at
-page-load time except the display logic itself.
+page-load time except the display logic itself. It also writes `allstats.js`
+(the Gladiators squads' batting/bowling/fielding, used only by `all-stats.html`), kept
+separate so the other pages don't load it.
 
 **Why final scores come from `division1_true_totals.csv` /
 `weekenderscup_true_totals.csv` and not the scorecard batting rows:** summing
