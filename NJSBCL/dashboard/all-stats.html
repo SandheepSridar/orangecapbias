@@ -49,6 +49,13 @@ tr.detail td { text-align: left; white-space: normal; color: var(--muted); font-
 .more { align-self: center; font: inherit; font-size: .85rem; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 16px; cursor: pointer; }
 .notes { font-size: .82rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
 .notes p { margin: 0; max-width: 90ch; }
+.accuracy { background: rgba(255,195,0,0.08); border: 1px solid rgba(255,195,0,0.4); border-left: 4px solid var(--gold);
+  border-radius: 12px; padding: 14px 18px; font-size: .88rem; line-height: 1.55; }
+.accuracy-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); font-weight: 700; margin: 0 0 6px; }
+.accuracy p { margin: 0; max-width: 90ch; }
+.accuracy p + p, .accuracy ul, .accuracy ul + p { margin-top: 8px; }
+.accuracy ul { margin-bottom: 0; padding-left: 20px; }
+.accuracy strong { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -73,6 +80,15 @@ tr.detail td { text-align: left; white-space: normal; color: var(--muted); font-
   <header>
     <h1>All stats <span class="gold">2026</span></h1>
   </header>
+  <aside class="accuracy" aria-label="Why these numbers differ from cricclubs">
+    <p class="accuracy-label">More accurate than cricclubs' stats pages</p>
+    <p>Every number here is added up from the individual match scorecards. cricclubs' own season stats pages get three of our bowlers wrong, so their totals won't match ours. The scorecards show that ours are correct:</p>
+    <ul>
+      <li><strong>Vinit Bharadwaj</strong> and <strong>Sandeep A Shetty</strong>: both bowled two separate spells in the Division 1 match against F5. cricclubs only counts one spell for each, so it misses 3 overs, 13 runs and 2 wickets for Vinit, and 2 overs, 18 runs and 1 wicket for Sandeep.</li>
+      <li><strong>Suraj Pai Madhukar</strong>: cricclubs counts every one of his matches twice, in both series, so his batting and bowling figures there are double the real ones. It even lists more innings than matches played.</li>
+    </ul>
+    <p>Every other bowler checked matches cricclubs exactly.</p>
+  </aside>
   <p class="lede">Batting, bowling and fielding for every Gladiators player this season: Samudhra Gladiators in Division 1, VRK Gladiators in the Weekenders Cup, or both squads added together under All. Search by player, and click a column heading to sort.</p>
 
   <div class="filters">
